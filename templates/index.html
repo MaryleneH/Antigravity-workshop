@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eleanor Vance | Romance Author</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header class="hero">
+        <div class="hero-content fade-in">
+            <h1>Eleanor Vance</h1>
+            <p class="subtitle">Stories of love, loss, and eternal hope.</p>
+            <a href="#collection" class="btn-primary">Explore the Collection</a>
+        </div>
+        <div class="scroll-indicator">
+            <span></span>
+        </div>
+    </header>
+
+    <section id="collection" class="collection">
+        <h2 class="section-title fade-in-scroll">The Collection</h2>
+        <div class="book-grid">
+            {% for book in books %}
+            <div class="book-card fade-in-scroll" style="--card-gradient: {{ book.color }};">
+                <div class="book-cover">
+                    <div class="book-placeholder-art"></div>
+                </div>
+                <div class="book-info">
+                    <h3>{{ book.title }}</h3>
+                    <span class="genre">{{ book.genre }}</span>
+                    <p>{{ book.desc }}</p>
+                    <a href="#" class="btn-text">Read Excerpt &rarr;</a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="about-container">
+            <div class="about-image fade-in-scroll">
+                <!-- Placeholder for author image -->
+                <div class="author-placeholder"></div>
+            </div>
+            <div class="about-text fade-in-scroll">
+                <h2 class="section-title">About the Author</h2>
+                <p>Eleanor writes stories for those who believe in the magic of a second glance. With a coffee in one hand and a pen in the other, she weaves tales that transport you to misty moors and moonlit ballrooms.</p>
+                <p>When she's not writing, she's wandering through old bookstores in search of forgotten love letters.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="newsletter" class="newsletter fade-in-scroll">
+        <h2>Join the Inner Circle</h2>
+        <p>Be the first to know about new releases and exclusive content.</p>
+        <form class="newsletter-form">
+            <input type="email" placeholder="Your email address" required>
+            <button type="submit" class="btn-primary">Subscribe</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Eleanor Vance. All rights reserved.</p>
+        <div class="social-links">
+            <a href="#">Instagram</a>
+            <a href="#">Twitter</a>
+            <a href="#">Goodreads</a>
+        </div>
+    </footer>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

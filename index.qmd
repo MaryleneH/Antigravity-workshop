@@ -1,0 +1,109 @@
+---
+title: ""
+format:
+  html:
+    toc: false
+---
+
+<header class="hero">
+    <div class="hero-content fade-in">
+        <h1>Éléonore Vance</h1>
+        <p class="subtitle">Histoires d'amour, de perte et d'espoir éternel.</p>
+        <a href="#collection" class="btn-primary">Explorer la Collection</a>
+    </div>
+    <div class="scroll-indicator">
+        <span></span>
+    </div>
+</header>
+
+<section id="collection" class="collection">
+    <h2 class="section-title fade-in-scroll">La Collection</h2>
+    <div class="book-grid">
+        <div class="book-card fade-in-scroll" style="--card-gradient: linear-gradient(135deg, #2c3e50, #bdc3c7);">
+            <div class="book-cover">
+                <div class="book-placeholder-art"></div>
+            </div>
+            <div class="book-info">
+                <h3>Le Secret du Duc</h3>
+                <span class="genre">Romance Historique</span>
+                <p>Dans les jardins brumeux de l'Angleterre de la Régence, un amour interdit fleurit.</p>
+                <a href="#" class="btn-text">Lire un extrait &rarr;</a>
+            </div>
+        </div>
+        <div class="book-card fade-in-scroll" style="--card-gradient: linear-gradient(135deg, #4b0082, #e6e6fa);">
+            <div class="book-cover">
+                <div class="book-placeholder-art"></div>
+            </div>
+            <div class="book-info">
+                <h3>Serment d'Étoiles</h3>
+                <span class="genre">Romance Fantastique</span>
+                <p>Un guerrier et une mage liés par le destin sous la lune d'argent.</p>
+                <a href="#" class="btn-text">Lire un extrait &rarr;</a>
+            </div>
+        </div>
+        <div class="book-card fade-in-scroll" style="--card-gradient: linear-gradient(135deg, #c0392b, #f1c40f);">
+            <div class="book-cover">
+                <div class="book-placeholder-art"></div>
+            </div>
+            <div class="book-info">
+                <h3>Minuit à Paris</h3>
+                <span class="genre">Romance Contemporaine</span>
+                <p>Deux étrangers, une ville lumière, et une rencontre qui change tout.</p>
+                <a href="#" class="btn-text">Lire un extrait &rarr;</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="about" class="about">
+    <div class="about-container">
+        <div class="about-image fade-in-scroll">
+            <div class="author-placeholder"></div>
+        </div>
+        <div class="about-text fade-in-scroll">
+            <h2 class="section-title">À propos de l'auteure</h2>
+            <p>Éléonore écrit des histoires pour ceux qui croient en la magie d'un second regard. Une tasse de café à la main et une plume dans l'autre, elle tisse des contes qui vous transportent vers des landes brumeuses et des salles de bal au clair de lune.</p>
+            <p>Lorsqu'elle n'écrit pas, elle flâne dans les vieilles librairies à la recherche de lettres d'amour oubliées.</p>
+        </div>
+    </div>
+</section>
+
+<section id="newsletter" class="newsletter fade-in-scroll">
+    <h2>Rejoignez le Cercle Intime</h2>
+    <p>Soyez les premiers informés des nouvelles sorties et du contenu exclusif.</p>
+    <form class="newsletter-form">
+        <input type="email" placeholder="Votre adresse email" required>
+        <button type="submit" class="btn-primary">S'abonner</button>
+    </form>
+</section>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.1
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+
+    const fadeElements = document.querySelectorAll('.fade-in-scroll');
+    fadeElements.forEach(el => observer.observe(el));
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+});
+</script>

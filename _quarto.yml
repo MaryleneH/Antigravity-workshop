@@ -1,0 +1,22 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "Éléonore Vance"
+  lang: fr
+  navbar: false
+  page-footer:
+    center: "© 2026 Éléonore Vance. Tous droits réservés."
+
+format:
+  html:
+    theme: none
+    css: styles.css
+    mainfont: 'Lato'
+    fontsize: 1.1em
+    include-in-header:
+      text: |
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
