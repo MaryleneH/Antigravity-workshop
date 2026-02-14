@@ -968,6 +968,8 @@ a:hover {
     font-family: var(--font-heading);
     color: #fff;
     line-height: 1;
+    white-space: nowrap;
+    /* Prevent wrapping (e.g., 2.99 €) */
 }
 
 body.quarto-light .format-price {
@@ -1081,6 +1083,8 @@ body.quarto-dark .book-hero-card {
         margin: 1.5rem 0 2rem !important;
         align-self: flex-start;
         /* Force left alignment even in centered mobile card */
+        gap: 1rem;
+        /* Slightly tighter gap for mobile fit */
     }
 
     .book-synopsis {
