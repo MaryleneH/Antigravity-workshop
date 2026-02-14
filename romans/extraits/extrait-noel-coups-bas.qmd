@@ -1,0 +1,94 @@
+---
+title: "Noël, coups bas et Secret Santa — Extraits"
+subtitle: "Trois moments pour craquer"
+description: "Découvrez trois extraits de Noël, coups bas et Secret Santa de Mo Gadarr."
+title-block-banner: images/hero-extrait-buche.svg
+page-layout: full
+toc: false
+body-classes: extrait-buche
+---
+
+<!-- === Indicateur de progression (fixed) === -->
+<nav class="progress-extraits" aria-label="Progression des extraits">
+  <a href="#e1" class="dot" data-target="e1" aria-label="Aller à l'extrait 1"></a>
+  <a href="#e2" class="dot" data-target="e2" aria-label="Aller à l'extrait 2"></a>
+  <a href="#e3" class="dot" data-target="e3" aria-label="Aller à l'extrait 3"></a>
+</nav>
+
+<section class="intro-extrait" markdown="1">
+### ✦ Noël, défis et étincelles
+Une prime alléchante, une compétition interne… et une attirance qui s’immisce entre deux rivaux.  
+Trois extraits pour vous mettre dans l’ambiance.
+</section>
+
+<section class="extrait-block" id="e1" markdown="1">
+<div class="extrait-numero">EXTRAIT 1</div>
+> — C’était quoi ce haussement d’épaules tout à l’heure ? lui demandé-je sur un ton inquisiteur.
+> — Quel haussement d’épaules ? 
+> — Oh ! Ne fais pas l’innocent, OK ? Ce n’est pas parce que tu connais personnellement le boss que tu as le droit de jouer les prétentieux ici ! 
+<div class="extrait-legende">Trois lignes, et tout s’enflamme.</div>
+</section>
+
+<section class="extrait-block alt" id="e2" markdown="1">
+<div class="extrait-numero">EXTRAIT 2</div>
+> — Les prétentieux ? 
+> — Oui ! explosé-je. Les crâneurs ! Les m’as-tu-vu ! Les pédants, si tu préfères ! Des années que tu es ici et ton attitude est juste minable ! Ce n’est pas parce que > > tu es américain que tu es meilleur que nous, je te signale !
+> — Meilleur que vous ? 
+> — Oui ! Et arrête de répéter tout ce que je dis comme un demeuré, s’il te plait ! Peut-être que tu ne comprends pas bien le français !
+> — Je le comprends très bien. 
+> — Et bien alors, parle ! Lâche le morceau ! Accouche ! 
+> Un sourire étire ses lèvres et mon cœur se met à cogner de rage dans ma poitrine. Non, mais là, il se fout ouvertement de ma gueule ! 
+> Avec une lenteur exaspérante, Dean me fait face :
+> — Laisse-moi t’expliquer plusieurs choses, Miss double cappuccino sucré...
+> J'ai envie de lui répondre que ce surnom de merde, il peut bien se le garder, mais je préfère le laisser me sortir tout ce qu'il a dans le ventre. Cela pourrait me > > > servir plus tard. 
+> — Nous sommes au travail, continue-t-il. Si je suis ici, c’est avant tout pour travailler et pas pour m’extasier sur vos gamineries à tes amis et toi et encore moins > > pour baver comme les autres types de l’entreprise devant toi. Si tu te prends pour la reine, ici, sache que tu n’en es pas une pour moi. 
+> — La reine ? 
+<div class="extrait-legende">Ambiance de Noël… version compète et grandes manœuvres.</div>
+</section>
+
+<section class="extrait-block" id="e3" markdown="1">
+<div class="extrait-numero">EXTRAIT 3</div>
+> Son tic de répétition semble contagieux. 
+> — Oui la reine. Tous les hommes se pâment comme des idiots devant toi, mais pas moi. 
+> — Heureusement !
+> Je n’ai pu retenir ce cri de guerre et de protestation. Un coup dans mon amour propre m’empêche de répliquer comme je le voudrais surtout que je suis happée dans le > bleu de ce regard aussi soulant qu’hypnotique. 
+> Et il en profite, le bougre. C’est pile quand je me sens diminuée face à lui qu’il me porte l’estocade finale ou plutôt, qu’il me déclare officiellement la guerre. 
+> — Si je ne t’ai jamais rien dit sur ce que je pensais de toi, c’est juste que tes amis et toi, vous me regardez de haut depuis mon arrivée ici. Ça vous a amusé de me > voir me planter avec mon jouet et ne dis pas le contraire. Alors, sache qu’à partir de maintenant, nous sommes adversaires. Je veux ces 10 000 euros et je les aurai ! 
+<div class="extrait-legende">Rivalité, tension… et chimie qui monte.</div>
+</section>
+
+<section class="cta-extrait" markdown="1">
+### ✮⋆˙ L’histoire ne fait que commencer…
+<div class="btn-row">
+[Acheter sur Amazon](https://www.amazon.fr/s?k=Mo+Gadarr+No%C3%ABl+coups+bas+et+Secret+Santa){.btn .btn-primary role="button"}
+[Lire la fiche du roman](../noel-coups-bas.qmd){.btn .btn-secondary role="button"}
+</div>
+</section>
+
+<!-- === Script : active la pastille selon le scroll === -->
+<script>
+  const dots = Array.from(document.querySelectorAll('.progress-extraits .dot'));
+  const sections = ['e1','e2','e3'].map(id => document.getElementById(id));
+
+  const setActive = (id) => {
+    dots.forEach(d => d.classList.toggle('active', d.dataset.target === id));
+  };
+
+  const io = new IntersectionObserver((entries) => {
+    const visible = entries
+      .filter(e => e.isIntersecting)
+      .sort((a,b) => b.intersectionRatio - a.intersectionRatio)[0];
+    if (visible) setActive(visible.target.id);
+  }, { threshold: [0.3, 0.6, 0.9] });
+
+  sections.forEach(sec => sec && io.observe(sec));
+  dots.forEach(d => d.addEventListener("click", () => setActive(d.dataset.target)));
+</script>
+
+<br></br>
+
+<div class="back-home">
+  <a href="https://mogadarr.github.io/lire-mogadarr/" class="btn-back" role="button" aria-label="Retour à l’accueil">
+    <span class="arrow">←</span> Retour à l’accueil
+  </a>
+</div>

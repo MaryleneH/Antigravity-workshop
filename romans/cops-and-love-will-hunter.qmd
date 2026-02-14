@@ -1,0 +1,66 @@
+---
+title: "COPS and love — Will Hunter, le bad boy"
+description: "Des policiers, des bandits, des crimes et... de l'amour ! La fratrie Hunter va vous faire vibrer."
+image: ../images/couvertures/cops-and-love-will-hunter.jpg
+date: 2025-10-01
+categories: [Romantic Suspense, Fratrie, Nightlife]
+title-block-banner: true
+page-layout: full
+toc: false
+---
+
+```{=html}
+<header class="book-hero">
+    <div class="book-hero-bg" style="background-image: url('../images/couvertures/cops-and-love-will-hunter.jpg');"></div>
+    <div class="book-hero-content">
+        <div class="book-hero-card fade-in">
+            <div class="book-hero-cover-wrapper">
+                <img src="../images/couvertures/cops-and-love-will-hunter.jpg" alt="COPS and love — Will Hunter" class="book-hero-cover">
+            </div>
+            <div class="book-hero-info">
+                <span class="book-genre-pill">Romantic Suspense • Nightlife</span>
+                <h1>Will Hunter, le bad boy</h1>
+                <p class="book-tagline">Des policiers, des bandits, des crimes et... de l'amour !</p>
+                
+                <div class="formats-prix-premium">
+                    <div class="format-item">
+                        <span class="format-name">Ebook</span>
+                        <span class="format-price">1,99 €</span>
+                    </div>
+                    <div class="format-item">
+                        <span class="format-name">Broché</span>
+                        <span class="format-price">13 €</span>
+                    </div>
+                    <div class="format-item">
+                        <span class="format-name">Relié</span>
+                        <span class="format-price">17 €</span>
+                    </div>
+                </div>
+
+                <div class="book-actions">
+                    <a href="https://amzn.eu/d/81apyFK" class="btn-primary" target="_blank">Acheter sur Amazon</a>
+                    <a href="#resume" class="btn-text">Lire le résumé</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<section id="resume" class="book-details section-padding">
+    <div class="container-narrow">
+        <h2 class="section-title">Le Résumé</h2>
+        <div class="book-resume-content fade-in-scroll">
+            <p>Will Hunter est satisfait de son existence. Il dirige El Paraìso, la plus grande boîte de la ville. Il sort avec une femme belle, soumise à ses désirs et peu encline à le faire changer. Les fêtes s'enchaînent aussi vite que les produits qu'il consomme. Will est un oiseau de nuit et il aime ça.</p>
+            <p>C'est ce que tout le monde connaît de sa vie. Mais Will cache à tous ses véritables origines : il est le fils d'une famille entière de flics. En effet, les Hunter sont policiers de père en fils ce qui place d'office notre héros dans la position du vilain petit canard au sein de sa fratrie de mecs bien.</p>
+            <p>De son côté, Ranza est une maitresse femme. Elle ne se démonte pas et sacrifie ses ambitions quand son oncle la congédie du jour au lendemain de son travail en restauration. Pour élever sa petite sœur et s'en sortir, elle répond immédiatement à une annonce pour devenir danseuse dans la plus grande discothèque de la ville et obtient le poste.</p>
+            <p>Mais le monde de la nuit est loin d'être dénué de dangers surtout que la famille de Will décide de se pencher sur ce qui se passe réellement dans la boîte gérée par le bad boy des frères Hunter. Ranza va devoir se rapprocher de Will et des risques que cela comporte.</p>
+        </div>
+        
+        <div class="back-home text-center mt-5">
+            <a href="../romans.html" class="btn-text">
+                <i class="bi bi-arrow-left"></i> Retour à la Collection
+            </a>
+        </div>
+    </div>
+</section>
+```

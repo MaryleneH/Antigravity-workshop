@@ -1,0 +1,48 @@
+```{=html}
+<header class="book-hero">
+    <div class="book-hero-bg" style="background-image: url('../images/couvertures/blind.jpg');"></div>
+    <div class="book-hero-content">
+        <div class="book-hero-card fade-in">
+            <div class="book-hero-cover-wrapper">
+                <img src="../images/couvertures/blind.jpg" alt="Blind" class="book-hero-cover">
+            </div>
+            <div class="book-hero-info">
+                <span class="book-genre-pill">Coécrit • Romance Contemporaine</span>
+                <h1>Blind</h1>
+                <p class="book-tagline">Un roman fort, coécrit par Mo Gadarr et Haley Davis</p>
+                
+                <div class="formats-prix-premium">
+                    <div class="format-item">
+                        <span class="format-name">Statut</span>
+                        <span class="format-price" style="font-size: 1.1rem; color: var(--color-pink);">Plus disponible à la vente</span>
+                    </div>
+                </div>
+
+                <div class="book-actions">
+                    <a href="https://www.babelio.com/livres/Davis-Blind/1102213" class="btn-primary" target="_blank">Avis sur Babelio</a>
+                    <a href="#resume" class="btn-text">En savoir plus</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<section id="resume" class="book-details section-padding">
+    <div class="container-narrow">
+        <h2 class="section-title">À propos du livre</h2>
+        <div class="book-resume-content fade-in-scroll">
+            <p><strong>Blind raconte l’histoire de deux êtres blessés, que la vie n’a pas épargnés, et qui vont devoir apprendre à se reconstruire ensemble.</strong></p>
+            <p>Ce roman a été coécrit par Mo Gadarr et Haley Davis. L’ouvrage a rencontré un bel accueil auprès de ses lectrices et lecteurs, et reste une étape importante du parcours d’écriture de Mo Gadarr.</p>
+            <p>Plongez dans une romance émouvante, à la fois sombre et lumineuse, qui aborde des thèmes puissants : la confiance, le handicap, la reconstruction et la force de l’amour.</p>
+        </div>
+        
+        <div class="back-home text-center mt-5">
+            <a href="../romans.html" class="btn-text">
+                <i class="bi bi-arrow-left"></i> Retour à la Collection
+            </a>
+        </div>
+    </div>
+</section>
+```
+
+

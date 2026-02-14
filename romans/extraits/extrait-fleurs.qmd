@@ -1,0 +1,86 @@
+---
+title: "Dans les fleurs — Extraits"
+subtitle: "Trois moments pour succomber"
+description: "Découvrez trois extraits du roman de Mo Gadarr."
+title-block-banner: images/hero-extrait-buche.svg
+page-layout: full
+toc: false
+body-classes: extrait-buche
+---
+
+<!-- === Indicateur de progression (fixed) === -->
+<nav class="progress-extraits" aria-label="Progression des extraits">
+  <a href="#e1" class="dot" data-target="e1" aria-label="Aller à l'extrait 1"></a>
+  <a href="#e2" class="dot" data-target="e2" aria-label="Aller à l'extrait 2"></a>
+  <a href="#e3" class="dot" data-target="e3" aria-label="Aller à l'extrait 3"></a>
+</nav>
+
+<section class="intro-extrait" markdown="1">
+### ✦ Quand la campagne cache des rencontres explosives
+Une ferme à reprendre, une mère déterminée, un géant à la voix rauque…  
+Trois extraits pour sentir le parfum des **fleurs** — et des **étincelles**.
+</section>
+
+<!-- ===== EXTRACT 1 (TEXTE EXACT FOURNI) ===== -->
+<section class="extrait-block" id="e1" markdown="1">
+<div class="extrait-numero">EXTRAIT 1</div>
+> « — Hé ! Qu’est-ce que vous faites là ?!  
+> La magie s’éteint aussitôt et c’est dans l’obscurité que nous nous retournons vers l’ombre vociférante qui vient de nous apostropher. C’est un homme, visiblement bien enrhumé quand on aperçoit son masque chirurgical et qu’on entend sa voix rauque, déformée par les glaires qui doivent encore encombrer sa gorge. Le gars arrive à grands pas, frappant le sol de ses bottes en caoutchouc.  
+<div class="extrait-legende">Face à face tendu, répartie affûtée : Flora ne plie pas.</div>
+</section>
+
+<!-- ===== EXTRACT 2 (fond alterné) ===== -->
+<section class="extrait-block alt" id="e2" markdown="1">
+<div class="extrait-numero">EXTRAIT 2</div>
+> — C’est privé ici ! beugle-t-il en arrivant à notre hauteur. Je vous prie de vous en aller tout de suite !  
+> — Pas la peine de crier ! Je suis Flora Demane. Je suis aussi la future propriétaire de cet endroit ! J’ai donc tout à fait le droit de me trouver ici !  
+> — Si vous dites « future propriétaire », c’est que vous n’êtes pas chez vous, ici !  
+> — Si vous ne vous présentez pas comme le « proprio officiel », c’est que vous ne l’êtes pas ! On est d’accord !  
+<div class="extrait-legende">Une découverte qui change tout… et fait éclore l’inattendu.</div>
+</section>
+
+<!-- ===== EXTRACT 3 ===== -->
+<section class="extrait-block" id="e3" markdown="1">
+<div class="extrait-numero">EXTRAIT 3</div>
+> > L’homme parait perdre une partie de sa contenance. Pour donner le change, il croise les bras sur sa poitrine et parait me considérer. Je le scrute à mon tour alors qu’Olivia resserre ses bras autour de mon cou. Elle a peur et il y a de quoi. L’inconnu est immense et très carré des épaules. Sur sa tête, dont je ne distingue même pas les cheveux, un bonnet noir est enfoncé. Le fait qu’il fasse nuit à présent, doublé aux cris dont il nous a couvertes tout de suite, ne me rassure pas non plus. Cependant, je me dois de renfoncer cette crainte naturelle tout au fond de moi. Olivia doit être certaine que sa mère ne s’aplatit devant personne, pas même face à un géant masqué et gueulard. Sans compter que le gars pue le camphre. Une horreur…  
+> — Je ne vous crois pas, avance l’homme, la voix moins menaçante. Cet endroit est à vendre depuis des années.  
+> — Et bien justement ! C’est pour cela que je suis ici ! Je dois régler l’acquisition de cette ferme, y planter mes fleurs et ensuite, ce sera à moi de vous crier de vous en aller ! Mais pour cette fois, je vous laisse là. Si jamais vous passez devant le gîte « En campagne », venez donc me saluer afin que je vous enseigne ce qu’est la politesse ! J’en suis la nouvelle gérante !  
+> Là-dessus, je m’empresse de m’en aller en faisant attention de ne pas tomber, ma marche étant désormais plus difficile dans la nuit définitivement tombée.
+<div class="extrait-legende">Quand la fierté flirte avec le désir, les cœurs s’emballent.</div>
+</section>
+
+<section class="cta-extrait" markdown="1">
+### ✮⋆˙ L’histoire ne fait que commencer…
+<div class="btn-row">
+[Acheter sur Amazon](https://www.amazon.fr/s?k=Mo+Gadarr+Dans+les+fleurs){.btn .btn-primary role="button"}
+[Lire la fiche du roman](../dans-les-fleurs.qmd){.btn .btn-secondary role="button"}
+</div>
+</section>
+
+<!-- === Script : active la pastille selon le scroll === -->
+<script>
+  const dots = Array.from(document.querySelectorAll('.progress-extraits .dot'));
+  const sections = ['e1','e2','e3'].map(id => document.getElementById(id));
+
+  const setActive = (id) => {
+    dots.forEach(d => d.classList.toggle('active', d.dataset.target === id));
+  };
+
+  const io = new IntersectionObserver((entries) => {
+    const visible = entries
+      .filter(e => e.isIntersecting)
+      .sort((a,b) => b.intersectionRatio - a.intersectionRatio)[0];
+    if (visible) setActive(visible.target.id);
+  }, { threshold: [0.3, 0.6, 0.9] });
+
+  sections.forEach(sec => sec && io.observe(sec));
+  dots.forEach(d => d.addEventListener("click", () => setActive(d.dataset.target)));
+</script>
+
+<br></br>
+
+<div class="back-home">
+  <a href="../../index.qmd" class="btn-back" role="button" aria-label="Retour à l’accueil">
+    <span class="arrow">←</span> Retour à l’accueil
+  </a>
+</div>

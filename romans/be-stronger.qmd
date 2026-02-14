@@ -1,0 +1,66 @@
+---
+title: "Be Stronger"
+description: "Réédition du titre « T’as qu’à maigrir » — une romance sur l’acceptation, la force et l’amour de soi."
+image: ../images/couvertures/be-stronger.jpg
+date: 2024-06-15
+categories: [Romance contemporaine, Body positive, Seconde chance]
+title-block-banner: true
+page-layout: full
+toc: false
+---
+
+```{=html}
+<header class="book-hero">
+    <div class="book-hero-bg" style="background-image: url('../images/couvertures/be-stronger.jpg');"></div>
+    <div class="book-hero-content">
+        <div class="book-hero-card fade-in">
+            <div class="book-hero-cover-wrapper">
+                <img src="../images/couvertures/be-stronger.jpg" alt="Be Stronger" class="book-hero-cover">
+            </div>
+            <div class="book-hero-info">
+                <span class="book-genre-pill">Romance Contemporaine • Body Positive</span>
+                <h1>Be Stronger</h1>
+                <p class="book-tagline">Une romance sur l’acceptation, la force et l’amour de soi</p>
+                
+                <div class="formats-prix-premium">
+                    <div class="format-item">
+                        <span class="format-name">Ebook</span>
+                        <span class="format-price">2,99 €</span>
+                    </div>
+                    <div class="format-item">
+                        <span class="format-name">Broché</span>
+                        <span class="format-price">14 €</span>
+                    </div>
+                    <div class="format-item">
+                        <span class="format-name">Relié</span>
+                        <span class="format-price">18 €</span>
+                    </div>
+                </div>
+
+                <div class="book-actions">
+                    <a href="https://amzn.eu/d/eWEGo3z" class="btn-primary" target="_blank">Acheter sur Amazon</a>
+                    <a href="#resume" class="btn-text">Lire le résumé</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<section id="resume" class="book-details section-padding">
+    <div class="container-narrow">
+        <h2 class="section-title">Le Résumé</h2>
+        <div class="book-resume-content fade-in-scroll">
+            <p><strong>Be Stronger — RÉÉDITION DU TITRE "T'AS QU'À MAIGRIR"</strong></p>
+            <p>Slim est une épicurienne, mais elle n’aurait jamais pensé regretter aussi amèrement son dernier craquage. Elle qui était convaincue de détester Ulrich, la voilà qui vient de succomber à son charme ravageur !</p>
+            <p>Il est pourtant son coach sportif, son nutritionniste et surtout, il reste ce connard de première. Depuis cette incartade, ce dernier est encore plus renfrogné, encore plus énigmatique que d’ordinaire. En même temps, c’est la première fois qu’il est attiré par une femme telle que Slim. Une ronde.</p>
+            <p>Mais au fond, Ulrich est-il vraiment le grossophobe maniaque que Slim s’imagine ? Il y a bien des choses qui se cachent sous les apparences...</p>
+        </div>
+        
+        <div class="back-home text-center mt-5">
+            <a href="../romans.html" class="btn-text">
+                <i class="bi bi-arrow-left"></i> Retour à la Collection
+            </a>
+        </div>
+    </div>
+</section>
+```

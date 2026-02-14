@@ -1,0 +1,70 @@
+---
+title: "Black Feelings 1 — Extrait"
+subtitle: "Un extrait pour succomber"
+description: "retrouver un des extraits du roman de Mo Gadarr."
+title-block-banner: images/hero-extrait-buche.svg
+page-layout: full
+toc: false
+body-classes: extrait-buche
+---
+
+<!-- === Indicateur de progression (fixed) === -->
+<nav class="progress-extraits" aria-label="Progression des extraits">
+  <a href="#e1" class="dot" data-target="e1" aria-label="Aller à l'extrait 1"></a>
+</nav>
+
+<section class="intro-extrait" markdown="1">
+
+### ✮✮✮✮✮ Relisez cet extrait de Black Feelings *Tome 1*
+
+</section>
+
+<section class="extrait-block" id="e1" markdown="1">
+<div class="extrait-numero">EXTRAIT 1</div>
+> « AMANDINE 2001 ---- Ça y est, c’est les vacances. Je vais enfin pouvoir oublier un peu tout ce qui s’est passé ces derniers jours. Chloé reste aussi chez elle, ce qui fait que nous pourrons nous voir régulièrement durant ces deux semaines. 
+> Le vol de mes Nike requin m’a énormément affectée. Je n’ai pu en parler à personne de peur que la haine de Xavier et Joanna ne se déverse sur Chloé, que je dois définitivement écarter de mes histoires. J’ai donc dû me balader une partie de la journée en chaussettes dans le lycée, sous les insultes et les crachats de plusieurs élèves qui m’ont traitée de pouilleuse. 
+> Ce n’est que lorsque madame Clari, la prof d’EPS, m’a vue arriver ainsi qu’elle m’a prêté une vieille paire de baskets trouées et trop grandes pour moi. En rentrant, j’ai trouvé la maison vide, ce qui m’a permis de me précipiter dans ma chambre pour pleurer et essayer d’oublier cette scène horrible de moi forcée à manger cette affreuse mixture dont l’odeur fétide restera à jamais dans ma mémoire. »
+<div class="extrait-legende">Quand le passé vous rattrape, la seule issue est de reprendre le contrôle.</div>
+</section>
+
+
+
+<section class="cta-extrait" markdown="1">
+### ✮⋆˙ Quand le passé vous rattrape, la vengeance devient une obsession...
+
+<div class="btn-row">
+[⋅˚₊‧ ୨ ୧ ‧₊˚ ⋅ Acheter sur Amazon](https://www.amazon.fr/s?k=Mo+Gadarr+Black+Feelings){.btn .btn-primary role="button"}
+[Lire d'autres romans de Mo Gadarr](../../romans/index.qmd){.btn .btn-secondary role="button"}
+</div>
+</section>
+
+<!-- === Script : active la pastille selon le scroll === -->
+<script>
+  const dots = Array.from(document.querySelectorAll('.progress-extraits .dot'));
+  const sections = ['e1'].map(id => document.getElementById(id));
+
+  const setActive = (id) => {
+    dots.forEach(d => d.classList.toggle('active', d.dataset.target === id));
+  };
+
+  const io = new IntersectionObserver((entries) => {
+    // La section la plus visible prend l’activation
+    const visible = entries
+      .filter(e => e.isIntersecting)
+      .sort((a,b) => b.intersectionRatio - a.intersectionRatio)[0];
+    if (visible) setActive(visible.target.id);
+  }, { threshold: [0.3, 0.6, 0.9] });
+
+  sections.forEach(sec => sec && io.observe(sec));
+  // Active correcte au clic immédiat
+  dots.forEach(d => d.addEventListener('click', () => setActive(d.dataset.target)));
+</script>
+
+<br></br>
+
+<div class="back-home">
+  <a href="https://mogadarr.github.io/lire-mogadarr/" class="btn-back" role="button" aria-label="Retour à l’accueil">
+    <span class="arrow">←</span> Retour à l’accueil
+  </a>
+</div>
+

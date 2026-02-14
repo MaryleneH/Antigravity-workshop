@@ -1,0 +1,80 @@
+---
+title: "Undress Me — Extraits"
+subtitle: "Deux moments pour succomber"
+description: "Découvrez deux extraits d’Undress Me de Mo Gadarr."
+title-block-banner: images/hero-extrait-buche.svg
+page-layout: full
+toc: false
+body-classes: extrait-buche
+---
+
+<!-- === Indicateur de progression (fixed) === -->
+<nav class="progress-extraits" aria-label="Progression des extraits">
+  <a href="#e1" class="dot" data-target="e1" aria-label="Aller à l'extrait 1"></a>
+  <a href="#e2" class="dot" data-target="e2" aria-label="Aller à l'extrait 2"></a>
+</nav>
+
+<section class="intro-extrait" markdown="1">
+### ✦ Plongez au Passion Men
+Un strip‑club envoûtant, un danseur qui se cache derrière l’audace,  
+des nuits électriques, des cicatrices invisibles… et le cœur à nu.
+</section>
+
+<section class="extrait-block" id="e1" markdown="1">
+<div class="extrait-numero">EXTRAIT 1</div>
+> « Le Passion Men, c’est déjà une ambiance. 
+> Quand vous entrez là-dedans, vous êtes tout de suite plongé dans une espèce de bulle de sexe et d’excitation. La musique vous fait glisser, les spots vous électrisent. Le décor, tout de velours noir, pourpre et bordeaux, vous accueille dans une alcôve plus sexy que le plumard d’une maison close. 
+> Le Passion Men, c’est le mélange parfait d’une boite de nuit branchée et d’un château baroque avec plein de volutes, un tas de rideaux de brocard et tout le tintouin qui va bien. C’est juste un endroit qui parvient à vous faire autant rêver que fantasmer.
+> Déjà, quand vous y entrez, vous passez d’une humanité à la con qui vous fait chier toute la journée à un royaume où vous devenez le temps d’une nuit Dieu sur Terre. Bon, j’avoue que c’est quand même plus facile lorsque justement vous avez le physique d’un dieu et qu’il y a au moins 200 meufs déchainées juste venues vous voir vous dessaper. 
+> C’est donc avec ces sensations que je m’avance vers le Passion Men, dont l’enseigne lumineuse brille au loin dans la nuit sinistre de Church. 
+> Sinistre est le mot qui résume à lui seul cette toute petite ville perdue et coincée dans le trou du cul de l’Oklahoma. Je ris parce que lorsque je traverse la rue, les quelques personnes que je croise en sens inverse me regardent toujours en biais. Phénomène normal pour le chippendale que je suis. »
+<div class="extrait-legende">Écran de fumée, velours et lumières : la scène est dressée.</div>
+</section>
+
+<section class="extrait-block alt" id="e2" markdown="1">
+<div class="extrait-numero">EXTRAIT 2</div>
+> « Impossible de fermer ne serait-ce qu’un seul œil. Bordel de merde, il m’arrive quoi encore ? 
+> Je suis habitué à ne pas trouver le sommeil, ça, c’est mon pain quotidien. Mais jamais des pensées pareilles ne m’avaient pourri ma nuit ! Jamais au grand jamais !
+> Enragé, je me lève en repoussant ma couette en bas de mon lit. J’ouvre comme un fou le tiroir de ma table de nuit et m’empare de mon carnet. Je débouche mon Bic et crache le capuchon à l’autre bout de la pièce. 
+> 4h08 a.m
+> Georgie est mon amie. Tout le monde l’appelle Georgia et je suis le seul à l’appeler Clochette ou Georgie. Je suis moi aussi son ami…
+> La pointe du Bic s’arrête de griffonner mon écriture sale et stressée. Putain ! Il n’y a rien de plus qui me vient !
+> Énervé, je balance tout de l’autre côté et mon carnet part rejoindre le bouchon de mon stylo. Je ne réussirai ni à écrire, ni à dormir, autant sortir de ma turne et m’en aller. C’est ça qui parviendra à me détendre. »
+<div class="extrait-legende">Insomnie, pages blanches, aveux en suspens… la nuit parle vrai.</div>
+</section>
+
+<section class="cta-extrait" markdown="1">
+### ✮⋆˙ L’histoire ne fait que commencer…
+<div class="btn-row">
+[⋅˚₊‧ ୨ ୧ ‧₊˚ ⋅ Acheter sur Amazon](https://www.amazon.fr/s?k=Mo+Gadarr+Undress+Me){.btn .btn-primary role="button"}
+[Lire la fiche du roman](../undress-me.qmd){.btn .btn-secondary role="button"}
+</div>
+</section>
+
+<!-- === Script : active la pastille selon le scroll === -->
+<script>
+  const dots = Array.from(document.querySelectorAll('.progress-extraits .dot'));
+  const sections = ['e1','e2'].map(id => document.getElementById(id));
+
+  const setActive = (id) => {
+    dots.forEach(d => d.classList.toggle('active', d.dataset.target === id));
+  };
+
+  const io = new IntersectionObserver((entries) => {
+    const visible = entries
+      .filter(e => e.isIntersecting)
+      .sort((a,b) => b.intersectionRatio - a.intersectionRatio)[0];
+    if (visible) setActive(visible.target.id);
+  }, { threshold: [0.3, 0.6, 0.9] });
+
+  sections.forEach(sec => sec && io.observe(sec));
+  dots.forEach(d => d.addEventListener("click", () => setActive(d.dataset.target)));
+</script>
+
+<br></br>
+
+<div class="back-home">
+  <a href="https://mogadarr.github.io/lire-mogadarr/" class="btn-back" role="button" aria-label="Retour à l’accueil">
+    <span class="arrow">←</span> Retour à l’accueil
+  </a>
+</div>

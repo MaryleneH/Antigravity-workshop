@@ -1,0 +1,68 @@
+---
+title: "Black Feelings — Tome 1"
+description: "Victime de harcèlement scolaire au lycée, Amandine ne sera plus jamais la même."
+image: ../images/couvertures/black-feelings-1.jpg
+date: 2024-09-01
+categories: [Romance contemporaine, Harcèlement, Drame]
+title-block-banner: true
+page-layout: full
+toc: false
+---
+
+
+💞₊⊹₊⊹      ₊⊹₊⊹💞₊⊹
+
+```{=html}
+<header class="book-hero">
+    <div class="book-hero-bg" style="background-image: url('../images/couvertures/black-feelings-tome-1.jpg');"></div>
+    <div class="book-hero-content">
+        <div class="book-hero-card fade-in">
+            <div class="book-hero-cover-wrapper">
+                <img src="../images/couvertures/black-feelings-tome-1.jpg" alt="Black Feelings — Tome 1" class="book-hero-cover">
+            </div>
+            <div class="book-hero-info">
+                <span class="book-genre-pill">Romance Contemporaine • Drame</span>
+                <h1>Black Feelings — Tome 1</h1>
+                <p class="book-tagline">Victime de harcèlement scolaire au lycée, Amandine ne sera plus jamais la même.</p>
+                
+                <div class="formats-prix-premium">
+                    <div class="format-item">
+                        <span class="format-name">Ebook</span>
+                        <span class="format-price">2,99 €</span>
+                    </div>
+                    <div class="format-item">
+                        <span class="format-name">Broché</span>
+                        <span class="format-price">14 €</span>
+                    </div>
+                    <div class="format-item">
+                        <span class="format-name">Relié</span>
+                        <span class="format-price">18 €</span>
+                    </div>
+                </div>
+
+                <div class="book-actions">
+                    <a href="https://www.amazon.fr/s?k=Mo+Gadarr+Black+Feelings" class="btn-primary" target="_blank">Acheter sur Amazon</a>
+                    <a href="https://mogadarr.github.io/lire-mogadarr/romans/extraits/extrait-black-feelings1.html" class="btn-text">Lire un extrait</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<section id="resume" class="book-details section-padding">
+    <div class="container-narrow">
+        <h2 class="section-title">Le Résumé</h2>
+        <div class="book-resume-content fade-in-scroll">
+            <p>Victime de harcèlement scolaire au lycée, Amandine ne sera plus jamais la même !</p>
+            <p>Si Mandy a voulu devenir professeure de français, c'est certes par passion pour l'enseignement, mais aussi et surtout, pour sensibiliser les jeunes au harcèlement scolaire. Elle-même victime de ce phénomène pendant ses années lycée, elle veut à tout prix éviter qu'il se reproduise.</p>
+            <p>Cependant, lorsqu'elle découvre que son ancien bourreau est un de ses collègues, tout bascule. Elle s'est fait une promesse : se venger de lui quelles qu'en soient les conséquences. Elle n'a dès lors plus qu'un objectif en tête : le séduire pour mieux le détruire !</p>
+        </div>
+        
+        <div class="back-home text-center mt-5">
+            <a href="../romans.html" class="btn-text">
+                <i class="bi bi-arrow-left"></i> Retour à la Collection
+            </a>
+        </div>
+    </div>
+</section>
+```

@@ -1,0 +1,65 @@
+---
+title: "Black Feelings — Tome 2"
+description: "Nathan parviendra-t-il à remonter la pente en revenant sur les terres de son enfance ?"
+image: ../images/couvertures/black-feelings-2.jpg
+date: 2024-09-10
+categories: [Romance contemporaine, Harcèlement, Seconde chance]
+title-block-banner: true
+page-layout: full
+toc: false
+---
+
+```{=html}
+<header class="book-hero">
+    <div class="book-hero-bg" style="background-image: url('../images/couvertures/black-feelings-tome-2.jpg');"></div>
+    <div class="book-hero-content">
+        <div class="book-hero-card fade-in">
+            <div class="book-hero-cover-wrapper">
+                <img src="../images/couvertures/black-feelings-tome-2.jpg" alt="Black Feelings — Tome 2" class="book-hero-cover">
+            </div>
+            <div class="book-hero-info">
+                <span class="book-genre-pill">Romance Contemporaine • Drame</span>
+                <h1>Black Feelings — Tome 2</h1>
+                <p class="book-tagline">Nathan parviendra-t-il à remonter la pente en revenant sur les terres de son enfance ?</p>
+                
+                <div class="formats-prix-premium">
+                    <div class="format-item">
+                        <span class="format-name">Ebook</span>
+                        <span class="format-price">2,99 €</span>
+                    </div>
+                    <div class="format-item">
+                        <span class="format-name">Broché</span>
+                        <span class="format-price">14 €</span>
+                    </div>
+                    <div class="format-item">
+                        <span class="format-name">Relié</span>
+                        <span class="format-price">18 €</span>
+                    </div>
+                </div>
+
+                <div class="book-actions">
+                    <a href="https://www.amazon.fr/Black-feelings-saison-Fyctia-In%C3%A9dit-ebook/dp/B082YKJL6H" class="btn-primary" target="_blank">Acheter sur Amazon</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<section id="resume" class="book-details section-padding">
+    <div class="container-narrow">
+        <h2 class="section-title">Le Résumé</h2>
+        <div class="book-resume-content fade-in-scroll">
+            <p><strong>Nathan parviendra-t-il à remonter la pente en revenant sur les terres de son enfance ?</strong></p>
+            <p>Le cœur brisé, Nathan a traversé une période sombre dont il peine à se relever. Prêt à repartir du bon pied, il revient sur les terres de son enfance pour débuter une nouvelle année scolaire en tant que professeur de mathématiques.</p>
+            <p>Mais alors qu'il pensait retrouver un cocon confortable dans la demeure familiale, le destin pourrait le forcer à faire face à son passé sans ménagement.</p>
+            <p>À peine arrivé, Nathan croise la route de Zina, l'amour de son enfance qu'il n'a jamais pu oublier. Elle est fidèle à son souvenir : solaire, malgré l'alcoolisme de son père dont elle a la charge. Quels que soient ses sentiments, Nathan fera tout pour les combattre. S'il n'y parvient pas, de vieux secrets enfouis pourraient bien ressurgir.</p>
+        </div>
+        
+        <div class="back-home text-center mt-5">
+            <a href="../romans.html" class="btn-text">
+                <i class="bi bi-arrow-left"></i> Retour à la Collection
+            </a>
+        </div>
+    </div>
+</section>
+```

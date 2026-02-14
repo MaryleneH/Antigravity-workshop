@@ -1,0 +1,67 @@
+---
+title: "À Noël, je serai une princesse licorne !"
+description: "Une romance de Noël déjantée et drôle — quand traditions et caractère s’entrechoquent."
+image: ../images/couvertures/princesse-licorne.jpg
+date: 2024-12-20
+categories: [Romance de Noël, Comédie romantique, Feel-good]
+title-block-banner: true
+page-layout: full
+toc: false
+---
+
+```{=html}
+<header class="book-hero">
+    <div class="book-hero-bg" style="background-image: url('../images/couvertures/princesse-licorne.jpg');"></div>
+    <div class="book-hero-content">
+        <div class="book-hero-card fade-in">
+            <div class="book-hero-cover-wrapper">
+                <img src="../images/couvertures/princesse-licorne.jpg" alt="À Noël, je serai une princesse licorne !" class="book-hero-cover">
+            </div>
+            <div class="book-hero-info">
+                <span class="book-genre-pill">Romance de Noël • Comédie</span>
+                <h1>À Noël, je serai une princesse licorne !</h1>
+                <p class="book-tagline">Une romance de Noël déjantée et drôle — quand traditions et caractère s’entrechoquent.</p>
+                
+                <div class="formats-prix-premium">
+                    <div class="format-item">
+                        <span class="format-name">Ebook</span>
+                        <span class="format-price">2,99 €</span>
+                    </div>
+                    <div class="format-item">
+                        <span class="format-name">Broché</span>
+                        <span class="format-price">13 €</span>
+                    </div>
+                    <div class="format-item">
+                        <span class="format-name">Relié</span>
+                        <span class="format-price">17 €</span>
+                    </div>
+                </div>
+
+                <div class="book-actions">
+                    <a href="https://amzn.eu/d/3LY8JQI" class="btn-primary" target="_blank">Acheter sur Amazon</a>
+                    <a href="https://mogadarr.github.io/lire-mogadarr/romans/extraits/extrait-licorne.html" class="btn-text">Lire un extrait</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<section id="resume" class="book-details section-padding">
+    <div class="container-narrow">
+        <h2 class="section-title">Le Résumé</h2>
+        <div class="book-resume-content fade-in-scroll">
+            <p><strong>Tout commence comme un conte de fées à Noël... ou pas !</strong></p>
+            <p>Moi, c'est Hariette Aliénor De Gignes (Asha pour les intimes). Princesse ? Oui, mais ça me gonfle. Est-ce que je dis des gros mots ? Oh que oui ! Si je dois me marier ? Oui, et je suis dans la bouillasse. Avec mes dreadlocks, mon piercing et mon rat sur l'épaule, je suis loin du cliché de la princesse licorne.</p>
+            <p>Alors, on m'a mis dans les pattes Axel, un spécialiste de l'étiquette censé me "remettre dans le droit chemin". Axel le nickel, Axel le chieur... il me fatigue avec son protocole à la con.</p>
+            <p>Bref, il est si chiant que je ne fais même pas attention à son regard bleu, ni à son sourire sexy... Vous croyez que je vais craquer ? Vous croyez vraiment au Père Noël !</p>
+            <p><strong>Mo Gadarr revient dans une romance déjantée pour un Noël couronné !</strong></p>
+        </div>
+        
+        <div class="back-home text-center mt-5">
+            <a href="../romans.html" class="btn-text">
+                <i class="bi bi-arrow-left"></i> Retour à la Collection
+            </a>
+        </div>
+    </div>
+</section>
+```

@@ -1,0 +1,88 @@
+---
+title: "Prends de la bûche — Extraits"
+subtitle: "Trois moments pour succomber"
+description: "Découvrez trois extraits du roman de Mo Gadarr."
+title-block-banner: images/hero-extrait-buche.svg
+page-layout: full
+toc: false
+body-classes: extrait-buche
+---
+
+<!-- === Indicateur de progression (fixed) === -->
+<nav class="progress-extraits" aria-label="Progression des extraits">
+  <a href="#e1" class="dot" data-target="e1" aria-label="Aller à l'extrait 1"></a>
+  <a href="#e2" class="dot" data-target="e2" aria-label="Aller à l'extrait 2"></a>
+  <a href="#e3" class="dot" data-target="e3" aria-label="Aller à l'extrait 3"></a>
+</nav>
+
+<section class="intro-extrait" markdown="1">
+### ❅𖢔𐂂 Plongez dans l'univers de *Prends de la bûche*
+Un village canadien enneigé. Une bûcheronne au caractère d’acier.  
+Un pâtissier star du net, plus sucré qu’un cupcake.  
+Trois extraits pour vous donner envie d’en lire bien plus…
+</section>
+
+<section class="extrait-block" id="e1" markdown="1">
+<div class="extrait-numero">EXTRAIT 1</div>
+> « Je suis bûcheronne. 
+> J’ai beau chercher les meilleures tournures du monde pour me présenter. Je pourrais parler de mes yeux couleur grisaille, de mes cheveux noirs ou de mon teint blafard, mais voilà, on me ramène toujours à mon métier, quoi que je fasse. 
+> Je suis bûcheronne. »
+<div class="extrait-legende">Une héroïne forte, sincère, qu’on n’oublie pas.</div>
+</section>
+
+<section class="extrait-block alt" id="e2" markdown="1">
+<div class="extrait-numero">EXTRAIT 2</div>
+> « Je profite de ce défi visuel pour le détailler. Non, mais franchement, ce Zacharie n’a pas de quoi se pavaner. Dans les habits de papa, il parait ridicule, complètement étouffé par le gros pull et le jogging qu’il porte. Quant à ses chaussettes, elles lui donnent l’allure d’un nigaud qui aurait confondu ses bottes avec des patins à glace. 
+> Et ça se dit grand pâtissier. Laissez-moi rire. »
+<div class="extrait-legende">Humour, fierté et joutes verbales délicieuses…</div>
+</section>
+
+<section class="extrait-block" id="e3" markdown="1">
+<div class="extrait-numero">EXTRAIT 3</div>
+> « Et quand d’une main, l’inconnu retire ses protections contre le froid qui semble se déchaîner dehors, une cascade de cheveux noirs atterrit sur les épaules…d’une femme. Ses yeux très clairs, d’un gris de ciel hivernal, me scrutent. De haut en bas. Le visage totalement verrouillé de dédain, elle soupire, sans plus de cérémonie. C’est à ce moment que le maire choisit de la présenter. 
+> — Voici la patronne et propriétaire de la scierie Applegate : Nicola Applegate. 
+> — Nicola ? haussé-je les sourcils. 
+> — Oui, Nicola ! s’agace-t-elle à la seconde. C’est aussi un prénom de femme et, pour votre gouverne, je ne suis pas que la propriétaire de la scierie, je suis aussi bûcheronne et il est hors de question que vous touchiez à la zone Jack’s !
+> Cette fois, c’est à moi de soupirer. 
+> — Mais, comme je l’expliquais au conseil, la région est pleine de pins et de toutes les sortes. Qu’est-ce qui vous empêcherait de vous fournir ailleurs et pas très loin, en plus ? 
+> — Et vous ? rétorque tout de suite Nicola Applegate. Qu’est-ce qui vous empêche d’aller construire votre usine de gâteaux ailleurs ? À New York, par exemple ! »
+<div class="extrait-legende">Leur première rencontre. Tout feu, tout flamme.</div>
+</section>
+
+<section class="cta-extrait" markdown="1">
+### ✮⋆˙ L’histoire ne fait que commencer…
+<div class="btn-row">
+[⋅˚₊‧ ୨ ୧ ‧₊˚ ⋅ Acheter sur Amazon](https://amzn.eu/d/d3MMSlg){.btn .btn-primary role="button"}
+[Lire d'autres romans de Mo Gadarr](../../romans/index.qmd){.btn .btn-secondary role="button"}
+</div>
+</section>
+
+<!-- === Script : active la pastille selon le scroll === -->
+<script>
+  const dots = Array.from(document.querySelectorAll('.progress-extraits .dot'));
+  const sections = ['e1','e2','e3'].map(id => document.getElementById(id));
+
+  const setActive = (id) => {
+    dots.forEach(d => d.classList.toggle('active', d.dataset.target === id));
+  };
+
+  const io = new IntersectionObserver((entries) => {
+    // La section la plus visible prend l’activation
+    const visible = entries
+      .filter(e => e.isIntersecting)
+      .sort((a,b) => b.intersectionRatio - a.intersectionRatio)[0];
+    if (visible) setActive(visible.target.id);
+  }, { threshold: [0.3, 0.6, 0.9] });
+
+  sections.forEach(sec => sec && io.observe(sec));
+  // Active correcte au clic immédiat
+  dots.forEach(d => d.addEventListener('click', () => setActive(d.dataset.target)));
+</script>
+
+<br></br>
+
+<div class="back-home">
+  <a href="https://mogadarr.github.io/lire-mogadarr/" class="btn-back" role="button" aria-label="Retour à l’accueil">
+    <span class="arrow">←</span> Retour à l’accueil
+  </a>
+</div>

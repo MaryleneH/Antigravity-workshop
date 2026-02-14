@@ -1,0 +1,56 @@
+---
+title: "Hurt (coécrit)"
+subtitle: "Une histoire d’émotions, coécrite par Mo Gadarr"
+description: "Un roman marquant, écrit à quatre mains, plébiscité par ses lectrices et lecteurs."
+title-block-banner: images/hero-romans.svg
+page-layout: full
+toc: false
+body-classes: romans
+---
+
+```{=html}
+<header class="book-hero">
+    <div class="book-hero-bg" style="background-image: url('../images/couvertures/hurt.jpg');"></div>
+    <div class="book-hero-content">
+        <div class="book-hero-card fade-in">
+            <div class="book-hero-cover-wrapper">
+                <img src="../images/couvertures/hurt.jpg" alt="Hurt" class="book-hero-cover">
+            </div>
+            <div class="book-hero-info">
+                <span class="book-genre-pill">Coécrit • Romance Contemporaine</span>
+                <h1>Hurt</h1>
+                <p class="book-tagline">Une histoire d’émotions, coécrite par Mo Gadarr et Haley Davis</p>
+                
+                <div class="formats-prix-premium">
+                    <div class="format-item">
+                        <span class="format-name">Statut</span>
+                        <span class="format-price" style="font-size: 1.1rem; color: var(--color-pink);">Plus disponible à la vente</span>
+                    </div>
+                </div>
+
+                <div class="book-actions">
+                    <a href="https://www.babelio.com/livres/Davis-Hurt/1148282" class="btn-primary" target="_blank">Avis sur Babelio</a>
+                    <a href="#resume" class="btn-text">En savoir plus</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<section id="resume" class="book-details section-padding">
+    <div class="container-narrow">
+        <h2 class="section-title">À propos du livre</h2>
+        <div class="book-resume-content fade-in-scroll">
+            <p><strong>Hurt explore les blessures profondes, les secrets et la force nécessaire pour se reconstruire.</strong></p>
+            <p>Ce roman a été coécrit par Mo Gadarr et Haley Davis. Deux personnages cabossés par la vie se rencontrent, se défient et s’apprivoisent, au fil d’une romance sensible et bouleversante.</p>
+            <p>Un récit de renaissance, d’acceptation et d’amour, écrit à deux voix pour plus d’authenticité. Ce livre reste un jalon fort dans la bibliographie de Mo Gadarr.</p>
+        </div>
+        
+        <div class="back-home text-center mt-5">
+            <a href="../romans.html" class="btn-text">
+                <i class="bi bi-arrow-left"></i> Retour à la Collection
+            </a>
+        </div>
+    </div>
+</section>
+```

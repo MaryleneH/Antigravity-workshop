@@ -1,0 +1,65 @@
+---
+title: "J’ai juste cliqué !"
+description: "Une histoire d’amour née sur la toile… avec tout ce que cela implique."
+image: ../images/couvertures/jai-juste-clique.jpg
+date: 2024-05-25
+categories: [Romance contemporaine, Internet, Faux semblants]
+title-block-banner: true
+page-layout: full
+toc: false
+---
+
+```{=html}
+<header class="book-hero">
+    <div class="book-hero-bg" style="background-image: url('../images/couvertures/j-ai-juste-clique.jpg');"></div>
+    <div class="book-hero-content">
+        <div class="book-hero-card fade-in">
+            <div class="book-hero-cover-wrapper">
+                <img src="../images/couvertures/j-ai-juste-clique.jpg" alt="J’ai juste cliqué !" class="book-hero-cover">
+            </div>
+            <div class="book-hero-info">
+                <span class="book-genre-pill">Romance Contemporaine • Internet</span>
+                <h1>J’ai juste cliqué !</h1>
+                <p class="book-tagline">Une histoire d’amour née sur la toile… avec tout ce que cela implique.</p>
+                
+                <div class="formats-prix-premium">
+                    <div class="format-item">
+                        <span class="format-name">Ebook</span>
+                        <span class="format-price">2,99 €</span>
+                    </div>
+                    <div class="format-item">
+                        <span class="format-name">Broché</span>
+                        <span class="format-price">13 €</span>
+                    </div>
+                    <div class="format-item">
+                        <span class="format-name">Relié</span>
+                        <span class="format-price">17 €</span>
+                    </div>
+                </div>
+
+                <div class="book-actions">
+                    <a href="https://amzn.eu/d/4ciKBb3" class="btn-primary" target="_blank">Acheter sur Amazon</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<section id="resume" class="book-details section-padding">
+    <div class="container-narrow">
+        <h2 class="section-title">Le Résumé</h2>
+        <div class="book-resume-content fade-in-scroll">
+            <p><strong>Une histoire d’amour qui prend naissance sur la toile… avec tout ce que cela implique !</strong></p>
+            <p>Adam est un expert en amour, du moins selon ses lectrices. Écrivain à succès de romance contemporaine, il pense tout savoir des rouages du cœur. Jusqu'au jour où son éditrice refuse son manuscrit et que sa petite amie le quitte.</p>
+            <p>N'ayant plus rien à perdre, Adam s'inscrit sur un célèbre site de rencontres pour y vivre l'histoire qu'il souhaite écrire. Au fil des clics, il rencontre Ysé. Leur attirance prend vie, et Adam l'intègre à son nouveau roman.</p>
+            <p>Pourtant, il va vite comprendre que tout ce qui se trouve sur le net n'est pas inoffensif et que les sentiments ne restent jamais longtemps virtuels... Parviendra-t-il à ne pas se perdre dans l'univers des faux semblants ?</p>
+        </div>
+        
+        <div class="back-home text-center mt-5">
+            <a href="../romans.html" class="btn-text">
+                <i class="bi bi-arrow-left"></i> Retour à la Collection
+            </a>
+        </div>
+    </div>
+</section>
+```

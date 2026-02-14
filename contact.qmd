@@ -3,25 +3,35 @@ title: "Contact"
 ---
 
 ```{=html}
-<section class="newsletter">
-    <div class="about-container" style="display: block; text-align: center; margin-bottom: 3rem;">
-        <h2>Restons en contact</h2>
-        <p>Pour toute demande professionnelle, dédicace, ou simplement pour dire bonjour.</p>
-    </div>
-
-    <form class="newsletter-form" style="display: flex; flex-direction: column; max-width: 500px; margin: 0 auto; gap: 1.5rem;">
-        <input type="text" placeholder="Votre Nom" required style="width: 100%;">
-        <input type="email" placeholder="Votre Email" required style="width: 100%;">
-        <textarea placeholder="Votre Message" rows="5" style="width: 100%; padding: 0.8rem; border: 1px solid #ddd; border-radius: 16px; font-family: inherit;"></textarea>
-        <button type="submit" class="btn-primary">Envoyer le message</button>
-    </form>
-    
-    <div style="margin-top: 4rem;">
-        <h3>Suivez-moi</h3>
-        <div style="display: flex; justify-content: center; gap: 1rem; font-size: 1.5rem;">
-            <a href="#" style="color: var(--text-muted);"><i class="bi bi-instagram"></i></a>
-            <a href="#" style="color: var(--text-muted);"><i class="bi bi-facebook"></i></a>
-            <a href="#" style="color: var(--text-muted);"><i class="bi bi-twitter-x"></i></a>
+<section class="newsletter section-padding">
+    <div class="container-narrow text-center">
+        <h2 class="section-title">Restons en contact</h2>
+        <p class="mb-5">Pour toute demande professionnelle, dédicace, ou simplement pour dire bonjour.</p>
+        
+        <form class="newsletter-form">
+            <div class="row g-3">
+                <div class="col-md-6">
+                    <input type="text" placeholder="Votre Nom" required class="form-control">
+                </div>
+                <div class="col-md-6">
+                    <input type="email" placeholder="Votre Email" required class="form-control">
+                </div>
+                <div class="col-12 mt-3">
+                    <textarea placeholder="Votre Message" rows="5" class="form-control"></textarea>
+                </div>
+                <div class="col-12 mt-4">
+                    <button type="submit" class="btn-primary w-100">Envoyer le message</button>
+                </div>
+            </div>
+        </form>
+        
+        <div class="social-connect mt-5">
+            <h3>Suivez-moi</h3>
+            <div class="social-links mt-3">
+                <a href="https://instagram.com/mogadarr" target="_blank" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                <a href="https://facebook.com/mogadarr" target="_blank" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                <a href="#" target="_blank" aria-label="Threads"><i class="bi bi-threads"></i></a>
+            </div>
         </div>
     </div>
 </section>

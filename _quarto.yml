@@ -23,8 +23,8 @@ lang: fr
 format:
   html:
     theme:
-      light: [cosmo, styles.css, styles-light.css]
       dark: [darkly, styles.css, styles-dark.css]
+      light: [cosmo, styles.css, styles-light.css]
     mainfont: 'Lato'
     fontsize: 1.1em
     include-in-header:

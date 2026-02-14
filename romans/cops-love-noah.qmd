@@ -1,0 +1,66 @@
+---
+title: "COPS and Love — Noah Hunter, le bon flic"
+description: "Un flic brisé, une nouvelle voie, des limites à ne pas franchir… et un passé qui ne lâche pas prise."
+image: ../images/couvertures/cops-noah.jpg
+date: 2025-03-15
+categories: [Romantic Suspense, Fratrie, Nouvelle vie]
+title-block-banner: true
+page-layout: full
+toc: false
+---
+
+```{=html}
+<header class="book-hero">
+    <div class="book-hero-bg" style="background-image: url('../images/couvertures/cops-noah.jpg');"></div>
+    <div class="book-hero-content">
+        <div class="book-hero-card fade-in">
+            <div class="book-hero-cover-wrapper">
+                <img src="../images/couvertures/cops-noah.jpg" alt="COPS and Love — Noah Hunter" class="book-hero-cover">
+            </div>
+            <div class="book-hero-info">
+                <span class="book-genre-pill">Romantic Suspense • Reconstuction</span>
+                <h1>Noah Hunter, le bon flic</h1>
+                <p class="book-tagline">Un flic brisé, une nouvelle voie, et un passé qui ne lâche pas prise.</p>
+                
+                <div class="formats-prix-premium">
+                    <div class="format-item">
+                        <span class="format-name">Ebook</span>
+                        <span class="format-price">1,99 €</span>
+                    </div>
+                    <div class="format-item">
+                        <span class="format-name">Broché</span>
+                        <span class="format-price">13 €</span>
+                    </div>
+                    <div class="format-item">
+                        <span class="format-name">Relié</span>
+                        <span class="format-price">17 €</span>
+                    </div>
+                </div>
+
+                <div class="book-actions">
+                    <a href="https://amzn.eu/d/15wP4jL" class="btn-primary" target="_blank">Acheter sur Amazon</a>
+                    <a href="#resume" class="btn-text">Lire le résumé</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<section id="resume" class="book-details section-padding">
+    <div class="container-narrow">
+        <h2 class="section-title">Le Résumé</h2>
+        <div class="book-resume-content fade-in-scroll">
+            <p>Depuis ce terrible événement qui a failli lui coûter la vie, Noah Hunter n'est plus le même. Lui qui était un flic efficace, un père et un mari dévoué, il n'est désormais plus que l'ombre de lui-même. Son épouse a fini par demander le divorce ce qui achève de plonger l'ainé des frères Hunter dans le désarroi.</p>
+            <p>Aidé de ses frères, il prend la décision de s'éloigner de la ville de Mayfair pour s'établir à Santa Mente. S'il s'en va, c'est aussi pour accomplir un vieux rêve et devenir professeur de littérature dans un lycée qui accueille une classe d'élèves en difficultés. Lui, l'ancien dyslexique, souhaite plus que tout transmettre ce qui lui a permis de réussir.</p>
+            <p>Sauf que ce qu'il croyait être une sinécure est loin d'en être une surtout quand une élève, une dénommée Raven que tout le monde surnomme El Perla, trouble les convictions du beau professeur. Et puis, cette troublante et mystérieuse jeune femme est la conquête attitrée d'un chef de gang qui terrorise tout le lycée...</p>
+            <p>Entre son désir d'homme, ses scrupules de prof, les tensions avec son ex-femme et son instinct d'ancien policier, Noah devra garder la tête froide et le cœur bien accroché.</p>
+        </div>
+        
+        <div class="back-home text-center mt-5">
+            <a href="../romans.html" class="btn-text">
+                <i class="bi bi-arrow-left"></i> Retour à la Collection
+            </a>
+        </div>
+    </div>
+</section>
+```

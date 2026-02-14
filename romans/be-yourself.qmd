@@ -1,0 +1,66 @@
+---
+title: "Be Yourself"
+description: "Une romance sur l’acceptation, la confiance et l’amour de soi — le dernier volet de la trilogie Be."
+image: ../images/couvertures/be-yourself.jpg
+date: 2024-06-30
+categories: [Romance contemporaine, Body positive, Reconstruction]
+title-block-banner: true
+page-layout: full
+toc: false
+---
+
+```{=html}
+<header class="book-hero">
+    <div class="book-hero-bg" style="background-image: url('../images/couvertures/be-yourself.jpg');"></div>
+    <div class="book-hero-content">
+        <div class="book-hero-card fade-in">
+            <div class="book-hero-cover-wrapper">
+                <img src="../images/couvertures/be-yourself.jpg" alt="Be Yourself" class="book-hero-cover">
+            </div>
+            <div class="book-hero-info">
+                <span class="book-genre-pill">Romance Contemporaine • Body Positive</span>
+                <h1>Be Yourself</h1>
+                <p class="book-tagline">Une romance sur l’acceptation, la confiance et l’amour de soi</p>
+                
+                <div class="formats-prix-premium">
+                    <div class="format-item">
+                        <span class="format-name">Ebook</span>
+                        <span class="format-price">2,99 €</span>
+                    </div>
+                    <div class="format-item">
+                        <span class="format-name">Broché</span>
+                        <span class="format-price">14 €</span>
+                    </div>
+                    <div class="format-item">
+                        <span class="format-name">Relié</span>
+                        <span class="format-price">18 €</span>
+                    </div>
+                </div>
+
+                <div class="book-actions">
+                    <a href="https://amzn.eu/d/eiPg5oo" class="btn-primary" target="_blank">Acheter sur Amazon</a>
+                    <a href="#" class="btn-text">Lire un extrait</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<section id="resume" class="book-details section-padding">
+    <div class="container-narrow">
+        <h2 class="section-title">Le Résumé</h2>
+        <div class="book-resume-content fade-in-scroll">
+            <p><strong>Be Yourself — LE DERNIER VOLET DE LA TRILOGIE BE</strong></p>
+            <p>Slim pensait avoir tiré un trait sur son passé. Après avoir affronté ses doutes, ses blessures et ses kilos, elle aspire à une vie plus douce, à l’image de celle qu’elle est enfin devenue : une femme libre et assumée.</p>
+            <p>Mais la liberté, ça se cultive. Entre un nouveau départ professionnel, des relations qui se redéfinissent et un cœur encore fragile, Slim va découvrir qu’être soi-même n’est pas un point d’arrivée, mais un chemin.</p>
+            <p>Et si la clé du bonheur n’était pas dans le regard des autres, mais dans la manière dont on choisit de se voir soi-même ? Dans ce dernier volet, Mo Gadarr livre une romance sincère, vibrante et pleine de bienveillance — une ode à l’amour de soi et à la résilience.</p>
+        </div>
+        
+        <div class="back-home text-center mt-5">
+            <a href="../romans.html" class="btn-text">
+                <i class="bi bi-arrow-left"></i> Retour à la Collection
+            </a>
+        </div>
+    </div>
+</section>
+```

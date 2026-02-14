@@ -1,0 +1,71 @@
+---
+title: "À Noël, je serai une princesse licorne ! — Extraits"
+subtitle: "Deux moments pour découvrir la princesse la moins classique"
+description: "Deux extraits déjantés du roman de Mo Gadarr."
+title-block-banner: images/hero-extrait-buche.svg   # ou un autre SVG si tu as une bannière spécifique pour ce roman
+page-layout: full
+toc: false
+body-classes: extrait-buche
+---
+
+<!-- === Indicateur de progression (fixed) === -->
+<nav class="progress-extraits" aria-label="Progression des extraits">
+  <a href="#e1" class="dot" data-target="e1" aria-label="Aller à l'extrait 1"></a>
+  <a href="#e2" class="dot" data-target="e2" aria-label="Aller à l'extrait 2"></a>
+</nav>
+
+<section class="intro-extrait" markdown="1">
+### 🦄⋆˙✧ Plongez dans l’univers de la Princesse Licorne
+Des châteaux, des piques, des baskets… et un soupçon de mauvais caractère.  
+Deux extraits, zéro princesse parfaite !
+</section>
+
+<section class="extrait-block" id="e1" markdown="1">
+<div class="extrait-numero">EXTRAIT 1</div>
+> « Revenir chez soi pour Noël quand on est juste Asha Guigne est une  
+> chose tout à fait normale. Des millions de personnes en font de même chaque  
+> année. En revanche, quand on est l’altesse royale Harriette Alienor de Guigne,  
+> princesse d’Alvinie, une patrie qui ne vous a pas vue durant des années, ce n’est  
+> tout simplement pas la même limonade. »
+<div class="extrait-legende">Retour royal ? Pas si simple…</div>
+</section>
+
+<section class="extrait-block alt" id="e2" markdown="1">
+<div class="extrait-numero">EXTRAIT 2</div>
+> « Je le sens qui trottine sur mes talons ce cher Axel Hampton. Il peut  
+> courir, ce con. Je ne suis pas de celles qui s’écrasent et qui la bouclent parce  
+> qu’on le leur ordonne. Donc sa robe, il peut se la mettre, s’il le veut. Ses  
+> escarpins, il peut se les coller là où je pense et ses ordres, il peut les mettre sur sa  
+> liste de vœux au Père Noël ! je pense qu’il n’y a que lui qui peut l’exhausser, s’il  
+> y croit très fort ! »
+<div class="extrait-legende">Caractère de princesse… ou tornade ?</div>
+</section>
+
+<section class="cta-extrait" markdown="1">
+### ✮⋆˙ L’histoire (déjantée) commence…
+<div class="btn-row">
+[⋅˚₊‧ ୨ ୧ ‧₊˚ ⋅ Acheter sur Amazon](https://amzn.eu/d/d3MMSlg){.btn .btn-primary role="button"}
+[Lire d'autres romans de Mo Gadarr](../../romans/index.qmd){.btn .btn-secondary role="button"}
+</div>
+</section>
+
+<!-- === Script : active la pastille selon le scroll === -->
+<script>
+  const dots = Array.from(document.querySelectorAll('.progress-extraits .dot'));
+  const sections = ['e1','e2'].map(id => document.getElementById(id));
+  const setActive = (id) => { dots.forEach(d => d.classList.toggle('active', d.dataset.target === id)); };
+  const io = new IntersectionObserver((entries) => {
+    const visible = entries.filter(e => e.isIntersecting).sort((a,b) => b.intersectionRatio - a.intersectionRatio)[0];
+    if (visible) setActive(visible.target.id);
+  }, { threshold: [0.3, 0.6, 0.9] });
+  sections.forEach(sec => sec && io.observe(sec));
+  dots.forEach(d => d.addEventListener('click', () => setActive(d.dataset.target)));
+</script>
+
+<br></br>
+
+<div class="back-home">
+  <a href="https://mogadarr.github.io/lire-mogadarr/" class="btn-back" role="button" aria-label="Retour à l’accueil">
+    <span class="arrow">←</span> Retour à l’accueil
+  </a>
+</div>

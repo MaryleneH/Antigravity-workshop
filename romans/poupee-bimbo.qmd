@@ -1,0 +1,66 @@
+---
+title: "Homme sérieux recherche poupée Bimbo pour Noël"
+description: "Une comédie romantique tendre et drôle où les apparences cachent parfois les plus beaux cadeaux."
+image: ../images/couvertures/poupee-bimbo.jpg
+date: 2024-12-05
+categories: [Romance de Noël, Comédie romantique, Famille, Feel-good]
+title-block-banner: true
+page-layout: full
+toc: false
+---
+
+```{=html}
+<header class="book-hero">
+    <div class="book-hero-bg" style="background-image: url('../images/couvertures/poupee-bimbo.jpg');"></div>
+    <div class="book-hero-content">
+        <div class="book-hero-card fade-in">
+            <div class="book-hero-cover-wrapper">
+                <img src="../images/couvertures/poupee-bimbo.jpg" alt="Homme sérieux recherche poupée Bimbo pour Noël" class="book-hero-cover">
+            </div>
+            <div class="book-hero-info">
+                <span class="book-genre-pill">Romance de Noël • Comédie</span>
+                <h1>Homme sérieux recherche poupée Bimbo pour Noël</h1>
+                <p class="book-tagline">Une comédie romantique tendre et drôle où les apparences cachent parfois les plus beaux cadeaux.</p>
+                
+                <div class="formats-prix-premium">
+                    <div class="format-item">
+                        <span class="format-name">Ebook</span>
+                        <span class="format-price">2,99 €</span>
+                    </div>
+                    <div class="format-item">
+                        <span class="format-name">Broché</span>
+                        <span class="format-price">13 €</span>
+                    </div>
+                    <div class="format-item">
+                        <span class="format-name">Relié</span>
+                        <span class="format-price">17 €</span>
+                    </div>
+                </div>
+
+                <div class="book-actions">
+                    <a href="https://amzn.eu/d/aBKWC5A" class="btn-primary" target="_blank">Acheter sur Amazon</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<section id="resume" class="book-details section-padding">
+    <div class="container-narrow">
+        <h2 class="section-title">Le Résumé</h2>
+        <div class="book-resume-content fade-in-scroll">
+            <p><strong>Qui a dit que les poupées mannequins ne plaisaient qu'aux petites filles ?</strong></p>
+            <p>David Daryse a une vie exemplaire. Père dévoué d'une véritable "tribu" de cinq enfants, il jongle entre son veuvage passé et sa carrière de banquier. Quand sa nounou le lâche juste avant une formation cruciale, il doit trouver une remplaçante en urgence.</p>
+            <p>Et c'est là qu'elle débarque. Blonde, tenue rose bonbon, talons hauts : Cassie Vincenzo est l'archétype de la poupée bimbo dont David a une sainte horreur. Pourtant, il n'a pas le choix.</p>
+            <p>Peu à peu, il va découvrir que sous ses apparences de grande idiote, Cassie est une femme rare, secrète et... <strong>terriblement attirante.</strong> David parviendra-t-il à ne pas se fier aux apparences ?</p>
+            <p>Bonne nouvelle ! À Noël, tout est possible...</p>
+        </div>
+        
+        <div class="back-home text-center mt-5">
+            <a href="../romans.html" class="btn-text">
+                <i class="bi bi-arrow-left"></i> Retour à la Collection
+            </a>
+        </div>
+    </div>
+</section>
+```

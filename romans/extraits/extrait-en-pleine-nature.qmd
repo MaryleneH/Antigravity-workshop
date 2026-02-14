@@ -1,0 +1,95 @@
+---
+title: "En pleine nature — Extraits"
+subtitle: "Trois moments pour succomber"
+description: "Découvrez trois extraits du roman de Mo Gadarr."
+title-block-banner: images/hero-extrait-buche.svg
+page-layout: full
+toc: false
+body-classes: extrait-buche
+---
+
+<!-- === Indicateur de progression (fixed) === -->
+<nav class="progress-extraits" aria-label="Progression des extraits">
+  <a href="#e1" class="dot" data-target="e1" aria-label="Aller à l'extrait 1"></a>
+  <a href="#e2" class="dot" data-target="e2" aria-label="Aller à l'extrait 2"></a>
+  <a href="#e3" class="dot" data-target="e3" aria-label="Aller à l'extrait 3"></a>
+</nav>
+
+<section class="intro-extrait" markdown="1">
+### ✦ Cap sur la Guadeloupe, là où tout bascule
+Un retour aux sources, une **chute en forêt**, un **ermite** aux antipodes des rêves de Léonie…  
+Trois extraits pour sentir battre la nature — et les cœurs.
+</section>
+
+<!-- ===== EXTRACT 1 ===== -->
+<section class="extrait-block" id="e1" markdown="1">
+<div class="extrait-numero">EXTRAIT 1</div>
+> — Couché ! Couché, le chien ! Va-t’en tout de suite !
+> 
+> Bordel, je suis donc tombée en enfer ? Oui, c’est ça, je dois être morte et je me vois condamnée à jouer les Jessy1, maintenue dans ce lit à cause de ma jambe > > > > > douloureuse, avec ce molosse menaçant qui me fixe comme un loup. J’ai toujours eu une peur bleue des waf-waf depuis qu’en rentrant de l’école, le chien d’une voisine > > m’avait coursée. C’est in extrémis que j’ai échappé au Cerbère qui a reçu le portail en fer de chez moi sur le museau. Je le revois avec ses crocs terribles, bavant > > derrière les barreaux, passant sa gueule déchainée dans l’espoir de m’atteindre. Papa était arrivé et l’avait chassé de ses vociférations. J’avais fondu en larmes et > > mon père m’avait promis de toujours me protéger contre ces sales bêtes. 
+> Mais aujourd’hui, mon père est loin et surtout il n’est pas ici. Le chien avance encore et je sens que je vais finir par me pisser dessus de terreur s’il fait un pas > > de plus.
+> — Jappy ! Couché !
+<div class="extrait-legende">La route se dérobe… la nature rattrape tout.</div>
+</section>
+
+<!-- ===== EXTRACT 2 (fond alterné) ===== -->
+<section class="extrait-block alt" id="e2" markdown="1">
+<div class="extrait-numero">EXTRAIT 2</div>
+> Je sursaute et tourne la tête. Le soleil inonde l’encadrement de la porte ce qui fait que je n’aperçois pas bien qui est là. Je ne vois qu’un géant dont la tête n’est > qu’à quelques centimètres du linteau de la porte. 
+> Mon Dieu, qui est ce type ? 
+> Le chien obéit à la seconde à la voix rauque et brutale de son maitre. Désormais couché sur ses pattes, l’animal n’ose même plus un seul regard en direction du géant. 
+> L’ombre me considère, sans un mot. Il porte quelque chose que je ne parviens pas à apercevoir. Je fronce les sourcils et me recule en rabattant les draps sur moi,  >  > cette fois, complètement terrorisée. 
+> — Vous êtes réveillée ? me demande l’homme dont la longue chevelure blond foncé m’assure qu’il s’agit d’un Blanc. 
+> C’est peut-être un Blanc, mais il est surtout sacrément con de me poser cette question. Je suis dans cette espèce de baraquement, les yeux exorbités de terreur, mais > lui, il veut être certain que je sois bien réveillée ! 
+<div class="extrait-legende">Changer de décor pour provoquer le destin.</div>
+</section>
+
+<!-- ===== EXTRACT 3 ===== -->
+<section class="extrait-block" id="e3" markdown="1">
+<div class="extrait-numero">EXTRAIT 3</div>
+> Non, monsieur le chevelu ! Je ne suis pas réveillée ! Je suis en pleine crise de somnambulisme, ça ne se voit pas ?
+> Je garde le silence tout comme le drap de coton sous le menton. Je n’ose le vérifier, mais j’ai l’impression que je n’ai plus de vêtement. Le tissu frais du matelas > > est en train de titiller mon épiderme de partout donc…ce gars a dû me déshabiller, me mettre en sous-vêtements et…
+> Oh, Seigneur…
+> Je déglutis. 
+> Le soleil vient d’éclairer un truc long qui pendouille à sa ceinture et ce truc, c’est un…
+> Oui, c’est bien un sabre du pays, un grand coutelas. 
+> Je suis certaine qu’il va bientôt le brandir sous mon nez et menacer de me décapiter si je ne me montre pas très gentille avec lui.
+> J’avale à nouveau ma salive. Je ne vois toujours pas clairement le visage de ce type, car il se tient encore à contrejour. On dirait que le soleil est décidé à grandir > de ses rayons sa silhouette colossale.
+<div class="extrait-legende">Milo, l’ermite : rugueux, déroutant… et impossible à ignorer.</div>
+</section>
+
+<section class="cta-extrait" markdown="1">
+### ✮⋆˙ L’histoire ne fait que commencer…
+<div class="btn-row">
+[Acheter sur Amazon](https://www.amazon.fr/s?k=Mo+Gadarr+En+pleine+nature){.btn .btn-primary role="button"}
+[Lire la fiche du roman](../en-pleine-nature.qmd){.btn .btn-secondary role="button"}
+</div>
+</section>
+
+<!-- === Script : active la pastille selon le scroll === -->
+<script>
+  const dots = Array.from(document.querySelectorAll('.progress-extraits .dot'));
+  const sections = ['e1','e2','e3'].map(id => document.getElementById(id));
+
+  const setActive = (id) => {
+    dots.forEach(d => d.classList.toggle('active', d.dataset.target === id));
+  };
+
+  const io = new IntersectionObserver((entries) => {
+    const visible = entries
+      .filter(e => e.isIntersecting)
+      .sort((a,b) => b.intersectionRatio - a.intersectionRatio)[0];
+    if (visible) setActive(visible.target.id);
+  }, { threshold: [0.3, 0.6, 0.9] });
+
+  sections.forEach(sec => sec && io.observe(sec));
+  dots.forEach(d => d.addEventListener("click", () => setActive(d.dataset.target)));
+</script>
+
+<br></br>
+
+<div class="back-home">
+  <a href="../../index.qmd" class="btn-back" role="button" aria-label="Retour à l’accueil">
+    <span class="arrow">←</span> Retour à l’accueil
+  </a>
+</div>
