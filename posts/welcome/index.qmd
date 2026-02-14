@@ -1,0 +1,9 @@
+---
+title: "Bienvenue sur mon nouveau site"
+date: "2026-02-14"
+categories: [news]
+---
+
+Je suis ravie de vous accueillir sur mon nouvel espace en ligne. Ici, vous pourrez retrouver toute mon actualité, découvrir mes romans et plonger dans mon univers.
+
+Restez connectés pour de prochaines annonces !

@@ -1,0 +1,26 @@
+---
+title: "Contact"
+---
+
+<section class="newsletter">
+    <div class="about-container" style="display: block; text-align: center; margin-bottom: 3rem;">
+        <h2>Restons en contact</h2>
+        <p>Pour toute demande professionnelle, dédicace, ou simplement pour dire bonjour.</p>
+    </div>
+
+    <form class="newsletter-form" style="display: flex; flex-direction: column; max-width: 500px; margin: 0 auto; gap: 1.5rem;">
+        <input type="text" placeholder="Votre Nom" required style="width: 100%;">
+        <input type="email" placeholder="Votre Email" required style="width: 100%;">
+        <textarea placeholder="Votre Message" rows="5" style="width: 100%; padding: 0.8rem; border: 1px solid #ddd; border-radius: 16px; font-family: inherit;"></textarea>
+        <button type="submit" class="btn-primary">Envoyer le message</button>
+    </form>
+    
+    <div style="margin-top: 4rem;">
+        <h3>Suivez-moi</h3>
+        <div style="display: flex; justify-content: center; gap: 1rem; font-size: 1.5rem;">
+            <a href="#" style="color: var(--text-muted);"><i class="bi bi-instagram"></i></a>
+            <a href="#" style="color: var(--text-muted);"><i class="bi bi-facebook"></i></a>
+            <a href="#" style="color: var(--text-muted);"><i class="bi bi-twitter-x"></i></a>
+        </div>
+    </div>
+</section>

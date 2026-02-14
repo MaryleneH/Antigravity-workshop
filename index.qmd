@@ -17,40 +17,21 @@ format:
     </div>
 </header>
 
-<section id="collection" class="collection">
-    <h2 class="section-title fade-in-scroll">La Collection</h2>
-    <div class="book-grid">
-        <div class="book-card fade-in-scroll" style="--card-gradient: linear-gradient(135deg, #2c3e50, #bdc3c7);">
-            <div class="book-cover">
-                <div class="book-placeholder-art"></div>
+<section id="featured" class="collection">
+    <h2 class="section-title fade-in-scroll">À la Une</h2>
+    <div class="book-grid" style="grid-template-columns: 1fr; max-width: 800px; margin: 0 auto;">
+        <div class="book-card fade-in-scroll" style="display: flex; flex-direction: row; align-items: center; gap: 2rem;">
+            <div class="book-cover" style="flex: 1; height: 350px;">
+                <div class="book-placeholder-art" style="background: linear-gradient(135deg, #c0392b, #f1c40f);"></div>
             </div>
-            <div class="book-info">
-                <h3>Le Secret du Duc</h3>
-                <span class="genre">Romance Historique</span>
-                <p>Dans les jardins brumeux de l'Angleterre de la Régence, un amour interdit fleurit.</p>
-                <a href="#" class="btn-text">Lire un extrait &rarr;</a>
-            </div>
-        </div>
-        <div class="book-card fade-in-scroll" style="--card-gradient: linear-gradient(135deg, #4b0082, #e6e6fa);">
-            <div class="book-cover">
-                <div class="book-placeholder-art"></div>
-            </div>
-            <div class="book-info">
-                <h3>Serment d'Étoiles</h3>
-                <span class="genre">Romance Fantastique</span>
-                <p>Un guerrier et une mage liés par le destin sous la lune d'argent.</p>
-                <a href="#" class="btn-text">Lire un extrait &rarr;</a>
-            </div>
-        </div>
-        <div class="book-card fade-in-scroll" style="--card-gradient: linear-gradient(135deg, #c0392b, #f1c40f);">
-            <div class="book-cover">
-                <div class="book-placeholder-art"></div>
-            </div>
-            <div class="book-info">
+            <div class="book-info" style="flex: 1.5; text-align: left;">
                 <h3>Minuit à Paris</h3>
                 <span class="genre">Romance Contemporaine</span>
                 <p>Deux étrangers, une ville lumière, et une rencontre qui change tout.</p>
-                <a href="#" class="btn-text">Lire un extrait &rarr;</a>
+                <div style="display: flex; gap: 1rem; margin-top: 1.5rem;">
+                    <a href="#" class="btn-primary">Commander</a>
+                    <a href="romans.qmd" class="btn-text">Voir tous les romans &rarr;</a>
+                </div>
             </div>
         </div>
     </div>

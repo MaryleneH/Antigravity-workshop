@@ -1,0 +1,2484 @@
+/* ===============================
+   Mogadarr — Styles COMMUNS
+   Layout, composants, responsive
+   =============================== */
+
+/* Utilitaires */
+img{ border-radius:10px; }
+hr{ border-top:1px solid var(--border); }
+:focus-visible{ outline:3px solid var(--earth-300); outline-offset:2px; }
+section,.section{ scroll-margin-top:100px; }
+.badge-accent{ background:var(--accent); color:#fff; border-radius:999px; padding:.35rem .75rem; font-weight:600; }
+
+/* ===== Navbar (split gauche/droite desktop, hamburger mobile) ===== */
+.navbar{
+  background:var(--earth-50) !important;
+  padding-top:1.1rem; padding-bottom:1.1rem;
+  border-bottom:0 !important; box-shadow:none !important;
+}
+.navbar .container-fluid{ padding-left:4.2rem; padding-right:1rem; }
+@media (max-width:900px){ .navbar .container-fluid{ padding-left:1.25rem; padding-right:1rem; } }
+
+/* Desktop : split */
+@media (min-width: 768px){
+  .navbar .navbar-collapse{
+    width:100%;
+    display:flex !important;
+    justify-content:space-between;
+  }
+}
+
+/* Mobile : collapse/hamburger */
+@media (max-width: 767.98px){
+  .navbar .navbar-collapse{ display:none !important; }
+  .navbar .navbar-collapse.show{ display:block !important; }
+  .navbar .navbar-nav{ gap:.25rem; }
+  .navbar .nav-link{ display:block; padding:.6rem .9rem; border-radius:12px; }
+}
+
+.navbar .navbar-nav{ gap:.25rem; }
+.navbar .navbar-nav:first-child{ margin-right:auto; }
+.navbar .navbar-nav:last-child{  margin-left:auto; }
+.navbar .nav-link{
+  color:var(--earth-900) !important; font-weight:600; padding:.42rem .8rem;
+  border-radius:14px; transition:border-radius .18s, background .18s, color .18s;
+}
+.navbar .nav-link:hover{ background:var(--earth-200); border-radius:8px; text-decoration:none; }
+.navbar .nav-link.active{ background:var(--earth-300); color:#111 !important; }
+
+/* ===== Liens / cartes ===== */
+a{ color:var(--earth-900); }
+a:hover{ color:#1f2425; text-decoration:underline; }
+.card,.quarto-grid-item,.listing{
+  background:var(--card); border:1px solid var(--border); border-radius:12px;
+  box-shadow:0 6px 22px rgba(0,0,0,.05);
+}
+body.quarto-dark .card, body.quarto-dark .quarto-grid-item, body.quarto-dark .listing{
+  box-shadow:0 6px 22px rgba(0,0,0,.28);
+}
+
+/* ===== Title banner : taille/overlay communs (pas d'image forcée) ===== */
+.quarto-title-block .quarto-title-banner{
+  background-size:cover !important; background-position:center center !important;
+  background-repeat:no-repeat !important; border:0 !important; margin:0 !important; padding:0 !important;
+}
+.quarto-title-block .quarto-title-banner .quarto-title-banner-inset{
+  min-height:420px; display:flex; align-items:flex-end; padding:2.2rem 1rem; position:relative;
+}
+.quarto-title-block .quarto-title-banner .quarto-title-banner-inset::after{
+  content:""; position:absolute; inset:0; pointer-events:none;
+  background:linear-gradient(to top, rgba(0,0,0,.10) 0%, rgba(0,0,0,.06) 40%, rgba(0,0,0,0) 100%);
+}
+body.quarto-dark .quarto-title-block .quarto-title-banner .quarto-title-banner-inset::after{
+  background:linear-gradient(to top, rgba(0,0,0,.22) 0%, rgba(0,0,0,.12) 40%, rgba(0,0,0,0) 100%);
+}
+/* Titre/sous-titre du bandeau (commun) */
+.quarto-title-block .quarto-title-banner h1.title { 
+  color: #353a3c; 
+  text-shadow: none;
+}
+.quarto-title-block .quarto-title-banner .subtitle { 
+  color: #353a3c; /* ou #ffffff si garder le sous-titre en blanc */
+  text-shadow: none;
+}
+
+body.quarto-dark .quarto-title-block .quarto-title-banner h1.title,
+body.quarto-dark .quarto-title-block .quarto-title-banner .subtitle {
+  color: #ffffff !important;    /* blanc pur */
+  text-shadow: 0 2px 14px rgba(0,0,0,.35); /* lisibilité sur fond sombre */
+}
+
+
+/* ===== Layout Dernier roman ===== */
+.book-two-col{
+  display:grid; grid-template-columns:minmax(0,1fr) 340px; gap:2rem; align-items:start;
+}
+.book-two-col.reverse{
+  grid-template-columns: clamp(280px, 32vw, 420px) minmax(0, 1fr);
+}
+@media (max-width:900px){
+  .book-two-col, .book-two-col.reverse{ grid-template-columns:1fr; }
+}
+.resume{ max-width:72ch; }
+.resume p{ text-align:justify; }
+
+.book-cover{
+  background:var(--card); border:1px solid var(--border);
+  border-radius:12px; padding:1rem;
+}
+.book-cover img{
+  display:block; width:100%; height:auto; max-width:380px; margin-inline:auto; border-radius:10px;
+}
+
+/* ===== Bloc “Formats & prix” moderne ===== */
+.formats-prix-modern{
+  display:flex; justify-content:space-between; align-items:center; gap:2rem;
+  background:#FFF2F5; color:var(--earth-900);
+  padding:1rem 1.5rem; margin-top:2rem; border-radius:12px;
+  box-shadow:0 4px 14px rgba(0,0,0,0.03);
+}
+body.quarto-dark .formats-prix-modern{ background:#353a3c; color:#fff; }
+.prix-left h3{ margin:0 0 .4rem 0; font-size:1.15rem; }
+.prix-left ul{ list-style:none; margin:0; padding:0; line-height:1.6; font-size:.95rem; }
+.prix-left li{ margin-bottom:.1rem; }
+.prix-right{ display:flex; align-items:center; gap:.8rem; }
+.prix-right .btn, .prix-right .btn-primary{
+  min-width:130px; justify-content:center; padding:.45rem 1rem; border-radius:8px; font-weight:600; transition:all .25s ease;
+}
+@media (max-width:750px){
+  .formats-prix-modern{ flex-direction:column; align-items:stretch; text-align:left; gap:1rem; }
+  .prix-right{ justify-content:flex-start; }
+}
+
+/* ===== Boutons (transparent au hover, sans contour) ===== */
+/* ===== Boutons : disposition élégante et responsive ===== */
+/* ===== Correction mobile : espace vertical réel entre les boutons ===== */
+@media (max-width: 700px) {
+
+  /* On empile verticalement les boutons */
+  .btn-row {
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+    gap: 0.7rem !important;       /* espace vertical entre les boutons */
+    padding-inline: 1rem;
+    margin-top: 1.4rem;
+  }
+
+  /* Les boutons occupent toute la largeur */
+  .btn, .btn-primary, .btn-secondary {
+    width: 100%;
+    max-width: none;
+    text-align: center;
+    padding: .75rem 1.2rem;
+    font-size: 1.05rem;
+  }
+
+  /* Sécurité : marge verticale si le gap ne s'applique pas */
+  .btn + .btn,
+  .btn + .btn-primary,
+  .btn + .btn-secondary {
+    margin-top: 0.7rem !important; /* espace vertical entre boutons successifs */
+  }
+}
+
+.btn-row {
+  transition: all 0.3s ease;
+}
+
+
+.btn:hover,.btn-primary:hover{
+  background:transparent; border-color:transparent; color:var(--earth-900);
+  text-decoration:none !important; box-shadow:none;
+}
+/* === Thème sombre : boutons olive sur fond blanc === */
+body.quarto-dark .btn,
+body.quarto-dark .btn-primary {
+  background: #ffffff;         /* fond blanc */
+  border: 2px solid #ffffff;   /* bordure blanche */
+  color: #353a3c;              /* texte olive */
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: .55rem 1.1rem;
+  border-radius: 10px;
+  font-weight: 600;
+  transition: all .25s ease;
+  cursor: pointer;
+}
+
+/* Survol sombre : inversion subtile */
+body.quarto-dark .btn:hover,
+body.quarto-dark .btn-primary:hover {
+  background: transparent;     /* devient transparent */
+  border-color: #353a3c;       /* contour olive */
+  color: #ffffff;              /* texte blanc */
+  box-shadow: none;
+}
+
+
+/* ===== Accueil : image + CTAs ===== */
+/*
+.portrait-card{ background:var(--card); border:1px solid var(--border); border-radius:12px; padding:.9rem; }
+.portrait-card img{ width:100%; height:auto; display:block; border-radius:10px; }
+.cta-stack{ display:flex; flex-direction:column; gap:.6rem; margin-top:.9rem; } */
+
+/* ===== Bandeau nouveauté (strip) ===== */
+.strip-highlight{ background:#FFF2F5; color:var(--earth-900); border-radius:12px; padding:.9rem 1rem; margin:0 0 2rem 0; }
+body.quarto-dark .strip-highlight{ background:#353a3c; color:#fff; }
+.strip-inner{ display:flex; justify-content:space-between; align-items:center; gap:1rem; }
+.strip-right .btn, .strip-right .btn-primary{ min-width:160px; }
+
+
+/* ========== Bouton secondary ========= */
+
+/* ===== Bouton secondaire (élégant et cohérent) ===== */
+
+/* --- Apparence par défaut (clair et sombre) --- */
+.btn-secondary {
+  background: transparent;
+  border: 2px solid #A3A380;
+  color: #A3A380;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: .55rem 1.1rem;
+  border-radius: 10px;
+  font-weight: 600;
+  transition: all .25s ease;
+  cursor: pointer;
+}
+
+/* --- Hover clair --- */
+body:not(.quarto-dark) .btn-secondary:hover {
+  background: #A3A380;
+  color: #ffffff;
+  border-color: #A3A380;
+  text-decoration: none !important;
+  box-shadow: none;
+}
+
+/* --- Hover sombre --- */
+body.quarto-dark .btn-secondary:hover {
+  background: #ffffff;
+  color: #A3A380;
+  border-color: #ffffff;
+  text-decoration: none !important;
+  box-shadow: none;
+}
+
+
+/* ===== AJout ========= */
+
+/* Masque l'icône par défaut mais garde sa place */
+.quarto-color-scheme-toggle .bi {
+  display: inline-block;
+  width: 1.2rem;
+  height: 1.2rem;
+  visibility: hidden;
+}
+
+/* Icône personnalisée avec animation */
+.quarto-color-scheme-toggle::after {
+  font-family: "bootstrap-icons";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.2rem;
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: transform 0.4s ease, color 0.4s ease;
+  animation: pop-in 0.4s ease;
+  color: inherit;
+}
+
+/* Affiche une icône moon-stars par-dessus */
+.quarto-color-scheme-toggle::after {
+  font-family: "bootstrap-icons";
+  content: "\f496"; /* moon-stars */
+  font-size: 1.2rem;
+  display: inline-block;
+  position: relative;
+  top: 2px;
+  color: inherit;
+}
+
+
+/* ==== photo picto accueil ===== */
+
+/* ===== Portrait de l'auteure : responsive ===== */
+/* ===== Portrait de l'auteure : responsive sans bordure ===== */
+.portrait-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: none;           /* plus de fond */
+  border: none;               /* supprime la bordure */
+  border-radius: 0;           /* pas de coins arrondis */
+  padding: 0;                 /* supprime l’espace interne */
+  margin: 1.5rem auto;
+  max-width: 700px;           /* limite la taille sur grands écrans */
+}
+
+/* Image adaptative */
+.portrait-card img {
+  width: 60%;
+  height: auto;
+  border-radius: 10px;
+  display: block;
+  margin-inline: auto;
+  transition: width 0.3s ease;
+}
+
+/* Sur les écrans moyens (tablettes) */
+@media (max-width: 1024px) {
+  .portrait-card img {
+    width: 80%;
+  }
+}
+
+/* Sur téléphone : image pleine largeur, sans perte de qualité */
+@media (max-width: 600px) {
+  .portrait-card {
+    max-width: none;         /* pas de limite */
+    padding: .5rem;
+    border: none;            /* allège le rendu mobile */
+  }
+  .portrait-card img {
+    width: 100%;             /* occupe toute la largeur */
+  }
+}
+
+/* effet doux au survol */
+@media (hover: hover) and (pointer: fine) {
+  .portrait-card img:hover {
+    transform: scale(1.03);
+    transition: transform 0.4s ease;
+  }
+}
+
+/* ======== bandeau extrait =======  */
+
+/* Extraits : bannière sombre */
+body.quarto-dark.extrait-buche .quarto-title-block .quarto-title-banner{
+  background-image: url("images/hero-extrait-buche-dark.svg") !important;
+}
+
+body.quarto-dark.auteure .quarto-title-block .quarto-title-banner{
+  background-image: url("images/hero-extrait-buche-dark.svg") !important;
+}
+
+body.quarto-dark.romans .quarto-title-block .quarto-title-banner{
+  background-image: url("images/hero-romans-dark.svg") !important;
+}
+
+/* bandeau light */
+
+body.quarto-light.extrait-buche .quarto-title-block .quarto-title-banner{
+  background-image: url("images/hero-extrait-buche.svg") !important;
+}
+
+body.quarto-light.accueil .quarto-title-block .quarto-title-banner{
+  background-image: url("images/hero-extrait-buche.svg") !important;
+}
+
+body.quarto-light.romans .quarto-title-block .quarto-title-banner{
+  background-image: url("images/hero-romans.svg") !important;
+}
+
+/* ================================================= */
+
+/* Style bandeau saisons   */
+body.quarto-dark.sur-le-sable  .quarto-title-block .quarto-title-banner{
+  background-image:url("images/hero-saisons-sable-dark.svg")!important;
+}
+body.quarto-dark.dans-les-fleurs .quarto-title-block .quarto-title-banner{
+  background-image:url("images/hero-saisons-fleurs-dark.svg")!important;
+}
+body.quarto-dark.en-pleine-nature .quarto-title-banner{
+  background-image:url("images/hero-saisons-nature-dark.svg")!important;
+}
+
+body.quarto-light.sur-le-sable  .quarto-title-block .quarto-title-banner{
+  background-image:url("images/hero-saisons-sable.svg")!important;
+}
+body.quarto-light.dans-les-fleurs .quarto-title-block .quarto-title-banner{
+  background-image:url("images/hero-saisons-fleurs.svg")!important;
+}
+body.quarto-light.en-pleine-nature .quarto-title-block .quarto-title-banner{
+  background-image:url("images/hero-saisons-nature.svg")!important;
+}
+
+/*==================================================== */
+/* ======= Pour extrait ==== */
+
+/* ===== PAGE EXTRAITS ===== */
+.intro-extrait {
+  text-align: center;
+  font-size: 1.2rem;
+  line-height: 1.7;
+  margin: 2rem auto 3rem;
+  max-width: 780px;
+  color: var(--earth-900);
+}
+
+.extrait-block {
+  background: #FFF2F5;
+  color: var(--earth-900);
+  border-radius: 16px;
+  padding: 2rem 1.5rem;
+  margin: 2rem auto;
+  max-width: 850px;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.05);
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+.extrait-block:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 22px rgba(0,0,0,0.08);
+}
+.extrait-block.alt {
+  background: #FFE5EC;
+}
+
+.extrait-numero {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 700;
+  color: #FB6F92;
+  text-align: center;
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
+}
+
+.extrait-block blockquote {
+  font-style: italic;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--earth-900);
+  margin: 0 auto 1rem auto;
+  max-width: 700px;
+}
+
+.extrait-legende {
+  text-align: right;
+  font-weight: 500;
+  color: #A3A380;
+  margin-top: 1rem;
+  font-size: .95rem;
+}
+
+.cta-extrait {
+  text-align: center;
+  margin-top: 3rem;
+  margin-bottom: 4rem;
+}
+.cta-extrait h3 {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+/* ===== Indicateur de progression (3 pastilles) ===== */
+.progress-extraits{
+  position: fixed;
+  left: 50%;
+  bottom: 18px;                 /* place en bas ; mets top: 18px pour le haut */
+  transform: translateX(-50%);
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(6px);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: .35rem .55rem;
+  display: flex;
+  gap: .5rem;
+  z-index: 999;
+  box-shadow: 0 8px 24px rgba(0,0,0,.08);
+}
+body.quarto-dark .progress-extraits{
+  background: rgba(43, 47, 49, 0.72);
+  border-color: rgba(255,255,255,.12);
+  box-shadow: 0 10px 28px rgba(0,0,0,.35);
+}
+
+.progress-extraits .dot{
+  width: 12px; height: 12px;
+  border-radius: 50%;
+  background: #B0C4B1;            /* olive doux pâle */
+  display: inline-block;
+  transition: transform .25s ease, background .25s ease, box-shadow .25s ease;
+}
+.progress-extraits .dot:hover{
+  transform: scale(1.15);
+  background: #A3A380;
+  box-shadow: 0 0 0 6px rgba(163,163,128,.12);
+}
+.progress-extraits .dot.active{
+  transform: scale(1.2);
+  background: #A3A380;            /* actif = olive */
+  box-shadow: 0 0 0 6px rgba(163,163,128,.18);
+}
+
+/* Espace sous la page pour que le nav ne masque pas le contenu tout en bas */
+body.extrait-buche { padding-bottom: 80px; }
+
+
+/* ====== dark mode pour extrait ===== */
+
+/* ===== EXTR AITS — Dark mode lisible ===== */
+body.quarto-dark.extrait-buche .intro-extrait{
+  color: #E8ECEE;
+}
+
+body.quarto-dark.extrait-buche .extrait-block{
+  background: #2b2f31;                    /* carte sombre */
+  color: #E8ECEE;                          /* texte principal */
+  border: 1px solid rgba(255,255,255,.08); /* léger contour */
+  box-shadow: 0 8px 24px rgba(0,0,0,.35);
+}
+body.quarto-dark.extrait-buche .extrait-block.alt{
+  background: #3a4143;                    /* alternance légèrement plus claire */
+}
+
+body.quarto-dark.extrait-buche .extrait-numero{
+  color: #ff8fb1;                          /* accent visible en dark */
+}
+
+body.quarto-dark.extrait-buche .extrait-block blockquote{
+  color: #E8ECEE;
+  border-left: 4px solid #A3A380;          /* repère doux olive */
+  padding-left: 0.9rem;
+}
+
+body.quarto-dark.extrait-buche .extrait-legende{
+  color: #B0C4B1;                          /* olive pâle lisible */
+}
+
+/* Boutons dans la section CTA (hérite déjà de tes styles dark) */
+body.quarto-dark.extrait-buche .cta-extrait h3{
+  color: #ffffff;
+}
+body.quarto-dark.extrait-buche .cta-extrait a{
+  text-decoration: none;
+}
+
+/* Assure un contraste correct pour les liens éventuels dans les extraits */
+body.quarto-dark.extrait-buche .extrait-block a{
+  color: #A3A380;
+}
+body.quarto-dark.extrait-buche .extrait-block a:hover{
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+
+
+
+
+/* ============================================================== */
+/* ============= Style pour section ROMANS ====================== */
+
+
+/* ================================================================== */
+
+/* ======= PAGE ROMANS ======= */
+body.romans .intro-romans {
+  text-align: center;
+  max-width: 780px;
+  margin: 2rem auto 3rem;
+  font-size: 1.2rem;
+  line-height: 1.7;
+  color: var(--earth-900);
+}
+
+.roman-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1.2rem;
+  margin-bottom: 3rem;
+  padding-inline: 1rem;
+}
+
+.roman-card {
+  display: block;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 1rem;
+  text-align: center;
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--earth-900);
+  text-decoration: none;
+  box-shadow: 0 4px 14px rgba(0,0,0,.05);
+  transition: transform .25s ease, box-shadow .25s ease, background .25s ease;
+}
+.roman-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 22px rgba(0,0,0,.1);
+  background: #FFF2F5;
+  color: var(--earth-900);
+}
+
+/* Dark mode */
+body.quarto-dark .roman-card {
+  background: #2b2f31;
+  color: #E8ECEE;
+  border: 1px solid rgba(255,255,255,.08);
+  box-shadow: 0 4px 14px rgba(0,0,0,.35);
+}
+body.quarto-dark .roman-card:hover {
+  background: #3a4143;
+  color: #ff8fb1;
+}
+
+/* Titre de section */
+body.romans h2 {
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  text-align: left;
+  font-size: 1.5rem;
+  color: var(--earth-900);
+}
+body.quarto-dark.romans h2 {
+  color: #E8ECEE;
+}
+
+
+/* pas de surlignement */
+/* ===== Liens de cartes de romans : pas de soulignement ===== */
+.roman-card {
+  text-decoration: none !important;  /* supprime tout soulignement */
+}
+
+/* Évite aussi le surlignage au focus / hover */
+.roman-card:hover,
+.roman-card:focus,
+.roman-card:active {
+  text-decoration: none !important;
+  outline: none;
+  box-shadow: 0 6px 22px rgba(0,0,0,0.08); /* conserve ton effet hover existant */
+}
+
+/* Mode sombre : idem */
+body.quarto-dark .roman-card:hover,
+body.quarto-dark .roman-card:focus {
+  text-decoration: none !important;
+  outline: none;
+}
+
+
+/* ============================== */
+
+/* ======= Layout des rubriques (grille 2 colonnes desktop / 1 colonne mobile) ======= */
+.section-grid{
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.6rem;
+  align-items: start;
+  margin-bottom: 2.5rem;
+}
+@media (max-width: 1100px){
+  .section-grid{ grid-template-columns: 1fr; }
+}
+
+/* Carte de rubrique */
+.group-card{
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 1.1rem 1rem 1rem;
+  box-shadow: 0 6px 22px rgba(0,0,0,.05);
+}
+body.quarto-dark .group-card{
+  background: #2b2f31;
+  border-color: rgba(255,255,255,.08);
+  box-shadow: 0 8px 28px rgba(0,0,0,.35);
+}
+
+/* Titre de rubrique court et compact */
+.group-title{
+  margin: .1rem 0 1rem 0;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--earth-900);
+}
+body.quarto-dark .group-title{ color: #E8ECEE; }
+
+/* Grille de romans compacte dans chaque rubrique */
+.roman-grid.compact{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+  gap: .8rem;
+}
+@media (max-width: 700px){
+  .roman-grid.compact{
+    grid-template-columns: 1fr;   /* 1 colonne sur téléphone */
+    gap: .7rem;
+  }
+}
+
+/* Cartes de romans : pas de soulignement et hover doux */
+.roman-card{
+  display: block;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: .85rem .9rem;
+  text-align: center;
+  font-weight: 600;
+  font-size: .98rem;
+  color: var(--earth-900);
+  text-decoration: none !important;
+  box-shadow: 0 4px 14px rgba(0,0,0,.05);
+  transition: transform .22s ease, box-shadow .22s ease, background .22s ease;
+}
+.roman-card:hover,
+.roman-card:focus{
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(0,0,0,.08);
+  background: #FFF2F5;
+  text-decoration: none !important;
+  outline: none;
+}
+
+body.quarto-dark .roman-card{
+  background: #2b2f31;
+  color: #E8ECEE;
+  border-color: rgba(255,255,255,.08);
+  box-shadow: 0 4px 14px rgba(0,0,0,.35);
+}
+body.quarto-dark .roman-card:hover,
+body.quarto-dark .roman-card:focus{
+  background: #3a4143;
+  color: #ff8fb1;
+  text-decoration: none !important;
+}
+
+
+
+/* ========== PATCH ================= */
+
+/* ======= Page ROMANS — grille 3 colonnes élégante ======= */
+.section-grid-3{
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.4rem;
+  align-items: start;
+  margin-bottom: 2.2rem;
+}
+@media (max-width: 1200px){
+  .section-grid-3{ grid-template-columns: repeat(2, minmax(0,1fr)); }
+}
+@media (max-width: 720px){
+  .section-grid-3{ grid-template-columns: 1fr; }
+}
+
+/* Tuiles de rubrique : minimal, respiré */
+.group-slab{
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 1rem 1rem 0.85rem;
+}
+body.quarto-dark .group-slab{
+  background: #2b2f31;
+  border-color: rgba(255,255,255,.08);
+}
+.group-slab > h4,
+.group-slab > .group-title{
+  margin: .1rem 0 .9rem 0;
+  font-size: 1.05rem;
+  font-weight: 800;
+  letter-spacing: .2px;
+  color: var(--earth-900);
+}
+body.quarto-dark .group-slab > h4{ color: #E8ECEE; }
+
+/* Grille interne de liens en “pills” (lisible, compact) */
+.roman-pills{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: .6rem .6rem;
+  margin-bottom: .6rem;
+}
+@media (max-width: 720px){
+  .roman-pills{ grid-template-columns: 1fr; gap: .55rem; }
+}
+
+/* Pills de roman : sans soulignement, focus visible, hover doux */
+.pill{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: .58rem .8rem;
+  border-radius: 999px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  color: var(--earth-900);
+  text-decoration: none !important;
+  font-weight: 600;
+  font-size: .95rem;
+  transition: transform .18s ease, box-shadow .18s ease, background .18s ease, color .18s ease, border-color .18s ease;
+}
+.pill:hover{
+  background: #FFF2F5;
+  color: var(--earth-900);
+  box-shadow: 0 4px 14px rgba(0,0,0,.06);
+  transform: translateY(-1px);
+}
+.pill:focus-visible{
+  outline: 3px solid #A3A380;
+  outline-offset: 2px;
+}
+
+/* Dark mode des pills */
+body.quarto-dark .pill{
+  background: #2b2f31;
+  border-color: rgba(255,255,255,.10);
+  color: #E8ECEE;
+}
+body.quarto-dark .pill:hover{
+  background: #3a4143;
+  color: #ff8fb1;
+  box-shadow: 0 8px 22px rgba(0,0,0,.35);
+}
+
+/* Intro compacte de la page */
+body.romans .intro-romans{
+  text-align: center;
+  max-width: 820px;
+  margin: 1.6rem auto 2rem;
+  font-size: 1.15rem;
+  line-height: 1.7;
+  color: var(--earth-900);
+}
+body.quarto-dark.romans .intro-romans{ color: #E8ECEE; }
+
+/* Supprime toute déco de lien parasite à l’intérieur des pills */
+.roman-pills a{ text-decoration: none !important; }
+
+/* Option : enfonce très légèrement la tuile au survol (desktop) */
+@media (hover: hover) and (pointer: fine){
+  .group-slab:hover{ transform: translateY(-1px); transition: transform .18s ease; }
+}
+
+
+
+/* ===== Barre de filtres ===== */
+.roman-filter{
+  display: flex;
+  flex-wrap: wrap;
+  gap: .6rem;
+  justify-content: center;
+  margin: 0 0 1.2rem 0;
+  padding: .4rem 0;
+}
+
+.roman-filter .chip{
+  appearance: none;
+  border: 1px solid var(--border);
+  background: var(--card);
+  color: var(--earth-900);
+  border-radius: 999px;
+  padding: .45rem .9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all .2s ease;
+}
+.roman-filter .chip:hover{
+  background: #FFF2F5;
+}
+.roman-filter .chip.active{
+  background: #A3A380;
+  border-color: #A3A380;
+  color: #ffffff;
+}
+.roman-filter .chip:focus-visible{
+  outline: 3px solid #A3A380;
+  outline-offset: 2px;
+}
+
+/* Dark mode — filtres */
+body.quarto-dark .roman-filter .chip{
+  background: #2b2f31;
+  color: #E8ECEE;
+  border-color: rgba(255,255,255,.12);
+}
+body.quarto-dark .roman-filter .chip:hover{
+  background: #3a4143;
+}
+body.quarto-dark .roman-filter .chip.active{
+  background: #ffffff;
+  color: #A3A380;
+  border-color: #ffffff;
+}
+
+/* Grille 3 colonnes (tu l’as déjà) — on resserre un peu le gap */
+.section-grid-3{
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.2rem;
+  align-items: start;
+  margin-bottom: 2.2rem;
+}
+@media (max-width: 1200px){
+  .section-grid-3{ grid-template-columns: repeat(2, minmax(0,1fr)); }
+}
+@media (max-width: 720px){
+  .section-grid-3{ grid-template-columns: 1fr; }
+}
+
+/* Tuile sobre */
+.group-slab{
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 1rem 1rem .9rem;
+}
+body.quarto-dark .group-slab{
+  background: #2b2f31;
+  border-color: rgba(255,255,255,.08);
+}
+.group-slab > h4{
+  margin: .1rem 0 .8rem 0;
+  font-size: 1.05rem;
+  font-weight: 800;
+  letter-spacing: .2px;
+  color: var(--earth-900);
+}
+body.quarto-dark .group-slab > h4{ color: #E8ECEE; }
+
+/* Pills de romans (tu as déjà un style de base) */
+.roman-pills{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: .6rem;
+  margin-bottom: .4rem;
+}
+@media (max-width: 720px){
+  .roman-pills{ grid-template-columns: 1fr; }
+}
+.pill{ text-decoration: none !important; }
+
+
+
+/* ================================================ */
+/* PATCH */
+
+/* ===== Barre de filtres ===== */
+.roman-filter{
+  display:flex; flex-wrap:wrap; gap:.6rem; justify-content:center;
+  margin:0 0 1.2rem 0; padding:.4rem 0;
+}
+.roman-filter .chip{
+  appearance:none; cursor:pointer; border:1px solid var(--border);
+  background:var(--card); color:var(--earth-900);
+  border-radius:999px; padding:.45rem .9rem; font-weight:700; transition:.2s;
+}
+.roman-filter .chip:hover{ background:#FFF2F5; }
+.roman-filter .chip.active{ background:#A3A380; border-color:#A3A380; color:#fff; }
+.roman-filter .chip:focus-visible{ outline:3px solid #A3A380; outline-offset:2px; }
+body.quarto-dark .roman-filter .chip{ background:#2b2f31; color:#E8ECEE; border-color:rgba(255,255,255,.12); }
+body.quarto-dark .roman-filter .chip:hover{ background:#3a4143; }
+body.quarto-dark .roman-filter .chip.active{ background:#fff; color:#A3A380; border-color:#fff; }
+
+/* ===== Grille 3 colonnes ===== */
+.section-grid-3{
+  display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:1.2rem; align-items:start; margin-bottom:2.2rem;
+}
+@media (max-width:1200px){ .section-grid-3{ grid-template-columns:repeat(2,1fr); } }
+@media (max-width:720px){  .section-grid-3{ grid-template-columns:1fr; } }
+
+/* ===== Panneaux ultralégers (inspirés de ton SCSS) ===== */
+.group-slab{
+  background:var(--card);
+  border:4px solid var(--border);   /* valeur par défaut si pas de tone-* */
+  border-radius:10px; padding:1rem 1rem .9rem;
+}
+.group-slab > h4, .group-slab > h3, .group-slab > h2{
+  margin:.2rem 0 .8rem; font-size:1.05rem; font-weight:800; letter-spacing:.2px; color:var(--earth-900);
+}
+body.quarto-dark .group-slab{ background:#2b2f31; border-color:rgba(255,255,255,.08); }
+body.quarto-dark .group-slab > h4, body.quarto-dark .group-slab > h3, body.quarto-dark .group-slab > h2{ color:#E8ECEE; }
+
+/* Variantes de ton (bordures colorées) */
+.group-slab.tone-1{ border-color:#A3A380; }
+.group-slab.tone-2{ border-color:#FB6F92; }
+.group-slab.tone-3{ border-color:#4A5759; }
+
+/* ===== Liens en pills ===== */
+.roman-pills{ display:grid; grid-template-columns:repeat(auto-fill,minmax(210px,1fr)); gap:.6rem; }
+@media (max-width:720px){ .roman-pills{ grid-template-columns:1fr; } }
+
+.pill{
+  display:inline-flex; align-items:center; justify-content:center;
+  padding:.58rem .8rem; border-radius:8px;
+  background:var(--card); border:2px solid var(--border);
+  color:var(--earth-900); font-weight:700; font-size:.95rem;
+  text-decoration:none !important; transition:.18s;
+}
+.pill:hover{ background:#FFF2F5; transform:translateY(-1px); box-shadow:0 4px 14px rgba(0,0,0,.06); }
+.pill:focus-visible{ outline:3px solid #A3A380; outline-offset:2px; }
+
+body.quarto-dark .pill{ background:#2b2f31; border-color:rgba(255,255,255,.12); color:#E8ECEE; }
+body.quarto-dark .pill:hover{ background:#3a4143; color:#ff8fb1; box-shadow:0 8px 22px rgba(0,0,0,.35); }
+
+/* ===== Bouton “Retour accueil” compact ===== */
+.back-home{ margin:1.4rem 0 0; text-align:center; }
+.back-home .btn-back{
+  display:inline-flex; gap:.45rem; align-items:center; justify-content:center;
+  background:transparent; border:2px solid #A3A380; color:#A3A380;
+  padding:.55rem 1.1rem; border-radius:999px; font-weight:700; text-decoration:none;
+  transition:.2s;
+}
+.back-home .btn-back:hover{ background:#A3A380; color:#fff; }
+
+
+
+
+
+/* bandeaux contact */
+
+body.quarto-light.contact .quarto-title-block .quarto-title-banner{
+  background-image: url("images/hero-contact.svg") !important;
+}
+
+body.quarto-dark.contact .quarto-title-block .quarto-title-banner{
+  background-image: url("images/hero-contact-dark.svg") !important;
+}
+
+
+/* ============================================ */
+/* Style bouton retour accueil   ============== */
+
+/* ===== Bouton RETOUR ACCUEIL ===== */
+.back-home {
+  text-align: center;
+  margin: 3rem auto 1.5rem;
+}
+
+.btn-back {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: .4rem;
+  padding: .6rem 1.1rem;
+  border-radius: 999px;
+  border: 2px solid #A3A380;
+  background: transparent;
+  color: #A3A380;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: all 0.25s ease;
+}
+
+/* Hover : inversion douce */
+.btn-back:hover {
+  background: #A3A380;
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(163,163,128,.25);
+  transform: translateY(-2px);
+}
+
+/* Mode sombre */
+body.quarto-dark .btn-back {
+  border-color: #ffffff;
+  color: #ffffff;
+}
+body.quarto-dark .btn-back:hover {
+  background: #ffffff;
+  color: #A3A380;
+  box-shadow: 0 4px 12px rgba(255,255,255,.25);
+}
+
+/* Flèche fluide */
+.btn-back .arrow {
+  font-size: 1.2rem;
+  line-height: 1;
+  transition: transform .25s ease;
+}
+.btn-back:hover .arrow {
+  transform: translateX(-4px);
+}
+
+/* Responsive : plein écran sur mobile */
+@media (max-width: 700px) {
+  .btn-back {
+    width: 90%;
+    padding: .8rem 1.2rem;
+    font-size: 1.05rem;
+  }
+}
+
+/* =========================================== */
+/* Partie Contact   ====================== */
+
+/* ===== Contact : grille / cartes ===== */
+.contact-grid{
+  display: grid;
+  grid-template-columns: 1.2fr .8fr;  /* contact | réseaux */
+  gap: 1.25rem;
+  margin-top: 1rem;
+}
+@media (max-width: 900px){
+  .contact-grid{ grid-template-columns: 1fr; }
+}
+
+.contact-card, .social-card{
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.1rem 1rem;
+  box-shadow: 0 6px 22px rgba(0,0,0,.05);
+}
+body.quarto-dark .contact-card,
+body.quarto-dark .social-card{
+  box-shadow: 0 6px 22px rgba(0,0,0,.28);
+}
+
+.intro-contact{
+  text-align: center;
+  max-width: 860px;
+  margin: 0 auto 1.25rem auto;
+  font-size: 1.05rem;
+  color: var(--earth-900);
+}
+body.quarto-dark .intro-contact{ color: #fff; }
+
+/* Liens en pastille pour Instagram/Goodreads */
+.pill-link{
+  display: inline-block;
+  margin-top: .35rem;
+  padding: .35rem .65rem;
+  border: 2px solid var(--earth-300);
+  border-radius: 999px;
+  text-decoration: none;
+  color: var(--earth-900);
+  transition: all .2s ease;
+}
+.pill-link:hover{
+  background: var(--earth-300);
+  color: #111;
+  text-decoration: none;
+}
+body.quarto-dark .pill-link{
+  border-color: #A3A380;
+  color: #fff;
+}
+body.quarto-dark .pill-link:hover{
+  background: #fff;
+  color: #A3A380;
+}
+
+/* Petit encadré d’info */
+.hint{
+  margin-top: .9rem;
+  font-size: .95rem;
+  padding: .6rem .75rem;
+  border: 1px dashed var(--border);
+  border-radius: 10px;
+  color: var(--earth-900);
+}
+body.quarto-dark .hint{ color: #fff; }
+
+/* Espace vertical entre boutons sur mobile */
+@media (max-width: 600px){
+  .contact-card .btn-row .btn{ 
+    width: 100%;
+    margin-bottom: .5rem;
+  }
+}
+
+
+
+
+/* ============================================= */
+/* ========================================================== */
+
+/* Ajout Trailer  */
+
+/* ===== FAB Trailer (mobile only) ===== */
+.fab-trailer{
+  position: fixed;
+  right: 16px;
+  bottom: 88px;                /* au-dessus du bas de page */
+  display: none;               /* desktop: caché */
+  align-items: center;
+  gap: .5rem;
+  text-decoration: none;
+  background: #ffffff;         /* fond blanc (cohérent avec boutons dark de ton thème) */
+  color: #A3A380;              /* olive doux */
+  border: 2px solid #A3A380;
+  border-radius: 999px;
+  padding: .55rem .9rem;
+  box-shadow: 0 10px 26px rgba(0,0,0,.15);
+  z-index: 1000;
+  transition: transform .2s ease, box-shadow .2s ease, background .2s ease, color .2s ease, border-color .2s ease;
+}
+
+.fab-trailer .fab-icon{
+  font-weight: 700;
+  line-height: 1;
+}
+
+.fab-trailer .fab-label{
+  font-weight: 700;
+  font-family: "Plus Jakarta Sans", Inter, system-ui, sans-serif;
+  letter-spacing: .2px;
+}
+
+/* Survol (si dispo) */
+@media (hover:hover){
+  .fab-trailer:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 14px 30px rgba(0,0,0,.18);
+    background: #A3A380;
+    color: #ffffff;
+    border-color: #A3A380;
+  }
+}
+
+/* Mobile: on l’affiche et on l’agrandit un poil */
+@media (max-width: 700px){
+  .fab-trailer{ display: inline-flex; }
+}
+
+/* Dark mode : fond blanc + olive, cohérent avec tes choix */
+body.quarto-dark .fab-trailer{
+  background: #ffffff;
+  color: #A3A380;
+  border-color: #ffffff;
+  box-shadow: 0 12px 28px rgba(0,0,0,.35);
+}
+@media (hover:hover){
+  body.quarto-dark .fab-trailer:hover{
+    background: transparent;
+    color: #ffffff;
+    border-color: #A3A380;
+  }
+}
+
+/* Respecte la réduction d’animations */
+@media (prefers-reduced-motion: reduce){
+  .fab-trailer{ transition: none; }
+}
+
+
+/* ===== Trailer (Quarto {{< video >}}) — responsive et propre ===== */
+.book-trailer{
+  margin: 1.5rem 0 1.75rem;
+  text-align: center;
+}
+.book-trailer h3,
+.book-trailer .trailer-title{
+  margin: 0 0 .75rem 0;
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: var(--earth-900);
+}
+body.quarto-dark .book-trailer h3,
+body.quarto-dark .book-trailer .trailer-title{
+  color: #fff;
+}
+
+/* Le figure généré par le shortcode a la classe .quarto-video */
+.book-trailer .quarto-video{
+  max-width: 960px;           /* limite sur desktop */
+  margin-inline: auto;
+}
+
+/* Le <video> interne prend toute la largeur et garde un ratio net */
+.book-trailer .quarto-video video{
+  display: block;
+  width: 100%;
+  height: auto;               /* laisse le navigateur gérer la hauteur */
+  aspect-ratio: 16 / 9;       /* ratio constant → pas d’étirement */
+  border-radius: 12px;
+  background: #000;           /* fond neutre avant le paint */
+  object-fit: cover;          /* rogne propre si nécessaire */
+  outline: none;
+  box-shadow: 0 10px 24px rgba(0,0,0,.06);
+}
+
+/* Mobile : pleine largeur, petite marge latérale */
+@media (max-width: 700px){
+  .book-trailer .quarto-video{
+    max-width: none;
+    padding-inline: .5rem;
+  }
+}
+
+
+
+/* ===================================================== */
+
+/* style du Blog */
+
+/* Miniatures du listing : hauteur fixe + rognage propre */
+.listing .thumbnail-image img {
+  display:block;
+  width: 100%;
+  height: 140px;          /* ajuste 120–180px selon le rendu souhaité */
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Écarter les items et affiner la lecture */
+.listing .quarto-post {
+  padding: .85rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--card);
+  box-shadow: 0 4px 14px rgba(0,0,0,.03);
+}
+
+/* Étiquettes/catégories mieux intégrées */
+.listing .quarto-post .categories .category {
+  background: #FFF2F5;
+  color: var(--earth-900);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 2px 8px;
+  font-weight: 600;
+}
+body.quarto-dark .listing .quarto-post .categories .category {
+  background: #353a3c;
+  color: #fff;
+  border-color: rgba(255,255,255,.12);
+}
+
+
+/* =================== Règles blog ================== */
+
+/* ===== Blog : hero split ===== */
+.blog-hero{
+  display: grid;
+  grid-template-columns: minmax(0,1fr) 340px;
+  gap: 1.25rem;
+  align-items: center;
+  margin: 1rem 0 1.5rem;
+}
+.blog-hero .hero-left .hero-kicker{
+  margin: .25rem 0 .5rem 0;
+  font-size: 1.25rem;
+  color: var(--earth-900);
+}
+.blog-hero .lead{ margin: .25rem 0 1rem 0; }
+.blog-hero .hero-portrait{
+  display: block;
+  width: 100%;
+  max-width: 320px;
+  height: auto;
+  border-radius: 16px;
+  box-shadow: 0 10px 26px rgba(0,0,0,.08);
+  margin-inline: auto;
+}
+@media (max-width: 900px){
+  .blog-hero{ grid-template-columns: 1fr; text-align: left; }
+  .blog-hero .hero-portrait{ max-width: 440px; }
+}
+
+/* ===== Salon card ===== */
+.salon-card{
+  display: grid;
+  grid-template-columns: 320px minmax(0,1fr);
+  gap: 1rem;
+  align-items: center;
+  background: #FFF2F5;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 1rem;
+  margin: .5rem 0 1.75rem 0;
+  box-shadow: 0 6px 22px rgba(0,0,0,.05);
+}
+.salon-card .salon-visual img{
+  width: 100%; height: auto; display: block; border-radius: 10px;
+}
+.salon-card .salon-copy h3{
+  margin: .25rem 0 .5rem 0;
+}
+body.quarto-dark .salon-card{
+  background: #353a3c;
+  border-color: rgba(255,255,255,.12);
+  box-shadow: 0 10px 28px rgba(0,0,0,.35);
+}
+@media (max-width: 900px){
+  .salon-card{ grid-template-columns: 1fr; }
+}
+
+/* ===== Listing blog en grille 3 colonnes ===== */
+.blog-home .listing .quarto-posts{
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0,1fr));
+  gap: 1.1rem;
+}
+@media (max-width: 1100px){
+  .blog-home .listing .quarto-posts{ grid-template-columns: repeat(2, minmax(0,1fr)); }
+}
+@media (max-width: 680px){
+  .blog-home .listing .quarto-posts{ grid-template-columns: 1fr; }
+}
+
+/* Cartes d’articles */
+.blog-home .listing .quarto-post{
+  padding: .85rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--card);
+  box-shadow: 0 4px 14px rgba(0,0,0,.03);
+  transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
+}
+.blog-home .listing .quarto-post:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0,0,0,.06);
+  background: #FFF2F5;
+}
+body.quarto-dark.blog-home .listing .quarto-post{
+  background: #2b2f31;
+  border-color: rgba(255,255,255,.08);
+  box-shadow: 0 4px 18px rgba(0,0,0,.35);
+}
+body.quarto-dark.blog-home .listing .quarto-post:hover{
+  background: #3a4143;
+}
+
+/* Vignettes uniformes */
+.blog-home .listing .thumbnail-image img{
+  display:block; width:100%; height:160px; object-fit:cover; border-radius:10px;
+}
+
+/* Bandeau blog : version sombre automatique */
+body.quarto-dark.blog-home .quarto-title-block .quarto-title-banner{
+  background-image: url("../images/hero-blog-dark.svg") !important;
+}
+
+/* =========================================================
+   COEURS TRÈS VISIBLES (rose + vert) UNIQUEMENT DANS LES CARDS
+   ========================================================= */
+
+.actu-card{
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+/* Ajuste ici le rose et le vert si besoin */
+.actu-card.hearts{
+  --heart-pink: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cpath fill='%23ff4fa3' d='M32 54s-18-11.3-24-22.6C3.7 23.5 7.7 16 15.4 15.4c4-.3 7.7 1.8 9.7 5.2 2-3.4 5.7-5.5 9.7-5.2C42.3 16 46.3 23.5 56 31.4 50 42.7 32 54 32 54z'/%3E%3C/svg%3E");
+  --heart-green: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cpath fill='%236b8f7a' d='M32 54s-18-11.3-24-22.6C3.7 23.5 7.7 16 15.4 15.4c4-.3 7.7 1.8 9.7 5.2 2-3.4 5.7-5.5 9.7-5.2C42.3 16 46.3 23.5 56 31.4 50 42.7 32 54 32 54z'/%3E%3C/svg%3E");
+}
+
+/* Base commune des coeurs */
+.actu-card.hearts::before,
+.actu-card.hearts::after{
+  content: "";
+  position: absolute;
+  background-size: contain;
+  background-repeat: no-repeat;
+  pointer-events: none;
+  opacity: 0.32;
+  filter: drop-shadow(0 3px 10px rgba(0,0,0,0.10));
+}
+
+/* COEUR 1 : rose (haut gauche) — TRÈS GRAND */
+.actu-card.hearts::before{
+  width: 52px; height: 52px;
+  top: 14px; left: 14px;
+  background-image: var(--heart-pink);
+  transform: rotate(-14deg);
+}
+
+/* COEUR 2 : vert (bas droit) — GRAND */
+.actu-card.hearts::after{
+  width: 44px; height: 44px;
+  bottom: 14px; right: 14px;
+  background-image: var(--heart-green);
+  transform: rotate(12deg);
+  opacity: 0.26;
+}
+
+/* On ancre d'autres coeurs sur des zones internes */
+.actu-card.hearts .callout-title-container,
+.actu-card.hearts .callout-body{
+  position: relative;
+}
+
+/* COEUR 3 : rose (près du titre, côté droit) — GRAND */
+.actu-card.hearts .callout-title-container::before{
+  content: "";
+  position: absolute;
+  width: 46px; height: 46px;
+  top: -10px; left: 68%;
+  background-image: var(--heart-pink);
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.20;
+  transform: rotate(-24deg);
+  pointer-events: none;
+  filter: drop-shadow(0 3px 10px rgba(0,0,0,0.08));
+}
+
+/* COEUR 4 : vert (dans le texte, côté gauche) — MOYEN/GRAND */
+.actu-card.hearts .callout-title-container::after{
+  content: "";
+  position: absolute;
+  width: 34px; height: 34px;
+  top: 54px; left: 6%;
+  background-image: var(--heart-green);
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.16;
+  transform: rotate(10deg);
+  pointer-events: none;
+  filter: drop-shadow(0 3px 10px rgba(0,0,0,0.08));
+}
+
+/* COEUR 5 : rose (près du bouton) — GRAND
+   (supprime ce bloc si tu n'en veux que 4) */
+.actu-card.hearts .callout-body::after{
+  content: "";
+  position: absolute;
+  width: 40px; height: 40px;
+  bottom: 6px; right: 34%;
+  background-image: var(--heart-pink);
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.16;
+  transform: rotate(-10deg);
+  pointer-events: none;
+  filter: drop-shadow(0 3px 10px rgba(0,0,0,0.08));
+}
+
+
+/* ====== ACTUS : mêmes hauteurs + titres plus grands ====== */
+
+/* Chaque colonne devient un conteneur flex pour étirer la card */
+.actus-grid > .g-col-12{
+  display: flex;
+}
+
+/* La card prend toute la hauteur disponible */
+.actus-grid .actu-card{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Le corps du callout s'étire pour pousser les boutons en bas */
+.actus-grid .actu-card .callout-body{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+/* Boutons en bas, alignés, avec retour à la ligne si besoin */
+.actus-grid .actu-card .callout-body p:last-child{
+  margin-top: auto;
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+
+/* Titres plus grands (et un peu plus “hero”) */
+.actus-grid .actu-card .callout-title-container{
+  font-size: 1.45rem;     /* augmente la taille du titre */
+  line-height: 1.15;
+  font-weight: 700;
+}
+
+/* Un peu d'air entre titre et texte */
+.actus-grid .actu-card .callout-title-container + .callout-body{
+  padding-top: 0.35rem;
+}
+
+
+/* Force l’accent rose sur une callout, même si le thème change */
+.pink-accent{
+  border-left: 6px solid #ff4fa3 !important; /* rose */
+}
+
+/* Évite que Quarto applique des couleurs type warning */
+.pink-accent.callout{
+  --callout-color: #ff4fa3;
+}
+
+
+/* Enlève la bordure grise des callouts (cards) */
+.actu-card{
+  border: none !important;
+}
+
+/* Certains thèmes mettent aussi une bordure sur l'élément interne */
+.actu-card.callout{
+  border: none !important;
+  box-shadow: 0 12px 28px rgba(0,0,0,0.08); /* garde un relief doux */
+}
+
+/* Enlève la ligne sous le titre "Actualités" uniquement */
+.actus-section h2{
+  border-bottom: none !important;
+  padding-bottom: 0 !important;
+  margin-bottom: 0.75rem; /* garde un peu d'air */
+}
+
+
+/* ===== Boutons côte à côte (desktop) / empilés (mobile) ===== */
+.btn-row{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: .6rem;
+  flex-wrap: nowrap;        /* desktop: sur une ligne */
+}
+
+/* si ton thème force les boutons à 100%, on neutralise dans .btn-row */
+.btn-row .btn{
+  width: auto;
+}
+
+/* mobile: empilement propre */
+@media (max-width: 576px){
+  .btn-row{
+    flex-direction: column;
+    align-items: stretch;   /* boutons pleine largeur */
+    flex-wrap: wrap;
+  }
+  .btn-row .btn{
+    width: 100%;
+    text-align: center;
+  }
+}
+/* ===== Boutons: ligne sur desktop, pleine largeur sur mobile ===== */
+
+.btn-row{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: .6rem;
+  flex-wrap: nowrap;      /* desktop: côte à côte */
+  margin: 0;              /* évite marges parasites */
+}
+
+/* Neutralise marges éventuelles du thème sur les boutons */
+.btn-row .btn{
+  margin: 0 !important;
+}
+
+/* Mobile: empiler + pleine largeur + espacement réduit */
+@media (max-width: 576px){
+  .btn-row{
+    flex-direction: column;
+    align-items: stretch; /* permet le 100% */
+    gap: .35rem;          /* moins d'espace vertical */
+  }
+
+  .btn-row .btn{
+    display: block;       /* IMPORTANT: force l'étirement */
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 576px){
+  .actu-card .callout-body{
+    width: 100%;
+  }
+}
+
+/* ========== Boutons dans les cards: desktop côte à côte / mobile pleine largeur ========== */
+
+.btn-row{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: .6rem;
+  flex-wrap: nowrap;
+  margin-top: .75rem;
+}
+
+/* évite les marges verticales imposées par le thème */
+.btn-row .btn{
+  margin: 0 !important;
+}
+
+/* IMPORTANT: si tu avais une règle qui cible p:last-child pour pousser les boutons,
+   elle crée le "trou". On neutralise ça dans les cards d'actus. */
+.actus-grid .actu-card .callout-body p:last-child{
+  margin-top: 0 !important;
+}
+
+/* Mobile: empiler proprement et prendre toute la largeur */
+@media (max-width: 576px){
+  .btn-row{
+    flex-direction: column;
+    align-items: stretch;
+    gap: .35rem;          /* moins d'espace vertical */
+    width: 100%;
+  }
+
+  .btn-row .btn{
+    display: block !important;
+    width: 100% !important;
+    max-width: none !important;
+    text-align: center;
+  }
+}
+
+.actus-grid .actu-card .callout-body{
+  display: flex;
+  flex-direction: column;
+}
+
+.actus-grid .actu-card .btn-row{
+  margin-top: auto; /* pousse les DEUX boutons ensemble vers le bas */
+}
+
+.headline-romance{
+  background: #FFF2F5;
+  border: 1px solid rgba(251,111,146,.35);
+  border-radius: 16px;
+  padding: 1.1rem 1.2rem;
+  font-weight: 700;
+  font-size: 1.15rem;
+  line-height: 1.55;
+  box-shadow: 0 10px 26px rgba(0,0,0,.06);
+}
+body.quarto-dark .headline-romance{
+  background: #2b2f31;
+  border-color: rgba(255,255,255,.10);
+  box-shadow: 0 12px 28px rgba(0,0,0,.35);
+}
+
+
+/* ===== Headline "New Romance" (plus original) ===== */
+.headline-romance-pro{
+  position: relative;
+  padding: 1.15rem 1.25rem;
+  border-radius: 18px;
+  background: linear-gradient(135deg, rgba(251,111,146,.20), rgba(163,163,128,.18));
+  border: 1px solid rgba(251,111,146,.25);
+  box-shadow: 0 14px 34px rgba(0,0,0,.08);
+  font-weight: 800;
+  font-size: 1.18rem;
+  line-height: 1.55;
+  letter-spacing: .2px;
+  overflow: hidden;
+}
+
+/* petite barre “signature” */
+.headline-romance-pro::before{
+  content:"";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 8px;
+  background: linear-gradient(to bottom, #FB6F92, #A3A380);
+  opacity: .95;
+}
+
+/* effet “glow” doux */
+.headline-romance-pro::after{
+  content:"";
+  position: absolute;
+  inset: -40% -30% auto -30%;
+  height: 180px;
+  background: radial-gradient(circle at 30% 30%, rgba(255,255,255,.55), rgba(255,255,255,0) 60%);
+  transform: rotate(8deg);
+  pointer-events: none;
+}
+
+/* Badge */
+.headline-romance-pro .hrp-badge{
+  display: inline-flex;
+  align-items: center;
+  gap: .4rem;
+  padding: .25rem .6rem;
+  border-radius: 999px;
+  background: rgba(255,255,255,.70);
+  border: 1px solid rgba(163,163,128,.35);
+  font-weight: 800;
+  font-size: .85rem;
+  letter-spacing: .4px;
+  text-transform: uppercase;
+  margin-right: .55rem;
+}
+
+/* Dark mode */
+body.quarto-dark .headline-romance-pro{
+  background: linear-gradient(135deg, rgba(251,111,146,.16), rgba(163,163,128,.14));
+  border-color: rgba(255,255,255,.10);
+  box-shadow: 0 18px 44px rgba(0,0,0,.35);
+}
+body.quarto-dark .headline-romance-pro .hrp-badge{
+  background: rgba(43,47,49,.65);
+  border-color: rgba(255,255,255,.12);
+  color: #E8ECEE;
+}
+
+/* ===== FIX ALIGNEMENT BOUTONS EN BAS DANS LA GRILLE ACTUS ===== */
+
+/* 1) Les items de la grille doivent s'étirer */
+.actus-grid{
+  align-items: stretch;
+}
+
+/* 2) Chaque colonne/item devient flex pour donner une "hauteur" à la card */
+.actus-grid > *{
+  display: flex;
+}
+
+/* 3) La card occupe toute la hauteur de sa colonne */
+.actus-grid .actu-card{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 4) Le body s'étire et organise contenu + boutons */
+.actus-grid .actu-card .callout-body{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 5) Le bloc boutons descend en bas (même si 1 seul bouton) */
+.actus-grid .actu-card .btn-row{
+  margin-top: auto;
+}
+
+/* =========================================================
+   TITRE "ACTUALITÉS" — New Romance, accrocheur et moderne
+   ========================================================= */
+
+.actus-heading{
+  margin: 1.6rem 0 1.1rem;
+  position: relative;
+}
+
+.actus-kicker{
+  display: inline-flex;
+  align-items: center;
+  gap: .4rem;
+  padding: .28rem .7rem;
+  border-radius: 999px;
+  background: rgba(255,255,255,.75);
+  border: 1px solid rgba(251,111,146,.25);
+  font-weight: 800;
+  letter-spacing: .6px;
+  text-transform: uppercase;
+  font-size: .85rem;
+  color: #4A5759;
+}
+
+.actus-title{
+  margin: .35rem 0 .25rem;
+  font-size: clamp(2.4rem, 4.2vw, 3.6rem); /* + grand qu’un H1 */
+  line-height: 1.05;
+  font-weight: 900;
+  letter-spacing: -.6px;
+  color: var(--earth-900);
+  position: relative;
+  display: inline-block;
+}
+
+/* Soulignement dégradé (rose -> vert) + effet “signature” */
+.actus-title::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -.18rem;
+  width: 100%;
+  height: 10px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, rgba(251,111,146,.95), rgba(163,163,128,.95));
+  opacity: .35;
+}
+
+/* petit glow rose doux derrière le titre */
+.actus-heading::before{
+  content:"";
+  position:absolute;
+  left: -10px;
+  top: -18px;
+  width: 220px;
+  height: 120px;
+  background: radial-gradient(circle at 30% 40%, rgba(251,111,146,.35), rgba(251,111,146,0) 70%);
+  filter: blur(2px);
+  pointer-events: none;
+}
+
+/* Sous-titre */
+.actus-subtitle{
+  margin: .15rem 0 0;
+  max-width: 68ch;
+  font-size: 1.05rem;
+  line-height: 1.55;
+  color: #4A5759;
+}
+
+/* Dark mode */
+body.quarto-dark .actus-kicker{
+  background: rgba(43,47,49,.70);
+  border-color: rgba(255,255,255,.12);
+  color: #E8ECEE;
+}
+body.quarto-dark .actus-title{
+  color: #ffffff;
+}
+body.quarto-dark .actus-subtitle{
+  color: rgba(232,236,238,.85);
+}
+body.quarto-dark .actus-heading::before{
+  background: radial-gradient(circle at 30% 40%, rgba(251,111,146,.22), rgba(251,111,146,0) 70%);
+}
+
+/* =========================
+   New Romance — Duo vidéos
+   ========================= */
+
+.nr-video-hero{
+  margin: 1.1rem 0 1.6rem;
+  padding: 1rem 1rem 1.1rem;
+  border-radius: 18px;
+  background: linear-gradient(135deg, rgba(251,111,146,.16), rgba(163,163,128,.14));
+  border: 1px solid rgba(251,111,146,.18);
+  box-shadow: 0 14px 34px rgba(0,0,0,.08);
+  position: relative;
+  overflow: hidden;
+}
+
+/* petit “glow” doux */
+.nr-video-hero::before{
+  content:"";
+  position:absolute;
+  inset: -60px -80px auto -80px;
+  height: 200px;
+  background: radial-gradient(circle at 25% 35%, rgba(255,255,255,.55), rgba(255,255,255,0) 60%);
+  transform: rotate(6deg);
+  pointer-events: none;
+}
+
+.nr-video-head{
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: .9rem;
+  margin-bottom: .75rem;
+}
+
+.nr-pill{
+  display: inline-flex;
+  align-items: center;
+  gap: .4rem;
+  padding: .28rem .7rem;
+  border-radius: 999px;
+  background: rgba(255,255,255,.70);
+  border: 1px solid rgba(163,163,128,.28);
+  font-weight: 800;
+  letter-spacing: .4px;
+  text-transform: uppercase;
+  font-size: .82rem;
+  color: #4A5759;
+}
+
+.nr-title{
+  font-weight: 900;
+  letter-spacing: -.4px;
+  font-size: 1.15rem;
+  color: var(--earth-900);
+  opacity: .95;
+}
+
+.nr-video-grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: .9rem;
+}
+
+.nr-video-card{
+  margin: 0;
+  border-radius: 16px;
+  background: rgba(255,255,255,.72);
+  border: 1px solid rgba(255,255,255,.65);
+  box-shadow: 0 10px 24px rgba(0,0,0,.06);
+  overflow: hidden;
+}
+
+.nr-video{
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  background: #000;
+  object-fit: cover;
+}
+
+.nr-caption{
+  padding: .55rem .75rem .65rem;
+  font-weight: 700;
+  font-size: .95rem;
+  color: #4A5759;
+}
+
+/* Mobile: stack */
+@media (max-width: 800px){
+  .nr-video-head{ flex-direction: column; align-items: flex-start; }
+  .nr-video-grid{ grid-template-columns: 1fr; }
+}
+
+/* Dark mode */
+body.quarto-dark .nr-video-hero{
+  background: linear-gradient(135deg, rgba(251,111,146,.14), rgba(163,163,128,.12));
+  border-color: rgba(255,255,255,.10);
+  box-shadow: 0 18px 44px rgba(0,0,0,.35);
+}
+body.quarto-dark .nr-pill{
+  background: rgba(43,47,49,.62);
+  border-color: rgba(255,255,255,.12);
+  color: #E8ECEE;
+}
+body.quarto-dark .nr-title{ color: #ffffff; }
+body.quarto-dark .nr-video-card{
+  background: rgba(43,47,49,.70);
+  border-color: rgba(255,255,255,.10);
+  box-shadow: 0 16px 34px rgba(0,0,0,.38);
+}
+body.quarto-dark .nr-caption{ color: rgba(232,236,238,.88); }
+
+/* =========================================================
+   NEW ROMANCE VIDEO — rotation portrait + ratio propre
+   ========================================================= */
+
+/* Base : on ne force PAS un ratio sur <video>, on le met sur la card */
+.nr-video-card{
+  position: relative;
+  overflow: hidden;
+}
+
+/* Zone vidéo: ratio par défaut (paysage) */
+.nr-video-card .nr-video{
+  display: block;
+  width: 100%;
+  height: auto;
+  background: #000;
+}
+
+/* On crée un cadre “cinéma” via aspect-ratio sur la card */
+.nr-video-card{
+  border-radius: 16px;
+}
+.nr-video-card video.nr-video{
+  border-radius: 0; /* évite double radius sur certains navigateurs */
+}
+
+/* ---- Fix : portrait “couché” -> on force la rotation sur ce seul item ---- */
+/* 1) On donne un ratio portrait au conteneur vidéo */
+.nr-video-card.nr-portrait-rotated{
+  aspect-ratio: 9 / 16;
+  background: #000;
+}
+
+/* 2) La vidéo remplit le cadre, centrée, puis on la tourne */
+.nr-video-card.nr-portrait-rotated .nr-video{
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  /* rotation + centrage */
+  transform: rotate(90deg) scale(1.02);
+  transform-origin: center;
+}
+
+/* 3) Comme on passe la vidéo en absolute, on garde la caption en bas */
+.nr-video-card .nr-caption{
+  position: relative;
+  z-index: 2;
+  padding: .55rem .75rem .65rem;
+}
+
+/* 4) Pour les cards “normales” (paysage), on force un ratio cinéma clean */
+.nr-video-card:not(.nr-portrait-rotated){
+  aspect-ratio: 16 / 9;
+  background: #000;
+}
+.nr-video-card:not(.nr-portrait-rotated) .nr-video{
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: none;
+}
+
+/* 5) Caption lisible sur fond vidéo (très UI) */
+.nr-caption{
+  margin: 0;
+  font-weight: 700;
+  font-size: .95rem;
+  color: #4A5759;
+  background: rgba(255,255,255,.72);
+  border-top: 1px solid rgba(255,255,255,.65);
+  backdrop-filter: blur(6px);
+}
+
+/* Dark mode caption */
+body.quarto-dark .nr-caption{
+  color: rgba(232,236,238,.88);
+  background: rgba(43,47,49,.65);
+  border-top-color: rgba(255,255,255,.10);
+}
+
+/* Mobile: on évite que le portrait prenne trop de hauteur */
+@media (max-width: 800px){
+  .nr-video-card.nr-portrait-rotated{
+    aspect-ratio: 10 / 16; /* un poil moins haut que 9/16 */
+  }
+}
+
+
+/* =========================================================
+   New Romance — Story Video (tabs) : premium + clean
+   ========================================================= */
+
+.nr-video-story{
+  margin: 1.2rem 0 1.9rem;
+  padding: 1rem 1rem 1.05rem;
+  border-radius: 18px;
+  background: linear-gradient(135deg, rgba(251,111,146,.12), rgba(163,163,128,.10));
+  border: 1px solid rgba(251,111,146,.16);
+  box-shadow: 0 18px 44px rgba(0,0,0,.08);
+  position: relative;
+  overflow: hidden;
+}
+
+.nr-video-story::before{
+  content:"";
+  position:absolute;
+  inset:-90px -120px auto -120px;
+  height: 220px;
+  background: radial-gradient(circle at 25% 35%, rgba(255,255,255,.55), rgba(255,255,255,0) 62%);
+  transform: rotate(6deg);
+  pointer-events:none;
+}
+
+.nr-story-head{
+  display:flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: .9rem;
+  margin: .1rem 0 .8rem;
+}
+
+.nr-story-badge{
+  display:inline-flex;
+  align-items:center;
+  padding:.28rem .72rem;
+  border-radius:999px;
+  background: rgba(255,255,255,.72);
+  border:1px solid rgba(163,163,128,.26);
+  font-weight:800;
+  letter-spacing:.55px;
+  text-transform:uppercase;
+  font-size:.82rem;
+  color:#4A5759;
+}
+
+.nr-story-title{
+  font-weight: 900;
+  letter-spacing: -.4px;
+  font-size: clamp(1.05rem, 2.2vw, 1.25rem);
+  color: var(--earth-900);
+  opacity: .95;
+}
+
+/* Tabs (radio hidden) */
+.nr-tab{ position:absolute; left:-9999px; }
+
+/* Tab bar */
+.nr-tabbar{
+  display:flex;
+  gap:.5rem;
+  margin: .2rem 0 .85rem;
+  flex-wrap: wrap;
+}
+
+.nr-chip{
+  cursor:pointer;
+  user-select:none;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:.42rem .8rem;
+  border-radius:999px;
+  border:1px solid rgba(163,163,128,.30);
+  background: rgba(255,255,255,.60);
+  font-weight:800;
+  font-size:.92rem;
+  color:#4A5759;
+  transition: transform .18s ease, background .18s ease, border-color .18s ease;
+}
+.nr-chip:hover{ transform: translateY(-1px); }
+
+/* Active chip */
+#nrvid1:checked ~ .nr-tabbar label[for="nrvid1"],
+#nrvid2:checked ~ .nr-tabbar label[for="nrvid2"]{
+  background: rgba(251,111,146,.18);
+  border-color: rgba(251,111,146,.40);
+  color: var(--earth-900);
+}
+
+/* Panels */
+.nr-panels{ position: relative; }
+.nr-panel{ display:none; }
+#nrvid1:checked ~ .nr-panels .nr-panel:nth-child(1){ display:block; }
+#nrvid2:checked ~ .nr-panels .nr-panel:nth-child(2){ display:block; }
+
+/* Figure/card */
+.nr-figure{
+  margin:0;
+  border-radius: 16px;
+  overflow: hidden;
+  background: rgba(255,255,255,.74);
+  border: 1px solid rgba(255,255,255,.65);
+  box-shadow: 0 14px 34px rgba(0,0,0,.09);
+}
+
+/* Frame : un vrai player “magazine” */
+.nr-frame{
+  position: relative;
+  background:#000;
+  aspect-ratio: 16 / 9;   /* toujours paysage => design cohérent */
+}
+
+/* Video covers the frame */
+.nr-video{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  display:block;
+  object-fit: cover;      /* coupe propre, pas de bandes moches */
+  transform-origin: center;
+}
+
+/* ✅ Forcer un portrait à s’afficher en paysage (rotation 90° + crop clean) */
+.nr-video.nr-rot90{
+  /* on tourne en paysage + on scale un poil pour remplir le 16:9 */
+  transform: rotate(-90deg) scale(1.35);
+}
+
+/* Si besoin (vidéo tête en bas) : ajoute nr-flip180 en plus */
+.nr-video.nr-flip180{
+  transform: rotate(180deg);
+}
+.nr-video.nr-rot90.nr-flip180{
+  transform: rotate(270deg) scale(1.35);
+}
+
+/* Caption “glass” premium */
+.nr-caption{
+  margin:0;
+  padding:.58rem .8rem .68rem;
+  font-weight: 900;
+  font-size: .95rem;
+  color:#4A5759;
+  background: rgba(255,255,255,.70);
+  border-top: 1px solid rgba(255,255,255,.65);
+  backdrop-filter: blur(10px);
+}
+
+/* Mobile : lisible, pas trop haut */
+@media (max-width: 700px){
+  .nr-video-story{ padding: .9rem; }
+  .nr-story-head{ flex-direction: column; align-items:flex-start; }
+}
+
+/* Dark mode */
+body.quarto-dark .nr-video-story{
+  background: linear-gradient(135deg, rgba(251,111,146,.10), rgba(163,163,128,.08));
+  border-color: rgba(255,255,255,.10);
+  box-shadow: 0 20px 52px rgba(0,0,0,.45);
+}
+body.quarto-dark .nr-story-badge{
+  background: rgba(43,47,49,.62);
+  border-color: rgba(255,255,255,.12);
+  color:#E8ECEE;
+}
+body.quarto-dark .nr-story-title{ color:#ffffff; }
+body.quarto-dark .nr-chip{
+  background: rgba(43,47,49,.52);
+  border-color: rgba(255,255,255,.12);
+  color: rgba(232,236,238,.90);
+}
+body.quarto-dark #nrvid1:checked ~ .nr-tabbar label[for="nrvid1"],
+body.quarto-dark #nrvid2:checked ~ .nr-tabbar label[for="nrvid2"]{
+  background: rgba(251,111,146,.16);
+  border-color: rgba(255,255,255,.14);
+  color:#ffffff;
+}
+body.quarto-dark .nr-figure{
+  background: rgba(43,47,49,.68);
+  border-color: rgba(255,255,255,.10);
+  box-shadow: 0 18px 46px rgba(0,0,0,.45);
+}
+body.quarto-dark .nr-caption{
+  background: rgba(43,47,49,.62);
+  border-top-color: rgba(255,255,255,.10);
+  color: rgba(232,236,238,.90);
+}
+
+/* =========================================
+   Blog AT — Cover feature (premium)
+   ========================================= */
+
+.nr-cover-feature{
+  display: grid;
+  grid-template-columns: minmax(220px, 340px) minmax(0, 1fr);
+  gap: 1.1rem;
+  align-items: center;
+
+  margin: 1.1rem 0 1.6rem;
+  padding: 1rem;
+  border-radius: 18px;
+
+  background: linear-gradient(135deg, rgba(251,111,146,.12), rgba(163,163,128,.10));
+  border: 1px solid rgba(251,111,146,.18);
+  box-shadow: 0 18px 44px rgba(0,0,0,.08);
+
+  position: relative;
+  overflow: hidden;
+}
+
+/* glow discret */
+.nr-cover-feature::before{
+  content:"";
+  position:absolute;
+  inset:-90px -120px auto -120px;
+  height: 220px;
+  background: radial-gradient(circle at 25% 35%, rgba(255,255,255,.55), rgba(255,255,255,0) 62%);
+  transform: rotate(6deg);
+  pointer-events:none;
+}
+
+/* image couverture */
+.nr-cover-img{
+  display:block;
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+
+  /* rendu “cover premium” */
+  box-shadow: 0 16px 40px rgba(0,0,0,.18);
+  border: 1px solid rgba(255,255,255,.65);
+}
+
+/* bloc texte */
+.nr-cover-meta{
+  position: relative;
+  z-index: 1;
+}
+
+.nr-badge{
+  display: inline-flex;
+  align-items: center;
+  padding: .28rem .72rem;
+  border-radius: 999px;
+  background: rgba(255,255,255,.72);
+  border: 1px solid rgba(163,163,128,.26);
+  font-weight: 900;
+  letter-spacing: .55px;
+  text-transform: uppercase;
+  font-size: .82rem;
+  color: #4A5759;
+  margin-bottom: .55rem;
+}
+
+.nr-cover-meta h3{
+  margin: .1rem 0 .35rem;
+  font-weight: 900;
+  letter-spacing: -.4px;
+  font-size: clamp(1.35rem, 2.2vw, 1.65rem);
+  color: var(--earth-900);
+}
+
+.nr-cover-meta p{
+  margin: 0;
+  font-size: 1.02rem;
+  line-height: 1.55;
+  color: #4A5759;
+}
+
+/* hover doux desktop */
+@media (hover:hover){
+  .nr-cover-img{
+    transition: transform .25s ease, box-shadow .25s ease;
+  }
+  .nr-cover-img:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 22px 56px rgba(0,0,0,.22);
+  }
+}
+
+/* Mobile: empilé */
+@media (max-width: 900px){
+  .nr-cover-feature{
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Dark mode */
+body.quarto-dark .nr-cover-feature{
+  background: linear-gradient(135deg, rgba(251,111,146,.10), rgba(163,163,128,.08));
+  border-color: rgba(255,255,255,.10);
+  box-shadow: 0 20px 52px rgba(0,0,0,.45);
+}
+body.quarto-dark .nr-badge{
+  background: rgba(43,47,49,.62);
+  border-color: rgba(255,255,255,.12);
+  color: rgba(232,236,238,.92);
+}
+body.quarto-dark .nr-cover-meta h3{
+  color: #ffffff;
+}
+body.quarto-dark .nr-cover-meta p{
+  color: rgba(232,236,238,.86);
+}
+body.quarto-dark .nr-cover-img{
+  border-color: rgba(255,255,255,.10);
+  box-shadow: 0 22px 56px rgba(0,0,0,.50);
+}
+
+
+/* =========================================================
+   PATCH MOBILE — cover AT plus "premium"
+   ========================================================= */
+@media (max-width: 600px){
+
+  .nr-cover-feature{
+    padding: .85rem;
+    gap: .85rem;
+    border-radius: 18px;
+  }
+
+  /* Image : centrée + largeur optimale + rendu couverture */
+  .nr-cover-feature .nr-cover-img{
+    width: min(92%, 360px);
+    margin: 0 auto;
+    border-radius: 18px;
+    box-shadow: 0 22px 60px rgba(0,0,0,.22);
+  }
+
+  /* Meta : centré, typographie plus "hero" */
+  .nr-cover-meta{
+    text-align: center;
+    padding: .1rem .2rem .25rem;
+  }
+
+  .nr-badge{
+    margin: 0 auto .55rem;
+  }
+
+  .nr-cover-meta h3{
+    font-size: 1.55rem;
+    line-height: 1.1;
+  }
+
+  .nr-cover-meta p{
+    font-size: 1.03rem;
+    line-height: 1.55;
+  }
+}
+
+/* Dark mode mobile : ombre un peu plus douce */
+@media (max-width: 600px){
+  body.quarto-dark .nr-cover-feature .nr-cover-img{
+    box-shadow: 0 24px 70px rgba(0,0,0,.55);
+  }
+}
