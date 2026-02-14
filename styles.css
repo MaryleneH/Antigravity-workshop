@@ -713,17 +713,154 @@ a:hover {
     margin-bottom: 1.5rem;
 }
 
-/* Pricing / Formats Card */
-.formats-prix-premium {
-    background: rgba(163, 163, 128, 0.05);
-    border: 1px solid rgba(163, 163, 128, 0.1);
-    border-radius: 12px;
-    padding: 2rem;
-    margin: 2rem 0;
+/* ===== LIBRARY GRID LAYOUT ===== */
+.library-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 3rem;
+    padding: 2rem 0;
+}
+
+/* Card Vignette Style */
+.book-vignette {
+    position: relative;
+    border-radius: var(--radius-card);
+    overflow: hidden;
+    transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    display: block;
+    /* Make the whole card clickable */
+}
+
+.book-vignette:hover {
+    transform: translateY(-8px) scale(1.02);
+    border-color: var(--color-pink);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5), 0 0 20px var(--color-pink-glow);
+    z-index: 2;
+}
+
+.vignette-cover {
+    width: 100%;
+    aspect-ratio: 2/3;
+    object-fit: cover;
+    transition: transform 0.7s ease;
+}
+
+.book-vignette:hover .vignette-cover {
+    transform: scale(1.08);
+}
+
+.vignette-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 1.5rem 1.5rem;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0.6) 50%, transparent);
+    color: #fff;
+    transform: translateY(10px);
+    transition: transform 0.4s ease;
+}
+
+.book-vignette:hover .vignette-overlay {
+    transform: translateY(0);
+}
+
+.vignette-title {
+    font-family: var(--font-heading);
+    font-size: 1.4rem;
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.vignette-genre {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--color-pink);
+    font-weight: 700;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.vignette-action {
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.8);
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.4s ease 0.1s;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.book-vignette:hover .vignette-action {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Category Headers */
+.category-header {
+    font-size: 2rem;
+    margin: 4rem 0 2rem;
+    display: flex;
+    align-items: center;
     gap: 1.5rem;
-    text-align: center;
+    color: var(--color-white);
+}
+
+.category-header::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, var(--color-pink), transparent);
+    opacity: 0.5;
+}
+
+/* Filter Bar Redesign */
+.roman-filter {
+    position: sticky;
+    /* Make it stick */
+    top: 80px;
+    /* Below navbar */
+    z-index: 90;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem 2rem;
+    margin: 2rem auto 4rem;
+    background: rgba(18, 18, 18, 0.85);
+    /* Glass effect base */
+    backdrop-filter: blur(12px);
+    border-radius: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    width: fit-content;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+.chip {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.7);
+    padding: 0.6rem 1.4rem;
+    border-radius: 30px;
+    cursor: pointer;
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.chip:hover,
+.chip.active {
+    background: var(--color-pink);
+    color: #fff;
+    border-color: var(--color-pink);
+    box-shadow: 0 0 15px var(--color-pink-glow);
+    transform: translateY(-2px);
 }
 
 .format-item {

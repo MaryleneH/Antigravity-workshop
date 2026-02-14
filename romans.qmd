@@ -13,76 +13,265 @@ body-classes: romans
 Partez à la découverte des séries, des comédies de Noël, des romances de saison et des one-shots contemporains.
 </section>
 
-<!-- ===== Barre de filtres ===== -->
 <nav class="roman-filter" aria-label="Filtrer les rubriques">
-  <button class="chip active" data-filter="all" aria-pressed="true">Tous</button>
+  <button class="chip active" data-filter="all" aria-pressed="true">Tout voir</button>
   <button class="chip" data-filter="edition" aria-pressed="false">Édition</button>
   <button class="chip" data-filter="series" aria-pressed="false">Séries</button>
   <button class="chip" data-filter="fetes" aria-pressed="false">Fêtes</button>
   <button class="chip" data-filter="oneshots" aria-pressed="false">One-shots</button>
+  <button class="chip" data-filter="archive" aria-pressed="false">Archives</button>
 </nav>
 
-::: {.section-grid-3}
+<div class="library-grid">
 
-::: {.group-slab data-cat="edition"}
-#### 𓄲 Romans en édition 𓄲𓄲 ⋆˙⟡♡
-::: {.roman-pills}
-[Black Feelings — Saison 1](romans/black-feelings-1.qmd){.pill}
-[Black Feelings — Saison 2](romans/black-feelings-2.qmd){.pill}
-[Be Sweeter](romans/be-sweeter.qmd){.pill}
-[Be Stronger](romans/be-stronger.qmd){.pill}
-[Be Yourself](romans/be-yourself.qmd){.pill}
-:::
-:::
+    <!-- ÉDITION -->
+    <div class="book-vignette fade-in-scroll" data-cat="edition">
+        <a href="romans/black-feelings-1.qmd" class="vignette-link">
+            <img src="images/couvertures/black-feelings-tome-1.jpg" alt="Black Feelings T1" class="vignette-cover">
+            <div class="vignette-overlay">
+                <span class="vignette-genre">Romance • Suspense</span>
+                <h3 class="vignette-title">Black Feelings — Saison 1</h3>
+                <span class="vignette-action">Découvrir &rarr;</span>
+            </div>
+        </a>
+    </div>
 
-::: {.group-slab data-cat="series"}
-#### 👮‍♂️ COPS and Love (série) ꨄ︎ ㅤ♡
-::: {.roman-pills}
-[Cops And Love — Will Hunter](romans/cops-and-love-will-hunter.qmd){.pill}
-[Cops And Love — Noah Hunter](romans/cops-love-noah.qmd){.pill}
-[Cops And Love — Lewis Hunter](romans/cops-love-lewis.qmd){.pill}
-:::
-:::
+    <div class="book-vignette fade-in-scroll" data-cat="edition">
+        <a href="romans/black-feelings-2.qmd" class="vignette-link">
+            <img src="images/couvertures/black-feelings-tome-2.jpg" alt="Black Feelings T2" class="vignette-cover">
+            <div class="vignette-overlay">
+                <span class="vignette-genre">Romance • Suspense</span>
+                <h3 class="vignette-title">Black Feelings — Saison 2</h3>
+                <span class="vignette-action">Découvrir &rarr;</span>
+            </div>
+        </a>
+    </div>
 
-::: {.group-slab data-cat="series"}
-#### 🌿 Au fil des saisons (trilogie) 🌿
-::: {.roman-pills}
-[Sur le sable](romans/sur-le-sable.qmd){.pill}
-[Dans les fleurs](romans/dans-les-fleurs.qmd){.pill}
-[En pleine nature](romans/en-pleine-nature.qmd){.pill}
-:::
-:::
+    <div class="book-vignette fade-in-scroll" data-cat="edition">
+        <a href="romans/be-sweeter.qmd" class="vignette-link">
+            <img src="images/couvertures/be-sweeter.jpg" alt="Be Sweeter" class="vignette-cover">
+            <div class="vignette-overlay">
+                <span class="vignette-genre">New Adult • Campus</span>
+                <h3 class="vignette-title">Be Sweeter</h3>
+                <span class="vignette-action">Découvrir &rarr;</span>
+            </div>
+        </a>
+    </div>
 
-::: {.group-slab data-cat="fetes"}
-#### ❤️ Fêtes & occasions ❤️
-::: {.roman-pills}
-[Believe In (Santa) Klaus](romans/believe-in-santa-klaus.qmd){.pill}
-[Be Mine For Valentine](romans/be-mine-valentine.qmd){.pill}
-[Homme sérieux recherche poupée Bimbo](romans/poupee-bimbo.qmd){.pill}
-[À Noël, je serai une princesse licorne !](romans/noel-princesse-licorne.qmd){.pill}
-[Noël, coups bas et Secret Santa](romans/noel-coups-bas.qmd){.pill}
-:::
-:::
+    <div class="book-vignette fade-in-scroll" data-cat="edition">
+        <a href="romans/be-stronger.qmd" class="vignette-link">
+            <img src="images/couvertures/be-stronger.jpg" alt="Be Stronger" class="vignette-cover">
+            <div class="vignette-overlay">
+                <span class="vignette-genre">New Adult • Résilience</span>
+                <h3 class="vignette-title">Be Stronger</h3>
+                <span class="vignette-action">Découvrir &rarr;</span>
+            </div>
+        </a>
+    </div>
 
-::: {.group-slab data-cat="oneshots"}
-#### ✎ One-shots contemporains ✎
-::: {.roman-pills}
-[My Sweet Babysitter](romans/my-sweet-babysitter.qmd){.pill}
-[J’ai juste cliqué !](romans/jai-juste-clique.qmd){.pill}
-[Et zut !](romans/et-zut.qmd){.pill}
-[Undress Me](romans/undress-me.qmd){.pill}
-:::
-:::
+    <div class="book-vignette fade-in-scroll" data-cat="edition">
+        <a href="romans/be-yourself.qmd" class="vignette-link">
+            <img src="images/couvertures/be-yourself.jpg" alt="Be Yourself" class="vignette-cover">
+            <div class="vignette-overlay">
+                <span class="vignette-genre">New Adult • Identité</span>
+                <h3 class="vignette-title">Be Yourself</h3>
+                <span class="vignette-action">Découvrir &rarr;</span>
+            </div>
+        </a>
+    </div>
 
-::: {.group-slab data-cat="archive"}
-#### 📦 Archives & Co-écriture 📦
-::: {.roman-pills}
-[Blind](romans/blind.qmd){.pill}
-[Hurt](romans/hurt.qmd){.pill}
-:::
-:::
+    <!-- SÉRIES -->
+    <div class="book-vignette fade-in-scroll" data-cat="series">
+        <a href="romans/cops-and-love-will-hunter.qmd" class="vignette-link">
+            <img src="images/couvertures/cops-and-love-will-hunter.jpg" alt="Cops and Love - Will" class="vignette-cover">
+            <div class="vignette-overlay">
+                <span class="vignette-genre">Romantic Suspense</span>
+                <h3 class="vignette-title">Cops & Love : Will Hunter</h3>
+                <span class="vignette-action">Découvrir &rarr;</span>
+            </div>
+        </a>
+    </div>
 
-:::
+    <div class="book-vignette fade-in-scroll" data-cat="series">
+        <a href="romans/cops-love-noah.qmd" class="vignette-link">
+            <img src="images/couvertures/cops-noah.jpg" alt="Cops and Love - Noah" class="vignette-cover">
+            <div class="vignette-overlay">
+                <span class="vignette-genre">Romantic Suspense</span>
+                <h3 class="vignette-title">Cops & Love : Noah Hunter</h3>
+                <span class="vignette-action">Découvrir &rarr;</span>
+            </div>
+        </a>
+    </div>
+
+    <div class="book-vignette fade-in-scroll" data-cat="series">
+        <a href="romans/cops-love-lewis.qmd" class="vignette-link">
+            <img src="images/couvertures/cops-lewis.jpg" alt="Cops and Love - Lewis" class="vignette-cover">
+            <div class="vignette-overlay">
+                <span class="vignette-genre">Romantic Suspense</span>
+                <h3 class="vignette-title">Cops & Love : Lewis Hunter</h3>
+                <span class="vignette-action">Découvrir &rarr;</span>
+            </div>
+        </a>
+    </div>
+
+    <div class="book-vignette fade-in-scroll" data-cat="series">
+        <a href="romans/sur-le-sable.qmd" class="vignette-link">
+            <img src="images/couvertures/sur-le-sable.jpg" alt="Sur le sable" class="vignette-cover">
+            <div class="vignette-overlay">
+                <span class="vignette-genre">Romance d'été</span>
+                <h3 class="vignette-title">Sur le sable</h3>
+                <span class="vignette-action">Découvrir &rarr;</span>
+            </div>
+        </a>
+    </div>
+
+    <div class="book-vignette fade-in-scroll" data-cat="series">
+        <a href="romans/dans-les-fleurs.qmd" class="vignette-link">
+            <img src="images/couvertures/fleurs.jpg" alt="Dans les fleurs" class="vignette-cover">
+            <div class="vignette-overlay">
+                <span class="vignette-genre">Romance de printemps</span>
+                <h3 class="vignette-title">Dans les fleurs</h3>
+                <span class="vignette-action">Découvrir &rarr;</span>
+            </div>
+        </a>
+    </div>
+
+    <div class="book-vignette fade-in-scroll" data-cat="series">
+        <a href="romans/en-pleine-nature.qmd" class="vignette-link">
+            <img src="images/couvertures/en-pleine-nature.jpg" alt="En pleine nature" class="vignette-cover">
+            <div class="vignette-overlay">
+                <span class="vignette-genre">Romance d'automne</span>
+                <h3 class="vignette-title">En pleine nature</h3>
+                <span class="vignette-action">Découvrir &rarr;</span>
+            </div>
+        </a>
+    </div>
+
+    <!-- FÊTES -->
+    <div class="book-vignette fade-in-scroll" data-cat="fetes">
+        <a href="romans/believe-in-santa-klaus.qmd" class="vignette-link">
+            <img src="images/couvertures/believe-in-santa-klaus.jpg" alt="Believe in Santa Klaus" class="vignette-cover">
+            <div class="vignette-overlay">
+                <span class="vignette-genre">Comédie de Noël</span>
+                <h3 class="vignette-title">Believe in (Santa) Klaus</h3>
+                <span class="vignette-action">Découvrir &rarr;</span>
+            </div>
+        </a>
+    </div>
+
+    <div class="book-vignette fade-in-scroll" data-cat="fetes">
+        <a href="romans/be-mine-valentine.qmd" class="vignette-link">
+            <img src="images/couvertures/be-mine-valentine.jpg" alt="Be Mine Valentine" class="vignette-cover">
+            <div class="vignette-overlay">
+                <span class="vignette-genre">Romance Saint-Valentin</span>
+                <h3 class="vignette-title">Be Mine For Valentine</h3>
+                <span class="vignette-action">Découvrir &rarr;</span>
+            </div>
+        </a>
+    </div>
+
+    <div class="book-vignette fade-in-scroll" data-cat="fetes">
+        <a href="romans/poupee-bimbo.qmd" class="vignette-link">
+            <img src="images/couvertures/poupee-bimbo.jpg" alt="Poupée Bimbo" class="vignette-cover">
+            <div class="vignette-overlay">
+                <span class="vignette-genre">Comédie Romantique</span>
+                <h3 class="vignette-title">Homme sérieux recherche poupée Bimbo</h3>
+                <span class="vignette-action">Découvrir &rarr;</span>
+            </div>
+        </a>
+    </div>
+
+    <div class="book-vignette fade-in-scroll" data-cat="fetes">
+        <a href="romans/noel-princesse-licorne.qmd" class="vignette-link">
+            <img src="images/couvertures/princesse-licorne.jpg" alt="Princesse Licorne" class="vignette-cover">
+            <div class="vignette-overlay">
+                <span class="vignette-genre">Comédie Déjantée</span>
+                <h3 class="vignette-title">À Noël, je serai une princesse licorne !</h3>
+                <span class="vignette-action">Découvrir &rarr;</span>
+            </div>
+        </a>
+    </div>
+
+    <div class="book-vignette fade-in-scroll" data-cat="fetes">
+        <a href="romans/noel-coups-bas.qmd" class="vignette-link">
+            <img src="images/couvertures/noel-coups-bas.jpg" alt="Noël Coups Bas" class="vignette-cover">
+            <div class="vignette-overlay">
+                <span class="vignette-genre">Enemis-to-Lovers</span>
+                <h3 class="vignette-title">Noël, coups bas et Secret Santa</h3>
+                <span class="vignette-action">Découvrir &rarr;</span>
+            </div>
+        </a>
+    </div>
+
+    <!-- ONE-SHOTS -->
+    <div class="book-vignette fade-in-scroll" data-cat="oneshots">
+        <a href="romans/my-sweet-babysitter.qmd" class="vignette-link">
+            <img src="images/couvertures/my-sweet-babysitter.jpg" alt="My Sweet Babysitter" class="vignette-cover">
+            <div class="vignette-overlay">
+                <span class="vignette-genre">Romance Maman Solo</span>
+                <h3 class="vignette-title">My Sweet Babysitter</h3>
+                <span class="vignette-action">Découvrir &rarr;</span>
+            </div>
+        </a>
+    </div>
+
+    <div class="book-vignette fade-in-scroll" data-cat="oneshots">
+        <a href="romans/jai-juste-clique.qmd" class="vignette-link">
+            <img src="images/couvertures/j-ai-juste-clique.jpg" alt="J'ai juste cliqué" class="vignette-cover">
+            <div class="vignette-overlay">
+                <span class="vignette-genre">Romance 2.0</span>
+                <h3 class="vignette-title">J’ai juste cliqué !</h3>
+                <span class="vignette-action">Découvrir &rarr;</span>
+            </div>
+        </a>
+    </div>
+
+    <div class="book-vignette fade-in-scroll" data-cat="oneshots">
+        <a href="romans/et-zut.qmd" class="vignette-link">
+            <img src="images/couvertures/et-zut.jpg" alt="Et Zut !" class="vignette-cover">
+            <div class="vignette-overlay">
+                <span class="vignette-genre">Romance Gourmande</span>
+                <h3 class="vignette-title">Et zut !</h3>
+                <span class="vignette-action">Découvrir &rarr;</span>
+            </div>
+        </a>
+    </div>
+
+    <div class="book-vignette fade-in-scroll" data-cat="oneshots">
+        <a href="romans/undress-me.qmd" class="vignette-link">
+            <img src="images/couvertures/undress-me.jpg" alt="Undress Me" class="vignette-cover">
+            <div class="vignette-overlay">
+                <span class="vignette-genre">Romance Sexy</span>
+                <h3 class="vignette-title">Undress Me</h3>
+                <span class="vignette-action">Découvrir &rarr;</span>
+            </div>
+        </a>
+    </div>
+
+    <!-- ARCHIVES -->
+    <div class="book-vignette fade-in-scroll" data-cat="archive">
+        <a href="romans/blind.qmd" class="vignette-link">
+            <img src="images/couvertures/blind.jpg" alt="Blind" class="vignette-cover">
+            <div class="vignette-overlay">
+                <span class="vignette-genre">Co-écriture • Dark</span>
+                <h3 class="vignette-title">Blind</h3>
+                <span class="vignette-action">Consulter &rarr;</span>
+            </div>
+        </a>
+    </div>
+
+    <div class="book-vignette fade-in-scroll" data-cat="archive">
+        <a href="romans/hurt.qmd" class="vignette-link">
+            <img src="images/couvertures/hurt.jpg" alt="Hurt" class="vignette-cover">
+            <div class="vignette-overlay">
+                <span class="vignette-genre">Co-écriture • Dark</span>
+                <h3 class="vignette-title">Hurt</h3>
+                <span class="vignette-action">Consulter &rarr;</span>
+            </div>
+        </a>
+    </div>
+
+</div>
 
 <div class="back-home">
   <a href="../index.qmd" class="btn-back" role="button" aria-label="Retour à l’accueil">
@@ -90,44 +279,43 @@ Partez à la découverte des séries, des comédies de Noël, des romances de sa
   </a>
 </div>
 
-<!-- ===== JS minimal : filtre des rubriques ===== -->
+<!-- ===== JS: FILTRAGE GRID ===== -->
 <script>
-(function(){
-  const KEY = "mogadarr.romanFilter";
-  const bar = document.querySelector(".roman-filter");
-  if(!bar) return;
+document.addEventListener('DOMContentLoaded', () => {
+    const KEY = "mogadarr.romanFilter";
+    const buttons = document.querySelectorAll(".chip");
+    const vignettes = document.querySelectorAll(".book-vignette");
 
-  const buttons = bar.querySelectorAll(".chip");
-  const groups  = document.querySelectorAll(".group-slab");
+    function applyFilter(category) {
+        vignettes.forEach(v => {
+            if (category === "all" || v.dataset.cat === category) {
+                v.style.display = "block";
+                setTimeout(() => v.style.opacity = "1", 50); // Fade in
+            } else {
+                v.style.display = "none";
+                v.style.opacity = "0";
+            }
+        });
+    }
 
-  function applyFilter(cat){
-    groups.forEach(g => {
-      const match = (cat === "all") || (g.dataset.cat === cat);
-      g.style.display = match ? "" : "none";
+    // Restore last selection
+    const saved = localStorage.getItem(KEY) || "all";
+    applyFilter(saved);
+    buttons.forEach(b => {
+        if(b.dataset.filter === saved) b.classList.add("active");
     });
-  }
 
-  // Restore last selection
-  const saved = localStorage.getItem(KEY) || "all";
-  applyFilter(saved);
-  buttons.forEach(b => {
-    const on = b.dataset.filter === saved;
-    b.classList.toggle("active", on);
-    b.setAttribute("aria-pressed", on ? "true" : "false");
-  });
+    buttons.forEach(btn => {
+        btn.addEventListener("click", () => {
+            // Remove active class from all
+            buttons.forEach(b => b.classList.remove("active"));
+            // Add to clicked
+            btn.classList.add("active");
 
-  // Click handling
-  buttons.forEach(btn => {
-    btn.addEventListener("click", () => {
-      const cat = btn.dataset.filter;
-      applyFilter(cat);
-      localStorage.setItem(KEY, cat);
-      buttons.forEach(b => {
-        const on = b === btn;
-        b.classList.toggle("active", on);
-        b.setAttribute("aria-pressed", on ? "true" : "false");
-      });
+            const cat = btn.dataset.filter;
+            applyFilter(cat);
+            localStorage.setItem(KEY, cat);
+        });
     });
-  });
-})();
+});
 </script>
