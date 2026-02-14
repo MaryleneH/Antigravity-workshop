@@ -925,9 +925,12 @@ body.quarto-dark .book-hero-card {
 
     .book-hero-cover-wrapper {
         flex: 0 0 auto;
-        width: 180px;
-        /* Slightly smaller cover on mobile */
+        width: 240px;
+        /* Increased from 180px for better visibility */
+        max-width: 65vw;
+        /* Responsive cap */
         margin: 0 auto;
+        animation: fade-in-up 1s ease-out backwards, float-y 6s ease-in-out infinite 1s;
     }
 
     .book-cover-img {
@@ -967,6 +970,31 @@ body.quarto-dark .book-hero-card {
         width: 100%;
         text-align: center;
         justify-content: center;
+    }
+}
+
+/* Animations */
+@keyframes fade-in-up {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes float-y {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
     }
 }
 
