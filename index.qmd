@@ -5,6 +5,7 @@ format:
     toc: false
 ---
 
+```{=html}
 <header class="hero">
     <div class="hero-content fade-in">
         <h1>Éléonore Vance</h1>
@@ -107,3 +108,4 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 </script>
+```
