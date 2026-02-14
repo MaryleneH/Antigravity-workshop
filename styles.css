@@ -644,11 +644,13 @@ a:hover {
 }
 
 .book-hero-cover-wrapper {
-    flex: 0 0 320px;
+    flex: 0 0 280px;
+    /* Reduced wrapper size */
 }
 
 .book-cover-img {
-    width: 300px;
+    width: 255px;
+    /* Reduced from 300px (85%) */
     /* Fixed width for standard look */
     height: auto;
     border-radius: 5px;
@@ -942,9 +944,11 @@ body.quarto-dark .book-hero-card {
 
     .book-cover-img {
         width: auto;
-        height: 70%;
+        height: 60%;
+        /* Reduced from 70% */
         /* Scale relative to stage height */
-        max-height: 320px;
+        max-height: 275px;
+        /* Reduced from 320px */
         border-radius: 8px;
         /* Slightly softer */
         box-shadow: 0 25px 50px rgba(0, 0, 0, 0.6);
