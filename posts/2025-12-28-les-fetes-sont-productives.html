@@ -43,9 +43,9 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-0eef1b29731843b82ebebe36e976bcdb.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-c449a8b5e0397103c7fa5327bc7c8083.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../site_libs/bootstrap/bootstrap-0eef1b29731843b82ebebe36e976bcdb.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-5ed7b4e7328afad7ff52438bc11f78c6.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-9c776a93606abb5bee638fbc068e4f6e.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-5ed7b4e7328afad7ff52438bc11f78c6.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -339,220 +339,32 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<!--
-CSS EMBARQUÉ : je peux copier-coller ce bloc dans le CSS global du site. => voir plus tard
--->
-<style>
-/* === Mogadarr Blog UI (safe prefix: moga-) ============================= */
-
-.moga-hero{
-  position: relative;
-  border-radius: 28px;
-  overflow: hidden;
-  margin: 0 0 1.6rem 0;
-  border: 1px solid rgba(0,0,0,.08);
-  box-shadow: 0 14px 40px rgba(0,0,0,.10);
-  background: rgba(0,0,0,.02);
-}
-
-.moga-hero__media{ margin: 0; }
-.moga-hero__img{
-  width: 100%;
-  height: auto;
-  display: block;
-  aspect-ratio: 16 / 9;
-  object-fit: cover;
-  transform: scale(1.01); /* évite les lignes blanches au bord */
-}
-
-.moga-hero__overlay{
-  position: absolute;
-  inset: 0;
-  /* Gradient lisibilité + vibe romance/noël */
-  background:
-    radial-gradient(1200px 500px at 20% 15%, rgba(255,255,255,.18), transparent 55%),
-    linear-gradient(0deg, rgba(0,0,0,.52), rgba(0,0,0,.08));
-}
-
-.moga-hero__content{
-  position: absolute;
-  inset: auto 0 0 0;
-  padding: 1.1rem 1.1rem 1.2rem 1.1rem;
-  color: #fff;
-}
-
-.moga-hero__meta{
-  display: flex;
-  align-items: center;
-  gap: .6rem;
-  flex-wrap: wrap;
-  margin-bottom: .5rem;
-}
-
-.moga-chip{
-  display: inline-flex;
-  align-items: center;
-  padding: .35rem .6rem;
-  border-radius: 999px;
-  background: rgba(255,255,255,.16);
-  border: 1px solid rgba(255,255,255,.22);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  font-size: .88rem;
-  letter-spacing: .2px;
-}
-
-.moga-date{
-  font-size: .88rem;
-  opacity: .92;
-}
-
-.moga-hero__title{
-  margin: 0 0 .35rem 0;
-  font-weight: 750;
-  line-height: 1.05;
-  letter-spacing: -0.4px;
-  font-size: clamp(1.75rem, 3.2vw, 2.6rem);
-  text-shadow: 0 10px 30px rgba(0,0,0,.35);
-}
-
-.moga-hero__lede{
-  margin: 0;
-  max-width: 60ch;
-  font-size: 1.02rem;
-  line-height: 1.45;
-  opacity: .95;
-  text-shadow: 0 10px 26px rgba(0,0,0,.30);
-}
-
-/* Media card (photo + texte) */
-.moga-media-card{
-  display: grid;
-  gap: 1rem;
-  margin: 1.6rem 0 1.6rem 0;
-  padding: 1rem;
-  border-radius: 22px;
-  border: 1px solid rgba(0,0,0,.08);
-  box-shadow: 0 12px 30px rgba(0,0,0,.08);
-  background: rgba(0,0,0,.02);
-}
-
-.moga-media-card__figure{
-  margin: 0;
-  border-radius: 18px;
-  overflow: hidden;
-}
-
-.moga-media-card__img{
-  width: 100%;
-  height: auto;
-  display: block;
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
-}
-
-.moga-media-card__body{
-  padding: .15rem .2rem .1rem .2rem;
-}
-
-.moga-media-card__kicker{
-  margin: 0 0 .35rem 0;
-  font-size: .9rem;
-  letter-spacing: .22px;
-  text-transform: uppercase;
-  opacity: .78;
-}
-
-.moga-media-card__quote{
-  margin: 0 0 .5rem 0;
-  font-size: 1.15rem;
-  line-height: 1.35;
-  font-weight: 650;
-}
-
-.moga-media-card__hint{
-  margin: 0;
-  opacity: .9;
-  line-height: 1.5;
-}
-
-/* Sign-off */
-.moga-signoff{
-  margin-top: 1.6rem;
-  opacity: .92;
-}
-.moga-signoff__line{
-  height: 1px;
-  width: 100%;
-  background: linear-gradient(90deg, transparent, rgba(0,0,0,.20), transparent);
-  margin: 1.2rem 0 .8rem 0;
-}
-.moga-signoff__text{
-  margin: 0;
-  text-align: center;
-  font-size: .98rem;
-}
-
-/* Responsive */
-@media (min-width: 992px){
-  .moga-hero__content{
-    padding: 1.6rem 1.6rem 1.7rem 1.6rem;
-  }
-
-  .moga-media-card{
-    grid-template-columns: 1.1fr .9fr;
-    align-items: stretch;
-    padding: 1.1rem;
-  }
-
-  .moga-media-card__figure{
-    height: 100%;
-  }
-
-  .moga-media-card__img{
-    height: 100%;
-    aspect-ratio: auto;
-  }
-}
-</style>
-<!--
-NOTE CSS : le bloc ci-dessus est "portable" : je peux le copier-coller tel quel dans le CSS existant du site
-(mais je préfère l’embarquer dans l’article).
--->
-<!--
-PHOTO 1 (IMAGE D’OUVERTURE) : l’image s’insère simplement sous le titre.
--->
-<figure class="moga-photo moga-photo--lead figure">
-  <img src="../../images/blog/photo_article1.PNG" alt="Photo d’ambiance (à renseigner) : décor de fêtes, carnet d’écriture, lumière douce." loading="lazy" class="moga-photo__img figure-img">
+<p>Les fêtes sont productives !</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../images/blog/photo_article1.PNG" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></p>
 </figure>
+</div>
 <p>Les fêtes sont productives !</p>
 <p>En tant que prof, je bénéficie de deux semaines de vacances toutes les cinq ou sept semaines. Si la majeure partie de cette période est consacrée aux corrections de copies et à la construction de mes cours, je laisse toujours une part très importante à l’écriture. Cependant, les vacances de Noël sont particulières. Les fêtes prennent beaucoup de place et c’est une vraie difficulté d’écrire. J’ai eu la chance de terminer le manuscrit de <strong><code>Prends de la bûche !</code></strong> avant cette période, ce qui fait que c’est la tête pleine de lumières que j’ai commencé l’écriture de ma prochaine histoire.</p>
 <section id="une-histoire-très-sombre" class="level2">
 <h2 class="anchored" data-anchor-id="une-histoire-très-sombre">Une histoire très sombre</h2>
-<p>J’ai laissé teaser quelques indices sur mes réseaux sociaux mais je ne peux pas parler directement de cette histoire. Tout ce que je peux dire, c’est que <strong>ce roman fête les dix ans de ma carrière d’écrivaine</strong> et que cette intrigue est aussi sombre que <strong><code>Black Feelings</code></strong>, mon tout premier roman paru chez `Hugo Publishing .</p>
+<p>J’ai laissé teaser quelques indices sur mes réseaux sociaux mais je ne peux pas parler directement de cette histoire. Tout ce que je peux dire, c’est que <strong>ce roman fête les dix ans de ma carrière d’écrivaine</strong> et que cette intrigue est aussi sombre que <strong><code>Black Feelings</code></strong>, mon tout premier roman paru chez <code>Hugo Publishing</code>.</p>
 <p>Le thème est fort et sombre. Comme ceux qui me lisent le savent, désormais, tout peut arriver à mes personnages. Je vais aller au-delà de la romance pour parler d’une histoire prenante, réaliste et poignante.</p>
-<!--
-PHOTO 2 (CARTE MEDIA) : /images/blog/2025-12-28-fetes-productives-02.png
--->
-<section class="moga-media-card" aria-label="Encart visuel">
-  <figure class="moga-media-card__figure figure">
-    <img src="../../images/blog/photo_article2.PNG" alt="Photo d’ambiance (à renseigner) : détails d’écriture, pages, stylo, atmosphère plus sombre." loading="lazy" class="moga-media-card__img figure-img">
-  </figure>
-
-  <div class="moga-media-card__body">
-    <p class="moga-media-card__kicker">Note d’auteure</p>
-    <p class="moga-media-card__quote">« Désormais, tout peut arriver à mes personnages. »</p>
-    <p class="moga-media-card__hint">Un roman anniversaire, une intensité assumée — et une sortie qui se précise.</p>
-  </div>
-</section>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../images/blog/photo_article2.PNG" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%"></p>
+</figure>
+</div>
+<blockquote class="blockquote">
+<p><strong>Note d’auteure</strong> : Désormais, tout peut arriver à mes personnages. Un roman anniversaire, une intensité assumée — et une sortie qui se précise.</p>
+</blockquote>
 </section>
 <section id="rendez-vous-lors-du-premier-trimestre-2026" class="level2">
 <h2 class="anchored" data-anchor-id="rendez-vous-lors-du-premier-trimestre-2026">Rendez-vous lors du premier trimestre 2026 !</h2>
 <p>Je vous laisse avec cette information. Passez d’excellentes fêtes de fin d’année !</p>
-<footer class="moga-signoff" aria-label="Fin d’article">
-  <div class="moga-signoff__line"></div>
-  <p class="moga-signoff__text">Merci de votre lecture ✨</p>
-</footer>
+<hr>
+<p>Merci de votre lecture ✨</p>
 <!-- ===== 3) RETOUR ===== -->
 <div class="back-home">
 <p><a href="../index.html" class="btn-back" role="button" aria-label="Retour aux Romans"> <span class="arrow">←</span> Retour aux articles de blog </a></p>
