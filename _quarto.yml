@@ -5,9 +5,11 @@ project:
 website:
   title: "Éléonore Vance"
   navbar:
+    title: false
     left:
-      - text: "Accueil"
+      - text: "EV" # Monogram Logo
         href: index.qmd
+        class: "nav-logo"
       - text: "Romans"
         href: romans.qmd
       - text: "Blog"
