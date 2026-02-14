@@ -1,20 +1,142 @@
 /* =========================================
-   Dark Mode Overrides - Mo Gadarr
-   (Most dark styles are in base styles.css)
-   This file ensures dark-specific toggle styling
+   Dark Mode - Mo Gadarr
+   Palette: Deep Black, Bright Pink, Sage Green
    ========================================= */
 
 /*-- scss:rules --*/
 
-/* ===== THEME TOGGLE ICON STYLING (DARK) ===== */
-.quarto-color-scheme-toggle .bi {
-    font-size: 1.2rem;
-    transition: all 0.4s ease;
+/* ===== DARK BODY ===== */
+body {
+    background-color: #121212 !important;
+    color: #f0f0f0 !important;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    color: #f0f0f0 !important;
+}
+
+a {
     color: #f0f0f0;
 }
 
-.quarto-color-scheme-toggle:hover .bi {
-    color: #FB6F92;
-    transform: rotate(30deg);
-    filter: drop-shadow(0 0 8px rgba(251, 111, 146, 0.6));
+/* ===== HERO ===== */
+.hero {
+    background: radial-gradient(circle at center, #1a1a1a 0%, #121212 70%) !important;
+}
+
+.hero h1 {
+    color: #fff !important;
+}
+
+.hero .subtitle {
+    color: #FB6F92 !important;
+}
+
+/* ===== CARDS ===== */
+.book-card {
+    background: #1e1e1e !important;
+    border: 1px solid #333 !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4) !important;
+}
+
+.book-card:hover {
+    box-shadow: 0 8px 30px rgba(251, 111, 146, 0.2) !important;
+}
+
+.book-cover {
+    background: #000 !important;
+}
+
+.book-info h3 {
+    color: #fff !important;
+}
+
+.book-info p {
+    color: #a0a0a0 !important;
+}
+
+/* ===== SECTIONS ===== */
+.section-title {
+    color: #fff !important;
+}
+
+/* ===== ABOUT ===== */
+.about {
+    background: #181818 !important;
+    border-top: 1px solid #333 !important;
+}
+
+.author-placeholder {
+    border: 1px solid #FB6F92 !important;
+}
+
+.about-text p {
+    color: #a0a0a0 !important;
+}
+
+/* ===== NEWSLETTER ===== */
+.newsletter {
+    background: #121212 !important;
+}
+
+.newsletter-form input,
+.newsletter-form textarea {
+    background: #1e1e1e !important;
+    border: 1px solid #333 !important;
+    color: #fff !important;
+}
+
+/* ===== NAVBAR DARK ===== */
+.navbar {
+    background: rgba(10, 10, 10, 0.85) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
+}
+
+.navbar-nav .nav-link {
+    color: rgba(255, 255, 255, 0.8) !important;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #fff !important;
+    text-shadow: 0 0 8px rgba(251, 111, 146, 0.6);
+}
+
+.navbar-nav>li:first-child>.nav-link {
+    background: linear-gradient(45deg, #fff, #FB6F92) !important;
+    -webkit-background-clip: text !important;
+    background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    border: 2px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+.navbar-toggler {
+    color: #fff !important;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 0.9)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+}
+
+@media (max-width: 992px) {
+    .navbar-collapse {
+        background: rgba(10, 10, 10, 0.95) !important;
+        backdrop-filter: blur(20px);
+        padding: 1rem;
+        margin-top: 1rem;
+        border-radius: 10px;
+        border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    }
+}
+
+/* ===== FOOTER ===== */
+.nav-footer {
+    border-top: 1px solid #333 !important;
+}
+
+/* ===== TOGGLE ICON ===== */
+.quarto-color-scheme-toggle .bi {
+    color: #f0f0f0;
 }

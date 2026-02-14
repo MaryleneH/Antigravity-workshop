@@ -1,41 +1,25 @@
 /* =========================================
-   Theme: Dark Pop Elegance (Mo Gadarr Colors)
-   Palette: Dark Grey, Bright Pink, Sage Green
+   Shared Layout & Structure - Mo Gadarr
+   (No hardcoded colors - those go in light/dark files)
    ========================================= */
 
 /*-- scss:rules --*/
 
 :root {
-    /* Dark Base */
-    --bg-body: #121212;
-    --bg-card: #1e1e1e;
-    --bg-nav: rgba(18, 18, 18, 0.9);
-
-    /* Typography */
-    --text-main: #f0f0f0;
-    --text-muted: #a0a0a0;
+    /* Fonts */
     --font-heading: "Playfair Display", Georgia, serif;
     --font-body: "Lato", system-ui, -apple-system, sans-serif;
 
-    /* App Accents */
+    /* Accents (shared) */
     --color-pink: #FB6F92;
-    /* Bright Pop Pink */
     --color-green: #A3A380;
-    /* Sage Green */
 
     /* Dimensions */
     --radius-card: 8px;
     --radius-btn: 50px;
-
-    /* Shadows */
-    --shadow-card: 0 4px 20px rgba(0, 0, 0, 0.4);
-    --shadow-hover: 0 8px 30px rgba(251, 111, 146, 0.2);
-    /* Pink glow */
 }
 
 body {
-    background-color: var(--bg-body);
-    color: var(--text-main);
     font-family: var(--font-body);
     line-height: 1.7;
     margin: 0;
@@ -47,12 +31,10 @@ h3,
 h4 {
     font-family: var(--font-heading);
     font-weight: 700;
-    color: var(--text-main);
     letter-spacing: 0.02em;
 }
 
 a {
-    color: var(--text-main);
     text-decoration: none;
     transition: color 0.3s ease;
 }
@@ -71,21 +53,14 @@ a:hover {
     text-align: center;
     padding: 2rem;
     position: relative;
-    /* Subtle dark gradient */
-    background: radial-gradient(circle at center, #1a1a1a 0%, #121212 70%);
 }
 
 .hero h1 {
     font-size: 4rem;
     margin-bottom: 0.5rem;
-    color: #fff;
-    /* Clean, no shimmer */
 }
 
 .hero .subtitle {
-    font-size: 1.3rem;
-    color: var(--color-pink);
-    /* Pop of color */
     margin-bottom: 2.5rem;
     font-family: var(--font-body);
     text-transform: uppercase;
@@ -132,10 +107,10 @@ a:hover {
 
 .btn-text:hover {
     background-color: var(--color-green);
-    color: #121212;
+    color: #fff;
 }
 
-/* ===== CARDS ===== */
+/* ===== CARDS (layout) ===== */
 .book-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -146,25 +121,19 @@ a:hover {
 }
 
 .book-card {
-    background: var(--bg-card);
     border-radius: var(--radius-card);
-    border: 1px solid #333;
     overflow: hidden;
     transition: all 0.3s ease;
     position: relative;
-    box-shadow: var(--shadow-card);
 }
 
 .book-card:hover {
     transform: translateY(-5px);
     border-color: var(--color-pink);
-    box-shadow: var(--shadow-hover);
 }
 
 .book-cover {
     height: 380px;
-    /* Taller, more cinematic cover area */
-    background: #000;
     position: relative;
 }
 
@@ -187,7 +156,6 @@ a:hover {
 .book-info h3 {
     font-size: 1.6rem;
     margin: 0 0 0.5rem 0;
-    color: #fff;
 }
 
 .book-info .genre {
@@ -201,7 +169,6 @@ a:hover {
 }
 
 .book-info p {
-    color: var(--text-muted);
     font-size: 0.95rem;
     margin-bottom: 1.5rem;
     line-height: 1.6;
@@ -212,7 +179,6 @@ a:hover {
     text-align: center;
     font-size: 2.5rem;
     margin: 4rem 0 3rem;
-    color: #fff;
     position: relative;
 }
 
@@ -225,12 +191,10 @@ a:hover {
     margin: 1rem auto 0;
 }
 
-/* ===== ABOUT ===== */
+/* ===== ABOUT (layout) ===== */
 .about {
-    background: #181818;
     padding: 6rem 2rem;
     margin-top: 5rem;
-    border-top: 1px solid #333;
 }
 
 .about-container {
@@ -243,9 +207,6 @@ a:hover {
 
 .author-placeholder {
     border-radius: 5px;
-    /* Slight round, mostly sharp */
-    border: 1px solid var(--color-pink);
-    /* Pop border */
     position: relative;
 }
 
@@ -267,24 +228,18 @@ a:hover {
 
 .about-text h2::after {
     margin: 1rem 0 0;
-    /* Left align underline */
 }
 
-/* ===== NEWSLETTER ===== */
+/* ===== NEWSLETTER (layout) ===== */
 .newsletter {
-    background: #121212;
     padding: 6rem 2rem;
     text-align: center;
 }
 
 .newsletter-form input,
 .newsletter-form textarea {
-    background: #1e1e1e;
-    border: 1px solid #333;
-    color: #fff;
     padding: 1rem;
     border-radius: 4px;
-    /* Sharper */
 }
 
 .newsletter-form input:focus,
@@ -295,18 +250,13 @@ a:hover {
 
 /* ===== NAVBAR ULTRA MODERN ===== */
 .navbar {
-    background: var(--bg-nav) !important;
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
     padding: 1rem 2rem !important;
-    position: fixed;
-    /* Stick to top */
     width: 100%;
     z-index: 1000;
 }
 
-/* Gradient Border Bottom Effect */
 .navbar::after {
     content: '';
     position: absolute;
@@ -320,7 +270,6 @@ a:hover {
 
 .navbar-brand {
     display: none;
-    /* Hide default brand text */
 }
 
 /* Logo Styling (The 'MG' item - 1st link) */
@@ -328,10 +277,6 @@ a:hover {
     font-family: var(--font-heading);
     font-size: 1.5rem !important;
     font-weight: 700;
-    background: linear-gradient(45deg, #fff, var(--color-pink));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    border: 2px solid rgba(255, 255, 255, 0.1);
     border-radius: 50%;
     width: 45px;
     height: 45px;
@@ -350,7 +295,6 @@ a:hover {
 
 /* Nav Links Styling */
 .navbar-nav .nav-link {
-    color: rgba(255, 255, 255, 0.8) !important;
     font-family: var(--font-body);
     font-weight: 600;
     text-transform: uppercase;
@@ -374,11 +318,6 @@ a:hover {
     box-shadow: 0 0 8px var(--color-pink);
 }
 
-.navbar-nav .nav-link:hover {
-    color: #fff !important;
-    text-shadow: 0 0 8px rgba(251, 111, 146, 0.6);
-}
-
 .navbar-nav .nav-link:hover::before {
     width: 100%;
 }
@@ -386,14 +325,9 @@ a:hover {
 /* Mobile Toggler */
 .navbar-toggler {
     border: none !important;
-    color: #fff !important;
 }
 
-.navbar-toggler-icon {
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 0.9)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
-}
-
-/* Responsive */
+/* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
     .hero h1 {
         font-size: 2.8rem;
@@ -413,6 +347,13 @@ a:hover {
     }
 }
 
+@media (max-width: 992px) {
+    .navbar-nav>li:first-child>.nav-link {
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+}
+
 /* ===== UTILITIES: ANIMATIONS ===== */
 .fade-in-scroll {
     opacity: 0;
@@ -423,4 +364,20 @@ a:hover {
 .fade-in-scroll.visible {
     opacity: 1;
     transform: translateY(0);
+}
+
+/* ===== THEME TOGGLE ===== */
+.quarto-color-scheme-toggle {
+    order: 99;
+}
+
+.quarto-color-scheme-toggle .bi {
+    font-size: 1.2rem;
+    transition: all 0.4s ease;
+}
+
+.quarto-color-scheme-toggle:hover .bi {
+    color: var(--color-pink) !important;
+    transform: rotate(30deg);
+    filter: drop-shadow(0 0 6px rgba(251, 111, 146, 0.5));
 }
