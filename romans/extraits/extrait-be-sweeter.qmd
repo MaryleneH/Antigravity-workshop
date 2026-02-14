@@ -1,0 +1,32 @@
+---
+title: "Be Sweeter — Extrait"
+subtitle: "Bientôt disponible"
+description: "L'extrait de Be Sweeter est en cours de préparation."
+title-block-banner: images/hero-extrait-buche.svg
+page-layout: full
+toc: false
+body-classes: extrait-buche
+---
+
+<section class="intro-extrait" markdown="1">
+### 🍬 Un peu de patience...
+L’extrait de *Be Sweeter* arrive très prochainement.  
+Restez à l’écoute pour plonger dans cette nouvelle douceur sucrée !
+</section>
+
+<section class="cta-extrait" markdown="1">
+### ✮⋆˙ En attendant...
+<div class="btn-row">
+[Acheter sur Amazon](https://www.amazon.fr/s?k=Mo+Gadarr+Be+Sweeter){.btn .btn-primary role="button"}
+[Lire la fiche du roman](../be-sweeter.qmd){.btn .btn-secondary role="button"}
+[Tous les romans](../../romans.qmd){.btn .btn-secondary role="button"}
+</div>
+</section>
+
+<br></br>
+
+<div class="back-home">
+  <a href="../../index.qmd" class="btn-back" role="button" aria-label="Retour à l’accueil">
+    <span class="arrow">←</span> Retour à l’accueil
+  </a>
+</div>

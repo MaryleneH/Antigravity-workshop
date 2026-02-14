@@ -1,0 +1,32 @@
+---
+title: "Black Feelings 2 — Extrait"
+subtitle: "Bientôt disponible"
+description: "L'extrait de Black Feelings Tome 2 est en cours de préparation."
+title-block-banner: images/hero-extrait-buche.svg
+page-layout: full
+toc: false
+body-classes: extrait-buche
+---
+
+<section class="intro-extrait" markdown="1">
+### 🖤 Préparez-vous pour la suite...
+L’extrait de *Black Feelings Tome 2* arrive très prochainement.  
+La tension monte, et la vengeance n'attend pas...
+</section>
+
+<section class="cta-extrait" markdown="1">
+### ✮⋆˙ En attendant...
+<div class="btn-row">
+[Acheter sur Amazon](https://www.amazon.fr/s?k=Mo+Gadarr+Black+Feelings){.btn .btn-primary role="button"}
+[Lire la fiche du roman](../black-feelings-2.qmd){.btn .btn-secondary role="button"}
+[Tous les romans](../../romans.qmd){.btn .btn-secondary role="button"}
+</div>
+</section>
+
+<br></br>
+
+<div class="back-home">
+  <a href="../../index.qmd" class="btn-back" role="button" aria-label="Retour à l’accueil">
+    <span class="arrow">←</span> Retour à l’accueil
+  </a>
+</div>
