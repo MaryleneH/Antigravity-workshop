@@ -13,6 +13,7 @@ body-classes: romans
 Partez à la découverte des séries, des comédies de Noël, des romances de saison et des one-shots contemporains.
 </section>
 
+```{=html}
 <nav class="roman-filter" aria-label="Filtrer les rubriques">
   <button class="chip active" data-filter="all" aria-pressed="true">Tout voir</button>
   <button class="chip" data-filter="edition" aria-pressed="false">Édition</button>
@@ -26,7 +27,7 @@ Partez à la découverte des séries, des comédies de Noël, des romances de sa
 
     <!-- ÉDITION -->
     <div class="book-vignette fade-in-scroll" data-cat="edition">
-        <a href="romans/black-feelings-1.qmd" class="vignette-link">
+        <a href="romans/black-feelings-1.html" class="vignette-link">
             <img src="images/couvertures/black-feelings-tome-1.jpg" alt="Black Feelings T1" class="vignette-cover">
             <div class="vignette-overlay">
                 <span class="vignette-genre">Romance • Suspense</span>
@@ -37,7 +38,7 @@ Partez à la découverte des séries, des comédies de Noël, des romances de sa
     </div>
 
     <div class="book-vignette fade-in-scroll" data-cat="edition">
-        <a href="romans/black-feelings-2.qmd" class="vignette-link">
+        <a href="romans/black-feelings-2.html" class="vignette-link">
             <img src="images/couvertures/black-feelings-tome-2.jpg" alt="Black Feelings T2" class="vignette-cover">
             <div class="vignette-overlay">
                 <span class="vignette-genre">Romance • Suspense</span>
@@ -48,7 +49,7 @@ Partez à la découverte des séries, des comédies de Noël, des romances de sa
     </div>
 
     <div class="book-vignette fade-in-scroll" data-cat="edition">
-        <a href="romans/be-sweeter.qmd" class="vignette-link">
+        <a href="romans/be-sweeter.html" class="vignette-link">
             <img src="images/couvertures/be-sweeter.jpg" alt="Be Sweeter" class="vignette-cover">
             <div class="vignette-overlay">
                 <span class="vignette-genre">New Adult • Campus</span>
@@ -59,7 +60,7 @@ Partez à la découverte des séries, des comédies de Noël, des romances de sa
     </div>
 
     <div class="book-vignette fade-in-scroll" data-cat="edition">
-        <a href="romans/be-stronger.qmd" class="vignette-link">
+        <a href="romans/be-stronger.html" class="vignette-link">
             <img src="images/couvertures/be-stronger.jpg" alt="Be Stronger" class="vignette-cover">
             <div class="vignette-overlay">
                 <span class="vignette-genre">New Adult • Résilience</span>
@@ -70,7 +71,7 @@ Partez à la découverte des séries, des comédies de Noël, des romances de sa
     </div>
 
     <div class="book-vignette fade-in-scroll" data-cat="edition">
-        <a href="romans/be-yourself.qmd" class="vignette-link">
+        <a href="romans/be-yourself.html" class="vignette-link">
             <img src="images/couvertures/be-yourself.jpg" alt="Be Yourself" class="vignette-cover">
             <div class="vignette-overlay">
                 <span class="vignette-genre">New Adult • Identité</span>
@@ -82,7 +83,7 @@ Partez à la découverte des séries, des comédies de Noël, des romances de sa
 
     <!-- SÉRIES -->
     <div class="book-vignette fade-in-scroll" data-cat="series">
-        <a href="romans/cops-and-love-will-hunter.qmd" class="vignette-link">
+        <a href="romans/cops-and-love-will-hunter.html" class="vignette-link">
             <img src="images/couvertures/cops-and-love-will-hunter.jpg" alt="Cops and Love - Will" class="vignette-cover">
             <div class="vignette-overlay">
                 <span class="vignette-genre">Romantic Suspense</span>
@@ -93,7 +94,7 @@ Partez à la découverte des séries, des comédies de Noël, des romances de sa
     </div>
 
     <div class="book-vignette fade-in-scroll" data-cat="series">
-        <a href="romans/cops-love-noah.qmd" class="vignette-link">
+        <a href="romans/cops-love-noah.html" class="vignette-link">
             <img src="images/couvertures/cops-noah.jpg" alt="Cops and Love - Noah" class="vignette-cover">
             <div class="vignette-overlay">
                 <span class="vignette-genre">Romantic Suspense</span>
@@ -104,7 +105,7 @@ Partez à la découverte des séries, des comédies de Noël, des romances de sa
     </div>
 
     <div class="book-vignette fade-in-scroll" data-cat="series">
-        <a href="romans/cops-love-lewis.qmd" class="vignette-link">
+        <a href="romans/cops-love-lewis.html" class="vignette-link">
             <img src="images/couvertures/cops-lewis.jpg" alt="Cops and Love - Lewis" class="vignette-cover">
             <div class="vignette-overlay">
                 <span class="vignette-genre">Romantic Suspense</span>
@@ -115,7 +116,7 @@ Partez à la découverte des séries, des comédies de Noël, des romances de sa
     </div>
 
     <div class="book-vignette fade-in-scroll" data-cat="series">
-        <a href="romans/sur-le-sable.qmd" class="vignette-link">
+        <a href="romans/sur-le-sable.html" class="vignette-link">
             <img src="images/couvertures/sur-le-sable.jpg" alt="Sur le sable" class="vignette-cover">
             <div class="vignette-overlay">
                 <span class="vignette-genre">Romance d'été</span>
@@ -126,7 +127,7 @@ Partez à la découverte des séries, des comédies de Noël, des romances de sa
     </div>
 
     <div class="book-vignette fade-in-scroll" data-cat="series">
-        <a href="romans/dans-les-fleurs.qmd" class="vignette-link">
+        <a href="romans/dans-les-fleurs.html" class="vignette-link">
             <img src="images/couvertures/fleurs.jpg" alt="Dans les fleurs" class="vignette-cover">
             <div class="vignette-overlay">
                 <span class="vignette-genre">Romance de printemps</span>
@@ -137,7 +138,7 @@ Partez à la découverte des séries, des comédies de Noël, des romances de sa
     </div>
 
     <div class="book-vignette fade-in-scroll" data-cat="series">
-        <a href="romans/en-pleine-nature.qmd" class="vignette-link">
+        <a href="romans/en-pleine-nature.html" class="vignette-link">
             <img src="images/couvertures/en-pleine-nature.jpg" alt="En pleine nature" class="vignette-cover">
             <div class="vignette-overlay">
                 <span class="vignette-genre">Romance d'automne</span>
@@ -149,7 +150,7 @@ Partez à la découverte des séries, des comédies de Noël, des romances de sa
 
     <!-- FÊTES -->
     <div class="book-vignette fade-in-scroll" data-cat="fetes">
-        <a href="romans/believe-in-santa-klaus.qmd" class="vignette-link">
+        <a href="romans/believe-in-santa-klaus.html" class="vignette-link">
             <img src="images/couvertures/believe-in-santa-klaus.jpg" alt="Believe in Santa Klaus" class="vignette-cover">
             <div class="vignette-overlay">
                 <span class="vignette-genre">Comédie de Noël</span>
@@ -160,7 +161,7 @@ Partez à la découverte des séries, des comédies de Noël, des romances de sa
     </div>
 
     <div class="book-vignette fade-in-scroll" data-cat="fetes">
-        <a href="romans/be-mine-valentine.qmd" class="vignette-link">
+        <a href="romans/be-mine-valentine.html" class="vignette-link">
             <img src="images/couvertures/be-mine-valentine.jpg" alt="Be Mine Valentine" class="vignette-cover">
             <div class="vignette-overlay">
                 <span class="vignette-genre">Romance Saint-Valentin</span>
@@ -171,7 +172,7 @@ Partez à la découverte des séries, des comédies de Noël, des romances de sa
     </div>
 
     <div class="book-vignette fade-in-scroll" data-cat="fetes">
-        <a href="romans/poupee-bimbo.qmd" class="vignette-link">
+        <a href="romans/poupee-bimbo.html" class="vignette-link">
             <img src="images/couvertures/poupee-bimbo.jpg" alt="Poupée Bimbo" class="vignette-cover">
             <div class="vignette-overlay">
                 <span class="vignette-genre">Comédie Romantique</span>
@@ -182,7 +183,7 @@ Partez à la découverte des séries, des comédies de Noël, des romances de sa
     </div>
 
     <div class="book-vignette fade-in-scroll" data-cat="fetes">
-        <a href="romans/noel-princesse-licorne.qmd" class="vignette-link">
+        <a href="romans/noel-princesse-licorne.html" class="vignette-link">
             <img src="images/couvertures/princesse-licorne.jpg" alt="Princesse Licorne" class="vignette-cover">
             <div class="vignette-overlay">
                 <span class="vignette-genre">Comédie Déjantée</span>
@@ -193,7 +194,7 @@ Partez à la découverte des séries, des comédies de Noël, des romances de sa
     </div>
 
     <div class="book-vignette fade-in-scroll" data-cat="fetes">
-        <a href="romans/noel-coups-bas.qmd" class="vignette-link">
+        <a href="romans/noel-coups-bas.html" class="vignette-link">
             <img src="images/couvertures/noel-coups-bas.jpg" alt="Noël Coups Bas" class="vignette-cover">
             <div class="vignette-overlay">
                 <span class="vignette-genre">Enemis-to-Lovers</span>
@@ -205,7 +206,7 @@ Partez à la découverte des séries, des comédies de Noël, des romances de sa
 
     <!-- ONE-SHOTS -->
     <div class="book-vignette fade-in-scroll" data-cat="oneshots">
-        <a href="romans/my-sweet-babysitter.qmd" class="vignette-link">
+        <a href="romans/my-sweet-babysitter.html" class="vignette-link">
             <img src="images/couvertures/my-sweet-babysitter.jpg" alt="My Sweet Babysitter" class="vignette-cover">
             <div class="vignette-overlay">
                 <span class="vignette-genre">Romance Maman Solo</span>
@@ -216,7 +217,7 @@ Partez à la découverte des séries, des comédies de Noël, des romances de sa
     </div>
 
     <div class="book-vignette fade-in-scroll" data-cat="oneshots">
-        <a href="romans/jai-juste-clique.qmd" class="vignette-link">
+        <a href="romans/jai-juste-clique.html" class="vignette-link">
             <img src="images/couvertures/j-ai-juste-clique.jpg" alt="J'ai juste cliqué" class="vignette-cover">
             <div class="vignette-overlay">
                 <span class="vignette-genre">Romance 2.0</span>
@@ -227,7 +228,7 @@ Partez à la découverte des séries, des comédies de Noël, des romances de sa
     </div>
 
     <div class="book-vignette fade-in-scroll" data-cat="oneshots">
-        <a href="romans/et-zut.qmd" class="vignette-link">
+        <a href="romans/et-zut.html" class="vignette-link">
             <img src="images/couvertures/et-zut.jpg" alt="Et Zut !" class="vignette-cover">
             <div class="vignette-overlay">
                 <span class="vignette-genre">Romance Gourmande</span>
@@ -238,7 +239,7 @@ Partez à la découverte des séries, des comédies de Noël, des romances de sa
     </div>
 
     <div class="book-vignette fade-in-scroll" data-cat="oneshots">
-        <a href="romans/undress-me.qmd" class="vignette-link">
+        <a href="romans/undress-me.html" class="vignette-link">
             <img src="images/couvertures/undress-me.jpg" alt="Undress Me" class="vignette-cover">
             <div class="vignette-overlay">
                 <span class="vignette-genre">Romance Sexy</span>
@@ -250,7 +251,7 @@ Partez à la découverte des séries, des comédies de Noël, des romances de sa
 
     <!-- ARCHIVES -->
     <div class="book-vignette fade-in-scroll" data-cat="archive">
-        <a href="romans/blind.qmd" class="vignette-link">
+        <a href="romans/blind.html" class="vignette-link">
             <img src="images/couvertures/blind.jpg" alt="Blind" class="vignette-cover">
             <div class="vignette-overlay">
                 <span class="vignette-genre">Co-écriture • Dark</span>
@@ -261,7 +262,7 @@ Partez à la découverte des séries, des comédies de Noël, des romances de sa
     </div>
 
     <div class="book-vignette fade-in-scroll" data-cat="archive">
-        <a href="romans/hurt.qmd" class="vignette-link">
+        <a href="romans/hurt.html" class="vignette-link">
             <img src="images/couvertures/hurt.jpg" alt="Hurt" class="vignette-cover">
             <div class="vignette-overlay">
                 <span class="vignette-genre">Co-écriture • Dark</span>
@@ -274,7 +275,7 @@ Partez à la découverte des séries, des comédies de Noël, des romances de sa
 </div>
 
 <div class="back-home">
-  <a href="../index.qmd" class="btn-back" role="button" aria-label="Retour à l’accueil">
+  <a href="index.html" class="btn-back" role="button" aria-label="Retour à l’accueil">
     <span class="arrow">←</span> Retour à l’accueil
   </a>
 </div>
@@ -319,3 +320,4 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 </script>
+```
