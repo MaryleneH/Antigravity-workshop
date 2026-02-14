@@ -25,7 +25,6 @@ format:
     theme:
       light: [cosmo, styles.css, styles-light.css]
       dark: [darkly, styles.css, styles-dark.css]
-    css: []
     mainfont: 'Lato'
     fontsize: 1.1em
     include-in-header:

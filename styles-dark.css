@@ -4,6 +4,8 @@
    This file ensures dark-specific toggle styling
    ========================================= */
 
+/*-- scss:rules --*/
+
 /* ===== THEME TOGGLE ICON STYLING (DARK) ===== */
 .quarto-color-scheme-toggle .bi {
     font-size: 1.2rem;
