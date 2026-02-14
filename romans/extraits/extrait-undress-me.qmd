@@ -46,8 +46,9 @@ des nuits électriques, des cicatrices invisibles… et le cœur à nu.
 <section class="cta-extrait" markdown="1">
 ### ✮⋆˙ L’histoire ne fait que commencer…
 <div class="btn-row">
-[⋅˚₊‧ ୨ ୧ ‧₊˚ ⋅ Acheter sur Amazon](https://www.amazon.fr/s?k=Mo+Gadarr+Undress+Me){.btn .btn-primary role="button"}
+[Acheter sur Amazon](https://www.amazon.fr/s?k=Mo+Gadarr+Undress+Me){.btn .btn-primary role="button"}
 [Lire la fiche du roman](../undress-me.qmd){.btn .btn-secondary role="button"}
+[Tous les romans](../../romans.qmd){.btn .btn-secondary role="button"}
 </div>
 </section>
 
@@ -74,7 +75,7 @@ des nuits électriques, des cicatrices invisibles… et le cœur à nu.
 <br></br>
 
 <div class="back-home">
-  <a href="https://mogadarr.github.io/lire-mogadarr/" class="btn-back" role="button" aria-label="Retour à l’accueil">
+  <a href="../../index.qmd" class="btn-back" role="button" aria-label="Retour à l’accueil">
     <span class="arrow">←</span> Retour à l’accueil
   </a>
 </div>

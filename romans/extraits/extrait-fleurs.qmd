@@ -54,6 +54,7 @@ Trois extraits pour sentir le parfum des **fleurs** — et des **étincelles**.
 <div class="btn-row">
 [Acheter sur Amazon](https://www.amazon.fr/s?k=Mo+Gadarr+Dans+les+fleurs){.btn .btn-primary role="button"}
 [Lire la fiche du roman](../dans-les-fleurs.qmd){.btn .btn-secondary role="button"}
+[Tous les romans](../../romans.qmd){.btn .btn-secondary role="button"}
 </div>
 </section>
 

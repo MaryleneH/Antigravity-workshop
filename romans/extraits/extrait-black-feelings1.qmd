@@ -33,8 +33,9 @@ body-classes: extrait-buche
 ### ✮⋆˙ Quand le passé vous rattrape, la vengeance devient une obsession...
 
 <div class="btn-row">
-[⋅˚₊‧ ୨ ୧ ‧₊˚ ⋅ Acheter sur Amazon](https://www.amazon.fr/s?k=Mo+Gadarr+Black+Feelings){.btn .btn-primary role="button"}
-[Lire d'autres romans de Mo Gadarr](../../romans/index.qmd){.btn .btn-secondary role="button"}
+[Acheter sur Amazon](https://www.amazon.fr/s?k=Mo+Gadarr+Black+Feelings){.btn .btn-primary role="button"}
+[Lire la fiche du roman](../black-feelings-1.qmd){.btn .btn-secondary role="button"}
+[Tous les romans](../../romans.qmd){.btn .btn-secondary role="button"}
 </div>
 </section>
 
@@ -63,7 +64,7 @@ body-classes: extrait-buche
 <br></br>
 
 <div class="back-home">
-  <a href="https://mogadarr.github.io/lire-mogadarr/" class="btn-back" role="button" aria-label="Retour à l’accueil">
+  <a href="../../index.qmd" class="btn-back" role="button" aria-label="Retour à l’accueil">
     <span class="arrow">←</span> Retour à l’accueil
   </a>
 </div>

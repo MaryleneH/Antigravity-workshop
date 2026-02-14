@@ -62,6 +62,7 @@ Trois extraits pour vous mettre dans l’ambiance.
 <div class="btn-row">
 [Acheter sur Amazon](https://www.amazon.fr/s?k=Mo+Gadarr+No%C3%ABl+coups+bas+et+Secret+Santa){.btn .btn-primary role="button"}
 [Lire la fiche du roman](../noel-coups-bas.qmd){.btn .btn-secondary role="button"}
+[Tous les romans](../../romans.qmd){.btn .btn-secondary role="button"}
 </div>
 </section>
 
@@ -88,7 +89,7 @@ Trois extraits pour vous mettre dans l’ambiance.
 <br></br>
 
 <div class="back-home">
-  <a href="https://mogadarr.github.io/lire-mogadarr/" class="btn-back" role="button" aria-label="Retour à l’accueil">
+  <a href="../../index.qmd" class="btn-back" role="button" aria-label="Retour à l’accueil">
     <span class="arrow">←</span> Retour à l’accueil
   </a>
 </div>

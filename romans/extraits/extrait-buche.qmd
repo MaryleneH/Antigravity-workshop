@@ -52,8 +52,9 @@ Trois extraits pour vous donner envie d’en lire bien plus…
 <section class="cta-extrait" markdown="1">
 ### ✮⋆˙ L’histoire ne fait que commencer…
 <div class="btn-row">
-[⋅˚₊‧ ୨ ୧ ‧₊˚ ⋅ Acheter sur Amazon](https://amzn.eu/d/d3MMSlg){.btn .btn-primary role="button"}
-[Lire d'autres romans de Mo Gadarr](../../romans/index.qmd){.btn .btn-secondary role="button"}
+[Acheter sur Amazon](https://amzn.eu/d/29uxnJ6){.btn .btn-primary role="button"}
+[Lire la fiche du roman](../believe-in-santa-klaus.qmd){.btn .btn-secondary role="button"}
+[Tous les romans](../../romans.qmd){.btn .btn-secondary role="button"}
 </div>
 </section>
 
@@ -82,7 +83,7 @@ Trois extraits pour vous donner envie d’en lire bien plus…
 <br></br>
 
 <div class="back-home">
-  <a href="https://mogadarr.github.io/lire-mogadarr/" class="btn-back" role="button" aria-label="Retour à l’accueil">
+  <a href="../../index.qmd" class="btn-back" role="button" aria-label="Retour à l’accueil">
     <span class="arrow">←</span> Retour à l’accueil
   </a>
 </div>

@@ -44,8 +44,9 @@ Deux extraits, zéro princesse parfaite !
 <section class="cta-extrait" markdown="1">
 ### ✮⋆˙ L’histoire (déjantée) commence…
 <div class="btn-row">
-[⋅˚₊‧ ୨ ୧ ‧₊˚ ⋅ Acheter sur Amazon](https://amzn.eu/d/d3MMSlg){.btn .btn-primary role="button"}
-[Lire d'autres romans de Mo Gadarr](../../romans/index.qmd){.btn .btn-secondary role="button"}
+[Acheter sur Amazon](https://amzn.eu/d/3LY8JQI){.btn .btn-primary role="button"}
+[Lire la fiche du roman](../noel-princesse-licorne.qmd){.btn .btn-secondary role="button"}
+[Tous les romans](../../romans.qmd){.btn .btn-secondary role="button"}
 </div>
 </section>
 
@@ -65,7 +66,7 @@ Deux extraits, zéro princesse parfaite !
 <br></br>
 
 <div class="back-home">
-  <a href="https://mogadarr.github.io/lire-mogadarr/" class="btn-back" role="button" aria-label="Retour à l’accueil">
+  <a href="../../index.qmd" class="btn-back" role="button" aria-label="Retour à l’accueil">
     <span class="arrow">←</span> Retour à l’accueil
   </a>
 </div>

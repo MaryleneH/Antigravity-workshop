@@ -59,8 +59,9 @@ Deux extraits pour se mettre dans l’ambiance de _Sur le sable_.
 <section class="cta-extrait" markdown="1">
 ### ✮⋆˙ L’histoire ne fait que commencer…
 <div class="btn-row">
-[⋅˚₊‧ ୨ ୧ ‧₊˚ ⋅ Acheter sur Amazon](https://amzn.eu/d/d3MMSlg){.btn .btn-primary role="button"}
-[Lire d'autres romans de Mo Gadarr](../../romans/index.qmd){.btn .btn-secondary role="button"}
+[Acheter sur Amazon](https://amzn.eu/d/d3MMSlg){.btn .btn-primary role="button"}
+[Lire la fiche du roman](../sur-le-sable.qmd){.btn .btn-secondary role="button"}
+[Tous les romans](../../romans.qmd){.btn .btn-secondary role="button"}
 </div>
 </section>
 

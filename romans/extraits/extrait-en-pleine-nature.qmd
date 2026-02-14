@@ -63,6 +63,7 @@ Trois extraits pour sentir battre la nature — et les cœurs.
 <div class="btn-row">
 [Acheter sur Amazon](https://www.amazon.fr/s?k=Mo+Gadarr+En+pleine+nature){.btn .btn-primary role="button"}
 [Lire la fiche du roman](../en-pleine-nature.qmd){.btn .btn-secondary role="button"}
+[Tous les romans](../../romans.qmd){.btn .btn-secondary role="button"}
 </div>
 </section>
 
