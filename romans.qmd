@@ -2,6 +2,7 @@
 title: "La Collection"
 ---
 
+```{=html}
 <section class="collection">
     <p class="intro-text text-center text-muted mb-5">Découvrez l'univers d'Éléonore Vance, où chaque histoire est une promesse d'évasion.</p>
     
@@ -41,3 +42,4 @@ title: "La Collection"
         </div>
     </div>
 </section>
+```

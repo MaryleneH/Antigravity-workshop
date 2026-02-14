@@ -2,6 +2,7 @@
 title: "Contact"
 ---
 
+```{=html}
 <section class="newsletter">
     <div class="about-container" style="display: block; text-align: center; margin-bottom: 3rem;">
         <h2>Restons en contact</h2>
@@ -24,3 +25,4 @@ title: "Contact"
         </div>
     </div>
 </section>
+```
