@@ -9,7 +9,6 @@ website:
     left:
       - text: "EV" # Monogram Logo
         href: index.qmd
-        class: "nav-logo"
       - text: "Romans"
         href: romans.qmd
       - text: "Blog"
