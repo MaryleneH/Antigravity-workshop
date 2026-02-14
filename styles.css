@@ -920,28 +920,29 @@ body.quarto-dark .book-hero-card {
     }
 
     .book-hero-card {
+        display: flex;
         flex-direction: column;
-        text-align: center;
-        padding: 0 1.5rem 2rem;
-        /* Remove top padding, cover handles it */
+        align-items: center;
+        padding: 2rem 1.5rem;
+        /* Standard separation */
         gap: 2rem;
         position: relative;
         overflow: visible;
-        margin-top: 6rem;
-        /* Push card down significantly to make room for book */
-        display: flex;
+        margin-top: 2rem;
+        background: rgba(255, 255, 255, 0.05);
+        /* Slight contrast */
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
     }
 
     .book-hero-cover-wrapper {
-        position: relative;
-        /* Restore to flow */
-        top: auto;
-        left: auto;
+        position: static;
+        /* RESET positioning */
         transform: none;
-        margin: -100px auto 1rem;
-        /* Pull up 100px, push text down */
-        width: 160px;
-        max-width: 50vw;
+        margin: 0 auto 2rem;
+        /* Center, spacing below */
+        width: 260px;
+        /* Big and clear */
+        max-width: 70vw;
         z-index: 10;
         animation: float-y 6s ease-in-out infinite;
     }
