@@ -79,6 +79,45 @@ a:hover {
     text-align: left;
 }
 
+/* Typing Animation Styles */
+.typing-container {
+    margin-top: 1.5rem;
+    min-height: 1.8em;
+}
+
+.typing-text {
+    font-family: var(--font-heading);
+    color: var(--color-pink);
+    font-size: 1.6rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    border-right: 3px solid var(--color-pink);
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block;
+    padding-right: 5px;
+}
+
+.typing-text.done {
+    border-right: none;
+}
+
+@keyframes blink-caret {
+
+    from,
+    to {
+        border-color: transparent
+    }
+
+    50% {
+        border-color: var(--color-pink);
+    }
+}
+
+.typing-text:not(.done) {
+    animation: blink-caret 0.75s step-end infinite;
+}
+
 /* Animated gradient orbs behind hero */
 .hero::before {
     content: '';
@@ -554,14 +593,19 @@ a:hover {
 /* Logo Styling (The 'MG' item - 1st link) */
 .navbar-nav>li:first-child>.nav-link {
     font-family: var(--font-heading);
-    font-size: 1.5rem !important;
+    font-size: 1.4rem !important;
+    /* Slightly smaller font to give more air */
     font-weight: 700;
     border-radius: 50%;
-    width: 45px;
-    height: 45px;
+    width: 52px;
+    /* Increased from 45px */
+    height: 52px;
+    /* Increased from 45px */
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 0 !important;
+    /* Reset padding for perfect centering */
     margin-right: 2rem;
     transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -666,6 +710,15 @@ a:hover {
         flex-direction: column;
         gap: 2rem;
         padding: 0 1rem;
+    }
+
+    .hero-photo {
+        margin: 0 auto;
+    }
+
+    .typing-container {
+        text-align: center;
+        margin-top: 1rem;
     }
 
     .hero-content {
