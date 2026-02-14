@@ -5,7 +5,7 @@
 
 /*-- scss:rules --*/
 
-/* ===== DARK BODY ===== */
+/* ===== GLOBAL DARK OVERRIDES ===== */
 body {
     background-color: #121212 !important;
     color: #f0f0f0 !important;
@@ -14,12 +14,44 @@ body {
 h1,
 h2,
 h3,
-h4 {
+h4,
+h5,
+h6,
+.title,
+.quarto-title h1 {
     color: #f0f0f0 !important;
+}
+
+p,
+li,
+td,
+th,
+label,
+span,
+div {
+    color: #f0f0f0;
 }
 
 a {
     color: #f0f0f0;
+}
+
+a:hover {
+    color: #FB6F92;
+}
+
+/* Quarto page containers */
+.quarto-title-block,
+#quarto-content,
+.quarto-container {
+    background-color: transparent !important;
+    color: #f0f0f0 !important;
+}
+
+/* Page title banners (Blog) */
+.quarto-title-banner {
+    background-color: #1a1a1a !important;
+    color: #f0f0f0 !important;
 }
 
 /* ===== HERO ===== */
@@ -58,6 +90,40 @@ a {
     color: #a0a0a0 !important;
 }
 
+/* ===== LISTING (Blog) ===== */
+.quarto-listing {
+    color: #f0f0f0 !important;
+}
+
+.quarto-listing .card,
+.listing-item,
+.quarto-grid-item {
+    background: #1e1e1e !important;
+    border: 1px solid #333 !important;
+    color: #f0f0f0 !important;
+}
+
+.quarto-listing .card:hover,
+.listing-item:hover {
+    border-color: #FB6F92 !important;
+}
+
+.quarto-listing h3 a,
+.listing-title a {
+    color: #f0f0f0 !important;
+}
+
+.listing-description,
+.card-text {
+    color: #a0a0a0 !important;
+}
+
+.quarto-listing .listing-category {
+    background: #2a2a2a !important;
+    color: #FB6F92 !important;
+    border: 1px solid #333 !important;
+}
+
 /* ===== SECTIONS ===== */
 .section-title {
     color: #fff !important;
@@ -77,9 +143,18 @@ a {
     color: #a0a0a0 !important;
 }
 
-/* ===== NEWSLETTER ===== */
+/* ===== NEWSLETTER / CONTACT ===== */
 .newsletter {
     background: #121212 !important;
+}
+
+.newsletter h2,
+.newsletter h3 {
+    color: #f0f0f0 !important;
+}
+
+.newsletter p {
+    color: #a0a0a0 !important;
 }
 
 .newsletter-form input,
@@ -132,11 +207,47 @@ a {
 }
 
 /* ===== FOOTER ===== */
-.nav-footer {
+.nav-footer,
+footer {
+    background-color: #121212 !important;
     border-top: 1px solid #333 !important;
+    color: #a0a0a0 !important;
+}
+
+.nav-footer a {
+    color: #a0a0a0 !important;
 }
 
 /* ===== TOGGLE ICON ===== */
 .quarto-color-scheme-toggle .bi {
     color: #f0f0f0;
+}
+
+/* ===== GENERIC QUARTO ELEMENTS ===== */
+.sidebar,
+.sidebar-navigation {
+    background-color: #1a1a1a !important;
+    border-color: #333 !important;
+}
+
+code {
+    background-color: #2a2a2a !important;
+    color: #FB6F92 !important;
+}
+
+table {
+    color: #f0f0f0 !important;
+}
+
+table th {
+    background-color: #1e1e1e !important;
+    color: #f0f0f0 !important;
+}
+
+table td {
+    border-color: #333 !important;
+}
+
+hr {
+    border-color: #333 !important;
 }
