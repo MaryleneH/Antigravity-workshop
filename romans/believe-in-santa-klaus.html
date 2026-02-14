@@ -72,10 +72,19 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <script>
-/* Force default to dark mode if no preference is set */
-if (window.localStorage.getItem('quarto-color-scheme') === null) {
-    window.localStorage.setItem('quarto-color-scheme', 'dark');
-}
+/* Force default to dark mode - Migration V1 */
+(function() {
+    const storageKey = 'quarto-color-scheme';
+    const migrationKey = 'quarto-dark-mode-v1';
+    
+    // Check if we have migrated this user to dark mode yet
+    if (!window.localStorage.getItem(migrationKey)) {
+        // Force Dark Mode
+        window.localStorage.setItem(storageKey, 'dark');
+        // Mark as migrated so we don't do it again
+        window.localStorage.setItem(migrationKey, 'true');
+    }
+})();
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
