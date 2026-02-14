@@ -37,30 +37,23 @@ toc: false
                     </div>
                 </div>
 
-                <div class="book-actions">
+                <div class="book-synopsis">
+<p>Brock vit sa vie à 100%. Il travaille depuis ses 21 ans dans une boite de nuit chippendales, le Passion Men, dans l’Oklahoma. Lorsqu'il décide de racheter la discothèque, il est prêt à tout. Mais l'arrivée de Tanya chamboule tous ses repères.</p>
+<p>Le beau strip-teaseur n’est pas au bout de ses peines : sa sœur de cœur, Georgia, change radicalement, et il sent que quelque chose en lui ne tourne pas rond depuis toujours.</p>
+<p>Brock est habitué à se dessaper en public mais il verra qu'exposer son corps est souvent bien plus facile que d'exposer son cœur...</p>
+<p><strong>Mo Gadarr revient dans cette romance sexy et poignante.</strong></p>
+</div>
+
+<div class="book-actions">
                     <a href="https://amzn.eu/d/5D9NL7B" class="btn-primary" target="_blank">Acheter sur Amazon</a>
                     <a href="https://mogadarr.github.io/lire-mogadarr/romans/extraits/extrait-undress-me.html" class="btn-text">Lire un extrait</a>
-                </div>
+                
+    <a href="../romans.html" class="btn-text"><i class="bi bi-arrow-left"></i> Retour</a>
+</div>
             </div>
         </div>
     </div>
 </header>
 
-<section id="resume" class="book-details section-padding">
-    <div class="container-narrow">
-        <h2 class="section-title">Le Résumé</h2>
-        <div class="book-resume-content fade-in-scroll">
-            <p>Brock vit sa vie à 100%. Il travaille depuis ses 21 ans dans une boite de nuit chippendales, le Passion Men, dans l’Oklahoma. Lorsqu'il décide de racheter la discothèque, il est prêt à tout. Mais l'arrivée de Tanya chamboule tous ses repères.</p>
-            <p>Le beau strip-teaseur n’est pas au bout de ses peines : sa sœur de cœur, Georgia, change radicalement, et il sent que quelque chose en lui ne tourne pas rond depuis toujours.</p>
-            <p>Brock est habitué à se dessaper en public mais il verra qu'exposer son corps est souvent bien plus facile que d'exposer son cœur...</p>
-            <p><strong>Mo Gadarr revient dans cette romance sexy et poignante.</strong></p>
-        </div>
-        
-        <div class="back-home text-center mt-5">
-            <a href="../romans.html" class="btn-text">
-                <i class="bi bi-arrow-left"></i> Retour à la Collection
-            </a>
-        </div>
-    </div>
-</section>
+
 ```

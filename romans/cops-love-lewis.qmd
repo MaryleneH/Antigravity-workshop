@@ -37,31 +37,24 @@ toc: false
                     </div>
                 </div>
 
-                <div class="book-actions">
+                <div class="book-synopsis">
+<p><strong>COPS And Love — Lewis Hunter, l’ange déchu</strong></p>
+<p>Lewis Hunter reprend du service après plus d'une année de mise à l'écart. Il va pouvoir redevenir le policier qu'il a toujours été. La clinique dans laquelle il est hospitalisé lui impose néanmoins d'être suivi par Prudence, une psychologue fraîchement diplômée.</p>
+<p>Seulement, Lewis n'accepte pas facilement d'être observé — et encore moins que ses frères le mettent délibérément à l'écart de l'action qui lui a tant manqué. De son côté, Prue est troublée par cet homme qu'elle commence à considérer comme un ange fascinant.</p>
+<p>Entre journées mouvementées et prises de bec, ils vont apprendre que la vie d'un policier est loin d'être de tout repos. Leur rapprochement, bien qu'interdit et scandaleux, sera inévitable, fatal...</p>
+<p><strong>L'angelot des frères Hunter pourra-t-il enfin s'élever sans se brûler les ailes ?</strong></p>
+</div>
+
+<div class="book-actions">
                     <a href="https://amzn.eu/d/81P70EM" class="btn-primary" target="_blank">Acheter sur Amazon</a>
-                    <a href="#resume" class="btn-text">Lire le résumé</a>
-                </div>
+                    
+                
+    <a href="../romans.html" class="btn-text"><i class="bi bi-arrow-left"></i> Retour</a>
+</div>
             </div>
         </div>
     </div>
 </header>
 
-<section id="resume" class="book-details section-padding">
-    <div class="container-narrow">
-        <h2 class="section-title">Le Résumé</h2>
-        <div class="book-resume-content fade-in-scroll">
-            <p><strong>COPS And Love — Lewis Hunter, l’ange déchu</strong></p>
-            <p>Lewis Hunter reprend du service après plus d'une année de mise à l'écart. Il va pouvoir redevenir le policier qu'il a toujours été. La clinique dans laquelle il est hospitalisé lui impose néanmoins d'être suivi par Prudence, une psychologue fraîchement diplômée.</p>
-            <p>Seulement, Lewis n'accepte pas facilement d'être observé — et encore moins que ses frères le mettent délibérément à l'écart de l'action qui lui a tant manqué. De son côté, Prue est troublée par cet homme qu'elle commence à considérer comme un ange fascinant.</p>
-            <p>Entre journées mouvementées et prises de bec, ils vont apprendre que la vie d'un policier est loin d'être de tout repos. Leur rapprochement, bien qu'interdit et scandaleux, sera inévitable, fatal...</p>
-            <p><strong>L'angelot des frères Hunter pourra-t-il enfin s'élever sans se brûler les ailes ?</strong></p>
-        </div>
-        
-        <div class="back-home text-center mt-5">
-            <a href="../romans.html" class="btn-text">
-                <i class="bi bi-arrow-left"></i> Retour à la Collection
-            </a>
-        </div>
-    </div>
-</section>
+
 ```

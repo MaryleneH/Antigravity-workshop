@@ -36,32 +36,25 @@ toc: false
                     </div>
                 </div>
 
-                <div class="book-actions">
+                <div class="book-synopsis">
+<p><strong>La Saint-Valentin des fleurs et des bijoux</strong></p>
+<p>Clara est une bijoutière terre-à-terre. Si elle attend la Saint-Valentin, c'est avant tout pour renflouer les caisses de sa bijouterie au chiffre d'affaires aléatoire. Elle espère, sans y croire, que son plan cul deviendra son plan cœur, que les dettes qui s'accumulent se changeront en déclarations enflammées et en fleurs.</p>
+<p><em>Des fleurs...</em></p>
+<p>C'est justement la spécialité d'Ange, le fleuriste d'en face. Si elle le connait ? Oui, elle le croise tous les jours sans qu'il ne daigne la saluer ou même la regarder. Si elle le trouve sympa ? Oh que non ! Si ce type aussi aimable qu'une porte de prison est à son goût ? Disons que oui.</p>
+<p>Contrairement à notre héroïne, nous savons que la Saint-Valentin est une fête spéciale et Clara va elle aussi le découvrir. Pour notre plus grand bonheur !</p>
+<p><em>Une nouvelle à lire et à relire pour tous ceux qui ne croient plus en la symbolique de la Saint-Valentin... et pour ceux qui y croient dur comme fer !</em></p>
+</div>
+
+<div class="book-actions">
                     <a href="https://amzn.eu/d/08aourd" class="btn-primary" target="_blank">Acheter sur Amazon</a>
-                    <a href="#resume" class="btn-text">Lire le résumé</a>
-                </div>
+                    
+                
+    <a href="../romans.html" class="btn-text"><i class="bi bi-arrow-left"></i> Retour</a>
+</div>
             </div>
         </div>
     </div>
 </header>
 
-<section id="resume" class="book-details section-padding">
-    <div class="container-narrow">
-        <h2 class="section-title">Le Résumé</h2>
-        <div class="book-resume-content fade-in-scroll">
-            <p><strong>La Saint-Valentin des fleurs et des bijoux</strong></p>
-            <p>Clara est une bijoutière terre-à-terre. Si elle attend la Saint-Valentin, c'est avant tout pour renflouer les caisses de sa bijouterie au chiffre d'affaires aléatoire. Elle espère, sans y croire, que son plan cul deviendra son plan cœur, que les dettes qui s'accumulent se changeront en déclarations enflammées et en fleurs.</p>
-            <p><em>Des fleurs...</em></p>
-            <p>C'est justement la spécialité d'Ange, le fleuriste d'en face. Si elle le connait ? Oui, elle le croise tous les jours sans qu'il ne daigne la saluer ou même la regarder. Si elle le trouve sympa ? Oh que non ! Si ce type aussi aimable qu'une porte de prison est à son goût ? Disons que oui.</p>
-            <p>Contrairement à notre héroïne, nous savons que la Saint-Valentin est une fête spéciale et Clara va elle aussi le découvrir. Pour notre plus grand bonheur !</p>
-            <p><em>Une nouvelle à lire et à relire pour tous ceux qui ne croient plus en la symbolique de la Saint-Valentin... et pour ceux qui y croient dur comme fer !</em></p>
-        </div>
-        
-        <div class="back-home text-center mt-5">
-            <a href="../romans.html" class="btn-text">
-                <i class="bi bi-arrow-left"></i> Retour à la Collection
-            </a>
-        </div>
-    </div>
-</section>
+
 ```

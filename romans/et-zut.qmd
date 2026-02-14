@@ -37,30 +37,23 @@ toc: false
                     </div>
                 </div>
 
-                <div class="book-actions">
+                <div class="book-synopsis">
+<p><strong>Qui craquera le premier ?</strong></p>
+<p>Ella est du genre terre-à-terre. Elle croit aussi peu en l’amour qu’au Père Noël. À bientôt 30 ans, elle préfère regarder ses proches s’épanouir dans leur vie sentimentale. Pour elle, la messe est dite. Elle finira sans doute vieille fille, point barre.</p>
+<p>Et zut ! Voilà sa petite sœur qui la traîne dans un speed dating. Le hasard replace sur son chemin un homme qu’elle connaît très bien et qu’elle a appris à détester : Timéo Lachérie.</p>
+<p>Tim est persuadé qu’Ella est comme toutes les femmes : forcément fan de cœurs, de fleurs et de chocolats. Ella n’est pas d’accord. Ce désaccord les mène à un défi : celui de faire craquer l’autre en premier avant un mois.</p>
+<p>Seulement, s’il n’y a pas de vrai gain à entreprendre ce jeu dangereux de la séduction, nos deux héros pourraient bien y laisser leur cœur...</p>
+</div>
+
+<div class="book-actions">
                     <a href="https://amzn.eu/d/dpnYF8v" class="btn-primary" target="_blank">Acheter sur Amazon</a>
-                </div>
+                
+    <a href="../romans.html" class="btn-text"><i class="bi bi-arrow-left"></i> Retour</a>
+</div>
             </div>
         </div>
     </div>
 </header>
 
-<section id="resume" class="book-details section-padding">
-    <div class="container-narrow">
-        <h2 class="section-title">Le Résumé</h2>
-        <div class="book-resume-content fade-in-scroll">
-            <p><strong>Qui craquera le premier ?</strong></p>
-            <p>Ella est du genre terre-à-terre. Elle croit aussi peu en l’amour qu’au Père Noël. À bientôt 30 ans, elle préfère regarder ses proches s’épanouir dans leur vie sentimentale. Pour elle, la messe est dite. Elle finira sans doute vieille fille, point barre.</p>
-            <p>Et zut ! Voilà sa petite sœur qui la traîne dans un speed dating. Le hasard replace sur son chemin un homme qu’elle connaît très bien et qu’elle a appris à détester : Timéo Lachérie.</p>
-            <p>Tim est persuadé qu’Ella est comme toutes les femmes : forcément fan de cœurs, de fleurs et de chocolats. Ella n’est pas d’accord. Ce désaccord les mène à un défi : celui de faire craquer l’autre en premier avant un mois.</p>
-            <p>Seulement, s’il n’y a pas de vrai gain à entreprendre ce jeu dangereux de la séduction, nos deux héros pourraient bien y laisser leur cœur...</p>
-        </div>
-        
-        <div class="back-home text-center mt-5">
-            <a href="../romans.html" class="btn-text">
-                <i class="bi bi-arrow-left"></i> Retour à la Collection
-            </a>
-        </div>
-    </div>
-</section>
+
 ```

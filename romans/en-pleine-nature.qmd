@@ -38,31 +38,24 @@ toc: false
                     </div>
                 </div>
 
-                <div class="book-actions">
+                <div class="book-synopsis">
+<p>Léonie en a marre. Elle en a assez d’être engluée dans le complexe de la meilleure amie qui la condamne à regarder les autres s’aimer sans jamais pouvoir vibrer au contact de l’amour.</p>
+<p>Qu’à cela ne tienne : elle veut forcer le destin et se laisser transformer par une belle histoire d’amour digne des contes de fées, du genre de celles que vivent ses sœurs de cœur, Dannah et Flora.</p>
+<p>Cela tombe bien : cet été, un ami d’enfance lui propose de s’envoler pour la Guadeloupe pour l’y retrouver. La jeune femme n’hésite pas un seul instant. Elle abandonne ses habituelles vacances en métropole pour retourner sur son île d’origine.</p>
+<p>Seulement, une fois là-bas, le hasard va fléchir cette destinée. Une chaussée glissante, une vitesse excessive… et voilà notre héroïne tombée <strong>en pleine nature</strong>, dans les fonds verdoyants de la Basse-Terre.</p>
+<p>Elle y rencontre <strong>Milo</strong>, un ermite planqué là depuis cinq ans, qui vient à son secours — mais il est aux antipodes de ce qu’elle était venue chercher ici...</p>
+</div>
+
+<div class="book-actions">
                     <a href="https://amzn.eu/d/23PEpnc" class="btn-primary" target="_blank">Acheter sur Amazon</a>
                     <a href="https://mogadarr.github.io/lire-mogadarr/romans/extraits/extrait-en-pleine-nature.html" class="btn-text">Lire un extrait</a>
-                </div>
+                
+    <a href="../romans.html" class="btn-text"><i class="bi bi-arrow-left"></i> Retour</a>
+</div>
             </div>
         </div>
     </div>
 </header>
 
-<section id="resume" class="book-details section-padding">
-    <div class="container-narrow">
-        <h2 class="section-title">Le Résumé</h2>
-        <div class="book-resume-content fade-in-scroll">
-            <p>Léonie en a marre. Elle en a assez d’être engluée dans le complexe de la meilleure amie qui la condamne à regarder les autres s’aimer sans jamais pouvoir vibrer au contact de l’amour.</p>
-            <p>Qu’à cela ne tienne : elle veut forcer le destin et se laisser transformer par une belle histoire d’amour digne des contes de fées, du genre de celles que vivent ses sœurs de cœur, Dannah et Flora.</p>
-            <p>Cela tombe bien : cet été, un ami d’enfance lui propose de s’envoler pour la Guadeloupe pour l’y retrouver. La jeune femme n’hésite pas un seul instant. Elle abandonne ses habituelles vacances en métropole pour retourner sur son île d’origine.</p>
-            <p>Seulement, une fois là-bas, le hasard va fléchir cette destinée. Une chaussée glissante, une vitesse excessive… et voilà notre héroïne tombée <strong>en pleine nature</strong>, dans les fonds verdoyants de la Basse-Terre.</p>
-            <p>Elle y rencontre <strong>Milo</strong>, un ermite planqué là depuis cinq ans, qui vient à son secours — mais il est aux antipodes de ce qu’elle était venue chercher ici...</p>
-        </div>
-        
-        <div class="back-home text-center mt-5">
-            <a href="../romans.html" class="btn-text">
-                <i class="bi bi-arrow-left"></i> Retour à la Collection
-            </a>
-        </div>
-    </div>
-</section>
+
 ```

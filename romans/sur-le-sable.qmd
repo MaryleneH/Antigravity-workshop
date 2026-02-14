@@ -38,30 +38,23 @@ toc: false
                     </div>
                 </div>
 
-                <div class="book-actions">
+                <div class="book-synopsis">
+<p><strong>Sur les plages dorées de l’Atlantique, les destins de Nina et Mathieu se croisent à nouveau après des années de silence.</strong></p>
+<p>Elle, rêveuse et entière, a fui la ville pour retrouver un sens à sa vie. Lui, photographe reconnu, cherche à effacer les cicatrices d’un passé douloureux.</p>
+<p>Quand leurs chemins se recroisent sur le sable chaud d’un petit village côtier, les souvenirs ressurgissent avec la force des marées. Mais certaines blessures ne guérissent qu’à la lumière du pardon. Entre liberté, mer et renaissance, leur histoire se réécrit au rythme des vagues.</p>
+<p>Et si le bonheur se trouvait là où tout avait commencé — <strong>sur le sable</strong> ?</p>
+</div>
+
+<div class="book-actions">
                     <a href="https://amzn.eu/d/aY1uzTo" class="btn-primary" target="_blank">Acheter sur Amazon</a>
                     <a href="https://mogadarr.github.io/lire-mogadarr/romans/extraits/extrait-sable.html" class="btn-text">Lire un extrait</a>
-                </div>
+                
+    <a href="../romans.html" class="btn-text"><i class="bi bi-arrow-left"></i> Retour</a>
+</div>
             </div>
         </div>
     </div>
 </header>
 
-<section id="resume" class="book-details section-padding">
-    <div class="container-narrow">
-        <h2 class="section-title">Le Résumé</h2>
-        <div class="book-resume-content fade-in-scroll">
-            <p><strong>Sur les plages dorées de l’Atlantique, les destins de Nina et Mathieu se croisent à nouveau après des années de silence.</strong></p>
-            <p>Elle, rêveuse et entière, a fui la ville pour retrouver un sens à sa vie. Lui, photographe reconnu, cherche à effacer les cicatrices d’un passé douloureux.</p>
-            <p>Quand leurs chemins se recroisent sur le sable chaud d’un petit village côtier, les souvenirs ressurgissent avec la force des marées. Mais certaines blessures ne guérissent qu’à la lumière du pardon. Entre liberté, mer et renaissance, leur histoire se réécrit au rythme des vagues.</p>
-            <p>Et si le bonheur se trouvait là où tout avait commencé — <strong>sur le sable</strong> ?</p>
-        </div>
-        
-        <div class="back-home text-center mt-5">
-            <a href="../romans.html" class="btn-text">
-                <i class="bi bi-arrow-left"></i> Retour à la Collection
-            </a>
-        </div>
-    </div>
-</section>
+
 ```

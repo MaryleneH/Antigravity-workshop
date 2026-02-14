@@ -37,30 +37,23 @@ toc: false
                     </div>
                 </div>
 
-                <div class="book-actions">
+                <div class="book-synopsis">
+<p><strong>Be Stronger — RÉÉDITION DU TITRE "T'AS QU'À MAIGRIR"</strong></p>
+<p>Slim est une épicurienne, mais elle n’aurait jamais pensé regretter aussi amèrement son dernier craquage. Elle qui était convaincue de détester Ulrich, la voilà qui vient de succomber à son charme ravageur !</p>
+<p>Il est pourtant son coach sportif, son nutritionniste et surtout, il reste ce connard de première. Depuis cette incartade, ce dernier est encore plus renfrogné, encore plus énigmatique que d’ordinaire. En même temps, c’est la première fois qu’il est attiré par une femme telle que Slim. Une ronde.</p>
+<p>Mais au fond, Ulrich est-il vraiment le grossophobe maniaque que Slim s’imagine ? Il y a bien des choses qui se cachent sous les apparences...</p>
+</div>
+
+<div class="book-actions">
                     <a href="https://amzn.eu/d/eWEGo3z" class="btn-primary" target="_blank">Acheter sur Amazon</a>
-                    <a href="#resume" class="btn-text">Lire le résumé</a>
-                </div>
+                    
+                
+    <a href="../romans.html" class="btn-text"><i class="bi bi-arrow-left"></i> Retour</a>
+</div>
             </div>
         </div>
     </div>
 </header>
 
-<section id="resume" class="book-details section-padding">
-    <div class="container-narrow">
-        <h2 class="section-title">Le Résumé</h2>
-        <div class="book-resume-content fade-in-scroll">
-            <p><strong>Be Stronger — RÉÉDITION DU TITRE "T'AS QU'À MAIGRIR"</strong></p>
-            <p>Slim est une épicurienne, mais elle n’aurait jamais pensé regretter aussi amèrement son dernier craquage. Elle qui était convaincue de détester Ulrich, la voilà qui vient de succomber à son charme ravageur !</p>
-            <p>Il est pourtant son coach sportif, son nutritionniste et surtout, il reste ce connard de première. Depuis cette incartade, ce dernier est encore plus renfrogné, encore plus énigmatique que d’ordinaire. En même temps, c’est la première fois qu’il est attiré par une femme telle que Slim. Une ronde.</p>
-            <p>Mais au fond, Ulrich est-il vraiment le grossophobe maniaque que Slim s’imagine ? Il y a bien des choses qui se cachent sous les apparences...</p>
-        </div>
-        
-        <div class="back-home text-center mt-5">
-            <a href="../romans.html" class="btn-text">
-                <i class="bi bi-arrow-left"></i> Retour à la Collection
-            </a>
-        </div>
-    </div>
-</section>
+
 ```

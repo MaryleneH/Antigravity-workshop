@@ -42,31 +42,24 @@ toc: false
                     </div>
                 </div>
 
-                <div class="book-actions">
+                <div class="book-synopsis">
+<p><strong>Be Sweeter — RÉÉDITION DU TITRE "T'AS QU'À MAIGRIR"</strong></p>
+<p>Slim a plutôt la belle vie. Elle a un boulot qu'elle aime, une petite fille adorable, un mec beau comme un dieu ainsi qu’une amie à la personnalité de dingue qui est toujours là pour elle. Seulement, Slim a aussi un appétit redoutable, le tour de taille qui va avec, une maladresse systématique et un terrible manque de confiance en elle.</p>
+<p>Alors quand son compagnon la plaque du jour au lendemain, elle est déterminée à le reconquérir, quitte à remettre en question ce qu’elle est : une femme ronde. Quitte aussi à accepter l'aide d’un coach, et surtout à le supporter, puisque le dénommé Ulrich est un connard de première.</p>
+<p>Le supporter, vraiment ? Et cette attirance totalement insensée qu'elle éprouve pour lui alors qu'il est juste odieux envers elle, on en parle ?</p>
+<p>Eh oui, malgré la flagrante grossophobie de son coach, Slim est incapable de résister à son regard lagon, à ses traits d’humour et encore moins à son aura décuplé par le mystère qui l’entoure.</p>
+</div>
+
+<div class="book-actions">
                     <a href="https://amzn.eu/d/74G0HIp" class="btn-primary" target="_blank">Acheter sur Amazon</a>
                     <a href="https://mogadarr.github.io/lire-mogadarr/romans/extraits/extrait-be-sweeter.html" class="btn-text">Lire un extrait</a>
-                </div>
+                
+    <a href="../romans.html" class="btn-text"><i class="bi bi-arrow-left"></i> Retour</a>
+</div>
             </div>
         </div>
     </div>
 </header>
 
-<section id="resume" class="book-details section-padding">
-    <div class="container-narrow">
-        <h2 class="section-title">Le Résumé</h2>
-        <div class="book-resume-content fade-in-scroll">
-            <p><strong>Be Sweeter — RÉÉDITION DU TITRE "T'AS QU'À MAIGRIR"</strong></p>
-            <p>Slim a plutôt la belle vie. Elle a un boulot qu'elle aime, une petite fille adorable, un mec beau comme un dieu ainsi qu’une amie à la personnalité de dingue qui est toujours là pour elle. Seulement, Slim a aussi un appétit redoutable, le tour de taille qui va avec, une maladresse systématique et un terrible manque de confiance en elle.</p>
-            <p>Alors quand son compagnon la plaque du jour au lendemain, elle est déterminée à le reconquérir, quitte à remettre en question ce qu’elle est : une femme ronde. Quitte aussi à accepter l'aide d’un coach, et surtout à le supporter, puisque le dénommé Ulrich est un connard de première.</p>
-            <p>Le supporter, vraiment ? Et cette attirance totalement insensée qu'elle éprouve pour lui alors qu'il est juste odieux envers elle, on en parle ?</p>
-            <p>Eh oui, malgré la flagrante grossophobie de son coach, Slim est incapable de résister à son regard lagon, à ses traits d’humour et encore moins à son aura décuplé par le mystère qui l’entoure.</p>
-        </div>
-        
-        <div class="back-home text-center mt-5">
-            <a href="../romans.html" class="btn-text">
-                <i class="bi bi-arrow-left"></i> Retour à la Collection
-            </a>
-        </div>
-    </div>
-</section>
+
 ```

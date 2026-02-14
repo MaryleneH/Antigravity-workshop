@@ -37,30 +37,23 @@ toc: false
                     </div>
                 </div>
 
-                <div class="book-actions">
+                <div class="book-synopsis">
+<p><strong>Noël. De l'argent à gagner. Une attirance irrépressible.</strong></p>
+<p>Sab est community manager chez Linky Toys. Dans cette boîte, Noël est sacré. Pour dynamiser l'ambiance, le patron lance un défi : faire briller la société grâce aux idées lumineuses des collègues — devenus concurrents. À la clé ? Une prime de 10 000 euros.</p>
+<p>Sabine se lance à corps perdu. Dean, son collègue aussi mystérieux que lugubre, est lui aussi de la partie. Les lutins de Noël ne se feront pas de cadeaux cette année, surtout si entre Sab et le bel américain austère une attirance irrépressible vient envenimer la situation...</p>
+<p>Êtes-vous prêts pour un <strong>Noël aussi tendu que sensuel</strong> ?</p>
+</div>
+
+<div class="book-actions">
                     <a href="https://amzn.eu/d/g3qtIxi" class="btn-primary" target="_blank">Acheter sur Amazon</a>
                     <a href="https://mogadarr.github.io/lire-mogadarr/romans/extraits/extrait-noel-coups-bas.html" class="btn-text">Lire un extrait</a>
-                </div>
+                
+    <a href="../romans.html" class="btn-text"><i class="bi bi-arrow-left"></i> Retour</a>
+</div>
             </div>
         </div>
     </div>
 </header>
 
-<section id="resume" class="book-details section-padding">
-    <div class="container-narrow">
-        <h2 class="section-title">Le Résumé</h2>
-        <div class="book-resume-content fade-in-scroll">
-            <p><strong>Noël. De l'argent à gagner. Une attirance irrépressible.</strong></p>
-            <p>Sab est community manager chez Linky Toys. Dans cette boîte, Noël est sacré. Pour dynamiser l'ambiance, le patron lance un défi : faire briller la société grâce aux idées lumineuses des collègues — devenus concurrents. À la clé ? Une prime de 10 000 euros.</p>
-            <p>Sabine se lance à corps perdu. Dean, son collègue aussi mystérieux que lugubre, est lui aussi de la partie. Les lutins de Noël ne se feront pas de cadeaux cette année, surtout si entre Sab et le bel américain austère une attirance irrépressible vient envenimer la situation...</p>
-            <p>Êtes-vous prêts pour un <strong>Noël aussi tendu que sensuel</strong> ?</p>
-        </div>
-        
-        <div class="back-home text-center mt-5">
-            <a href="../romans.html" class="btn-text">
-                <i class="bi bi-arrow-left"></i> Retour à la Collection
-            </a>
-        </div>
-    </div>
-</section>
+
 ```

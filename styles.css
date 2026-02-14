@@ -720,12 +720,13 @@ a:hover {
     margin: 0 auto;
 }
 
-.book-resume-content {
+.book-synopsis {
     font-size: 1.15rem;
     line-height: 1.8;
+    margin-bottom: 2rem;
 }
 
-.book-resume-content p {
+.book-synopsis p {
     margin-bottom: 1.5rem;
 }
 

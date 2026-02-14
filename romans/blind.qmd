@@ -18,31 +18,24 @@
                     </div>
                 </div>
 
-                <div class="book-actions">
+                <div class="book-synopsis">
+<p><strong>Blind raconte l’histoire de deux êtres blessés, que la vie n’a pas épargnés, et qui vont devoir apprendre à se reconstruire ensemble.</strong></p>
+<p>Ce roman a été coécrit par Mo Gadarr et Haley Davis. L’ouvrage a rencontré un bel accueil auprès de ses lectrices et lecteurs, et reste une étape importante du parcours d’écriture de Mo Gadarr.</p>
+<p>Plongez dans une romance émouvante, à la fois sombre et lumineuse, qui aborde des thèmes puissants : la confiance, le handicap, la reconstruction et la force de l’amour.</p>
+</div>
+
+<div class="book-actions">
                     <a href="https://www.babelio.com/livres/Davis-Blind/1102213" class="btn-primary" target="_blank">Avis sur Babelio</a>
-                    <a href="#resume" class="btn-text">En savoir plus</a>
-                </div>
+                    
+                
+    <a href="../romans.html" class="btn-text"><i class="bi bi-arrow-left"></i> Retour</a>
+</div>
             </div>
         </div>
     </div>
 </header>
 
-<section id="resume" class="book-details section-padding">
-    <div class="container-narrow">
-        <h2 class="section-title">À propos du livre</h2>
-        <div class="book-resume-content fade-in-scroll">
-            <p><strong>Blind raconte l’histoire de deux êtres blessés, que la vie n’a pas épargnés, et qui vont devoir apprendre à se reconstruire ensemble.</strong></p>
-            <p>Ce roman a été coécrit par Mo Gadarr et Haley Davis. L’ouvrage a rencontré un bel accueil auprès de ses lectrices et lecteurs, et reste une étape importante du parcours d’écriture de Mo Gadarr.</p>
-            <p>Plongez dans une romance émouvante, à la fois sombre et lumineuse, qui aborde des thèmes puissants : la confiance, le handicap, la reconstruction et la force de l’amour.</p>
-        </div>
-        
-        <div class="back-home text-center mt-5">
-            <a href="../romans.html" class="btn-text">
-                <i class="bi bi-arrow-left"></i> Retour à la Collection
-            </a>
-        </div>
-    </div>
-</section>
+
 ```
 
 

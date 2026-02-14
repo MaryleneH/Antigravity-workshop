@@ -37,29 +37,22 @@ toc: false
                     </div>
                 </div>
 
-                <div class="book-actions">
+                <div class="book-synopsis">
+<p><strong>Cette histoire est dédiée à toutes les mamans solos qui rêvent d'être aidées...</strong></p>
+<p>Mia pensait vivre un conte de fées avec son prince charmant. Mais la réalité est brutale et elle se retrouve maman solo. Dominique, dit "Doc", entre alors dans sa vie de la manière la plus inattendue lors d'un accouchement rocambolesque.</p>
+<p>Contrainte de travailler, Mia doit faire garder son enfant et composer avec cet énergumène à des kilomètres du type d'homme qu'elle souhaite laisser approcher son bébé... et encore moins son cœur.</p>
+<p><strong>Mia pourra-t-elle résister au charme de son (sweet) babysitter ?</strong></p>
+</div>
+
+<div class="book-actions">
                     <a href="https://amzn.eu/d/67285eT" class="btn-primary" target="_blank">Acheter sur Amazon</a>
-                </div>
+                
+    <a href="../romans.html" class="btn-text"><i class="bi bi-arrow-left"></i> Retour</a>
+</div>
             </div>
         </div>
     </div>
 </header>
 
-<section id="resume" class="book-details section-padding">
-    <div class="container-narrow">
-        <h2 class="section-title">Le Résumé</h2>
-        <div class="book-resume-content fade-in-scroll">
-            <p><strong>Cette histoire est dédiée à toutes les mamans solos qui rêvent d'être aidées...</strong></p>
-            <p>Mia pensait vivre un conte de fées avec son prince charmant. Mais la réalité est brutale et elle se retrouve maman solo. Dominique, dit "Doc", entre alors dans sa vie de la manière la plus inattendue lors d'un accouchement rocambolesque.</p>
-            <p>Contrainte de travailler, Mia doit faire garder son enfant et composer avec cet énergumène à des kilomètres du type d'homme qu'elle souhaite laisser approcher son bébé... et encore moins son cœur.</p>
-            <p><strong>Mia pourra-t-elle résister au charme de son (sweet) babysitter ?</strong></p>
-        </div>
-        
-        <div class="back-home text-center mt-5">
-            <a href="../romans.html" class="btn-text">
-                <i class="bi bi-arrow-left"></i> Retour à la Collection
-            </a>
-        </div>
-    </div>
-</section>
+
 ```
