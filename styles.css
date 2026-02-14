@@ -936,6 +936,8 @@ body.quarto-dark .book-hero-card {
         justify-content: center;
         margin: 0;
         padding-top: 4rem;
+        padding-bottom: 2rem;
+        /* Added buffer space */
         /* Status bar/Nav space */
         position: relative;
         z-index: 1;
@@ -973,7 +975,8 @@ body.quarto-dark .book-hero-card {
         border-bottom: none;
         border-radius: 35px 35px 0 0;
         /* Sheet look */
-        padding: 3rem 2rem 6rem;
+        padding: 4rem 2rem 6rem;
+        /* Increased top padding from 3rem */
         /* Top padding for breathing room, bottom for scroll */
         margin: 0;
         z-index: 10;
