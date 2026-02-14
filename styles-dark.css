@@ -1,14 +1,14 @@
 /* =========================================
-   Dark Mode - Mo Gadarr
-   Palette: Deep Black, Bright Pink, Sage Green
+   Dark Mode - Mo Gadarr ✦ PREMIUM ✦
+   Palette: Deep Charcoal, Pink Neon, Sage
    ========================================= */
 
 /*-- scss:rules --*/
 
-/* ===== GLOBAL DARK OVERRIDES ===== */
+/* ===== GLOBAL DARK ===== */
 body {
-    background-color: #121212 !important;
-    color: #f0f0f0 !important;
+    background-color: #0e0e0e !important;
+    color: #eaeaea !important;
 }
 
 h1,
@@ -19,63 +19,62 @@ h5,
 h6,
 .title,
 .quarto-title h1 {
-    color: #f0f0f0 !important;
+    color: #f5f5f5 !important;
 }
 
 p,
 li,
 td,
 th,
-label,
-span,
-div {
-    color: #f0f0f0;
+label {
+    color: #d0d0d0;
 }
 
 a {
-    color: #f0f0f0;
+    color: #eaeaea;
 }
 
 a:hover {
     color: #FB6F92;
 }
 
-/* Quarto page containers */
+/* Quarto containers */
 .quarto-title-block,
 #quarto-content,
 .quarto-container {
     background-color: transparent !important;
-    color: #f0f0f0 !important;
+    color: #eaeaea !important;
 }
 
-/* Page title banners (Blog) */
 .quarto-title-banner {
-    background-color: #1a1a1a !important;
-    color: #f0f0f0 !important;
+    background: linear-gradient(135deg, #141414, #1a1a1a) !important;
+    color: #f5f5f5 !important;
 }
 
 /* ===== HERO ===== */
 .hero {
-    background: radial-gradient(circle at center, #1a1a1a 0%, #121212 70%) !important;
+    background: radial-gradient(ellipse at top, #181818 0%, #0e0e0e 60%) !important;
 }
 
 .hero h1 {
     color: #fff !important;
+    text-shadow: 0 0 60px rgba(251, 111, 146, 0.15);
 }
 
 .hero .subtitle {
-    color: #FB6F92 !important;
+    color: var(--color-pink) !important;
 }
 
 /* ===== CARDS ===== */
 .book-card {
-    background: #1e1e1e !important;
-    border: 1px solid #333 !important;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4) !important;
+    background: linear-gradient(145deg, #1a1a1a, #161616) !important;
+    border: 1px solid rgba(255, 255, 255, 0.06) !important;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5) !important;
 }
 
 .book-card:hover {
-    box-shadow: 0 8px 30px rgba(251, 111, 146, 0.2) !important;
+    border-color: rgba(251, 111, 146, 0.3) !important;
+    box-shadow: 0 8px 40px rgba(251, 111, 146, 0.15) !important;
 }
 
 .book-cover {
@@ -87,41 +86,45 @@ a:hover {
 }
 
 .book-info p {
-    color: #a0a0a0 !important;
+    color: #999 !important;
+}
+
+.book-info .genre {
+    border-color: rgba(251, 111, 146, 0.3) !important;
 }
 
 /* ===== LISTING (Blog) ===== */
 .quarto-listing {
-    color: #f0f0f0 !important;
+    color: #eaeaea !important;
 }
 
 .quarto-listing .card,
 .listing-item,
 .quarto-grid-item {
-    background: #1e1e1e !important;
-    border: 1px solid #333 !important;
-    color: #f0f0f0 !important;
+    background: linear-gradient(145deg, #1a1a1a, #161616) !important;
+    border: 1px solid rgba(255, 255, 255, 0.06) !important;
+    color: #eaeaea !important;
 }
 
 .quarto-listing .card:hover,
 .listing-item:hover {
-    border-color: #FB6F92 !important;
+    border-color: rgba(251, 111, 146, 0.3) !important;
 }
 
 .quarto-listing h3 a,
 .listing-title a {
-    color: #f0f0f0 !important;
+    color: #f5f5f5 !important;
 }
 
 .listing-description,
 .card-text {
-    color: #a0a0a0 !important;
+    color: #999 !important;
 }
 
 .quarto-listing .listing-category {
-    background: #2a2a2a !important;
+    background: rgba(251, 111, 146, 0.1) !important;
     color: #FB6F92 !important;
-    border: 1px solid #333 !important;
+    border: 1px solid rgba(251, 111, 146, 0.2) !important;
 }
 
 /* ===== SECTIONS ===== */
@@ -131,52 +134,53 @@ a:hover {
 
 /* ===== ABOUT ===== */
 .about {
-    background: #181818 !important;
-    border-top: 1px solid #333 !important;
-}
-
-.author-placeholder {
-    border: 1px solid #FB6F92 !important;
+    background: linear-gradient(180deg, #131313, #0e0e0e) !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.04) !important;
 }
 
 .about-text p {
-    color: #a0a0a0 !important;
+    color: #aaa !important;
 }
 
 /* ===== NEWSLETTER / CONTACT ===== */
 .newsletter {
-    background: #121212 !important;
+    background: #0e0e0e !important;
 }
 
 .newsletter h2,
 .newsletter h3 {
-    color: #f0f0f0 !important;
+    color: #f5f5f5 !important;
 }
 
 .newsletter p {
-    color: #a0a0a0 !important;
+    color: #999 !important;
 }
 
 .newsletter-form input,
 .newsletter-form textarea {
-    background: #1e1e1e !important;
-    border: 1px solid #333 !important;
+    background: #1a1a1a !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
     color: #fff !important;
 }
 
-/* ===== NAVBAR DARK ===== */
+.newsletter-form input:focus,
+.newsletter-form textarea:focus {
+    border-color: var(--color-pink) !important;
+}
+
+/* ===== NAVBAR ===== */
 .navbar {
-    background: rgba(10, 10, 10, 0.85) !important;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
+    background: rgba(10, 10, 10, 0.8) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.04) !important;
 }
 
 .navbar-nav .nav-link {
-    color: rgba(255, 255, 255, 0.8) !important;
+    color: rgba(255, 255, 255, 0.7) !important;
 }
 
 .navbar-nav .nav-link:hover {
     color: #fff !important;
-    text-shadow: 0 0 8px rgba(251, 111, 146, 0.6);
+    text-shadow: 0 0 10px rgba(251, 111, 146, 0.5);
 }
 
 .navbar-nav>li:first-child>.nav-link {
@@ -184,7 +188,7 @@ a:hover {
     -webkit-background-clip: text !important;
     background-clip: text !important;
     -webkit-text-fill-color: transparent !important;
-    border: 2px solid rgba(255, 255, 255, 0.1) !important;
+    border: 2px solid rgba(255, 255, 255, 0.08) !important;
 }
 
 .navbar-toggler {
@@ -192,62 +196,72 @@ a:hover {
 }
 
 .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 0.9)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 0.85)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
 }
 
 @media (max-width: 992px) {
     .navbar-collapse {
         background: rgba(10, 10, 10, 0.95) !important;
-        backdrop-filter: blur(20px);
-        padding: 1rem;
+        backdrop-filter: blur(25px);
+        padding: 1.5rem;
         margin-top: 1rem;
-        border-radius: 10px;
-        border: 1px solid rgba(255, 255, 255, 0.1) !important;
+        border-radius: 16px;
+        border: 1px solid rgba(255, 255, 255, 0.06) !important;
     }
 }
 
 /* ===== FOOTER ===== */
 .nav-footer,
 footer {
-    background-color: #121212 !important;
-    border-top: 1px solid #333 !important;
-    color: #a0a0a0 !important;
+    background-color: #0e0e0e !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.04) !important;
+    color: #777 !important;
 }
 
 .nav-footer a {
-    color: #a0a0a0 !important;
+    color: #999 !important;
 }
 
-/* ===== TOGGLE ICON ===== */
-.quarto-color-scheme-toggle .bi {
-    color: #f0f0f0;
-}
-
-/* ===== GENERIC QUARTO ELEMENTS ===== */
-.sidebar,
-.sidebar-navigation {
-    background-color: #1a1a1a !important;
-    border-color: #333 !important;
-}
-
-code {
-    background-color: #2a2a2a !important;
+.nav-footer a:hover {
     color: #FB6F92 !important;
 }
 
+/* ===== TOGGLE ===== */
+.quarto-color-scheme-toggle .bi {
+    color: #eaeaea;
+}
+
+/* ===== GENERIC QUARTO ===== */
+.sidebar,
+.sidebar-navigation {
+    background-color: #141414 !important;
+    border-color: rgba(255, 255, 255, 0.04) !important;
+}
+
+code {
+    background-color: #1e1e1e !important;
+    color: #FB6F92 !important;
+    border-radius: 4px;
+    padding: 0.2em 0.4em;
+}
+
 table {
-    color: #f0f0f0 !important;
+    color: #eaeaea !important;
 }
 
 table th {
-    background-color: #1e1e1e !important;
-    color: #f0f0f0 !important;
+    background-color: #1a1a1a !important;
 }
 
 table td {
-    border-color: #333 !important;
+    border-color: rgba(255, 255, 255, 0.06) !important;
 }
 
 hr {
-    border-color: #333 !important;
+    border-color: rgba(255, 255, 255, 0.06) !important;
+}
+
+/* Blog banner overlay darker in dark mode */
+.blog-banner::after {
+    background: linear-gradient(to top, rgba(14, 14, 14, 0.6), transparent) !important;
 }
