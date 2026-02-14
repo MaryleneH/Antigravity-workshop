@@ -1,216 +1,302 @@
 /* =========================================
-   Theme: Ethereal Romance (Mo Gadarr Style)
-   Palette: Earth, Soft Pink, Sage Green
+   Theme: Dark Pop Elegance (Mo Gadarr Colors)
+   Palette: Dark Grey, Bright Pink, Sage Green
    ========================================= */
 
 :root {
-    --bg-body: #fcfcfc;
-    --text-main: #1a1a1a;
-    /* earth-900 */
-    --text-muted: #575c5e;
+    /* Dark Base */
+    --bg-body: #121212;
+    --bg-card: #1e1e1e;
+    --bg-nav: rgba(18, 18, 18, 0.9);
 
-    --color-accent: #FB6F92;
-    /* Pink text accent */
+    /* Typography */
+    --text-main: #f0f0f0;
+    --text-muted: #a0a0a0;
+    --font-heading: "Playfair Display", Georgia, serif;
+    --font-body: "Lato", system-ui, -apple-system, sans-serif;
+
+    /* App Accents */
+    --color-pink: #FB6F92;
+    /* Bright Pop Pink */
     --color-green: #A3A380;
-    /* Sage green (borders/secondary) */
+    /* Sage Green */
 
-    --bg-card: #ffffff;
-    --bg-highlight: #FFF2F5;
-    /* Soft pink background */
+    /* Dimensions */
+    --radius-card: 8px;
+    --radius-btn: 50px;
 
-    --font-heading: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
-    --font-body: system-ui, -apple-system, sans-serif;
-
-    --radius-card: 16px;
-    --radius-btn: 99px;
-
-    --shadow-soft: 0 6px 22px rgba(0, 0, 0, 0.05);
-    --shadow-hover: 0 10px 30px rgba(0, 0, 0, 0.08);
-}
-
-
-/* ===== MODERN TWISTS ===== */
-
-/* 1. Animated Gradient Background */
-@keyframes gradientBG {
-    0% {
-        background-position: 0% 50%;
-    }
-
-    50% {
-        background-position: 100% 50%;
-    }
-
-    100% {
-        background-position: 0% 50%;
-    }
+    /* Shadows */
+    --shadow-card: 0 4px 20px rgba(0, 0, 0, 0.4);
+    --shadow-hover: 0 8px 30px rgba(251, 111, 146, 0.2);
+    /* Pink glow */
 }
 
 body {
-    background: linear-gradient(-45deg, #fcfcfc, #fffbf2, #fff2f5, #f5f5f7);
-    background-size: 400% 400%;
-    animation: gradientBG 20s ease infinite;
+    background-color: var(--bg-body);
     color: var(--text-main);
     font-family: var(--font-body);
-    line-height: 1.6;
+    line-height: 1.7;
     margin: 0;
 }
 
-/* 2. Hero Text Gradient Animation */
+h1,
+h2,
+h3,
+h4 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    color: var(--text-main);
+    letter-spacing: 0.02em;
+}
+
+a {
+    color: var(--text-main);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--color-pink);
+}
+
+/* ===== HERO SECTION ===== */
+.hero {
+    min-height: 85vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+    position: relative;
+    /* Subtle dark gradient */
+    background: radial-gradient(circle at center, #1a1a1a 0%, #121212 70%);
+}
+
 .hero h1 {
     font-size: 4rem;
-    margin-bottom: 1rem;
-    letter-spacing: -0.03em;
-    background: linear-gradient(90deg, var(--text-main), var(--color-accent), var(--color-green), var(--text-main));
-    background-size: 300% auto;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: shimmer 5s linear infinite;
-}
-
-@keyframes shimmer {
-    to {
-        background-position: 200% center;
-    }
-}
-
-/* 3. Glassmorphism Cards */
-.book-card {
-    background: rgba(255, 255, 255, 0.7);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.6);
-    border-radius: var(--radius-card);
-    overflow: hidden;
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
-    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease;
-}
-
-.book-card:hover {
-    transform: translateY(-8px) scale(1.02);
-    box-shadow: 0 15px 45px rgba(251, 111, 146, 0.15);
-    /* Pink glow on hover */
-    border-color: rgba(251, 111, 146, 0.3);
-}
-
-/* 4. Modern Button Styles */
-.btn-primary {
-    background: linear-gradient(135deg, var(--text-main) 0%, #3a3a3a 100%);
+    margin-bottom: 0.5rem;
     color: #fff;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    position: relative;
-    overflow: hidden;
-    z-index: 1;
+    /* Clean, no shimmer */
 }
 
-.btn-primary::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(135deg, var(--color-accent), #ff9fb6);
-    opacity: 0;
-    z-index: -1;
-    transition: opacity 0.3s ease;
+.hero .subtitle {
+    font-size: 1.3rem;
+    color: var(--color-pink);
+    /* Pop of color */
+    margin-bottom: 2.5rem;
+    font-family: var(--font-body);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.9rem;
+}
+
+/* ===== BUTTONS ===== */
+.btn-primary {
+    display: inline-block;
+    padding: 0.8rem 2.2rem;
+    border-radius: var(--radius-btn);
+    background-color: var(--color-pink);
+    color: #fff;
+    font-weight: 700;
+    border: none;
+    box-shadow: 0 4px 15px rgba(251, 111, 146, 0.3);
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
 }
 
 .btn-primary:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(251, 111, 146, 0.4);
+    background-color: #ff85a3;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 22px rgba(251, 111, 146, 0.5);
     color: #fff;
 }
 
-.btn-primary:hover::before {
-    opacity: 1;
-}
-
 .btn-text {
-    background: none;
-    color: var(--text-main);
-    padding: 0.5rem 1.2rem;
-    border: 1px solid rgba(163, 163, 128, 0.5);
-    /* Earthy border */
-    position: relative;
+    display: inline-block;
+    padding: 0.6rem 1.5rem;
+    border-radius: var(--radius-btn);
+    background: transparent;
+    color: var(--color-green);
+    border: 1px solid var(--color-green);
+    font-weight: 600;
     transition: all 0.3s ease;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
 }
 
 .btn-text:hover {
-    border-color: var(--color-accent);
-    color: var(--color-accent);
-    background: rgba(255, 242, 245, 0.5);
-    /* Soft pink tint */
+    background-color: var(--color-green);
+    color: #121212;
 }
 
-/* 5. Smooth Section Transitions */
-section {
+/* ===== CARDS ===== */
+.book-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+    max-width: 1200px;
+    margin: 4rem auto;
+    padding: 0 2rem;
+}
+
+.book-card {
+    background: var(--bg-card);
+    border-radius: var(--radius-card);
+    border: 1px solid #333;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    position: relative;
+    box-shadow: var(--shadow-card);
+}
+
+.book-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--color-pink);
+    box-shadow: var(--shadow-hover);
+}
+
+.book-cover {
+    height: 380px;
+    /* Taller, more cinematic cover area */
+    background: #000;
     position: relative;
 }
 
-/* Add a subtle texture overlay */
-body::before {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
+.book-placeholder-art {
     width: 100%;
     height: 100%;
-    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23a3a380' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-    pointer-events: none;
-    z-index: -1;
+    opacity: 0.8;
+    transition: opacity 0.3s;
 }
 
-/* About Section Enhancements */
+.book-card:hover .book-placeholder-art {
+    opacity: 1;
+}
+
+.book-info {
+    padding: 2rem;
+    text-align: center;
+}
+
+.book-info h3 {
+    font-size: 1.6rem;
+    margin: 0 0 0.5rem 0;
+    color: #fff;
+}
+
+.book-info .genre {
+    display: block;
+    color: var(--color-pink);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.book-info p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+/* ===== SECTIONS ===== */
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin: 4rem 0 3rem;
+    color: #fff;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 3px;
+    background-color: var(--color-green);
+    margin: 1rem auto 0;
+}
+
+/* ===== ABOUT ===== */
 .about {
-    background: rgba(255, 242, 245, 0.8);
-    backdrop-filter: blur(5px);
-    margin-top: 6rem;
-    border-radius: 30px 30px 0 0;
-    /* Modern arch */
+    background: #181818;
+    padding: 6rem 2rem;
+    margin-top: 5rem;
+    border-top: 1px solid #333;
+}
+
+.about-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 4rem;
 }
 
 .author-placeholder {
-    box-shadow: 20px 20px 0px rgba(163, 163, 128, 0.2);
-    /* Offset shadow pattern */
-    transition: transform 0.3s ease;
+    border-radius: 5px;
+    /* Slight round, mostly sharp */
+    border: 1px solid var(--color-pink);
+    /* Pop border */
+    position: relative;
 }
 
-.about-image:hover .author-placeholder {
-    transform: translate(-5px, -5px);
-    box-shadow: 25px 25px 0px rgba(251, 111, 146, 0.2);
+.author-placeholder::before {
+    content: '';
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    right: -15px;
+    bottom: -15px;
+    border: 1px solid var(--color-green);
+    z-index: -1;
 }
 
+.about-text h2 {
+    text-align: left;
+    margin-top: 0;
+}
+
+.about-text h2::after {
+    margin: 1rem 0 0;
+    /* Left align underline */
+}
 
 /* ===== NEWSLETTER ===== */
 .newsletter {
+    background: #121212;
     padding: 6rem 2rem;
     text-align: center;
-    max-width: 600px;
-    margin: 0 auto;
 }
 
-.newsletter-form {
-    display: flex;
-    gap: 1rem;
-    margin-top: 2rem;
-    justify-content: center;
+.newsletter-form input,
+.newsletter-form textarea {
+    background: #1e1e1e;
+    border: 1px solid #333;
+    color: #fff;
+    padding: 1rem;
+    border-radius: 4px;
+    /* Sharper */
 }
 
-.newsletter-form input {
-    padding: 0.8rem 1.2rem;
-    border: 1px solid #ddd;
-    border-radius: var(--radius-btn);
-    width: 300px;
-    font-family: inherit;
-}
-
-.newsletter-form button {
-    cursor: pointer;
+.newsletter-form input:focus,
+.newsletter-form textarea:focus {
+    outline: none;
+    border-color: var(--color-pink);
 }
 
 /* Responsive */
 @media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.8rem;
+    }
+
     .about-container {
         flex-direction: column;
         text-align: center;
@@ -221,19 +307,6 @@ body::before {
     }
 
     .about-text h2::after {
-        margin: 1rem auto 0;
-    }
-
-    .hero h1 {
-        font-size: 2.5rem;
-    }
-
-    .newsletter-form {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .newsletter-form input {
-        width: 100%;
+        margin: 1rem auto;
     }
 }
