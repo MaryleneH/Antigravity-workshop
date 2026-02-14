@@ -4,10 +4,11 @@ project:
 
 website:
   title: "Éléonore Vance"
-  lang: fr
   navbar: false
   page-footer:
     center: "© 2026 Éléonore Vance. Tous droits réservés."
+
+lang: fr
 
 format:
   html:
