@@ -1,0 +1,196 @@
+/* =========================================
+   Light Mode Overrides - Mo Gadarr
+   Palette: Cream, Blush Pink, Sage Green
+   ========================================= */
+
+/* ===== BASE OVERRIDES ===== */
+body {
+    background-color: #FAFAF8 !important;
+    color: #2a2a2a !important;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    color: #1a1a1a !important;
+}
+
+a {
+    color: #2a2a2a;
+}
+
+a:hover {
+    color: #e0527d;
+    /* Slightly deeper pink for contrast on light */
+}
+
+/* ===== HERO ===== */
+.hero {
+    background: linear-gradient(135deg, #FFF2F5 0%, #FAFAF8 50%, #f0efe8 100%) !important;
+}
+
+.hero h1 {
+    color: #1a1a1a !important;
+}
+
+.hero .subtitle {
+    color: #e0527d !important;
+    /* Deeper pink for readability */
+}
+
+/* ===== BUTTONS ===== */
+.btn-primary {
+    background-color: #FB6F92 !important;
+    color: #fff !important;
+    box-shadow: 0 4px 15px rgba(251, 111, 146, 0.25) !important;
+}
+
+.btn-primary:hover {
+    background-color: #e0527d !important;
+    box-shadow: 0 6px 22px rgba(251, 111, 146, 0.4) !important;
+    color: #fff !important;
+}
+
+.btn-text {
+    color: #7a7a60 !important;
+    /* Darker sage for readability */
+    border-color: #A3A380 !important;
+}
+
+.btn-text:hover {
+    background-color: #A3A380 !important;
+    color: #fff !important;
+}
+
+/* ===== CARDS ===== */
+.book-card {
+    background: #ffffff !important;
+    border: 1px solid #e8e8e4 !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06) !important;
+}
+
+.book-card:hover {
+    border-color: #FB6F92 !important;
+    box-shadow: 0 8px 30px rgba(251, 111, 146, 0.12) !important;
+}
+
+.book-info h3 {
+    color: #1a1a1a !important;
+}
+
+.book-info p {
+    color: #666 !important;
+}
+
+/* ===== SECTIONS ===== */
+.section-title {
+    color: #1a1a1a !important;
+}
+
+/* ===== ABOUT ===== */
+.about {
+    background: #FFF2F5 !important;
+    /* Soft blush */
+    border-top: 1px solid #f0e0e5 !important;
+}
+
+.author-placeholder {
+    border-color: #FB6F92 !important;
+}
+
+.about-text p {
+    color: #555 !important;
+}
+
+.author-placeholder::before {
+    border-color: #c5c5a8 !important;
+    /* Lighter sage */
+}
+
+/* ===== NEWSLETTER ===== */
+.newsletter {
+    background: #FAFAF8 !important;
+}
+
+.newsletter h2 {
+    color: #1a1a1a !important;
+}
+
+.newsletter p {
+    color: #666 !important;
+}
+
+.newsletter-form input,
+.newsletter-form textarea {
+    background: #ffffff !important;
+    border: 1px solid #ddd !important;
+    color: #2a2a2a !important;
+}
+
+.newsletter-form input:focus,
+.newsletter-form textarea:focus {
+    border-color: #FB6F92 !important;
+}
+
+/* ===== NAVBAR LIGHT ===== */
+.navbar {
+    background: rgba(250, 250, 248, 0.85) !important;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06) !important;
+}
+
+.navbar::after {
+    background: linear-gradient(90deg, transparent, #FB6F92, #A3A380, transparent) !important;
+    opacity: 0.5 !important;
+}
+
+.navbar-nav .nav-link {
+    color: rgba(40, 40, 40, 0.8) !important;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #1a1a1a !important;
+    text-shadow: none !important;
+}
+
+.navbar-nav>li:first-child>.nav-link {
+    background: linear-gradient(45deg, #1a1a1a, #FB6F92) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    border-color: rgba(0, 0, 0, 0.1) !important;
+}
+
+.navbar-nav>li:first-child>.nav-link:hover {
+    border-color: #FB6F92 !important;
+    box-shadow: 0 0 12px rgba(251, 111, 146, 0.3) !important;
+}
+
+/* Mobile Toggler - Light */
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(40, 40, 40, 0.8)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+}
+
+@media (max-width: 992px) {
+    .navbar-collapse {
+        background: rgba(250, 250, 248, 0.97) !important;
+        border: 1px solid rgba(0, 0, 0, 0.06) !important;
+    }
+}
+
+/* ===== THEME TOGGLE ICON STYLING ===== */
+.quarto-color-scheme-toggle {
+    order: 99;
+    /* Push to the right */
+}
+
+.quarto-color-scheme-toggle .bi {
+    font-size: 1.2rem;
+    transition: all 0.4s ease;
+    color: #2a2a2a;
+}
+
+.quarto-color-scheme-toggle:hover .bi {
+    color: #FB6F92;
+    transform: rotate(30deg);
+    filter: drop-shadow(0 0 6px rgba(251, 111, 146, 0.5));
+}

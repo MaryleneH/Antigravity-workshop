@@ -1,0 +1,18 @@
+/* =========================================
+   Dark Mode Overrides - Mo Gadarr
+   (Most dark styles are in base styles.css)
+   This file ensures dark-specific toggle styling
+   ========================================= */
+
+/* ===== THEME TOGGLE ICON STYLING (DARK) ===== */
+.quarto-color-scheme-toggle .bi {
+    font-size: 1.2rem;
+    transition: all 0.4s ease;
+    color: #f0f0f0;
+}
+
+.quarto-color-scheme-toggle:hover .bi {
+    color: #FB6F92;
+    transform: rotate(30deg);
+    filter: drop-shadow(0 0 8px rgba(251, 111, 146, 0.6));
+}
