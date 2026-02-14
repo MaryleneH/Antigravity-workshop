@@ -88,18 +88,30 @@ document.addEventListener('DOMContentLoaded', () => {
     const fadeElements = document.querySelectorAll('.fade-in-scroll');
     fadeElements.forEach(el => observer.observe(el));
 
-    // Typing Effect Logic
+    // Looping Typing Effect Logic
     const text = "Mo Gadarr";
     const typingElement = document.getElementById('typing-text');
     let index = 0;
+    let isDeleting = false;
 
     function type() {
-        if (index < text.length) {
+        const speed = isDeleting ? 75 : 150 + Math.random() * 100;
+
+        if (!isDeleting && index < text.length) {
+            // Typing
             typingElement.textContent += text.charAt(index);
             index++;
-            setTimeout(type, 150 + Math.random() * 100); // Natural typing speed
+            setTimeout(type, speed);
+        } else if (isDeleting && index > 0) {
+            // Deleting
+            typingElement.textContent = text.substring(0, index - 1);
+            index--;
+            setTimeout(type, speed);
         } else {
-            typingElement.classList.add('done');
+            // Switch mode
+            isDeleting = !isDeleting;
+            // Pause before starting next phase
+            setTimeout(type, isDeleting ? 2000 : 1000);
         }
     }
 

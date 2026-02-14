@@ -98,23 +98,7 @@ a:hover {
     padding-right: 5px;
 }
 
-.typing-text.done {
-    border-right: none;
-}
-
-@keyframes blink-caret {
-
-    from,
-    to {
-        border-color: transparent
-    }
-
-    50% {
-        border-color: var(--color-pink);
-    }
-}
-
-.typing-text:not(.done) {
+.typing-text {
     animation: blink-caret 0.75s step-end infinite;
 }
 
