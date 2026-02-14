@@ -46,7 +46,6 @@ toc: false
 
 <div class="book-actions">
                     <a href="https://amzn.eu/d/eiPg5oo" class="btn-primary" target="_blank">Acheter sur Amazon</a>
-                    <a href="#" class="btn-text">Lire un extrait</a>
                 
     <a href="../romans.html" class="btn-text"><i class="bi bi-arrow-left"></i> Retour</a>
 </div>

@@ -48,7 +48,7 @@ toc: false
 
 <div class="book-actions">
                     <a href="https://amzn.eu/d/23PEpnc" class="btn-primary" target="_blank">Acheter sur Amazon</a>
-                    <a href="https://mogadarr.github.io/lire-mogadarr/romans/extraits/extrait-en-pleine-nature.html" class="btn-text">Lire un extrait</a>
+                    <a href="extraits/extrait-en-pleine-nature.html" class="btn-text">Lire un extrait</a>
                 
     <a href="../romans.html" class="btn-text"><i class="bi bi-arrow-left"></i> Retour</a>
 </div>
