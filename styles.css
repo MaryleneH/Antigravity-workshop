@@ -327,15 +327,121 @@ a:hover {
     border: none !important;
 }
 
+/* ===== FEATURED BOOK LAYOUT ===== */
+.featured-wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.featured-card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
+}
+
+.featured-card .book-cover {
+    flex: 1;
+    height: 350px;
+}
+
+.featured-card .book-info {
+    flex: 1.5;
+    text-align: left;
+}
+
+.featured-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+/* ===== NEWSLETTER FORM LAYOUT ===== */
+.newsletter-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    max-width: 500px;
+    margin: 2rem auto 0;
+}
+
+.newsletter-form input {
+    flex: 1;
+    min-width: 200px;
+}
+
 /* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
+    .hero {
+        min-height: 70vh;
+        padding: 4rem 1.5rem 2rem;
+    }
+
     .hero h1 {
-        font-size: 2.8rem;
+        font-size: 2.5rem;
+    }
+
+    .hero .subtitle {
+        font-size: 0.8rem;
+        letter-spacing: 1.5px;
+    }
+
+    /* Featured card stacks vertically */
+    .featured-card {
+        flex-direction: column;
+    }
+
+    .featured-card .book-cover {
+        width: 100%;
+        height: 250px;
+    }
+
+    .featured-card .book-info {
+        text-align: center;
+    }
+
+    .featured-buttons {
+        justify-content: center;
+    }
+
+    /* Buttons become full width */
+    .btn-primary,
+    .btn-text {
+        width: 100%;
+        text-align: center;
+        padding: 0.9rem 1.5rem;
+    }
+
+    /* Cards */
+    .book-grid {
+        grid-template-columns: 1fr;
+        padding: 0 1rem;
+        gap: 1.5rem;
+    }
+
+    .book-cover {
+        height: 250px;
+    }
+
+    /* Sections */
+    .section-title {
+        font-size: 1.8rem;
+        margin: 2.5rem 0 2rem;
+    }
+
+    /* About */
+    .about {
+        padding: 3rem 1.5rem;
+        margin-top: 2rem;
     }
 
     .about-container {
         flex-direction: column;
         text-align: center;
+        gap: 2rem;
     }
 
     .about-text h2 {
@@ -344,6 +450,19 @@ a:hover {
 
     .about-text h2::after {
         margin: 1rem auto;
+    }
+
+    /* Newsletter */
+    .newsletter {
+        padding: 3rem 1.5rem;
+    }
+
+    .newsletter-form {
+        flex-direction: column;
+    }
+
+    .newsletter-form input {
+        width: 100%;
     }
 }
 

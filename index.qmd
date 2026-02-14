@@ -19,18 +19,18 @@ format:
 
 <section id="featured" class="collection">
     <h2 class="section-title fade-in-scroll">À la Une</h2>
-    <div class="book-grid" style="grid-template-columns: 1fr; max-width: 800px; margin: 0 auto;">
-        <div class="book-card fade-in-scroll" style="display: flex; flex-direction: row; align-items: center; gap: 2rem;">
-            <div class="book-cover" style="flex: 1; height: 350px;">
+    <div class="featured-wrapper">
+        <div class="book-card featured-card fade-in-scroll">
+            <div class="book-cover">
                 <div class="book-placeholder-art" style="background: linear-gradient(135deg, #c0392b, #f1c40f);"></div>
             </div>
-            <div class="book-info" style="flex: 1.5; text-align: left;">
+            <div class="book-info">
                 <h3>Minuit à Paris</h3>
                 <span class="genre">Romance Contemporaine</span>
                 <p>Deux étrangers, une ville lumière, et une rencontre qui change tout.</p>
-                <div style="display: flex; gap: 1rem; margin-top: 1.5rem;">
+                <div class="featured-buttons">
                     <a href="#" class="btn-primary">Commander</a>
-                    <a href="romans.qmd" class="btn-text">Voir tous les romans &rarr;</a>
+                    <a href="romans.html" class="btn-text">Voir tous les romans &rarr;</a>
                 </div>
             </div>
         </div>
