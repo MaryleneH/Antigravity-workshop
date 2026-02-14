@@ -42,9 +42,9 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-e6d832ae3a3fda457cf4b552b20bc122.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-9d058a1890b79506818e78e628fa28ef.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-e6d832ae3a3fda457cf4b552b20bc122.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-c01fae007f981685850930f2dbd4f042.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-64a1cc8c0c908e5d347f6843d41b1df2.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-c01fae007f981685850930f2dbd4f042.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -371,18 +371,30 @@ document.addEventListener('DOMContentLoaded', () => {
     const fadeElements = document.querySelectorAll('.fade-in-scroll');
     fadeElements.forEach(el => observer.observe(el));
 
-    // Typing Effect Logic
+    // Looping Typing Effect Logic
     const text = "Mo Gadarr";
     const typingElement = document.getElementById('typing-text');
     let index = 0;
+    let isDeleting = false;
 
     function type() {
-        if (index < text.length) {
+        const speed = isDeleting ? 75 : 150 + Math.random() * 100;
+
+        if (!isDeleting && index < text.length) {
+            // Typing
             typingElement.textContent += text.charAt(index);
             index++;
-            setTimeout(type, 150 + Math.random() * 100); // Natural typing speed
+            setTimeout(type, speed);
+        } else if (isDeleting && index > 0) {
+            // Deleting
+            typingElement.textContent = text.substring(0, index - 1);
+            index--;
+            setTimeout(type, speed);
         } else {
-            typingElement.classList.add('done');
+            // Switch mode
+            isDeleting = !isDeleting;
+            // Pause before starting next phase
+            setTimeout(type, isDeleting ? 2000 : 1000);
         }
     }
 
