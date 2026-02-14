@@ -638,23 +638,39 @@ a:hover {
     border: 1px solid rgba(255, 255, 255, 0.08);
     padding: 3rem;
     border-radius: 20px;
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    perspective: 1000px;
+    /* Enable 3D space */
 }
 
 .book-hero-cover-wrapper {
     flex: 0 0 320px;
 }
 
-.book-hero-cover {
-    width: 100%;
+.book-cover-img {
+    width: 300px;
+    /* Fixed width for standard look */
     height: auto;
-    border-radius: 8px;
-    box-shadow: 15px 15px 35px rgba(0, 0, 0, 0.5);
-    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: 5px;
+    /* Slight rounding like a real book */
+    box-shadow: -15px 15px 25px rgba(0, 0, 0, 0.4);
+    /* Deep 3D shadow */
+    transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.6s ease;
+    transform-origin: center left;
+    /* Pivot like a spine */
 }
 
-.book-hero-card:hover .book-hero-cover {
-    transform: translateY(-10px) rotate(-2deg) scale(1.02);
+/* Desktop Hover */
+.book-hero-card:hover .book-cover-img {
+    transform: translateY(-10px) rotateY(-10deg) scale(1.02);
+    box-shadow: -25px 25px 40px rgba(0, 0, 0, 0.5), 0 0 20px var(--color-pink-glow);
+}
+
+/* Mobile Touch / Active State */
+.book-hero-card:active .book-cover-img,
+.book-cover-img:active {
+    transform: translateY(-5px) rotateY(-15deg) scale(1.05);
+    box-shadow: -20px 20px 35px rgba(0, 0, 0, 0.6), 0 0 30px var(--color-pink-glow);
 }
 
 .book-hero-info {
