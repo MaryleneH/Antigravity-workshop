@@ -12,7 +12,7 @@ lang: fr
 
 format:
   html:
-    theme: none
+    theme: cosmo
     css: styles.css
     mainfont: 'Lato'
     fontsize: 1.1em
