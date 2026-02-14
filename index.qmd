@@ -60,7 +60,7 @@ format:
 </section>
 
 <section id="newsletter" class="newsletter fade-in-scroll">
-    <h2>Rejoignez le Cercle Intime</h2>
+    <h2>Rejoignez le Cercle des Intimes</h2>
     <p>Soyez les premiers informés des nouvelles sorties et du contenu exclusif.</p>
     <form class="newsletter-form">
         <input type="email" placeholder="Votre adresse email" required>
