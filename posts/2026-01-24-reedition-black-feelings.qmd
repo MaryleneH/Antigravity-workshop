@@ -14,7 +14,7 @@ Après des années, mon tout premier livre paru aux éditions Hugo, **Black Feel
 :::
 
 
-<br>
+<div class="editorial-sep">🎬</div>
 
 
 ```{=html}

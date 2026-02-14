@@ -14,7 +14,9 @@ format:
 
 Les fêtes sont productives !
 
-![](../images/blog/photo_article1.PNG){fig-align="center" width="100%"}
+![](../images/blog/photo_article1.PNG){.img-chic-frame fig-align="center" width="100%"}
+
+<div class="editorial-sep">✦ ✦ ✦</div>
 
 Les fêtes sont productives !
 
@@ -26,7 +28,7 @@ J’ai laissé teaser quelques indices sur mes réseaux sociaux mais je ne peux 
 
 Le thème est fort et sombre. Comme ceux qui me lisent le savent, désormais, tout peut arriver à mes personnages. Je vais aller au-delà de la romance pour parler d’une histoire prenante, réaliste et poignante.
 
-![](../images/blog/photo_article2.PNG){fig-align="center" width="80%"}
+![](../images/blog/photo_article2.PNG){.img-offset-right fig-align="center" width="80%"}
 
 > **Note d'auteure** : Désormais, tout peut arriver à mes personnages. Un roman anniversaire, une intensité assumée — et une sortie qui se précise.
 

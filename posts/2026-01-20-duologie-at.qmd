@@ -7,7 +7,7 @@ image: ../../images/blog/AT_blog.png
 ---
 
 ::: {.nr-cover-feature}
-![](../images/couvertures/AT_couverture.PNG){.nr-cover-img alt="Couverture — AT (tome 1)"}
+![](../images/couvertures/AT_couverture.PNG){.nr-cover-img .img-chic-frame alt="Couverture — AT (tome 1)"}
 
 <div class="nr-cover-meta">
 <span class="nr-badge">Nouvelle duologie</span>
@@ -18,7 +18,7 @@ Une romance dure, sombre et tellement… ordinaire.
 </div>
 :::
 
-<br>
+<div class="editorial-sep">✦ ✦ ✦</div>
 
 
 # Une duologie à paraitre : **`"AT"`**

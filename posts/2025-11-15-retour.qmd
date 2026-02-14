@@ -9,7 +9,9 @@ format:
     toc: false
 ---
 
-![](../images/blog/2025-salons-header.jpg){fig-cap="De Thuit Romance à Pyrélivres : des rencontres, des sourires et de belles histoires." fig-alt="Photos de salons du livre et ambiance chaleureuse" fig-align="center" width="49%"}
+![](../images/blog/2025-salons-header.jpg){.img-chic-frame fig-cap="De Thuit Romance à Pyrélivres : des rencontres, des sourires et de belles histoires." fig-alt="Photos de salons du livre et ambiance chaleureuse" fig-align="center"}
+
+<div class="editorial-sep">✦ ✦ ✦</div>
 
 Et me voilà de retour dans mon blog ! Je viens d’enchaîner la rentrée et surtout pas moins de deux salons pendant les vacances. Il s’agissait du salon **`Thuit romance`** ainsi que du salon **`Pyrélivres`**. Deux lieux. Deux ambiances. Cependant, j’y ai retrouvé la même entraide et la même chaleur dans les deux. Là où **`Thuit`** est consacré à la romance sous toutes ses formes, **`Pyrelivres`** est généraliste. C’est une première pour moi !
 
