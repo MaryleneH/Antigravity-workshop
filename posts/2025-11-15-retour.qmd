@@ -1,0 +1,30 @@
+---
+title: "Retour de salons et belles nouvelles"
+description: "Un billet intime et chaleureux où Mo Gadarr raconte son retour sur le blog après une rentrée chargée, deux salons aux ambiances contrastées, ses découvertes littéraires et une nouvelle mystérieuse qui la remplit de joie."
+date: "2025-11-15"
+categories: ["Actu", "Salons", "Lectures"]
+image: "../../images/blog/photo_accueil_retour.jpg"
+format:
+  html:
+    toc: false
+---
+
+![](../../images/blog/2025-salons-header.jpg){fig-cap="De Thuit Romance à Pyrélivres : des rencontres, des sourires et de belles histoires." fig-alt="Photos de salons du livre et ambiance chaleureuse" fig-align="center" width="49%"}
+
+Et me voilà de retour dans mon blog ! Je viens d’enchaîner la rentrée et surtout pas moins de deux salons pendant les vacances. Il s’agissait du salon **`Thuit romance`** ainsi que du salon **`Pyrélivres`**. Deux lieux. Deux ambiances. Cependant, j’y ai retrouvé la même entraide et la même chaleur dans les deux. Là où **`Thuit`** est consacré à la romance sous toutes ses formes, **`Pyrelivres`** est généraliste. C’est une première pour moi !
+
+|  |  |  |
+|:----------------------:|:----------------------:|:----------------------:|
+| ![](images/paste-1.png){width="103"} | ![](images/paste-1.jpeg){width="61%"} | ![](images/paste-2.png){width="98"} |
+
+Je pense qu’il ne faut pas hésiter à chiner dans ces salons, même quand on se dit qu’on ne va pas trouver ce qu’on aime lire. Les découvertes sont très intéressantes. J’y ai acheté le livre `Héritage` de **Benito Sanchez**. Moi qui adore Stephen King, on est plongé dans un univers à la Shining des plus flippants. Je vous dirai ce que j’en ai pensé.
+
+Aujourd’hui, je suis heureuse ! Je viens de recevoir une très belle nouvelle dont je vous reparlerai par la suite…
+     
+     
+<!-- ===== 3) RETOUR ===== -->
+<div class="back-home">
+  <a href="../index.qmd" class="btn-back" role="button" aria-label="Retour aux Romans">
+    <span class="arrow">←</span> Retour aux articles de blog
+  </a>
+</div>

@@ -1,0 +1,14 @@
+# Defaults pour tous les billets du blog
+title-block-banner: true     # chaque post peut avoir son bandeau (image:)
+page-layout: article         # ou "full" si vous préférez
+toc: false
+comments: false              # activer si vous avez un système de commentaires
+format:
+  html:
+    # hérite de votre thème global; inutile de redéclarer la CSS
+    df-print: paged
+    smooth-scroll: true
+# Champs “conseillés” dans chaque post (non obligatoires)
+# - image: cover.jpg
+# - categories: [Salon, News]
+# - description: ...

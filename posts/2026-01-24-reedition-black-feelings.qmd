@@ -1,0 +1,81 @@
+---
+title: "Black Feelings réimprimé"
+date: 2026-01-24
+categories: [Actualités, Romans]
+description: "Réimpression de Black Feelings : à nouveau disponible à la demande ou en salon."
+image: ../../images/couvertures/black-feelings-tome-1.jpg 
+---
+
+# Black Feelings réimprimé
+
+::: {.headline-romance-pro}
+<span class="hrp-badge">Réédition</span>
+Après des années, mon tout premier livre paru aux éditions Hugo, **Black Feelings**, a été réimprimé !
+:::
+
+
+<br>
+
+
+```{=html}
+<section class="nr-video-story" aria-label="Extraits vidéo">
+  <div class="nr-story-head">
+    <span class="nr-story-badge">🎬 Extraits vidéo</span>
+    <div class="nr-story-title">Plongez dans l’univers</div>
+  </div>
+
+  <!-- Tabs CSS-only -->
+  <input class="nr-tab" type="radio" name="nrvid" id="nrvid1" checked>
+  <input class="nr-tab" type="radio" name="nrvid" id="nrvid2">
+
+  <div class="nr-tabbar" role="tablist" aria-label="Choisir un extrait">
+    <label class="nr-chip" for="nrvid1" role="tab">Extrait 1</label>
+    <label class="nr-chip" for="nrvid2" role="tab">Extrait 2</label>
+  </div>
+
+  <div class="nr-panels">
+    <!-- Panel 1 : blackF1 (portrait -> affiché en PAYSAGE par CSS) -->
+    <article class="nr-panel">
+      <figure class="nr-figure">
+        <div class="nr-frame">
+          <video class="nr-video nr-rot90" controls preload="metadata" playsinline>
+            <source src="../../assets/blackF1.mp4" type="video/mp4">
+          </video>
+        </div>
+        <figcaption class="nr-caption">Black Feelings — extrait 1</figcaption>
+      </figure>
+    </article>
+
+    <!-- Panel 2 : blackF2 -->
+    <article class="nr-panel">
+      <figure class="nr-figure">
+        <div class="nr-frame">
+          <video class="nr-video" controls preload="metadata" playsinline>
+            <source src="../../assets/blackF2.mp4" type="video/mp4">
+          </video>
+        </div>
+        <figcaption class="nr-caption">Black Feelings — extrait 2</figcaption>
+      </figure>
+    </article>
+  </div>
+</section>
+
+```
+
+
+Vous ne le saviez peut-être pas, mais lorsqu'un livre est confié à une maison d'édition, sa durée de vie n'est pas illimitée. Un jour, en général, après plusieurs années, il n'est plus réimprimé. Le lecteur intéressé doit alors se contenter des derniers exemplaires neufs disponibles ou se fournir sur le marché de l'occasion. C'est pourquoi avoir la possibilité de voir son livre réimprimé est une grande chance !
+
+Presque dix ans plus tard, mon tout premier roman est à nouveau disponible **à la demande** ou **en salon**.
+
+> Comme le dit ma petite sœur Sarah, quand on lit l'histoire de Mandy, on ne peut pas s'empêcher de découvrir mes autres nombreuses histoires !
+
+<br>
+
+[✉️ Contact pour commander »](mailto:mogadarr@gmail.com?subject=Commande%20-%20Black%20Feelings&body=Bonjour%20Mo%2C%0D%0A%0D%0AJe%20vous%20contacte%20depuis%20votre%20site%20au%20sujet%20de%20Black%20Feelings.%0D%0A%0D%0AJe%20souhaiterais%20le%20commander.%20Pouvez-vous%20me%20dire%20les%20modalit%C3%A9s%20(disponibilit%C3%A9%2C%20prix%2C%20envoi%2Fremise%20en%20main%20propre)%20%3F%0D%0A%0D%0AMon%20nom%20%3A%20%0D%0AMa%20ville%20%3A%20%0D%0A%0D%0AMerci%20et%20belle%20journ%C3%A9e.%0D%0A){.btn .btn-secondary role="button"}
+
+<!-- ===== 3) RETOUR ===== -->
+<div class="back-home">
+  <a href="../index.qmd" class="btn-back" role="button" aria-label="Retour aux Romans">
+    <span class="arrow">←</span> Retour aux articles de blog
+  </a>
+</div>

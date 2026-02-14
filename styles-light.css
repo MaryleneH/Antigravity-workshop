@@ -119,24 +119,24 @@ a:hover {
 .quarto-listing .card,
 .listing-item,
 .quarto-grid-item {
-    background: #ffffff !important;
+    background: rgba(0, 0, 0, 0.02) !important;
     border: 1px solid rgba(0, 0, 0, 0.05) !important;
     color: #2a2a2a !important;
 }
 
 .quarto-listing .card:hover,
 .listing-item:hover {
-    border-color: rgba(251, 111, 146, 0.3) !important;
+    border-color: rgba(251, 111, 146, 0.4) !important;
+    background: rgba(251, 111, 146, 0.02) !important;
 }
 
-.quarto-listing h3 a,
-.listing-title a {
+.quarto-listing-container-grid .card-title {
     color: #1a1a1a !important;
 }
 
 .listing-description,
 .card-text {
-    color: #777 !important;
+    color: #555 !important;
 }
 
 .quarto-listing .listing-category {
