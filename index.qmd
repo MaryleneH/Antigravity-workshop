@@ -8,7 +8,7 @@ format:
 ```{=html}
 <header class="hero">
     <div class="hero-content fade-in">
-        <h1>Éléonore Vance</h1>
+        <h1>Mo Gadarr</h1>
         <p class="subtitle">Histoires d'amour, de perte et d'espoir éternel.</p>
         <a href="#collection" class="btn-primary">Explorer la Collection</a>
     </div>

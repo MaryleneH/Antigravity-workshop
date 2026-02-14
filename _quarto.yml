@@ -3,11 +3,11 @@ project:
   output-dir: docs
 
 website:
-  title: "Éléonore Vance"
+  title: "Mo Gadarr"
   navbar:
     title: false
     left:
-      - text: "EV" # Monogram Logo
+      - text: "MG" # Monogram Logo
         href: index.qmd
       - text: "Romans"
         href: romans.qmd
@@ -16,7 +16,7 @@ website:
       - text: "Contact"
         href: contact.qmd
   page-footer:
-    center: "© 2026 Éléonore Vance. Tous droits réservés."
+    center: "© 2026 Mo Gadarr. Tous droits réservés."
 
 lang: fr
 
