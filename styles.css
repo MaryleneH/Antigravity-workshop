@@ -1623,3 +1623,94 @@ body.quarto-dark .cta-extrait {
         width: 100%;
     }
 }
+
+/* ===== BLOG LISTING (GRID) ===== */
+.quarto-listing-container-grid .quarto-grid-item {
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    background: rgba(255, 255, 255, 0.03) !important;
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border-radius: 15px !important;
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
+    overflow: hidden;
+}
+
+.quarto-listing-container-grid .quarto-grid-item:hover {
+    transform: translateY(-8px) scale(1.02);
+    border-color: var(--color-pink) !important;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4), 0 0 20px var(--color-pink-glow) !important;
+}
+
+.quarto-listing-container-grid .listing-categories {
+    margin-bottom: 0.5rem;
+}
+
+.quarto-listing-container-grid .listing-category {
+    background: rgba(251, 111, 146, 0.15) !important;
+    color: var(--color-pink) !important;
+    border: 1px solid rgba(251, 111, 146, 0.3) !important;
+    border-radius: 50px !important;
+    font-size: 0.7rem !important;
+    font-weight: 700 !important;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 2px 10px !important;
+}
+
+.quarto-listing-container-grid .card-title {
+    font-family: var(--font-heading) !important;
+    font-size: 1.4rem !important;
+    color: var(--color-pink) !important;
+    margin-bottom: 0.8rem !important;
+}
+
+.quarto-listing-container-grid .card-subtitle {
+    font-size: 0.95rem !important;
+    color: var(--text-muted) !important;
+    font-style: italic;
+    margin-bottom: 1rem !important;
+}
+
+.quarto-listing-container-grid .card-attribution {
+    font-size: 0.8rem !important;
+    opacity: 0.7;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.quarto-listing-container-grid .card-img-top {
+    transition: transform 0.6s ease;
+}
+
+.quarto-listing-container-grid .quarto-grid-item:hover .card-img-top {
+    transform: scale(1.05);
+}
+
+/* Custom Journal Banner Text overlay (if needed) */
+.blog-banner {
+    position: relative;
+    margin-bottom: 4rem;
+}
+
+.blog-banner::after {
+    content: "Le Journal";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: var(--font-heading);
+    font-size: 4rem;
+    color: #fff;
+    text-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    opacity: 0.8;
+    pointer-events: none;
+    letter-spacing: 10px;
+    text-transform: uppercase;
+}
+
+@media (max-width: 768px) {
+    .blog-banner::after {
+        font-size: 2.5rem;
+        letter-spacing: 5px;
+    }
+}
