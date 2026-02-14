@@ -1747,6 +1747,156 @@ body.quarto-dark .cta-extrait {
     transform: scale(1.1);
 }
 
+/* ===== PREMIUM BLOG POSTS (Chic & Elegant) ===== */
+
+/* Post Title Banner */
+.quarto-title-banner {
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), var(--quarto-title-banner-bg) !important;
+    background-size: cover !important;
+    background-position: center !important;
+    min-height: 45vh !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    margin-bottom: 4rem !important;
+    border-radius: 0 0 50px 50px !important;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3) !important;
+}
+
+.quarto-title h1 {
+    font-family: var(--font-heading) !important;
+    font-size: clamp(2.5rem, 5vw, 4rem) !important;
+    letter-spacing: -1px !important;
+    line-height: 1.1 !important;
+    color: #fff !important;
+    text-shadow: 0 10px 30px rgba(0, 0, 0, 0.5) !important;
+    max-width: 900px !important;
+    margin: 0 auto !important;
+}
+
+/* Post Metadata */
+.quarto-title-meta {
+    display: flex !important;
+    justify-content: center !important;
+    gap: 2rem !important;
+    margin-top: 2rem !important;
+    font-size: 0.9rem !important;
+    text-transform: uppercase !important;
+    letter-spacing: 2px !important;
+    color: rgba(255, 255, 255, 0.8) !important;
+}
+
+.quarto-title-meta-heading {
+    display: none !important;
+    /* Hide redundant labels */
+}
+
+/* Post Content Layout */
+#quarto-content.page-columns .column-body {
+    max-width: 850px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    line-height: 1.85 !important;
+    font-size: 1.15rem !important;
+}
+
+/* Elegant Drop Cap */
+.column-body>p:first-of-type::first-letter {
+    font-family: var(--font-heading);
+    font-size: 4.5rem;
+    float: left;
+    line-height: 1;
+    margin: 0.5rem 1rem 0 0;
+    color: var(--color-pink);
+    font-weight: 700;
+}
+
+/* Chic Headings in Posts */
+.column-body h2 {
+    font-size: 2.2rem;
+    margin-top: 5rem;
+    margin-bottom: 2rem;
+    position: relative;
+    display: inline-block;
+}
+
+.column-body h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background: var(--color-pink);
+    border-radius: 2px;
+}
+
+/* Refined Blockquotes */
+blockquote {
+    border-left: 2px solid var(--color-pink) !important;
+    background: rgba(251, 111, 146, 0.03) !important;
+    padding: 2rem 3rem !important;
+    margin: 3rem 0 !important;
+    font-family: var(--font-heading) !important;
+    font-style: italic !important;
+    font-size: 1.3rem !important;
+    border-radius: 0 20px 20px 0 !important;
+    position: relative;
+    color: var(--text-muted) !important;
+}
+
+blockquote::before {
+    content: '"';
+    position: absolute;
+    top: -10px;
+    left: 10px;
+    font-size: 5rem;
+    color: var(--color-pink);
+    opacity: 0.2;
+}
+
+/* Media styling */
+.column-body img {
+    border-radius: 25px !important;
+    margin: 3rem 0 !important;
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.15) !important;
+    transition: transform 0.5s ease;
+}
+
+.column-body img:hover {
+    transform: scale(1.02);
+}
+
+.column-body figcaption {
+    font-family: var(--font-heading);
+    font-style: italic;
+    text-align: center;
+    margin-top: -2rem;
+    margin-bottom: 3rem;
+    opacity: 0.7;
+    font-size: 0.95rem;
+}
+
+/* Back Link refinement */
+.back-home .btn-back {
+    border: none !important;
+    background: transparent !important;
+    text-transform: uppercase !important;
+    letter-spacing: 3px !important;
+    font-size: 0.8rem !important;
+    font-weight: 700 !important;
+    color: var(--color-pink) !important;
+    padding-bottom: 5px !important;
+    border-bottom: 2px solid transparent !important;
+    border-radius: 0 !important;
+}
+
+.back-home .btn-back:hover {
+    border-bottom-color: var(--color-pink) !important;
+    transform: translateX(-10px) !important;
+}
+
 /* ===== BLOG BANNER ===== */
 .blog-banner {
     position: relative;

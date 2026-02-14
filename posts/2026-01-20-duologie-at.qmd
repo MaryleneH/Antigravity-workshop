@@ -7,7 +7,7 @@ image: ../../images/blog/AT_blog.png
 ---
 
 ::: {.nr-cover-feature}
-![](../../images/couvertures/AT_couverture.PNG){.nr-cover-img alt="Couverture — AT (tome 1)"}
+![](../images/couvertures/AT_couverture.PNG){.nr-cover-img alt="Couverture — AT (tome 1)"}
 
 <div class="nr-cover-meta">
 <span class="nr-badge">Nouvelle duologie</span>
@@ -37,7 +37,7 @@ Je vous avais promis une toute nouvelle histoire et c’est chose faite. Cette f
 
 <!-- Bouton retour (mobile-friendly) -->
 <div class="back-home" style="margin-top:2rem;">
-  <a href="../../index.qmd" class="btn-back" role="button" aria-label="Retour à l’accueil">
-    <span class="arrow">←</span> Retour à l’accueil
+  <a href="../index.qmd" class="btn-back" role="button" aria-label="Retour au journal">
+    <span class="arrow">←</span> Retour au journal
   </a>
 </div>
