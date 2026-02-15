@@ -15,6 +15,8 @@ website:
         href: dernier_roman/prends_buche.qmd
       - text: "Romans"
         href: romans.qmd
+      - text: "L'Auteure"
+        href: about.qmd
       - text: "Blog"
         href: blog.qmd
       - text: "Contact"
