@@ -1,123 +1,126 @@
 ---
 title: "Prends de la bûche"
 subtitle: "Dernier roman"
-description: "La nouveauté de Mo Gadarr"
-title-block-banner: images/hero-buche-light.svg
+description: "La nouveauté de Mo Gadarr — Enemies to lovers dans un hiver canadien"
 page-layout: full
 toc: false
-body-classes: dernier-livre
+body-classes: romans
 ---
 
-<!-- ===== HERO / ACCROCHE ===== -->
-<div class="cta" style="margin: 1rem 0 2rem 0;">
-  <span class="material-icons" aria-hidden="true">auto_awesome</span>
-  <strong>Nouveauté</strong> — Découvrez <em>Prends de la bûche</em> • 
-  <a href="#resume" role="button">résumé</a>
+```{=html}
+<header class="book-hero">
+    <div class="book-hero-bg" style="background-image: url('../images/couvertures/noel-coups-bas.jpg');"></div>
+    <div class="book-hero-content">
+        <div class="book-hero-card fade-in">
+            <div class="book-hero-cover-wrapper">
+                <img src="../images/couvertures/noel-coups-bas.jpg" alt="Prends de la bûche — Mo Gadarr" class="book-hero-cover">
+            </div>
+            <div class="book-hero-info">
+                <span class="book-genre-pill">Romance de Noël • Enemies to Lovers</span>
+                <h1>Prends de la bûche</h1>
+                <p class="book-tagline">Hiver canadien, forêt, scierie, pâtisseries trompe-l'œil et magie de Noël — un duo que tout oppose, jusqu'à la bûche !</p>
+                
+                <div class="formats-prix-premium">
+                    <div class="format-item">
+                        <span class="format-name">Ebook</span>
+                        <span class="format-price">0,99 €</span>
+                    </div>
+                    <div class="format-item">
+                        <span class="format-name">Broché</span>
+                        <span class="format-price">15 €</span>
+                    </div>
+                    <div class="format-item">
+                        <span class="format-name">Relié</span>
+                        <span class="format-price">18 €</span>
+                    </div>
+                    <div class="format-item">
+                        <span class="format-name">Pages</span>
+                        <span class="format-price">381</span>
+                    </div>
+                </div>
+
+                <div class="book-synopsis">
+<p>Il existe un seul bûcheron de profession dans la ville de Treecourt, au Canada.<br>
+Détrompez-vous : il ne s'agit pas d'un barbu aux muscles surdimensionnés. C'est une femme.</p>
+
+<p><strong>Nicola</strong> n'a jamais voulu rentrer dans le moule qu'on lui prédestinait. Patronne de la scierie de son village, bûcheronne passionnée par le bois, femme de caractère, elle refuse de voir sa forêt sacrifiée pour une usine de pâtisseries françaises.</p>
+
+<p>Elle compte bien barrer la route à cette franchise représentée par <strong>Zack</strong>, un pâtissier hors pair qui s'est notamment fait connaitre sur le net avec ses gâteaux trompe-l'œil et surtout avec sa bûche de Noël, plus vraie que nature et tellement délicieuse.</p>
+
+<p>Mais alors que l'opposition entre les deux représentants de la bûche est complète, le hasard va s'en mêler…<br>
+Une petite sœur fan de la Reine des Neiges, un vieux chien gaga et surtout la magnifique magie de Noël.</p>
+
+<p>Le rapprochement sera inévitable, musclé et... <em>terriblement sucré !</em></p>
+
+<p><em>À Noël, quelle sera votre bûche préférée ?</em></p>
+                </div>
+
+<div class="book-actions">
+    <a href="https://amzn.eu/d/d3MMSlg" class="btn-primary" target="_blank" rel="noopener noreferrer">Acheter sur Amazon</a>
+    <a href="../romans/extraits/extrait-buche.html" class="btn-primary" style="background: transparent; border: 2px solid var(--color-pink); color: var(--color-pink);">Lire un extrait</a>
 </div>
 
-<!-- ===== FORMATS & PRIX (compact) ===== -->
-<section class="formats-prix-modern" markdown="1">
-
-### Formats & prix
-- **Ebook** : 0,99 € (prix de lancement jusqu’au 17 octobre 2025)
-- **Broché** : 15 €
-- **Relié** : 18 €
-- **Abonnement Kindle**
-- 381 pages
-
-<div class="prix-right">
-  <a class="btn btn-primary"
-     href="https://amzn.eu/d/d3MMSlg"
-     target="_blank" rel="noopener noreferrer" role="button"
-     aria-label="Acheter sur Amazon">
-     Acheter
-  </a>
-
-  <a class="btn btn-secondary"
-     href="../romans/extraits/extrait-buche.html"
-     role="button"
-     aria-label="Lire un extrait">
-     Lire un extrait
-  </a>
-</div>
-
-</section>
-
-<br></br>
-
-
-
-<!-- ===== TRAILER (responsive, shortcode conservé) ===== -->
-::: {#trailer .book-trailer}
-### `♡` `♡` - Trailer -`♡´-
-{{< video assets/Trailer.mp4 fig-cap="Trailer — Prends de la bûche" title="Trailer — Prends de la bûche" >}}
-:::
-
-
-<!-- ===== AMBIANCE ===== -->
-<div class="card" style="padding:1.25rem; margin-top:1.5rem;" markdown="1">
-### Ambiance
-Hiver canadien, forêt, scierie, pâtisseries trompe-l’œil et magie de Noël — un duo que tout oppose, jusqu’à la bûche !
-</div>
-
-<!-- ===== 2 COLONNES (image à gauche, texte à droite) ===== -->
-<section class="book-two-col reverse" markdown="1">
-
-<div class="book-cover">
-  <img src="images/dernier-livre.jpg" alt="Couverture de Prends de la bûche">
-</div>
-
-<div class="resume" id="resume" markdown="1">
-
-### Résumé
-
-Il existe un seul bûcheron de profession dans la ville de Treecourt, au Canada.  
-Détrompez-vous : il ne s'agit pas d'un barbu aux muscles surdimensionnés. C'est une femme.  
-Nicola n'a jamais voulu rentrer dans le moule qu'on lui prédestinait. Patronne de la scierie de son village, bûcheronne passionnée par le bois, femme de caractère, elle refuse de voir sa forêt sacrifiée pour une usine de pâtisseries françaises.  
-Elle compte bien barrer la route à cette franchise représentée par Zack, un pâtissier hors pair qui s'est notamment fait connaitre sur le net avec ses gâteaux trompe-l'œil et surtout avec sa bûche de Noël, plus vraie que nature et tellement délicieuse.  
-C'est ainsi qu'il tente de convaincre la municipalité de Treecourt de lui céder son immense terrain, une zone boisée et très chère aux yeux de Nicola.  
-
-Mais alors que l'opposition entre les deux représentants de la bûche est complète, le hasard va s'en mêler…  
-Une petite sœur fan de la Reine des Neiges, un vieux chien gaga et surtout la magnifique magie de Noël.  
-
-Le rapprochement sera inévitable, musclé et... terriblement sucré !
-
-À Noël, quelle sera votre bûche préférée ?  
-
-**Tropes :** Enemies to lovers, conflits familiaux, préjugés, féminisme, green flag, passé douloureux
-
-</div>
-
-</section>
-
-<br></br>
-
-<!-- ===== Bouton flottant Lecture Trailer (mobile only) ===== -->
-<a href="#trailer" class="fab-trailer" aria-label="Voir la bande-annonce">
-  <span class="fab-icon" aria-hidden="true">►</span>
-  <span class="fab-label">Trailer</span>
-</a>
-
-
-
-<div class="back-home">
-  <a href="https://mogadarr.github.io/lire-mogadarr/romans" class="btn-back" role="button" aria-label="Découvrir les romans">
-    <span class="arrow">-`♡´-</span> Découvrir les romans
-  </a>
-
-</div>
-
-<br></br>
-
-<div class="back-home">
-  <a href="https://mogadarr.github.io/lire-mogadarr/" class="btn-back" role="button" aria-label="Retour à l’accueil">
-    <span class="arrow">←</span> Retour à l’accueil
-  </a>
-</div>
-
-
+            </div>
+        </div>
+    </div>
+</header>
+```
 
 ```{=html}
+<!-- ===== TRAILER SECTION ===== -->
+<section class="book-trailer-section" aria-label="Bande-annonce">
+    <div class="book-trailer-header">
+        <span class="book-trailer-badge">🎬 Bande-annonce</span>
+        <h2 class="book-trailer-title">Découvrez l'univers</h2>
+    </div>
+    <div class="book-trailer-frame">
+        <video class="book-trailer-video" controls playsinline preload="metadata" poster="../images/couvertures/noel-coups-bas.jpg">
+            <source src="../assets/Trailer.mp4" type="video/mp4">
+            Votre navigateur ne supporte pas la lecture de vidéos.
+        </video>
+    </div>
+</section>
+```
+
+```{=html}
+<!-- ===== AMBIANCE & TROPES ===== -->
+<section class="book-themes-section" aria-label="Thèmes et ambiance">
+    <div class="book-themes-grid">
+        <div class="book-theme-card">
+            <i class="bi bi-tree"></i>
+            <span>Forêt canadienne</span>
+        </div>
+        <div class="book-theme-card">
+            <i class="bi bi-snow2"></i>
+            <span>Magie de Noël</span>
+        </div>
+        <div class="book-theme-card">
+            <i class="bi bi-heart-pulse"></i>
+            <span>Enemies to Lovers</span>
+        </div>
+        <div class="book-theme-card">
+            <i class="bi bi-gender-female"></i>
+            <span>Féminisme</span>
+        </div>
+        <div class="book-theme-card">
+            <i class="bi bi-cake2"></i>
+            <span>Pâtisserie</span>
+        </div>
+        <div class="book-theme-card">
+            <i class="bi bi-flag"></i>
+            <span>Green Flag</span>
+        </div>
+    </div>
+</section>
+```
+
+```{=html}
+<!-- ===== NAVIGATION ===== -->
+<div class="book-nav-footer">
+    <a href="../romans.html" class="btn-text"><i class="bi bi-arrow-left"></i> Tous les romans</a>
+    <a href="../index.html" class="btn-text"><i class="bi bi-house"></i> Accueil</a>
+</div>
+
 <!-- Floating Mobile Navigation -->
 <div class="mobile-nav-actions" id="mobileNav">
   <button id="backToTopBtn" class="nav-btn-floating" aria-label="Retour en haut">

@@ -2814,3 +2814,162 @@ body.quarto-dark .editorial-img-wrapper {
 .nr-portrait .nr-frame {
     overflow: hidden !important;
 }
+
+/* ===== BOOK TRAILER SECTION ===== */
+.book-trailer-section {
+    max-width: 800px;
+    margin: 4rem auto;
+    padding: 0 1.5rem;
+    text-align: center;
+}
+
+.book-trailer-header {
+    margin-bottom: 2rem;
+}
+
+.book-trailer-badge {
+    display: inline-block;
+    padding: 0.4rem 1.2rem;
+    border-radius: 999px;
+    background: rgba(251, 111, 146, 0.1);
+    border: 1px solid rgba(251, 111, 146, 0.2);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--color-pink);
+    margin-bottom: 0.8rem;
+}
+
+.book-trailer-title {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0.5rem 0 0;
+    letter-spacing: -0.5px;
+}
+
+.book-trailer-frame {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: #000;
+}
+
+.book-trailer-video {
+    width: 100%;
+    height: auto;
+    display: block;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+}
+
+/* ===== BOOK THEMES / TROPES SECTION ===== */
+.book-themes-section {
+    max-width: 700px;
+    margin: 3rem auto 4rem;
+    padding: 0 1.5rem;
+}
+
+.book-themes-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.book-theme-card {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    border-radius: 999px;
+    background: rgba(251, 111, 146, 0.06);
+    border: 1px solid rgba(251, 111, 146, 0.15);
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    transition: all 0.4s ease;
+    white-space: nowrap;
+}
+
+.book-theme-card i {
+    color: var(--color-pink);
+    font-size: 1rem;
+    opacity: 0.8;
+}
+
+.book-theme-card:hover {
+    background: rgba(251, 111, 146, 0.12);
+    border-color: rgba(251, 111, 146, 0.35);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(251, 111, 146, 0.15);
+}
+
+/* ===== BOOK NAVIGATION FOOTER ===== */
+.book-nav-footer {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    padding: 2rem 1.5rem 4rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.book-nav-footer .btn-text {
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--color-pink);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+    border-bottom: 2px solid transparent;
+    padding-bottom: 4px;
+}
+
+.book-nav-footer .btn-text:hover {
+    border-bottom-color: var(--color-pink);
+    transform: translateY(-2px);
+}
+
+/* Responsive adjustments for trailer & themes */
+@media (max-width: 768px) {
+    .book-trailer-section {
+        margin: 2.5rem auto;
+        padding: 0 1rem;
+    }
+
+    .book-trailer-title {
+        font-size: 1.5rem;
+    }
+
+    .book-trailer-frame {
+        border-radius: 14px;
+    }
+
+    .book-themes-section {
+        margin: 2rem auto 3rem;
+        padding: 0 1rem;
+    }
+
+    .book-theme-card {
+        font-size: 0.75rem;
+        padding: 0.5rem 0.9rem;
+    }
+
+    .book-nav-footer {
+        gap: 1.5rem;
+        padding: 1.5rem 1rem 3rem;
+    }
+
+    .book-nav-footer .btn-text {
+        font-size: 0.75rem;
+        letter-spacing: 1.5px;
+    }
+}
