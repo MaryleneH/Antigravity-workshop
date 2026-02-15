@@ -463,11 +463,22 @@ a:hover {
 
 .featured-card .book-cover {
     height: auto !important;
-    max-height: 600px;
+    max-height: 550px;
     border-radius: 20px;
     box-shadow: 20px 20px 60px rgba(0, 0, 0, 0.3);
     transform: rotate(-2deg);
     transition: all 0.6s var(--ease-elegant);
+    overflow: visible !important;
+    /* Ensure shadows aren't clipped */
+}
+
+.featured-book-img {
+    width: 100%;
+    height: auto;
+    max-height: 550px;
+    display: block;
+    border-radius: 20px;
+    object-fit: cover;
 }
 
 .featured-card:hover .book-cover {
@@ -500,6 +511,12 @@ a:hover {
     margin-bottom: 2.5rem !important;
 }
 
+.featured-buttons {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+
 @media (max-width: 991px) {
     .featured-card {
         grid-template-columns: 1fr;
@@ -520,6 +537,17 @@ a:hover {
 
     .featured-card h3 {
         font-size: 2.2rem !important;
+    }
+
+    .featured-buttons {
+        flex-direction: column;
+        gap: 1.2rem;
+    }
+
+    .featured-buttons .btn-primary,
+    .featured-buttons .btn-text {
+        width: 100%;
+        text-align: center;
     }
 }
 
