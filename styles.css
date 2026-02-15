@@ -1676,7 +1676,8 @@ body.quarto-dark .cta-extrait {
 /* Editorial Meta Row: Mood, Time, Vibe */
 .editorial-meta-row {
     display: flex;
-    gap: 2rem;
+    flex-wrap: wrap;
+    gap: 1.5rem;
     margin: 2rem 0 3rem;
     padding-bottom: 1.5rem;
     border-bottom: 1px solid rgba(251, 111, 146, 0.1);
@@ -1686,6 +1687,14 @@ body.quarto-dark .cta-extrait {
     text-transform: uppercase;
     letter-spacing: 1.5px;
     justify-content: center;
+}
+
+@media (max-width: 576px) {
+    .editorial-meta-row {
+        gap: 0.8rem;
+        font-size: 0.7rem;
+        margin-top: 1rem;
+    }
 }
 
 .meta-item {
