@@ -43,9 +43,9 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-7a136591200b6a3f84d526b3fe07292e.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-a850f4f179c6b7d136fa67b6d712e335.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../site_libs/bootstrap/bootstrap-7a136591200b6a3f84d526b3fe07292e.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-35d0a6050bfda45781cfffbdd07f5df4.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-d32620f2e56b1afdf4c8c08a71d9de31.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-35d0a6050bfda45781cfffbdd07f5df4.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -380,9 +380,8 @@ ul.task-list li input[type="checkbox"] {
 <p><strong>Le feu et la glace peuvent-ils s'unir quand on le demande au Père Noël ?</strong></p>
 </div>
 
-<div class="book-actions">
+                <div class="book-actions">
                     <a href="https://amzn.eu/d/29uxnJ6" class="btn-primary" target="_blank">Acheter sur Amazon</a>
-                    <a href="extraits/extrait-buche.html" class="btn-text">Lire un extrait</a>
                 
     <a href="../romans.html" class="btn-text"><i class="bi bi-arrow-left"></i> Retour</a>
 </div>
@@ -392,6 +391,38 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+
+```{=html}
+<!-- Floating Mobile Navigation -->
+<div class="mobile-nav-actions" id="mobileNav">
+  <button id="backToTopBtn" class="nav-btn-floating" aria-label="Retour en haut">
+    <i class="bi bi-arrow-up-short"></i>
+  </button>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const mobileNav = document.getElementById('mobileNav');
+    const backToTopBtn = document.getElementById('backToTopBtn');
+
+    if (mobileNav && backToTopBtn) {
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 500) {
+                mobileNav.classList.add('visible');
+            } else {
+                mobileNav.classList.remove('visible');
+            }
+        });
+
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    }
+});
+</script>
 
 
 
