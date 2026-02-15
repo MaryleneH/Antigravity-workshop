@@ -11,14 +11,22 @@ format:
 
 ![](../images/blog/2025-salons-header.jpg){.img-chic-frame fig-cap="De Thuit Romance à Pyrélivres : des rencontres, des sourires et de belles histoires." fig-alt="Photos de salons du livre et ambiance chaleureuse" fig-align="center"}
 
+<div class="editorial-meta-row">
+  <div class="meta-item"><i class="bi bi-chat-heart"></i> Mood: Nostalgique & Comblée</div>
+  <div class="meta-item"><i class="bi bi-clock"></i> 4 min read</div>
+  <div class="meta-item"><i class="bi bi-journal-check"></i> Retour de Salons</div>
+</div>
+
+::: {.editorial-intro-lead}
+Et me voilà de retour dans mon blog ! Je viens d’enchaîner la rentrée et surtout pas moins de deux salons pendant les vacances. Il s’agissait du salon **`Thuit romance`** ainsi que du salon **`Pyrélivres`**. Deux lieux. Deux ambiances. Cependant, j’y ai retrouvé la même entraide et la même chaleur dans les deux. Là où **`Thuit`** est consacré à la romance sous toutes ses formes, **`Pyrelivres`** est généraliste. C’est une première pour moi !
+:::
+
 <div class="editorial-sep">✦ ✦ ✦</div>
 
-Et me voilà de retour dans mon blog ! Je viens d’enchaîner la rentrée et surtout pas moins de deux salons pendant les vacances. Il s’agissait du salon **`Thuit romance`** ainsi que du salon **`Pyrélivres`**. Deux lieux. Deux ambiances. Cependant, j’y ai retrouvé la même entraide et la même chaleur dans les deux. Là où **`Thuit`** est consacré à la romance sous toutes ses formes, **`Pyrelivres`** est généraliste. C’est une première pour moi !
-
-::: {layout-ncol=3}
-![](images/paste-1.png)
-![](images/paste-1.jpeg)
-![](images/paste-2.png)
+::: {.editorial-gallery layout-ncol=3}
+![Chiner dans les allées...](images/paste-1.png){.img-chic-frame}
+![Rencontres précieuses](images/paste-1.jpeg){.img-chic-frame}
+![Dédicaces et sourires](images/paste-2.png){.img-chic-frame}
 :::
 
 Je pense qu’il ne faut pas hésiter à chiner dans ces salons, même quand on se dit qu’on ne va pas trouver ce qu’on aime lire. Les découvertes sont très intéressantes. J’y ai acheté le livre `Héritage` de **Benito Sanchez**. Moi qui adore Stephen King, on est plongé dans un univers à la Shining des plus flippants. Je vous dirai ce que j’en ai pensé.

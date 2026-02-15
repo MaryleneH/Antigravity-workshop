@@ -6,6 +6,12 @@ description: "Annonce de la duologie AT — exclusivité au salon Love story à 
 image: ../../images/blog/AT_blog.png 
 ---
 
+<div class="editorial-meta-row">
+  <div class="meta-item"><i class="bi bi-journal-album"></i> Mood: Intense & Sombre</div>
+  <div class="meta-item"><i class="bi bi-clock"></i> 5 min read</div>
+  <div class="meta-item"><i class="bi bi-megaphone"></i> Annonce Officielle</div>
+</div>
+
 ::: {.nr-cover-feature}
 ![](../images/couvertures/AT_couverture.PNG){.nr-cover-img .img-chic-frame alt="Couverture — AT (tome 1)"}
 
@@ -21,9 +27,11 @@ Une romance dure, sombre et tellement… ordinaire.
 <div class="editorial-sep">✦ ✦ ✦</div>
 
 
-# Une duologie à paraitre : **`"AT"`**
+::: {.editorial-intro-lead}
+Je vous avais promis une toute nouvelle histoire et c’est chose faite. Cette fois, nous avons affaire à une romance dure, sombre et tellement… ordinaire. Athénaïs, c’est la femme qu’on a été, qu’on a croisée, notre mère, notre amie, notre fille.
+:::
 
-Je vous avais promis une toute nouvelle histoire et c’est chose faite. Cette fois, nous avons affaire à une romance dure, sombre et tellement…ordinaire. **Athénaïs**, c’est la femme qu’on a été, qu’on a croisée, notre mère, notre amie, notre fille. `AT`, c’est nous toutes parce que ce qui va lui arriver peut arriver à toutes les femmes. Nous allons suivre cette héroïne sur plusieurs années et nous allons aimer, vivre et souffrir avec elle. Je vous laisse découvrir la couverture du tome 1 ainsi que le résumé. Le livre sera vendu en exclusivité au salon Love story à Mons, en Belgique, du 21 au 22 mars 2026. J’espère que mon héroïne vous marquera à jamais.
+<div class="editorial-sep">✦ ✦ ✦</div>
 
 > “Je m’appelle **Athénaïs** mais **`AT`**, aux États-Unis, c’est plus facile à prononcer.  
 > Je ne suis pas spécialement jolie, je ne suis pas la plus intelligente ni la plus douée de toutes les autres filles de l’université de Philadelphie, là où Nick et moi, nous nous sommes rencontrés. C’est pourtant moi qu’il a choisi. C’est de lui dont je suis éperdument amoureuse, et ça, pour toujours. Je suis certaine désormais que les contes de fées existent. Et je m’y connais, moi, en contes de fées. J’adore en lire et écrire est une passion que celui que j’aime est le seul à connaitre et à encourager. Nick, c’est l’homme idéal, un partenaire de vie. Un tout.  

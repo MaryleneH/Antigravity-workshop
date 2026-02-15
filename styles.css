@@ -1673,6 +1673,51 @@ body.quarto-dark .cta-extrait {
     color: var(--color-pink) !important;
 }
 
+/* Editorial Meta Row: Mood, Time, Vibe */
+.editorial-meta-row {
+    display: flex;
+    gap: 2rem;
+    margin: 2rem 0 3rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid rgba(251, 111, 146, 0.1);
+    font-family: var(--font-body);
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    justify-content: center;
+}
+
+.meta-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.meta-item i {
+    color: var(--color-pink);
+    font-size: 1rem;
+    opacity: 0.8;
+}
+
+/* Editorial Lead Paragraph */
+.editorial-intro-lead {
+    font-size: 1.25rem;
+    line-height: 1.8;
+    color: var(--color-green);
+    font-style: italic;
+    margin-bottom: 3rem;
+    position: relative;
+    padding-left: 1.5rem;
+    border-left: 3px solid var(--color-pink-glow);
+}
+
+/* Specific Drop Cap adjustment for Lead */
+.editorial-intro-lead::first-letter {
+    font-size: 5rem !important;
+    margin-top: 0.2rem !important;
+}
+
 /* Footer Back Link */
 .back-home {
     margin: 3rem auto;

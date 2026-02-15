@@ -12,15 +12,21 @@ format:
     smooth-scroll: true
 ---
 
-Les fêtes sont productives !
+<div class="editorial-meta-row">
+  <div class="meta-item"><i class="bi bi-snow"></i> Mood: Inspirée & Productive</div>
+  <div class="meta-item"><i class="bi bi-clock"></i> 2 min read</div>
+  <div class="meta-item"><i class="bi bi-stars"></i> Écriture & Fêtes</div>
+</div>
 
-![](../images/blog/photo_article1.PNG){.img-chic-frame fig-align="center" width="100%"}
+::: {.editorial-intro-lead}
+Les fêtes sont productives ! En tant que prof, je bénéficie de deux semaines de vacances toutes les cinq ou sept semaines. Si la majeure partie de cette période est consacrée aux corrections de copies et à la construction de mes cours, je laisse toujours une part très importante à l’écriture.
+:::
+
+![](../images/blog/photo_article1.PNG){.img-chic-frame fig-cap="L'ambiance feutrée des fêtes, compagne idéale de l'écriture." fig-align="center" width="100%"}
 
 <div class="editorial-sep">✦ ✦ ✦</div>
 
-Les fêtes sont productives !
-
-En tant que prof, je bénéficie de deux semaines de vacances toutes les cinq ou sept semaines. Si la majeure partie de cette période est consacrée aux corrections de copies et à la construction de mes cours, je laisse toujours une part très importante à l’écriture. Cependant, les vacances de Noël sont particulières. Les fêtes prennent beaucoup de place et c’est une vraie difficulté d’écrire. J’ai eu la chance de terminer le manuscrit de **`Prends de la bûche !`** avant cette période, ce qui fait que c’est la tête pleine de lumières que j’ai commencé l’écriture de ma prochaine histoire.
+Cependant, les vacances de Noël sont particulières. Les fêtes prennent beaucoup de place et c’est une vraie difficulté d’écrire. J’ai eu la chance de terminer le manuscrit de **`Prends de la bûche !`** avant cette période, ce qui fait que c’est la tête pleine de lumières que j’ai commencé l’écriture de ma prochaine histoire.
 
 ## Une histoire très sombre
 
@@ -28,7 +34,7 @@ J’ai laissé teaser quelques indices sur mes réseaux sociaux mais je ne peux 
 
 Le thème est fort et sombre. Comme ceux qui me lisent le savent, désormais, tout peut arriver à mes personnages. Je vais aller au-delà de la romance pour parler d’une histoire prenante, réaliste et poignante.
 
-![](../images/blog/photo_article2.PNG){.img-offset-right fig-align="center" width="80%"}
+![](../images/blog/photo_article2.PNG){.img-offset-right fig-cap="Indices et secrets..." fig-align="center" width="80%"}
 
 > **Note d'auteure** : Désormais, tout peut arriver à mes personnages. Un roman anniversaire, une intensité assumée — et une sortie qui se précise.
 
