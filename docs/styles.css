@@ -583,17 +583,18 @@ body.quarto-dark .featured-card .book-cover {
 
     .featured-card {
         flex-direction: column !important;
-        padding: 4rem 1.5rem !important;
+        padding: 4rem 1.8rem !important;
         gap: 3.5rem;
-        margin: 2rem 0 !important;
-        /* No horizontal margin to fill screen */
-        border-radius: 0 !important;
-        /* Edge-to-edge look for maximal impact */
-        width: 100% !important;
+        margin: 2.5rem 0.8rem !important;
+        /* Elegant 0.8rem side margins */
+        border-radius: 40px !important;
+        /* Curved for boutique feel */
+        width: auto !important;
+        /* Takes available space with margins */
         max-width: none !important;
-        border-left: none !important;
-        border-right: none !important;
+        border: 1px solid rgba(255, 255, 255, 0.08) !important;
         text-align: center;
+        box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3) !important;
     }
 
     .featured-card .book-cover {
