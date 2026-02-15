@@ -20,7 +20,7 @@ format:
         </div>
         <div class="hero-content fade-in">
             <h1>Mo Gadarr</h1>
-            <p class="subtitle">Au-delà de la passion : une New Romance engagée qui bouscule les cœurs.</p>
+            <p class="subtitle">Une New Romance engagée qui bouscule les cœurs.</p>
             <a href="romans.html" class="btn-primary">Explorer la Collection</a>
         </div>
     </div>

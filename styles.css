@@ -3617,19 +3617,45 @@ body.about-page-body {
 .heart-stroke-1 {
     stroke-dasharray: 1000;
     stroke-dashoffset: 1000;
-    animation: draw-heart 2.5s ease-out forwards;
+    animation: draw-heart-loop 6s ease-in-out infinite;
 }
 
 .heart-stroke-2 {
     stroke-dasharray: 1000;
     stroke-dashoffset: 1000;
-    animation: draw-heart 3s ease-out 0.5s forwards;
+    animation: draw-heart-loop 6s ease-in-out infinite;
+    animation-delay: 0.3s;
     opacity: 0.6;
 }
 
-@keyframes draw-heart {
-    to {
+@keyframes draw-heart-loop {
+    0% {
+        stroke-dashoffset: 1000;
+        opacity: 0;
+    }
+
+    5% {
+        stroke-dashoffset: 1000;
+        opacity: 1;
+    }
+
+    30% {
         stroke-dashoffset: 0;
+    }
+
+    75% {
+        stroke-dashoffset: 0;
+        opacity: 1;
+    }
+
+    90% {
+        stroke-dashoffset: 0;
+        opacity: 0;
+    }
+
+    100% {
+        stroke-dashoffset: 1000;
+        opacity: 0;
     }
 }
 
