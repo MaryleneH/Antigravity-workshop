@@ -1,0 +1,118 @@
+---
+title: "Prends de la bûche"
+subtitle: "Dernier roman"
+description: "La nouveauté de Mo Gadarr"
+title-block-banner: images/hero-buche-light.svg
+page-layout: full
+toc: false
+body-classes: dernier-livre
+---
+
+<!-- ===== HERO / ACCROCHE ===== -->
+<div class="cta" style="margin: 1rem 0 2rem 0;">
+  <span class="material-icons" aria-hidden="true">auto_awesome</span>
+  <strong>Nouveauté</strong> — Découvrez <em>Prends de la bûche</em> • 
+  <a href="#resume" role="button">résumé</a>
+</div>
+
+<!-- ===== FORMATS & PRIX (compact) ===== -->
+<section class="formats-prix-modern" markdown="1">
+
+### Formats & prix
+- **Ebook** : 0,99 € (prix de lancement jusqu’au 17 octobre 2025)
+- **Broché** : 15 €
+- **Relié** : 18 €
+- **Abonnement Kindle**
+- 381 pages
+
+<div class="prix-right">
+  <a class="btn btn-primary"
+     href="https://amzn.eu/d/d3MMSlg"
+     target="_blank" rel="noopener noreferrer" role="button"
+     aria-label="Acheter sur Amazon">
+     Acheter
+  </a>
+
+  <a class="btn btn-secondary"
+     href="https://mogadarr.github.io/lire-mogadarr/romans/extraits/extrait-buche.html"
+     role="button"
+     aria-label="Lire un extrait">
+     Lire un extrait
+  </a>
+</div>
+
+</section>
+
+<br></br>
+
+
+
+<!-- ===== TRAILER (responsive, shortcode conservé) ===== -->
+::: {#trailer .book-trailer}
+### `♡` `♡` - Trailer -`♡´-
+{{< video assets/Trailer.mp4 fig-cap="Trailer — Prends de la bûche" title="Trailer — Prends de la bûche" >}}
+:::
+
+
+<!-- ===== AMBIANCE ===== -->
+<div class="card" style="padding:1.25rem; margin-top:1.5rem;" markdown="1">
+### Ambiance
+Hiver canadien, forêt, scierie, pâtisseries trompe-l’œil et magie de Noël — un duo que tout oppose, jusqu’à la bûche !
+</div>
+
+<!-- ===== 2 COLONNES (image à gauche, texte à droite) ===== -->
+<section class="book-two-col reverse" markdown="1">
+
+<div class="book-cover">
+  <img src="images/dernier-livre.jpg" alt="Couverture de Prends de la bûche">
+</div>
+
+<div class="resume" id="resume" markdown="1">
+
+### Résumé
+
+Il existe un seul bûcheron de profession dans la ville de Treecourt, au Canada.  
+Détrompez-vous : il ne s'agit pas d'un barbu aux muscles surdimensionnés. C'est une femme.  
+Nicola n'a jamais voulu rentrer dans le moule qu'on lui prédestinait. Patronne de la scierie de son village, bûcheronne passionnée par le bois, femme de caractère, elle refuse de voir sa forêt sacrifiée pour une usine de pâtisseries françaises.  
+Elle compte bien barrer la route à cette franchise représentée par Zack, un pâtissier hors pair qui s'est notamment fait connaitre sur le net avec ses gâteaux trompe-l'œil et surtout avec sa bûche de Noël, plus vraie que nature et tellement délicieuse.  
+C'est ainsi qu'il tente de convaincre la municipalité de Treecourt de lui céder son immense terrain, une zone boisée et très chère aux yeux de Nicola.  
+
+Mais alors que l'opposition entre les deux représentants de la bûche est complète, le hasard va s'en mêler…  
+Une petite sœur fan de la Reine des Neiges, un vieux chien gaga et surtout la magnifique magie de Noël.  
+
+Le rapprochement sera inévitable, musclé et... terriblement sucré !
+
+À Noël, quelle sera votre bûche préférée ?  
+
+**Tropes :** Enemies to lovers, conflits familiaux, préjugés, féminisme, green flag, passé douloureux
+
+</div>
+
+</section>
+
+<br></br>
+
+<!-- ===== Bouton flottant Lecture Trailer (mobile only) ===== -->
+<a href="#trailer" class="fab-trailer" aria-label="Voir la bande-annonce">
+  <span class="fab-icon" aria-hidden="true">►</span>
+  <span class="fab-label">Trailer</span>
+</a>
+
+
+
+<div class="back-home">
+  <a href="https://mogadarr.github.io/lire-mogadarr/romans" class="btn-back" role="button" aria-label="Découvrir les romans">
+    <span class="arrow">-`♡´-</span> Découvrir les romans
+  </a>
+
+</div>
+
+<br></br>
+
+<div class="back-home">
+  <a href="https://mogadarr.github.io/lire-mogadarr/" class="btn-back" role="button" aria-label="Retour à l’accueil">
+    <span class="arrow">←</span> Retour à l’accueil
+  </a>
+</div>
+
+
