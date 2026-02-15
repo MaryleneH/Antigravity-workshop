@@ -669,13 +669,16 @@ a:hover {
 }
 
 .book-hero-cover {
-    width: 220px;
-    /* Increased from 180px for better visibility */
-    height: auto;
-    border-radius: 5px;
-    box-shadow: -15px 15px 25px rgba(0, 0, 0, 0.4);
-    transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.6s ease;
-    transform-origin: center;
+    width: auto;
+    max-width: 100%;
+    max-height: 480px;
+    /* Reduced from default large size */
+    border-radius: 8px;
+    box-shadow: var(--shadow-deep);
+    transform: perspective(1000px) rotateY(-15deg);
+    transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+    margin-bottom: 3rem;
+    /* Added breathing room below cover */
 }
 
 @media (max-width: 576px) {
@@ -825,6 +828,21 @@ a:hover {
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
 }
 
+.editorial-meta-row {
+    display: flex;
+    justify-content: flex-start;
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--color-pink);
+    font-weight: 700;
+    flex-wrap: wrap;
+    /* Better on mobile */
+    padding: 0 0.5rem;
+}
+
 .vignette-genre {
     font-size: 0.75rem;
     text-transform: uppercase;
@@ -917,17 +935,16 @@ a:hover {
 /* ===== PRICE SECTION REDESIGN (Premium Card) ===== */
 .formats-prix-premium {
     display: flex;
-    gap: 1.5rem;
-    margin: 2rem 0 3rem;
-    padding: 1.2rem 1.8rem;
-    background: rgba(251, 111, 146, 0.05);
-    backdrop-filter: blur(10px);
-    border-radius: 15px;
-    border: 1px solid rgba(251, 111, 146, 0.15);
+    flex-direction: column;
+    gap: 0.8rem;
+    margin: 1.5rem 0 2.5rem;
+    padding: 1.2rem;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
     width: fit-content;
-    justify-content: flex-start;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
+    align-items: flex-start;
+    /* Left-aligned for boutique feel */
 }
 
 .formats-prix-premium:hover {
@@ -938,8 +955,9 @@ a:hover {
 
 .format-item {
     display: flex;
-    flex-direction: column;
-    position: relative;
+    align-items: center;
+    gap: 1.5rem;
+    width: 100%;
 }
 
 .format-item:not(:last-child)::after {
@@ -963,13 +981,12 @@ a:hover {
 }
 
 .format-price {
-    font-size: 1.3rem;
-    font-weight: 800;
-    font-family: var(--font-heading);
-    color: #fff;
-    line-height: 1;
-    white-space: nowrap;
-    /* Prevent wrapping (e.g., 2.99 €) */
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--color-pink);
+    letter-spacing: -0.5px;
+    margin-left: auto;
+    /* Push price to the right for clarity */
 }
 
 body.quarto-light .format-price {
@@ -1974,12 +1991,51 @@ blockquote::before {
 }
 
 /* Media styling (Refined) */
-.column-body img {
-    border-radius: 12px !important;
-    margin: 3.5rem 0 1rem !important;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    transition: all 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
-    border: 1px solid rgba(0, 0, 0, 0.05);
+/* Editorial Image System (Boutique/Magazine feel) */
+.editorial-figure {
+    margin: 5rem 0;
+    width: 100%;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.editorial-img-wrapper {
+    position: relative;
+    background: #fff;
+    padding: 12px;
+    box-shadow: var(--shadow-deep);
+    transform: rotate(-1.5deg) translateX(-10px);
+    transition: all 0.8s var(--ease-elegant);
+}
+
+.editorial-figure:nth-child(even) .editorial-img-wrapper {
+    transform: rotate(1deg) translateX(10px);
+}
+
+.editorial-img-wrapper img {
+    border-radius: 0 !important;
+    margin: 0 !important;
+    display: block;
+    width: 100%;
+    filter: sepia(0.1);
+}
+
+.editorial-img-wrapper:hover {
+    transform: rotate(0) scale(1.02);
+    z-index: 10;
+}
+
+/* Caption for Editorial Images */
+.editorial-caption {
+    font-family: var(--font-heading);
+    font-style: italic;
+    font-size: 0.95rem;
+    color: var(--color-pink);
+    text-align: right;
+    margin-top: 1.5rem;
+    padding-right: 1rem;
+    border-right: 3px solid var(--color-pink-soft);
 }
 
 body.quarto-dark .column-body img {

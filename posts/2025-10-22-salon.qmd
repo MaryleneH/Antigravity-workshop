@@ -21,7 +21,12 @@ Du 24 au 25 octobre 2025, je pars en dédicace à **Thuit De L’oison** au fest
 
 Par contre, mes peurs restent intactes, comme c’est le cas à chaque salon. J’ai toujours la frousse de ne rencontrer personne, de ne discuter avec aucun lecteur, qu’aucun livre ne soit vendu, que ma masterclass n’intéresse pas. Je croise les doigts pour que tout cela n’arrive pas ! Je les croise fort fort !
 
-![](../images/blog/business.jpg){.img-chic-frame .img-offset-right fig-cap="Derniers préparatifs : entre excitation et trac."}
+<figure class="editorial-figure fade-in-scroll">
+  <div class="editorial-img-wrapper">
+    <img src="../images/blog/business.jpg" alt="Derniers préparatifs : entre excitation et trac.">
+  </div>
+  <figcaption class="editorial-caption">Derniers préparatifs : entre excitation et trac.</figcaption>
+</figure>
 
 
 <!-- more -->

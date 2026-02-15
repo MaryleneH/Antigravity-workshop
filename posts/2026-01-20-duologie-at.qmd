@@ -13,7 +13,12 @@ image: ../../images/blog/AT_blog.png
 </div>
 
 ::: {.nr-cover-feature}
-![](../images/couvertures/AT_couverture.PNG){.nr-cover-img .img-chic-frame alt="Couverture — AT (tome 1)"}
+<figure class="editorial-figure fade-in-scroll">
+  <div class="editorial-img-wrapper">
+    <img src="../images/blog/mystery_cover.jpg" alt="La Duologie A.T.">
+  </div>
+  <figcaption class="editorial-caption">A.T. : Une duologie qui m'a tant apporté.</figcaption>
+</figure>
 
 <div class="nr-cover-meta">
 <span class="nr-badge">Nouvelle duologie</span>

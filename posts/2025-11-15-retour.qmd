@@ -9,7 +9,12 @@ format:
     toc: false
 ---
 
-![](../images/blog/2025-salons-header.jpg){.img-chic-frame fig-cap="De Thuit Romance à Pyrélivres : des rencontres, des sourires et de belles histoires." fig-alt="Photos de salons du livre et ambiance chaleureuse" fig-align="center"}
+<figure class="editorial-figure fade-in-scroll">
+  <div class="editorial-img-wrapper">
+    <img src="../images/blog/2025-salons-header.jpg" alt="De Thuit Romance à Pyrélivres : des rencontres, des sourires et de belles histoires.">
+  </div>
+  <figcaption class="editorial-caption">De Thuit Romance à Pyrélivres : des rencontres, des sourires et de belles histoires.</figcaption>
+</figure>
 
 <div class="editorial-meta-row">
   <div class="meta-item"><i class="bi bi-chat-heart"></i> Mood: Nostalgique & Comblée</div>

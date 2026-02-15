@@ -6,6 +6,13 @@ description: "Réimpression de Black Feelings : à nouveau disponible à la dema
 image: ../images/couvertures/black-feelings-tome-1.jpg 
 ---
 
+<figure class="editorial-figure fade-in-scroll">
+  <div class="editorial-img-wrapper">
+    <img src="../images/couvertures/black-feelings-tome-1.jpg" alt="Black Feelings — Tome 1">
+  </div>
+  <figcaption class="editorial-caption">Black Feelings : la renaissance d'une histoire chère à mon cœur.</figcaption>
+</figure>
+
 # Black Feelings réimprimé
 
 <div class="editorial-meta-row">

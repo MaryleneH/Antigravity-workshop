@@ -34,15 +34,15 @@ format:
     <div class="featured-wrapper">
         <div class="book-card featured-card fade-in-scroll">
             <div class="book-cover">
-                <div class="book-placeholder-art" style="background: linear-gradient(135deg, #c0392b, #f1c40f);"></div>
+                <img src="dernier_roman/images/dernier-livre.jpg" alt="Prends de la bûche !" class="featured-book-img">
             </div>
             <div class="book-info">
-                <h3>Minuit à Paris</h3>
-                <span class="genre">Romance Contemporaine</span>
-                <p>Deux étrangers, une ville lumière, et une rencontre qui change tout.</p>
+                <h3>Prends de la bûche !</h3>
+                <span class="genre">Romance de Noël • Comédie</span>
+                <p>Nicola est bûcheronne. Zack est pâtissier. Entre la forêt et les gâteaux, qui remportera la bûche ?</p>
                 <div class="featured-buttons">
-                    <a href="#" class="btn-primary">Commander</a>
-                    <a href="romans.html" class="btn-text">Voir tous les romans &rarr;</a>
+                    <a href="dernier_roman/prends_buche.html" class="btn-primary">Découvrir</a>
+                    <a href="romans.html" class="btn-text">Toute la collection &rarr;</a>
                 </div>
             </div>
         </div>

@@ -36,6 +36,38 @@
 </header>
 
 
+
+```{=html}
+<!-- Floating Mobile Navigation -->
+<div class="mobile-nav-actions" id="mobileNav">
+  <button id="backToTopBtn" class="nav-btn-floating" aria-label="Retour en haut">
+    <i class="bi bi-arrow-up-short"></i>
+  </button>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const mobileNav = document.getElementById('mobileNav');
+    const backToTopBtn = document.getElementById('backToTopBtn');
+
+    if (mobileNav && backToTopBtn) {
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 500) {
+                mobileNav.classList.add('visible');
+            } else {
+                mobileNav.classList.remove('visible');
+            }
+        });
+
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    }
+});
+</script>
 ```
 
 
