@@ -462,23 +462,25 @@ a:hover {
 }
 
 .featured-card .book-cover {
-    height: auto !important;
+    flex: 1;
+    min-height: 400px;
     max-height: 550px;
-    border-radius: 20px;
-    box-shadow: 20px 20px 60px rgba(0, 0, 0, 0.3);
+    border-radius: 24px;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
     transform: rotate(-2deg);
-    transition: all 0.6s var(--ease-elegant);
-    overflow: visible !important;
-    /* Ensure shadows aren't clipped */
+    transition: all 0.8s var(--ease-elegant);
+    overflow: hidden !important;
+    position: relative;
+    background: #000;
+    /* Fallback for loading */
 }
 
 .featured-book-img {
     width: 100%;
-    height: auto;
-    max-height: 550px;
-    display: block;
-    border-radius: 20px;
+    height: 100%;
     object-fit: cover;
+    display: block;
+    transition: transform 1.2s var(--ease-elegant);
 }
 
 .featured-card:hover .book-cover {
@@ -519,35 +521,60 @@ a:hover {
 
 @media (max-width: 991px) {
     .featured-card {
-        grid-template-columns: 1fr;
-        padding: 3rem 2rem;
+        display: flex !important;
+        flex-direction: column !important;
+        padding: 2.5rem 1.5rem !important;
         text-align: center;
-        gap: 2rem;
+        gap: 2.5rem;
+        margin: 2rem 1rem !important;
+        border-radius: 30px !important;
     }
 
     .featured-card .book-cover {
-        transform: none;
-        max-width: 400px;
+        transform: none !important;
+        width: 100%;
+        max-width: 320px;
+        min-height: 450px;
         margin: 0 auto;
     }
 
     .featured-card .book-info {
         text-align: center !important;
+        width: 100%;
     }
 
     .featured-card h3 {
         font-size: 2.2rem !important;
+        white-space: normal !important;
+        line-height: 1.2 !important;
+        margin-bottom: 1.2rem !important;
+    }
+
+    .featured-card .genre {
+        font-size: 0.7rem !important;
+        letter-spacing: 2px !important;
+        padding: 0.4rem 1.2rem !important;
+        margin-bottom: 2rem !important;
+    }
+
+    .featured-card p {
+        font-size: 1.05rem !important;
+        line-height: 1.6 !important;
+        margin-bottom: 2.5rem !important;
     }
 
     .featured-buttons {
         flex-direction: column;
-        gap: 1.2rem;
+        gap: 1rem;
+        width: 100%;
     }
 
     .featured-buttons .btn-primary,
     .featured-buttons .btn-text {
-        width: 100%;
-        text-align: center;
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 1rem !important;
+        font-size: 0.85rem !important;
     }
 }
 
