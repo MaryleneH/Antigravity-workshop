@@ -3584,3 +3584,110 @@ body.about-page-body {
         align-items: center;
     }
 }
+
+/* ===== HEART PORTRAIT (Hand-Sketched) ===== */
+.portrait-heart-container {
+    position: relative;
+    width: 380px;
+    height: 380px;
+    margin: 0 auto;
+}
+
+.heart-sketch-svg {
+    width: 100%;
+    height: 100%;
+    filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.3));
+    overflow: visible;
+    transform-origin: center;
+    animation: pulse-slow 6s ease-in-out infinite;
+}
+
+@keyframes pulse-slow {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.03);
+    }
+}
+
+.heart-stroke-1 {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    animation: draw-heart 2.5s ease-out forwards;
+}
+
+.heart-stroke-2 {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    animation: draw-heart 3s ease-out 0.5s forwards;
+    opacity: 0.6;
+}
+
+@keyframes draw-heart {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+/* Floating Mini Hearts */
+.floating-mini-heart {
+    position: absolute;
+    color: var(--color-pink);
+    font-family: system-ui;
+    /* Use emoji font */
+    font-size: 1.5rem;
+    pointer-events: none;
+    text-shadow: 0 0 10px var(--color-pink);
+    opacity: 0;
+    z-index: 5;
+}
+
+.h1 {
+    top: 15%;
+    right: 5%;
+    animation: float-mini 4s infinite ease-in;
+    animation-delay: 0.5s;
+}
+
+.h2 {
+    bottom: 10%;
+    left: 0%;
+    animation: float-mini 5s infinite ease-in;
+    animation-delay: 2s;
+    font-size: 1rem;
+}
+
+.h3 {
+    top: 0%;
+    left: 15%;
+    animation: float-mini 6s infinite ease-in;
+    animation-delay: 4s;
+    font-size: 1.2rem;
+}
+
+@keyframes float-mini {
+    0% {
+        transform: translateY(0) rotate(0deg) scale(0.5);
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 0.8;
+    }
+
+    100% {
+        transform: translateY(-40px) rotate(20deg) scale(1.2);
+        opacity: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .portrait-heart-container {
+        width: 300px;
+        height: 300px;
+    }
+}

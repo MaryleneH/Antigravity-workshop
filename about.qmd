@@ -26,10 +26,35 @@ format:
         
         <!-- Portrait Column (Left) -->
         <div class="about-portrait-section">
-            <div class="portrait-futuristic">
-                <div class="portrait-aura-ring"></div>
-                <!-- Using the same portrait but styled futuristically -->
-                <img src="images/author-portrait.png" class="portrait-img-hq" alt="Mo Gadarr — Auteure de New Romance">
+        <!-- Portrait Column (Left) -->
+        <div class="about-portrait-section">
+            <div class="portrait-heart-container">
+                <!-- SVG Wrapper containing both Image and Strokes -->
+                <svg class="heart-sketch-svg" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <clipPath id="heartClip">
+                             <path d="M100,35 C70,-10 0,20 10,80 C20,140 100,190 100,190 C100,190 180,140 190,80 C200,20 130,-10 100,35 Z" />
+                        </clipPath>
+                    </defs>
+                    
+                    <!-- The Photo (Clipped) -->
+                    <image href="images/author-portrait.png" width="200" height="200" preserveAspectRatio="xMidYMid slice" clip-path="url(#heartClip)" />
+                    
+                    <!-- Stroke 1: Main Outline -->
+                    <path d="M100,35 C70,-10 0,20 10,80 C20,140 100,190 100,190 C100,190 180,140 190,80 C200,20 130,-10 100,35 Z" 
+                          fill="none" stroke="var(--color-pink)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"
+                          class="heart-stroke-1"/>
+                    
+                    <!-- Stroke 2: Scribble/Offset -->
+                    <path d="M100,40 C75,0 5,25 15,85 C25,145 100,185 100,185 C100,185 175,145 185,85 C195,25 125,0 100,40" 
+                          fill="none" stroke="rgba(251, 111, 146, 0.5)" stroke-width="1.5" stroke-dasharray="6,4"
+                          class="heart-stroke-2"/>
+                </svg>
+                
+                <!-- Floating Animated Hearts -->
+                <div class="floating-mini-heart h1">❤</div>
+                <div class="floating-mini-heart h2">❤</div>
+                <div class="floating-mini-heart h3">❤</div>
             </div>
         </div>
 
