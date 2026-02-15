@@ -2782,7 +2782,7 @@ body.quarto-dark .editorial-img-wrapper {
 
 /* Specific Rotation Fix for Sideways Videos */
 .nr-video-rotate-90 {
-    transform: rotate(90deg) scale(1.8) !important;
+    transform: rotate(-90deg) scale(1.8) !important;
     /* Scale to fill the portrait frame */
     transform-origin: center center !important;
 }
