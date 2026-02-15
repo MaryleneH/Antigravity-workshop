@@ -2,6 +2,7 @@
 title: "Le Journal de Mo Gadarr"
 subtitle: "Espace d'écriture, coulisses et actualités"
 listing:
+  id: listing-blog
   contents: posts
   sort: "date desc"
   type: grid
@@ -21,3 +22,12 @@ title-block-banner: false
     <img src="images/blog-banner.jpg" alt="Explorer l'univers de Mo Gadarr" class="blog-banner-img">
 </div>
 ```
+
+::: {#listing-blog}
+:::
+
+<div class="back-home-container" style="text-align: center; margin: 4rem 0;">
+    <a href="index.html" class="btn-excerpt-back">
+        <i class="bi bi-arrow-left"></i> Retour à l'accueil
+    </a>
+</div>
