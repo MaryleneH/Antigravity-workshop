@@ -821,7 +821,14 @@ body.quarto-dark .featured-card .book-cover {
 body.romans #title-block-header,
 body.romans .quarto-title-block,
 body.dernier-livre #title-block-header,
-body.dernier-livre .quarto-title-block {
+body.dernier-livre .quarto-title-block,
+body:has(.book-hero) #title-block-header,
+body:has(.book-hero) .quarto-title-block {
+    display: none !important;
+}
+
+/* Also remove the gap the title-block-banner creates */
+body:has(.book-hero) .quarto-title-banner {
     display: none !important;
 }
 
