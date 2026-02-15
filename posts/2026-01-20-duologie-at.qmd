@@ -3,7 +3,7 @@ title: 'Une duologie à paraitre : "AT"'
 date: 2026-01-20
 categories: [Actualités, À venir]
 description: "Annonce de la duologie AT — exclusivité au salon Love story à Mons, en Belgique, du 21 au 22 mars 2026."
-image: ../images/couvertures/AT_blog.png 
+image: ../images/blog/AT_blog.png 
 ---
 
 <figure class="editorial-figure fade-in-scroll">
