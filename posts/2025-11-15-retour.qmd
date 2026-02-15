@@ -36,7 +36,7 @@ Aujourd’hui, je suis heureuse ! Je viens de recevoir une très belle nouvelle 
      
 <!-- ===== 3) RETOUR ===== -->
 <div class="back-home">
-  <a href="../index.qmd" class="btn-back" role="button" aria-label="Retour aux Romans">
+  <a href="../blog.qmd" class="btn-back" role="button" aria-label="Retour aux articles de blog">
     <span class="arrow">←</span> Retour aux articles de blog
   </a>
 </div>

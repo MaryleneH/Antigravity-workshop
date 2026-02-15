@@ -45,7 +45,7 @@ Je vous avais promis une toute nouvelle histoire et c’est chose faite. Cette f
 
 <!-- Bouton retour (mobile-friendly) -->
 <div class="back-home" style="margin-top:2rem;">
-  <a href="../index.qmd" class="btn-back" role="button" aria-label="Retour au journal">
-    <span class="arrow">←</span> Retour au journal
+  <a href="../blog.qmd" class="btn-back" role="button" aria-label="Retour aux articles de blog">
+    <span class="arrow">←</span> Retour aux articles de blog
   </a>
 </div>

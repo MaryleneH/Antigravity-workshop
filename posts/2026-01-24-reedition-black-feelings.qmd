@@ -79,7 +79,7 @@ Presque dix ans plus tard, mon tout premier roman est à nouveau disponible **à
 
 <!-- ===== 3) RETOUR ===== -->
 <div class="back-home">
-  <a href="../index.qmd" class="btn-back" role="button" aria-label="Retour au journal">
-    <span class="arrow">←</span> Retour au journal
+  <a href="../blog.qmd" class="btn-back" role="button" aria-label="Retour aux articles de blog">
+    <span class="arrow">←</span> Retour aux articles de blog
   </a>
 </div>

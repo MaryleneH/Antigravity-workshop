@@ -55,7 +55,7 @@ L’intrigue se passe en un mois et demi (novembre-décembre)
 
 <!-- ===== 3) RETOUR ===== -->
 <div class="back-home">
-  <a href="../index.qmd" class="btn-back" role="button" aria-label="Retour aux Romans">
+  <a href="../blog.qmd" class="btn-back" role="button" aria-label="Retour aux articles de blog">
     <span class="arrow">←</span> Retour aux articles de blog
   </a>
 </div>
