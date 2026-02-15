@@ -817,6 +817,14 @@ body.quarto-dark .featured-card .book-cover {
 
 /* ===== IMMERSIVE BOOK PAGES ===== */
 
+/* Hide the redundant Quarto title block on pages that use the custom hero */
+body.romans #title-block-header,
+body.romans .quarto-title-block,
+body.dernier-livre #title-block-header,
+body.dernier-livre .quarto-title-block {
+    display: none !important;
+}
+
 .book-hero {
     min-height: 80vh;
     position: relative;
