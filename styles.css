@@ -3770,18 +3770,19 @@ body.about-page-body {
 
     /* === MOBILE OPTIMIZATION: ABOUT PAGE === */
     .about-futuristic-wrapper {
-        padding: 2rem 1rem;
+        padding: 4rem 1rem 6rem;
         flex-direction: column;
         height: auto;
-        min-height: 100vh;
-        align-items: center;
+        min-height: auto;
+        display: flex;
     }
 
     .about-grid-content {
-        display: flex;
-        flex-direction: column;
+        display: flex !important;
+        flex-direction: column !important;
         gap: 3rem;
         width: 100%;
+        max-width: 100%;
     }
 
     .about-portrait-section {
@@ -3789,32 +3790,42 @@ body.about-page-body {
         width: 100%;
         display: flex;
         justify-content: center;
-        margin-top: 1rem;
+        margin-bottom: 1rem;
     }
 
     .portrait-heart-container {
-        width: 260px;
-        height: 260px;
+        width: 280px;
+        height: 280px;
+        margin: 0 auto;
     }
 
     .about-text-glass {
-        padding: 2rem 1.5rem;
+        padding: 2.5rem 1.5rem;
         width: 100%;
         box-sizing: border-box;
+        margin: 0;
     }
 
     .about-title-large {
         font-size: 2.5rem;
         text-align: center;
+        line-height: 1.1;
     }
 
     .about-subtitle {
         text-align: center;
         margin-bottom: 2rem;
+        display: block;
+    }
+
+    .about-bio-body {
+        text-align: left;
+        font-size: 1rem;
+        line-height: 1.6;
     }
 
     .fun-fact-box {
         margin-top: 2rem;
-        padding: 1.2rem;
+        padding: 1.5rem;
     }
 }
