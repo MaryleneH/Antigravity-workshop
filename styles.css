@@ -3464,3 +3464,123 @@ body.about-page-body {
         font-size: 2.5rem;
     }
 }
+
+/* ===== LATEST BOOK: PRENDS DE LA BUCHE ===== */
+
+/* Trailer Section */
+.book-trailer-section {
+    padding: 6rem 2rem;
+    text-align: center;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.2), transparent);
+}
+
+.book-trailer-header {
+    margin-bottom: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.book-trailer-badge {
+    background: rgba(251, 111, 146, 0.1);
+    color: var(--color-pink);
+    padding: 0.5rem 1.5rem;
+    border-radius: 50px;
+    border: 1px solid var(--color-pink);
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+.book-trailer-title {
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+.book-trailer-frame {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    aspect-ratio: 16/9;
+    background: #000;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.book-trailer-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Themes Grid */
+.book-themes-section {
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.book-themes-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.book-theme-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    /* fixed missing semi-colon */
+    border-radius: 20px;
+    min-width: 160px;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.book-theme-card:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.08);
+    border-color: var(--color-pink);
+}
+
+.book-theme-card i {
+    font-size: 2rem;
+    color: var(--color-pink);
+}
+
+.book-theme-card span {
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    color: #fff;
+}
+
+/* Footer Nav */
+.book-nav-footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 4rem 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+@media (max-width: 768px) {
+    .book-trailer-title {
+        font-size: 1.8rem;
+    }
+
+    .book-nav-footer {
+        flex-direction: column;
+        gap: 2rem;
+        align-items: center;
+    }
+}

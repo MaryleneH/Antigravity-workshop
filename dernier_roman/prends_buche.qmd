@@ -6,21 +6,31 @@ title-block-banner: true
 page-layout: full
 toc: false
 body-classes: romans
+format:
+  html:
+    link-external-newwindow: true
 ---
 
 ```{=html}
 <header class="book-hero">
-    <div class="book-hero-bg" style="background-image: url('../images/dernier-livre.jpg');"></div>
+    <!-- Background blurred image -->
+    <div class="book-hero-bg" style="background-image: url('../images/couvertures/noel-coups-bas.jpg');"></div>
+    
     <div class="book-hero-content">
         <div class="book-hero-card fade-in">
+            
+            <!-- Cover Image -->
             <div class="book-hero-cover-wrapper">
-                <img src="../images/dernier-livre.jpg" alt="Prends de la bûche — Mo Gadarr" class="book-hero-cover">
+                <img src="../images/couvertures/noel-coups-bas.jpg" alt="Prends de la bûche — Mo Gadarr" class="book-hero-cover">
             </div>
+
+            <!-- Book Info -->
             <div class="book-hero-info">
                 <span class="book-genre-pill">Romance de Noël • Enemies to Lovers</span>
                 <h1>Prends de la bûche</h1>
                 <p class="book-tagline">Hiver canadien, forêt, scierie, pâtisseries trompe-l'œil et magie de Noël — un duo que tout oppose, jusqu'à la bûche !</p>
                 
+                <!-- Prices Grid -->
                 <div class="formats-prix-premium">
                     <div class="format-item">
                         <span class="format-name">Ebook</span>
@@ -40,26 +50,26 @@ body-classes: romans
                     </div>
                 </div>
 
+                <!-- Synopsis -->
                 <div class="book-synopsis">
-<p>Il existe un seul bûcheron de profession dans la ville de Treecourt, au Canada.<br>
-Détrompez-vous : il ne s'agit pas d'un barbu aux muscles surdimensionnés. C'est une femme.</p>
+                    <p>Il existe un seul bûcheron de profession dans la ville de Treecourt, au Canada.<br>
+                    Détrompez-vous : il ne s'agit pas d'un barbu aux muscles surdimensionnés. C'est une femme.</p>
 
-<p><strong>Nicola</strong> n'a jamais voulu rentrer dans le moule qu'on lui prédestinait. Patronne de la scierie de son village, bûcheronne passionnée par le bois, femme de caractère, elle refuse de voir sa forêt sacrifiée pour une usine de pâtisseries françaises.</p>
+                    <p><strong>Nicola</strong> n'a jamais voulu rentrer dans le moule qu'on lui prédestinait. Patronne de la scierie de son village, bûcheronne passionnée par le bois, femme de caractère, elle refuse de voir sa forêt sacrifiée pour une usine de pâtisseries françaises.</p>
 
-<p>Elle compte bien barrer la route à cette franchise représentée par <strong>Zack</strong>, un pâtissier hors pair qui s'est notamment fait connaitre sur le net avec ses gâteaux trompe-l'œil et surtout avec sa bûche de Noël, plus vraie que nature et tellement délicieuse.</p>
+                    <p>Elle compte bien barrer la route à cette franchise représentée par <strong>Zack</strong>, un pâtissier hors pair qui s'est notamment fait connaitre sur le net avec ses gâteaux trompe-l'œil et surtout avec sa bûche de Noël, plus vraie que nature et tellement délicieuse.</p>
 
-<p>Mais alors que l'opposition entre les deux représentants de la bûche est complète, le hasard va s'en mêler…<br>
-Une petite sœur fan de la Reine des Neiges, un vieux chien gaga et surtout la magnifique magie de Noël.</p>
+                    <p>Mais alors que l'opposition entre les deux représentants de la bûche est complète, le hasard va s'en mêler…<br>
+                    Une petite sœur fan de la Reine des Neiges, un vieux chien gaga et surtout la magnifique magie de Noël.</p>
 
-<p>Le rapprochement sera inévitable, musclé et... <em>terriblement sucré !</em></p>
-
-<p><em>À Noël, quelle sera votre bûche préférée ?</em></p>
+                    <p>Le rapprochement sera inévitable, musclé et... <em>terriblement sucré !</em></p>
                 </div>
 
-<div class="book-actions">
-    <a href="https://amzn.eu/d/d3MMSlg" class="btn-primary" target="_blank" rel="noopener noreferrer">Acheter sur Amazon</a>
-    <a href="../romans/extraits/extrait-buche.html" class="btn-primary" style="background: transparent; border: 2px solid var(--color-pink); color: var(--color-pink);">Lire un extrait</a>
-</div>
+                <!-- Actions -->
+                <div class="book-actions">
+                    <a href="https://amzn.eu/d/d3MMSlg" class="btn-primary" target="_blank" rel="noopener noreferrer">Acheter sur Amazon</a>
+                    <a href="../romans/extraits/extrait-buche.html" class="btn-excerpt-outline">Lire un extrait</a>
+                </div>
 
             </div>
         </div>
@@ -75,7 +85,7 @@ Une petite sœur fan de la Reine des Neiges, un vieux chien gaga et surtout la m
         <h2 class="book-trailer-title">Découvrez l'univers</h2>
     </div>
     <div class="book-trailer-frame">
-        <video class="book-trailer-video" controls playsinline preload="metadata" poster="../images/dernier-livre.jpg">
+        <video class="book-trailer-video" controls playsinline preload="metadata" poster="../images/couvertures/noel-coups-bas.jpg">
             <source src="../assets/Trailer.mp4" type="video/mp4">
             Votre navigateur ne supporte pas la lecture de vidéos.
         </video>
@@ -121,35 +131,4 @@ Une petite sœur fan de la Reine des Neiges, un vieux chien gaga et surtout la m
     <a href="../romans.html" class="btn-text"><i class="bi bi-arrow-left"></i> Tous les romans</a>
     <a href="../index.html" class="btn-text"><i class="bi bi-house"></i> Accueil</a>
 </div>
-
-<!-- Floating Mobile Navigation -->
-<div class="mobile-nav-actions" id="mobileNav">
-  <button id="backToTopBtn" class="nav-btn-floating" aria-label="Retour en haut">
-    <i class="bi bi-arrow-up-short"></i>
-  </button>
-</div>
-
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-    const mobileNav = document.getElementById('mobileNav');
-    const backToTopBtn = document.getElementById('backToTopBtn');
-
-    if (mobileNav && backToTopBtn) {
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 500) {
-                mobileNav.classList.add('visible');
-            } else {
-                mobileNav.classList.remove('visible');
-            }
-        });
-
-        backToTopBtn.addEventListener('click', () => {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        });
-    }
-});
-</script>
 ```
