@@ -24,7 +24,7 @@ Les fêtes sont productives ! En tant que prof, je bénéficie de deux semaines 
 
 <figure class="editorial-figure fade-in-scroll">
   <div class="editorial-img-wrapper">
-    <img src="../images/blog/writing_dark_chic.jpg" alt="L'ambiance de travail chez Mo Gadarr">
+    <img src="../images/blog/mo-blog.png" alt="L'ambiance de travail chez Mo Gadarr">
   </div>
   <figcaption class="editorial-caption">L'ambiance de travail chez Mo Gadarr : entre ombres et lumière créatrice.</figcaption>
 </figure>
