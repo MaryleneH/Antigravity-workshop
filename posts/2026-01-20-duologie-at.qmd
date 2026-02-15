@@ -6,9 +6,9 @@ description: "Annonce de la duologie AT — exclusivité au salon Love story à 
 image: ../images/blog/AT_blog.png 
 ---
 
-::: {.editorial-figure .fade-in-scroll}
+::: {.editorial-figure}
 ::: {.editorial-img-wrapper}
-![](../images/couvertures/AT_couverture.PNG){alt="A.T. — Official Cover"}
+![](../images/couvertures/AT_couverture.PNG)
 :::
 
 ::: {.editorial-caption}
@@ -16,9 +16,9 @@ L'officielle couverture de mon nouveau roman.
 :::
 :::
 
-::: {.editorial-figure .fade-in-scroll}
+::: {.editorial-figure}
 ::: {.editorial-img-wrapper}
-![](../images/blog/AT_blog.png){alt="A.T. — Illustration"}
+![](../images/blog/AT_blog.png)
 :::
 
 ::: {.editorial-caption}
