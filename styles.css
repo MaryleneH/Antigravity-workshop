@@ -445,96 +445,108 @@ a:hover {
     line-height: 1.7;
 }
 
-/* Featured Section Refinements (Boutique Style) */
+/* Elite Featured Section: "Magazine Spread" Layout */
 .featured-card {
-    display: grid !important;
-    grid-template-columns: 1fr 1.2fr;
+    display: flex !important;
     align-items: center;
-    max-width: 1000px !important;
-    margin: 4rem auto !important;
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(15px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: var(--shadow-deep);
-    border-radius: 40px !important;
-    padding: 2rem;
-    gap: 3rem;
+    max-width: 1100px !important;
+    margin: 6rem auto !important;
+    gap: 4rem;
+    padding: 0 2rem;
+    background: transparent !important;
+    /* Clean magazine look */
+    border: none !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
 }
 
 .featured-card .book-cover {
     flex: 1;
-    min-height: 400px;
-    max-height: 550px;
-    border-radius: 24px;
-    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
-    transform: rotate(-2deg);
-    transition: all 0.8s var(--ease-elegant);
-    overflow: hidden !important;
     position: relative;
-    background: #000;
-    /* Fallback for loading */
+    padding: 15px;
+    background: #fff;
+    /* Elegant boutique frame */
+    box-shadow: 0 40px 100px rgba(0, 0, 0, 0.4);
+    transform: rotate(-3deg);
+    transition: all 0.8s var(--ease-elegant);
+    max-width: 450px;
+    z-index: 2;
+}
+
+body.quarto-dark .featured-card .book-cover {
+    background: #1a1a1a;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.featured-card:hover .book-cover {
+    transform: rotate(0) scale(1.03);
 }
 
 .featured-book-img {
     width: 100%;
-    height: 100%;
+    aspect-ratio: 4/5;
     object-fit: cover;
     display: block;
-    transition: transform 1.2s var(--ease-elegant);
-}
-
-.featured-card:hover .book-cover {
-    transform: rotate(0) scale(1.02);
+    border-radius: 4px;
+    /* Slight rounding within frame */
 }
 
 .featured-card .book-info {
+    flex: 1.2;
     text-align: left !important;
     padding: 0 !important;
 }
 
 .featured-card h3 {
-    font-size: 3rem !important;
-    margin-bottom: 1rem !important;
-    background: linear-gradient(45deg, var(--color-pink), #fff);
+    font-size: clamp(2.5rem, 6vw, 4.5rem) !important;
+    /* Elite responsive typography */
+    font-weight: 700 !important;
+    margin-bottom: 1.5rem !important;
+    line-height: 1 !important;
+    letter-spacing: -2px !important;
+    background: linear-gradient(135deg, var(--color-pink), #fff);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
 .featured-card .genre {
-    font-size: 0.85rem !important;
-    letter-spacing: 4px !important;
-    margin-bottom: 2rem !important;
+    font-size: 0.8rem !important;
+    letter-spacing: 5px !important;
+    margin-bottom: 2.5rem !important;
+    display: inline-block;
+    padding: 0.5rem 1.5rem !important;
+    border-radius: 50px !important;
+    background: rgba(251, 111, 146, 0.1) !important;
+    border: 1px solid var(--color-pink) !important;
 }
 
 .featured-card p {
-    font-size: 1.2rem !important;
-    color: rgba(255, 255, 255, 0.8) !important;
-    margin-bottom: 2.5rem !important;
+    font-size: clamp(1.1rem, 2vw, 1.3rem) !important;
+    line-height: 1.6 !important;
+    color: rgba(255, 255, 255, 0.85) !important;
+    margin-bottom: 3rem !important;
+    max-width: 500px;
 }
 
 .featured-buttons {
     display: flex;
-    gap: 1.5rem;
+    gap: 2rem;
     align-items: center;
 }
 
 @media (max-width: 991px) {
     .featured-card {
-        display: flex !important;
         flex-direction: column !important;
-        padding: 2.5rem 1.5rem !important;
-        text-align: center;
-        gap: 2.5rem;
-        margin: 2rem 1rem !important;
-        border-radius: 30px !important;
+        padding: 0 1.5rem !important;
+        gap: 3.5rem;
+        margin: 4rem auto !important;
     }
 
     .featured-card .book-cover {
-        transform: none !important;
+        transform: rotate(-1deg) !important;
         width: 100%;
-        max-width: 320px;
-        min-height: 450px;
+        max-width: 380px;
         margin: 0 auto;
     }
 
@@ -544,37 +556,24 @@ a:hover {
     }
 
     .featured-card h3 {
-        font-size: 2.2rem !important;
-        white-space: normal !important;
-        line-height: 1.2 !important;
-        margin-bottom: 1.2rem !important;
-    }
-
-    .featured-card .genre {
-        font-size: 0.7rem !important;
-        letter-spacing: 2px !important;
-        padding: 0.4rem 1.2rem !important;
-        margin-bottom: 2rem !important;
+        letter-spacing: -1px !important;
     }
 
     .featured-card p {
-        font-size: 1.05rem !important;
-        line-height: 1.6 !important;
-        margin-bottom: 2.5rem !important;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .featured-buttons {
         flex-direction: column;
-        gap: 1rem;
         width: 100%;
     }
 
     .featured-buttons .btn-primary,
     .featured-buttons .btn-text {
         width: 100% !important;
-        margin: 0 !important;
-        padding: 1rem !important;
-        font-size: 0.85rem !important;
+        text-align: center;
+        padding: 1.2rem !important;
     }
 }
 
