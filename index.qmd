@@ -34,14 +34,14 @@ format:
     <div class="featured-wrapper">
         <div class="book-card featured-card fade-in-scroll">
             <div class="book-cover">
-                <img src="dernier_roman/images/dernier-livre.jpg" alt="Prends de la bûche !" class="featured-book-img">
+                <img src="images/blog/mo-blog.png" alt="Duologie AT" class="featured-book-img">
             </div>
             <div class="book-info">
-                <h3>Prends de la bûche !</h3>
-                <span class="genre">Romance de Noël • Comédie</span>
-                <p>Nicola est bûcheronne. Zack est pâtissier. Entre la forêt et les gâteaux, qui remportera la bûche ?</p>
+                <h3>AT — Tome 1</h3>
+                <span class="genre">Romance Sombre • À paraître</span>
+                <p>Athénaïs est une femme ordinaire. Sa rencontre avec Nick va pourtant bouleverser son existence. Une romance dure, poignante et inoubliable.</p>
                 <div class="featured-buttons">
-                    <a href="dernier_roman/prends_buche.html" class="btn-primary">Découvrir</a>
+                    <a href="posts/2026-01-20-duologie-at.html" class="btn-primary">Découvrir l'annonce</a>
                     <a href="romans.html" class="btn-text">Toute la collection &rarr;</a>
                 </div>
             </div>
