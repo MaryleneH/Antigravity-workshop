@@ -26,8 +26,10 @@ title-block-banner: false
 ::: {#listing-blog}
 :::
 
+```{=html}
 <div class="back-home-container" style="text-align: center; margin: 4rem 0;">
     <a href="index.html" class="btn-excerpt-back">
         <i class="bi bi-arrow-left"></i> Retour à l'accueil
     </a>
 </div>
+```
