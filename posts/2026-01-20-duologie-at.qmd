@@ -8,7 +8,7 @@ image: ../images/couvertures/AT_couverture.PNG
 
 <figure class="editorial-figure fade-in-scroll">
   <div class="editorial-img-wrapper">
-    <img src="../images/couvertures/AT_couverture.PNG" alt="A.T. — Tome 1 Cover">
+    <img src="../images/blog/AT_blog.png" alt="A.T. — Illustration">
   </div>
   <figcaption class="editorial-caption">A.T. : Une duologie qui m'a tant apporté.</figcaption>
 </figure>
