@@ -20,7 +20,6 @@ Partez à la découverte des séries, des comédies de Noël, des romances de sa
   <button class="chip" data-filter="series" aria-pressed="false">Séries</button>
   <button class="chip" data-filter="fetes" aria-pressed="false">Fêtes</button>
   <button class="chip" data-filter="oneshots" aria-pressed="false">One-shots</button>
-  <button class="chip" data-filter="archive" aria-pressed="false">Archives</button>
 </nav>
 
 <div class="library-grid">
@@ -249,28 +248,6 @@ Partez à la découverte des séries, des comédies de Noël, des romances de sa
         </a>
     </div>
 
-    <!-- ARCHIVES -->
-    <div class="book-vignette fade-in-scroll" data-cat="archive">
-        <a href="romans/blind.html" class="vignette-link">
-            <img src="images/couvertures/blind.jpg" alt="Blind" class="vignette-cover">
-            <div class="vignette-overlay">
-                <span class="vignette-genre">Co-écriture • Dark</span>
-                <h3 class="vignette-title">Blind</h3>
-                <span class="vignette-action">Consulter &rarr;</span>
-            </div>
-        </a>
-    </div>
-
-    <div class="book-vignette fade-in-scroll" data-cat="archive">
-        <a href="romans/hurt.html" class="vignette-link">
-            <img src="images/couvertures/hurt.jpg" alt="Hurt" class="vignette-cover">
-            <div class="vignette-overlay">
-                <span class="vignette-genre">Co-écriture • Dark</span>
-                <h3 class="vignette-title">Hurt</h3>
-                <span class="vignette-action">Consulter &rarr;</span>
-            </div>
-        </a>
-    </div>
 
 </div>
 
