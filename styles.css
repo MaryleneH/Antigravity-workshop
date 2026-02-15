@@ -3767,4 +3767,54 @@ body.about-page-body {
     .book-trailer-title {
         font-size: 1.6rem;
     }
+
+    /* === MOBILE OPTIMIZATION: ABOUT PAGE === */
+    .about-futuristic-wrapper {
+        padding: 2rem 1rem;
+        flex-direction: column;
+        height: auto;
+        min-height: 100vh;
+        align-items: center;
+    }
+
+    .about-grid-content {
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+        width: 100%;
+    }
+
+    .about-portrait-section {
+        order: -1;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-top: 1rem;
+    }
+
+    .portrait-heart-container {
+        width: 260px;
+        height: 260px;
+    }
+
+    .about-text-glass {
+        padding: 2rem 1.5rem;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .about-title-large {
+        font-size: 2.5rem;
+        text-align: center;
+    }
+
+    .about-subtitle {
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    .fun-fact-box {
+        margin-top: 2rem;
+        padding: 1.2rem;
+    }
 }
