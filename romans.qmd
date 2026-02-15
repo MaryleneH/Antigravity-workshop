@@ -321,3 +321,39 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 </script>
 ```
+
+```{=html}
+<!-- Floating Mobile Navigation -->
+<div class="mobile-nav-actions" id="mobileNav">
+  <a href="index.html" class="nav-btn-floating btn-nav-home" aria-label="Retour à l'accueil">
+    <i class="bi bi-house-heart-fill"></i>
+  </a>
+  <button id="backToTopBtn" class="nav-btn-floating" aria-label="Retour en haut">
+    <i class="bi bi-arrow-up-short"></i>
+  </button>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const mobileNav = document.getElementById('mobileNav');
+    const backToTopBtn = document.getElementById('backToTopBtn');
+
+    // Show/Hide on scroll
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 500) {
+            mobileNav.classList.add('visible');
+        } else {
+            mobileNav.classList.remove('visible');
+        }
+    });
+
+    // Smooth scroll to top
+    backToTopBtn.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+});
+</script>
+```
