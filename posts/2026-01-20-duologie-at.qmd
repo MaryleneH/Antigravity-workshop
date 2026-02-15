@@ -12,19 +12,10 @@ image: ../images/blog/AT_blog.png
 :::
 
 ::: {.editorial-caption}
-L'officielle couverture de mon nouveau roman.
+La couverture officielle de mon nouveau roman.
 :::
 :::
 
-::: {.editorial-figure}
-::: {.editorial-img-wrapper}
-![](../images/blog/AT_blog.png)
-:::
-
-::: {.editorial-caption}
-A.T. : Une duologie qui m'a tant apporté.
-:::
-:::
 
 <div class="editorial-meta-row">
   <div class="meta-item"><i class="bi bi-journal-album"></i> Mood: Intense & Sombre</div>
