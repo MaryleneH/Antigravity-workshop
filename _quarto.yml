@@ -9,8 +9,12 @@ website:
     left:
       - text: "MG" # Monogram Logo
         href: index.qmd
+      - text: "Accueil"
+        href: index.qmd
       - text: "Romans"
         href: romans.qmd
+      - text: "Dernier roman"
+        href: romans/extraits/extrait-buche.qmd
       - text: "Blog"
         href: blog.qmd
       - text: "Contact"
