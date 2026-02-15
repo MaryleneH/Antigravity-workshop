@@ -2,86 +2,83 @@
 title: "Sur le sable — Extraits"
 subtitle: "Deux moments pour plonger dans l’été"
 description: "Découvrez deux extraits lumineux du roman de Mo Gadarr."
-title-block-banner: images/hero-saisons-sable.svg
 page-layout: full
 toc: false
-body-classes: extrait-buche
+body-classes: excerpt-page
 ---
 
-<!-- === Indicateur de progression (fixed) === -->
-<nav class="progress-extraits" aria-label="Progression des extraits">
-  <a href="#e1" class="dot" data-target="e1" aria-label="Aller à l'extrait 1"></a>
-  <a href="#e2" class="dot" data-target="e2" aria-label="Aller à l'extrait 2"></a>
-</nav>
+```{=html}
+<header class="excerpt-hero">
+    <h1>Sur le sable</h1>
+    <div class="subtitle">Deux moments pour plonger dans l’été</div>
+</header>
 
-<section class="intro-extrait" markdown="1">
-### 🌞⛱️ Vague d’été, soleil et émotions
+<main class="excerpt-content">
+    
+    <h3>Extrait 1</h3>
+    <blockquote>
+        ### 🌞⛱️ Vague d’été, soleil et émotions
 Une héroïne solaire, ses enfants, la route des vacances, et un coup du destin…  
 Deux extraits pour se mettre dans l’ambiance de _Sur le sable_.
-</section>
+    </blockquote>
+    
 
-<section class="extrait-block" id="e1" markdown="1">
-<div class="extrait-numero">EXTRAIT 1</div>
-> « — …les démons de minuiiiiiiit !  
-> Ça, c’est moi, Dannah. Vous savez, la fille avec la bouche bien grande  
-> ouverte pour mieux vociférer les paroles d’une chanson appartenant à une  
-> époque qu’elle n’a même pas connue. Mes cheveux blonds volent dans tous les  
-> sens. Normal, les vitres de ma voiture sont baissées à fond, chose qui ne me  
-> permet jamais de rester coiffée un minimum. Ça ne m’empêche pas de bouger  
-> en rythme. Assis à l’arrière, mes deux petits m’imitent en chantant eux aussi et  
-> en s’excitant de la même façon sur ce son véritablement endiablé. »
-<div class="extrait-legende">Road trip, soleil, complicité et bonne humeur !</div>
-</section>
 
-<section class="extrait-block alt" id="e2" markdown="1">
-<div class="extrait-numero">EXTRAIT 2</div>
-> « Je me retourne, mes Dior toujours sur le nez. Là, je suis obligée de lever  
-> la tête car je n’aperçois d’abord qu’un torse large dans un polo Ralf Lauren  
-> blanc.  
-> Un homme…  
-> Le gars en question retire ses lunettes. Mon cœur se fige comme abattu  
-> d’un coup de flèche en son milieu. Le vert intense des prunelles qui me font face  
-> me glace, me pétrifie et finit par me liquéfier.  
-> — Bonsoir, j’ai entendu en partie ce que vous disiez à mon fils. Qu’a-t-il  
-> fait encore ?  
-> Je voudrais parler, mais j’ai du mal à comprendre où je me trouve. Mes  
-> mots restent donc aux abonnés absents.  
-> — Je me présente, fait l’homme en m’accordant un sourire radieux qui  
-> tranche d’un arc blanc sa barbe noire et épaisse. Je suis Gabriel Le Valois, le  
-> père de Louis.  
->  
-> Il donne son identité, mais je l’avais reconnu immédiatement. C’est l’ado  
-> de la photo, celui dont je prédisais la beauté phénoménale à l’âge adulte. Le  
-> voilà planté devant moi, la main tendue. »
-<div class="extrait-legende">Un regard, une rencontre. Coup de foudre ?</div>
-</section>
+    <h3>EXTRAIT 1</h3>
+    <blockquote>
+        EXTRAIT 1</div><br>
+« — …les démons de minuiiiiiiit !  <br>
+Ça, c’est moi, Dannah. Vous savez, la fille avec la bouche bien grande  <br>
+ouverte pour mieux vociférer les paroles d’une chanson appartenant à une  <br>
+époque qu’elle n’a même pas connue. Mes cheveux blonds volent dans tous les  <br>
+sens. Normal, les vitres de ma voiture sont baissées à fond, chose qui ne me  <br>
+permet jamais de rester coiffée un minimum. Ça ne m’empêche pas de bouger  <br>
+en rythme. Assis à l’arrière, mes deux petits m’imitent en chantant eux aussi et  <br>
+en s’excitant de la même façon sur ce son véritablement endiablé. »<br>
+Road trip, soleil, complicité et bonne humeur !</div>
+    </blockquote>
+    <p style="text-align: center; font-style: italic; opacity: 0.7; margin-bottom: 4rem;">Road trip, soleil, complicité et bonne humeur !</p>
 
-<section class="cta-extrait" markdown="1">
-### ✮⋆˙ L’histoire ne fait que commencer…
-<div class="btn-row">
-[Acheter sur Amazon](https://amzn.eu/d/d3MMSlg){.btn .btn-primary role="button"}
-[Lire la fiche du roman](../sur-le-sable.qmd){.btn .btn-secondary role="button"}
-[Tous les romans](../../romans.qmd){.btn .btn-secondary role="button"}
-</div>
-</section>
 
-<!-- === Script : active la pastille selon le scroll === -->
-<script>
-  const dots = Array.from(document.querySelectorAll('.progress-extraits .dot'));
-  const sections = ['e1','e2'].map(id => document.getElementById(id));
-  const setActive = (id) => { dots.forEach(d => d.classList.toggle('active', d.dataset.target === id)); };
-  const io = new IntersectionObserver((entries) => {
-    const visible = entries.filter(e => e.isIntersecting).sort((a,b) => b.intersectionRatio - a.intersectionRatio)[0];
-    if (visible) setActive(visible.target.id);
-  }, { threshold: [0.3, 0.6, 0.9] });
-  sections.forEach(sec => sec && io.observe(sec));
-  dots.forEach(d => d.addEventListener('click', () => setActive(d.dataset.target)));
-</script>
+    <h3>EXTRAIT 2</h3>
+    <blockquote>
+        EXTRAIT 2</div><br>
+« Je me retourne, mes Dior toujours sur le nez. Là, je suis obligée de lever  <br>
+la tête car je n’aperçois d’abord qu’un torse large dans un polo Ralf Lauren  <br>
+blanc.  <br>
+Un homme…  <br>
+Le gars en question retire ses lunettes. Mon cœur se fige comme abattu  <br>
+d’un coup de flèche en son milieu. Le vert intense des prunelles qui me font face  <br>
+me glace, me pétrifie et finit par me liquéfier.  <br>
+— Bonsoir, j’ai entendu en partie ce que vous disiez à mon fils. Qu’a-t-il  <br>
+fait encore ?  <br>
+Je voudrais parler, mais j’ai du mal à comprendre où je me trouve. Mes  <br>
+mots restent donc aux abonnés absents.  <br>
+— Je me présente, fait l’homme en m’accordant un sourire radieux qui  <br>
+tranche d’un arc blanc sa barbe noire et épaisse. Je suis Gabriel Le Valois, le  <br>
+père de Louis.  <br>
+> Il donne son identité, mais je l’avais reconnu immédiatement. C’est l’ado  <br>
+de la photo, celui dont je prédisais la beauté phénoménale à l’âge adulte. Le  <br>
+voilà planté devant moi, la main tendue. »<br>
+Un regard, une rencontre. Coup de foudre ?</div>
+    </blockquote>
+    <p style="text-align: center; font-style: italic; opacity: 0.7; margin-bottom: 4rem;">Un regard, une rencontre. Coup de foudre ?</p>
 
-<br></br>
 
-<div class="back-home">
-  <a href="../../index.qmd" class="btn-back" role="button" aria-label="Retour à l’accueil">
-    <span class="arrow">←</span> Retour à l’accueil
-  </a>
-</div>
+    <h3>Extrait 4</h3>
+    <blockquote>
+        [Acheter sur Amazon](https://amzn.eu/d/d3MMSlg){.btn .btn-primary role="button"}<br>
+    </blockquote>
+    
+
+</main>
+
+<nav class="excerpt-navigation">
+    <a href="../sur-le-sable.html" class="btn-excerpt-back">
+        <i class="bi bi-arrow-left"></i> Retour au roman
+    </a>
+    <a href="https://amzn.eu/d/d3MMSlg" target="_blank" class="btn-excerpt-buy">
+        Acheter sur Amazon <i class="bi bi-cart"></i>
+    </a>
+</nav>
+```

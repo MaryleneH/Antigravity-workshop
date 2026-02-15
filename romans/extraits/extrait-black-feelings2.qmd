@@ -2,31 +2,42 @@
 title: "Black Feelings 2 — Extrait"
 subtitle: "Bientôt disponible"
 description: "L'extrait de Black Feelings Tome 2 est en cours de préparation."
-title-block-banner: images/hero-extrait-buche.svg
 page-layout: full
 toc: false
-body-classes: extrait-buche
+body-classes: excerpt-page
 ---
 
-<section class="intro-extrait" markdown="1">
-### 🖤 Préparez-vous pour la suite...
+```{=html}
+<header class="excerpt-hero">
+    <h1>Black Feelings 2 — Extrait</h1>
+    <div class="subtitle">Bientôt disponible</div>
+</header>
+
+<main class="excerpt-content">
+    
+    <h3>Extrait 1</h3>
+    <blockquote>
+        ### 🖤 Préparez-vous pour la suite...
 L’extrait de *Black Feelings Tome 2* arrive très prochainement.  
 La tension monte, et la vengeance n'attend pas...
-</section>
+    </blockquote>
+    
 
-<section class="cta-extrait" markdown="1">
-### ✮⋆˙ En attendant...
-<div class="btn-row">
-[Acheter sur Amazon](https://www.amazon.fr/s?k=Mo+Gadarr+Black+Feelings){.btn .btn-primary role="button"}
-[Lire la fiche du roman](../black-feelings-2.qmd){.btn .btn-secondary role="button"}
-[Tous les romans](../../romans.qmd){.btn .btn-secondary role="button"}
-</div>
-</section>
 
-<br></br>
+    <h3>Extrait 2</h3>
+    <blockquote>
+        [Acheter sur Amazon](https://www.amazon.fr/s?k=Mo+Gadarr+Black+Feelings){.btn .btn-primary role="button"}<br>
+    </blockquote>
+    
 
-<div class="back-home">
-  <a href="../../index.qmd" class="btn-back" role="button" aria-label="Retour à l’accueil">
-    <span class="arrow">←</span> Retour à l’accueil
-  </a>
-</div>
+</main>
+
+<nav class="excerpt-navigation">
+    <a href="../black-feelings-2.html" class="btn-excerpt-back">
+        <i class="bi bi-arrow-left"></i> Retour au roman
+    </a>
+    <a href="#" target="_blank" class="btn-excerpt-buy">
+        Acheter sur Amazon <i class="bi bi-cart"></i>
+    </a>
+</nav>
+```
