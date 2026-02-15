@@ -10,9 +10,7 @@ page-layout: full
 toc: false
 ---
 
-   💞 💞
-  <br></br>
- 💞   💞💞 
+
 
 ```{=html}
 <header class="book-hero">
