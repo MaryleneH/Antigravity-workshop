@@ -3170,3 +3170,297 @@ body.excerpt-page {
         margin: 0;
     }
 }
+
+/* =========================================
+   ABOUT PAGE: FUTURISTIC NEW ROMANCE REDESIGN
+   ========================================= */
+
+/* Base body override for deep immersion */
+body.about-page-body {
+    background-color: #0f050a;
+    /* Deepest plum/black */
+    color: #fce7f3;
+    overflow-x: hidden;
+}
+
+/* Main Wrapper */
+.about-futuristic-wrapper {
+    position: relative;
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 2rem;
+    overflow: hidden;
+    z-index: 1;
+}
+
+/* Animated Background (Orbs) */
+.about-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.about-orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.5;
+    animation: float-orb 20s infinite alternate ease-in-out;
+}
+
+.orb-1 {
+    top: -10%;
+    left: -10%;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, #fb6f92, transparent);
+    animation-duration: 25s;
+}
+
+.orb-2 {
+    bottom: -10%;
+    right: -10%;
+    width: 700px;
+    height: 700px;
+    background: radial-gradient(circle, #7209b7, transparent);
+    /* Deep purple */
+    animation-duration: 30s;
+    animation-delay: -5s;
+}
+
+.orb-3 {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, #ffc2d1, transparent);
+    /* Soft pink */
+    animation-duration: 18s;
+    animation-delay: -10s;
+}
+
+@keyframes float-orb {
+    0% {
+        transform: translate(0, 0) scale(1);
+    }
+
+    50% {
+        transform: translate(30px, -50px) scale(1.1);
+    }
+
+    100% {
+        transform: translate(-20px, 40px) scale(0.9);
+    }
+}
+
+@keyframes float-y {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+/* Grid Layout */
+.about-grid-content {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 5rem;
+    max-width: 1200px;
+    width: 100%;
+    align-items: center;
+    position: relative;
+    z-index: 10;
+}
+
+/* Portrait Section */
+.about-portrait-section {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.portrait-futuristic {
+    position: relative;
+    width: 100%;
+    max-width: 450px;
+    aspect-ratio: 3/4;
+    border-radius: 200px 200px 20px 20px;
+    /* Arch shape */
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    animation: float-y 6s ease-in-out infinite;
+}
+
+/* The Glowing Aura Ring */
+.portrait-aura-ring {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 110%;
+    height: 105%;
+    border-radius: 220px 220px 40px 40px;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 30px rgba(251, 111, 146, 0.2);
+    z-index: -1;
+    animation: glow-pulse-ring 4s infinite alternate ease-in-out;
+}
+
+@keyframes glow-pulse-ring {
+    from {
+        opacity: 0.5;
+        transform: translate(-50%, -50%) scale(0.95);
+        box-shadow: 0 0 20px rgba(251, 111, 146, 0.1);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1.05);
+        box-shadow: 0 0 60px rgba(251, 111, 146, 0.5);
+    }
+}
+
+.portrait-img-hq {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.8s ease;
+}
+
+.portrait-futuristic:hover .portrait-img-hq {
+    transform: scale(1.05);
+    /* Subtle zoom */
+}
+
+/* Text Section - Glassmorphism */
+.about-text-glass {
+    background: rgba(20, 20, 20, 0.6);
+    /* Dark glass */
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 3.5rem;
+    border-radius: 24px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Decorative top line */
+.about-text-glass::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, var(--color-pink), transparent);
+}
+
+.about-title-large {
+    font-family: var(--font-heading);
+    font-size: 3.5rem;
+    line-height: 1;
+    margin-bottom: 0.5rem;
+    background: linear-gradient(to right, #fff, #ff8fa9);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.about-subtitle {
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: var(--color-pink);
+    margin-bottom: 2.5rem;
+    display: block;
+}
+
+.about-bio-body {
+    font-family: var(--font-body);
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.about-bio-body p {
+    margin-bottom: 1.5rem;
+}
+
+.about-bio-body strong,
+.about-bio-body em {
+    color: #ffe0e6;
+}
+
+/* Fun Fact Sidebar - Integrated */
+.fun-fact-box {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background: rgba(251, 111, 146, 0.1);
+    border-radius: 12px;
+    border: 1px dashed rgba(251, 111, 146, 0.3);
+}
+
+.fun-fact-title {
+    color: var(--color-pink);
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    margin-bottom: 0.5rem;
+}
+
+.fun-fact-text {
+    font-size: 0.9rem;
+    font-style: italic;
+    color: rgba(255, 255, 255, 0.8);
+    margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .about-grid-content {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        padding: 0;
+    }
+
+    .about-portrait-section {
+        order: -1;
+        /* Portrait on top */
+    }
+
+    .portrait-futuristic {
+        max-width: 300px;
+        border-radius: 150px 150px 16px 16px;
+    }
+
+    .portrait-aura-ring {
+        border-radius: 170px 170px 30px 30px;
+    }
+
+    .about-text-glass {
+        padding: 2rem;
+    }
+
+    .about-title-large {
+        font-size: 2.5rem;
+    }
+}

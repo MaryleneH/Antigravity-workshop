@@ -1,81 +1,62 @@
 ---
-title: "Mogadarr"
+title: ""
 subtitle: "Auteure de New Romance"
 description: "Site officiel — romans, nouveautés, événements."
-title-block-banner: true 
-page-id: "accueil"
-page-layout: full
+title-block-banner: false
+page-layout: custom
 toc: false
+body-classes: about-page-body
 format:
   html:
     link-external-newwindow: true
 ---
 
-```{=html}
-<div class="auth-only">
-  <div class="auth-card">
-    <i class="bi bi-lock-fill"></i>
-    <h2>Accès réservé</h2>
-    <p>Cette page est protégée et réservée aux membres authentifiés.</p>
-    <div class="auth-actions">
-      <a href="login.html" class="btn btn-primary">Se connecter</a>
-      <a href="index.html" class="btn-text">Retour à l'accueil</a>
+<div class="about-futuristic-wrapper">
+    
+    <!-- Animated Orbs -->
+    <div class="about-background">
+        <div class="about-orb orb-1"></div>
+        <div class="about-orb orb-2"></div>
+        <div class="about-orb orb-3"></div>
     </div>
-  </div>
+
+    <!-- Main Content Grid -->
+    <div class="about-grid-content">
+        
+        <!-- Portrait Column (Left) -->
+        <div class="about-portrait-section">
+            <div class="portrait-futuristic">
+                <div class="portrait-aura-ring"></div>
+                <!-- Using the same portrait but styled futuristically -->
+                <img src="images/author-portrait.png" class="portrait-img-hq" alt="Mo Gadarr — Auteure de New Romance">
+            </div>
+        </div>
+
+        <!-- Bio Column (Right) - Glass Panel -->
+        <div class="about-text-glass">
+            <h1 class="about-title-large">Mo Gadarr</h1>
+            <span class="about-subtitle">Auteure de New Romance</span>
+
+            <div class="about-bio-body">
+                <p>Professeur de français, Mo Gadarr s'inspire de son quotidien et de l'actualité pour écrire ses romances. Tout commence sur la plateforme Fyctia avec son premier roman, <strong>Black Feelings</strong>, qui suscite immédiatement de vives réactions et remporte le concours en octobre grâce à sa plume authentique.</p>
+
+                <p>Désormais éditée chez deux maisons prestigieuses dont <em>Black Ink</em>, tout en publiant certaines œuvres en auto-édition, elle incarne la figure de l'auteure hybride moderne. Connectée et engagée, Mo Gadarr souhaite créer un nouveau genre : la <strong>"Romance engagée"</strong>.</p>
+
+                <p>Elle mêle habilement les codes de la New Romance à des sujets de société poignants : les préjugés et le mensonge dans <em>Homme sérieux recherche poupée Bimbo</em>, la pression des traditions dans <em>À Noël, je serai une princesse licorne</em>, ou encore les dangers des rencontres virtuelles dans <em>J'ai juste cliqué !</em>.</p>
+                
+                <p>Avec la série <strong>COPS</strong>, elle dénonce les ravages des addictions, tandis que <em>Undress Me</em> explore des thématiques plus sombres comme les traumatismes de l'enfance et le fanatisme religieux.</p>
+            </div>
+
+            <!-- Integrated Fun Fact -->
+            <div class="fun-fact-box">
+                <div class="fun-fact-title">Le saviez-vous ?</div>
+                <p class="fun-fact-text">Sous le nom de Ludivine Lepeix, elle écrit également ses propres pièces de théâtre qui enchantent petits et grands. Responsable du club théâtre de son établissement depuis plus de dix ans, ses spectacles loufoques et modernes sont très attendus !</p>
+            </div>
+            
+            <div style="margin-top: 2.5rem; display: flex; gap: 1.5rem; flex-wrap: wrap;">
+                <a href="romans.html" class="btn btn-primary">Voir les romans</a>
+                <a href="blog.qmd" class="btn btn-text" style="color: #fff !important;">Lire le blog <i class="bi bi-arrow-right"></i></a>
+            </div>
+        </div>
+    </div>
 </div>
-
-
-<!-- ===== Accroche ===== -->
-<p class="badge-accent" style="display:inline-block;margin:0 0 1rem 0;">Bienvenue</p>
-
-<!-- ===== 2 colonnes : À propos + Portrait / CTAs ===== -->
-<section class="home-hero-two-col">
-
-  <div class="bio-col">
-    <h3>À propos</h3>
-
-    <p>Professeur de français, Mo Gadarr s'inspire de son quotidien et de l'actualité pour écrire ses romances. Tout commence sur la plateforme Fyctia avec son premier roman, <strong>Black Feelings</strong>, qui suscite immédiatement de vives réactions et remporte le concours en octobre grâce à sa plume authentique.</p>
-
-    <p>Désormais éditée chez deux maisons prestigieuses dont <em>Black Ink</em>, tout en publiant certaines œuvres en auto-édition, elle incarne la figure de l'auteure hybride moderne. Connectée et engagée, Mo Gadarr souhaite créer un nouveau genre : la <strong>"Romance engagée"</strong>.</p>
-
-    <p>Elle mêle habilement les codes de la New Romance à des sujets de société poignants : les préjugés et le mensonge dans <em>Homme sérieux recherche poupée Bimbo</em>, la pression des traditions dans une comédie déjantée avec <em>À Noël, je serai une princesse licorne</em>, ou encore les dangers des rencontres virtuelles dans <em>J'ai juste cliqué !</em>.</p>
-
-    <p>Avec la série <strong>COPS</strong>, elle dénonce les ravages des addictions, tandis que <em>Undress Me</em> explore des thématiques plus sombres comme les traumatismes de l'enfance et le fanatisme religieux, offrant une romance à la fois sexy et bouleversante.</p>
-
-    <p>Entre ses cours, ses corrections, sa vie de famille et l'écriture, Mo Gadarr reste très active sur les réseaux sociaux, partageant avec sa communauté les coulisses de ses créations.</p>
-
-    <div class="bio-fun-fact" style="margin-top: 2rem; padding: 1.5rem; background: rgba(251, 111, 146, 0.05); border-left: 3px solid var(--color-pink); border-radius: 0 12px 12px 0;">
-        <h5 style="margin-top:0; color:var(--color-pink); font-size: 0.9rem; text-transform:uppercase; letter-spacing:1px; font-weight:700; margin-bottom:0.5rem;">Le saviez-vous ?</h5>
-        <p style="margin-bottom:0; font-size: 0.95rem; line-height:1.6; font-style:italic;">Sous le nom de Ludivine Lepeix, elle écrit également ses propres pièces de théâtre qui enchantent petits et grands. Responsable du club théâtre de son établissement depuis plus de dix ans, ses spectacles loufoques et modernes sont très attendus !</p>
-    </div>
-
-  </div>
-
-  <div>
-    <div class="portrait-card">
-      <img src="images/author-portrait.png" alt="Mogadarr — portrait illustré">
-    </div>
-
-    <div class="cta-stack">
-      <a class="btn btn-primary" href="dernier_roman/prends_buche.html" role="button">Découvrir le dernier roman</a>
-      <a class="btn-text" href="romans.html" role="button">Voir tous les romans <i class="bi bi-arrow-right"></i></a>
-    </div>
-  </div>
-
-</section>
-
-<!-- ===== Bandeau Nouveauté (strip) ===== -->
-<section class="strip-highlight">
-  <div class="strip-inner">
-    <div class="strip-left">
-      <h4 style="margin:.2rem 0;">Prends de la bûche</h4>
-      <p style="margin:.2rem 0;">
-        Romance de Noël au cœur des forêts canadiennes — une rencontre qui déjoue les apparences.
-      </p>
-    </div>
-    <div class="strip-right">
-      <a class="btn btn-primary" href="dernier_roman/prends_buche.html" role="button">En savoir plus</a>
-    </div>
-  </div>
-</section>
-```
