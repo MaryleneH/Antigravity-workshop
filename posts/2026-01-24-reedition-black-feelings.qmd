@@ -6,14 +6,16 @@ description: "Réimpression de Black Feelings : à nouveau disponible à la dema
 image: ../images/couvertures/black-feelings-tome-1.jpg 
 ---
 
-```{=html}
-<figure class="editorial-figure">
-  <div class="editorial-img-wrapper">
-    <img src="../images/couvertures/black-feelings-tome-1.jpg" alt="Black Feelings — Tome 1">
-  </div>
-  <figcaption class="editorial-caption">Black Feelings : la renaissance d'une histoire chère à mon cœur.</figcaption>
-</figure>
+::: {.editorial-figure}
+::: {.editorial-img-wrapper}
+![](../images/couvertures/black-feelings-tome-1.jpg)
+:::
+::: {.editorial-caption}
+Black Feelings : la renaissance d'une histoire chère à mon cœur.
+:::
+:::
 
+```{=html}
 <div class="editorial-meta-row">
   <div class="meta-item"><i class="bi bi-award"></i> Mood: Reconnaissante & Émue</div>
   <div class="meta-item"><i class="bi bi-clock"></i> 3 min read</div>
@@ -80,11 +82,13 @@ Presque dix ans plus tard, mon tout premier roman est à nouveau disponible **à
 
 <br>
 
-[✉️ Contact pour commander »](mailto:mogadarr@gmail.com?subject=Commande%20-%20Black%20Feelings&body=Bonjour%20Mo%2C%0D%0A%0D%0AJe%20vous%20contacte%20depuis%20votre%20site%20au%20sujet%20de%20Black%20Feelings.%0D%0A%0D%0AJe%20souhaiterais%20le%20commander.%20Pouvez-vous%20me%20dire%20les%20modalit%C3%A9s%20(disponibilit%C3%A9%2C%20prix%2C%20envoi%2Fremise%20en%20main%20propre)%20%3F%0D%0A%0D%0AMon%20nom%20%3A%20%0D%0AMa%20ville%20%3A%20%0D%0AMerci%20et%20belle%20journ%C3%A9e.){.btn .btn-secondary role="button"}
+[✉️ Contact pour commander »](mailto:mogadarr@gmail.com?subject=Commande%20-%20Black%20Feelings&body=Bonjour%20Mo%2C%0D%0A%0D%0AJe%20vous%20contacte%20depuis%20votre%20site%20au%20sujet%20de%20Black%20Feelings.%0D%0A%0D%0AJe%20souhaiterais%20le%20commander.%20Pouvez-vous%20me%20dire%20les%20modalit%C3%A9s%20(disponibilit%C3%A9%2C%20prix%2C%20envoi%2Fremise%20en%20main%20propre)%20%3F%0D%0A%0D%0AMon%20nom%20%3A%20%0D%0AMa%20ville%20%3A%20%0D%0AMerci%20et%20belle%20journ%C3%Aée.){.btn .btn-secondary role="button"}
 
+```{=html}
 <!-- ===== 3) RETOUR ===== -->
 <div class="back-home">
   <a href="../blog.qmd" class="btn-back" role="button" aria-label="Retour aux articles de blog">
     <span class="arrow">←</span> Retour aux articles de blog
   </a>
 </div>
+```
