@@ -2681,3 +2681,100 @@ body.quarto-dark .nr-frame {
         padding: 8px;
     }
 }
+
+/* ===== EDITORIAL MEDIA SYSTEM (Restored) ===== */
+.editorial-figure {
+    margin: 0 0 3rem 0;
+    width: 100%;
+    text-align: center;
+}
+
+.editorial-img-wrapper {
+    position: relative;
+    padding: 10px;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: var(--shadow-deep);
+    margin-bottom: 1.5rem;
+    display: inline-block;
+    max-width: 100%;
+}
+
+body.quarto-dark .editorial-img-wrapper {
+    background: #1a1a1a;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.editorial-img-wrapper img {
+    border-radius: 12px;
+    display: block;
+    width: 100%;
+    max-height: 70vh;
+    object-fit: contain;
+}
+
+.editorial-caption {
+    font-family: var(--font-heading);
+    font-style: italic;
+    font-size: 0.9rem;
+    color: var(--color-pink);
+    opacity: 0.8;
+}
+
+.editorial-meta-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+    justify-content: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    padding-bottom: 1.5rem;
+}
+
+.meta-item {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: rgba(255, 255, 255, 0.6);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.meta-item i {
+    color: var(--color-pink);
+}
+
+.editorial-intro-lead {
+    font-size: 1.25rem;
+    line-height: 1.8;
+    color: #fff;
+    font-style: italic;
+    margin-bottom: 4rem;
+    font-family: var(--font-heading);
+    position: relative;
+    padding-left: 2rem;
+    border-left: 3px solid var(--color-pink);
+}
+
+/* Portrait Video Support */
+.nr-portrait .nr-frame {
+    max-width: 350px;
+    /* Force vertical constraint */
+}
+
+.nr-portrait .nr-video {
+    aspect-ratio: 9/16;
+    object-fit: cover;
+}
+
+/* Spacing Fixes */
+.quarto-title-block {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+#title-block-header {
+    margin-top: 1rem !important;
+    margin-bottom: 2rem !important;
+}

@@ -13,8 +13,6 @@ image: ../images/couvertures/black-feelings-tome-1.jpg
   <figcaption class="editorial-caption">Black Feelings : la renaissance d'une histoire chère à mon cœur.</figcaption>
 </figure>
 
-# Black Feelings réimprimé
-
 <div class="editorial-meta-row">
   <div class="meta-item"><i class="bi bi-award"></i> Mood: Reconnaissante & Émue</div>
   <div class="meta-item"><i class="bi bi-clock"></i> 3 min read</div>
@@ -24,8 +22,6 @@ image: ../images/couvertures/black-feelings-tome-1.jpg
 ::: {.editorial-intro-lead}
 Après des années, mon tout premier livre paru aux éditions Hugo, **Black Feelings**, a été réimprimé ! C'est pour moi une joie immense de voir cette histoire, qui a marqué le début de ma carrière, à nouveau accessible à tous mes lecteurs.
 :::
-
-<div class="editorial-sep">🎬</div>
 
 
 ```{=html}
@@ -44,7 +40,8 @@ Après des années, mon tout premier livre paru aux éditions Hugo, **Black Feel
   </div>
 
   <div class="nr-panels">
-    <article class="nr-panel">
+    <!-- Panel 1: Portrait Video -->
+    <article class="nr-panel nr-portrait">
       <figure class="nr-figure">
         <div class="nr-frame">
           <video class="nr-video" controls preload="metadata" playsinline poster="../images/blog/photo_article1.PNG">
@@ -56,6 +53,7 @@ Après des années, mon tout premier livre paru aux éditions Hugo, **Black Feel
       </figure>
     </article>
 
+    <!-- Panel 2: Standard Landscape Video -->
     <article class="nr-panel">
       <figure class="nr-figure">
         <div class="nr-frame">
