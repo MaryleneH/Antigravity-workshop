@@ -9,6 +9,7 @@ format:
     toc: false
 ---
 
+```{=html}
 <figure class="editorial-figure fade-in-scroll">
   <div class="editorial-img-wrapper">
     <img src="../images/blog/2025-salons-header.jpg" alt="De Thuit Romance à Pyrélivres : des rencontres, des sourires et de belles histoires.">
@@ -21,6 +22,7 @@ format:
   <div class="meta-item"><i class="bi bi-clock"></i> 4 min read</div>
   <div class="meta-item"><i class="bi bi-journal-check"></i> Retour de Salons</div>
 </div>
+```
 
 ::: {.editorial-intro-lead}
 Et me voilà de retour dans mon blog ! Je viens d’enchaîner la rentrée et surtout pas moins de deux salons pendant les vacances. Il s’agissait du salon **`Thuit romance`** ainsi que du salon **`Pyrélivres`**. Deux lieux. Deux ambiances. Cependant, j’y ai retrouvé la même entraide et la même chaleur dans les deux. Là où **`Thuit`** est consacré à la romance sous toutes ses formes, **`Pyrelivres`** est généraliste. C’est une première pour moi !

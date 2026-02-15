@@ -6,6 +6,7 @@ description: "Réimpression de Black Feelings : à nouveau disponible à la dema
 image: ../images/couvertures/black-feelings-tome-1.jpg 
 ---
 
+```{=html}
 <figure class="editorial-figure">
   <div class="editorial-img-wrapper">
     <img src="../images/couvertures/black-feelings-tome-1.jpg" alt="Black Feelings — Tome 1">
@@ -18,6 +19,7 @@ image: ../images/couvertures/black-feelings-tome-1.jpg
   <div class="meta-item"><i class="bi bi-clock"></i> 3 min read</div>
   <div class="meta-item"><i class="bi bi-bookmark-heart"></i> Réédition Spéciale</div>
 </div>
+```
 
 ::: {.editorial-intro-lead}
 Après des années, mon tout premier livre paru aux éditions Hugo, **Black Feelings**, a été réimprimé ! C'est pour moi une joie immense de voir cette histoire, qui a marqué le début de ma carrière, à nouveau accessible à tous mes lecteurs.

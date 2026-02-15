@@ -16,12 +16,13 @@ La couverture officielle de mon nouveau roman.
 :::
 :::
 
-
+```{=html}
 <div class="editorial-meta-row">
   <div class="meta-item"><i class="bi bi-journal-album"></i> Mood: Intense & Sombre</div>
   <div class="meta-item"><i class="bi bi-clock"></i> 5 min read</div>
   <div class="meta-item"><i class="bi bi-megaphone"></i> Annonce Officielle</div>
 </div>
+```
 
 ::: {.editorial-intro-lead}
 Je vous avais promis une toute nouvelle histoire et c’est chose faite. Cette fois, nous avons affaire à une romance dure, sombre et tellement… ordinaire. Athénaïs, c’est la femme qu’on a été, qu’on a croisée, notre mère, notre amie, notre fille.
