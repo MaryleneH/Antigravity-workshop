@@ -564,23 +564,46 @@ body.quarto-dark .featured-card .book-cover {
     align-items: center;
 }
 
-@media (max-width: 991px) {
+@media (max-width: 768px) {
+
+    /* Force section to ignore global Quarto width limits if any */
+    .collection,
+    #featured {
+        width: 100vw !important;
+        margin-left: calc(-50vw + 50%) !important;
+        margin-right: calc(-50vw + 50%) !important;
+        padding: 0 !important;
+    }
+
+    .featured-wrapper {
+        width: 100% !important;
+        max-width: none !important;
+        padding: 0 !important;
+    }
+
     .featured-card {
         flex-direction: column !important;
-        padding: 3rem 1.2rem !important;
-        gap: 3rem;
-        margin: 3rem 0.5rem !important;
-        border-radius: 40px !important;
+        padding: 4rem 1.5rem !important;
+        gap: 3.5rem;
+        margin: 2rem 0 !important;
+        /* No horizontal margin to fill screen */
+        border-radius: 0 !important;
+        /* Edge-to-edge look for maximal impact */
+        width: 100% !important;
+        max-width: none !important;
+        border-left: none !important;
+        border-right: none !important;
         text-align: center;
     }
 
     .featured-card .book-cover {
         transform: none !important;
-        animation: none !important;
-        width: 100%;
+        animation: boutique-float 8s ease-in-out infinite !important;
+        /* Keep animation but stable */
+        width: 85% !important;
         max-width: 320px;
         margin: 0 auto;
-        padding: 8px;
+        padding: 10px;
     }
 
     .featured-card .book-info {
