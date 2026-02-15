@@ -1336,15 +1336,29 @@ body.quarto-dark .book-hero-card {
         align-self: center !important;
         flex-wrap: nowrap !important;
         /* Force single line */
-        gap: 1.25rem !important;
-        /* Tighter gap for small screens */
-        padding: 1.6rem 2.8rem !important;
+        gap: 2rem !important;
+        /* Generous gap */
+        padding: 1.5rem 2.5rem !important;
+        /* Generous padding as requested */
         width: fit-content;
-        max-width: 92%;
-        justify-content: center;
+        max-width: 95%;
+        /* Allow full width minus margins */
+        justify-content: flex-start;
+        /* Start from left to allow scrolling */
+        overflow-x: auto;
+        /* Enable horizontal scroll */
         background: rgba(251, 111, 146, 0.08) !important;
         border-radius: 16px !important;
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15) !important;
+        -webkit-overflow-scrolling: touch;
+        /* Smooth scroll on iOS */
+        scrollbar-width: none;
+        /* Hide scrollbar Firefox */
+    }
+
+    .formats-prix-premium::-webkit-scrollbar {
+        display: none;
+        /* Hide scrollbar Chrome/Safari */
     }
 
     .format-item {
