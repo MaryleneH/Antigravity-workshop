@@ -1973,6 +1973,15 @@ body.quarto-dark .cta-extrait {
     margin-bottom: 4rem !important;
     border-radius: 0 0 50px 50px !important;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3) !important;
+    transition: all 0.6s var(--ease-elegant);
+}
+
+@media (max-width: 768px) {
+    .quarto-title-banner {
+        min-height: 25vh !important;
+        margin-bottom: 2rem !important;
+        border-radius: 0 0 30px 30px !important;
+    }
 }
 
 .quarto-title h1 {
@@ -2103,11 +2112,13 @@ body.quarto-dark .column-body img {
 
 .editorial-img-wrapper {
     position: relative;
-    background: #fff;
-    padding: 12px;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(5px);
+    padding: 10px;
     box-shadow: var(--shadow-deep);
     transform: rotate(-1.5deg) translateX(-10px);
-    transition: all 0.8s var(--ease-elegant);
+    transition: all 0.7s var(--ease-elegant);
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .editorial-figure:nth-child(even) .editorial-img-wrapper {
@@ -2115,12 +2126,23 @@ body.quarto-dark .column-body img {
 }
 
 .editorial-img-wrapper img {
-    border-radius: 12px !important;
-    /* Restored Rounded Corners for chic look */
+    border-radius: 8px !important;
     margin: 0 !important;
     display: block;
     width: 100%;
-    filter: sepia(0.05);
+    filter: sepia(0.02) contrast(1.02);
+    transition: all 0.7s var(--ease-elegant);
+}
+
+@media (max-width: 768px) {
+    .editorial-figure {
+        margin: 3rem 0 !important;
+    }
+
+    .editorial-img-wrapper {
+        transform: none !important;
+        padding: 8px;
+    }
 }
 
 .editorial-img-wrapper:hover {
@@ -2153,13 +2175,14 @@ body.quarto-dark .column-body img {
     font-family: var(--font-heading);
     font-style: italic;
     text-align: center;
-    margin-top: 0.5rem;
-    margin-bottom: 3.5rem;
-    opacity: 0.8;
-    font-size: 0.9rem;
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+    opacity: 0.7;
+    font-size: 0.85rem;
     color: var(--text-muted);
     letter-spacing: 0.5px;
     display: block;
+    transition: all 0.4s ease;
 }
 
 /* Editorial UTILITIES */
