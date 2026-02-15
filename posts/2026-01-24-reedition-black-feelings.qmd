@@ -31,46 +31,44 @@ Après des années, mon tout premier livre paru aux éditions Hugo, **Black Feel
 ```{=html}
 <section class="nr-video-story" aria-label="Extraits vidéo">
   <div class="nr-story-head">
-    <span class="nr-story-badge">🎬 Extraits vidéo</span>
-    <div class="nr-story-title">Plongez dans l’univers</div>
+    <span class="nr-story-badge">🎬 Cinématiques</span>
+    <div class="nr-story-title">L'Âme de Black Feelings</div>
   </div>
 
-  <!-- Tabs CSS-only -->
   <input class="nr-tab" type="radio" name="nrvid" id="nrvid1" checked>
   <input class="nr-tab" type="radio" name="nrvid" id="nrvid2">
 
   <div class="nr-tabbar" role="tablist" aria-label="Choisir un extrait">
-    <label class="nr-chip" for="nrvid1" role="tab">Extrait 1</label>
-    <label class="nr-chip" for="nrvid2" role="tab">Extrait 2</label>
+    <label class="nr-chip" for="nrvid1" role="tab">La Rencontre</label>
+    <label class="nr-chip" for="nrvid2" role="tab">L'Intensité</label>
   </div>
 
   <div class="nr-panels">
-    <!-- Panel 1 : blackF1 (portrait -> affiché en PAYSAGE par CSS) -->
     <article class="nr-panel">
       <figure class="nr-figure">
         <div class="nr-frame">
-          <video class="nr-video nr-rot90" controls preload="metadata" playsinline>
+          <video class="nr-video" controls preload="metadata" playsinline poster="../images/blog/photo_article1.PNG">
             <source src="../assets/blackF1.mp4" type="video/mp4">
+            Votre navigateur ne supporte pas la lecture de vidéos.
           </video>
         </div>
-        <figcaption class="nr-caption">Black Feelings — extrait 1</figcaption>
+        <figcaption class="nr-caption">Black Feelings — Fragment I : Les prémices</figcaption>
       </figure>
     </article>
 
-    <!-- Panel 2 : blackF2 -->
     <article class="nr-panel">
       <figure class="nr-figure">
         <div class="nr-frame">
-          <video class="nr-video" controls preload="metadata" playsinline>
+          <video class="nr-video" controls preload="metadata" playsinline poster="../images/blog/photo_article2.PNG">
             <source src="../assets/blackF2.mp4" type="video/mp4">
+            Votre navigateur ne supporte pas la lecture de vidéos.
           </video>
         </div>
-        <figcaption class="nr-caption">Black Feelings — extrait 2</figcaption>
+        <figcaption class="nr-caption">Black Feelings — Fragment II : L'obscurité</figcaption>
       </figure>
     </article>
   </div>
 </section>
-
 ```
 
 
