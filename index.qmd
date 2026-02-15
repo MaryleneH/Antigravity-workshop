@@ -34,7 +34,7 @@ format:
     <div class="featured-wrapper">
         <div class="book-card featured-card fade-in-scroll">
             <div class="book-cover">
-                <img src="images/blog/mo-blog.png" alt="Duologie AT" class="featured-book-img">
+                <img src="images/illustration_AT.png" alt="Duologie AT" class="featured-book-img">
             </div>
             <div class="book-info">
                 <h3>AT — Tome 1</h3>

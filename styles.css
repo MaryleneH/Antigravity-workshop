@@ -445,6 +445,83 @@ a:hover {
     line-height: 1.7;
 }
 
+/* Featured Section Refinements (Boutique Style) */
+.featured-card {
+    display: grid !important;
+    grid-template-columns: 1fr 1.2fr;
+    align-items: center;
+    max-width: 1000px !important;
+    margin: 4rem auto !important;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: var(--shadow-deep);
+    border-radius: 40px !important;
+    padding: 2rem;
+    gap: 3rem;
+}
+
+.featured-card .book-cover {
+    height: auto !important;
+    max-height: 600px;
+    border-radius: 20px;
+    box-shadow: 20px 20px 60px rgba(0, 0, 0, 0.3);
+    transform: rotate(-2deg);
+    transition: all 0.6s var(--ease-elegant);
+}
+
+.featured-card:hover .book-cover {
+    transform: rotate(0) scale(1.02);
+}
+
+.featured-card .book-info {
+    text-align: left !important;
+    padding: 0 !important;
+}
+
+.featured-card h3 {
+    font-size: 3rem !important;
+    margin-bottom: 1rem !important;
+    background: linear-gradient(45deg, var(--color-pink), #fff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.featured-card .genre {
+    font-size: 0.85rem !important;
+    letter-spacing: 4px !important;
+    margin-bottom: 2rem !important;
+}
+
+.featured-card p {
+    font-size: 1.2rem !important;
+    color: rgba(255, 255, 255, 0.8) !important;
+    margin-bottom: 2.5rem !important;
+}
+
+@media (max-width: 991px) {
+    .featured-card {
+        grid-template-columns: 1fr;
+        padding: 3rem 2rem;
+        text-align: center;
+        gap: 2rem;
+    }
+
+    .featured-card .book-cover {
+        transform: none;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    .featured-card .book-info {
+        text-align: center !important;
+    }
+
+    .featured-card h3 {
+        font-size: 2.2rem !important;
+    }
+}
+
 /* ===== SECTIONS ===== */
 .section-title {
     text-align: center;
