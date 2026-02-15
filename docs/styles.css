@@ -2511,3 +2511,150 @@ body.quarto-dark .img-chic-frame {
         display: none !important;
     }
 }
+
+/* ===== PROFESSIONAL VIDEO UI (Chic & Elegant) ===== */
+.nr-video-story {
+    margin: 6rem 0;
+    padding: 3rem;
+    background: rgba(255, 255, 255, 0.02);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 40px;
+    box-shadow: var(--shadow-deep);
+}
+
+.nr-story-head {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.nr-story-badge {
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 0.75rem;
+    color: var(--color-pink);
+    font-weight: 700;
+    display: block;
+    margin-bottom: 0.8rem;
+}
+
+.nr-story-title {
+    font-family: var(--font-heading);
+    font-size: 2.2rem;
+    color: #fff;
+    line-height: 1.2;
+}
+
+/* Elegant Tab System */
+.nr-tab {
+    display: none;
+}
+
+.nr-tabbar {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 4rem;
+}
+
+.nr-chip {
+    padding: 0.8rem 2.2rem;
+    border-radius: 50px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.4s var(--ease-elegant);
+}
+
+#nrvid1:checked~.nr-tabbar label[for="nrvid1"],
+#nrvid2:checked~.nr-tabbar label[for="nrvid2"] {
+    background: var(--color-pink);
+    color: #fff;
+    border-color: var(--color-pink);
+    box-shadow: 0 0 25px var(--color-pink-glow);
+    transform: translateY(-3px);
+}
+
+/* Panels Control */
+.nr-panels {
+    position: relative;
+}
+
+.nr-panel {
+    display: none;
+    animation: fadeIn 0.8s ease;
+}
+
+#nrvid1:checked~.nr-panels .nr-panel:nth-child(1),
+#nrvid2:checked~.nr-panels .nr-panel:nth-child(2) {
+    display: block;
+}
+
+/* Boutique Video Frame */
+.nr-frame {
+    position: relative;
+    padding: 12px;
+    background: #fff;
+    /* White boutique border */
+    border-radius: 20px;
+    box-shadow: var(--shadow-deep);
+    transition: all 0.6s var(--ease-elegant);
+    max-width: 800px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+body.quarto-dark .nr-frame {
+    background: #1a1a1a !important;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.nr-video {
+    width: 100%;
+    display: block;
+    border-radius: 12px;
+    background: #000;
+}
+
+/* Reset existing rotation tool */
+.nr-rot90 {
+    transform: none !important;
+}
+
+.nr-caption {
+    font-family: var(--font-heading);
+    font-style: italic;
+    font-size: 0.95rem;
+    color: var(--color-pink);
+    text-align: center;
+    margin-top: 2rem;
+    opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+    .nr-video-story {
+        padding: 2.5rem 1.2rem;
+        margin: 4rem 0.5rem;
+        border-radius: 30px;
+    }
+
+    .nr-story-title {
+        font-size: 1.8rem;
+    }
+
+    .nr-tabbar {
+        gap: 0.8rem;
+    }
+
+    .nr-chip {
+        padding: 0.6rem 1.5rem;
+        font-size: 0.75rem;
+    }
+
+    .nr-frame {
+        padding: 8px;
+    }
+}
