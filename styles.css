@@ -1718,6 +1718,8 @@ body.quarto-dark .cta-extrait {
     margin-bottom: 3rem;
     position: relative;
     padding-left: 1.5rem;
+    padding-right: 1rem;
+    /* Added padding-right for symmetry and margin safety */
     border-left: 3px solid var(--color-pink-glow);
 }
 
@@ -1908,6 +1910,12 @@ body.quarto-dark .cta-extrait {
     margin-right: auto !important;
     line-height: 1.85 !important;
     font-size: 1.15rem !important;
+}
+
+@media (max-width: 992px) {
+    #quarto-content.page-columns .column-body {
+        padding: 0 1.5rem !important;
+    }
 }
 
 /* Elegant Drop Cap */
