@@ -2451,7 +2451,8 @@ body.quarto-dark .img-chic-frame {
 }
 
 .blog-banner::after {
-    content: "Le Journal de Mo Gadarr";
+    content: "";
+    /* Removed redundant title overlay */
     position: absolute;
     top: 0;
     left: 0;
@@ -2461,32 +2462,12 @@ body.quarto-dark .img-chic-frame {
     align-items: center;
     justify-content: center;
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5));
-    color: #fff;
-    font-family: var(--font-heading);
-    font-size: 3.5rem;
-    text-transform: uppercase;
-    letter-spacing: 12px;
-    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
-    opacity: 0.85;
     transition: all 0.6s ease;
     pointer-events: none;
     z-index: 2;
 }
 
-.blog-banner:hover::after {
-    opacity: 1;
-    letter-spacing: 15px;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.4));
-}
-
-.blog-banner-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    transition: transform 1.2s cubic-bezier(0.2, 0.8, 0.2, 1);
-}
-
+/* Blog banner hover effects - simplified */
 .blog-banner:hover .blog-banner-img {
     transform: scale(1.08);
 }

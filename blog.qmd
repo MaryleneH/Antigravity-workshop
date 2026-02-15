@@ -13,7 +13,7 @@ listing:
   grid-columns: 3
   image-lazy-loading: true
 page-layout: full
-title-block-banner: true
+title-block-banner: false
 ---
 
 ```{=html}
