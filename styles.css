@@ -2723,6 +2723,12 @@ body.quarto-dark .nr-frame {
     margin: 0 auto;
 }
 
+/* Landscape / low-res video — constrain to avoid pixelation on desktop */
+.nr-landscape-video {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
 /* Poster overlay approach (replaces broken poster attribute with CSS transforms) */
 .nr-video-wrapper {
     position: relative;

@@ -61,8 +61,9 @@ Après des années, mon tout premier livre paru aux éditions Hugo, **Black Feel
     <!-- Panel 2: Standard Landscape Video -->
     <article class="nr-panel">
       <figure class="nr-figure">
-        <div class="nr-frame">
-          <video class="nr-video" controls preload="metadata" playsinline poster="../images/blog/photo_article2.PNG">
+        <div class="nr-frame nr-video-wrapper nr-landscape-video">
+          <img src="../images/blog/photo_article2.PNG" alt="Black Feelings feuilletage" class="nr-video-poster-overlay" onclick="this.style.display='none'; this.nextElementSibling.play();">
+          <video class="nr-video" controls preload="metadata" playsinline>
             <source src="../assets/blackF2.mp4" type="video/mp4">
             Votre navigateur ne supporte pas la lecture de vidéos.
           </video>
