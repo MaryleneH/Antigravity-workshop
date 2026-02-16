@@ -2699,6 +2699,11 @@ body.quarto-dark .nr-frame {
     border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
+/* Allow overflow for rotated video */
+.nr-portrait .nr-frame {
+    overflow: visible !important;
+}
+
 .nr-video {
     width: 100%;
     display: block;
@@ -2707,8 +2712,16 @@ body.quarto-dark .nr-frame {
 }
 
 /* Reset existing rotation tool */
+/* Reset existing rotation tool */
 .nr-rot90 {
     transform: none !important;
+}
+
+.nr-video-rotate-90 {
+    transform: rotate(90deg);
+    width: 100%;
+    /* Ensure it fits cleanly */
+    object-fit: cover;
 }
 
 .nr-caption {
