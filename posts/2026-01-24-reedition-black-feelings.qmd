@@ -39,8 +39,8 @@ Après des années, mon tout premier livre paru aux éditions Hugo, **Black Feel
   <input class="nr-tab" type="radio" name="nrvid" id="nrvid2">
 
   <div class="nr-tabbar" role="tablist" aria-label="Choisir un extrait">
-    <label class="nr-chip" for="nrvid1" role="tab">La Rencontre</label>
-    <label class="nr-chip" for="nrvid2" role="tab">L'Intensité</label>
+    <label class="nr-chip" for="nrvid1" role="tab">L'Arrivée</label>
+    <label class="nr-chip" for="nrvid2" role="tab">Le Feuilletage</label>
   </div>
 
   <div class="nr-panels">
@@ -49,12 +49,12 @@ Après des années, mon tout premier livre paru aux éditions Hugo, **Black Feel
       <figure class="nr-figure">
         <div class="nr-frame nr-video-wrapper">
           <img src="../images/blog/BF_reedition_web.jpg" alt="Black Feelings réédition" class="nr-video-poster-overlay" onclick="this.style.display='none'; this.nextElementSibling.play();">
-          <video class="nr-video nr-video-rotate-90" controls preload="metadata" playsinline>
+          <video class="nr-video" controls preload="metadata" playsinline>
             <source src="../assets/blackF1.mp4" type="video/mp4">
             Votre navigateur ne supporte pas la lecture de vidéos.
           </video>
         </div>
-        <figcaption class="nr-caption">Black Feelings — Fragment I : Les prémices</figcaption>
+        <figcaption class="nr-caption">Black Feelings — L'Arrivée de la réédition</figcaption>
       </figure>
     </article>
 
@@ -67,7 +67,7 @@ Après des années, mon tout premier livre paru aux éditions Hugo, **Black Feel
             Votre navigateur ne supporte pas la lecture de vidéos.
           </video>
         </div>
-        <figcaption class="nr-caption">Black Feelings — Fragment II : L'obscurité</figcaption>
+        <figcaption class="nr-caption">Black Feelings — Découverte page par page</figcaption>
       </figure>
     </article>
   </div>
