@@ -3892,3 +3892,33 @@ body.about-page-body {
         margin-right: 0;
     }
 }
+
+/* === PREMIUM ORDER BUTTON (Black Feelings) === */
+.btn-order-premium {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 2.5rem;
+    background: linear-gradient(135deg, var(--color-pink), #d946ef);
+    color: white !important;
+    text-decoration: none !important;
+    border-radius: 50px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    box-shadow: 0 10px 25px rgba(236, 72, 153, 0.4);
+    transition: all 0.4s ease;
+    border: none;
+    margin-top: 2rem;
+}
+
+.btn-order-premium:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 35px rgba(236, 72, 153, 0.6);
+    background: linear-gradient(135deg, #d946ef, var(--color-pink));
+}
+
+.btn-order-premium:active {
+    transform: translateY(-1px);
+}
