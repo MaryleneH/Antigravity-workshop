@@ -371,13 +371,217 @@ ul.task-list li input[type="checkbox"] {
 <div class="editorial-sep">
 ✦ ✦ ✦
 </div>
-<div class="editorial-gallery quarto-layout-panel" data-layout-ncol="3">
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
-<p><img src="images/paste-1.png" class="img-chic-frame img-fluid" alt="Chiner dans les allées…"> <img src="images/paste-1.jpeg" class="img-chic-frame img-fluid" alt="Rencontres précieuses"> <img src="images/paste-2.png" class="img-chic-frame img-fluid" alt="Dédicaces et sourires"></p>
+<div class="album-carousel" id="salonAlbum">
+  <div class="album-header">
+    <span class="album-icon">📷</span>
+    <span class="album-title">Album Souvenirs</span>
+  </div>
+
+  <div class="album-viewport">
+    <div class="album-track">
+      <div class="album-page active">
+        <div class="album-photo-wrap">
+          <img src="images/paste-1.png" alt="Chiner dans les allées..." class="album-photo">
+        </div>
+        <p class="album-caption">Chiner dans les allées...</p>
+      </div>
+      <div class="album-page">
+        <div class="album-photo-wrap">
+          <img src="images/paste-1.jpeg" alt="Rencontres précieuses" class="album-photo">
+        </div>
+        <p class="album-caption">Rencontres précieuses</p>
+      </div>
+      <div class="album-page">
+        <div class="album-photo-wrap">
+          <img src="images/paste-2.png" alt="Dédicaces et sourires" class="album-photo">
+        </div>
+        <p class="album-caption">Dédicaces et sourires</p>
+      </div>
+    </div>
+  </div>
+
+  <button class="album-arrow album-prev" onclick="albumNav(-1)" aria-label="Photo précédente">‹</button>
+  <button class="album-arrow album-next" onclick="albumNav(1)" aria-label="Photo suivante">›</button>
+
+  <div class="album-dots">
+    <span class="album-dot active" onclick="albumGo(0)"></span>
+    <span class="album-dot" onclick="albumGo(1)"></span>
+    <span class="album-dot" onclick="albumGo(2)"></span>
+  </div>
+
+  <div class="album-counter">
+    <span id="albumCurrent">1</span> / 3
+  </div>
 </div>
-</div>
-</div>
+
+<style>
+.album-carousel {
+  position: relative;
+  max-width: 600px;
+  margin: 2rem auto;
+  background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.4);
+  overflow: hidden;
+}
+
+.album-header {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-family: var(--font-heading, 'Playfair Display', serif);
+  color: rgba(255,255,255,0.8);
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+.album-icon { margin-right: 0.5rem; }
+
+.album-viewport {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  background: #111;
+}
+
+.album-track {
+  display: flex;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.album-page {
+  min-width: 100%;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.album-photo-wrap {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  aspect-ratio: 4/3;
+  background: #0a0a0a;
+}
+
+.album-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.album-page:hover .album-photo {
+  transform: scale(1.02);
+}
+
+.album-caption {
+  text-align: center;
+  color: rgba(255,255,255,0.7);
+  font-style: italic;
+  font-size: 0.85rem;
+  margin: 0.75rem 0 0.25rem;
+  font-family: var(--font-heading, 'Playfair Display', serif);
+  letter-spacing: 0.5px;
+}
+
+/* Navigation arrows */
+.album-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255,255,255,0.1);
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.2);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 1.4rem;
+  cursor: pointer;
+  z-index: 5;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(4px);
+  line-height: 1;
+}
+.album-arrow:hover {
+  background: rgba(255,255,255,0.25);
+  border-color: rgba(255,255,255,0.5);
+}
+.album-prev { left: 0.5rem; }
+.album-next { right: 0.5rem; }
+
+/* Dots */
+.album-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 1rem;
+}
+.album-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.25);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.album-dot.active {
+  background: rgba(255,255,255,0.9);
+  transform: scale(1.3);
+}
+
+.album-counter {
+  text-align: center;
+  color: rgba(255,255,255,0.4);
+  font-size: 0.75rem;
+  margin-top: 0.5rem;
+  letter-spacing: 1px;
+}
+
+/* Mobile adjustments */
+@media (max-width: 600px) {
+  .album-carousel { padding: 1rem; margin: 1.5rem auto; }
+  .album-arrow { width: 32px; height: 32px; font-size: 1.1rem; }
+}
+</style>
+
+<script>
+(function() {
+  let idx = 0;
+  const total = 3;
+  const track = document.querySelector('#salonAlbum .album-track');
+  const dots = document.querySelectorAll('#salonAlbum .album-dot');
+  const counter = document.getElementById('albumCurrent');
+
+  function update() {
+    track.style.transform = 'translateX(-' + (idx * 100) + '%)';
+    dots.forEach((d, i) => d.classList.toggle('active', i === idx));
+    counter.textContent = idx + 1;
+  }
+
+  window.albumNav = function(dir) {
+    idx = (idx + dir + total) % total;
+    update();
+  };
+
+  window.albumGo = function(i) {
+    idx = i;
+    update();
+  };
+
+  // Swipe support for mobile
+  let startX = 0;
+  const vp = document.querySelector('#salonAlbum .album-viewport');
+  vp.addEventListener('touchstart', e => startX = e.touches[0].clientX, {passive: true});
+  vp.addEventListener('touchend', e => {
+    const diff = startX - e.changedTouches[0].clientX;
+    if (Math.abs(diff) > 50) albumNav(diff > 0 ? 1 : -1);
+  }, {passive: true});
+})();
+</script>
 <p>Je pense qu’il ne faut pas hésiter à chiner dans ces salons, même quand on se dit qu’on ne va pas trouver ce qu’on aime lire. Les découvertes sont très intéressantes. J’y ai acheté le livre <code>Héritage</code> de <strong>Benito Sanchez</strong>. Moi qui adore Stephen King, on est plongé dans un univers à la Shining des plus flippants. Je vous dirai ce que j’en ai pensé.</p>
 <p>Aujourd’hui, je suis heureuse ! Je viens de recevoir une très belle nouvelle dont je vous reparlerai par la suite…</p>
 <!-- ===== 3) RETOUR ===== -->
