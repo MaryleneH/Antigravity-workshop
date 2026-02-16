@@ -3893,30 +3893,37 @@ body.about-page-body {
     }
 }
 
-/* === PREMIUM ORDER BUTTON (Black Feelings) === */
+/* === PREMIUM ORDER BUTTON (Black Feelings) - MINIMALIST CHIC === */
 .btn-order-premium {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: 1rem 2.5rem;
-    background: linear-gradient(135deg, var(--color-pink), #d946ef);
-    color: white !important;
+    padding: 0.9rem 2.5rem;
+    background: transparent;
+    /* Minimalist */
+    color: #fff !important;
     text-decoration: none !important;
     border-radius: 50px;
-    font-weight: 700;
-    letter-spacing: 1px;
+    font-weight: 400;
+    /* Lighter font weight for elegance */
+    letter-spacing: 2px;
+    /* Chic characteristic */
     text-transform: uppercase;
-    font-size: 0.9rem;
-    box-shadow: 0 10px 25px rgba(236, 72, 153, 0.4);
+    font-size: 0.85rem;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    /* Subtle border */
+    backdrop-filter: blur(5px);
     transition: all 0.4s ease;
-    border: none;
     margin-top: 2rem;
+    box-shadow: none;
 }
 
 .btn-order-premium:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 15px 35px rgba(236, 72, 153, 0.6);
-    background: linear-gradient(135deg, #d946ef, var(--color-pink));
+    background: #fff;
+    color: #000 !important;
+    border-color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
 }
 
 .btn-order-premium:active {
