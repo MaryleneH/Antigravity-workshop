@@ -2719,9 +2719,12 @@ body.quarto-dark .nr-frame {
 
 .nr-video-rotate-90 {
     transform: rotate(90deg);
+    width: 100vh;
+    /* Use viewport height to fill width when rotated? No, let's keep it simple */
     width: 100%;
-    /* Ensure it fits cleanly */
+    height: 100%;
     object-fit: cover;
+    transform-origin: center center;
 }
 
 .nr-caption {
