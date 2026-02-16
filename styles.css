@@ -2717,7 +2717,7 @@ body.quarto-dark .nr-frame {
     transform: none !important;
 }
 
-/* Portrait video — let browser handle orientation natively */
+/* Portrait video — file physically rotated, just center and constrain */
 .nr-portrait .nr-video-wrapper {
     max-width: 450px;
     margin: 0 auto;
