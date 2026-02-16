@@ -47,8 +47,9 @@ Après des années, mon tout premier livre paru aux éditions Hugo, **Black Feel
     <!-- Panel 1: Portrait Video WITH ROTATION FIX -->
     <article class="nr-panel nr-portrait">
       <figure class="nr-figure">
-        <div class="nr-frame">
-          <video class="nr-video nr-video-rotate-90" controls preload="metadata" playsinline poster="../images/blog/BF_reedition_web.jpg">
+        <div class="nr-frame nr-video-wrapper">
+          <img src="../images/blog/BF_reedition_web.jpg" alt="Black Feelings réédition" class="nr-video-poster-overlay" onclick="this.style.display='none'; this.nextElementSibling.play();">
+          <video class="nr-video nr-video-rotate-90" controls preload="metadata" playsinline>
             <source src="../assets/blackF1.mp4" type="video/mp4">
             Votre navigateur ne supporte pas la lecture de vidéos.
           </video>

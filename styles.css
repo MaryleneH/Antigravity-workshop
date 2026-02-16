@@ -2727,6 +2727,23 @@ body.quarto-dark .nr-frame {
     transform-origin: center center;
 }
 
+/* Poster overlay approach (replaces broken poster attribute with CSS transforms) */
+.nr-video-wrapper {
+    position: relative;
+}
+
+.nr-video-poster-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+    z-index: 10;
+    cursor: pointer;
+}
+
 .nr-caption {
     font-family: var(--font-heading);
     font-style: italic;
