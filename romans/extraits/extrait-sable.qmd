@@ -1,7 +1,7 @@
 ---
 title: "Sur le sable — Extraits"
-subtitle: "Deux moments pour plonger dans l’été"
-description: "Découvrez deux extraits lumineux du roman de Mo Gadarr."
+subtitle: "Deux moments pour plonger dans l'été"
+description: "Découvrez deux extraits lumineux du roman Sur le sable de Mo Gadarr."
 page-layout: full
 toc: false
 body-classes: excerpt-page
@@ -10,66 +10,32 @@ body-classes: excerpt-page
 ```{=html}
 <header class="excerpt-hero">
     <h1>Sur le sable</h1>
-    <div class="subtitle">Deux moments pour plonger dans l’été</div>
+    <div class="subtitle">Deux moments pour plonger dans l'été</div>
 </header>
 
 <main class="excerpt-content">
-    
-    <h3>Extrait 1</h3>
+    <p class="excerpt-start"><strong>Une héroïne solaire, ses enfants, la route des vacances, et un coup du destin… Deux extraits pour se mettre dans l'ambiance.</strong></p>
+
+    <hr class="excerpt-sep">
+
+    <h3>Extrait 1 — Road trip</h3>
     <blockquote>
-        ### 🌞⛱️ Vague d’été, soleil et émotions
-Une héroïne solaire, ses enfants, la route des vacances, et un coup du destin…  
-Deux extraits pour se mettre dans l’ambiance de _Sur le sable_.
+        « — …les démons de minuiiiiiiit !<br><br>
+        Ça, c'est moi, Dannah. Vous savez, la fille avec la bouche bien grande ouverte pour mieux vociférer les paroles d'une chanson appartenant à une époque qu'elle n'a même pas connue. Mes cheveux blonds volent dans tous les sens. Normal, les vitres de ma voiture sont baissées à fond, chose qui ne me permet jamais de rester coiffée un minimum. Ça ne m'empêche pas de bouger en rythme. Assis à l'arrière, mes deux petits m'imitent en chantant eux aussi et en s'excitant de la même façon sur ce son véritablement endiablé. »
     </blockquote>
-    
+    <p style="text-align: center; font-style: italic; margin-bottom: 4rem;" class="excerpt-start">Road trip, soleil, complicité et bonne humeur !</p>
 
-
-    <h3>EXTRAIT 1</h3>
+    <h3>Extrait 2 — La rencontre</h3>
     <blockquote>
-        EXTRAIT 1</div><br>
-« — …les démons de minuiiiiiiit !  <br>
-Ça, c’est moi, Dannah. Vous savez, la fille avec la bouche bien grande  <br>
-ouverte pour mieux vociférer les paroles d’une chanson appartenant à une  <br>
-époque qu’elle n’a même pas connue. Mes cheveux blonds volent dans tous les  <br>
-sens. Normal, les vitres de ma voiture sont baissées à fond, chose qui ne me  <br>
-permet jamais de rester coiffée un minimum. Ça ne m’empêche pas de bouger  <br>
-en rythme. Assis à l’arrière, mes deux petits m’imitent en chantant eux aussi et  <br>
-en s’excitant de la même façon sur ce son véritablement endiablé. »<br>
-Road trip, soleil, complicité et bonne humeur !</div>
+        « Je me retourne, mes Dior toujours sur le nez. Là, je suis obligée de lever la tête car je n'aperçois d'abord qu'un torse large dans un polo Ralph Lauren blanc.<br><br>
+        Un homme…<br><br>
+        Le gars en question retire ses lunettes. Mon cœur se fige comme abattu d'un coup de flèche en son milieu. Le vert intense des prunelles qui me font face me glace, me pétrifie et finit par me liquéfier.<br><br>
+        — Bonsoir, j'ai entendu en partie ce que vous disiez à mon fils. Qu'a-t-il fait encore ?<br><br>
+        Je voudrais parler, mais j'ai du mal à comprendre où je me trouve. Mes mots restent donc aux abonnés absents.<br><br>
+        — Je me présente, fait l'homme en m'accordant un sourire radieux qui tranche d'un arc blanc sa barbe noire et épaisse. Je suis Gabriel Le Valois, le père de Louis.<br><br>
+        Il donne son identité, mais je l'avais reconnu immédiatement. C'est l'ado de la photo, celui dont je prédisais la beauté phénoménale à l'âge adulte. Le voilà planté devant moi, la main tendue. »
     </blockquote>
-    <p style="text-align: center; font-style: italic; opacity: 0.7; margin-bottom: 4rem;">Road trip, soleil, complicité et bonne humeur !</p>
-
-
-    <h3>EXTRAIT 2</h3>
-    <blockquote>
-        EXTRAIT 2</div><br>
-« Je me retourne, mes Dior toujours sur le nez. Là, je suis obligée de lever  <br>
-la tête car je n’aperçois d’abord qu’un torse large dans un polo Ralf Lauren  <br>
-blanc.  <br>
-Un homme…  <br>
-Le gars en question retire ses lunettes. Mon cœur se fige comme abattu  <br>
-d’un coup de flèche en son milieu. Le vert intense des prunelles qui me font face  <br>
-me glace, me pétrifie et finit par me liquéfier.  <br>
-— Bonsoir, j’ai entendu en partie ce que vous disiez à mon fils. Qu’a-t-il  <br>
-fait encore ?  <br>
-Je voudrais parler, mais j’ai du mal à comprendre où je me trouve. Mes  <br>
-mots restent donc aux abonnés absents.  <br>
-— Je me présente, fait l’homme en m’accordant un sourire radieux qui  <br>
-tranche d’un arc blanc sa barbe noire et épaisse. Je suis Gabriel Le Valois, le  <br>
-père de Louis.  <br>
-> Il donne son identité, mais je l’avais reconnu immédiatement. C’est l’ado  <br>
-de la photo, celui dont je prédisais la beauté phénoménale à l’âge adulte. Le  <br>
-voilà planté devant moi, la main tendue. »<br>
-Un regard, une rencontre. Coup de foudre ?</div>
-    </blockquote>
-    <p style="text-align: center; font-style: italic; opacity: 0.7; margin-bottom: 4rem;">Un regard, une rencontre. Coup de foudre ?</p>
-
-
-    <h3>Extrait 4</h3>
-    <blockquote>
-        [Acheter sur Amazon](https://amzn.eu/d/d3MMSlg){.btn .btn-primary role="button"}<br>
-    </blockquote>
-    
+    <p style="text-align: center; font-style: italic;" class="excerpt-start">Un regard, une rencontre. Coup de foudre ?</p>
 
 </main>
 
