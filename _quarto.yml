@@ -4,6 +4,7 @@ project:
 
 website:
   title: "Mo Gadarr"
+  favicon: assets/favicon.png
   navbar:
     title: false
     left:
