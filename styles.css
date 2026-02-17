@@ -4173,7 +4173,7 @@ body.about-page-body {
 }
 
 /* --- Blockquote inside folio --- */
-.excerpt-folio blockquote {
+.excerpt-carousel .excerpt-folio blockquote {
     border: 0;
     margin: 0;
     padding: 1rem 1.5rem;
@@ -4181,13 +4181,13 @@ body.about-page-body {
     border-radius: 0 12px 12px 0;
     font-family: "Georgia", "Palatino Linotype", "Book Antiqua", Palatino, serif;
     font-style: italic;
-    font-size: 0.8rem;
-    line-height: 1.45;
+    font-size: 0.8rem !important;
+    line-height: 1.45 !important;
     color: #e8e8e8;
     position: relative;
 }
 
-.excerpt-folio blockquote::before {
+.excerpt-carousel .excerpt-folio blockquote::before {
     content: '\201C';
     position: absolute;
     top: -6px;
@@ -4339,17 +4339,17 @@ body.about-page-body {
         font-size: 0.6rem;
     }
 
-    .excerpt-folio blockquote {
+    .excerpt-carousel .excerpt-folio blockquote {
         padding: 0.8rem 1rem;
-        font-size: 0.75rem;
-        line-height: 1.45;
+        font-size: 0.75rem !important;
+        line-height: 1.45 !important;
         border-radius: 0 10px 10px 0;
         word-break: break-word;
         overflow-wrap: break-word;
         hyphens: auto;
     }
 
-    .excerpt-folio blockquote::before {
+    .excerpt-carousel .excerpt-folio blockquote::before {
         font-size: 1.6rem;
         top: -4px;
         left: 4px;
@@ -4394,10 +4394,10 @@ body.about-page-body {
         max-height: 45vh;
     }
 
-    .excerpt-folio blockquote {
+    .excerpt-carousel .excerpt-folio blockquote {
         padding: 0.6rem 0.8rem;
-        font-size: 0.7rem;
-        line-height: 1.4;
+        font-size: 0.7rem !important;
+        line-height: 1.4 !important;
         border-left-width: 2px;
     }
 

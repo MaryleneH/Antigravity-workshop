@@ -724,7 +724,7 @@ body.quarto-light .btn-excerpt-buy:hover {
 
 /* ===== EXCERPT CAROUSEL (Light Mode) ===== */
 
-body.quarto-light .excerpt-folio {
+body.quarto-light .excerpt-carousel .excerpt-folio {
     background: rgba(255, 240, 243, 0.55) !important;
     border-color: rgba(212, 69, 106, 0.12) !important;
     border-left: 4px solid #c9547a !important;
@@ -747,12 +747,12 @@ body.quarto-light .folio-page-num {
     border-color: rgba(212, 69, 106, 0.1) !important;
 }
 
-body.quarto-light .excerpt-folio blockquote {
+body.quarto-light .excerpt-carousel .excerpt-folio blockquote {
     color: #3a2e2e !important;
     background: rgba(255, 240, 243, 0.4) !important;
 }
 
-body.quarto-light .excerpt-folio blockquote::before {
+body.quarto-light .excerpt-carousel .excerpt-folio blockquote::before {
     color: #c9547a !important;
     opacity: 0.15 !important;
 }
