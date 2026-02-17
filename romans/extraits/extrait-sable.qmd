@@ -16,35 +16,72 @@ body-classes: excerpt-page
 <main class="excerpt-content">
     <p class="excerpt-start"><strong>Une héroïne solaire, ses enfants, la route des vacances, et un coup du destin… Deux extraits pour se mettre dans l'ambiance.</strong></p>
 
-    <hr class="excerpt-sep">
+    <div class="excerpt-carousel" id="folioCarousel">
 
-    <h3>Extrait 1 — Road trip</h3>
-    <blockquote>
-        « — …les démons de minuiiiiiiit !<br><br>
-        Ça, c'est moi, Dannah. Vous savez, la fille avec la bouche bien grande ouverte pour mieux vociférer les paroles d'une chanson appartenant à une époque qu'elle n'a même pas connue. Mes cheveux blonds volent dans tous les sens. Normal, les vitres de ma voiture sont baissées à fond, chose qui ne me permet jamais de rester coiffée un minimum. Ça ne m'empêche pas de bouger en rythme. Assis à l'arrière, mes deux petits m'imitent en chantant eux aussi et en s'excitant de la même façon sur ce son véritablement endiablé. »
-    </blockquote>
-    <p style="text-align: center; font-style: italic; margin-bottom: 4rem;" class="excerpt-start">Road trip, soleil, complicité et bonne humeur !</p>
+        <div class="excerpt-folio active" data-page="0">
+            <div class="folio-header">
+                <h3 class="folio-title">Extrait 1 — Road trip</h3>
+                <span class="folio-page-num">Page 1 / 2</span>
+            </div>
+            <blockquote>
+                « — …les démons de minuiiiiiiit !<br><br>
+                Ça, c'est moi, Dannah. Vous savez, la fille avec la bouche bien grande ouverte pour mieux vociférer les paroles d'une chanson appartenant à une époque qu'elle n'a même pas connue. Mes cheveux blonds volent dans tous les sens. Normal, les vitres de ma voiture sont baissées à fond, chose qui ne me permet jamais de rester coiffée un minimum. Ça ne m'empêche pas de bouger en rythme. Assis à l'arrière, mes deux petits m'imitent en chantant eux aussi et en s'excitant de la même façon sur ce son véritablement endiablé. »
+            </blockquote>
+            <p class="folio-legend">Road trip, soleil, complicité et bonne humeur !</p>
+        </div>
 
-    <h3>Extrait 2 — La rencontre</h3>
-    <blockquote>
-        « Je me retourne, mes Dior toujours sur le nez. Là, je suis obligée de lever la tête car je n'aperçois d'abord qu'un torse large dans un polo Ralph Lauren blanc.<br><br>
-        Un homme…<br><br>
-        Le gars en question retire ses lunettes. Mon cœur se fige comme abattu d'un coup de flèche en son milieu. Le vert intense des prunelles qui me font face me glace, me pétrifie et finit par me liquéfier.<br><br>
-        — Bonsoir, j'ai entendu en partie ce que vous disiez à mon fils. Qu'a-t-il fait encore ?<br><br>
-        Je voudrais parler, mais j'ai du mal à comprendre où je me trouve. Mes mots restent donc aux abonnés absents.<br><br>
-        — Je me présente, fait l'homme en m'accordant un sourire radieux qui tranche d'un arc blanc sa barbe noire et épaisse. Je suis Gabriel Le Valois, le père de Louis.<br><br>
-        Il donne son identité, mais je l'avais reconnu immédiatement. C'est l'ado de la photo, celui dont je prédisais la beauté phénoménale à l'âge adulte. Le voilà planté devant moi, la main tendue. »
-    </blockquote>
-    <p style="text-align: center; font-style: italic;" class="excerpt-start">Un regard, une rencontre. Coup de foudre ?</p>
+        <div class="excerpt-folio" data-page="1">
+            <div class="folio-header">
+                <h3 class="folio-title">Extrait 2 — La rencontre</h3>
+                <span class="folio-page-num">Page 2 / 2</span>
+            </div>
+            <blockquote>
+                « Je me retourne, mes Dior toujours sur le nez. Là, je suis obligée de lever la tête car je n'aperçois d'abord qu'un torse large dans un polo Ralph Lauren blanc.<br><br>
+                Un homme…<br><br>
+                Le gars en question retire ses lunettes. Mon cœur se fige comme abattu d'un coup de flèche en son milieu. Le vert intense des prunelles qui me font face me glace, me pétrifie et finit par me liquéfier.<br><br>
+                — Bonsoir, j'ai entendu en partie ce que vous disiez à mon fils. Qu'a-t-il fait encore ?<br><br>
+                Je voudrais parler, mais j'ai du mal à comprendre où je me trouve. Mes mots restent donc aux abonnés absents.<br><br>
+                — Je me présente, fait l'homme en m'accordant un sourire radieux qui tranche d'un arc blanc sa barbe noire et épaisse. Je suis Gabriel Le Valois, le père de Louis.<br><br>
+                Il donne son identité, mais je l'avais reconnu immédiatement. C'est l'ado de la photo, celui dont je prédisais la beauté phénoménale à l'âge adulte. Le voilà planté devant moi, la main tendue. »
+            </blockquote>
+            <p class="folio-legend">Un regard, une rencontre. Coup de foudre ?</p>
+        </div>
+
+    </div>
+
+    <div class="excerpt-carousel-nav">
+        <button class="folio-arrow" id="folioPrev" aria-label="Page précédente"><i class="bi bi-chevron-left"></i></button>
+        <div class="folio-dots" id="folioDots"></div>
+        <button class="folio-arrow" id="folioNext" aria-label="Page suivante"><i class="bi bi-chevron-right"></i></button>
+    </div>
+    <div class="folio-counter" id="folioCounter"></div>
 
 </main>
 
 <nav class="excerpt-navigation">
-    <a href="../sur-le-sable.html" class="btn-excerpt-back">
-        <i class="bi bi-arrow-left"></i> Retour au roman
-    </a>
-    <a href="https://amzn.eu/d/d3MMSlg" target="_blank" class="btn-excerpt-buy">
-        Acheter sur Amazon <i class="bi bi-cart"></i>
-    </a>
+    <a href="../sur-le-sable.html" class="btn-excerpt-back"><i class="bi bi-arrow-left"></i> Retour au roman</a>
+    <a href="https://amzn.eu/d/d3MMSlg" target="_blank" class="btn-excerpt-buy">Acheter sur Amazon <i class="bi bi-cart"></i></a>
 </nav>
+
+<script>
+(function() {
+    const carousel = document.getElementById('folioCarousel');
+    if (!carousel) return;
+    const pages = Array.from(carousel.querySelectorAll('.excerpt-folio'));
+    const total = pages.length;
+    let current = 0, animating = false;
+    const dotsC = document.getElementById('folioDots');
+    pages.forEach((_, i) => { const d = document.createElement('button'); d.className = 'folio-dot' + (i === 0 ? ' active' : ''); d.setAttribute('aria-label', 'Page ' + (i+1)); d.addEventListener('click', () => goTo(i)); dotsC.appendChild(d); });
+    const counter = document.getElementById('folioCounter');
+    const prev = document.getElementById('folioPrev');
+    const next = document.getElementById('folioNext');
+    function updateUI() { dotsC.querySelectorAll('.folio-dot').forEach((d,i) => d.classList.toggle('active', i===current)); counter.textContent = 'Page ' + (current+1) + ' sur ' + total; prev.classList.toggle('disabled', current===0); next.classList.toggle('disabled', current===total-1); }
+    function goTo(idx) { if (animating||idx===current||idx<0||idx>=total) return; animating=true; const dir=idx>current?'left':'right'; pages[current].classList.add('flip-out-'+dir); pages[current].classList.remove('active'); const t=pages[idx]; t.classList.add(dir==='left'?'flip-in-left':'flip-in-right'); t.style.display='block'; requestAnimationFrame(()=>{requestAnimationFrame(()=>{t.classList.remove('flip-in-left','flip-in-right');t.classList.add('active');})}); setTimeout(()=>{pages.forEach((p,i)=>{p.classList.remove('flip-out-left','flip-out-right','flip-in-left','flip-in-right');if(i!==idx)p.style.display='';});current=idx;updateUI();animating=false;},650); }
+    prev.addEventListener('click', () => goTo(current-1));
+    next.addEventListener('click', () => goTo(current+1));
+    document.addEventListener('keydown', (e) => { if(e.key==='ArrowLeft')goTo(current-1); if(e.key==='ArrowRight')goTo(current+1); });
+    let sx=0; carousel.addEventListener('touchstart',(e)=>{sx=e.touches[0].clientX},{passive:true}); carousel.addEventListener('touchend',(e)=>{const dx=e.changedTouches[0].clientX-sx;if(Math.abs(dx)>50)goTo(current+(dx<0?1:-1));},{passive:true});
+    updateUI();
+})();
+</script>
 ```

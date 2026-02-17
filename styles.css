@@ -4000,3 +4000,222 @@ body.about-page-body {
 .btn-order-premium:active {
     transform: translateY(-1px);
 }
+
+/* =============================================
+   EXCERPT CAROUSEL — "Digital Folio"
+   3D page-flip carousel for multi-excerpt pages
+   ============================================= */
+
+/* --- Carousel container --- */
+.excerpt-carousel {
+    position: relative;
+    max-width: 760px;
+    margin: 0 auto 3rem;
+    perspective: 1200px;
+    min-height: 400px;
+}
+
+/* --- Individual page card --- */
+.excerpt-folio {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    transform: rotateY(90deg) scale(0.92);
+    transform-origin: left center;
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    pointer-events: none;
+    padding: 2.5rem 2rem;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 20px;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15),
+        inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+
+.excerpt-folio.active {
+    position: relative;
+    opacity: 1;
+    transform: rotateY(0deg) scale(1);
+    pointer-events: auto;
+}
+
+.excerpt-folio.flip-out-left {
+    opacity: 0;
+    transform: rotateY(-90deg) scale(0.92);
+    transform-origin: right center;
+}
+
+.excerpt-folio.flip-out-right {
+    opacity: 0;
+    transform: rotateY(90deg) scale(0.92);
+    transform-origin: left center;
+}
+
+.excerpt-folio.flip-in-left {
+    transform: rotateY(90deg) scale(0.92);
+    transform-origin: left center;
+}
+
+.excerpt-folio.flip-in-right {
+    transform: rotateY(-90deg) scale(0.92);
+    transform-origin: right center;
+}
+
+/* --- Page header (title + number) --- */
+.folio-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.folio-title {
+    font-family: var(--font-heading);
+    font-size: 1.3rem;
+    color: #fff;
+    margin: 0;
+    font-weight: 600;
+}
+
+.folio-page-num {
+    font-family: var(--font-body);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: rgba(255, 255, 255, 0.4);
+}
+
+/* --- Blockquote inside folio --- */
+.excerpt-folio blockquote {
+    border: 0;
+    margin: 0;
+    padding: 1.8rem;
+    background: rgba(255, 255, 255, 0.03);
+    border-left: 3px solid var(--color-pink);
+    border-radius: 0 16px 16px 0;
+    font-family: "Georgia", "Times New Roman", serif;
+    font-style: italic;
+    font-size: 1.1rem;
+    line-height: 1.85;
+    color: #e8e8e8;
+}
+
+/* --- Legend text below blockquote --- */
+.folio-legend {
+    text-align: center;
+    font-style: italic;
+    margin-top: 1.5rem;
+    font-size: 0.95rem;
+    color: var(--color-pink);
+    opacity: 0.85;
+}
+
+/* --- Navigation controls --- */
+.excerpt-carousel-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.folio-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    background: rgba(255, 255, 255, 0.04);
+    color: #fff;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+.folio-arrow:hover {
+    background: var(--color-pink);
+    border-color: var(--color-pink);
+    box-shadow: 0 0 20px rgba(251, 111, 146, 0.4);
+    transform: scale(1.1);
+}
+
+.folio-arrow:disabled,
+.folio-arrow.disabled {
+    opacity: 0.25;
+    cursor: default;
+    pointer-events: none;
+}
+
+/* --- Page indicator dots --- */
+.folio-dots {
+    display: flex;
+    gap: 0.6rem;
+    align-items: center;
+}
+
+.folio-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 1.5px solid rgba(255, 255, 255, 0.3);
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    padding: 0;
+}
+
+.folio-dot.active {
+    background: var(--color-pink);
+    border-color: var(--color-pink);
+    box-shadow: 0 0 10px rgba(251, 111, 146, 0.5);
+    transform: scale(1.25);
+}
+
+/* --- Page counter --- */
+.folio-counter {
+    text-align: center;
+    margin-top: 1rem;
+    font-family: var(--font-body);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: rgba(255, 255, 255, 0.35);
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+    .excerpt-carousel {
+        margin: 0 auto 2rem;
+    }
+
+    .excerpt-folio {
+        padding: 1.5rem 1.2rem;
+        border-radius: 14px;
+    }
+
+    .excerpt-folio blockquote {
+        padding: 1.2rem;
+        font-size: 1rem;
+        border-radius: 0 12px 12px 0;
+    }
+
+    .folio-title {
+        font-size: 1.1rem;
+    }
+
+    .folio-arrow {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+}

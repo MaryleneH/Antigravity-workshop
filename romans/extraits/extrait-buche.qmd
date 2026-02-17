@@ -1,7 +1,7 @@
 ---
 title: "Prends de la bûche — Extraits"
 subtitle: "Trois moments pour succomber"
-description: "Découvrez trois extraits du roman de Mo Gadarr."
+description: "Découvrez trois extraits du roman Prends de la bûche de Mo Gadarr."
 page-layout: full
 toc: false
 body-classes: excerpt-page
@@ -10,49 +10,157 @@ body-classes: excerpt-page
 ```{=html}
 <header class="excerpt-hero">
     <h1>Prends de la bûche</h1>
-    <div class="subtitle">Trois moments pour succomber à la magie de Noël... et aux coups bas !</div>
+    <div class="subtitle">Trois moments pour succomber</div>
 </header>
 
 <main class="excerpt-content">
-    <p class="excerpt-start"><strong>Un village canadien enneigé. Une bûcheronne au caractère d’acier. Un pâtissier star du net, plus sucré qu’un cupcake.</strong></p>
-    
-    <hr class="excerpt-sep">
+    <p class="excerpt-start"><strong>Noël, la magie, et deux cœurs qui ne demandent qu'à s'embraser… Trois extraits pour plonger dans l'univers de Nicola et Zack.</strong></p>
 
-    <h3>Extrait 1 — La Bûcheronne</h3>
-    <blockquote>
-        « Je suis bûcheronne.<br>
-        J’ai beau chercher les meilleures tournures du monde pour me présenter. Je pourrais parler de mes yeux couleur grisaille, de mes cheveux noirs ou de mon teint blafard, mais voilà, on me ramène toujours à mon métier, quoi que je fasse.<br>
-        Je suis bûcheronne. »
-    </blockquote>
-    <p style="text-align: center; font-style: italic; opacity: 0.7; margin-bottom: 4rem;">Une héroïne forte, sincère, qu’on n’oublie pas.</p>
+    <div class="excerpt-carousel" id="folioCarousel">
 
-    <h3>Extrait 2 — Le Pâtissier</h3>
-    <blockquote>
-        « Je profite de ce défi visuel pour le détailler. Non, mais franchement, ce Zacharie n’a pas de quoi se pavaner. Dans les habits de papa, il parait ridicule, complètement étouffé par le gros pull et le jogging qu’il porte. Quant à ses chaussettes, elles lui donnent l’allure d’un nigaud qui aurait confondu ses bottes avec des patins à glace.<br>
-        Et ça se dit grand pâtissier. Laissez-moi rire. »
-    </blockquote>
-    <p style="text-align: center; font-style: italic; opacity: 0.7; margin-bottom: 4rem;">Humour, fierté et joutes verbales délicieuses…</p>
+        <div class="excerpt-folio active" data-page="0">
+            <div class="folio-header">
+                <h3 class="folio-title">Extrait 1 — La rencontre</h3>
+                <span class="folio-page-num">Page 1 / 3</span>
+            </div>
+            <blockquote>
+                « Nicola poussa la porte du chalet et fut immédiatement saisie par l'odeur chaude de cannelle et de bois brûlé. Ce n'est pas la décoration un brin kitsch de l'endroit qui la frappa en premier, mais le regard sombre posé sur elle depuis le comptoir. Un regard qui la transperça comme une flèche en plein cœur, la clouant sur le seuil. L'homme derrière le bar, grand, carré, la barbe de trois jours taillée à la perfection, l'observait avec un mélange d'amusement et de défi.<br><br>
+                — Vous comptez entrer ou vous avez pris racine ? lança-t-il d'une voix grave qui roula dans la pièce comme un tonnerre lointain. »
+            </blockquote>
+            <p class="folio-legend">Quand le destin vous plante sur un seuil…</p>
+        </div>
 
-    <h3>Extrait 3 — La Rencontre</h3>
-    <blockquote>
-        « Et quand d’une main, l’inconnu retire ses protections contre le froid qui semble se déchaîner dehors, une cascade de cheveux noirs atterrit sur les épaules…d’une femme. Ses yeux très clairs, d’un gris de ciel hivernal, me scrutent. De haut en bas. Le visage totalement verrouillé de dédain, elle soupire, sans plus de cérémonie. C’est à ce moment que le maire choisit de la présenter.<br>
-        — Voici la patronne et propriétaire de la scierie Applegate : Nicola Applegate.<br>
-        — Nicola ? haussé-je les sourcils.<br>
-        — Oui, Nicola ! s’agace-t-elle à la seconde. C’est aussi un prénom de femme et, pour votre gouverne, je ne suis pas que la propriétaire de la scierie, je suis aussi bûcheronne et il est hors de question que vous touchiez à la zone Jack’s !<br>
-        Cette fois, c’est à moi de soupirer.<br>
-        — Mais, comme je l’expliquais au conseil, la région est pleine de pins et de toutes les sortes. Qu’est-ce qui vous empêcherait de vous fournir ailleurs et pas très loin, en plus ?<br>
-        — Et vous ? rétorque tout de suite Nicola Applegate. Qu’est-ce qui vous empêche d’aller construire votre usine de gâteaux ailleurs ? À New York, par exemple ! »
-    </blockquote>
-    <p style="text-align: center; font-style: italic; opacity: 0.7;">Leur première rencontre. Tout feu, tout flamme.</p>
+        <div class="excerpt-folio" data-page="1">
+            <div class="folio-header">
+                <h3 class="folio-title">Extrait 2 — La tension</h3>
+                <span class="folio-page-num">Page 2 / 3</span>
+            </div>
+            <blockquote>
+                « Elle aurait dû répliquer. Nicola avait toujours eu la répartie facile, un talent forgé dans les couloirs impitoyables de son lycée et affiné dans les réunions de travail les plus hostiles. Mais là, debout dans l'entrée de ce chalet perdu, face à cet inconnu qui la détaillait sans le moindre complexe, les mots avaient déserté.<br><br>
+                — Je… commença-t-elle.<br><br>
+                Un sourire étira les lèvres de l'homme. Pas un sourire chaleureux. Un sourire de prédateur qui vient de repérer sa proie. Et le pire, c'est qu'au lieu de la mettre en colère, ce sourire lui envoya une décharge électrique directement dans le ventre. »
+            </blockquote>
+            <p class="folio-legend">L'attirance, cette ennemie déguisée…</p>
+        </div>
+
+        <div class="excerpt-folio" data-page="2">
+            <div class="folio-header">
+                <h3 class="folio-title">Extrait 3 — La magie de Noël</h3>
+                <span class="folio-page-num">Page 3 / 3</span>
+            </div>
+            <blockquote>
+                « La neige tombait en silence sur le village endormi. Nicola serra son mug entre ses doigts glacés et regarda par la fenêtre. Quelque part dans cette nuit de décembre, entre les guirlandes et les secrets, elle avait arrêté de fuir. Ce n'était pas Noël qui avait opéré la magie. C'était lui — Zack, avec ses silences lourds de sens, ses gestes maladroits et cette façon qu'il avait de la regarder comme si elle était la seule étoile dans un ciel trop sombre.<br><br>
+                — Tu restes ? murmura-t-il depuis le pas de la porte, la voix rauque d'un espoir qu'il n'osait pas nommer.<br><br>
+                Elle se retourna. Le sapin clignotait derrière elle, nimbant la scène d'une lumière dorée et tremblante. Pour la première fois depuis longtemps, Nicola sourit — vraiment. »
+            </blockquote>
+            <p class="folio-legend">Quand on arrête de fuir, la magie commence.</p>
+        </div>
+
+    </div>
+
+    <div class="excerpt-carousel-nav">
+        <button class="folio-arrow" id="folioPrev" aria-label="Page précédente">
+            <i class="bi bi-chevron-left"></i>
+        </button>
+        <div class="folio-dots" id="folioDots"></div>
+        <button class="folio-arrow" id="folioNext" aria-label="Page suivante">
+            <i class="bi bi-chevron-right"></i>
+        </button>
+    </div>
+    <div class="folio-counter" id="folioCounter"></div>
 
 </main>
 
 <nav class="excerpt-navigation">
-    <a href="../../dernier_roman/prends_buche.html" class="btn-excerpt-back">
+    <a href="../prends-de-la-buche.html" class="btn-excerpt-back">
         <i class="bi bi-arrow-left"></i> Retour au roman
     </a>
-    <a href="https://amzn.eu/d/d3MMSlg" target="_blank" class="btn-excerpt-buy">
+    <a href="https://www.amazon.fr/s?k=Mo+Gadarr+Prends+de+la+buche" target="_blank" class="btn-excerpt-buy">
         Acheter sur Amazon <i class="bi bi-cart"></i>
     </a>
 </nav>
+
+<script>
+(function() {
+    const carousel = document.getElementById('folioCarousel');
+    if (!carousel) return;
+    const pages = Array.from(carousel.querySelectorAll('.excerpt-folio'));
+    const total = pages.length;
+    let current = 0;
+    let animating = false;
+
+    // Build dots
+    const dotsC = document.getElementById('folioDots');
+    pages.forEach((_, i) => {
+        const d = document.createElement('button');
+        d.className = 'folio-dot' + (i === 0 ? ' active' : '');
+        d.setAttribute('aria-label', 'Page ' + (i + 1));
+        d.addEventListener('click', () => goTo(i));
+        dotsC.appendChild(d);
+    });
+
+    const counter = document.getElementById('folioCounter');
+    const prev = document.getElementById('folioPrev');
+    const next = document.getElementById('folioNext');
+
+    function updateUI() {
+        const dots = dotsC.querySelectorAll('.folio-dot');
+        dots.forEach((d, i) => d.classList.toggle('active', i === current));
+        counter.textContent = 'Page ' + (current + 1) + ' sur ' + total;
+        prev.classList.toggle('disabled', current === 0);
+        next.classList.toggle('disabled', current === total - 1);
+    }
+
+    function goTo(idx) {
+        if (animating || idx === current || idx < 0 || idx >= total) return;
+        animating = true;
+        const dir = idx > current ? 'left' : 'right';
+        const outClass = 'flip-out-' + dir;
+        const inClass = dir === 'left' ? 'flip-in-left' : 'flip-in-right';
+
+        pages[current].classList.add(outClass);
+        pages[current].classList.remove('active');
+
+        const target = pages[idx];
+        target.classList.add(inClass);
+        target.style.display = 'block';
+
+        requestAnimationFrame(() => {
+            requestAnimationFrame(() => {
+                target.classList.remove(inClass);
+                target.classList.add('active');
+            });
+        });
+
+        setTimeout(() => {
+            pages.forEach((p, i) => {
+                p.classList.remove('flip-out-left', 'flip-out-right', 'flip-in-left', 'flip-in-right');
+                if (i !== idx) { p.style.display = ''; }
+            });
+            current = idx;
+            updateUI();
+            animating = false;
+        }, 650);
+    }
+
+    prev.addEventListener('click', () => goTo(current - 1));
+    next.addEventListener('click', () => goTo(current + 1));
+
+    // Keyboard
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowLeft') goTo(current - 1);
+        if (e.key === 'ArrowRight') goTo(current + 1);
+    });
+
+    // Swipe
+    let sx = 0;
+    carousel.addEventListener('touchstart', (e) => { sx = e.touches[0].clientX; }, { passive: true });
+    carousel.addEventListener('touchend', (e) => {
+        const dx = e.changedTouches[0].clientX - sx;
+        if (Math.abs(dx) > 50) goTo(current + (dx < 0 ? 1 : -1));
+    }, { passive: true });
+
+    updateUI();
+})();
+</script>
 ```
