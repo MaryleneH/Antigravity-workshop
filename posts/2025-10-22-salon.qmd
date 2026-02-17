@@ -1,7 +1,7 @@
 ---
 title: "De la tronçonneuse à la romance : l'inspiration derrière Prends de la bûche"
 date: 2025-10-22
-categories: [Actu, Salons]        # ex: [Actu, Salon], [Coulisses], etc.
+categories: [Actualités, Salons]
 description: "Préparez-vous pour une aventure littéraire à Thuit De L'Oison ! Je participe au festival Thuit Romance pour présenter 'Prends de la bûche', un roman féministe et magique qui explore l'amour, le pardon et la magie de Noël. Plongez dans l'univers de Nicola et Zack, deux personnages inoubliables."
 title-block-banner: true
 image: ../images/blog/business.jpg        # optionnel : place une image dans ce dossier et décommente

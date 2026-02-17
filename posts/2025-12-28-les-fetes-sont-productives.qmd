@@ -2,7 +2,7 @@
 title: "Les fêtes sont productives !"
 date: 2025-12-28
 description: "Vacances, fêtes… et écriture : un point d’étape sur un nouveau roman plus sombre."
-categories: ["Blog", "Écriture", "Work in progress"]
+categories: [Actualités, Écriture, À venir]
 tags: ["vacances", "écriture", "roman", "nouveau projet"]
 title-block: false
 format:

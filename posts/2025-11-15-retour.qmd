@@ -2,7 +2,7 @@
 title: "Retour de salons et belles nouvelles"
 description: "Un billet intime et chaleureux où Mo Gadarr raconte son retour sur le blog après une rentrée chargée, deux salons aux ambiances contrastées, ses découvertes littéraires et une nouvelle mystérieuse qui la remplit de joie."
 date: "2025-11-15"
-categories: ["Actu", "Salons", "Lectures"]
+categories: [Actualités, Salons, Lectures]
 image: "../images/blog/photo_accueil_retour.jpg"
 format:
   html:
