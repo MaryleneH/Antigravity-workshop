@@ -149,6 +149,17 @@ Partez à la découverte des séries, des comédies de Noël, des romances de sa
 
     <!-- FÊTES -->
     <div class="book-vignette fade-in-scroll" data-cat="fetes">
+        <a href="dernier_roman/prends_buche.html" class="vignette-link">
+            <img src="images/dernier-livre.jpg" alt="Prends de la bûche" class="vignette-cover">
+            <div class="vignette-overlay">
+                <span class="vignette-genre">Romance de Noël • Enemies to Lovers</span>
+                <h3 class="vignette-title">Prends de la bûche</h3>
+                <span class="vignette-action">Découvrir &rarr;</span>
+            </div>
+        </a>
+    </div>
+
+    <div class="book-vignette fade-in-scroll" data-cat="fetes">
         <a href="romans/believe-in-santa-klaus.html" class="vignette-link">
             <img src="images/couvertures/believe-in-santa-klaus.jpg" alt="Believe in Santa Klaus" class="vignette-cover">
             <div class="vignette-overlay">
