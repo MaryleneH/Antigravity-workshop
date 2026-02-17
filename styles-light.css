@@ -287,3 +287,215 @@ hr {
 .blog-banner::after {
     background: linear-gradient(to top, rgba(250, 249, 246, 0.4), transparent) !important;
 }
+
+/* ===== EDITORIAL BLOG POST COMPONENTS ===== */
+
+/* Editorial intro lead */
+.editorial-intro-lead {
+    color: #2a2a2a !important;
+}
+
+/* Editorial meta row */
+.editorial-meta-row .meta-item {
+    color: #777 !important;
+}
+
+/* Editorial separator */
+.editorial-sep {
+    color: #ccc !important;
+}
+
+/* Editorial captions */
+.editorial-caption {
+    color: #777 !important;
+}
+
+/* Editorial blockquotes */
+.editorial-blockquote,
+blockquote {
+    color: #2a2a2a !important;
+    background: rgba(0, 0, 0, 0.03) !important;
+    border-left-color: var(--color-pink) !important;
+}
+
+/* ===== VIDEO STORY SECTION ===== */
+
+.nr-video-story {
+    background: rgba(0, 0, 0, 0.03) !important;
+    backdrop-filter: none !important;
+    color: #2a2a2a !important;
+}
+
+.nr-story-badge {
+    color: #2a2a2a !important;
+}
+
+.nr-story-title {
+    color: #1a1a1a !important;
+}
+
+.nr-chip {
+    color: #555 !important;
+    border-color: rgba(0, 0, 0, 0.15) !important;
+    background: rgba(0, 0, 0, 0.03) !important;
+}
+
+#nrvid1:checked~.nr-tabbar label[for="nrvid1"],
+#nrvid2:checked~.nr-tabbar label[for="nrvid2"] {
+    color: #fff !important;
+    background: var(--color-pink) !important;
+}
+
+.nr-caption {
+    color: #555 !important;
+}
+
+/* ===== FEATURED CARD ===== */
+
+.featured-card {
+    background: #fff !important;
+    border: 1px solid rgba(0, 0, 0, 0.06) !important;
+}
+
+.featured-card p {
+    color: #555 !important;
+}
+
+.featured-card h3,
+.featured-card .card-title {
+    color: #1a1a1a !important;
+}
+
+/* ===== BOOK HERO / LATEST NOVEL ===== */
+
+.book-hero-card {
+    background: rgba(0, 0, 0, 0.03) !important;
+    border-color: rgba(0, 0, 0, 0.06) !important;
+}
+
+.format-price {
+    color: #1a1a1a !important;
+}
+
+.chip {
+    color: #555 !important;
+    border-color: rgba(0, 0, 0, 0.12) !important;
+}
+
+.chip:hover,
+.chip.active {
+    color: #fff !important;
+}
+
+/* ===== BLOG LISTING CARDS ===== */
+
+.quarto-listing-container-grid .card-title {
+    color: #1a1a1a !important;
+}
+
+.listing-description {
+    color: #555 !important;
+}
+
+/* ===== EXCERPT PAGES ===== */
+
+.extrait-text blockquote,
+.extrait-body blockquote {
+    color: #2a2a2a !important;
+    background: rgba(0, 0, 0, 0.02) !important;
+}
+
+/* ===== ABOUT / BIO PAGE ===== */
+
+.bio-text,
+.bio-text p {
+    color: #555 !important;
+}
+
+.fun-fact-text {
+    color: #555 !important;
+}
+
+.book-theme-card {
+    background: rgba(0, 0, 0, 0.03) !important;
+    border: 1px solid rgba(0, 0, 0, 0.06) !important;
+}
+
+.book-theme-card span {
+    color: #2a2a2a !important;
+}
+
+/* ===== BLOG BANNER TEXT ===== */
+
+.blog-banner h1,
+.blog-banner .banner-title {
+    color: #1a1a1a !important;
+    text-shadow: none !important;
+}
+
+.blog-banner .banner-subtitle {
+    color: #777 !important;
+}
+
+/* ===== BACK / NAV BUTTONS ===== */
+
+.btn-back,
+.back-home a {
+    color: #2a2a2a !important;
+    border-color: rgba(0, 0, 0, 0.12) !important;
+}
+
+.btn-back:hover,
+.back-home a:hover {
+    color: #fff !important;
+    background: var(--color-pink) !important;
+}
+
+/* ===== CTA SECTIONS ===== */
+
+.cta-extrait {
+    background: rgba(0, 0, 0, 0.02) !important;
+    border-color: rgba(0, 0, 0, 0.06) !important;
+}
+
+/* ===== PREMIUM ORDER BUTTON (keep dark: transparent on dark bg) ===== */
+
+.btn-order-premium {
+    color: #2a2a2a !important;
+    border-color: rgba(0, 0, 0, 0.2) !important;
+}
+
+.btn-order-premium:hover {
+    background: #1a1a1a !important;
+    color: #fff !important;
+    border-color: #1a1a1a !important;
+}
+
+/* ===== GENERIC IMAGE FRAMES ===== */
+
+.img-chic-frame {
+    background: #fff !important;
+    border-color: rgba(0, 0, 0, 0.06) !important;
+}
+
+/* ===== VIGNETTE (Book grid) ===== */
+
+.vignette-overlay {
+    color: #2a2a2a !important;
+    background: linear-gradient(to top, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.6) 50%, transparent) !important;
+}
+
+.vignette-action {
+    color: #777 !important;
+}
+
+/* ===== PILL BUTTONS ===== */
+
+.pill {
+    color: #555 !important;
+    border-color: rgba(0, 0, 0, 0.12) !important;
+}
+
+.pill:hover {
+    color: #fff !important;
+}
