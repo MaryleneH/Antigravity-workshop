@@ -12,123 +12,704 @@ format:
 ---
 
 ```{=html}
-<header class="book-hero">
-    <!-- Background blurred image -->
-    <div class="book-hero-bg" style="background-image: url('../images/dernier-livre.jpg');"></div>
-    
-    <div class="book-hero-content">
-        <div class="book-hero-card fade-in">
-            
-            <!-- Cover Image -->
-            <div class="book-hero-cover-wrapper">
-                <img src="../images/dernier-livre.jpg" alt="Prends de la bûche — Mo Gadarr" class="book-hero-cover">
+<!-- ===== CINEMATIC TRAILER HERO ===== -->
+<section class="pdb-cinema" aria-label="Bande-annonce">
+
+    <!-- Animated background grid -->
+    <div class="pdb-bg-grid"></div>
+
+    <!-- Floating geometric accents -->
+    <div class="pdb-accent pdb-accent-1"></div>
+    <div class="pdb-accent pdb-accent-2"></div>
+    <div class="pdb-accent pdb-accent-3"></div>
+
+    <div class="pdb-cinema-inner">
+        <!-- Left: Video Player -->
+        <div class="pdb-video-stage">
+            <div class="pdb-video-glow"></div>
+            <div class="pdb-video-wrap" id="pdbVideoWrap">
+                <video id="pdbTrailer" class="pdb-video" playsinline preload="metadata" poster="../images/prends-buche-art.png">
+                    <source src="../assets/Trailer.mp4" type="video/mp4">
+                </video>
+                <!-- Custom play button -->
+                <button class="pdb-play-btn" id="pdbPlayBtn" aria-label="Lancer la bande-annonce">
+                    <svg viewBox="0 0 80 80" class="pdb-play-ring">
+                        <circle cx="40" cy="40" r="38" />
+                    </svg>
+                    <svg viewBox="0 0 24 24" class="pdb-play-icon">
+                        <polygon points="6,3 20,12 6,21" />
+                    </svg>
+                </button>
             </div>
+            <p class="pdb-video-label">🎬 Bande-annonce officielle</p>
+        </div>
 
-            <!-- Book Info -->
-            <div class="book-hero-info">
-                <span class="book-genre-pill">Romance de Noël • Enemies to Lovers</span>
-                <h1>Prends de la bûche</h1>
-                <p class="book-tagline">Hiver canadien, forêt, scierie, pâtisseries trompe-l'œil et magie de Noël — un duo que tout oppose, jusqu'à la bûche !</p>
-                
-                <!-- Prices Grid -->
-                <div class="formats-prix-premium">
-                    <div class="format-item">
-                        <span class="format-name">Ebook</span>
-                        <span class="format-price">0,99 €</span>
-                    </div>
-                    <div class="format-item">
-                        <span class="format-name">Broché</span>
-                        <span class="format-price">15 €</span>
-                    </div>
-                    <div class="format-item">
-                        <span class="format-name">Relié</span>
-                        <span class="format-price">18 €</span>
-                    </div>
-                    <div class="format-item">
-                        <span class="format-name">Pages</span>
-                        <span class="format-price">381</span>
-                    </div>
-                </div>
-
-                <!-- Synopsis -->
-                <div class="book-synopsis">
-                    <p>Il existe un seul bûcheron de profession dans la ville de Treecourt, au Canada.<br>
-                    Détrompez-vous : il ne s'agit pas d'un barbu aux muscles surdimensionnés. C'est une femme.</p>
-
-                    <p><strong>Nicola</strong> n'a jamais voulu rentrer dans le moule qu'on lui prédestinait. Patronne de la scierie de son village, bûcheronne passionnée par le bois, femme de caractère, elle refuse de voir sa forêt sacrifiée pour une usine de pâtisseries françaises.</p>
-
-                    <p>Elle compte bien barrer la route à cette franchise représentée par <strong>Zack</strong>, un pâtissier hors pair qui s'est notamment fait connaitre sur le net avec ses gâteaux trompe-l'œil et surtout avec sa bûche de Noël, plus vraie que nature et tellement délicieuse.</p>
-
-                    <p>Mais alors que l'opposition entre les deux représentants de la bûche est complète, le hasard va s'en mêler…<br>
-                    Une petite sœur fan de la Reine des Neiges, un vieux chien gaga et surtout la magnifique magie de Noël.</p>
-
-                    <p>Le rapprochement sera inévitable, musclé et... <em>terriblement sucré !</em></p>
-                </div>
-
-                <!-- Actions -->
-                <div class="book-actions">
-                    <a href="https://amzn.eu/d/d3MMSlg" class="btn-primary" target="_blank" rel="noopener noreferrer">Acheter sur Amazon</a>
-                    <a href="../romans/extraits/extrait-buche.html" class="btn-excerpt-outline">Lire un extrait</a>
-                </div>
-
+        <!-- Right: Illustration + Title lockup -->
+        <div class="pdb-hero-meta">
+            <img src="../images/prends-buche-art.png" alt="Prends de la bûche — Art" class="pdb-art-img" loading="eager" />
+            <div class="pdb-hero-text">
+                <span class="pdb-pill">✦ Nouveau roman</span>
+                <h1 class="pdb-title">Prends<br>de la bûche</h1>
+                <p class="pdb-tagline">Enemies to Lovers · Hiver canadien · Magie de Noël</p>
             </div>
         </div>
     </div>
-</header>
-```
+</section>
 
-```{=html}
-<!-- ===== TRAILER SECTION ===== -->
-<section class="book-trailer-section" aria-label="Bande-annonce">
-    <div class="book-trailer-header">
-        <span class="book-trailer-badge">🎬 Bande-annonce</span>
-        <h2 class="book-trailer-title">Découvrez l'univers</h2>
-    </div>
-    <div class="book-trailer-frame">
-        <video class="book-trailer-video" controls playsinline preload="metadata" poster="../images/couvertures/noel-coups-bas.jpg">
-            <source src="../assets/Trailer.mp4" type="video/mp4">
-            Votre navigateur ne supporte pas la lecture de vidéos.
-        </video>
+<!-- ===== BOOK CARD ===== -->
+<section class="pdb-book" aria-label="Le livre">
+    <div class="pdb-book-inner">
+        <div class="pdb-cover-stage">
+            <img src="../images/dernier-livre.jpg" alt="Prends de la bûche — Couverture" class="pdb-cover" />
+        </div>
+        <div class="pdb-info">
+            <span class="book-genre-pill">Romance de Noël • Enemies to Lovers</span>
+            <h2>L'histoire</h2>
+
+            <div class="pdb-synopsis">
+                <p>Il existe un seul bûcheron de profession dans la ville de Treecourt, au Canada.<br>
+                Détrompez-vous : il ne s'agit pas d'un barbu aux muscles surdimensionnés. C'est une femme.</p>
+
+                <p><strong>Nicola</strong> n'a jamais voulu rentrer dans le moule qu'on lui prédestinait. Patronne de la scierie de son village, bûcheronne passionnée par le bois, femme de caractère, elle refuse de voir sa forêt sacrifiée pour une usine de pâtisseries françaises.</p>
+
+                <p>Elle compte bien barrer la route à cette franchise représentée par <strong>Zack</strong>, un pâtissier hors pair qui s'est notamment fait connaitre sur le net avec ses gâteaux trompe-l'œil et surtout avec sa bûche de Noël, plus vraie que nature et tellement délicieuse.</p>
+
+                <p>Mais alors que l'opposition entre les deux représentants de la bûche est complète, le hasard va s'en mêler…<br>
+                Une petite sœur fan de la Reine des Neiges, un vieux chien gaga et surtout la magnifique magie de Noël.</p>
+
+                <p>Le rapprochement sera inévitable, musclé et... <em>terriblement sucré !</em></p>
+            </div>
+
+            <!-- Prices -->
+            <div class="pdb-formats">
+                <div class="pdb-fmt">
+                    <span class="pdb-fmt-label">Ebook</span>
+                    <span class="pdb-fmt-price">0,99 €</span>
+                </div>
+                <div class="pdb-fmt">
+                    <span class="pdb-fmt-label">Broché</span>
+                    <span class="pdb-fmt-price">15 €</span>
+                </div>
+                <div class="pdb-fmt">
+                    <span class="pdb-fmt-label">Relié</span>
+                    <span class="pdb-fmt-price">18 €</span>
+                </div>
+                <div class="pdb-fmt">
+                    <span class="pdb-fmt-label">Pages</span>
+                    <span class="pdb-fmt-price">381</span>
+                </div>
+            </div>
+
+            <!-- Actions -->
+            <div class="pdb-actions">
+                <a href="https://amzn.eu/d/d3MMSlg" class="pdb-btn-buy" target="_blank" rel="noopener noreferrer">Acheter sur Amazon</a>
+                <a href="../romans/extraits/extrait-buche.html" class="pdb-btn-excerpt">Lire un extrait</a>
+            </div>
+        </div>
     </div>
 </section>
-```
 
-```{=html}
-<!-- ===== AMBIANCE & TROPES ===== -->
-<section class="book-themes-section" aria-label="Thèmes et ambiance">
-    <div class="book-themes-grid">
-        <div class="book-theme-card">
-            <i class="bi bi-tree"></i>
-            <span>Forêt canadienne</span>
-        </div>
-        <div class="book-theme-card">
-            <i class="bi bi-snow2"></i>
-            <span>Magie de Noël</span>
-        </div>
-        <div class="book-theme-card">
-            <i class="bi bi-heart-pulse"></i>
-            <span>Enemies to Lovers</span>
-        </div>
-        <div class="book-theme-card">
-            <i class="bi bi-gender-female"></i>
-            <span>Féminisme</span>
-        </div>
-        <div class="book-theme-card">
-            <i class="bi bi-cake2"></i>
-            <span>Pâtisserie</span>
-        </div>
-        <div class="book-theme-card">
-            <i class="bi bi-flag"></i>
-            <span>Green Flag</span>
-        </div>
+<!-- ===== TROPES & THEMES ===== -->
+<section class="pdb-tropes" aria-label="Thèmes">
+    <div class="pdb-tropes-inner">
+        <div class="pdb-trope"><i class="bi bi-tree-fill"></i><span>Forêt canadienne</span></div>
+        <div class="pdb-trope"><i class="bi bi-snow2"></i><span>Magie de Noël</span></div>
+        <div class="pdb-trope"><i class="bi bi-heart-pulse-fill"></i><span>Enemies to Lovers</span></div>
+        <div class="pdb-trope"><i class="bi bi-gender-female"></i><span>Féminisme</span></div>
+        <div class="pdb-trope"><i class="bi bi-cake2-fill"></i><span>Pâtisserie</span></div>
+        <div class="pdb-trope"><i class="bi bi-flag-fill"></i><span>Green Flag</span></div>
     </div>
 </section>
-```
 
-```{=html}
-<!-- ===== NAVIGATION ===== -->
-<div class="book-nav-footer">
+<!-- ===== NAV FOOTER ===== -->
+<div class="pdb-nav">
     <a href="../romans.html" class="btn-text"><i class="bi bi-arrow-left"></i> Tous les romans</a>
     <a href="../index.html" class="btn-text"><i class="bi bi-house"></i> Accueil</a>
 </div>
+```
+
+```{=html}
+<style>
+/* ============================================
+   PRENDS DE LA BÛCHE — PREMIUM CINEMATIC PAGE
+   Palette: Emerald #1B6B4F · Burgundy #7A1B3D
+            Gold #C5A55A · Cream #F5EDE0
+   ============================================ */
+
+/* --- Cinema Hero --- */
+.pdb-cinema {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6rem 2rem 4rem;
+    overflow: hidden;
+    background: linear-gradient(145deg, #0a0a0a 0%, #111 40%, #0e1a14 100%);
+}
+
+.pdb-bg-grid {
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(rgba(27,107,79,0.06) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(27,107,79,0.06) 1px, transparent 1px);
+    background-size: 60px 60px;
+    pointer-events: none;
+}
+
+.pdb-accent {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    pointer-events: none;
+    z-index: 0;
+}
+.pdb-accent-1 {
+    width: 400px; height: 400px;
+    top: -10%; left: -5%;
+    background: radial-gradient(circle, rgba(27,107,79,0.2), transparent 70%);
+}
+.pdb-accent-2 {
+    width: 350px; height: 350px;
+    bottom: 10%; right: -5%;
+    background: radial-gradient(circle, rgba(122,27,61,0.15), transparent 70%);
+}
+.pdb-accent-3 {
+    width: 250px; height: 250px;
+    top: 30%; right: 20%;
+    background: radial-gradient(circle, rgba(197,165,90,0.1), transparent 70%);
+}
+
+.pdb-cinema-inner {
+    position: relative;
+    z-index: 2;
+    max-width: 1200px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+/* --- Video Stage --- */
+.pdb-video-stage {
+    position: relative;
+}
+
+.pdb-video-glow {
+    position: absolute;
+    inset: -20px;
+    border-radius: 24px;
+    background: linear-gradient(135deg, rgba(27,107,79,0.15), rgba(122,27,61,0.1), rgba(197,165,90,0.08));
+    filter: blur(30px);
+    z-index: 0;
+    opacity: 0.7;
+    transition: opacity 0.5s;
+}
+.pdb-video-stage:hover .pdb-video-glow {
+    opacity: 1;
+}
+
+.pdb-video-wrap {
+    position: relative;
+    z-index: 1;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid rgba(197,165,90,0.15);
+    box-shadow: 0 30px 80px rgba(0,0,0,0.5);
+    cursor: pointer;
+    background: #000;
+}
+
+.pdb-video {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    background: #000;
+}
+
+/* --- Custom Play Button --- */
+.pdb-play-btn {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80px; height: 80px;
+    border: none;
+    background: rgba(0,0,0,0.4);
+    backdrop-filter: blur(10px);
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s cubic-bezier(0.2,0.8,0.2,1);
+}
+
+.pdb-play-btn:hover {
+    transform: translate(-50%, -50%) scale(1.15);
+    background: rgba(122,27,61,0.6);
+}
+
+.pdb-play-ring {
+    position: absolute;
+    width: 80px; height: 80px;
+}
+.pdb-play-ring circle {
+    fill: none;
+    stroke: rgba(197,165,90,0.5);
+    stroke-width: 2;
+    stroke-dasharray: 240;
+    stroke-dashoffset: 240;
+    animation: pdb-ring-spin 3s linear infinite;
+}
+@keyframes pdb-ring-spin {
+    0%   { stroke-dashoffset: 240; }
+    50%  { stroke-dashoffset: 0; }
+    100% { stroke-dashoffset: -240; }
+}
+
+.pdb-play-icon {
+    width: 28px; height: 28px;
+    position: relative;
+    z-index: 1;
+    fill: #C5A55A;
+    margin-left: 4px;
+}
+
+.pdb-play-btn.pdb-hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.pdb-video-label {
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: rgba(197,165,90,0.6);
+    font-weight: 600;
+}
+
+/* --- Hero Meta (right) --- */
+.pdb-hero-meta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.pdb-art-img {
+    width: 100%;
+    max-width: 350px;
+    border-radius: 20px;
+    border: 1px solid rgba(197,165,90,0.15);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+    transition: transform 0.6s cubic-bezier(0.2,0.8,0.2,1);
+}
+.pdb-art-img:hover {
+    transform: scale(1.03) rotate(-1deg);
+}
+
+.pdb-hero-text {
+    text-align: center;
+}
+
+.pdb-pill {
+    display: inline-block;
+    font-size: 0.7rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #C5A55A;
+    border: 1px solid rgba(197,165,90,0.3);
+    padding: 0.4rem 1.2rem;
+    border-radius: 50px;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.pdb-title {
+    font-family: var(--font-heading, 'Playfair Display', serif);
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    line-height: 1;
+    color: #fff;
+    margin: 0 0 0.8rem;
+    letter-spacing: -1px;
+    background: linear-gradient(135deg, #F5EDE0, #C5A55A);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.pdb-tagline {
+    font-size: 0.9rem;
+    color: rgba(245,237,224,0.5);
+    letter-spacing: 1px;
+}
+
+/* --- Book Section --- */
+.pdb-book {
+    padding: 6rem 2rem;
+    background: linear-gradient(180deg, #0e1a14, #0a0a0a);
+    position: relative;
+}
+.pdb-book::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 10%; right: 10%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(197,165,90,0.2), transparent);
+}
+
+.pdb-book-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 4rem;
+    align-items: start;
+}
+
+.pdb-cover-stage {
+    position: relative;
+}
+.pdb-cover {
+    width: 280px;
+    border-radius: 8px;
+    box-shadow: -20px 20px 60px rgba(0,0,0,0.5), 0 0 30px rgba(27,107,79,0.1);
+    transform: perspective(800px) rotateY(-12deg);
+    transition: transform 0.6s cubic-bezier(0.2,0.8,0.2,1);
+}
+.pdb-cover:hover {
+    transform: perspective(800px) rotateY(-5deg) translateY(-8px) scale(1.02);
+    box-shadow: -25px 25px 60px rgba(0,0,0,0.6), 0 0 40px rgba(27,107,79,0.15);
+}
+
+.pdb-info {
+    padding-top: 1rem;
+}
+.pdb-info h2 {
+    font-family: var(--font-heading, 'Playfair Display', serif);
+    font-size: 2rem;
+    color: #F5EDE0;
+    margin: 1rem 0 1.5rem;
+}
+
+.pdb-synopsis p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: rgba(245,237,224,0.75);
+    margin-bottom: 1.2rem;
+}
+.pdb-synopsis strong {
+    color: #C5A55A;
+}
+.pdb-synopsis em {
+    color: #FB6F92;
+}
+
+/* --- Formats --- */
+.pdb-formats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin: 2.5rem 0;
+}
+.pdb-fmt {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.3rem;
+    padding: 0.8rem 1.5rem;
+    border-radius: 16px;
+    background: rgba(27,107,79,0.08);
+    border: 1px solid rgba(27,107,79,0.15);
+    transition: all 0.3s;
+}
+.pdb-fmt:hover {
+    background: rgba(27,107,79,0.15);
+    border-color: rgba(197,165,90,0.3);
+    transform: translateY(-3px);
+}
+.pdb-fmt-label {
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #1B6B4F;
+    font-weight: 700;
+}
+.pdb-fmt-price {
+    font-family: var(--font-heading, 'Playfair Display', serif);
+    font-size: 1.3rem;
+    color: #F5EDE0;
+    font-weight: 700;
+}
+
+/* --- Actions --- */
+.pdb-actions {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+.pdb-btn-buy {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.9rem 2.5rem;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    text-decoration: none;
+    transition: all 0.4s;
+    background: linear-gradient(135deg, #7A1B3D, #9B2B55);
+    color: #fff !important;
+    box-shadow: 0 8px 25px rgba(122,27,61,0.25);
+    border: none;
+}
+.pdb-btn-buy:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 35px rgba(122,27,61,0.4);
+    background: linear-gradient(135deg, #9B2B55, #B53365);
+    color: #fff !important;
+}
+
+.pdb-btn-excerpt {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.9rem 2.5rem;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    text-decoration: none;
+    transition: all 0.4s;
+    color: #C5A55A !important;
+    border: 1px solid rgba(197,165,90,0.3);
+    background: transparent;
+}
+.pdb-btn-excerpt:hover {
+    background: rgba(197,165,90,0.1);
+    border-color: #C5A55A;
+    transform: translateY(-3px);
+    color: #C5A55A !important;
+}
+
+/* --- Tropes --- */
+.pdb-tropes {
+    padding: 4rem 2rem;
+    background: #0a0a0a;
+}
+.pdb-tropes-inner {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+.pdb-trope {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.7rem 1.5rem;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: rgba(245,237,224,0.7);
+    border: 1px solid rgba(255,255,255,0.06);
+    background: rgba(255,255,255,0.02);
+    transition: all 0.4s;
+}
+.pdb-trope i {
+    font-size: 1rem;
+    color: #1B6B4F;
+}
+.pdb-trope:nth-child(2) i { color: #C5A55A; }
+.pdb-trope:nth-child(3) i { color: #FB6F92; }
+.pdb-trope:nth-child(4) i { color: #9B2B55; }
+.pdb-trope:nth-child(5) i { color: #C5A55A; }
+.pdb-trope:nth-child(6) i { color: #1B6B4F; }
+
+.pdb-trope:hover {
+    border-color: rgba(27,107,79,0.3);
+    background: rgba(27,107,79,0.08);
+    transform: translateY(-3px);
+    color: #F5EDE0;
+    box-shadow: 0 8px 25px rgba(27,107,79,0.1);
+}
+
+/* --- Nav Footer --- */
+.pdb-nav {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 3rem 2rem;
+    background: #0a0a0a;
+    border-top: 1px solid rgba(255,255,255,0.04);
+}
+
+/* --- Mobile --- */
+@media (max-width: 992px) {
+    .pdb-cinema {
+        padding: 5rem 1.5rem 3rem;
+        min-height: auto;
+    }
+    .pdb-cinema-inner {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+    .pdb-hero-meta {
+        order: -1;
+    }
+    .pdb-art-img {
+        max-width: 250px;
+    }
+    .pdb-title {
+        font-size: clamp(2rem, 8vw, 3rem);
+    }
+    .pdb-book-inner {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    .pdb-cover-stage {
+        display: flex;
+        justify-content: center;
+    }
+    .pdb-cover {
+        width: 220px;
+        transform: none;
+    }
+    .pdb-cover:hover {
+        transform: translateY(-5px) scale(1.02);
+    }
+    .pdb-formats {
+        justify-content: center;
+    }
+    .pdb-actions {
+        justify-content: center;
+    }
+    .pdb-synopsis {
+        text-align: left;
+    }
+}
+
+@media (max-width: 576px) {
+    .pdb-play-btn {
+        width: 60px; height: 60px;
+    }
+    .pdb-play-ring { width: 60px; height: 60px; }
+    .pdb-play-icon { width: 22px; height: 22px; }
+    .pdb-fmt {
+        padding: 0.6rem 1rem;
+    }
+    .pdb-btn-buy,
+    .pdb-btn-excerpt {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* --- Light mode adjustments --- */
+body.quarto-light .pdb-cinema {
+    background: linear-gradient(145deg, #F5EDE0 0%, #FDF6F0 40%, #EFF2EC 100%);
+}
+body.quarto-light .pdb-bg-grid {
+    background-image:
+        linear-gradient(rgba(27,107,79,0.08) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(27,107,79,0.08) 1px, transparent 1px);
+}
+body.quarto-light .pdb-title {
+    background: linear-gradient(135deg, #2d1f2f, #7A1B3D);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+body.quarto-light .pdb-tagline {
+    color: rgba(58,46,46,0.6);
+}
+body.quarto-light .pdb-pill {
+    color: #7A1B3D;
+    border-color: rgba(122,27,61,0.2);
+}
+body.quarto-light .pdb-video-label {
+    color: rgba(122,27,61,0.5);
+}
+body.quarto-light .pdb-book {
+    background: linear-gradient(180deg, #EFF2EC, #FDF6F0);
+}
+body.quarto-light .pdb-info h2 {
+    color: #2d1f2f;
+}
+body.quarto-light .pdb-synopsis p {
+    color: #6b5858;
+}
+body.quarto-light .pdb-synopsis strong {
+    color: #7A1B3D;
+}
+body.quarto-light .pdb-fmt {
+    background: rgba(27,107,79,0.05);
+    border-color: rgba(27,107,79,0.1);
+}
+body.quarto-light .pdb-fmt-price {
+    color: #2d1f2f;
+}
+body.quarto-light .pdb-tropes {
+    background: #FDF6F0;
+}
+body.quarto-light .pdb-trope {
+    color: #6b5858;
+    border-color: rgba(27,107,79,0.1);
+}
+body.quarto-light .pdb-trope:hover {
+    color: #2d1f2f;
+    background: rgba(27,107,79,0.06);
+}
+body.quarto-light .pdb-nav {
+    background: #FDF6F0;
+    border-top-color: rgba(212,69,106,0.06);
+}
+body.quarto-light .pdb-book::before {
+    background: linear-gradient(90deg, transparent, rgba(27,107,79,0.15), transparent);
+}
+body.quarto-light .pdb-video-wrap {
+    border-color: rgba(27,107,79,0.12);
+}
+body.quarto-light .pdb-art-img {
+    border-color: rgba(27,107,79,0.1);
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const video = document.getElementById('pdbTrailer');
+    const playBtn = document.getElementById('pdbPlayBtn');
+    const wrap = document.getElementById('pdbVideoWrap');
+
+    if (video && playBtn) {
+        const togglePlay = () => {
+            if (video.paused) {
+                video.play();
+                playBtn.classList.add('pdb-hidden');
+                video.controls = true;
+            }
+        };
+
+        playBtn.addEventListener('click', togglePlay);
+        wrap.addEventListener('click', (e) => {
+            if (e.target !== video || video.paused) togglePlay();
+        });
+
+        video.addEventListener('pause', () => {
+            playBtn.classList.remove('pdb-hidden');
+        });
+        video.addEventListener('ended', () => {
+            playBtn.classList.remove('pdb-hidden');
+            video.controls = false;
+        });
+    }
+});
+</script>
 ```
