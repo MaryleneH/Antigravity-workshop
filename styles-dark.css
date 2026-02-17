@@ -265,3 +265,264 @@ hr {
 .blog-banner::after {
     background: linear-gradient(to top, rgba(14, 14, 14, 0.6), transparent) !important;
 }
+
+/* ===== BOOK PAGE — HERO SECTION (Dark) ===== */
+
+.book-hero-bg {
+    filter: blur(40px) brightness(0.4) !important;
+    opacity: 0.6 !important;
+}
+
+.book-hero-card {
+    background: rgba(255, 255, 255, 0.03) !important;
+    backdrop-filter: blur(15px) !important;
+    -webkit-backdrop-filter: blur(15px) !important;
+    border-color: rgba(255, 255, 255, 0.08) !important;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5) !important;
+}
+
+.book-hero-info h1 {
+    color: #f5f5f5 !important;
+}
+
+.book-tagline {
+    color: var(--color-green) !important;
+}
+
+.book-genre-pill {
+    color: var(--color-pink) !important;
+    background: rgba(251, 111, 146, 0.1) !important;
+    border-color: rgba(251, 111, 146, 0.2) !important;
+}
+
+.book-synopsis {
+    color: #eaeaea !important;
+}
+
+.book-synopsis p {
+    color: #d0d0d0 !important;
+}
+
+/* Format prices section */
+.formats-prix-premium {
+    background: rgba(251, 111, 146, 0.05) !important;
+    border-color: rgba(251, 111, 146, 0.15) !important;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1) !important;
+}
+
+.format-price {
+    color: #fff !important;
+}
+
+.format-name {
+    color: var(--color-pink) !important;
+}
+
+/* Filter bar */
+.roman-filter {
+    background: rgba(18, 18, 18, 0.85) !important;
+    border-color: rgba(255, 255, 255, 0.08) !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3) !important;
+}
+
+.chip {
+    color: rgba(255, 255, 255, 0.7) !important;
+    border-color: rgba(255, 255, 255, 0.1) !important;
+    background: transparent !important;
+}
+
+.chip:hover,
+.chip.active {
+    background: var(--color-pink) !important;
+    color: #fff !important;
+    border-color: var(--color-pink) !important;
+}
+
+/* Category headers */
+.category-header {
+    color: #fff !important;
+}
+
+/* Vignette overlay */
+.vignette-overlay {
+    color: #fff !important;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0.6) 50%, transparent) !important;
+}
+
+.vignette-overlay h3 {
+    color: #fff !important;
+}
+
+.vignette-action {
+    color: rgba(255, 255, 255, 0.8) !important;
+}
+
+/* ===== BOOK PAGE — MOBILE (Dark) ===== */
+
+@media (max-width: 992px) {
+    .book-hero-card {
+        background: rgba(20, 20, 20, 0.75) !important;
+        border-color: rgba(255, 255, 255, 0.1) !important;
+        box-shadow: 0 -10px 40px rgba(0, 0, 0, 0.3) !important;
+    }
+
+    .book-synopsis {
+        color: rgba(255, 255, 255, 0.9) !important;
+    }
+
+    .format-item {
+        background: rgba(255, 255, 255, 0.08) !important;
+        border-color: rgba(255, 255, 255, 0.15) !important;
+        backdrop-filter: blur(12px) !important;
+    }
+
+    .format-price {
+        color: #fff !important;
+    }
+}
+
+/* ===== EDITORIAL BLOG COMPONENTS (Dark) ===== */
+
+.editorial-intro-lead {
+    color: #fff !important;
+}
+
+.editorial-meta-row .meta-item {
+    color: rgba(255, 255, 255, 0.6) !important;
+}
+
+.editorial-sep {
+    color: rgba(255, 255, 255, 0.3) !important;
+}
+
+.editorial-caption {
+    color: rgba(255, 255, 255, 0.6) !important;
+}
+
+.editorial-blockquote,
+blockquote {
+    color: #eaeaea !important;
+    background: rgba(255, 255, 255, 0.03) !important;
+    border-left-color: var(--color-pink) !important;
+}
+
+/* Video story */
+.nr-video-story {
+    background: rgba(18, 18, 18, 0.7) !important;
+    color: #fff !important;
+}
+
+.nr-story-badge {
+    color: rgba(255, 255, 255, 0.6) !important;
+}
+
+.nr-story-title {
+    color: #fff !important;
+}
+
+.nr-chip {
+    color: rgba(255, 255, 255, 0.6) !important;
+    border-color: rgba(255, 255, 255, 0.1) !important;
+    background: rgba(255, 255, 255, 0.05) !important;
+}
+
+.nr-caption {
+    color: rgba(255, 255, 255, 0.6) !important;
+}
+
+/* Featured card */
+.featured-card {
+    background: linear-gradient(145deg, #1a1a1a, #161616) !important;
+    border-color: rgba(255, 255, 255, 0.06) !important;
+}
+
+.featured-card p {
+    color: rgba(255, 255, 255, 0.85) !important;
+}
+
+.featured-card h3,
+.featured-card .card-title {
+    color: #f5f5f5 !important;
+}
+
+/* Book hero card supplement */
+.book-hero-card {
+    background: rgba(0, 0, 0, 0.4) !important;
+    border-color: rgba(255, 255, 255, 0.05) !important;
+}
+
+/* Blog banner text */
+.blog-banner h1,
+.blog-banner .banner-title {
+    color: #fff !important;
+}
+
+.blog-banner .banner-subtitle {
+    color: rgba(255, 255, 255, 0.8) !important;
+}
+
+/* Back / Nav buttons */
+.btn-back,
+.back-home a {
+    color: #eaeaea !important;
+    border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.btn-back:hover,
+.back-home a:hover {
+    color: #fff !important;
+    background: var(--color-pink) !important;
+}
+
+/* CTA sections */
+.cta-extrait {
+    background: rgba(251, 111, 146, 0.05) !important;
+    border-color: rgba(255, 255, 255, 0.05) !important;
+}
+
+/* Order button */
+.btn-order-premium {
+    color: #fff !important;
+    border-color: #fff !important;
+}
+
+.btn-order-premium:hover {
+    background: #fff !important;
+    color: #000 !important;
+}
+
+/* Image frames */
+.img-chic-frame {
+    background: #1a1a1a !important;
+    border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Pill buttons */
+.pill {
+    color: rgba(255, 255, 255, 0.7) !important;
+    border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.pill:hover {
+    color: #fff !important;
+}
+
+/* Fun facts & book themes */
+.fun-fact-text {
+    color: rgba(255, 255, 255, 0.8) !important;
+}
+
+.book-theme-card {
+    background: rgba(255, 255, 255, 0.03) !important;
+    border-color: rgba(255, 255, 255, 0.06) !important;
+}
+
+.book-theme-card span {
+    color: #fff !important;
+}
+
+/* Bio */
+.bio-text,
+.bio-text p {
+    color: #aaa !important;
+}
