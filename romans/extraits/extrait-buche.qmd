@@ -16,7 +16,7 @@ body-classes: excerpt-page
 <main class="excerpt-content">
     <p class="excerpt-start"><strong>Un village canadien enneigé. Une bûcheronne au caractère d’acier. Un pâtissier star du net, plus sucré qu’un cupcake.</strong></p>
     
-    <hr style="border: 0; height: 1px; background: rgba(255,255,255,0.1); margin: 3rem auto; width: 50%;">
+    <hr class="excerpt-sep">
 
     <h3>Extrait 1 — La Bûcheronne</h3>
     <blockquote>

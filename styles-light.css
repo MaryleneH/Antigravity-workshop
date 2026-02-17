@@ -622,3 +622,81 @@ body.quarto-light ::-webkit-scrollbar-thumb {
 body.quarto-light ::-webkit-scrollbar-thumb:hover {
     background: rgba(212, 69, 106, 0.4);
 }
+
+/* ===== EXCERPT PAGES (Light Mode) ===== */
+
+body.quarto-light.excerpt-page {
+    background-color: #FDF6F0 !important;
+    color: #3a2e2e !important;
+}
+
+body.quarto-light .excerpt-hero {
+    background: radial-gradient(circle at center, rgba(212, 69, 106, 0.08) 0%, transparent 70%) !important;
+}
+
+body.quarto-light .excerpt-hero h1 {
+    background: linear-gradient(45deg, #2d1f2f, #7A1B3D) !important;
+    -webkit-background-clip: text !important;
+    background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    text-shadow: none !important;
+}
+
+body.quarto-light .excerpt-hero .subtitle {
+    color: #c9547a !important;
+}
+
+body.quarto-light .excerpt-content {
+    color: #3a2e2e !important;
+}
+
+body.quarto-light .excerpt-content p {
+    color: #3a2e2e !important;
+}
+
+body.quarto-light .excerpt-content strong {
+    color: #2d1f2f !important;
+}
+
+body.quarto-light .excerpt-content h3 {
+    color: #2d1f2f !important;
+}
+
+body.quarto-light .excerpt-content blockquote {
+    color: #3a2e2e !important;
+    background: rgba(255, 240, 243, 0.4) !important;
+    border-left-color: #c9547a !important;
+    box-shadow: 0 10px 30px rgba(180, 100, 120, 0.08) !important;
+}
+
+body.quarto-light .excerpt-start {
+    color: #2d1f2f !important;
+}
+
+body.quarto-light .excerpt-sep {
+    background: rgba(212, 69, 106, 0.15) !important;
+}
+
+body.quarto-light .excerpt-navigation {
+    border-top-color: rgba(212, 69, 106, 0.1) !important;
+}
+
+body.quarto-light .btn-excerpt-back {
+    color: #c9547a !important;
+    border-color: #c9547a !important;
+}
+
+body.quarto-light .btn-excerpt-back:hover {
+    background: #c9547a !important;
+    color: #fff !important;
+}
+
+body.quarto-light .btn-excerpt-buy {
+    background: linear-gradient(135deg, #FB6F92, #e0527d) !important;
+    color: #fff !important;
+}
+
+body.quarto-light .btn-excerpt-buy:hover {
+    background: linear-gradient(135deg, #e0527d, #c9547a) !important;
+    color: #fff !important;
+}

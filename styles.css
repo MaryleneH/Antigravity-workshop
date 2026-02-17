@@ -3144,6 +3144,14 @@ body.excerpt-page {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
+.excerpt-sep {
+    border: 0;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.1);
+    margin: 3rem auto;
+    width: 50%;
+}
+
 .excerpt-navigation {
     text-align: center;
     padding: 3rem 0;
