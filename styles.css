@@ -4049,19 +4049,22 @@ body.about-page-body {
 
 /* --- Carousel container --- */
 .excerpt-carousel {
-    position: relative;
+    display: grid;
+    grid-template-columns: 1fr;
     max-width: 880px;
     margin: 2rem auto 3rem;
     perspective: 1400px;
-    min-height: 300px;
+    /* Remove min-height, grid handles it */
+    overflow: hidden;
+    /* Prevent horizontal scroll during transitions */
 }
 
 /* --- Individual page card --- */
 .excerpt-folio {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
+    grid-area: 1 / 1;
+    /* Stacks them on top of each other */
+    position: relative;
+    /* Reset from absolute */
     opacity: 0;
     transform: rotateY(90deg) scale(0.92);
     transform-origin: left center;
