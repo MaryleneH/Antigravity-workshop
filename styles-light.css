@@ -1,14 +1,17 @@
 /* =========================================
-   Light Mode - Mo Gadarr ✦ PREMIUM ✦
-   Palette: Warm Cream, Blush, Sage
+   Light Mode - Mo Gadarr ✦ NEW ROMANCE ✦
+   Palette: Warm Cream · Blush · Sage · Lavender
+   "Bright but never cold — like a love letter"
    ========================================= */
 
 /*-- scss:rules --*/
 
 /* ===== GLOBAL LIGHT ===== */
 body {
-    background-color: #FAF9F6 !important;
-    color: #2a2a2a !important;
+    background-color: #FDF6F0 !important;
+    /* Warm peach cream */
+    color: #3a2e2e !important;
+    /* Warm dark brown */
 }
 
 h1,
@@ -19,11 +22,13 @@ h5,
 h6,
 .title,
 .quarto-title h1 {
-    color: #1a1a1a !important;
+    color: #2d1f2f !important;
+    /* Deep plum-brown */
 }
 
 a {
-    color: #2a2a2a;
+    color: #c9547a;
+    /* Rose */
 }
 
 a:hover {
@@ -35,50 +40,51 @@ a:hover {
 #quarto-content,
 .quarto-container {
     background-color: transparent !important;
-    color: #2a2a2a !important;
+    color: #3a2e2e !important;
 }
 
 .quarto-title-banner {
-    background: linear-gradient(135deg, #FFF5F7, #FAF9F6) !important;
-    color: #1a1a1a !important;
+    background: linear-gradient(135deg, #FFF0F3, #FDF6F0, #F0EDE6) !important;
+    color: #2d1f2f !important;
 }
 
 /* ===== HERO ===== */
 .hero {
-    background: linear-gradient(135deg, #FFF5F7 0%, #FAF9F6 40%, #f5f3ed 100%) !important;
+    background: linear-gradient(135deg, #FFF0F3 0%, #FDF6F0 30%, #F5F0E8 60%, #EFF2EC 100%) !important;
 }
 
 .hero h1 {
-    color: #1a1a1a !important;
+    color: #2d1f2f !important;
 }
 
 .hero .subtitle {
     color: #d4456a !important;
 }
 
-/* Light mode orb colors */
+/* Light mode orb colors — romantic watercolor feel */
 .hero::before {
-    background: radial-gradient(circle, rgba(251, 111, 146, 0.12) 0%, transparent 70%) !important;
+    background: radial-gradient(circle, rgba(251, 111, 146, 0.15) 0%, transparent 70%) !important;
 }
 
 .hero::after {
-    background: radial-gradient(circle, rgba(163, 163, 128, 0.1) 0%, transparent 70%) !important;
+    background: radial-gradient(circle, rgba(163, 163, 128, 0.12) 0%, transparent 70%) !important;
 }
 
 /* ===== BUTTONS ===== */
 .btn-primary {
     background: linear-gradient(135deg, #FB6F92, #e0527d) !important;
     color: #fff !important;
-    box-shadow: 0 4px 20px rgba(251, 111, 146, 0.2) !important;
+    box-shadow: 0 4px 20px rgba(251, 111, 146, 0.25) !important;
 }
 
 .btn-primary:hover {
-    box-shadow: 0 8px 30px rgba(251, 111, 146, 0.35) !important;
+    box-shadow: 0 8px 30px rgba(251, 111, 146, 0.4) !important;
     color: #fff !important;
 }
 
 .btn-text {
-    color: #7a7a60 !important;
+    color: #6b7a5e !important;
+    /* Sage */
     border-color: #A3A380 !important;
 }
 
@@ -89,143 +95,148 @@ a:hover {
 
 /* ===== CARDS ===== */
 .book-card {
-    background: #ffffff !important;
-    border: 1px solid rgba(0, 0, 0, 0.05) !important;
-    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.06) !important;
+    background: linear-gradient(145deg, #FFFBF8, #FFF5F0) !important;
+    /* Warm cream */
+    border: 1px solid rgba(212, 69, 106, 0.08) !important;
+    /* Pink tint border */
+    box-shadow: 0 4px 25px rgba(180, 100, 120, 0.08) !important;
 }
 
 .book-card:hover {
     border-color: rgba(251, 111, 146, 0.3) !important;
-    box-shadow: 0 12px 40px rgba(251, 111, 146, 0.1) !important;
+    box-shadow: 0 12px 40px rgba(251, 111, 146, 0.12) !important;
 }
 
 .book-info h3 {
-    color: #1a1a1a !important;
+    color: #2d1f2f !important;
 }
 
 .book-info p {
-    color: #777 !important;
+    color: #7a6565 !important;
+    /* Warm grey-brown */
 }
 
 .book-info .genre {
-    border-color: rgba(251, 111, 146, 0.3) !important;
+    border-color: rgba(251, 111, 146, 0.25) !important;
 }
 
 /* ===== LISTING (Blog) ===== */
 .quarto-listing {
-    color: #2a2a2a !important;
+    color: #3a2e2e !important;
 }
 
 .quarto-listing .card,
 .listing-item,
 .quarto-grid-item {
-    background: rgba(0, 0, 0, 0.02) !important;
-    border: 1px solid rgba(0, 0, 0, 0.05) !important;
-    color: #2a2a2a !important;
+    background: linear-gradient(145deg, #FFFBF8, #FFF5F0) !important;
+    border: 1px solid rgba(212, 69, 106, 0.06) !important;
+    color: #3a2e2e !important;
 }
 
 .quarto-listing .card:hover,
 .listing-item:hover {
-    border-color: rgba(251, 111, 146, 0.4) !important;
-    background: rgba(251, 111, 146, 0.02) !important;
+    border-color: rgba(251, 111, 146, 0.35) !important;
+    background: linear-gradient(145deg, #FFF5F0, #FFEFF5) !important;
 }
 
 .quarto-listing-container-grid .card-title {
-    color: #1a1a1a !important;
+    color: #2d1f2f !important;
 }
 
 .listing-description,
 .card-text {
-    color: #555 !important;
+    color: #6b5858 !important;
 }
 
 .quarto-listing .listing-category {
-    background: #FFF5F7 !important;
-    color: #d4456a !important;
+    background: linear-gradient(135deg, #FFF0F3, #FFECF0) !important;
+    color: #c9547a !important;
     border: 1px solid rgba(251, 111, 146, 0.15) !important;
 }
 
 /* ===== SECTIONS ===== */
 .section-title {
-    color: #1a1a1a !important;
+    color: #2d1f2f !important;
 }
 
 /* ===== ABOUT ===== */
 .about {
-    background: linear-gradient(180deg, #FFF5F7, #FAF9F6) !important;
-    border-top: 1px solid rgba(0, 0, 0, 0.04) !important;
+    background: linear-gradient(180deg, #FFF5F0, #FDF6F0, #F0EDE6) !important;
+    border-top: 1px solid rgba(212, 69, 106, 0.06) !important;
 }
 
 .about-text p {
-    color: #555 !important;
+    color: #6b5858 !important;
 }
 
 /* ===== NEWSLETTER / CONTACT ===== */
 .newsletter {
-    background: #FAF9F6 !important;
+    background: linear-gradient(135deg, #FDF6F0, #F5F0E8) !important;
 }
 
 .newsletter h2,
 .newsletter h3 {
-    color: #1a1a1a !important;
+    color: #2d1f2f !important;
 }
 
 .newsletter p {
-    color: #777 !important;
+    color: #7a6565 !important;
 }
 
 .newsletter-form input,
 .newsletter-form textarea {
-    background: #ffffff !important;
-    border: 1px solid rgba(0, 0, 0, 0.08) !important;
-    color: #2a2a2a !important;
+    background: #FFFBF8 !important;
+    border: 1px solid rgba(212, 69, 106, 0.1) !important;
+    color: #3a2e2e !important;
 }
 
 .newsletter-form input:focus,
 .newsletter-form textarea:focus {
     border-color: var(--color-pink) !important;
+    box-shadow: 0 0 10px rgba(251, 111, 146, 0.15) !important;
 }
 
 /* ===== NAVBAR ===== */
 .navbar {
-    background: rgba(250, 249, 246, 0.8) !important;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.04) !important;
+    background: rgba(253, 246, 240, 0.85) !important;
+    border-bottom: 1px solid rgba(212, 69, 106, 0.06) !important;
+    backdrop-filter: blur(20px) !important;
 }
 
 .navbar-nav .nav-link {
-    color: rgba(40, 40, 40, 0.7) !important;
+    color: rgba(58, 46, 46, 0.7) !important;
 }
 
 .navbar-nav .nav-link:hover {
-    color: #1a1a1a !important;
+    color: #c9547a !important;
     text-shadow: none !important;
 }
 
 .navbar-nav>li:first-child>.nav-link {
-    background: linear-gradient(45deg, #1a1a1a, #d4456a) !important;
+    background: linear-gradient(45deg, #2d1f2f, #d4456a) !important;
     -webkit-background-clip: text !important;
     background-clip: text !important;
     -webkit-text-fill-color: transparent !important;
-    border: 2px solid rgba(0, 0, 0, 0.08) !important;
+    border: 2px solid rgba(212, 69, 106, 0.12) !important;
 }
 
 .navbar-nav>li:first-child>.nav-link:hover {
-    border-color: rgba(251, 111, 146, 0.3) !important;
+    border-color: rgba(251, 111, 146, 0.35) !important;
     box-shadow: 0 0 15px rgba(251, 111, 146, 0.2) !important;
 }
 
 .navbar-toggler {
-    color: #2a2a2a !important;
+    color: #3a2e2e !important;
 }
 
 .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(40, 40, 40, 0.7)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(58, 46, 46, 0.7)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
 }
 
 @media (max-width: 992px) {
     .navbar-collapse {
-        background: rgba(250, 249, 246, 0.97) !important;
-        border: 1px solid rgba(0, 0, 0, 0.04) !important;
+        background: rgba(253, 246, 240, 0.97) !important;
+        border: 1px solid rgba(212, 69, 106, 0.06) !important;
         padding: 1.5rem;
         margin-top: 1rem;
         border-radius: 16px;
@@ -235,13 +246,13 @@ a:hover {
 /* ===== FOOTER ===== */
 .nav-footer,
 footer {
-    background-color: #FAF9F6 !important;
-    border-top: 1px solid rgba(0, 0, 0, 0.04) !important;
-    color: #999 !important;
+    background: linear-gradient(180deg, #FDF6F0, #F5EDE6) !important;
+    border-top: 1px solid rgba(212, 69, 106, 0.06) !important;
+    color: #9a8585 !important;
 }
 
 .nav-footer a {
-    color: #999 !important;
+    color: #9a8585 !important;
 }
 
 .nav-footer a:hover {
@@ -250,94 +261,90 @@ footer {
 
 /* ===== TOGGLE ===== */
 .quarto-color-scheme-toggle .bi {
-    color: #2a2a2a;
+    color: #3a2e2e;
 }
 
 /* ===== GENERIC QUARTO ===== */
 .sidebar,
 .sidebar-navigation {
-    background-color: #FAF9F6 !important;
-    border-color: rgba(0, 0, 0, 0.04) !important;
+    background-color: #FDF6F0 !important;
+    border-color: rgba(212, 69, 106, 0.06) !important;
 }
 
 code {
-    background-color: #FFF5F7 !important;
-    color: #d4456a !important;
+    background: linear-gradient(135deg, #FFF0F3, #FFECEF) !important;
+    color: #c9547a !important;
     border-radius: 4px;
     padding: 0.2em 0.4em;
 }
 
 table {
-    color: #2a2a2a !important;
+    color: #3a2e2e !important;
 }
 
 table th {
-    background-color: #f8f7f4 !important;
+    background: linear-gradient(135deg, #FFF5F0, #F5F0E8) !important;
 }
 
 table td {
-    border-color: rgba(0, 0, 0, 0.06) !important;
+    border-color: rgba(212, 69, 106, 0.08) !important;
 }
 
 hr {
-    border-color: rgba(0, 0, 0, 0.06) !important;
+    border-color: rgba(212, 69, 106, 0.1) !important;
 }
 
 /* Blog banner overlay lighter */
 .blog-banner::after {
-    background: linear-gradient(to top, rgba(250, 249, 246, 0.4), transparent) !important;
+    background: linear-gradient(to top, rgba(253, 246, 240, 0.5), transparent) !important;
 }
 
 /* ===== EDITORIAL BLOG POST COMPONENTS ===== */
 
-/* Editorial intro lead */
 .editorial-intro-lead {
-    color: #2a2a2a !important;
+    color: #3a2e2e !important;
 }
 
-/* Editorial meta row */
 .editorial-meta-row .meta-item {
-    color: #777 !important;
+    color: #9a7a7a !important;
 }
 
-/* Editorial separator */
 .editorial-sep {
-    color: #ccc !important;
+    color: #d4a0ab !important;
+    /* Soft pink separator */
 }
 
-/* Editorial captions */
 .editorial-caption {
-    color: #777 !important;
+    color: #9a7a7a !important;
 }
 
-/* Editorial blockquotes */
 .editorial-blockquote,
 blockquote {
-    color: #2a2a2a !important;
-    background: rgba(0, 0, 0, 0.03) !important;
+    color: #3a2e2e !important;
+    background: linear-gradient(135deg, rgba(255, 240, 243, 0.5), rgba(240, 237, 230, 0.3)) !important;
     border-left-color: var(--color-pink) !important;
 }
 
 /* ===== VIDEO STORY SECTION ===== */
 
 .nr-video-story {
-    background: rgba(0, 0, 0, 0.03) !important;
+    background: linear-gradient(135deg, #FFF5F0, #F5F0E8, #EFF2EC) !important;
     backdrop-filter: none !important;
-    color: #2a2a2a !important;
+    color: #3a2e2e !important;
 }
 
 .nr-story-badge {
-    color: #2a2a2a !important;
+    color: #6b5858 !important;
 }
 
 .nr-story-title {
-    color: #1a1a1a !important;
+    color: #2d1f2f !important;
 }
 
 .nr-chip {
-    color: #555 !important;
-    border-color: rgba(0, 0, 0, 0.15) !important;
-    background: rgba(0, 0, 0, 0.03) !important;
+    color: #6b5858 !important;
+    border-color: rgba(212, 69, 106, 0.15) !important;
+    background: rgba(255, 240, 243, 0.4) !important;
 }
 
 #nrvid1:checked~.nr-tabbar label[for="nrvid1"],
@@ -347,39 +354,40 @@ blockquote {
 }
 
 .nr-caption {
-    color: #555 !important;
+    color: #9a7a7a !important;
 }
 
 /* ===== FEATURED CARD ===== */
 
 .featured-card {
-    background: #fff !important;
-    border: 1px solid rgba(0, 0, 0, 0.06) !important;
+    background: linear-gradient(145deg, #FFFBF8, #FFF5F0) !important;
+    border: 1px solid rgba(212, 69, 106, 0.08) !important;
 }
 
 .featured-card p {
-    color: #555 !important;
+    color: #6b5858 !important;
 }
 
 .featured-card h3,
 .featured-card .card-title {
-    color: #1a1a1a !important;
+    color: #2d1f2f !important;
 }
 
 /* ===== BOOK HERO / LATEST NOVEL ===== */
 
 .book-hero-card {
-    background: rgba(0, 0, 0, 0.03) !important;
-    border-color: rgba(0, 0, 0, 0.06) !important;
+    background: linear-gradient(145deg, rgba(255, 240, 243, 0.3), rgba(240, 237, 230, 0.2)) !important;
+    border-color: rgba(212, 69, 106, 0.08) !important;
 }
 
 .format-price {
-    color: #1a1a1a !important;
+    color: #2d1f2f !important;
 }
 
 .chip {
-    color: #555 !important;
-    border-color: rgba(0, 0, 0, 0.12) !important;
+    color: #6b5858 !important;
+    border-color: rgba(212, 69, 106, 0.15) !important;
+    background: rgba(255, 240, 243, 0.3) !important;
 }
 
 .chip:hover,
@@ -387,62 +395,63 @@ blockquote {
     color: #fff !important;
 }
 
-/* ===== BLOG LISTING CARDS ===== */
+/* ===== BLOG LISTING CARDS (override again with warm tones) ===== */
 
 .quarto-listing-container-grid .card-title {
-    color: #1a1a1a !important;
+    color: #2d1f2f !important;
 }
 
 .listing-description {
-    color: #555 !important;
+    color: #6b5858 !important;
 }
 
 /* ===== EXCERPT PAGES ===== */
 
 .extrait-text blockquote,
 .extrait-body blockquote {
-    color: #2a2a2a !important;
-    background: rgba(0, 0, 0, 0.02) !important;
+    color: #3a2e2e !important;
+    background: linear-gradient(135deg, rgba(255, 240, 243, 0.3), rgba(240, 237, 230, 0.2)) !important;
 }
 
 /* ===== ABOUT / BIO PAGE ===== */
 
 .bio-text,
 .bio-text p {
-    color: #555 !important;
+    color: #6b5858 !important;
 }
 
 .fun-fact-text {
-    color: #555 !important;
+    color: #6b5858 !important;
 }
 
 .book-theme-card {
-    background: rgba(0, 0, 0, 0.03) !important;
-    border: 1px solid rgba(0, 0, 0, 0.06) !important;
+    background: linear-gradient(145deg, #FFFBF8, #FFF5F0) !important;
+    border: 1px solid rgba(212, 69, 106, 0.08) !important;
 }
 
 .book-theme-card span {
-    color: #2a2a2a !important;
+    color: #3a2e2e !important;
 }
 
 /* ===== BLOG BANNER TEXT ===== */
 
 .blog-banner h1,
 .blog-banner .banner-title {
-    color: #1a1a1a !important;
-    text-shadow: none !important;
+    color: #2d1f2f !important;
+    text-shadow: 0 2px 10px rgba(253, 246, 240, 0.8) !important;
 }
 
 .blog-banner .banner-subtitle {
-    color: #777 !important;
+    color: #9a7a7a !important;
 }
 
 /* ===== BACK / NAV BUTTONS ===== */
 
 .btn-back,
 .back-home a {
-    color: #2a2a2a !important;
-    border-color: rgba(0, 0, 0, 0.12) !important;
+    color: #6b5858 !important;
+    border-color: rgba(212, 69, 106, 0.15) !important;
+    background: rgba(255, 240, 243, 0.3) !important;
 }
 
 .btn-back:hover,
@@ -454,48 +463,63 @@ blockquote {
 /* ===== CTA SECTIONS ===== */
 
 .cta-extrait {
-    background: rgba(0, 0, 0, 0.02) !important;
-    border-color: rgba(0, 0, 0, 0.06) !important;
+    background: linear-gradient(135deg, rgba(255, 240, 243, 0.3), rgba(240, 237, 230, 0.2)) !important;
+    border-color: rgba(212, 69, 106, 0.08) !important;
 }
 
-/* ===== PREMIUM ORDER BUTTON (keep dark: transparent on dark bg) ===== */
+/* ===== PREMIUM ORDER BUTTON ===== */
 
 .btn-order-premium {
-    color: #2a2a2a !important;
-    border-color: rgba(0, 0, 0, 0.2) !important;
+    color: #3a2e2e !important;
+    border-color: rgba(212, 69, 106, 0.25) !important;
 }
 
 .btn-order-premium:hover {
-    background: #1a1a1a !important;
+    background: #2d1f2f !important;
     color: #fff !important;
-    border-color: #1a1a1a !important;
+    border-color: #2d1f2f !important;
 }
 
 /* ===== GENERIC IMAGE FRAMES ===== */
 
 .img-chic-frame {
-    background: #fff !important;
-    border-color: rgba(0, 0, 0, 0.06) !important;
+    background: #FFFBF8 !important;
+    border-color: rgba(212, 69, 106, 0.08) !important;
 }
 
 /* ===== VIGNETTE (Book grid) ===== */
 
 .vignette-overlay {
-    color: #2a2a2a !important;
-    background: linear-gradient(to top, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.6) 50%, transparent) !important;
+    color: #3a2e2e !important;
+    background: linear-gradient(to top, rgba(253, 246, 240, 0.95), rgba(253, 246, 240, 0.6) 50%, transparent) !important;
 }
 
 .vignette-action {
-    color: #777 !important;
+    color: #9a7a7a !important;
 }
 
 /* ===== PILL BUTTONS ===== */
 
 .pill {
-    color: #555 !important;
-    border-color: rgba(0, 0, 0, 0.12) !important;
+    color: #6b5858 !important;
+    border-color: rgba(212, 69, 106, 0.15) !important;
+    background: rgba(255, 240, 243, 0.3) !important;
 }
 
 .pill:hover {
     color: #fff !important;
+}
+
+/* ===== SCROLLBAR (on supporting browsers) ===== */
+::-webkit-scrollbar-track {
+    background: #FDF6F0;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(212, 69, 106, 0.2);
+    border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(212, 69, 106, 0.4);
 }
