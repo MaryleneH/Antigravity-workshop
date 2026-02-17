@@ -1,7 +1,7 @@
 ---
-title: "Black Feelings 2 — Extrait"
-subtitle: "Bientôt disponible"
-description: "L'extrait de Black Feelings Tome 2 est en cours de préparation."
+title: "Black Feelings — Saison 2 · Extrait"
+subtitle: "Un extrait pour succomber"
+description: "Retrouvez un extrait du roman Black Feelings Saison 2 de Mo Gadarr."
 page-layout: full
 toc: false
 body-classes: excerpt-page
@@ -9,26 +9,22 @@ body-classes: excerpt-page
 
 ```{=html}
 <header class="excerpt-hero">
-    <h1>Black Feelings 2 — Extrait</h1>
-    <div class="subtitle">Bientôt disponible</div>
+    <h1>Black Feelings — Saison 2</h1>
+    <div class="subtitle">Un extrait pour succomber</div>
 </header>
 
 <main class="excerpt-content">
-    
-    <h3>Extrait 1</h3>
-    <blockquote>
-        ### 🖤 Préparez-vous pour la suite...
-L’extrait de *Black Feelings Tome 2* arrive très prochainement.  
-La tension monte, et la vengeance n'attend pas...
-    </blockquote>
-    
+    <p class="excerpt-start"><strong>Le cœur brisé, Nathan revient sur les terres de son enfance. Mais le destin ne lui laissera aucun répit.</strong></p>
 
+    <hr class="excerpt-sep">
 
-    <h3>Extrait 2</h3>
+    <h3>Extrait — Nathan</h3>
     <blockquote>
-        [Acheter sur Amazon](https://www.amazon.fr/s?k=Mo+Gadarr+Black+Feelings){.btn .btn-primary role="button"}<br>
+        « Le cœur brisé, Nathan a traversé une période sombre dont il peine à se relever. Prêt à repartir du bon pied, il revient sur les terres de son enfance pour débuter une nouvelle année scolaire en tant que professeur de mathématiques.<br><br>
+        Mais alors qu'il pensait retrouver un cocon confortable dans la demeure familiale, le destin pourrait le forcer à faire face à son passé sans ménagement.<br><br>
+        À peine arrivé, Nathan croise la route de Zina, l'amour de son enfance qu'il n'a jamais pu oublier. Elle est fidèle à son souvenir : solaire, malgré l'alcoolisme de son père dont elle a la charge. Quels que soient ses sentiments, Nathan fera tout pour les combattre. S'il n'y parvient pas, de vieux secrets enfouis pourraient bien ressurgir. »
     </blockquote>
-    
+    <p style="text-align: center; font-style: italic; margin-bottom: 4rem;" class="excerpt-start">Quand le passé ressurgit, les secrets deviennent des armes.</p>
 
 </main>
 
@@ -36,7 +32,7 @@ La tension monte, et la vengeance n'attend pas...
     <a href="../black-feelings-2.html" class="btn-excerpt-back">
         <i class="bi bi-arrow-left"></i> Retour au roman
     </a>
-    <a href="#" target="_blank" class="btn-excerpt-buy">
+    <a href="https://www.amazon.fr/s?k=Mo+Gadarr+Black+Feelings" target="_blank" class="btn-excerpt-buy">
         Acheter sur Amazon <i class="bi bi-cart"></i>
     </a>
 </nav>
