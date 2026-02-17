@@ -691,14 +691,35 @@ body.quarto-light .btn-excerpt-back:hover {
     color: #fff !important;
 }
 
+body.quarto-light .excerpt-navigation {
+    border-top-color: rgba(212, 69, 106, 0.15);
+}
+
+body.quarto-light .btn-excerpt-back {
+    background: rgba(255, 255, 255, 0.6) !important;
+    border: 1px solid rgba(212, 69, 106, 0.3) !important;
+    color: #c9547a !important;
+    backdrop-filter: blur(8px);
+}
+
+body.quarto-light .btn-excerpt-back:hover {
+    background: #fff !important;
+    border-color: #c9547a !important;
+    color: #c9547a !important;
+    box-shadow: 0 5px 15px rgba(212, 69, 106, 0.15) !important;
+}
+
 body.quarto-light .btn-excerpt-buy {
     background: linear-gradient(135deg, #FB6F92, #e0527d) !important;
     color: #fff !important;
+    box-shadow: 0 4px 15px rgba(212, 69, 106, 0.25) !important;
+    border: none !important;
 }
 
 body.quarto-light .btn-excerpt-buy:hover {
     background: linear-gradient(135deg, #e0527d, #c9547a) !important;
     color: #fff !important;
+    box-shadow: 0 8px 25px rgba(212, 69, 106, 0.4) !important;
 }
 
 /* ===== EXCERPT CAROUSEL (Light Mode) ===== */
