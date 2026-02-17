@@ -4176,13 +4176,13 @@ body.about-page-body {
 .excerpt-folio blockquote {
     border: 0;
     margin: 0;
-    padding: 1.2rem 1.8rem;
+    padding: 1rem 1.5rem;
     background: rgba(255, 255, 255, 0.03);
     border-radius: 0 12px 12px 0;
     font-family: "Georgia", "Palatino Linotype", "Book Antiqua", Palatino, serif;
     font-style: italic;
-    font-size: 0.95rem;
-    line-height: 1.6;
+    font-size: 0.8rem;
+    line-height: 1.45;
     color: #e8e8e8;
     position: relative;
 }
@@ -4190,9 +4190,9 @@ body.about-page-body {
 .excerpt-folio blockquote::before {
     content: '\201C';
     position: absolute;
-    top: -8px;
-    left: 8px;
-    font-size: 2.5rem;
+    top: -6px;
+    left: 6px;
+    font-size: 2rem;
     color: var(--color-pink);
     opacity: 0.2;
     font-family: Georgia, serif;
@@ -4203,8 +4203,8 @@ body.about-page-body {
 .folio-legend {
     text-align: center;
     font-style: italic;
-    margin-top: 1.2rem;
-    font-size: 0.85rem;
+    margin-top: 1rem;
+    font-size: 0.75rem;
     color: var(--color-pink);
     opacity: 0.9;
     letter-spacing: 0.02em;
@@ -4341,8 +4341,8 @@ body.about-page-body {
 
     .excerpt-folio blockquote {
         padding: 0.8rem 1rem;
-        font-size: 0.85rem;
-        line-height: 1.55;
+        font-size: 0.75rem;
+        line-height: 1.45;
         border-radius: 0 10px 10px 0;
         word-break: break-word;
         overflow-wrap: break-word;
@@ -4350,7 +4350,7 @@ body.about-page-body {
     }
 
     .excerpt-folio blockquote::before {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
         top: -4px;
         left: 4px;
     }
@@ -4396,13 +4396,13 @@ body.about-page-body {
 
     .excerpt-folio blockquote {
         padding: 0.6rem 0.8rem;
-        font-size: 0.8rem;
-        line-height: 1.5;
+        font-size: 0.7rem;
+        line-height: 1.4;
         border-left-width: 2px;
     }
 
     .excerpt-folio blockquote::before {
-        font-size: 1.4rem;
+        font-size: 1.2rem;
         top: -2px;
         left: 2px;
     }
