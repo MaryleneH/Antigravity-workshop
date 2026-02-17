@@ -1,189 +1,192 @@
 /* =========================================
    Dark Mode - Mo Gadarr ✦ PREMIUM ✦
    Palette: Deep Charcoal, Pink Neon, Sage
+
+   ALL rules scoped under body.quarto-dark
+   to prevent leaking from/into light mode.
    ========================================= */
 
 /*-- scss:rules --*/
 
 /* ===== GLOBAL DARK ===== */
-body {
+body.quarto-dark {
     background-color: #0e0e0e !important;
     color: #eaeaea !important;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-.title,
-.quarto-title h1 {
+body.quarto-dark h1,
+body.quarto-dark h2,
+body.quarto-dark h3,
+body.quarto-dark h4,
+body.quarto-dark h5,
+body.quarto-dark h6,
+body.quarto-dark .title,
+body.quarto-dark .quarto-title h1 {
     color: #f5f5f5 !important;
 }
 
-p,
-li,
-td,
-th,
-label {
+body.quarto-dark p,
+body.quarto-dark li,
+body.quarto-dark td,
+body.quarto-dark th,
+body.quarto-dark label {
     color: #d0d0d0;
 }
 
-a {
+body.quarto-dark a {
     color: #eaeaea;
 }
 
-a:hover {
+body.quarto-dark a:hover {
     color: #FB6F92;
 }
 
 /* Quarto containers */
-.quarto-title-block,
-#quarto-content,
-.quarto-container {
+body.quarto-dark .quarto-title-block,
+body.quarto-dark #quarto-content,
+body.quarto-dark .quarto-container {
     background-color: transparent !important;
     color: #eaeaea !important;
 }
 
-.quarto-title-banner {
+body.quarto-dark .quarto-title-banner {
     background: linear-gradient(135deg, #141414, #1a1a1a) !important;
     color: #f5f5f5 !important;
 }
 
 /* ===== HERO ===== */
-.hero {
+body.quarto-dark .hero {
     background: radial-gradient(ellipse at top, #181818 0%, #0e0e0e 60%) !important;
 }
 
-.hero h1 {
+body.quarto-dark .hero h1 {
     color: #fff !important;
     text-shadow: 0 0 60px rgba(251, 111, 146, 0.15);
 }
 
-.hero .subtitle {
+body.quarto-dark .hero .subtitle {
     color: var(--color-pink) !important;
 }
 
 /* ===== CARDS ===== */
-.book-card {
+body.quarto-dark .book-card {
     background: linear-gradient(145deg, #1a1a1a, #161616) !important;
     border: 1px solid rgba(255, 255, 255, 0.06) !important;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5) !important;
 }
 
-.book-card:hover {
+body.quarto-dark .book-card:hover {
     border-color: rgba(251, 111, 146, 0.3) !important;
     box-shadow: 0 8px 40px rgba(251, 111, 146, 0.15) !important;
 }
 
-.book-cover {
+body.quarto-dark .book-cover {
     background: #000 !important;
 }
 
-.book-info h3 {
+body.quarto-dark .book-info h3 {
     color: #fff !important;
 }
 
-.book-info p {
+body.quarto-dark .book-info p {
     color: #999 !important;
 }
 
-.book-info .genre {
+body.quarto-dark .book-info .genre {
     border-color: rgba(251, 111, 146, 0.3) !important;
 }
 
 /* ===== LISTING (Blog) ===== */
-.quarto-listing {
+body.quarto-dark .quarto-listing {
     color: #eaeaea !important;
 }
 
-.quarto-listing .card,
-.listing-item,
-.quarto-grid-item {
+body.quarto-dark .quarto-listing .card,
+body.quarto-dark .listing-item,
+body.quarto-dark .quarto-grid-item {
     background: rgba(255, 255, 255, 0.03) !important;
     border: 1px solid rgba(255, 255, 255, 0.08) !important;
     color: #eaeaea !important;
 }
 
-.quarto-listing .card:hover,
-.listing-item:hover {
+body.quarto-dark .quarto-listing .card:hover,
+body.quarto-dark .listing-item:hover {
     border-color: rgba(251, 111, 146, 0.3) !important;
 }
 
-.quarto-listing h3 a,
-.listing-title a {
+body.quarto-dark .quarto-listing h3 a,
+body.quarto-dark .listing-title a {
     color: #f5f5f5 !important;
 }
 
-.listing-description,
-.card-text {
+body.quarto-dark .listing-description,
+body.quarto-dark .card-text {
     color: #999 !important;
 }
 
-.quarto-listing .listing-category {
+body.quarto-dark .quarto-listing .listing-category {
     background: rgba(251, 111, 146, 0.1) !important;
     color: #FB6F92 !important;
     border: 1px solid rgba(251, 111, 146, 0.2) !important;
 }
 
 /* ===== SECTIONS ===== */
-.section-title {
+body.quarto-dark .section-title {
     color: #fff !important;
 }
 
 /* ===== ABOUT ===== */
-.about {
+body.quarto-dark .about {
     background: linear-gradient(180deg, #131313, #0e0e0e) !important;
     border-top: 1px solid rgba(255, 255, 255, 0.04) !important;
 }
 
-.about-text p {
+body.quarto-dark .about-text p {
     color: #aaa !important;
 }
 
 /* ===== NEWSLETTER / CONTACT ===== */
-.newsletter {
+body.quarto-dark .newsletter {
     background: #0e0e0e !important;
 }
 
-.newsletter h2,
-.newsletter h3 {
+body.quarto-dark .newsletter h2,
+body.quarto-dark .newsletter h3 {
     color: #f5f5f5 !important;
 }
 
-.newsletter p {
+body.quarto-dark .newsletter p {
     color: #999 !important;
 }
 
-.newsletter-form input,
-.newsletter-form textarea {
+body.quarto-dark .newsletter-form input,
+body.quarto-dark .newsletter-form textarea {
     background: #1a1a1a !important;
     border: 1px solid rgba(255, 255, 255, 0.08) !important;
     color: #fff !important;
 }
 
-.newsletter-form input:focus,
-.newsletter-form textarea:focus {
+body.quarto-dark .newsletter-form input:focus,
+body.quarto-dark .newsletter-form textarea:focus {
     border-color: var(--color-pink) !important;
 }
 
 /* ===== NAVBAR ===== */
-.navbar {
+body.quarto-dark .navbar {
     background: rgba(10, 10, 10, 0.8) !important;
     border-bottom: 1px solid rgba(255, 255, 255, 0.04) !important;
 }
 
-.navbar-nav .nav-link {
+body.quarto-dark .navbar-nav .nav-link {
     color: rgba(255, 255, 255, 0.7) !important;
 }
 
-.navbar-nav .nav-link:hover {
+body.quarto-dark .navbar-nav .nav-link:hover {
     color: #fff !important;
     text-shadow: 0 0 10px rgba(251, 111, 146, 0.5);
 }
 
-.navbar-nav>li:first-child>.nav-link {
+body.quarto-dark .navbar-nav>li:first-child>.nav-link {
     background: linear-gradient(45deg, #fff, #FB6F92) !important;
     -webkit-background-clip: text !important;
     background-clip: text !important;
@@ -191,16 +194,16 @@ a:hover {
     border: 2px solid rgba(255, 255, 255, 0.08) !important;
 }
 
-.navbar-toggler {
+body.quarto-dark .navbar-toggler {
     color: #fff !important;
 }
 
-.navbar-toggler-icon {
+body.quarto-dark .navbar-toggler-icon {
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 0.85)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
 }
 
 @media (max-width: 992px) {
-    .navbar-collapse {
+    body.quarto-dark .navbar-collapse {
         background: rgba(10, 10, 10, 0.95) !important;
         backdrop-filter: blur(25px);
         padding: 1.5rem;
@@ -211,318 +214,333 @@ a:hover {
 }
 
 /* ===== FOOTER ===== */
-.nav-footer,
-footer {
+body.quarto-dark .nav-footer,
+body.quarto-dark footer {
     background-color: #0e0e0e !important;
     border-top: 1px solid rgba(255, 255, 255, 0.04) !important;
     color: #777 !important;
 }
 
-.nav-footer a {
+body.quarto-dark .nav-footer a {
     color: #999 !important;
 }
 
-.nav-footer a:hover {
+body.quarto-dark .nav-footer a:hover {
     color: #FB6F92 !important;
 }
 
 /* ===== TOGGLE ===== */
-.quarto-color-scheme-toggle .bi {
+body.quarto-dark .quarto-color-scheme-toggle .bi {
     color: #eaeaea;
 }
 
 /* ===== GENERIC QUARTO ===== */
-.sidebar,
-.sidebar-navigation {
+body.quarto-dark .sidebar,
+body.quarto-dark .sidebar-navigation {
     background-color: #141414 !important;
     border-color: rgba(255, 255, 255, 0.04) !important;
 }
 
-code {
+body.quarto-dark code {
     background-color: #1e1e1e !important;
     color: #FB6F92 !important;
     border-radius: 4px;
     padding: 0.2em 0.4em;
 }
 
-table {
+body.quarto-dark table {
     color: #eaeaea !important;
 }
 
-table th {
+body.quarto-dark table th {
     background-color: #1a1a1a !important;
 }
 
-table td {
+body.quarto-dark table td {
     border-color: rgba(255, 255, 255, 0.06) !important;
 }
 
-hr {
+body.quarto-dark hr {
     border-color: rgba(255, 255, 255, 0.06) !important;
 }
 
 /* Blog banner overlay darker in dark mode */
-.blog-banner::after {
+body.quarto-dark .blog-banner::after {
     background: linear-gradient(to top, rgba(14, 14, 14, 0.6), transparent) !important;
 }
 
 /* ===== BOOK PAGE — HERO SECTION (Dark) ===== */
 
-.book-hero-bg {
+body.quarto-dark .book-hero-bg {
     filter: blur(40px) brightness(0.4) !important;
     opacity: 0.6 !important;
 }
 
-.book-hero-card {
-    background: rgba(255, 255, 255, 0.03) !important;
+body.quarto-dark .book-hero-card {
+    background: rgba(0, 0, 0, 0.4) !important;
     backdrop-filter: blur(15px) !important;
     -webkit-backdrop-filter: blur(15px) !important;
     border-color: rgba(255, 255, 255, 0.08) !important;
     box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5) !important;
 }
 
-.book-hero-info h1 {
+body.quarto-dark .book-hero-info h1 {
     color: #f5f5f5 !important;
 }
 
-.book-tagline {
+body.quarto-dark .book-tagline {
     color: var(--color-green) !important;
 }
 
-.book-genre-pill {
+body.quarto-dark .book-genre-pill {
     color: var(--color-pink) !important;
     background: rgba(251, 111, 146, 0.1) !important;
     border-color: rgba(251, 111, 146, 0.2) !important;
 }
 
-.book-synopsis {
+body.quarto-dark .book-synopsis {
     color: #eaeaea !important;
 }
 
-.book-synopsis p {
+body.quarto-dark .book-synopsis p {
     color: #d0d0d0 !important;
 }
 
 /* Format prices section */
-.formats-prix-premium {
+body.quarto-dark .formats-prix-premium {
     background: rgba(251, 111, 146, 0.05) !important;
     border-color: rgba(251, 111, 146, 0.15) !important;
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1) !important;
 }
 
-.format-price {
+body.quarto-dark .format-price {
     color: #fff !important;
 }
 
-.format-name {
+body.quarto-dark .format-name {
     color: var(--color-pink) !important;
 }
 
 /* Filter bar */
-.roman-filter {
+body.quarto-dark .roman-filter {
     background: rgba(18, 18, 18, 0.85) !important;
     border-color: rgba(255, 255, 255, 0.08) !important;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3) !important;
 }
 
-.chip {
+body.quarto-dark .chip {
     color: rgba(255, 255, 255, 0.7) !important;
     border-color: rgba(255, 255, 255, 0.1) !important;
     background: transparent !important;
 }
 
-.chip:hover,
-.chip.active {
+body.quarto-dark .chip:hover,
+body.quarto-dark .chip.active {
     background: var(--color-pink) !important;
     color: #fff !important;
     border-color: var(--color-pink) !important;
 }
 
 /* Category headers */
-.category-header {
+body.quarto-dark .category-header {
     color: #fff !important;
 }
 
 /* Vignette overlay */
-.vignette-overlay {
+body.quarto-dark .vignette-overlay {
     color: #fff !important;
     background: linear-gradient(to top, rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0.6) 50%, transparent) !important;
 }
 
-.vignette-overlay h3 {
+body.quarto-dark .vignette-overlay h3 {
     color: #fff !important;
 }
 
-.vignette-action {
+body.quarto-dark .vignette-action {
     color: rgba(255, 255, 255, 0.8) !important;
 }
 
 /* ===== BOOK PAGE — MOBILE (Dark) ===== */
 
 @media (max-width: 992px) {
-    .book-hero-card {
+    body.quarto-dark .book-hero-card {
         background: rgba(20, 20, 20, 0.75) !important;
         border-color: rgba(255, 255, 255, 0.1) !important;
         box-shadow: 0 -10px 40px rgba(0, 0, 0, 0.3) !important;
     }
 
-    .book-synopsis {
+    body.quarto-dark .book-synopsis {
         color: rgba(255, 255, 255, 0.9) !important;
     }
 
-    .format-item {
+    body.quarto-dark .format-item {
         background: rgba(255, 255, 255, 0.08) !important;
         border-color: rgba(255, 255, 255, 0.15) !important;
         backdrop-filter: blur(12px) !important;
     }
 
-    .format-price {
+    body.quarto-dark .format-price {
         color: #fff !important;
     }
 }
 
 /* ===== EDITORIAL BLOG COMPONENTS (Dark) ===== */
 
-.editorial-intro-lead {
+body.quarto-dark .editorial-intro-lead {
     color: #fff !important;
 }
 
-.editorial-meta-row .meta-item {
+body.quarto-dark .editorial-meta-row .meta-item {
     color: rgba(255, 255, 255, 0.6) !important;
 }
 
-.editorial-sep {
+body.quarto-dark .editorial-sep {
     color: rgba(255, 255, 255, 0.3) !important;
 }
 
-.editorial-caption {
+body.quarto-dark .editorial-caption {
     color: rgba(255, 255, 255, 0.6) !important;
 }
 
-.editorial-blockquote,
-blockquote {
+body.quarto-dark .editorial-blockquote,
+body.quarto-dark blockquote {
     color: #eaeaea !important;
     background: rgba(255, 255, 255, 0.03) !important;
     border-left-color: var(--color-pink) !important;
 }
 
 /* Video story */
-.nr-video-story {
+body.quarto-dark .nr-video-story {
     background: rgba(18, 18, 18, 0.7) !important;
     color: #fff !important;
 }
 
-.nr-story-badge {
+body.quarto-dark .nr-story-badge {
     color: rgba(255, 255, 255, 0.6) !important;
 }
 
-.nr-story-title {
+body.quarto-dark .nr-story-title {
     color: #fff !important;
 }
 
-.nr-chip {
+body.quarto-dark .nr-chip {
     color: rgba(255, 255, 255, 0.6) !important;
     border-color: rgba(255, 255, 255, 0.1) !important;
     background: rgba(255, 255, 255, 0.05) !important;
 }
 
-.nr-caption {
+body.quarto-dark .nr-caption {
     color: rgba(255, 255, 255, 0.6) !important;
 }
 
 /* Featured card */
-.featured-card {
+body.quarto-dark .featured-card {
     background: linear-gradient(145deg, #1a1a1a, #161616) !important;
     border-color: rgba(255, 255, 255, 0.06) !important;
 }
 
-.featured-card p {
+body.quarto-dark .featured-card p {
     color: rgba(255, 255, 255, 0.85) !important;
 }
 
-.featured-card h3,
-.featured-card .card-title {
+body.quarto-dark .featured-card h3,
+body.quarto-dark .featured-card .card-title {
     color: #f5f5f5 !important;
 }
 
-/* Book hero card supplement */
-.book-hero-card {
-    background: rgba(0, 0, 0, 0.4) !important;
-    border-color: rgba(255, 255, 255, 0.05) !important;
-}
-
 /* Blog banner text */
-.blog-banner h1,
-.blog-banner .banner-title {
+body.quarto-dark .blog-banner h1,
+body.quarto-dark .blog-banner .banner-title {
     color: #fff !important;
 }
 
-.blog-banner .banner-subtitle {
+body.quarto-dark .blog-banner .banner-subtitle {
     color: rgba(255, 255, 255, 0.8) !important;
 }
 
 /* Back / Nav buttons */
-.btn-back,
-.back-home a {
+body.quarto-dark .btn-back,
+body.quarto-dark .back-home a {
     color: #eaeaea !important;
     border-color: rgba(255, 255, 255, 0.1) !important;
 }
 
-.btn-back:hover,
-.back-home a:hover {
+body.quarto-dark .btn-back:hover,
+body.quarto-dark .back-home a:hover {
     color: #fff !important;
     background: var(--color-pink) !important;
 }
 
 /* CTA sections */
-.cta-extrait {
+body.quarto-dark .cta-extrait {
     background: rgba(251, 111, 146, 0.05) !important;
     border-color: rgba(255, 255, 255, 0.05) !important;
 }
 
 /* Order button */
-.btn-order-premium {
+body.quarto-dark .btn-order-premium {
     color: #fff !important;
     border-color: #fff !important;
 }
 
-.btn-order-premium:hover {
+body.quarto-dark .btn-order-premium:hover {
     background: #fff !important;
     color: #000 !important;
 }
 
 /* Image frames */
-.img-chic-frame {
+body.quarto-dark .img-chic-frame {
     background: #1a1a1a !important;
     border-color: rgba(255, 255, 255, 0.1) !important;
 }
 
 /* Pill buttons */
-.pill {
+body.quarto-dark .pill {
     color: rgba(255, 255, 255, 0.7) !important;
     border-color: rgba(255, 255, 255, 0.1) !important;
 }
 
-.pill:hover {
+body.quarto-dark .pill:hover {
     color: #fff !important;
 }
 
 /* Fun facts & book themes */
-.fun-fact-text {
+body.quarto-dark .fun-fact-text {
     color: rgba(255, 255, 255, 0.8) !important;
 }
 
-.book-theme-card {
+body.quarto-dark .book-theme-card {
     background: rgba(255, 255, 255, 0.03) !important;
     border-color: rgba(255, 255, 255, 0.06) !important;
 }
 
-.book-theme-card span {
+body.quarto-dark .book-theme-card span {
     color: #fff !important;
 }
 
 /* Bio */
-.bio-text,
-.bio-text p {
+body.quarto-dark .bio-text,
+body.quarto-dark .bio-text p {
     color: #aaa !important;
+}
+
+/* Excerpt pages */
+body.quarto-dark .extrait-text blockquote,
+body.quarto-dark .extrait-body blockquote {
+    color: #eaeaea !important;
+    background: rgba(255, 255, 255, 0.03) !important;
+}
+
+/* Scrollbar */
+body.quarto-dark ::-webkit-scrollbar-track {
+    background: #0e0e0e;
+}
+
+body.quarto-dark ::-webkit-scrollbar-thumb {
+    background: rgba(251, 111, 146, 0.2);
+    border-radius: 8px;
+}
+
+body.quarto-dark ::-webkit-scrollbar-thumb:hover {
+    background: rgba(251, 111, 146, 0.4);
 }

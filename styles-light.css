@@ -2,217 +2,211 @@
    Light Mode - Mo Gadarr ✦ NEW ROMANCE ✦
    Palette: Warm Cream · Blush · Sage · Lavender
    "Bright but never cold — like a love letter"
+
+   ALL rules scoped under body.quarto-light
+   to prevent leaking into dark mode.
    ========================================= */
 
 /*-- scss:rules --*/
 
 /* ===== GLOBAL LIGHT ===== */
-body {
+body.quarto-light {
     background-color: #FDF6F0 !important;
-    /* Warm peach cream */
     color: #3a2e2e !important;
-    /* Warm dark brown */
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-.title,
-.quarto-title h1 {
+body.quarto-light h1,
+body.quarto-light h2,
+body.quarto-light h3,
+body.quarto-light h4,
+body.quarto-light h5,
+body.quarto-light h6,
+body.quarto-light .title,
+body.quarto-light .quarto-title h1 {
     color: #2d1f2f !important;
-    /* Deep plum-brown */
 }
 
-a {
+body.quarto-light a {
     color: #c9547a;
-    /* Rose */
 }
 
-a:hover {
+body.quarto-light a:hover {
     color: #e0527d;
 }
 
 /* Quarto containers */
-.quarto-title-block,
-#quarto-content,
-.quarto-container {
+body.quarto-light .quarto-title-block,
+body.quarto-light #quarto-content,
+body.quarto-light .quarto-container {
     background-color: transparent !important;
     color: #3a2e2e !important;
 }
 
-.quarto-title-banner {
+body.quarto-light .quarto-title-banner {
     background: linear-gradient(135deg, #FFF0F3, #FDF6F0, #F0EDE6) !important;
     color: #2d1f2f !important;
 }
 
 /* ===== HERO ===== */
-.hero {
+body.quarto-light .hero {
     background: linear-gradient(135deg, #FFF0F3 0%, #FDF6F0 30%, #F5F0E8 60%, #EFF2EC 100%) !important;
 }
 
-.hero h1 {
+body.quarto-light .hero h1 {
     color: #2d1f2f !important;
 }
 
-.hero .subtitle {
+body.quarto-light .hero .subtitle {
     color: #d4456a !important;
 }
 
-/* Light mode orb colors — romantic watercolor feel */
-.hero::before {
+body.quarto-light .hero::before {
     background: radial-gradient(circle, rgba(251, 111, 146, 0.15) 0%, transparent 70%) !important;
 }
 
-.hero::after {
+body.quarto-light .hero::after {
     background: radial-gradient(circle, rgba(163, 163, 128, 0.12) 0%, transparent 70%) !important;
 }
 
 /* ===== BUTTONS ===== */
-.btn-primary {
+body.quarto-light .btn-primary {
     background: linear-gradient(135deg, #FB6F92, #e0527d) !important;
     color: #fff !important;
     box-shadow: 0 4px 20px rgba(251, 111, 146, 0.25) !important;
 }
 
-.btn-primary:hover {
+body.quarto-light .btn-primary:hover {
     box-shadow: 0 8px 30px rgba(251, 111, 146, 0.4) !important;
     color: #fff !important;
 }
 
-.btn-text {
+body.quarto-light .btn-text {
     color: #6b7a5e !important;
-    /* Sage */
     border-color: #A3A380 !important;
 }
 
-.btn-text:hover {
+body.quarto-light .btn-text:hover {
     background-color: #A3A380 !important;
     color: #fff !important;
 }
 
 /* ===== CARDS ===== */
-.book-card {
+body.quarto-light .book-card {
     background: linear-gradient(145deg, #FFFBF8, #FFF5F0) !important;
-    /* Warm cream */
     border: 1px solid rgba(212, 69, 106, 0.08) !important;
-    /* Pink tint border */
     box-shadow: 0 4px 25px rgba(180, 100, 120, 0.08) !important;
 }
 
-.book-card:hover {
+body.quarto-light .book-card:hover {
     border-color: rgba(251, 111, 146, 0.3) !important;
     box-shadow: 0 12px 40px rgba(251, 111, 146, 0.12) !important;
 }
 
-.book-info h3 {
+body.quarto-light .book-info h3 {
     color: #2d1f2f !important;
 }
 
-.book-info p {
+body.quarto-light .book-info p {
     color: #7a6565 !important;
-    /* Warm grey-brown */
 }
 
-.book-info .genre {
+body.quarto-light .book-info .genre {
     border-color: rgba(251, 111, 146, 0.25) !important;
 }
 
 /* ===== LISTING (Blog) ===== */
-.quarto-listing {
+body.quarto-light .quarto-listing {
     color: #3a2e2e !important;
 }
 
-.quarto-listing .card,
-.listing-item,
-.quarto-grid-item {
+body.quarto-light .quarto-listing .card,
+body.quarto-light .listing-item,
+body.quarto-light .quarto-grid-item {
     background: linear-gradient(145deg, #FFFBF8, #FFF5F0) !important;
     border: 1px solid rgba(212, 69, 106, 0.06) !important;
     color: #3a2e2e !important;
 }
 
-.quarto-listing .card:hover,
-.listing-item:hover {
+body.quarto-light .quarto-listing .card:hover,
+body.quarto-light .listing-item:hover {
     border-color: rgba(251, 111, 146, 0.35) !important;
     background: linear-gradient(145deg, #FFF5F0, #FFEFF5) !important;
 }
 
-.quarto-listing-container-grid .card-title {
+body.quarto-light .quarto-listing-container-grid .card-title {
     color: #2d1f2f !important;
 }
 
-.listing-description,
-.card-text {
+body.quarto-light .listing-description,
+body.quarto-light .card-text {
     color: #6b5858 !important;
 }
 
-.quarto-listing .listing-category {
+body.quarto-light .quarto-listing .listing-category {
     background: linear-gradient(135deg, #FFF0F3, #FFECF0) !important;
     color: #c9547a !important;
     border: 1px solid rgba(251, 111, 146, 0.15) !important;
 }
 
 /* ===== SECTIONS ===== */
-.section-title {
+body.quarto-light .section-title {
     color: #2d1f2f !important;
 }
 
 /* ===== ABOUT ===== */
-.about {
+body.quarto-light .about {
     background: linear-gradient(180deg, #FFF5F0, #FDF6F0, #F0EDE6) !important;
     border-top: 1px solid rgba(212, 69, 106, 0.06) !important;
 }
 
-.about-text p {
+body.quarto-light .about-text p {
     color: #6b5858 !important;
 }
 
 /* ===== NEWSLETTER / CONTACT ===== */
-.newsletter {
+body.quarto-light .newsletter {
     background: linear-gradient(135deg, #FDF6F0, #F5F0E8) !important;
 }
 
-.newsletter h2,
-.newsletter h3 {
+body.quarto-light .newsletter h2,
+body.quarto-light .newsletter h3 {
     color: #2d1f2f !important;
 }
 
-.newsletter p {
+body.quarto-light .newsletter p {
     color: #7a6565 !important;
 }
 
-.newsletter-form input,
-.newsletter-form textarea {
+body.quarto-light .newsletter-form input,
+body.quarto-light .newsletter-form textarea {
     background: #FFFBF8 !important;
     border: 1px solid rgba(212, 69, 106, 0.1) !important;
     color: #3a2e2e !important;
 }
 
-.newsletter-form input:focus,
-.newsletter-form textarea:focus {
+body.quarto-light .newsletter-form input:focus,
+body.quarto-light .newsletter-form textarea:focus {
     border-color: var(--color-pink) !important;
     box-shadow: 0 0 10px rgba(251, 111, 146, 0.15) !important;
 }
 
 /* ===== NAVBAR ===== */
-.navbar {
+body.quarto-light .navbar {
     background: rgba(253, 246, 240, 0.85) !important;
     border-bottom: 1px solid rgba(212, 69, 106, 0.06) !important;
     backdrop-filter: blur(20px) !important;
 }
 
-.navbar-nav .nav-link {
+body.quarto-light .navbar-nav .nav-link {
     color: rgba(58, 46, 46, 0.85) !important;
 }
 
-.navbar-nav .nav-link:hover {
+body.quarto-light .navbar-nav .nav-link:hover {
     color: #c9547a !important;
     text-shadow: none !important;
 }
 
-.navbar-nav>li:first-child>.nav-link {
+body.quarto-light .navbar-nav>li:first-child>.nav-link {
     background: linear-gradient(45deg, #2d1f2f, #d4456a) !important;
     -webkit-background-clip: text !important;
     background-clip: text !important;
@@ -220,21 +214,21 @@ a:hover {
     border: 2px solid rgba(212, 69, 106, 0.12) !important;
 }
 
-.navbar-nav>li:first-child>.nav-link:hover {
+body.quarto-light .navbar-nav>li:first-child>.nav-link:hover {
     border-color: rgba(251, 111, 146, 0.35) !important;
     box-shadow: 0 0 15px rgba(251, 111, 146, 0.2) !important;
 }
 
-.navbar-toggler {
+body.quarto-light .navbar-toggler {
     color: #3a2e2e !important;
 }
 
-.navbar-toggler-icon {
+body.quarto-light .navbar-toggler-icon {
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(58, 46, 46, 0.85)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
 }
 
 @media (max-width: 992px) {
-    .navbar-collapse {
+    body.quarto-light .navbar-collapse {
         background: rgba(253, 246, 240, 0.97) !important;
         border: 1px solid rgba(212, 69, 106, 0.06) !important;
         padding: 1.5rem;
@@ -244,82 +238,81 @@ a:hover {
 }
 
 /* ===== FOOTER ===== */
-.nav-footer,
-footer {
+body.quarto-light .nav-footer,
+body.quarto-light footer {
     background: linear-gradient(180deg, #FDF6F0, #F5EDE6) !important;
     border-top: 1px solid rgba(212, 69, 106, 0.06) !important;
     color: #7a6565 !important;
 }
 
-.nav-footer a {
+body.quarto-light .nav-footer a {
     color: #7a6565 !important;
 }
 
-.nav-footer a:hover {
+body.quarto-light .nav-footer a:hover {
     color: #d4456a !important;
 }
 
 /* ===== TOGGLE ===== */
-.quarto-color-scheme-toggle .bi {
+body.quarto-light .quarto-color-scheme-toggle .bi {
     color: #3a2e2e;
 }
 
 /* ===== GENERIC QUARTO ===== */
-.sidebar,
-.sidebar-navigation {
+body.quarto-light .sidebar,
+body.quarto-light .sidebar-navigation {
     background-color: #FDF6F0 !important;
     border-color: rgba(212, 69, 106, 0.06) !important;
 }
 
-code {
+body.quarto-light code {
     background: linear-gradient(135deg, #FFF0F3, #FFECEF) !important;
     color: #c9547a !important;
     border-radius: 4px;
     padding: 0.2em 0.4em;
 }
 
-table {
+body.quarto-light table {
     color: #3a2e2e !important;
 }
 
-table th {
+body.quarto-light table th {
     background: linear-gradient(135deg, #FFF5F0, #F5F0E8) !important;
 }
 
-table td {
+body.quarto-light table td {
     border-color: rgba(212, 69, 106, 0.08) !important;
 }
 
-hr {
+body.quarto-light hr {
     border-color: rgba(212, 69, 106, 0.1) !important;
 }
 
 /* Blog banner overlay lighter */
-.blog-banner::after {
+body.quarto-light .blog-banner::after {
     background: linear-gradient(to top, rgba(253, 246, 240, 0.5), transparent) !important;
 }
 
 /* ===== EDITORIAL BLOG POST COMPONENTS ===== */
 
-.editorial-intro-lead {
+body.quarto-light .editorial-intro-lead {
     color: #3a2e2e !important;
 }
 
-.editorial-meta-row .meta-item {
+body.quarto-light .editorial-meta-row .meta-item {
     color: #7a5f5f !important;
 }
 
-.editorial-sep {
+body.quarto-light .editorial-sep {
     color: #d4a0ab !important;
-    /* Soft pink separator */
 }
 
-.editorial-caption {
+body.quarto-light .editorial-caption {
     color: #7a5f5f !important;
 }
 
-.editorial-blockquote,
-blockquote {
+body.quarto-light .editorial-blockquote,
+body.quarto-light blockquote {
     color: #3a2e2e !important;
     background: linear-gradient(135deg, rgba(255, 240, 243, 0.5), rgba(240, 237, 230, 0.3)) !important;
     border-left-color: var(--color-pink) !important;
@@ -327,154 +320,154 @@ blockquote {
 
 /* ===== VIDEO STORY SECTION ===== */
 
-.nr-video-story {
+body.quarto-light .nr-video-story {
     background: linear-gradient(135deg, #FFF5F0, #F5F0E8, #EFF2EC) !important;
     backdrop-filter: none !important;
     color: #3a2e2e !important;
 }
 
-.nr-story-badge {
+body.quarto-light .nr-story-badge {
     color: #6b5858 !important;
 }
 
-.nr-story-title {
+body.quarto-light .nr-story-title {
     color: #2d1f2f !important;
 }
 
-.nr-chip {
+body.quarto-light .nr-chip {
     color: #6b5858 !important;
     border-color: rgba(212, 69, 106, 0.15) !important;
     background: rgba(255, 240, 243, 0.4) !important;
 }
 
-#nrvid1:checked~.nr-tabbar label[for="nrvid1"],
-#nrvid2:checked~.nr-tabbar label[for="nrvid2"] {
+body.quarto-light #nrvid1:checked~.nr-tabbar label[for="nrvid1"],
+body.quarto-light #nrvid2:checked~.nr-tabbar label[for="nrvid2"] {
     color: #fff !important;
     background: var(--color-pink) !important;
 }
 
-.nr-caption {
+body.quarto-light .nr-caption {
     color: #7a5f5f !important;
 }
 
 /* ===== FEATURED CARD ===== */
 
-.featured-card {
+body.quarto-light .featured-card {
     background: linear-gradient(145deg, #FFFBF8, #FFF5F0) !important;
     border: 1px solid rgba(212, 69, 106, 0.08) !important;
 }
 
-.featured-card p {
+body.quarto-light .featured-card p {
     color: #6b5858 !important;
 }
 
-.featured-card h3,
-.featured-card .card-title {
+body.quarto-light .featured-card h3,
+body.quarto-light .featured-card .card-title {
     color: #2d1f2f !important;
 }
 
 /* ===== BOOK HERO / LATEST NOVEL ===== */
 
-.book-hero-card {
+body.quarto-light .book-hero-card {
     background: linear-gradient(145deg, rgba(255, 240, 243, 0.3), rgba(240, 237, 230, 0.2)) !important;
     border-color: rgba(212, 69, 106, 0.08) !important;
 }
 
-.format-price {
+body.quarto-light .format-price {
     color: #2d1f2f !important;
 }
 
-.chip {
+body.quarto-light .chip {
     color: #6b5858 !important;
     border-color: rgba(212, 69, 106, 0.15) !important;
     background: rgba(255, 240, 243, 0.3) !important;
 }
 
-.chip:hover,
-.chip.active {
+body.quarto-light .chip:hover,
+body.quarto-light .chip.active {
     color: #fff !important;
 }
 
-/* ===== BLOG LISTING CARDS (override again with warm tones) ===== */
+/* ===== BLOG LISTING CARDS ===== */
 
-.quarto-listing-container-grid .card-title {
+body.quarto-light .quarto-listing-container-grid .card-title {
     color: #2d1f2f !important;
 }
 
-.listing-description {
+body.quarto-light .listing-description {
     color: #6b5858 !important;
 }
 
 /* ===== EXCERPT PAGES ===== */
 
-.extrait-text blockquote,
-.extrait-body blockquote {
+body.quarto-light .extrait-text blockquote,
+body.quarto-light .extrait-body blockquote {
     color: #3a2e2e !important;
     background: linear-gradient(135deg, rgba(255, 240, 243, 0.3), rgba(240, 237, 230, 0.2)) !important;
 }
 
 /* ===== ABOUT / BIO PAGE ===== */
 
-.bio-text,
-.bio-text p {
+body.quarto-light .bio-text,
+body.quarto-light .bio-text p {
     color: #6b5858 !important;
 }
 
-.fun-fact-text {
+body.quarto-light .fun-fact-text {
     color: #6b5858 !important;
 }
 
-.book-theme-card {
+body.quarto-light .book-theme-card {
     background: linear-gradient(145deg, #FFFBF8, #FFF5F0) !important;
     border: 1px solid rgba(212, 69, 106, 0.08) !important;
 }
 
-.book-theme-card span {
+body.quarto-light .book-theme-card span {
     color: #3a2e2e !important;
 }
 
 /* ===== BLOG BANNER TEXT ===== */
 
-.blog-banner h1,
-.blog-banner .banner-title {
+body.quarto-light .blog-banner h1,
+body.quarto-light .blog-banner .banner-title {
     color: #2d1f2f !important;
     text-shadow: 0 2px 10px rgba(253, 246, 240, 0.8) !important;
 }
 
-.blog-banner .banner-subtitle {
+body.quarto-light .blog-banner .banner-subtitle {
     color: #7a5f5f !important;
 }
 
 /* ===== BACK / NAV BUTTONS ===== */
 
-.btn-back,
-.back-home a {
+body.quarto-light .btn-back,
+body.quarto-light .back-home a {
     color: #6b5858 !important;
     border-color: rgba(212, 69, 106, 0.15) !important;
     background: rgba(255, 240, 243, 0.3) !important;
 }
 
-.btn-back:hover,
-.back-home a:hover {
+body.quarto-light .btn-back:hover,
+body.quarto-light .back-home a:hover {
     color: #fff !important;
     background: var(--color-pink) !important;
 }
 
 /* ===== CTA SECTIONS ===== */
 
-.cta-extrait {
+body.quarto-light .cta-extrait {
     background: linear-gradient(135deg, rgba(255, 240, 243, 0.3), rgba(240, 237, 230, 0.2)) !important;
     border-color: rgba(212, 69, 106, 0.08) !important;
 }
 
 /* ===== PREMIUM ORDER BUTTON ===== */
 
-.btn-order-premium {
+body.quarto-light .btn-order-premium {
     color: #3a2e2e !important;
     border-color: rgba(212, 69, 106, 0.25) !important;
 }
 
-.btn-order-premium:hover {
+body.quarto-light .btn-order-premium:hover {
     background: #2d1f2f !important;
     color: #fff !important;
     border-color: #2d1f2f !important;
@@ -482,162 +475,150 @@ blockquote {
 
 /* ===== GENERIC IMAGE FRAMES ===== */
 
-.img-chic-frame {
+body.quarto-light .img-chic-frame {
     background: #FFFBF8 !important;
     border-color: rgba(212, 69, 106, 0.08) !important;
 }
 
 /* ===== VIGNETTE (Book grid) ===== */
 
-.vignette-overlay {
+body.quarto-light .vignette-overlay {
     color: #3a2e2e !important;
     background: linear-gradient(to top, rgba(253, 246, 240, 0.95), rgba(253, 246, 240, 0.6) 50%, transparent) !important;
 }
 
-.vignette-action {
+body.quarto-light .vignette-overlay h3 {
+    color: #2d1f2f !important;
+}
+
+body.quarto-light .vignette-action {
     color: #7a5f5f !important;
 }
 
 /* ===== PILL BUTTONS ===== */
 
-.pill {
+body.quarto-light .pill {
     color: #6b5858 !important;
     border-color: rgba(212, 69, 106, 0.15) !important;
     background: rgba(255, 240, 243, 0.3) !important;
 }
 
-.pill:hover {
+body.quarto-light .pill:hover {
     color: #fff !important;
 }
 
 /* ===== BOOK PAGE — HERO SECTION ===== */
 
-/* Lighten the blurred background on book pages */
-.book-hero-bg {
+body.quarto-light .book-hero-bg {
     filter: blur(40px) brightness(1.1) !important;
     opacity: 0.3 !important;
 }
 
-.book-hero-card {
+body.quarto-light .book-hero-card {
     background: rgba(253, 246, 240, 0.75) !important;
     border-color: rgba(212, 69, 106, 0.1) !important;
     box-shadow: 0 25px 50px rgba(180, 100, 120, 0.12) !important;
 }
 
-.book-hero-info h1 {
+body.quarto-light .book-hero-info h1 {
     color: #2d1f2f !important;
 }
 
-.book-tagline {
+body.quarto-light .book-tagline {
     color: #6b7a5e !important;
-    /* Sage */
 }
 
-.book-genre-pill {
+body.quarto-light .book-genre-pill {
     background: rgba(251, 111, 146, 0.08) !important;
     border-color: rgba(251, 111, 146, 0.2) !important;
     color: #c9547a !important;
 }
 
-.book-synopsis {
+body.quarto-light .book-synopsis {
     color: #3a2e2e !important;
 }
 
-.book-synopsis p {
+body.quarto-light .book-synopsis p {
     color: #3a2e2e !important;
 }
 
 /* Format prices section */
-.formats-prix-premium {
+body.quarto-light .formats-prix-premium {
     background: rgba(251, 111, 146, 0.04) !important;
     border-color: rgba(251, 111, 146, 0.12) !important;
     box-shadow: 0 15px 35px rgba(180, 100, 120, 0.06) !important;
 }
 
-.format-price {
+body.quarto-light .format-price {
     color: #2d1f2f !important;
 }
 
-.format-name {
+body.quarto-light .format-name {
     color: #c9547a !important;
 }
 
 /* Filter bar for book list page */
-.roman-filter {
+body.quarto-light .roman-filter {
     background: rgba(253, 246, 240, 0.9) !important;
     border-color: rgba(212, 69, 106, 0.1) !important;
     box-shadow: 0 10px 30px rgba(180, 100, 120, 0.08) !important;
 }
 
-.chip {
+body.quarto-light .chip {
     color: #6b5858 !important;
     border-color: rgba(212, 69, 106, 0.15) !important;
     background: rgba(255, 240, 243, 0.3) !important;
 }
 
-.chip:hover,
-.chip.active {
+body.quarto-light .chip:hover,
+body.quarto-light .chip.active {
     color: #fff !important;
     background: var(--color-pink) !important;
 }
 
 /* Category headers on book list */
-.category-header {
+body.quarto-light .category-header {
     color: #2d1f2f !important;
-}
-
-/* Vignette overlay for book grid */
-.vignette-overlay {
-    color: #2d1f2f !important;
-    background: linear-gradient(to top, rgba(253, 246, 240, 0.95), rgba(253, 246, 240, 0.6) 50%, transparent) !important;
-}
-
-.vignette-overlay h3 {
-    color: #2d1f2f !important;
-}
-
-.vignette-action {
-    color: #7a5f5f !important;
 }
 
 /* ===== BOOK PAGE — MOBILE RESPONSIVE ===== */
 
 @media (max-width: 992px) {
-    .book-hero-card {
+    body.quarto-light .book-hero-card {
         background: rgba(253, 246, 240, 0.92) !important;
         border-color: rgba(212, 69, 106, 0.08) !important;
         box-shadow: 0 -10px 40px rgba(180, 100, 120, 0.1) !important;
     }
 
-    .book-synopsis {
+    body.quarto-light .book-synopsis {
         color: #3a2e2e !important;
     }
 
-    .format-item {
+    body.quarto-light .format-item {
         background: rgba(255, 240, 243, 0.5) !important;
         border-color: rgba(212, 69, 106, 0.1) !important;
         backdrop-filter: none !important;
     }
 
-    .format-price {
+    body.quarto-light .format-price {
         color: #2d1f2f !important;
     }
 
-    .format-name {
+    body.quarto-light .format-name {
         color: #c9547a !important;
     }
 }
 
 /* ===== SCROLLBAR (on supporting browsers) ===== */
-::-webkit-scrollbar-track {
+body.quarto-light ::-webkit-scrollbar-track {
     background: #FDF6F0;
 }
 
-::-webkit-scrollbar-thumb {
+body.quarto-light ::-webkit-scrollbar-thumb {
     background: rgba(212, 69, 106, 0.2);
     border-radius: 8px;
 }
 
-::-webkit-scrollbar-thumb:hover {
+body.quarto-light ::-webkit-scrollbar-thumb:hover {
     background: rgba(212, 69, 106, 0.4);
 }
