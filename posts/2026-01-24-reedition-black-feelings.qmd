@@ -84,7 +84,7 @@ Presque dix ans plus tard, mon tout premier roman est à nouveau disponible **à
 
 <br>
 
-[✉️ Contact pour commander »](mailto:mogadarr@gmail.com?subject=Commande%20-%20Black%20Feelings&body=Bonjour%20Mo%2C%0D%0A%0D%0AJe%20vous%20contacte%20depuis%20votre%20site%20au%20sujet%20de%20Black%20Feelings.%0D%0A%0D%0AJe%20souhaiterais%20le%20commander.%20Pouvez-vous%20me%20dire%20les%20modalit%C3%A9s%20(disponibilit%C3%A9%2C%20prix%2C%20envoi%2Fremise%20en%20main%20propre)%20%3F%0D%0A%0D%0AMon%20nom%20%3A%20%0D%0AMa%20ville%20%3A%20%0D%0AMerci%20et%20belle%20journ%C3%Aée.){.btn-order-premium role="button"}
+[✉️ Contacter pour commander »](mailto:mogadarr@gmail.com?subject=Commande%20-%20Black%20Feelings%20(R%C3%A9%C3%A9dition)&body=Bonjour%20Mo%2C%0D%0A%0D%0AJe%20vous%20contacte%20depuis%20votre%20site%20au%20sujet%20de%20la%20r%C3%A9%C3%A9dition%20de%20Black%20Feelings.%0D%0A%0D%0AJe%20souhaiterais%20le%20commander.%20Pouvez-vous%20me%20dire%20les%20modalit%C3%A9s%20(disponibilit%C3%A9%2C%20prix%2C%20envoi%2Fremise%20en%20main%20propre)%20%3F%0D%0A%0D%0AMon%20nom%20%3A%20%0D%0AMa%20ville%20%3A%20%0D%0A%0D%0AMerci%20et%20belle%20journ%C3%A9e.){.btn-order-premium role="button"}
 
 ```{=html}
 <!-- ===== 3) RETOUR ===== -->
