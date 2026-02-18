@@ -1,38 +1,51 @@
 ---
 title: "Contact"
+subtitle: "Rencontrer, inviter, échanger"
+title-block-banner: false
+page-layout: custom
+toc: false
+body-classes: contact-page-body
 ---
 
 ```{=html}
-<section class="newsletter section-padding">
-    <div class="container-narrow text-center">
-        <h2 class="section-title">Restons en contact</h2>
-        <p class="mb-5">Pour toute demande professionnelle, dédicace, ou simplement pour dire bonjour.</p>
-        
-        <form class="newsletter-form">
-            <div class="row g-3">
-                <div class="col-md-6">
-                    <input type="text" placeholder="Votre Nom" required class="form-control">
-                </div>
-                <div class="col-md-6">
-                    <input type="email" placeholder="Votre Email" required class="form-control">
-                </div>
-                <div class="col-12 mt-3">
-                    <textarea placeholder="Votre Message" rows="5" class="form-control"></textarea>
-                </div>
-                <div class="col-12 mt-4">
-                    <button type="submit" class="btn-primary w-100">Envoyer le message</button>
-                </div>
+<div class="contact-futuristic-wrapper">
+    <div class="contact-background">
+        <div class="contact-orb orb-c1"></div>
+        <div class="contact-orb orb-c2"></div>
+    </div>
+
+    <div class="contact-glass-panel">
+        <h1 class="contact-title">Entrez en relation</h1>
+        <p class="contact-intro">
+            Mo Gadarr captive ses lectrices par des romances où l’émotion, la sensualité et la tension entre les personnages dominent. 
+            Elle aime les silences éloquents, les gestes retenus, et les mots qui brûlent doucement la page.
+        </p>
+
+        <div class="contact-actions">
+            <div class="contact-action-block">
+                <h3><i class="bi bi-envelope-paper-heart"></i> Prendre contact</h3>
+                <p>Besoin d’informations presse, d’organiser une séance de dédicaces, d’inviter l’auteure à un salon, ou d’échanger pour une chronique ?</p>
+                <a href="mailto:mogadarr@gmail.com?subject=Contact%20site%20Mogadarr&body=Bonjour%20Mo%2C%0D%0A%0D%0AJe%20vous%20écris%20depuis%20votre%20site.%20Ma%20demande%20concerne%20...%0D%0A%0D%0AMerci%20et%20belle%20journée." class="btn-contact-primary">
+                    Écrire à Mo Gadarr
+                </a>
             </div>
-        </form>
-        
-        <div class="social-connect mt-5">
-            <h3>Suivez-moi</h3>
-            <div class="social-links mt-3">
-                <a href="https://instagram.com/mogadarr" target="_blank" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
-                <a href="https://facebook.com/mogadarr" target="_blank" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
-                <a href="#" target="_blank" aria-label="Threads"><i class="bi bi-threads"></i></a>
+
+            <div class="contact-separator"></div>
+
+            <div class="contact-socials">
+                <h3><i class="bi bi-share"></i> Réseaux Sociaux</h3>
+                <p class="contact-tip">Astuce : taguez l’auteure et mentionnez le titre de l’ouvrage pour faciliter le partage de chroniques.</p>
+                
+                <div class="social-buttons-grid">
+                    <a href="https://www.instagram.com/mogadarrauteur/" target="_blank" class="btn-social inst">
+                        <i class="bi bi-instagram"></i> @mogadarrauteur
+                    </a>
+                    <a href="https://www.goodreads.com/search?q=Mo%20Gadarr" target="_blank" class="btn-social goodr">
+                        <i class="bi bi-book"></i> Goodreads
+                    </a>
+                </div>
             </div>
         </div>
     </div>
-</section>
+</div>
 ```

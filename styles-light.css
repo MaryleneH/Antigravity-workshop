@@ -849,3 +849,42 @@ body.quarto-light .about-text-glass .btn-text:hover {
     background: #c9547a !important;
     color: #fff !important;
 }
+
+/* ===== CONTACT PAGE (Light Mode) ===== */
+
+body.quarto-light .contact-glass-panel {
+    background: rgba(255, 255, 255, 0.75) !important;
+    border-color: rgba(212, 69, 106, 0.15) !important;
+    box-shadow: 0 20px 60px rgba(180, 100, 120, 0.08) !important;
+}
+
+body.quarto-light .contact-title {
+    background: linear-gradient(135deg, #2d1f2f, #7A1B3D) !important;
+    -webkit-background-clip: text !important;
+    background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+}
+
+body.quarto-light .contact-intro {
+    color: #5e4b4b !important;
+}
+
+body.quarto-light .contact-action-block p,
+body.quarto-light .contact-tip {
+    color: #6b5858 !important;
+}
+
+body.quarto-light .contact-separator {
+    background: linear-gradient(90deg, transparent, rgba(212, 69, 106, 0.2), transparent) !important;
+}
+
+body.quarto-light .btn-social {
+    background: rgba(255, 255, 255, 0.6) !important;
+    border-color: rgba(212, 69, 106, 0.2) !important;
+    color: #7A1B3D !important;
+}
+
+body.quarto-light .btn-social:hover {
+    background: #fff !important;
+    box-shadow: 0 5px 15px rgba(212, 69, 106, 0.15) !important;
+}
