@@ -83,11 +83,14 @@ ul.task-list li input[type="checkbox"] {
 
 <!-- Custom Moon Icon for Dark Mode Toggle -->
 <style>
-    /* Replace default moon with moon-stars-fill */
-    .bi-moon::before,
-    .bi-moon-fill::before {
+    /* Replace default moon with moon-stars-fill - High Specificity */
+    html body .bi-moon::before,
+    html body .bi-moon-fill::before,
+    .quarto-color-scheme-toggle .bi-moon::before,
+    .quarto-color-scheme-toggle .bi-moon-fill::before {
         content: "\f495" !important;
-        /* check bootstrap-icons code for moon-stars-fill */
+        /* moon-stars-fill */
+        font-family: "bootstrap-icons" !important;
     }
 
     /* Optional: Add some glow or color */
