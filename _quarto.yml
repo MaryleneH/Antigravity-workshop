@@ -1,6 +1,8 @@
 project:
   type: website
   output-dir: docs
+  resources:
+    - "images/prends-buche-art.png"
 
 website:
   title: "Mo Gadarr"
