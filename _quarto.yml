@@ -23,7 +23,7 @@ website:
       - text: "Blog"
         href: blog.qmd
       - text: "Contact"
-        href: contact.qmd
+        href: contactons.qmd
   page-footer:
     center: "© 2026 Mo Gadarr. Tous droits réservés."
 
