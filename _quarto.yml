@@ -37,7 +37,8 @@ format:
     mainfont: 'Lato'
     fontsize: 1.1em
     include-in-header:
-      text: |
+      - file: _includes/head-icons.html
+      - text: |
         <script>
         /* Force default to dark mode - Migration V2 */
         (function() {

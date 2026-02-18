@@ -1,0 +1,22 @@
+<!-- Icônes Bootstrap (pour .bi) -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+<!-- Google Material Icons (pour <span class="material-icons">auto_awesome</span>) -->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+<!-- Custom Moon Icon for Dark Mode Toggle -->
+<style>
+    /* Replace default moon with moon-stars-fill */
+    .bi-moon::before,
+    .bi-moon-fill::before {
+        content: "\f495" !important;
+        /* check bootstrap-icons code for moon-stars-fill */
+    }
+
+    /* Optional: Add some glow or color */
+    body.quarto-dark .quarto-color-scheme-toggle .bi {
+        color: #fb6f92;
+        filter: drop-shadow(0 0 5px rgba(251, 111, 146, 0.5));
+    }
+</style>
