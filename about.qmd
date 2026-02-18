@@ -80,7 +80,7 @@ format:
             
             <div style="margin-top: 2.5rem; display: flex; gap: 1.5rem; flex-wrap: wrap;">
                 <a href="romans.html" class="btn btn-primary">Voir les romans</a>
-                <a href="blog.qmd" class="btn btn-text" style="color: #fff !important;">Lire le blog <i class="bi bi-arrow-right"></i></a>
+                <a href="blog.qmd" class="btn btn-text">Lire le blog <i class="bi bi-arrow-right"></i></a>
             </div>
         </div>
     </div>

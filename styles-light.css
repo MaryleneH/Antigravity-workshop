@@ -787,3 +787,65 @@ body.quarto-light .folio-dot.active {
 body.quarto-light .folio-counter {
     color: rgba(58, 46, 46, 0.35) !important;
 }
+
+/* ===== AUTHOR PAGE (Light Mode) ===== */
+
+body.quarto-light .about-text-glass {
+    background: rgba(255, 255, 255, 0.65) !important;
+    border-color: rgba(212, 69, 106, 0.15) !important;
+    box-shadow: 0 15px 40px rgba(180, 100, 120, 0.08) !important;
+    backdrop-filter: blur(20px) !important;
+}
+
+body.quarto-light .about-text-glass::before {
+    background: linear-gradient(90deg, #c9547a, transparent) !important;
+}
+
+body.quarto-light .about-title-large {
+    background: linear-gradient(45deg, #2d1f2f, #7A1B3D) !important;
+    -webkit-background-clip: text !important;
+    background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    text-shadow: none !important;
+}
+
+body.quarto-light .about-subtitle {
+    color: #c9547a !important;
+}
+
+body.quarto-light .about-bio-body {
+    color: #3a2e2e !important;
+}
+
+body.quarto-light .about-bio-body p {
+    color: #3a2e2e !important;
+}
+
+body.quarto-light .about-bio-body strong,
+body.quarto-light .about-bio-body em {
+    color: #c9547a !important;
+}
+
+body.quarto-light .fun-fact-box {
+    background: rgba(251, 111, 146, 0.06) !important;
+    border-color: rgba(212, 69, 106, 0.2) !important;
+}
+
+body.quarto-light .fun-fact-title {
+    color: #c9547a !important;
+}
+
+body.quarto-light .fun-fact-text {
+    color: #6b5858 !important;
+}
+
+/* Ensure buttons inside have correct contrast */
+body.quarto-light .about-text-glass .btn-text {
+    color: #c9547a !important;
+    border-color: #c9547a !important;
+}
+
+body.quarto-light .about-text-glass .btn-text:hover {
+    background: #c9547a !important;
+    color: #fff !important;
+}
