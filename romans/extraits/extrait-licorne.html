@@ -83,22 +83,57 @@ ul.task-list li input[type="checkbox"] {
 
 <!-- Custom Moon Icon for Dark Mode Toggle -->
 <style>
-    /* Replace default moon with moon-stars-fill - High Specificity */
-    html body .bi-moon::before,
-    html body .bi-moon-fill::before,
-    .quarto-color-scheme-toggle .bi-moon::before,
-    .quarto-color-scheme-toggle .bi-moon-fill::before {
-        content: "\f495" !important;
-        /* moon-stars-fill */
-        font-family: "bootstrap-icons" !important;
+    /* Add some glow to the toggle in all modes for better visibility */
+    .quarto-color-scheme-toggle .bi {
+        transition: transform 0.3s ease;
     }
 
-    /* Optional: Add some glow or color */
+    .quarto-color-scheme-toggle .bi:hover {
+        transform: rotate(15deg) scale(1.1);
+    }
+
+    /* Specific glow for Dark Mode */
     body.quarto-dark .quarto-color-scheme-toggle .bi {
         color: #fb6f92;
         filter: drop-shadow(0 0 5px rgba(251, 111, 146, 0.5));
     }
 </style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const toggleIcon = document.querySelector('.quarto-color-scheme-toggle i.bi');
+        if (!toggleIcon) return;
+
+        function updateIcons() {
+            // If default moon is present, swap it for moon-stars-fill
+            if (toggleIcon.classList.contains('bi-moon')) {
+                toggleIcon.classList.remove('bi-moon');
+                toggleIcon.classList.add('bi-moon-stars-fill');
+            } else if (toggleIcon.classList.contains('bi-moon-fill')) {
+                toggleIcon.classList.remove('bi-moon-fill');
+                toggleIcon.classList.add('bi-moon-stars-fill');
+            }
+        }
+
+        // specific hack for Quarto's toggle behavior
+        // Quarto toggles between bi-moon and bi-sun (or bi-brightness-high)
+        // We want bi-moon -> bi-moon-stars-fill
+
+        // Observer to watch for class changes triggered by Quarto
+        const observer = new MutationObserver((mutations) => {
+            mutations.forEach((mutation) => {
+                if (mutation.attributeName === 'class') {
+                    updateIcons();
+                }
+            });
+        });
+
+        observer.observe(toggleIcon, { attributes: true });
+
+        // Initial check
+        updateIcons();
+    });
+</script>
 <script>
 /* Force default to dark mode - Migration V2 */
 (function() {
