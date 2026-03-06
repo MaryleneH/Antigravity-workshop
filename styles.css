@@ -1478,11 +1478,24 @@ body.quarto-dark .book-hero-card {
 
 /* Filter Chips */
 .roman-filter {
+    position: sticky;
+    top: 80px;
+    z-index: 90;
     display: flex;
     justify-content: center;
     gap: 1rem;
     margin-bottom: 4rem;
     flex-wrap: wrap;
+    background: rgba(18, 18, 18, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
 .chip {
