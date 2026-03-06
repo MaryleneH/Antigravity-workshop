@@ -113,57 +113,70 @@ ul.task-list li input[type="checkbox"] {
 
 <!-- Custom Moon Icon for Dark Mode Toggle -->
 <style>
-    /* Add some glow to the toggle in all modes for better visibility */
+    /*
+     * Quarto renders the toggle as:
+     *   <div class="quarto-color-scheme-toggle">
+     *     <a href="..."><i class="bi bi-toggle-off"></i></a>
+     *   </div>
+     *
+     * Strategy: Hide the default icon entirely and inject a moon-stars
+     * icon using ::after on the <a> link element inside the toggle.
+     * This works regardless of which bi-* class Quarto uses internally.
+     */
+
+    /* Hide the original Bootstrap icon glyph completely */
+    .quarto-color-scheme-toggle .bi::before {
+        visibility: hidden !important;
+        width: 0 !important;
+        display: none !important;
+    }
+
+    /* Make the <i> itself a host for our custom icon */
     .quarto-color-scheme-toggle .bi {
-        transition: transform 0.3s ease;
+        font-size: 0 !important;      /* collapse the original text */
+        position: relative;
+        display: inline-block;
+        width: 1.4rem;
+        height: 1.4rem;
+        vertical-align: middle;
     }
 
-    .quarto-color-scheme-toggle .bi:hover {
-        transform: rotate(15deg) scale(1.1);
+    /* Inject the moon-stars-fill icon */
+    .quarto-color-scheme-toggle .bi::after {
+        font-family: "bootstrap-icons" !important;
+        content: "\f496";                 /* bi-moon-stars-fill */
+        font-size: 1.3rem;
+        font-style: normal;
+        font-weight: normal;
+        visibility: visible !important;
+        display: inline-block !important;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: inherit;
+        transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+                    color 0.3s ease,
+                    filter 0.3s ease;
     }
 
-    /* Specific glow for Dark Mode */
-    body.quarto-dark .quarto-color-scheme-toggle .bi {
+    /* Hover effect: gentle rotation + scale */
+    .quarto-color-scheme-toggle:hover .bi::after {
+        transform: translate(-50%, -50%) rotate(15deg) scale(1.15);
+    }
+
+    /* Dark mode: pink glow */
+    body.quarto-dark .quarto-color-scheme-toggle .bi::after {
         color: #fb6f92;
-        filter: drop-shadow(0 0 5px rgba(251, 111, 146, 0.5));
+        filter: drop-shadow(0 0 6px rgba(251, 111, 146, 0.5));
+    }
+
+    /* Light mode: subtle warm color */
+    body.quarto-light .quarto-color-scheme-toggle .bi::after {
+        color: #7A1B3D;
+        filter: drop-shadow(0 0 4px rgba(122, 27, 61, 0.2));
     }
 </style>
-
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
-        const toggleIcon = document.querySelector('.quarto-color-scheme-toggle i.bi');
-        if (!toggleIcon) return;
-
-        function updateIcons() {
-            // If default moon is present, swap it for moon-stars-fill
-            if (toggleIcon.classList.contains('bi-moon')) {
-                toggleIcon.classList.remove('bi-moon');
-                toggleIcon.classList.add('bi-moon-stars-fill');
-            } else if (toggleIcon.classList.contains('bi-moon-fill')) {
-                toggleIcon.classList.remove('bi-moon-fill');
-                toggleIcon.classList.add('bi-moon-stars-fill');
-            }
-        }
-
-        // specific hack for Quarto's toggle behavior
-        // Quarto toggles between bi-moon and bi-sun (or bi-brightness-high)
-        // We want bi-moon -> bi-moon-stars-fill
-
-        // Observer to watch for class changes triggered by Quarto
-        const observer = new MutationObserver((mutations) => {
-            mutations.forEach((mutation) => {
-                if (mutation.attributeName === 'class') {
-                    updateIcons();
-                }
-            });
-        });
-
-        observer.observe(toggleIcon, { attributes: true });
-
-        // Initial check
-        updateIcons();
-    });
-</script>
 <script>
 /* Force default to dark mode - Migration V2 */
 (function() {
@@ -484,7 +497,7 @@ window.Quarto = {
     </div>
 </div>
 <div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-categories="QWN0dWFsaXQlQzMlQTlzJTJDUm9tYW5z" data-listing-date-sort="1769212800000" data-listing-file-modified-sort="1772835655189" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="577">
+<div class="g-col-1" data-index="0" data-categories="QWN0dWFsaXQlQzMlQTlzJTJDUm9tYW5z" data-listing-date-sort="1769212800000" data-listing-file-modified-sort="1772835811706" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="577">
 <a href="./posts/2026-01-24-reedition-black-feelings.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -513,7 +526,7 @@ Black Feelings réimprimé
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="1" data-categories="QWN0dWFsaXQlQzMlQTlzJTJDJUMzJTgwJTIwdmVuaXI=" data-listing-date-sort="1768867200000" data-listing-file-modified-sort="1772835655189" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="275">
+<div class="g-col-1" data-index="1" data-categories="QWN0dWFsaXQlQzMlQTlzJTJDJUMzJTgwJTIwdmVuaXI=" data-listing-date-sort="1768867200000" data-listing-file-modified-sort="1772835811706" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="275">
 <a href="./posts/2026-01-20-duologie-at.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -542,7 +555,7 @@ Une duologie à paraitre : “AT”
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="2" data-categories="QWN0dWFsaXQlQzMlQTlzJTJDJUMzJTg5Y3JpdHVyZSUyQyVDMyU4MCUyMHZlbmly" data-listing-date-sort="1766880000000" data-listing-file-modified-sort="1772835655189" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="335">
+<div class="g-col-1" data-index="2" data-categories="QWN0dWFsaXQlQzMlQTlzJTJDJUMzJTg5Y3JpdHVyZSUyQyVDMyU4MCUyMHZlbmly" data-listing-date-sort="1766880000000" data-listing-file-modified-sort="1772835811706" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="335">
 <a href="./posts/2025-12-28-les-fetes-sont-productives.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top"><img src="images/blog/photo_article1.PNG" style="height: 220px;"  class="thumbnail-image card-img"/></p>
@@ -571,7 +584,7 @@ Les fêtes sont productives !
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="3" data-categories="QWN0dWFsaXQlQzMlQTlzJTJDU2Fsb25zJTJDTGVjdHVyZXM=" data-listing-date-sort="1763164800000" data-listing-file-modified-sort="1772835655189" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="999">
+<div class="g-col-1" data-index="3" data-categories="QWN0dWFsaXQlQzMlQTlzJTJDU2Fsb25zJTJDTGVjdHVyZXM=" data-listing-date-sort="1763164800000" data-listing-file-modified-sort="1772835811706" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="999">
 <a href="./posts/2025-11-15-retour.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -602,7 +615,7 @@ Retour de salons et belles nouvelles
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="4" data-categories="QWN0dWFsaXQlQzMlQTlzJTJDU2Fsb25z" data-listing-date-sort="1761091200000" data-listing-file-modified-sort="1772835655188" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="534">
+<div class="g-col-1" data-index="4" data-categories="QWN0dWFsaXQlQzMlQTlzJTJDU2Fsb25z" data-listing-date-sort="1761091200000" data-listing-file-modified-sort="1772835811705" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="534">
 <a href="./posts/2025-10-22-salon.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
