@@ -33,7 +33,7 @@ format:
             </h1>
             <p class="at-hero-tagline">Plus qu'une histoire d'amour.<br>Un plaidoyer pour les femmes.</p>
             <div class="at-hero-cta">
-                <a href="https://amzn.eu/d/03DFilXY" class="at-btn-primary" target="_blank" rel="noopener noreferrer">
+                <a href="https://amzn.eu/d/01q0wRvl" class="at-btn-primary" target="_blank" rel="noopener noreferrer">
                     <span>Acheter maintenant</span>
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                 </a>
@@ -136,8 +136,8 @@ format:
             </div>
 
             <div class="at-book-actions">
-                <a href="https://amzn.eu/d/d3MMSlg" class="at-btn-buy" target="_blank" rel="noopener noreferrer">
-                    <i class="bi bi-bag-heart-fill"></i> Acheter sur Amazon
+                <a href="https://amzn.eu/d/01qwhLqG" class="at-btn-buy" target="_blank" rel="noopener noreferrer">
+                    <i class="bi bi-bag-heart-fill"></i> Acheter sur Amazon !
                 </a>
             </div>
         </div>
