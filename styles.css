@@ -2933,6 +2933,16 @@ body.quarto-dark .editorial-img-wrapper {
     padding-bottom: 0 !important;
 }
 
+/* Mobile: title block needs side padding on custom layout pages */
+@media (max-width: 768px) {
+    body.about-page-body .quarto-title-block,
+    body.contact-page-body .quarto-title-block {
+        padding-left: 1.5rem !important;
+        padding-right: 1.5rem !important;
+        box-sizing: border-box;
+    }
+}
+
 #title-block-header {
     margin-top: 1rem !important;
     margin-bottom: 2rem !important;
