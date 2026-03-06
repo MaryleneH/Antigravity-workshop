@@ -1,6 +1,6 @@
 ---
 title: "Prends de la bûche"
-subtitle: "Dernier roman"
+subtitle: "Romance de Noël"
 description: "La nouveauté de Mo Gadarr — Enemies to lovers dans un hiver canadien"
 title-block-banner: true
 page-layout: full
@@ -47,7 +47,7 @@ format:
         <!-- Right: Illustration + Title lockup -->
         <div class="pdb-hero-meta">
             <div class="pdb-hero-text">
-                <span class="pdb-pill">✦ Nouveau roman</span>
+                <span class="pdb-pill">✦ Romance de Noël</span>
                 <h1 class="pdb-title">Prends<br>de la bûche</h1>
                 <p class="pdb-tagline">Enemies to Lovers · Hiver canadien · Magie de Noël</p>
             </div>

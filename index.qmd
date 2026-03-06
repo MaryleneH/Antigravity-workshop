@@ -38,10 +38,10 @@ format:
             </div>
             <div class="book-info">
                 <h3>AT — Tome 1</h3>
-                <span class="genre">Romance Sombre • À paraître</span>
-                <p>Athénaïs est une femme ordinaire. Sa rencontre avec Nick va pourtant bouleverser son existence. Une romance dure, poignante et inoubliable.</p>
+                <span class="genre">Romance Sombre • Disponible</span>
+                <p>Plus qu'une histoire d'amour, AT The Beginning est un véritable plaidoyer pour les femmes. Une romance dure, poignante et inoubliable.</p>
                 <div class="featured-buttons">
-                    <a href="posts/2026-01-20-duologie-at.html" class="btn-primary">Découvrir l'annonce</a>
+                    <a href="dernier_roman/at_the_beginning.html" class="btn-primary">Découvrir le roman</a>
                     <a href="romans.html" class="btn-text">Toute la collection &rarr;</a>
                 </div>
             </div>

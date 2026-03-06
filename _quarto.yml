@@ -15,7 +15,7 @@ website:
       - text: "Accueil"
         href: index.qmd
       - text: "Dernier roman"
-        href: dernier_roman/prends_buche.qmd
+        href: dernier_roman/at_the_beginning.qmd
       - text: "Romans"
         href: romans.qmd
       - text: "L'Auteure"
