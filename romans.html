@@ -413,6 +413,322 @@ ul.task-list li input[type="checkbox"] {
 <h3 class="anchored" data-anchor-id="les-univers-de-mo-gadarr">💕 Les univers de Mo Gadarr</h3>
 Partez à la découverte des séries, des comédies de Noël, des romances de saison et des one-shots contemporains.
 </section>
+<!-- ===== DERNIER ROMAN SHOWCASE ===== -->
+<section class="dr-showcase" aria-label="Dernier roman">
+    <div class="dr-showcase-inner">
+        <div class="dr-label-row">
+            <span class="dr-label">✦ Dernier roman</span>
+            <span class="dr-label-line"></span>
+        </div>
+
+        <div class="dr-card">
+            <div class="dr-card-glow"></div>
+
+            <div class="dr-cover-col">
+                <img src="images/couvertures/AT_couverture.PNG" alt="AT The Beginning — Couverture" class="dr-cover">
+            </div>
+
+            <div class="dr-info-col">
+                <span class="dr-genre-pill">Romance Sombre • Drame • Féminisme</span>
+                <h2 class="dr-title anchored">AT <span class="dr-title-sub">The Beginning</span></h2>
+                <p class="dr-excerpt">Plus qu'une histoire d'amour, AT The Beginning est un véritable plaidoyer pour les femmes. Athénaïs, 18 ans, commence des études littéraires à Philadelphie. Quand elle rencontre Nick, le coup de foudre est réciproque, violent...</p>
+
+                <div class="dr-meta">
+                    <span class="dr-meta-item"><i class="bi bi-book"></i> 384 pages</span>
+                    <span class="dr-meta-item"><i class="bi bi-check-circle-fill"></i> Disponible</span>
+                </div>
+
+                <div class="dr-actions">
+                    <a href="dernier_roman/at_the_beginning.html" class="dr-btn-discover">
+                        Découvrir <i class="bi bi-arrow-right"></i>
+                    </a>
+                    <a href="https://amzn.eu/d/01qwhLqG" class="dr-btn-buy" target="_blank" rel="noopener noreferrer">
+                        <i class="bi bi-bag-heart-fill"></i> Acheter
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+/* ===== DERNIER ROMAN SHOWCASE ===== */
+.dr-showcase {
+    padding: 3rem 2rem 4rem;
+    position: relative;
+}
+
+.dr-showcase-inner {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.dr-label-row {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.dr-label {
+    font-size: 0.7rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #C9A87C;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.dr-label-line {
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, rgba(201,168,124,0.3), transparent);
+}
+
+.dr-card {
+    position: relative;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 3rem;
+    padding: 2.5rem;
+    border-radius: 24px;
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(201,168,124,0.1);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    overflow: hidden;
+    transition: border-color 0.4s, box-shadow 0.4s;
+}
+
+.dr-card:hover {
+    border-color: rgba(201,168,124,0.2);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+}
+
+.dr-card-glow {
+    position: absolute;
+    top: -50px; right: -50px;
+    width: 250px; height: 250px;
+    background: radial-gradient(circle, rgba(122,27,61,0.12), transparent 70%);
+    filter: blur(40px);
+    pointer-events: none;
+    z-index: 0;
+}
+
+.dr-cover-col {
+    position: relative;
+    z-index: 1;
+}
+
+.dr-cover {
+    width: 200px;
+    border-radius: 12px;
+    box-shadow: -12px 12px 40px rgba(0,0,0,0.4), 0 0 20px rgba(122,27,61,0.1);
+    transform: perspective(600px) rotateY(-6deg);
+    transition: transform 0.6s cubic-bezier(0.2,0.8,0.2,1);
+}
+
+.dr-card:hover .dr-cover {
+    transform: perspective(600px) rotateY(-2deg) translateY(-5px) scale(1.02);
+}
+
+.dr-info-col {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.8rem;
+}
+
+.dr-genre-pill {
+    display: inline-block;
+    width: fit-content;
+    font-size: 0.65rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #9B2B55;
+    background: rgba(122,27,61,0.08);
+    border: 1px solid rgba(122,27,61,0.15);
+    padding: 0.35rem 1rem;
+    border-radius: 50px;
+    font-weight: 700;
+}
+
+.dr-title {
+    font-family: var(--font-heading, 'Playfair Display', serif);
+    font-size: 2.2rem;
+    line-height: 1.1;
+    margin: 0;
+    background: linear-gradient(135deg, #F5E6E0, #C9A87C);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.dr-title-sub {
+    display: block;
+    font-size: 1.2rem;
+    font-style: italic;
+    font-weight: 400;
+    opacity: 0.7;
+}
+
+.dr-excerpt {
+    font-size: 0.95rem;
+    line-height: 1.8;
+    color: rgba(245,230,224,0.6);
+    margin: 0;
+}
+
+.dr-meta {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 0.3rem;
+}
+
+.dr-meta-item {
+    font-size: 0.8rem;
+    color: rgba(201,168,124,0.7);
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-weight: 600;
+}
+
+.dr-meta-item i {
+    font-size: 0.9rem;
+}
+
+.dr-actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+
+.dr-btn-discover {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.7rem 1.8rem;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 0.85rem;
+    text-decoration: none;
+    color: #fff !important;
+    background: linear-gradient(135deg, #7A1B3D, #9B2B55);
+    box-shadow: 0 6px 20px rgba(122,27,61,0.25);
+    transition: all 0.4s;
+    border: none;
+}
+
+.dr-btn-discover:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(122,27,61,0.35);
+    color: #fff !important;
+}
+
+.dr-btn-buy {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.7rem 1.8rem;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 0.85rem;
+    text-decoration: none;
+    color: #C9A87C !important;
+    border: 1px solid rgba(201,168,124,0.25);
+    background: transparent;
+    transition: all 0.4s;
+}
+
+.dr-btn-buy:hover {
+    background: rgba(201,168,124,0.08);
+    border-color: rgba(201,168,124,0.4);
+    transform: translateY(-2px);
+    color: #C9A87C !important;
+}
+
+/* --- Light mode --- */
+body.quarto-light .dr-card {
+    background: rgba(255,255,255,0.6);
+    border-color: rgba(45,27,78,0.08);
+}
+body.quarto-light .dr-card:hover {
+    border-color: rgba(45,27,78,0.15);
+    box-shadow: 0 20px 60px rgba(45,27,78,0.08);
+}
+body.quarto-light .dr-label {
+    color: #7A1B3D;
+}
+body.quarto-light .dr-label-line {
+    background: linear-gradient(90deg, rgba(122,27,61,0.2), transparent);
+}
+body.quarto-light .dr-title {
+    background: linear-gradient(135deg, #2D1B4E, #7A1B3D);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+body.quarto-light .dr-excerpt {
+    color: #6b5858;
+}
+body.quarto-light .dr-meta-item {
+    color: rgba(122,27,61,0.6);
+}
+body.quarto-light .dr-genre-pill {
+    background: rgba(122,27,61,0.05);
+    border-color: rgba(122,27,61,0.1);
+}
+body.quarto-light .dr-btn-buy {
+    color: #7A1B3D !important;
+    border-color: rgba(122,27,61,0.2);
+}
+body.quarto-light .dr-btn-buy:hover {
+    background: rgba(122,27,61,0.05);
+    border-color: rgba(122,27,61,0.3);
+    color: #7A1B3D !important;
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+    .dr-card {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding: 2rem 1.5rem;
+        gap: 2rem;
+    }
+    .dr-cover-col {
+        display: flex;
+        justify-content: center;
+    }
+    .dr-cover {
+        width: 160px;
+        transform: none;
+    }
+    .dr-card:hover .dr-cover {
+        transform: translateY(-5px) scale(1.02);
+    }
+    .dr-info-col {
+        align-items: center;
+    }
+    .dr-meta {
+        justify-content: center;
+    }
+    .dr-actions {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .dr-btn-discover,
+    .dr-btn-buy {
+        width: 100%;
+        justify-content: center;
+    }
+}
+</style>
+
+```{=html}
 <nav class="roman-filter" aria-label="Filtrer les rubriques">
   <button class="chip active" data-filter="all" aria-pressed="true">Tout voir</button>
   <button class="chip" data-filter="edition" aria-pressed="false">Édition</button>
