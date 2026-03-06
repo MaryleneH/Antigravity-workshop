@@ -1563,34 +1563,22 @@ body.quarto-dark .book-hero-card {
     display: inline-block;
 }
 
-/* ===== INNOVATIVE NEW-ROMANCE DECORATION =====
-   Twin expanding lines + glowing heart + sweeping shimmer */
-
+/* ===== HAND-DRAWN STYLE UNDERLINE ===== */
 .newsletter h2::after {
-    content: '──── ♥ ────';
+    content: '';
     display: block;
-    margin: 1.2rem auto 0;
-    font-size: 0.85rem;
-    letter-spacing: 6px;
-    background: linear-gradient(
-        90deg,
-        var(--color-pink),
-        var(--color-green),
-        var(--color-pink),
-        var(--color-green)
-    );
-    background-size: 300% 100%;
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+    width: 140px;
+    height: 12px;
+    margin: 0.8rem auto 0;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 140 12'%3E%3Cpath d='M2 8 C15 3, 30 10, 45 6 S70 2, 85 7 S110 10, 125 5 C130 4, 135 6, 138 5' fill='none' stroke='%23fb6f92' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E") no-repeat center;
+    background-size: contain;
+    opacity: 0.85;
     animation: nl-shimmer 4s ease-in-out infinite;
-    filter: drop-shadow(0 0 8px var(--color-pink-glow));
 }
 
 @keyframes nl-shimmer {
-    0% { background-position: 0% center; }
-    50% { background-position: 100% center; }
-    100% { background-position: 0% center; }
+    0%, 100% { opacity: 0.7; transform: scaleX(1); }
+    50% { opacity: 1; transform: scaleX(1.05); }
 }
 
 .newsletter p {
