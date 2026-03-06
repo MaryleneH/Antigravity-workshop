@@ -32,6 +32,22 @@ body {
     overflow-x: hidden;
 }
 
+/* Global mobile side margins for all pages */
+@media (max-width: 768px) {
+    #quarto-content {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+        box-sizing: border-box;
+        overflow-x: hidden;
+    }
+
+    .quarto-title-block {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+        box-sizing: border-box;
+    }
+}
+
 h1,
 h2,
 h3,
