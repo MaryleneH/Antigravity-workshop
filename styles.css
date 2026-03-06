@@ -49,6 +49,16 @@ body {
     }
 }
 
+/* AT page: force zero margins everywhere for immersive edge-to-edge design */
+body.at-page-body #quarto-content,
+body.at-page-body .quarto-title-block,
+body.at-page-body #quarto-content > * {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
 h1,
 h2,
 h3,
