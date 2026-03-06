@@ -32,16 +32,17 @@ body {
     overflow-x: hidden;
 }
 
-/* Global mobile side margins for all pages */
+/* Global mobile side margins for all pages
+   Exclude immersive pages that handle their own edge-to-edge layout */
 @media (max-width: 768px) {
-    #quarto-content {
+    body:not(.about-page-body):not(.contact-page-body):not(.at-page-body) #quarto-content {
         padding-left: 1rem !important;
         padding-right: 1rem !important;
         box-sizing: border-box;
         overflow-x: clip;
     }
 
-    .quarto-title-block {
+    body:not(.at-page-body) .quarto-title-block {
         padding-left: 1rem !important;
         padding-right: 1rem !important;
         box-sizing: border-box;

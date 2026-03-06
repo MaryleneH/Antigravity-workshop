@@ -5,7 +5,7 @@ description: "La nouveauté de Mo Gadarr — Un plaidoyer pour les femmes, une h
 title-block-banner: true
 page-layout: full
 toc: false
-body-classes: romans
+body-classes: romans at-page-body
 format:
   html:
     link-external-newwindow: true
