@@ -38,7 +38,7 @@ body {
         padding-left: 1rem !important;
         padding-right: 1rem !important;
         box-sizing: border-box;
-        overflow-x: hidden;
+        overflow-x: clip;
     }
 
     .quarto-title-block {
