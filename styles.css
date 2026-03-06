@@ -1762,7 +1762,7 @@ body.quarto-dark .book-hero-card {
     .hero-split {
         flex-direction: column;
         gap: 2rem;
-        padding: 0 1rem;
+        padding: 0;
     }
 
     .hero-photo {
@@ -1805,6 +1805,17 @@ body.quarto-dark .book-hero-card {
         height: 200px;
     }
 
+    /* Harmonized section paddings — all 1.5rem sides */
+    .collection {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+
+    .featured-wrapper {
+        padding: 0;
+        max-width: 100%;
+    }
+
     /* Featured card stacks vertically */
     .featured-card {
         flex-direction: column;
@@ -1834,7 +1845,7 @@ body.quarto-dark .book-hero-card {
     /* Cards */
     .book-grid {
         grid-template-columns: 1fr;
-        padding: 0 1rem;
+        padding: 0;
         gap: 1.5rem;
     }
 
