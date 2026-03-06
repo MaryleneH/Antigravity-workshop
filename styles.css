@@ -36,15 +36,15 @@ body {
    Exclude immersive pages that handle their own edge-to-edge layout */
 @media (max-width: 768px) {
     body:not(.about-page-body):not(.contact-page-body):not(.at-page-body) #quarto-content {
-        padding-left: 1rem !important;
-        padding-right: 1rem !important;
+        padding-left: 0.4rem !important;
+        padding-right: 0.4rem !important;
         box-sizing: border-box;
         overflow-x: clip;
     }
 
     body:not(.at-page-body) .quarto-title-block {
-        padding-left: 1rem !important;
-        padding-right: 1rem !important;
+        padding-left: 0.4rem !important;
+        padding-right: 0.4rem !important;
         box-sizing: border-box;
     }
 }
