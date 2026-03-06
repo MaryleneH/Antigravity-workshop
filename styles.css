@@ -1720,9 +1720,9 @@ body.quarto-dark .book-hero-card {
 
 /* ===== FEATURED BOOK LAYOUT ===== */
 .featured-wrapper {
-    max-width: 800px;
+    max-width: 700px;
     margin: 0 auto;
-    padding: 0 2rem;
+    padding: 0 1.5rem;
 }
 
 .featured-card {
