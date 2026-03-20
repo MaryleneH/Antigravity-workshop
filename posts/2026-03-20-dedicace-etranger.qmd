@@ -26,6 +26,7 @@ image: ./images/blog/im2_converted.webp
       <h3>Salon Love Story Mons</h3>
       <p>🗓️ Du 21 au 22 mars de 10h à 17h</p>
       <p>📍 Palais des congrès, Mons, Belgique</p>
+      <p>🌐 <a href="https://salonlovestory.be" target="_blank" rel="noopener noreferrer" class="event-link">salonlovestory.be</a></p>
     </div>
   </div>
 
@@ -51,7 +52,7 @@ image: ./images/blog/im2_converted.webp
       <span class="album-dot" onclick="albumGoTo(1)"></span>
       <span class="album-dot" onclick="albumGoTo(2)"></span>
     </div>
-    <p class="futurist-gallery-caption">Mons, Belgique · 21 mars 2026</p>
+    <p class="futurist-gallery-caption">Mons, Belgique · 20 mars 2026</p>
   </div>
 
   <!-- Lightbox -->

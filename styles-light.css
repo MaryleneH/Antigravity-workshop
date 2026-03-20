@@ -926,6 +926,17 @@ body.quarto-light .event-glow p {
     color: #6b5858 !important;
 }
 
+body.quarto-light .event-link {
+    color: #c9547a !important;
+    border-bottom-color: rgba(212, 69, 106, 0.4) !important;
+}
+
+body.quarto-light .event-link:hover {
+    color: #d4456a !important;
+    border-color: #d4456a !important;
+    text-shadow: none !important;
+}
+
 /* Photo album carousel */
 body.quarto-light .album-slides {
     border: 1px solid rgba(212, 69, 106, 0.2) !important;
