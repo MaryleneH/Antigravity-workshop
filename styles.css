@@ -4740,3 +4740,129 @@ body.about-page-body {
         justify-content: center;
     }
 }
+
+/* BELGIUM FUTURIST ARTICLE STYLES */
+.belgium-futurist-article {
+    background: linear-gradient(135deg, rgba(82, 0, 114, 0.2), rgba(0, 0, 0, 0.4));
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 0 20px rgba(114, 219, 255, 0.15), inset 0 0 10px rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(114, 219, 255, 0.2);
+    margin-bottom: 2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.belgium-futurist-article::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(114, 219, 255, 0.05) 0%, transparent 70%);
+    pointer-events: none;
+    z-index: 0;
+}
+
+.belgium-futurist-article > * {
+    position: relative;
+    z-index: 1;
+}
+
+.belgium-event-info {
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0;
+}
+
+.event-glow {
+    background: rgba(15, 15, 25, 0.8);
+    border: 1px solid rgba(138, 43, 226, 0.5);
+    padding: 1.5rem 2.5rem;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 0 25px rgba(138, 43, 226, 0.4);
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.event-glow:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 35px rgba(114, 219, 255, 0.6);
+    border-color: rgba(114, 219, 255, 0.8);
+}
+
+.event-glow h3 {
+    margin-top: 0;
+    color: #fff;
+    font-family: 'Space Grotesk', sans-serif;
+    letter-spacing: 2px;
+    text-shadow: 0 0 10px rgba(114, 219, 255, 0.8);
+}
+
+.event-glow p {
+    color: #e0e0ff;
+    margin: 0.5rem 0;
+    font-weight: 500;
+}
+
+.futurist-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.futurist-img {
+    width: 100%;
+    border-radius: 12px;
+    filter: brightness(0.9) contrast(1.1);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: 2px solid transparent;
+}
+
+.futurist-img:hover {
+    filter: brightness(1.1) contrast(1.2);
+    transform: scale(1.03);
+    border-color: rgba(138, 43, 226, 0.8);
+    box-shadow: 0 0 20px rgba(138, 43, 226, 0.5);
+}
+
+.futurist-video-container {
+    display: flex;
+    justify-content: center;
+    margin: 3rem 0;
+}
+
+.futurist-video {
+    max-width: 100%;
+    border-radius: 15px;
+    border: 2px solid rgba(114, 219, 255, 0.4);
+    box-shadow: 0 0 30px rgba(114, 219, 255, 0.3);
+    outline: none;
+    transition: box-shadow 0.3s ease;
+}
+
+.futurist-video:hover {
+    box-shadow: 0 0 40px rgba(114, 219, 255, 0.6);
+}
+
+.futurist-btn {
+    background: linear-gradient(45deg, #111, #222);
+    border: 1px solid rgba(114, 219, 255, 0.3);
+    color: #72dbff;
+    padding: 0.8rem 1.5rem;
+    border-radius: 30px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.9em;
+    transition: all 0.3s ease;
+}
+
+.futurist-btn:hover {
+    background: linear-gradient(45deg, #222, #333);
+    color: #fff;
+    border-color: #72dbff;
+    box-shadow: 0 0 15px rgba(114, 219, 255, 0.5);
+}
