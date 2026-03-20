@@ -888,3 +888,117 @@ body.quarto-light .btn-social:hover {
     background: #fff !important;
     box-shadow: 0 5px 15px rgba(212, 69, 106, 0.15) !important;
 }
+
+/* ===== BELGIUM FUTURIST ARTICLE (Light Mode) ===== */
+
+body.quarto-light .belgium-futurist-article {
+    background: linear-gradient(135deg, rgba(255, 240, 243, 0.6), rgba(253, 246, 240, 0.8)) !important;
+    border: 1px solid rgba(212, 69, 106, 0.15) !important;
+    box-shadow: 0 4px 20px rgba(180, 100, 120, 0.08) !important;
+}
+
+body.quarto-light .belgium-futurist-article::before {
+    background: radial-gradient(circle, rgba(251, 111, 146, 0.06) 0%, transparent 70%) !important;
+}
+
+body.quarto-light .belgium-futurist-article p {
+    color: #3a2e2e !important;
+}
+
+/* Event info card */
+body.quarto-light .event-glow {
+    background: rgba(255, 255, 255, 0.75) !important;
+    border: 1px solid rgba(212, 69, 106, 0.25) !important;
+    box-shadow: 0 4px 20px rgba(212, 69, 106, 0.12) !important;
+}
+
+body.quarto-light .event-glow:hover {
+    box-shadow: 0 8px 30px rgba(212, 69, 106, 0.22) !important;
+    border-color: rgba(212, 69, 106, 0.5) !important;
+}
+
+body.quarto-light .event-glow h3 {
+    color: #2d1f2f !important;
+    text-shadow: none !important;
+}
+
+body.quarto-light .event-glow p {
+    color: #6b5858 !important;
+}
+
+/* Photo album carousel */
+body.quarto-light .album-slides {
+    border: 1px solid rgba(212, 69, 106, 0.2) !important;
+    box-shadow: 0 4px 20px rgba(180, 100, 120, 0.12) !important;
+    background: #fff5f0 !important;
+}
+
+body.quarto-light .album-arrow {
+    background: rgba(253, 246, 240, 0.9) !important;
+    border: 1px solid rgba(212, 69, 106, 0.25) !important;
+    color: #c9547a !important;
+}
+
+body.quarto-light .album-arrow:hover {
+    background: #c9547a !important;
+    border-color: #c9547a !important;
+    color: #fff !important;
+    box-shadow: 0 0 12px rgba(212, 69, 106, 0.4) !important;
+}
+
+body.quarto-light .album-dot {
+    background: rgba(212, 69, 106, 0.15) !important;
+    border-color: rgba(212, 69, 106, 0.3) !important;
+}
+
+body.quarto-light .album-dot.active {
+    background: #c9547a !important;
+    border-color: #c9547a !important;
+    box-shadow: 0 0 6px rgba(212, 69, 106, 0.5) !important;
+}
+
+body.quarto-light .futurist-gallery-caption {
+    color: rgba(180, 100, 120, 0.6) !important;
+}
+
+/* Lightbox */
+body.quarto-light .album-lightbox {
+    background: rgba(45, 31, 47, 0.93) !important;
+}
+
+body.quarto-light .lightbox-img {
+    border-color: rgba(212, 69, 106, 0.3) !important;
+    box-shadow: 0 0 40px rgba(212, 69, 106, 0.2) !important;
+}
+
+body.quarto-light .lightbox-close {
+    color: rgba(255, 255, 255, 0.8) !important;
+}
+
+body.quarto-light .lightbox-close:hover {
+    color: #fb6f92 !important;
+}
+
+/* Video */
+body.quarto-light .futurist-video {
+    border-color: rgba(212, 69, 106, 0.25) !important;
+    box-shadow: 0 4px 20px rgba(180, 100, 120, 0.12) !important;
+}
+
+body.quarto-light .futurist-video:hover {
+    box-shadow: 0 8px 30px rgba(212, 69, 106, 0.25) !important;
+}
+
+/* Back button */
+body.quarto-light .futurist-btn {
+    background: rgba(255, 240, 243, 0.5) !important;
+    border-color: rgba(212, 69, 106, 0.25) !important;
+    color: #c9547a !important;
+}
+
+body.quarto-light .futurist-btn:hover {
+    background: #c9547a !important;
+    border-color: #c9547a !important;
+    color: #fff !important;
+    box-shadow: 0 4px 15px rgba(212, 69, 106, 0.3) !important;
+}
