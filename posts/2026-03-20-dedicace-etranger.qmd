@@ -1,56 +1,59 @@
 ---
-title: "Je dédicace à l’étranger !"
+title: "Je dédicace à l'étranger !"
 date: 2026-03-20
 categories: [Actualités, Salon, Belgium]
-description: "L’un de mes vieux rêves vient de se réaliser : rencontrer mes lecteurs belges au Salon Love Story à Mons."
+description: "L'un de mes vieux rêves vient de se réaliser : rencontrer mes lecteurs belges au Salon Love Story à Mons."
 image: ./images/blog/im2_converted.webp
 ---
 
-::: {.belgium-futurist-article}
+```{=html}
+<div class="belgium-futurist-article">
 
-L’un de mes vieux rêves vient de se réaliser. J’ai passé les frontières françaises pour rencontrer mes lecteurs belges ! Quel bonheur de savoir mes livres entre les mains de potentiels connaisseurs ! Sans compter que je redécouvre la Belgique, si accueillante et belle.
+  <p>L'un de mes vieux rêves vient de se réaliser. J'ai passé les frontières françaises pour rencontrer mes lecteurs belges ! Quel bonheur de savoir mes livres entre les mains de potentiels connaisseurs ! Sans compter que je redécouvre la Belgique, si accueillante et belle.</p>
 
-Reste à savoir si mes histoires plairont. J’espère que oui.
+  <p>Reste à savoir si mes histoires plairont. J'espère que oui.</p>
 
-Si vous êtes dans le coin, passez me faire un coucou et pourquoi pas faire signer votre exemplaire d’*AT The Beginning* ?
+  <p>Si vous êtes dans le coin, passez me faire un coucou et pourquoi pas faire signer votre exemplaire d'<em>AT The Beginning</em> ?</p>
 
-Je vais dormir : plus qu’un dodo !
+  <p>Je vais dormir : plus qu'un dodo !</p>
 
-À demain (peut-être) !
+  <p>À demain (peut-être) !</p>
 
-<div class="editorial-sep">✦ ✦ ✦</div>
+  <div class="editorial-sep">✦ ✦ ✦</div>
 
-<div class="belgium-event-info">
-  <div class="event-glow">
-    <h3>Salon Love Story Mons</h3>
-    <p>🗓️ Du 21 au 22 mars de 10h à 17h</p>
-    <p>📍 Palais des congrès, Mons, Belgique</p>
+  <div class="belgium-event-info">
+    <div class="event-glow">
+      <h3>Salon Love Story Mons</h3>
+      <p>🗓️ Du 21 au 22 mars de 10h à 17h</p>
+      <p>📍 Palais des congrès, Mons, Belgique</p>
+    </div>
   </div>
+
+  <div class="futurist-gallery">
+    <div class="futurist-img-frame">
+      <img src="./images/blog/im1_converted.webp" alt="Photo 1 - Salon Love Story Mons" class="futurist-img">
+    </div>
+    <div class="futurist-img-frame">
+      <img src="./images/blog/im2_converted.webp" alt="Photo 2 - Salon Love Story Mons" class="futurist-img">
+    </div>
+    <div class="futurist-img-frame">
+      <img src="./images/blog/im3_converted.webp" alt="Photo 3 - Salon Love Story Mons" class="futurist-img">
+    </div>
+  </div>
+  <p class="futurist-gallery-caption">Quelques souvenirs photographiques de la superbe ville de Mons et du salon.</p>
+
+  <div class="futurist-video-container">
+    <video class="futurist-video" autoplay loop muted playsinline>
+      <source src="./images/blog/video_converted.mp4" type="video/mp4">
+      Votre navigateur ne supporte pas la balise vidéo.
+    </video>
+  </div>
+
+  <div class="back-home" style="margin-top:2rem;">
+    <a href="../blog.qmd" class="btn-back futurist-btn" role="button" aria-label="Retour aux articles de blog">
+      <span class="arrow">←</span> Retour aux articles de blog
+    </a>
+  </div>
+
 </div>
-
-::: {.editorial-figure}
-::: {.futurist-gallery}
-![](./images/blog/im1_converted.webp){.futurist-img}
-![](./images/blog/im2_converted.webp){.futurist-img}
-![](./images/blog/im3_converted.webp){.futurist-img}
-:::
-::: {.editorial-caption}
-Quelques souvenirs photographiques de la superbe ville de Mons et du salon.
-:::
-:::
-
-::: {.futurist-video-container}
-<video class="futurist-video" autoplay loop muted playsinline>
-  <source src="./images/blog/video_converted.mp4" type="video/mp4">
-  Votre navigateur ne supporte pas la balise vidéo.
-</video>
-:::
-
-<!-- Bouton retour (mobile-friendly) -->
-<div class="back-home" style="margin-top:2rem;">
-  <a href="../blog.qmd" class="btn-back futurist-btn" role="button" aria-label="Retour aux articles de blog">
-    <span class="arrow">←</span> Retour aux articles de blog
-  </a>
-</div>
-
-:::
+```

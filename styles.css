@@ -4808,44 +4808,93 @@ body.about-page-body {
 }
 
 .futurist-gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1.5rem;
-    margin: 2rem 0;
+    display: flex;
+    gap: 0.8rem;
+    margin: 1.5rem 0 0;
+    overflow-x: auto;
+    padding-bottom: 0.5rem;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(114, 219, 255, 0.3) transparent;
 }
+
+.futurist-gallery::-webkit-scrollbar { height: 3px; }
+.futurist-gallery::-webkit-scrollbar-track { background: transparent; }
+.futurist-gallery::-webkit-scrollbar-thumb {
+    background: rgba(114, 219, 255, 0.3);
+    border-radius: 4px;
+}
+
+.futurist-img-frame {
+    flex: 0 0 auto;
+    width: 200px;
+    height: 270px;
+    overflow: hidden;
+    clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 10px 100%, 0 calc(100% - 10px));
+    border: 1.5px solid rgba(114, 219, 255, 0.3);
+    background: #0a0a1a;
+    position: relative;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.futurist-img-frame::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(114, 219, 255, 0.1) 0%, transparent 60%);
+    pointer-events: none;
+    transition: opacity 0.4s ease;
+    opacity: 0;
+}
+
+.futurist-img-frame:hover {
+    transform: scale(1.035) translateY(-4px);
+    border-color: rgba(138, 43, 226, 0.9);
+    box-shadow: 0 0 18px rgba(138, 43, 226, 0.5), 0 0 35px rgba(114, 219, 255, 0.2);
+}
+
+.futurist-img-frame:hover::after { opacity: 1; }
 
 .futurist-img {
     width: 100%;
-    border-radius: 12px;
-    filter: brightness(0.9) contrast(1.1);
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    border: 2px solid transparent;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    filter: brightness(0.9) saturate(1.1);
+    transition: filter 0.4s ease;
 }
 
-.futurist-img:hover {
-    filter: brightness(1.1) contrast(1.2);
-    transform: scale(1.03);
-    border-color: rgba(138, 43, 226, 0.8);
-    box-shadow: 0 0 20px rgba(138, 43, 226, 0.5);
+.futurist-img-frame:hover .futurist-img {
+    filter: brightness(1.0) saturate(1.25);
+}
+
+.futurist-gallery-caption {
+    text-align: center;
+    font-size: 0.75rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: rgba(114, 219, 255, 0.5);
+    margin: 0.5rem 0 2rem;
 }
 
 .futurist-video-container {
     display: flex;
     justify-content: center;
-    margin: 3rem 0;
+    margin: 2rem 0;
 }
 
 .futurist-video {
-    max-width: 100%;
-    border-radius: 15px;
-    border: 2px solid rgba(114, 219, 255, 0.4);
-    box-shadow: 0 0 30px rgba(114, 219, 255, 0.3);
+    max-width: min(100%, 480px);
+    width: 100%;
+    border-radius: 10px;
+    border: 1.5px solid rgba(114, 219, 255, 0.4);
+    box-shadow: 0 0 20px rgba(114, 219, 255, 0.25);
     outline: none;
     transition: box-shadow 0.3s ease;
 }
 
 .futurist-video:hover {
-    box-shadow: 0 0 40px rgba(114, 219, 255, 0.6);
+    box-shadow: 0 0 35px rgba(114, 219, 255, 0.55);
 }
 
 .futurist-btn {
@@ -4865,4 +4914,11 @@ body.about-page-body {
     color: #fff;
     border-color: #72dbff;
     box-shadow: 0 0 15px rgba(114, 219, 255, 0.5);
+}
+
+@media (max-width: 600px) {
+    .futurist-img-frame {
+        width: 150px;
+        height: 200px;
+    }
 }
