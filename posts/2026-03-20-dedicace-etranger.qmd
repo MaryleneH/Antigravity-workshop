@@ -26,7 +26,7 @@ image: ./images/blog/im2_converted.webp
       <h3>Salon Love Story Mons</h3>
       <p>🗓️ Du 21 au 22 mars de 10h à 17h</p>
       <p>📍 Palais des congrès, Mons, Belgique</p>
-      <p>✨ Stand 134, près du bar — ce sera un plaisir de vous accueillir, et qui sait, vous repartirez peut-être avec un livre qui vous touchera.</p>
+      <p>✨ Stand 134, près du bar — parce que mes livres font plus d'effet que les cocktails ! Passez me dire bonjour, ça me fera chaud au cœur… et qui sait, vous repartirez peut-être avec une histoire qui vous touchera !</p>
       <p>🌐 <a href="https://salonlovestory.be" target="_blank" rel="noopener noreferrer" class="event-link">salonlovestory.be</a></p>
     </div>
   </div>
