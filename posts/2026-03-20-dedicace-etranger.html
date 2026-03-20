@@ -46,9 +46,9 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-845c23b38eaddc0f92fda52bfe77a8c8.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-417d0dcf63a0362711e9502172bbb10a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-be0dd5cf551bf69d753a8b1ab19c319c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../site_libs/bootstrap/bootstrap-417d0dcf63a0362711e9502172bbb10a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-245460925d65651f1d68c5d1c45f1520.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-014f01caaf664dd028cf69db5fdcf52c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-245460925d65651f1d68c5d1c45f1520.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -450,18 +450,36 @@ ul.task-list li input[type="checkbox"] {
     </div>
   </div>
 
-  <div class="futurist-gallery">
-    <div class="futurist-img-frame">
-      <img src="./images/blog/im1_converted.webp" alt="Photo 1 - Salon Love Story Mons" class="futurist-img">
+  <!-- Photo album carousel -->
+  <div class="album-carousel" id="belgiumAlbum">
+    <div class="album-slides" id="belgiumSlides">
+      <div class="album-slide active">
+        <img src="./images/blog/im1_converted.webp" alt="Photo 1 – Salon Love Story Mons" class="album-img">
+      </div>
+      <div class="album-slide">
+        <img src="./images/blog/im2_converted.webp" alt="Photo 2 – Salon Love Story Mons" class="album-img">
+      </div>
+      <div class="album-slide">
+        <img src="./images/blog/im3_converted.webp" alt="Photo 3 – Salon Love Story Mons" class="album-img">
+      </div>
     </div>
-    <div class="futurist-img-frame">
-      <img src="./images/blog/im2_converted.webp" alt="Photo 2 - Salon Love Story Mons" class="futurist-img">
+
+    <button class="album-arrow album-prev" onclick="albumMove(-1)" aria-label="Photo précédente">‹</button>
+    <button class="album-arrow album-next" onclick="albumMove(1)" aria-label="Photo suivante">›</button>
+
+    <div class="album-dots" id="belgiumDots">
+      <span class="album-dot active" onclick="albumGoTo(0)"></span>
+      <span class="album-dot" onclick="albumGoTo(1)"></span>
+      <span class="album-dot" onclick="albumGoTo(2)"></span>
     </div>
-    <div class="futurist-img-frame">
-      <img src="./images/blog/im3_converted.webp" alt="Photo 3 - Salon Love Story Mons" class="futurist-img">
-    </div>
+    <p class="futurist-gallery-caption">Mons, Belgique · 21 mars 2026</p>
   </div>
-  <p class="futurist-gallery-caption">Quelques souvenirs photographiques de la superbe ville de Mons et du salon.</p>
+
+  <!-- Lightbox -->
+  <div class="album-lightbox" id="belgiumLightbox" onclick="closeLightbox()">
+    <span class="lightbox-close" onclick="closeLightbox()">✕</span>
+    <img src="" alt="" id="lightboxImg" class="lightbox-img">
+  </div>
 
   <div class="futurist-video-container">
     <video class="futurist-video" autoplay="" loop="" muted="" playsinline="">
@@ -477,6 +495,51 @@ ul.task-list li input[type="checkbox"] {
   </div>
 
 </div>
+
+<script>
+(function() {
+  var current = 0;
+  var total = 3;
+  var startX = 0;
+  var slides = document.getElementById('belgiumSlides');
+
+  window.albumMove = function(dir) {
+    current = (current + dir + total) % total;
+    updateAlbum();
+  };
+
+  window.albumGoTo = function(idx) {
+    current = idx;
+    updateAlbum();
+  };
+
+  function updateAlbum() {
+    var allSlides = slides.querySelectorAll('.album-slide');
+    var allDots = document.querySelectorAll('#belgiumDots .album-dot');
+    allSlides.forEach(function(s, i) { s.classList.toggle('active', i === current); });
+    allDots.forEach(function(d, i) { d.classList.toggle('active', i === current); });
+  }
+
+  // Touch swipe
+  slides.addEventListener('touchstart', function(e) { startX = e.touches[0].clientX; }, {passive: true});
+  slides.addEventListener('touchend', function(e) {
+    var diff = startX - e.changedTouches[0].clientX;
+    if (Math.abs(diff) > 40) albumMove(diff > 0 ? 1 : -1);
+  }, {passive: true});
+
+  // Click to open lightbox
+  slides.querySelectorAll('.album-img').forEach(function(img) {
+    img.addEventListener('click', function() {
+      document.getElementById('lightboxImg').src = img.src;
+      document.getElementById('belgiumLightbox').classList.add('open');
+    });
+  });
+
+  window.closeLightbox = function() {
+    document.getElementById('belgiumLightbox').classList.remove('open');
+  };
+})();
+</script>
 
 
 
