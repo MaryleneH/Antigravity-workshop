@@ -246,17 +246,17 @@ format:
 <div class="ar-page">
 
   <div class="ar-header">
-    <span class="ar-badge">✦ Pose avec AT The Beginning</span>
-    <h1>Votre moment AT</h1>
-    <p>Activez la caméra, positionnez le livre à côté de vous et capturez votre photo souvenir.</p>
+    <span class="ar-badge">✦ Expérience exclusive — AT The Beginning</span>
+    <h1>Posez avec AT.</h1>
+    <p>Une photo, un souvenir inoubliable.<br>Activez votre caméra, glissez le livre, et immortalisez ce moment avec <em>AT The Beginning</em>.</p>
   </div>
 
   <div class="ar-stage" id="ar-stage">
     <!-- Start screen -->
     <div id="start-overlay">
-      <div style="font-size:3rem;">📸</div>
-      <h2>Filtre AT The Beginning</h2>
-      <p>Cliquez ci-dessous pour activer votre caméra — le livre apparaîtra à côté de vous !</p>
+      <div style="font-size:3rem;">✨</div>
+      <h2>Votre photo avec AT vous attend</h2>
+      <p>Activez la caméra, placez le livre où vous voulez, et capturez un souvenir que vous garderez.</p>
     </div>
 
     <!-- Live camera feed -->
@@ -277,16 +277,16 @@ format:
 
   <div class="ar-tips">
     <div class="ar-tip">
-      <strong>💡 Conseil</strong>
-      Glissez le livre pour le placer à côté de votre visage.
+      <strong>👆 Positionnez</strong>
+      Glissez le livre là où vous le souhaitez — à côté de vous, dans vos mains, où vous voulez !
     </div>
     <div class="ar-tip">
-      <strong>↔ Taille</strong>
-      Faites glisser le coin ↘ pour redimensionner le livre.
+      <strong>↘ Redimensionnez</strong>
+      Faites glisser le coin ↘ pour ajuster la taille du livre à votre cadre.
     </div>
     <div class="ar-tip">
-      <strong>📸 Capture</strong>
-      La photo sera téléchargée automatiquement.
+      <strong>📸 Capturez</strong>
+      Un clic, et votre photo est téléchargée — prête à être partagée !
     </div>
   </div>
 
