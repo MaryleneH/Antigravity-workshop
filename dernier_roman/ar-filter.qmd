@@ -240,6 +240,35 @@ format:
 }
 .ar-back a:hover { color: #C9A87C; }
 
+/* Photo preview overlay */
+#photo-preview {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    background: rgba(10,10,15,0.96);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1.5rem;
+    text-align: center;
+}
+#photo-preview.open { display: flex; }
+#preview-img {
+    max-width: 90vw;
+    max-height: 70vh;
+    border-radius: 12px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.8);
+    border: 1px solid rgba(201,168,124,0.25);
+}
+#preview-hint {
+    color: rgba(245,230,224,0.55);
+    font-size: 0.85rem;
+    line-height: 1.6;
+}
+#preview-hint strong { color: #C9A87C; }
+
 #snap-canvas { display: none; }
 </style>
 
@@ -286,13 +315,23 @@ format:
     </div>
     <div class="ar-tip">
       <strong>📸 Capturez</strong>
-      Un clic, et votre photo est téléchargée — prête à être partagée !
+      Votre photo s'affiche — appui long pour l'enregistrer sur mobile.
     </div>
   </div>
 
   <div class="ar-back">
     <a href="./at_the_beginning.html">← Retour à AT The Beginning</a>
   </div>
+</div>
+
+<!-- Photo preview overlay -->
+<div id="photo-preview">
+  <img id="preview-img" src="" alt="Votre photo AT">
+  <div id="preview-hint">
+    <strong>📱 Mobile :</strong> appui long sur la photo → "Enregistrer l'image"<br>
+    <strong>💻 Desktop :</strong> clic droit → "Enregistrer l'image sous"
+  </div>
+  <button class="ar-btn ar-btn-capture" onclick="document.getElementById('photo-preview').classList.remove('open')" style="margin-top:0.5rem;">✕ Fermer</button>
 </div>
 
 <canvas id="snap-canvas"></canvas>
@@ -399,23 +438,28 @@ format:
     // Draw book directly — same-origin img, no CORS taint
     try { ctx.drawImage(book, bx, by, bw, bh); } catch(e) { console.warn(e); }
 
-    // Use synchronous toDataURL (toBlob is async → loses user gesture on mobile)
+    // Get data URL synchronously
     var dataUrl;
+    try { dataUrl = canvas.toDataURL('image/jpeg', 0.92); }
+    catch(e) { setStatus('⚠ Erreur : ' + e.message); return; }
+
+    // Show in-page preview (works on ALL browsers/mobile)
+    var preview = document.getElementById('photo-preview');
+    var previewImg = document.getElementById('preview-img');
+    previewImg.src = dataUrl;
+    preview.classList.add('open');
+
+    // Also attempt auto-download (works on desktop Chrome/Firefox)
     try {
-      dataUrl = canvas.toDataURL('image/jpeg', 0.92);
-    } catch(e) {
-      setStatus('⚠ Capture bloquée par le navigateur.');
-      console.error(e);
-      return;
-    }
-    var a = document.createElement('a');
-    a.href = dataUrl;
-    a.download = 'AT-The-Beginning-pose.jpg';
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
-    setStatus('✦ Photo enregistrée !');
-    setTimeout(function () { setStatus('✦ Glissez le livre pour le positionner à côté de vous'); }, 3000);
+      var a = document.createElement('a');
+      a.href = dataUrl;
+      a.download = 'AT-The-Beginning-pose.jpg';
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+    } catch(e) { /* silent — user can save from preview */ }
+
+    setStatus('✦ Photo prête — appui long pour enregistrer sur mobile');
   };
 
   // ── Drag book (mouse + touch) ─────────────────────────────────
