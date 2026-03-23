@@ -666,52 +666,59 @@ ul.task-list li input[type="checkbox"] {
 
   // Capture
   window.capturePhoto = function () {
-    // Flash
     var flash = document.createElement('div');
     flash.className = 'ar-flash';
     stage.appendChild(flash);
     setTimeout(function () { if (flash.parentNode) flash.parentNode.removeChild(flash); }, 500);
 
     var canvas = document.getElementById('snap-canvas');
-    var nativeW = video.videoWidth  || stage.offsetWidth;
-    var nativeH = video.videoHeight || stage.offsetHeight;
-    canvas.width = nativeW; canvas.height = nativeH;
-    var ctx = canvas.getContext('2d');
+    var dpr    = Math.min(window.devicePixelRatio || 1, 3);
+    var sw = stage.offsetWidth;   // CSS stage width
+    var sh = stage.offsetHeight;  // CSS stage height
+    var nw = video.videoWidth  || sw;  // native video width
+    var nh = video.videoHeight || sh;  // native video height
 
-    // Draw mirrored video at native resolution
+    // Canvas at stage size × DPR for sharp output without aspect ratio mismatch
+    canvas.width  = sw * dpr;
+    canvas.height = sh * dpr;
+    var ctx = canvas.getContext('2d');
+    ctx.scale(dpr, dpr);
+
+    // Replicate object-fit:cover + mirror (scaleX(-1)) in canvas
+    // cover scale = the scale that makes the video fill the stage
+    var coverScale = Math.max(sw / nw, sh / nh);
+    var dw = nw * coverScale;   // rendered video width (may exceed sw)
+    var dh = nh * coverScale;   // rendered video height (may exceed sh)
+    var dx = (sw - dw) / 2;     // horizontal offset (negative = cropped)
+    var dy = (sh - dh) / 2;     // vertical offset   (negative = cropped)
+
     ctx.save();
-    ctx.translate(nativeW, 0); ctx.scale(-1, 1);
-    ctx.drawImage(video, 0, 0, nativeW, nativeH);
+    ctx.translate(sw, 0); ctx.scale(-1, 1);  // mirror
+    ctx.drawImage(video, dx, dy, dw, dh);
     ctx.restore();
 
-    // Scale book overlay to native coordinates
-    var scaleX = nativeW / stage.offsetWidth;
-    var scaleY = nativeH / stage.offsetHeight;
+    // Draw book at its exact CSS-pixel position (no separate scale needed)
     var br = book.getBoundingClientRect();
     var sr = stage.getBoundingClientRect();
     try {
       ctx.drawImage(book,
-        (br.left - sr.left) * scaleX, (br.top - sr.top) * scaleY,
-        br.width * scaleX, br.height * scaleY);
+        br.left - sr.left, br.top - sr.top,
+        br.width, br.height);
     } catch(e) { console.warn(e); }
 
-    // Get data URL
+    // Reset DPR scale before export
+    ctx.setTransform(1, 0, 0, 1, 0, 0);
+
     var dataUrl;
     try { dataUrl = canvas.toDataURL('image/jpeg', 0.92); }
     catch(e) { setStatus('⚠ Erreur canvas : ' + e.message); return; }
 
-    // Show captured photo inside stage
     capturedImg.src = dataUrl;
     capturedView.style.display = 'flex';
     video.style.display = book.style.display = resizeH.style.display = 'none';
-
-    // Set download link href — user taps it directly (true user gesture)
     dlLink.href = dataUrl;
-
-    // Switch control bars
     camCtrls.style.display = 'none';
     dlCtrls.style.display  = 'flex';
-
     setStatus('✦ Votre photo est prête ! Appuyez sur "Enregistrer" pour la sauvegarder.');
   };
 
