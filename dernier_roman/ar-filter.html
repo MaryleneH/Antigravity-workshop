@@ -6,7 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="Essayez notre filtre réalité augmentée et photographiez-vous avec AT The Beginning !">
+<meta name="description" content="Photographiez-vous avec AT The Beginning !">
 
 <title>Filtre AR — AT The Beginning – Mo Gadarr</title>
 <style>
@@ -398,7 +398,7 @@ ul.task-list li input[type="checkbox"] {
 
 <div>
   <div class="description">
-    Essayez notre filtre réalité augmentée et photographiez-vous avec AT The Beginning !
+    Photographiez-vous avec AT The Beginning !
   </div>
 </div>
 
@@ -415,13 +415,7 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.2/dist/mindar-face.prod.js"></script>
-<script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.2/dist/mindar-face-aframe.prod.js"></script>
-
 <style>
-* { box-sizing: border-box; margin: 0; padding: 0; }
-
 .ar-page {
     min-height: 100vh;
     background: linear-gradient(160deg, #0A0A0F 0%, #1a0e2e 40%, #2D1B4E 100%);
@@ -438,7 +432,6 @@ ul.task-list li input[type="checkbox"] {
     max-width: 560px;
     margin-bottom: 1.5rem;
 }
-
 .ar-badge {
     display: inline-block;
     font-size: 0.65rem;
@@ -450,7 +443,6 @@ ul.task-list li input[type="checkbox"] {
     border-radius: 50px;
     margin-bottom: 0.8rem;
 }
-
 .ar-header h1 {
     font-family: 'Playfair Display', serif;
     font-size: clamp(1.6rem, 5vw, 2.8rem);
@@ -461,81 +453,116 @@ ul.task-list li input[type="checkbox"] {
     background-size: 200% auto;
     margin-bottom: 0.5rem;
 }
-
 .ar-header p {
     color: rgba(245,230,224,0.55);
-    font-size: 0.95rem;
-    line-height: 1.6;
+    font-size: 0.92rem;
+    line-height: 1.7;
 }
 
-/* --- Scene container --- */
-.ar-container {
+/* --- Camera stage --- */
+.ar-stage {
     position: relative;
     width: 100%;
     max-width: 560px;
-    height: 70vh;
-    min-height: 400px;
     border-radius: 20px;
     overflow: hidden;
     box-shadow: 0 30px 80px rgba(0,0,0,0.6), 0 0 0 1px rgba(201,168,124,0.2);
-    background: #0A0A0F;
+    background: #0a0a12;
+    aspect-ratio: 3/4;
 }
 
-/* A-Frame scene fills entire container — always visible so canvas sizes correctly */
-#ar-scene {
+#cam-video {
     position: absolute;
     inset: 0;
-    width: 100% !important;
-    height: 100% !important;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scaleX(-1); /* mirror for selfie */
+    display: none;
 }
 
-/* Overlay sits on top via z-index */
-#ar-overlay {
+/* Book overlay — draggable */
+#book-overlay {
+    position: absolute;
+    top: 10%;
+    right: 5%;
+    width: clamp(90px, 22%, 160px);
+    cursor: grab;
+    user-select: none;
+    touch-action: none;
+    border-radius: 6px;
+    box-shadow: -6px 6px 20px rgba(0,0,0,0.6), 0 0 0 1px rgba(201,168,124,0.2);
+    display: none;
+    z-index: 10;
+    transition: box-shadow 0.2s;
+}
+#book-overlay:active { cursor: grabbing; box-shadow: -3px 3px 12px rgba(0,0,0,0.5); }
+
+/* Start overlay */
+#start-overlay {
     position: absolute;
     inset: 0;
-    z-index: 20;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 1.2rem;
+    gap: 1rem;
     background: linear-gradient(135deg, rgba(10,10,15,0.97), rgba(45,27,78,0.97));
     text-align: center;
     padding: 2rem;
-    transition: opacity 0.4s ease;
+    z-index: 20;
 }
-
-#ar-overlay.hidden {
-    opacity: 0;
-    pointer-events: none;
-}
-
-.ar-overlay-icon { font-size: 3rem; }
-
-#ar-overlay h2 {
+#start-overlay h2 {
     font-family: 'Playfair Display', serif;
     font-size: 1.4rem;
     color: #F5E6E0;
+    margin: 0;
 }
-
-#ar-overlay p {
+#start-overlay p {
     font-size: 0.85rem;
     color: rgba(245,230,224,0.5);
-    max-width: 280px;
+    max-width: 270px;
     line-height: 1.6;
+    margin: 0;
 }
 
-/* --- Buttons --- */
+/* Flash on capture */
+@keyframes ar-flash { 0%{opacity:0} 20%{opacity:.85} 100%{opacity:0} }
+.ar-flash {
+    position: absolute;
+    inset: 0;
+    background: #fff;
+    pointer-events: none;
+    z-index: 30;
+    animation: ar-flash 0.4s ease-out forwards;
+    border-radius: 20px;
+}
+
+/* Resize handle */
+.resize-hint {
+    position: absolute;
+    bottom: 8%;
+    right: 6%;
+    width: 22px;
+    height: 22px;
+    border-right: 2px solid rgba(201,168,124,0.6);
+    border-bottom: 2px solid rgba(201,168,124,0.6);
+    border-radius: 0 0 4px 0;
+    z-index: 11;
+    cursor: se-resize;
+    display: none;
+}
+
+/* Buttons */
 .ar-controls {
     display: flex;
-    gap: 1rem;
+    gap: 0.8rem;
     justify-content: center;
     flex-wrap: wrap;
     margin-top: 1rem;
     width: 100%;
     max-width: 560px;
 }
-
 .ar-btn {
     display: inline-flex;
     align-items: center;
@@ -545,50 +572,42 @@ ul.task-list li input[type="checkbox"] {
     font-size: 0.9rem;
     font-weight: 700;
     cursor: pointer;
-    transition: all 0.3s;
     border: none;
     font-family: 'Lato', sans-serif;
-    letter-spacing: 0.3px;
+    transition: all 0.3s;
 }
-
+.ar-btn:disabled { opacity: 0.5; cursor: not-allowed; }
 .ar-btn-start {
     background: linear-gradient(135deg, #7A1B3D, #9B2B55);
     color: #fff;
     box-shadow: 0 6px 25px rgba(122,27,61,0.4);
 }
-.ar-btn-start:hover {
+.ar-btn-start:hover:not(:disabled) {
     transform: translateY(-2px);
     box-shadow: 0 10px 35px rgba(122,27,61,0.55);
-    background: linear-gradient(135deg, #9B2B55, #B53365);
 }
-
 .ar-btn-capture {
     background: rgba(201,168,124,0.12);
     color: #C9A87C;
     border: 1px solid rgba(201,168,124,0.4);
 }
-.ar-btn-capture:hover {
-    background: rgba(201,168,124,0.22);
-    border-color: #C9A87C;
-    transform: translateY(-2px);
-}
-
+.ar-btn-capture:hover { background: rgba(201,168,124,0.22); transform: translateY(-2px); }
 .ar-btn-stop {
     background: transparent;
     color: rgba(245,230,224,0.4);
     border: 1px solid rgba(255,255,255,0.08);
-    font-size: 0.8rem;
+    font-size: 0.82rem;
 }
-.ar-btn-stop:hover { color: #F5E6E0; border-color: rgba(255,255,255,0.2); }
+.ar-btn-stop:hover { color: #F5E6E0; }
 
 .ar-status {
     text-align: center;
     font-size: 0.72rem;
     letter-spacing: 1px;
     text-transform: uppercase;
-    color: rgba(201,168,124,0.45);
+    color: rgba(201,168,124,0.5);
     margin-top: 0.6rem;
-    min-height: 1em;
+    min-height: 1.2em;
 }
 
 .ar-tips {
@@ -611,16 +630,13 @@ ul.task-list li input[type="checkbox"] {
 .ar-tip strong {
     display: block;
     color: rgba(201,168,124,0.7);
-    font-size: 0.7rem;
+    font-size: 0.68rem;
     text-transform: uppercase;
     letter-spacing: 1px;
     margin-bottom: 0.25rem;
 }
 
-.ar-back {
-    text-align: center;
-    margin-top: 1.5rem;
-}
+.ar-back { text-align: center; margin-top: 1.5rem; }
 .ar-back a {
     color: rgba(201,168,124,0.4);
     font-size: 0.82rem;
@@ -629,86 +645,53 @@ ul.task-list li input[type="checkbox"] {
 }
 .ar-back a:hover { color: #C9A87C; }
 
-@keyframes ar-flash {
-    0% { opacity: 0; }
-    15% { opacity: 0.8; }
-    100% { opacity: 0; }
-}
-.ar-flash-el {
-    position: absolute;
-    inset: 0;
-    background: white;
-    pointer-events: none;
-    z-index: 25;
-    animation: ar-flash 0.45s ease-out forwards;
-    border-radius: 20px;
-}
-
 #snap-canvas { display: none; }
 </style>
 
 <div class="ar-page">
 
   <div class="ar-header">
-    <span class="ar-badge">✦ Réalité Augmentée</span>
+    <span class="ar-badge">✦ Pose avec AT The Beginning</span>
     <h1>Votre moment AT</h1>
-    <p>Activez la caméra, posez avec le livre, capturez le souvenir.</p>
+    <p>Activez la caméra, positionnez le livre à côté de vous et capturez votre photo souvenir.</p>
   </div>
 
-  <div class="ar-container" id="ar-container">
-
-    <!-- A-Scene is ALWAYS in the DOM so AFrame can size its canvas -->
-    <a-scene id="ar-scene" mindar-face="autoStart: false; uiLoading: no; uiError: no; uiScanning: no;" embedded="" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
-
-      <a-assets>
-        <img id="at-cover-tex" src="../images/couvertures/AT_couverture.PNG" crossorigin="anonymous">
-      </a-assets>
-
-      <a-camera active="false" position="0 0 0"></a-camera>
-
-      <!-- Book cover anchored to left cheek landmark, offset outward -->
-      <a-entity mindar-face-target="anchorIndex: 127">
-        <!-- Glow behind cover -->
-        <a-plane color="#7A1B3D" position="0 0 -0.005" width="0.26" height="0.38" material="opacity: 0.3; transparent: true; shader: flat;">
-        </a-plane>
-        <!-- Book cover -->
-        <a-plane src="#at-cover-tex" position="0 0 0" width="0.23" height="0.35" material="alphaTest: 0.05; transparent: false;">
-        </a-plane>
-      </a-entity>
-
-    </a-scene>
-
-    <!-- Overlay on top — hides behind the scene once dismissed -->
-    <div id="ar-overlay">
-      <div class="ar-overlay-icon">📸</div>
+  <div class="ar-stage" id="ar-stage">
+    <!-- Start screen -->
+    <div id="start-overlay">
+      <div style="font-size:3rem;">📸</div>
       <h2 class="anchored">Filtre AT The Beginning</h2>
-      <p>Votre caméra va s'activer. Assurez-vous d'être dans un endroit bien éclairé.</p>
-      <button class="ar-btn ar-btn-start" id="start-btn">✨ Activer la caméra</button>
+      <p>Cliquez ci-dessous pour activer votre caméra — le livre apparaîtra à côté de vous !</p>
     </div>
 
-    <canvas id="snap-canvas"></canvas>
+    <!-- Live camera feed -->
+    <video id="cam-video" autoplay="" playsinline="" muted=""></video>
+
+    <!-- Draggable / resizable book cover -->
+    <img id="book-overlay" src="../images/couvertures/AT_couverture.PNG" alt="AT The Beginning" draggable="false">
+    <div class="resize-hint" id="resize-handle" title="Redimensionner"></div>
   </div>
 
-  <!-- Controls below the scene -->
-  <div class="ar-controls" id="ar-controls" style="display:none;">
-    <button class="ar-btn ar-btn-capture" onclick="captureAR()">📷 Capturer</button>
-    <button class="ar-btn ar-btn-stop" onclick="stopAR()">✕ Arrêter</button>
+  <div class="ar-controls">
+    <button class="ar-btn ar-btn-start" id="start-btn">✨ Activer la caméra</button>
+    <button class="ar-btn ar-btn-capture" id="capture-btn" style="display:none;" onclick="capturePhoto()">📷 Capturer</button>
+    <button class="ar-btn ar-btn-stop" id="stop-btn" style="display:none;" onclick="stopCamera()">✕ Arrêter</button>
   </div>
 
   <div class="ar-status" id="ar-status"></div>
 
   <div class="ar-tips">
     <div class="ar-tip">
-      <strong>📱 Mobile</strong>
-      Portrait, visage bien éclairé, caméra frontale.
+      <strong>💡 Conseil</strong>
+      Glissez le livre pour le placer à côté de votre visage.
     </div>
     <div class="ar-tip">
-      <strong>💻 Desktop</strong>
-      Face à la webcam, à 50–70 cm.
+      <strong>↔ Taille</strong>
+      Faites glisser le coin ↘ pour redimensionner le livre.
     </div>
     <div class="ar-tip">
       <strong>📸 Capture</strong>
-      Cliquez "Capturer" pour télécharger votre photo.
+      La photo sera téléchargée automatiquement.
     </div>
   </div>
 
@@ -717,101 +700,219 @@ ul.task-list li input[type="checkbox"] {
   </div>
 </div>
 
+<canvas id="snap-canvas"></canvas>
+
 <script>
 (function () {
-  var sceneEl = document.getElementById('ar-scene');
-  var overlay = document.getElementById('ar-overlay');
-  var controls = document.getElementById('ar-controls');
-  var statusEl = document.getElementById('ar-status');
+  var video    = document.getElementById('cam-video');
+  var book     = document.getElementById('book-overlay');
+  var overlay  = document.getElementById('start-overlay');
   var startBtn = document.getElementById('start-btn');
+  var captBtn  = document.getElementById('capture-btn');
+  var stopBtn  = document.getElementById('stop-btn');
+  var statusEl = document.getElementById('ar-status');
+  var resizeH  = document.getElementById('resize-handle');
+  var stage    = document.getElementById('ar-stage');
+  var stream   = null;
 
   function setStatus(msg) { statusEl.textContent = msg; }
 
-  // Start AR when scene is loaded + button clicked
+  // ── Start camera ──────────────────────────────────────────────
   startBtn.addEventListener('click', function () {
     startBtn.disabled = true;
     startBtn.textContent = '…Chargement';
-    setStatus('Initialisation de la caméra…');
+    setStatus('Connexion à la caméra…');
 
-    function doStart() {
-      var sys = sceneEl.systems && sceneEl.systems['mindar-face-system'];
-      if (sys) {
-        sys.start().then(function () {
-          overlay.classList.add('hidden');
-          controls.style.display = 'flex';
-          setStatus('✦ Placez votre visage dans le cadre');
-        }).catch(function (err) {
-          setStatus('⚠ Erreur : ' + (err && err.message ? err.message : 'vérifiez les autorisations caméra.'));
-          startBtn.disabled = false;
-          startBtn.textContent = '✨ Activer la caméra';
-          console.error('MindAR start error:', err);
-        });
-      } else {
-        // Retry once after short delay if system not ready
-        setTimeout(doStart, 300);
-      }
-    }
+    var constraints = {
+      video: { facingMode: 'user', width: { ideal: 720 }, height: { ideal: 960 } },
+      audio: false
+    };
 
-    if (sceneEl.hasLoaded) {
-      doStart();
-    } else {
-      sceneEl.addEventListener('loaded', doStart, { once: true });
-    }
+    navigator.mediaDevices.getUserMedia(constraints)
+      .then(function (s) {
+        stream = s;
+        video.srcObject = s;
+        video.play();
+        overlay.style.display = 'none';
+        video.style.display = 'block';
+        book.style.display = 'block';
+        resizeH.style.display = 'block';
+        captBtn.style.display = 'inline-flex';
+        stopBtn.style.display = 'inline-flex';
+        startBtn.style.display = 'none';
+        setStatus('✦ Glissez le livre pour le positionner à côté de vous');
+      })
+      .catch(function (err) {
+        startBtn.disabled = false;
+        startBtn.textContent = '✨ Activer la caméra';
+        setStatus('⚠ ' + (err.name === 'NotAllowedError'
+          ? 'Autorisation refusée — vérifiez les permissions de la caméra.'
+          : err.message || 'Erreur caméra.'));
+        console.error(err);
+      });
   });
 
-  window.stopAR = function () {
-    var sys = sceneEl.systems && sceneEl.systems['mindar-face-system'];
-    if (sys) sys.stop();
-    overlay.classList.remove('hidden');
-    controls.style.display = 'none';
-    setStatus('');
+  // ── Stop camera ───────────────────────────────────────────────
+  window.stopCamera = function () {
+    if (stream) { stream.getTracks().forEach(function (t) { t.stop(); }); stream = null; }
+    video.style.display = 'none';
+    book.style.display = 'none';
+    resizeH.style.display = 'none';
+    captBtn.style.display = 'none';
+    stopBtn.style.display = 'none';
+    startBtn.style.display = 'inline-flex';
     startBtn.disabled = false;
     startBtn.textContent = '✨ Activer la caméra';
+    overlay.style.display = 'flex';
+    setStatus('');
   };
 
-  window.captureAR = function () {
-    // Flash
-    var container = document.getElementById('ar-container');
+  // ── Capture photo ─────────────────────────────────────────────
+  window.capturePhoto = function () {
+    // Flash effect
     var flash = document.createElement('div');
-    flash.className = 'ar-flash-el';
-    container.appendChild(flash);
+    flash.className = 'ar-flash';
+    stage.appendChild(flash);
     setTimeout(function () { if (flash.parentNode) flash.parentNode.removeChild(flash); }, 500);
 
-    // Get AFrame renderer canvas
-    var aCanvas = sceneEl.canvas;
-    if (!aCanvas) { setStatus('⚠ Impossible de capturer.'); return; }
+    var canvas = document.getElementById('snap-canvas');
+    var stageW = stage.offsetWidth;
+    var stageH = stage.offsetHeight;
+    canvas.width = stageW;
+    canvas.height = stageH;
+    var ctx = canvas.getContext('2d');
 
-    // Get the video element MindAR creates
-    var video = document.querySelector('video');
-    var snap = document.getElementById('snap-canvas');
-    snap.width = aCanvas.width;
-    snap.height = aCanvas.height;
-    var ctx = snap.getContext('2d');
+    // Draw mirrored video
+    ctx.save();
+    ctx.translate(stageW, 0);
+    ctx.scale(-1, 1);
+    ctx.drawImage(video, 0, 0, stageW, stageH);
+    ctx.restore();
 
-    // Draw video (mirrored) then AR overlay
-    if (video && video.readyState >= 2) {
-      ctx.save();
-      ctx.translate(snap.width, 0);
-      ctx.scale(-1, 1);
-      ctx.drawImage(video, 0, 0, snap.width, snap.height);
-      ctx.restore();
-    }
-    ctx.drawImage(aCanvas, 0, 0, snap.width, snap.height);
+    // Draw book at its current screen position
+    var br = book.getBoundingClientRect();
+    var sr = stage.getBoundingClientRect();
+    var bx = br.left - sr.left;
+    var by = br.top  - sr.top;
+    var bw = br.width;
+    var bh = br.height;
 
-    snap.toBlob(function (blob) {
-      if (!blob) { setStatus('⚠ Capture échouée.'); return; }
-      var url = URL.createObjectURL(blob);
-      var a = document.createElement('a');
-      a.href = url;
-      a.download = 'AT-The-Beginning-filtre.png';
-      document.body.appendChild(a);
-      a.click();
-      document.body.removeChild(a);
-      URL.revokeObjectURL(url);
-      setStatus('✦ Photo enregistrée !');
-      setTimeout(function () { setStatus('✦ Placez votre visage dans le cadre'); }, 3000);
-    }, 'image/png');
+    var img = new Image();
+    img.crossOrigin = 'anonymous';
+    img.onload = function () {
+      ctx.drawImage(img, bx, by, bw, bh);
+      canvas.toBlob(function (blob) {
+        if (!blob) { setStatus('⚠ Capture échouée.'); return; }
+        var url = URL.createObjectURL(blob);
+        var a = document.createElement('a');
+        a.href = url;
+        a.download = 'AT-The-Beginning-pose.png';
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+        setStatus('✦ Photo enregistrée !');
+        setTimeout(function () { setStatus('✦ Glissez le livre pour le positionner à côté de vous'); }, 3000);
+      }, 'image/png');
+    };
+    img.onerror = function () {
+      // If crossorigin fails, draw without book
+      canvas.toBlob(function (blob) {
+        if (!blob) return;
+        var url = URL.createObjectURL(blob);
+        var a = document.createElement('a');
+        a.href = url; a.download = 'AT-selfie.png';
+        document.body.appendChild(a); a.click(); document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+      }, 'image/png');
+    };
+    img.src = book.src;
   };
+
+  // ── Drag book (mouse + touch) ─────────────────────────────────
+  var dragging = false, dragOffX = 0, dragOffY = 0;
+
+  function getPos(e) {
+    if (e.touches) {
+      return { x: e.touches[0].clientX, y: e.touches[0].clientY };
+    }
+    return { x: e.clientX, y: e.clientY };
+  }
+
+  book.addEventListener('mousedown',  startDrag);
+  book.addEventListener('touchstart', startDrag, { passive: false });
+
+  function startDrag(e) {
+    if (e.target === resizeH) return;
+    e.preventDefault();
+    dragging = true;
+    var pos = getPos(e);
+    var br = book.getBoundingClientRect();
+    dragOffX = pos.x - br.left;
+    dragOffY = pos.y - br.top;
+    book.style.cursor = 'grabbing';
+  }
+
+  document.addEventListener('mousemove',  moveDrag);
+  document.addEventListener('touchmove',  moveDrag, { passive: false });
+
+  function moveDrag(e) {
+    if (!dragging) return;
+    e.preventDefault();
+    var pos = getPos(e);
+    var sr = stage.getBoundingClientRect();
+    var nx = pos.x - sr.left - dragOffX;
+    var ny = pos.y - sr.top  - dragOffY;
+    // clamp inside stage
+    nx = Math.max(0, Math.min(nx, sr.width  - book.offsetWidth));
+    ny = Math.max(0, Math.min(ny, sr.height - book.offsetHeight));
+    book.style.left   = nx + 'px';
+    book.style.top    = ny + 'px';
+    book.style.right  = 'auto';
+    book.style.bottom = 'auto';
+  }
+
+  document.addEventListener('mouseup',  endDrag);
+  document.addEventListener('touchend', endDrag);
+  function endDrag() { dragging = false; book.style.cursor = 'grab'; }
+
+  // ── Resize handle ─────────────────────────────────────────────
+  var resizing = false, resStartW = 0, resStartX = 0;
+
+  resizeH.addEventListener('mousedown',  startResize);
+  resizeH.addEventListener('touchstart', startResize, { passive: false });
+
+  function startResize(e) {
+    e.preventDefault(); e.stopPropagation();
+    resizing = true;
+    var pos = getPos(e);
+    resStartW = book.offsetWidth;
+    resStartX = pos.x;
+    // sync resize handle position while resizing
+  }
+
+  document.addEventListener('mousemove', moveResize);
+  document.addEventListener('touchmove', moveResize, { passive: false });
+
+  function moveResize(e) {
+    if (!resizing) return;
+    e.preventDefault();
+    var pos = getPos(e);
+    var newW = Math.max(60, Math.min(resStartW + (pos.x - resStartX), 280));
+    book.style.width = newW + 'px';
+    // keep resize handle near book corner
+    var br = book.getBoundingClientRect();
+    var sr = stage.getBoundingClientRect();
+    resizeH.style.left   = (br.left - sr.left + newW - 8) + 'px';
+    resizeH.style.top    = (br.top  - sr.top  + book.offsetHeight - 8) + 'px';
+    resizeH.style.right  = 'auto';
+    resizeH.style.bottom = 'auto';
+  }
+
+  document.addEventListener('mouseup',  endResize);
+  document.addEventListener('touchend', endResize);
+  function endResize() { resizing = false; }
+
 })();
 </script>
 
