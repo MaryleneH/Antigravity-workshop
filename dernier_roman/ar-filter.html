@@ -724,7 +724,7 @@ ul.task-list li input[type="checkbox"] {
     setStatus('Connexion à la caméra…');
 
     var constraints = {
-      video: { facingMode: 'user', width: { ideal: 720 }, height: { ideal: 960 } },
+      video: { facingMode: 'user', width: { ideal: 1280 }, height: { ideal: 1920 } },
       audio: false
     };
 
@@ -775,27 +775,31 @@ ul.task-list li input[type="checkbox"] {
     stage.appendChild(flash);
     setTimeout(function () { if (flash.parentNode) flash.parentNode.removeChild(flash); }, 500);
 
-    var canvas = document.getElementById('snap-canvas');
-    var stageW = stage.offsetWidth;
-    var stageH = stage.offsetHeight;
-    canvas.width = stageW;
-    canvas.height = stageH;
+    // Capture at the video's NATIVE resolution for full quality
+    var nativeW = video.videoWidth  || stage.offsetWidth;
+    var nativeH = video.videoHeight || stage.offsetHeight;
+    var stageW  = stage.offsetWidth;
+    var stageH  = stage.offsetHeight;
+    canvas.width  = nativeW;
+    canvas.height = nativeH;
     var ctx = canvas.getContext('2d');
 
-    // Draw mirrored video
+    // Draw mirrored video at full native resolution
     ctx.save();
-    ctx.translate(stageW, 0);
+    ctx.translate(nativeW, 0);
     ctx.scale(-1, 1);
-    ctx.drawImage(video, 0, 0, stageW, stageH);
+    ctx.drawImage(video, 0, 0, nativeW, nativeH);
     ctx.restore();
 
-    // Draw book at its current screen position
+    // Scale book position from CSS pixels → native pixels
+    var scaleX = nativeW / stageW;
+    var scaleY = nativeH / stageH;
     var br = book.getBoundingClientRect();
     var sr = stage.getBoundingClientRect();
-    var bx = br.left - sr.left;
-    var by = br.top  - sr.top;
-    var bw = br.width;
-    var bh = br.height;
+    var bx = (br.left - sr.left) * scaleX;
+    var by = (br.top  - sr.top)  * scaleY;
+    var bw = br.width  * scaleX;
+    var bh = br.height * scaleY;
 
     var img = new Image();
     img.crossOrigin = 'anonymous';
