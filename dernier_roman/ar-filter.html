@@ -801,22 +801,26 @@ ul.task-list li input[type="checkbox"] {
     var bw = br.width  * scaleX;
     var bh = br.height * scaleY;
 
-    // Draw book directly — no re-fetch, no CORS taint on the canvas
+    // Draw book directly — same-origin img, no CORS taint
     try { ctx.drawImage(book, bx, by, bw, bh); } catch(e) { console.warn(e); }
 
-    canvas.toBlob(function (blob) {
-      if (!blob) { setStatus('⚠ Capture échouée.'); return; }
-      var url = URL.createObjectURL(blob);
-      var a = document.createElement('a');
-      a.href = url;
-      a.download = 'AT-The-Beginning-pose.jpg';
-      document.body.appendChild(a);
-      a.click();
-      document.body.removeChild(a);
-      URL.revokeObjectURL(url);
-      setStatus('✦ Photo enregistrée !');
-      setTimeout(function () { setStatus('✦ Glissez le livre pour le positionner à côté de vous'); }, 3000);
-    }, 'image/jpeg', 0.95);
+    // Use synchronous toDataURL (toBlob is async → loses user gesture on mobile)
+    var dataUrl;
+    try {
+      dataUrl = canvas.toDataURL('image/jpeg', 0.92);
+    } catch(e) {
+      setStatus('⚠ Capture bloquée par le navigateur.');
+      console.error(e);
+      return;
+    }
+    var a = document.createElement('a');
+    a.href = dataUrl;
+    a.download = 'AT-The-Beginning-pose.jpg';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    setStatus('✦ Photo enregistrée !');
+    setTimeout(function () { setStatus('✦ Glissez le livre pour le positionner à côté de vous'); }, 3000);
   };
 
   // ── Drag book (mouse + touch) ─────────────────────────────────
