@@ -418,6 +418,41 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="featured" class="collection">
     <h2 class="section-title fade-in-scroll anchored">À la Une</h2>
+
+    <!-- AR Experience showcase card -->
+    <div class="hp-ar-wrap fade-in-scroll">
+      <div class="hp-ar-inner">
+        <div class="hp-ar-text">
+          <span class="hp-ar-badge"><span class="hp-ar-dot"></span>Nouvelle expérience</span>
+          <h3 class="hp-ar-heading anchored">Posez avec <em>AT The Beginning</em></h3>
+          <p class="hp-ar-sub">Activez votre caméra, glissez la couverture à côté de vous, et immortalisez votre moment AT. Capture instantanée, souvenir inoubliable.</p>
+          <div class="hp-ar-pills">
+            <span class="hp-ar-pill">📷 Selfie + couverture</span>
+            <span class="hp-ar-pill">⬇ Téléchargement gratuit</span>
+            <span class="hp-ar-pill">📱 Mobile &amp; desktop</span>
+          </div>
+          <a href="dernier_roman/ar-filter.html" class="hp-ar-cta" style="touch-action:manipulation;">
+            ✨ Essayer le filtre
+            <svg width="16" height="16" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
+          </a>
+        </div>
+        <div class="hp-ar-visual">
+          <div class="hp-ar-phone">
+            <div class="hp-ar-notch"></div>
+            <div class="hp-ar-screen">
+              <div class="hp-ar-cam">
+                <div class="hp-ar-face"></div>
+                <img src="images/couvertures/AT_couverture.PNG" class="hp-ar-book" alt="AT couverture">
+                <div class="hp-ar-scanline"></div>
+              </div>
+            </div>
+          </div>
+          <div class="hp-ar-glow"></div>
+        </div>
+      </div>
+      <canvas id="hpArCanvas" class="hp-ar-canvas"></canvas>
+    </div>
+
     <div class="featured-wrapper">
         <div class="book-card featured-card fade-in-scroll">
             <div class="book-cover">
@@ -435,6 +470,165 @@ ul.task-list li input[type="checkbox"] {
         </div>
     </div>
 </section>
+
+<style>
+/* ===== HOMEPAGE AR CARD ===== */
+.hp-ar-wrap {
+    position: relative; overflow: hidden;
+    max-width: 1100px; margin: 0 auto 3rem;
+    border-radius: 28px;
+    background: linear-gradient(135deg, #0d0820, #1a0e2e, #0d0820);
+    border: 1px solid rgba(201,168,124,0.18);
+    box-shadow: 0 30px 80px rgba(0,0,0,0.4), 0 0 0 1px rgba(201,168,124,0.08);
+    padding: 3.5rem 3rem;
+}
+.hp-ar-canvas {
+    position: absolute; inset: 0; pointer-events: none; z-index: 0; border-radius: 28px;
+}
+.hp-ar-inner {
+    position: relative; z-index: 2;
+    display: grid; grid-template-columns: 1fr auto;
+    gap: 4rem; align-items: center;
+}
+.hp-ar-badge {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    font-size: 0.62rem; letter-spacing: 3px; text-transform: uppercase;
+    color: #C9A87C; border: 1px solid rgba(201,168,124,0.3);
+    padding: 0.4rem 1rem; border-radius: 50px; margin-bottom: 1.2rem; font-weight: 700;
+}
+.hp-ar-dot {
+    width: 6px; height: 6px; border-radius: 50%; background: #C9A87C;
+    animation: hp-dot-pulse 1.5s ease-in-out infinite;
+}
+@keyframes hp-dot-pulse {
+    0%,100%{box-shadow:0 0 0 0 rgba(201,168,124,0.6);}
+    50%{box-shadow:0 0 0 5px rgba(201,168,124,0);}
+}
+.hp-ar-heading {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.6rem, 3.5vw, 2.8rem);
+    font-weight: 700; line-height: 1.2; color: #F5E6E0; margin: 0 0 1rem;
+}
+.hp-ar-heading em {
+    font-style: italic;
+    background: linear-gradient(135deg, #C9A87C, #F5E6E0, #C9A87C);
+    -webkit-background-clip: text; background-clip: text;
+    -webkit-text-fill-color: transparent; background-size: 200% auto;
+    animation: hp-shimmer 5s ease-in-out infinite;
+}
+@keyframes hp-shimmer { 0%{background-position:0% center;} 100%{background-position:200% center;} }
+.hp-ar-sub {
+    font-size: 0.98rem; line-height: 1.8;
+    color: rgba(245,230,224,0.5); margin-bottom: 1.5rem; max-width: 440px;
+}
+.hp-ar-pills { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-bottom: 2rem; }
+.hp-ar-pill {
+    font-size: 0.78rem; font-weight: 600;
+    padding: 0.4rem 1rem; border-radius: 50px;
+    background: rgba(201,168,124,0.07); border: 1px solid rgba(201,168,124,0.15);
+    color: rgba(245,230,224,0.65);
+}
+.hp-ar-cta {
+    display: inline-flex; align-items: center; gap: 0.7rem;
+    padding: 1rem 2.2rem; border-radius: 50px;
+    font-weight: 800; font-size: 0.95rem; text-decoration: none;
+    color: #0A0A0F !important;
+    background: linear-gradient(135deg, #C9A87C, #e8c99a, #C9A87C);
+    background-size: 200% auto;
+    box-shadow: 0 8px 35px rgba(201,168,124,0.35);
+    transition: all 0.4s; animation: hp-shimmer 4s linear infinite;
+}
+.hp-ar-cta:hover { transform: translateY(-3px) scale(1.02); box-shadow: 0 14px 45px rgba(201,168,124,0.5); color: #0A0A0F !important; }
+/* Phone */
+.hp-ar-visual { position: relative; display: flex; align-items: center; justify-content: center; }
+.hp-ar-phone {
+    width: 190px; height: 370px; border-radius: 32px;
+    background: linear-gradient(160deg, #1a1020, #0d0820);
+    border: 2px solid rgba(201,168,124,0.22);
+    box-shadow: 0 25px 70px rgba(0,0,0,0.6), inset 0 0 25px rgba(45,27,78,0.25);
+    position: relative; overflow: hidden;
+    animation: hp-phone-float 6s ease-in-out infinite;
+}
+@keyframes hp-phone-float { 0%,100%{transform:translateY(0) rotate(-2deg);} 50%{transform:translateY(-10px) rotate(-1deg);} }
+.hp-ar-notch {
+    position: absolute; top: 12px; left: 50%; transform: translateX(-50%);
+    width: 54px; height: 7px; border-radius: 4px; background: rgba(201,168,124,0.12); z-index: 5;
+}
+.hp-ar-screen {
+    position: absolute; inset: 5px; border-radius: 27px;
+    background: linear-gradient(160deg, #0a0514, #100c24); overflow: hidden;
+}
+.hp-ar-cam {
+    width: 100%; height: 100%; position: relative;
+    display: flex; align-items: center; justify-content: center;
+    background: linear-gradient(160deg, #12082a, #1a0d36);
+}
+.hp-ar-face {
+    width: 88px; height: 116px; border-radius: 54px;
+    border: 1.5px dashed rgba(201,168,124,0.35);
+    position: absolute;
+    animation: hp-face-pulse 3s ease-in-out infinite;
+}
+@keyframes hp-face-pulse { 0%,100%{border-color:rgba(201,168,124,0.22);} 50%{border-color:rgba(201,168,124,0.55);box-shadow:0 0 12px rgba(201,168,124,0.12);} }
+.hp-ar-book {
+    position: absolute; right: 6px; top: 25px; width: 58px; border-radius: 4px;
+    box-shadow: -4px 4px 12px rgba(0,0,0,0.5);
+    animation: hp-book-float 4s ease-in-out infinite;
+}
+@keyframes hp-book-float { 0%,100%{transform:translateY(0) rotate(3deg);} 50%{transform:translateY(-7px) rotate(5deg);} }
+.hp-ar-scanline {
+    position: absolute; left: 0; right: 0; height: 2px;
+    background: linear-gradient(90deg, transparent, rgba(201,168,124,0.4), transparent);
+    animation: hp-scan 3s linear infinite; top: 0;
+}
+@keyframes hp-scan { 0%{top:0;opacity:0;} 10%{opacity:1;} 90%{opacity:1;} 100%{top:100%;opacity:0;} }
+.hp-ar-glow {
+    position: absolute; width: 280px; height: 280px; border-radius: 50%; z-index: -1;
+    background: radial-gradient(circle, rgba(122,27,61,0.15), rgba(45,27,78,0.1) 40%, transparent 70%);
+    filter: blur(28px); animation: hp-glow 5s ease-in-out infinite;
+}
+@keyframes hp-glow { 0%,100%{transform:scale(1);opacity:0.6;} 50%{transform:scale(1.15);opacity:1;} }
+
+/* Light mode */
+body.quarto-light .hp-ar-wrap {
+    background: linear-gradient(135deg, #F5E6E0, #EDE0F3, #F5E6E0);
+    border-color: rgba(45,27,78,0.15);
+}
+body.quarto-light .hp-ar-heading { color: #2D1B4E; }
+body.quarto-light .hp-ar-heading em { background: linear-gradient(135deg, #7A1B3D, #2D1B4E, #7A1B3D); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+body.quarto-light .hp-ar-badge { color: #7A1B3D; border-color: rgba(122,27,61,0.25); }
+body.quarto-light .hp-ar-dot { background: #7A1B3D; }
+body.quarto-light .hp-ar-sub { color: rgba(45,27,78,0.65); }
+body.quarto-light .hp-ar-pill { color: #5a3030; background: rgba(45,27,78,0.05); border-color: rgba(45,27,78,0.12); }
+
+@media (max-width: 860px) {
+    .hp-ar-inner { grid-template-columns: 1fr; gap: 2.5rem; text-align: center; }
+    .hp-ar-pills { justify-content: center; }
+    .hp-ar-sub { max-width: none; }
+    .hp-ar-wrap { padding: 2.5rem 1.5rem; }
+    .hp-ar-phone { width: 160px; height: 310px; }
+    .hp-ar-book { width: 48px; }
+    .hp-ar-face { width: 74px; height: 98px; }
+}
+</style>
+
+<script>
+(function(){
+  var c = document.getElementById('hpArCanvas');
+  if (!c) return;
+  var ctx = c.getContext('2d'), ps = [];
+  function resize() { var p = c.parentElement; c.width = p.offsetWidth; c.height = p.offsetHeight; }
+  function mkP() { return {x:Math.random()*c.width,y:Math.random()*c.height,s:Math.random()*1.4+0.3,dx:(Math.random()-.5)*.2,dy:(Math.random()-.5)*.2,o:Math.random()*.25+0.05}; }
+  function draw() {
+    ctx.clearRect(0,0,c.width,c.height);
+    ps.forEach(function(p){ctx.beginPath();ctx.arc(p.x,p.y,p.s,0,Math.PI*2);ctx.fillStyle='rgba(201,168,124,'+p.o+')';ctx.fill();p.x+=p.dx;p.y+=p.dy;if(p.x<0||p.x>c.width)p.dx*=-1;if(p.y<0||p.y>c.height)p.dy*=-1;});
+    requestAnimationFrame(draw);
+  }
+  resize(); for(var i=0;i<45;i++)ps.push(mkP()); draw();
+  window.addEventListener('resize', resize);
+})();
+</script>
+
 
 <section id="about" class="about">
     <div class="about-container">
