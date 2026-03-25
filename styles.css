@@ -3381,13 +3381,23 @@ body.about-page-body {
 }
 
 /* Main Wrapper */
+/* About page — hide Quarto's auto-generated title block (title is inside the custom wrapper) */
+.about-page-body #title-block-header,
+.about-page-body .quarto-title-block {
+    display: none !important;
+}
+.about-page-body #quarto-content {
+    padding-left: max(2rem, 4%);
+    padding-right: max(2rem, 4%);
+}
+
 .about-futuristic-wrapper {
     position: relative;
     min-height: 90vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 4rem 5%;
+    padding: 4rem 2rem;
     overflow: hidden;
     z-index: 1;
 }
@@ -3474,7 +3484,7 @@ body.about-page-body {
     display: grid;
     grid-template-columns: 1fr 1.2fr;
     gap: 5rem;
-    max-width: 960px;
+    max-width: 1200px;
     width: 100%;
     align-items: center;
     position: relative;
