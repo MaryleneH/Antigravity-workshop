@@ -3387,7 +3387,7 @@ body.about-page-body {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 4rem 2rem;
+    padding: 4rem 5%;
     overflow: hidden;
     z-index: 1;
 }
@@ -3474,7 +3474,7 @@ body.about-page-body {
     display: grid;
     grid-template-columns: 1fr 1.2fr;
     gap: 5rem;
-    max-width: 1200px;
+    max-width: 960px;
     width: 100%;
     align-items: center;
     position: relative;
