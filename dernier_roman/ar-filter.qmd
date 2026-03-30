@@ -137,6 +137,80 @@ format:
 .ar-back a { color: rgba(201,168,124,0.4); font-size: 0.82rem; text-decoration: none; transition: color 0.2s; }
 .ar-back a:hover { color: #C9A87C; }
 #snap-canvas { display: none; }
+
+/* ===== LIGHT MODE ===== */
+body.quarto-light .ar-page {
+    background: linear-gradient(160deg, #F5E6E0 0%, #EDE0F3 40%, #f8f0fa 100%);
+    color: #2a1a1a;
+}
+body.quarto-light .ar-badge {
+    color: #7A1B3D;
+    border-color: rgba(122,27,61,0.25);
+}
+body.quarto-light .ar-header h1 {
+    background: linear-gradient(135deg, #7A1B3D, #2D1B4E, #7A1B3D);
+    -webkit-background-clip: text; background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+body.quarto-light .ar-header p {
+    color: rgba(45,27,78,0.6);
+}
+body.quarto-light .ar-stage {
+    background: #f0e8e5;
+    box-shadow: 0 30px 80px rgba(0,0,0,0.1), 0 0 0 1px rgba(45,27,78,0.1);
+}
+body.quarto-light #start-overlay {
+    background: linear-gradient(135deg, rgba(245,230,224,0.97), rgba(237,224,243,0.97));
+}
+body.quarto-light #start-overlay h2 {
+    color: #2D1B4E;
+}
+body.quarto-light #start-overlay p {
+    color: rgba(45,27,78,0.55);
+}
+body.quarto-light #captured-view {
+    background: #f0e8e5;
+}
+body.quarto-light .ar-btn-primary {
+    background: linear-gradient(135deg, #9B2B55, #C94070);
+    box-shadow: 0 6px 25px rgba(155,43,85,0.25);
+}
+body.quarto-light .ar-btn-primary:hover:not(:disabled) {
+    box-shadow: 0 10px 35px rgba(155,43,85,0.4);
+}
+body.quarto-light .ar-btn-gold {
+    background: linear-gradient(135deg, #9B2B55, #7A1B3D);
+    color: #fff;
+    box-shadow: 0 6px 25px rgba(122,27,61,0.25);
+}
+body.quarto-light .ar-btn-gold:hover {
+    box-shadow: 0 10px 35px rgba(122,27,61,0.4);
+    color: #fff;
+}
+body.quarto-light .ar-btn-ghost {
+    color: rgba(45,27,78,0.45);
+    border-color: rgba(45,27,78,0.12);
+}
+body.quarto-light .ar-btn-ghost:hover {
+    color: #2D1B4E;
+}
+body.quarto-light .ar-status {
+    color: rgba(122,27,61,0.6);
+}
+body.quarto-light .ar-tip {
+    background: rgba(45,27,78,0.04);
+    border-color: rgba(45,27,78,0.08);
+    color: rgba(45,27,78,0.55);
+}
+body.quarto-light .ar-tip strong {
+    color: #7A1B3D;
+}
+body.quarto-light .ar-back a {
+    color: rgba(122,27,61,0.4);
+}
+body.quarto-light .ar-back a:hover {
+    color: #7A1B3D;
+}
 </style>
 
 <div class="ar-page">
