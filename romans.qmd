@@ -307,7 +307,18 @@ document.addEventListener('DOMContentLoaded', () => {
         const trackRect = track.getBoundingClientRect();
         const tabRect = tab.getBoundingClientRect();
         indicator.style.width = tabRect.width + 'px';
-        indicator.style.transform = 'translateX(' + (tabRect.left - trackRect.left) + 'px)';
+        indicator.style.transform = 'translateX(' + (tabRect.left - trackRect.left + track.scrollLeft) + 'px)';
+    }
+
+    function scrollTabIntoView(tab) {
+        const trackWidth = track.offsetWidth;
+        const tabLeft = tab.offsetLeft;
+        const tabWidth = tab.offsetWidth;
+        // Center the tab in the visible area
+        const scrollTarget = tabLeft - (trackWidth / 2) + (tabWidth / 2);
+        track.scrollTo({ left: scrollTarget, behavior: 'smooth' });
+        // Re-adjust indicator after scroll finishes
+        setTimeout(() => moveIndicator(tab), 350);
     }
 
     function applyFilter(category) {
@@ -335,10 +346,13 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     applyFilter(saved);
 
-    // Position indicator after layout
+    // Position indicator + scroll into view after layout
     requestAnimationFrame(() => {
         const activeTab = document.querySelector('.rf-tab.active');
-        if (activeTab) moveIndicator(activeTab);
+        if (activeTab) {
+            moveIndicator(activeTab);
+            scrollTabIntoView(activeTab);
+        }
     });
 
     tabs.forEach(tab => {
@@ -347,6 +361,7 @@ document.addEventListener('DOMContentLoaded', () => {
             tab.classList.add("active");
             tab.setAttribute("aria-pressed", "true");
             moveIndicator(tab);
+            scrollTabIntoView(tab);
             const cat = tab.dataset.filter;
             applyFilter(cat);
             localStorage.setItem(KEY, cat);
@@ -355,6 +370,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Reposition on resize
     window.addEventListener('resize', () => {
+        const activeTab = document.querySelector('.rf-tab.active');
+        if (activeTab) moveIndicator(activeTab);
+    });
+
+    // Reposition indicator on manual scroll
+    track.addEventListener('scroll', () => {
         const activeTab = document.querySelector('.rf-tab.active');
         if (activeTab) moveIndicator(activeTab);
     });
