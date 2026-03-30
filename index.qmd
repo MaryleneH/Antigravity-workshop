@@ -218,7 +218,7 @@ body.quarto-light .hp-ar-pill { color: #5a3030; background: rgba(45,27,78,0.05);
     .hp-ar-inner { grid-template-columns: 1fr; gap: 2.5rem; text-align: center; }
     .hp-ar-pills { justify-content: center; }
     .hp-ar-sub { max-width: none; }
-    .hp-ar-wrap { padding: 2.5rem 1.5rem; }
+    .hp-ar-wrap { padding: 2.5rem 1.5rem; margin-left: 0.75rem; margin-right: 0.75rem; }
     .hp-ar-phone { width: 160px; height: 310px; }
     .hp-ar-book { width: 48px; }
     .hp-ar-face { width: 74px; height: 98px; }
