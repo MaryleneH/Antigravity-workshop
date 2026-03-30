@@ -8,6 +8,7 @@ toc: false
 body-classes: romans
 ---
 
+```{=html}
 <section class="intro-romans" markdown="1">
 ### 💕 Les univers de Mo Gadarr
 Partez à la découverte des séries, des comédies de Noël, des romances de saison et des one-shots contemporains.
