@@ -328,6 +328,12 @@ body:not(.quarto-light) .arte-closing { background: rgba(45,27,78,0.2); border-c
     <p>On apparaît en plein cœur de l'action, dignes représentantes du monde de l'édition. Je ne dis pas qu'on a volé la vedette, mais disons qu'Arte a clairement bon goût en matière de figurantes (<em>ou de futures têtes d'affiche, qui sait ?</em>).</p>
   </div>
 
+  <div class="back-home" style="margin-top:2rem;">
+    <a href="../blog.html" class="btn-back" role="button" aria-label="Retour aux articles de blog">
+      <span class="arrow">←</span> Retour aux articles de blog
+    </a>
+  </div>
+
 </div>
 
 <script>
