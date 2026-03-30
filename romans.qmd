@@ -11,16 +11,28 @@ body-classes: romans
 <section class="intro-romans" markdown="1">
 ### 💕 Les univers de Mo Gadarr
 Partez à la découverte des séries, des comédies de Noël, des romances de saison et des one-shots contemporains.
-</section>
-
-```{=html}
-<nav class="roman-filter" aria-label="Filtrer les rubriques">
-  <button class="chip active" data-filter="all" aria-pressed="true">Tout voir</button>
-  <button class="chip" data-filter="dernier" aria-pressed="false">Dernier roman</button>
-  <button class="chip" data-filter="edition" aria-pressed="false">Édition</button>
-  <button class="chip" data-filter="series" aria-pressed="false">Séries</button>
-  <button class="chip" data-filter="fetes" aria-pressed="false">Fêtes</button>
-  <button class="chip" data-filter="oneshots" aria-pressed="false">One-shots</button>
+</section><nav class="roman-filter" id="romanFilter" aria-label="Filtrer les rubriques">
+  <div class="rf-track">
+    <button class="rf-tab active" data-filter="all" aria-pressed="true">
+      <span class="rf-icon">✦</span><span class="rf-label">Tout</span>
+    </button>
+    <button class="rf-tab" data-filter="dernier" aria-pressed="false">
+      <span class="rf-icon">🔥</span><span class="rf-label">Dernier</span>
+    </button>
+    <button class="rf-tab" data-filter="edition" aria-pressed="false">
+      <span class="rf-icon">📖</span><span class="rf-label">Édition</span>
+    </button>
+    <button class="rf-tab" data-filter="series" aria-pressed="false">
+      <span class="rf-icon">📚</span><span class="rf-label">Séries</span>
+    </button>
+    <button class="rf-tab" data-filter="fetes" aria-pressed="false">
+      <span class="rf-icon">🎄</span><span class="rf-label">Fêtes</span>
+    </button>
+    <button class="rf-tab" data-filter="oneshots" aria-pressed="false">
+      <span class="rf-icon">💎</span><span class="rf-label">One-shots</span>
+    </button>
+    <div class="rf-indicator" id="rfIndicator"></div>
+  </div>
 </nav>
 
 <div class="library-grid">
@@ -244,7 +256,7 @@ Partez à la découverte des séries, des comédies de Noël, des romances de sa
             <img src="images/couvertures/j-ai-juste-clique.jpg" alt="J'ai juste cliqué" class="vignette-cover">
             <div class="vignette-overlay">
                 <span class="vignette-genre">Romance 2.0</span>
-                <h3 class="vignette-title">J’ai juste cliqué !</h3>
+                <h3 class="vignette-title">J'ai juste cliqué !</h3>
                 <span class="vignette-action">Découvrir &rarr;</span>
             </div>
         </a>
@@ -276,48 +288,74 @@ Partez à la découverte des séries, des comédies de Noël, des romances de sa
 </div>
 
 <div class="back-home">
-  <a href="index.html" class="btn-back" role="button" aria-label="Retour à l’accueil">
-    <span class="arrow">←</span> Retour à l’accueil
+  <a href="index.html" class="btn-back" role="button" aria-label="Retour à l'accueil">
+    <span class="arrow">←</span> Retour à l'accueil
   </a>
 </div>
 
-<!-- ===== JS: FILTRAGE GRID ===== -->
+<!-- ===== JS: FILTRAGE GRID + INDICATOR ===== -->
 <script>
 document.addEventListener('DOMContentLoaded', () => {
     const KEY = "mogadarr.romanFilter";
-    const buttons = document.querySelectorAll(".chip");
+    const tabs = document.querySelectorAll(".rf-tab");
     const vignettes = document.querySelectorAll(".book-vignette");
+    const indicator = document.getElementById("rfIndicator");
+    const track = document.querySelector(".rf-track");
+
+    function moveIndicator(tab) {
+        const trackRect = track.getBoundingClientRect();
+        const tabRect = tab.getBoundingClientRect();
+        indicator.style.width = tabRect.width + 'px';
+        indicator.style.transform = 'translateX(' + (tabRect.left - trackRect.left) + 'px)';
+    }
 
     function applyFilter(category) {
         vignettes.forEach(v => {
             if (category === "all" || v.dataset.cat === category) {
                 v.style.display = "block";
-                setTimeout(() => v.style.opacity = "1", 50); // Fade in
+                setTimeout(() => v.style.opacity = "1", 50);
             } else {
-                v.style.display = "none";
                 v.style.opacity = "0";
+                setTimeout(() => { v.style.display = "none"; }, 300);
             }
         });
     }
 
     // Restore last selection
     const saved = localStorage.getItem(KEY) || "all";
+    tabs.forEach(t => {
+        if (t.dataset.filter === saved) {
+            t.classList.add("active");
+            t.setAttribute("aria-pressed", "true");
+        } else {
+            t.classList.remove("active");
+            t.setAttribute("aria-pressed", "false");
+        }
+    });
     applyFilter(saved);
-    buttons.forEach(b => {
-        if(b.dataset.filter === saved) b.classList.add("active");
+
+    // Position indicator after layout
+    requestAnimationFrame(() => {
+        const activeTab = document.querySelector('.rf-tab.active');
+        if (activeTab) moveIndicator(activeTab);
     });
 
-    buttons.forEach(btn => {
-        btn.addEventListener("click", () => {
-            // Remove active class from all
-            buttons.forEach(b => b.classList.remove("active"));
-            // Add to clicked
-            btn.classList.add("active");
-
-            const cat = btn.dataset.filter;
+    tabs.forEach(tab => {
+        tab.addEventListener("click", () => {
+            tabs.forEach(t => { t.classList.remove("active"); t.setAttribute("aria-pressed", "false"); });
+            tab.classList.add("active");
+            tab.setAttribute("aria-pressed", "true");
+            moveIndicator(tab);
+            const cat = tab.dataset.filter;
             applyFilter(cat);
             localStorage.setItem(KEY, cat);
         });
+    });
+
+    // Reposition on resize
+    window.addEventListener('resize', () => {
+        const activeTab = document.querySelector('.rf-tab.active');
+        if (activeTab) moveIndicator(activeTab);
     });
 });
 </script>
