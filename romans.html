@@ -46,9 +46,9 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-845c23b38eaddc0f92fda52bfe77a8c8.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-e6a1f1326ade87946c3654362580b8dc.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-619b5d6205b3331201dcee45d9fd0608.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-e6a1f1326ade87946c3654362580b8dc.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-ed894aacf6ae676da0e5334cbd9ba8a9.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-bf9f1bd3c8140376028b05581523f8d5.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-ed894aacf6ae676da0e5334cbd9ba8a9.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -428,331 +428,366 @@ ul.task-list li input[type="checkbox"] {
 <h3 class="anchored" data-anchor-id="les-univers-de-mo-gadarr">💕 Les univers de Mo Gadarr</h3>
 Partez à la découverte des séries, des comédies de Noël, des romances de saison et des one-shots contemporains.
 </section>
-<nav class="roman-filter" aria-label="Filtrer les rubriques">
-  <button class="chip active" data-filter="all" aria-pressed="true">Tout voir</button>
-  <button class="chip" data-filter="dernier" aria-pressed="false">Dernier roman</button>
-  <button class="chip" data-filter="edition" aria-pressed="false">Édition</button>
-  <button class="chip" data-filter="series" aria-pressed="false">Séries</button>
-  <button class="chip" data-filter="fetes" aria-pressed="false">Fêtes</button>
-  <button class="chip" data-filter="oneshots" aria-pressed="false">One-shots</button>
+<nav class="roman-filter" id="romanFilter" aria-label="Filtrer les rubriques">
+<div class="rf-track">
+<pre><code>&lt;button class="rf-tab active" data-filter="all" aria-pressed="true"&gt;
+  &lt;span class="rf-icon"&gt;✦&lt;/span&gt;&lt;span class="rf-label"&gt;Tout&lt;/span&gt;
+&lt;/button&gt;
+&lt;button class="rf-tab" data-filter="dernier" aria-pressed="false"&gt;
+  &lt;span class="rf-icon"&gt;🔥&lt;/span&gt;&lt;span class="rf-label"&gt;Dernier&lt;/span&gt;
+&lt;/button&gt;
+&lt;button class="rf-tab" data-filter="edition" aria-pressed="false"&gt;
+  &lt;span class="rf-icon"&gt;📖&lt;/span&gt;&lt;span class="rf-label"&gt;Édition&lt;/span&gt;
+&lt;/button&gt;
+&lt;button class="rf-tab" data-filter="series" aria-pressed="false"&gt;
+  &lt;span class="rf-icon"&gt;📚&lt;/span&gt;&lt;span class="rf-label"&gt;Séries&lt;/span&gt;
+&lt;/button&gt;
+&lt;button class="rf-tab" data-filter="fetes" aria-pressed="false"&gt;
+  &lt;span class="rf-icon"&gt;🎄&lt;/span&gt;&lt;span class="rf-label"&gt;Fêtes&lt;/span&gt;
+&lt;/button&gt;
+&lt;button class="rf-tab" data-filter="oneshots" aria-pressed="false"&gt;
+  &lt;span class="rf-icon"&gt;💎&lt;/span&gt;&lt;span class="rf-label"&gt;One-shots&lt;/span&gt;
+&lt;/button&gt;
+&lt;div class="rf-indicator" id="rfIndicator"&gt;&lt;/div&gt;</code></pre>
+</div>
 </nav>
-
 <div class="library-grid">
+<pre><code>&lt;!-- DERNIER ROMAN --&gt;
+&lt;div class="book-vignette fade-in-scroll" data-cat="dernier"&gt;
+    &lt;a href="dernier_roman/at_the_beginning.html" class="vignette-link"&gt;
+        &lt;img src="images/couvertures/AT_couverture.PNG" alt="AT The Beginning" class="vignette-cover"&gt;
+        &lt;div class="vignette-overlay"&gt;
+            &lt;span class="vignette-genre"&gt;Romance Sombre • Drame&lt;/span&gt;
+            &lt;h3 class="vignette-title"&gt;AT — The Beginning&lt;/h3&gt;
+            &lt;span class="vignette-action"&gt;Découvrir &amp;rarr;&lt;/span&gt;
+        &lt;/div&gt;
+    &lt;/a&gt;
+&lt;/div&gt;
 
-    <!-- DERNIER ROMAN -->
-    <div class="book-vignette fade-in-scroll" data-cat="dernier">
-        <a href="dernier_roman/at_the_beginning.html" class="vignette-link">
-            <img src="images/couvertures/AT_couverture.PNG" alt="AT The Beginning" class="vignette-cover">
-            <div class="vignette-overlay">
-                <span class="vignette-genre">Romance Sombre • Drame</span>
-                <h3 class="vignette-title anchored">AT — The Beginning</h3>
-                <span class="vignette-action">Découvrir →</span>
-            </div>
-        </a>
-    </div>
+&lt;!-- ÉDITION --&gt;
+&lt;div class="book-vignette fade-in-scroll" data-cat="edition"&gt;
+    &lt;a href="romans/black-feelings-1.html" class="vignette-link"&gt;
+        &lt;img src="images/couvertures/black-feelings-tome-1.jpg" alt="Black Feelings T1" class="vignette-cover"&gt;
+        &lt;div class="vignette-overlay"&gt;
+            &lt;span class="vignette-genre"&gt;Romance • Suspense&lt;/span&gt;
+            &lt;h3 class="vignette-title"&gt;Black Feelings — Saison 1&lt;/h3&gt;
+            &lt;span class="vignette-action"&gt;Découvrir &amp;rarr;&lt;/span&gt;
+        &lt;/div&gt;
+    &lt;/a&gt;
+&lt;/div&gt;
 
-    <!-- ÉDITION -->
-    <div class="book-vignette fade-in-scroll" data-cat="edition">
-        <a href="romans/black-feelings-1.html" class="vignette-link">
-            <img src="images/couvertures/black-feelings-tome-1.jpg" alt="Black Feelings T1" class="vignette-cover">
-            <div class="vignette-overlay">
-                <span class="vignette-genre">Romance • Suspense</span>
-                <h3 class="vignette-title anchored">Black Feelings — Saison 1</h3>
-                <span class="vignette-action">Découvrir →</span>
-            </div>
-        </a>
-    </div>
+&lt;div class="book-vignette fade-in-scroll" data-cat="edition"&gt;
+    &lt;a href="romans/black-feelings-2.html" class="vignette-link"&gt;
+        &lt;img src="images/couvertures/black-feelings-tome-2.jpg" alt="Black Feelings T2" class="vignette-cover"&gt;
+        &lt;div class="vignette-overlay"&gt;
+            &lt;span class="vignette-genre"&gt;Romance • Suspense&lt;/span&gt;
+            &lt;h3 class="vignette-title"&gt;Black Feelings — Saison 2&lt;/h3&gt;
+            &lt;span class="vignette-action"&gt;Découvrir &amp;rarr;&lt;/span&gt;
+        &lt;/div&gt;
+    &lt;/a&gt;
+&lt;/div&gt;
 
-    <div class="book-vignette fade-in-scroll" data-cat="edition">
-        <a href="romans/black-feelings-2.html" class="vignette-link">
-            <img src="images/couvertures/black-feelings-tome-2.jpg" alt="Black Feelings T2" class="vignette-cover">
-            <div class="vignette-overlay">
-                <span class="vignette-genre">Romance • Suspense</span>
-                <h3 class="vignette-title anchored">Black Feelings — Saison 2</h3>
-                <span class="vignette-action">Découvrir →</span>
-            </div>
-        </a>
-    </div>
+&lt;div class="book-vignette fade-in-scroll" data-cat="edition"&gt;
+    &lt;a href="romans/be-sweeter.html" class="vignette-link"&gt;
+        &lt;img src="images/couvertures/be-sweeter.jpg" alt="Be Sweeter" class="vignette-cover"&gt;
+        &lt;div class="vignette-overlay"&gt;
+            &lt;span class="vignette-genre"&gt;New Adult • Campus&lt;/span&gt;
+            &lt;h3 class="vignette-title"&gt;Be Sweeter&lt;/h3&gt;
+            &lt;span class="vignette-action"&gt;Découvrir &amp;rarr;&lt;/span&gt;
+        &lt;/div&gt;
+    &lt;/a&gt;
+&lt;/div&gt;
 
-    <div class="book-vignette fade-in-scroll" data-cat="edition">
-        <a href="romans/be-sweeter.html" class="vignette-link">
-            <img src="images/couvertures/be-sweeter.jpg" alt="Be Sweeter" class="vignette-cover">
-            <div class="vignette-overlay">
-                <span class="vignette-genre">New Adult • Campus</span>
-                <h3 class="vignette-title anchored">Be Sweeter</h3>
-                <span class="vignette-action">Découvrir →</span>
-            </div>
-        </a>
-    </div>
+&lt;div class="book-vignette fade-in-scroll" data-cat="edition"&gt;
+    &lt;a href="romans/be-stronger.html" class="vignette-link"&gt;
+        &lt;img src="images/couvertures/be-stronger.jpg" alt="Be Stronger" class="vignette-cover"&gt;
+        &lt;div class="vignette-overlay"&gt;
+            &lt;span class="vignette-genre"&gt;New Adult • Résilience&lt;/span&gt;
+            &lt;h3 class="vignette-title"&gt;Be Stronger&lt;/h3&gt;
+            &lt;span class="vignette-action"&gt;Découvrir &amp;rarr;&lt;/span&gt;
+        &lt;/div&gt;
+    &lt;/a&gt;
+&lt;/div&gt;
 
-    <div class="book-vignette fade-in-scroll" data-cat="edition">
-        <a href="romans/be-stronger.html" class="vignette-link">
-            <img src="images/couvertures/be-stronger.jpg" alt="Be Stronger" class="vignette-cover">
-            <div class="vignette-overlay">
-                <span class="vignette-genre">New Adult • Résilience</span>
-                <h3 class="vignette-title anchored">Be Stronger</h3>
-                <span class="vignette-action">Découvrir →</span>
-            </div>
-        </a>
-    </div>
+&lt;div class="book-vignette fade-in-scroll" data-cat="edition"&gt;
+    &lt;a href="romans/be-yourself.html" class="vignette-link"&gt;
+        &lt;img src="images/couvertures/be-yourself.jpg" alt="Be Yourself" class="vignette-cover"&gt;
+        &lt;div class="vignette-overlay"&gt;
+            &lt;span class="vignette-genre"&gt;New Adult • Identité&lt;/span&gt;
+            &lt;h3 class="vignette-title"&gt;Be Yourself&lt;/h3&gt;
+            &lt;span class="vignette-action"&gt;Découvrir &amp;rarr;&lt;/span&gt;
+        &lt;/div&gt;
+    &lt;/a&gt;
+&lt;/div&gt;
 
-    <div class="book-vignette fade-in-scroll" data-cat="edition">
-        <a href="romans/be-yourself.html" class="vignette-link">
-            <img src="images/couvertures/be-yourself.jpg" alt="Be Yourself" class="vignette-cover">
-            <div class="vignette-overlay">
-                <span class="vignette-genre">New Adult • Identité</span>
-                <h3 class="vignette-title anchored">Be Yourself</h3>
-                <span class="vignette-action">Découvrir →</span>
-            </div>
-        </a>
-    </div>
+&lt;!-- SÉRIES --&gt;
+&lt;div class="book-vignette fade-in-scroll" data-cat="series"&gt;
+    &lt;a href="romans/cops-and-love-will-hunter.html" class="vignette-link"&gt;
+        &lt;img src="images/couvertures/cops-and-love-will-hunter.jpg" alt="Cops and Love - Will" class="vignette-cover"&gt;
+        &lt;div class="vignette-overlay"&gt;
+            &lt;span class="vignette-genre"&gt;Romantic Suspense&lt;/span&gt;
+            &lt;h3 class="vignette-title"&gt;Cops &amp; Love : Will Hunter&lt;/h3&gt;
+            &lt;span class="vignette-action"&gt;Découvrir &amp;rarr;&lt;/span&gt;
+        &lt;/div&gt;
+    &lt;/a&gt;
+&lt;/div&gt;
 
-    <!-- SÉRIES -->
-    <div class="book-vignette fade-in-scroll" data-cat="series">
-        <a href="romans/cops-and-love-will-hunter.html" class="vignette-link">
-            <img src="images/couvertures/cops-and-love-will-hunter.jpg" alt="Cops and Love - Will" class="vignette-cover">
-            <div class="vignette-overlay">
-                <span class="vignette-genre">Romantic Suspense</span>
-                <h3 class="vignette-title anchored">Cops &amp; Love : Will Hunter</h3>
-                <span class="vignette-action">Découvrir →</span>
-            </div>
-        </a>
-    </div>
+&lt;div class="book-vignette fade-in-scroll" data-cat="series"&gt;
+    &lt;a href="romans/cops-love-noah.html" class="vignette-link"&gt;
+        &lt;img src="images/couvertures/cops-noah.jpg" alt="Cops and Love - Noah" class="vignette-cover"&gt;
+        &lt;div class="vignette-overlay"&gt;
+            &lt;span class="vignette-genre"&gt;Romantic Suspense&lt;/span&gt;
+            &lt;h3 class="vignette-title"&gt;Cops &amp; Love : Noah Hunter&lt;/h3&gt;
+            &lt;span class="vignette-action"&gt;Découvrir &amp;rarr;&lt;/span&gt;
+        &lt;/div&gt;
+    &lt;/a&gt;
+&lt;/div&gt;
 
-    <div class="book-vignette fade-in-scroll" data-cat="series">
-        <a href="romans/cops-love-noah.html" class="vignette-link">
-            <img src="images/couvertures/cops-noah.jpg" alt="Cops and Love - Noah" class="vignette-cover">
-            <div class="vignette-overlay">
-                <span class="vignette-genre">Romantic Suspense</span>
-                <h3 class="vignette-title anchored">Cops &amp; Love : Noah Hunter</h3>
-                <span class="vignette-action">Découvrir →</span>
-            </div>
-        </a>
-    </div>
+&lt;div class="book-vignette fade-in-scroll" data-cat="series"&gt;
+    &lt;a href="romans/cops-love-lewis.html" class="vignette-link"&gt;
+        &lt;img src="images/couvertures/cops-lewis.jpg" alt="Cops and Love - Lewis" class="vignette-cover"&gt;
+        &lt;div class="vignette-overlay"&gt;
+            &lt;span class="vignette-genre"&gt;Romantic Suspense&lt;/span&gt;
+            &lt;h3 class="vignette-title"&gt;Cops &amp; Love : Lewis Hunter&lt;/h3&gt;
+            &lt;span class="vignette-action"&gt;Découvrir &amp;rarr;&lt;/span&gt;
+        &lt;/div&gt;
+    &lt;/a&gt;
+&lt;/div&gt;
 
-    <div class="book-vignette fade-in-scroll" data-cat="series">
-        <a href="romans/cops-love-lewis.html" class="vignette-link">
-            <img src="images/couvertures/cops-lewis.jpg" alt="Cops and Love - Lewis" class="vignette-cover">
-            <div class="vignette-overlay">
-                <span class="vignette-genre">Romantic Suspense</span>
-                <h3 class="vignette-title anchored">Cops &amp; Love : Lewis Hunter</h3>
-                <span class="vignette-action">Découvrir →</span>
-            </div>
-        </a>
-    </div>
+&lt;div class="book-vignette fade-in-scroll" data-cat="series"&gt;
+    &lt;a href="romans/sur-le-sable.html" class="vignette-link"&gt;
+        &lt;img src="images/couvertures/sur-le-sable.jpg" alt="Sur le sable" class="vignette-cover"&gt;
+        &lt;div class="vignette-overlay"&gt;
+            &lt;span class="vignette-genre"&gt;Romance d'été&lt;/span&gt;
+            &lt;h3 class="vignette-title"&gt;Sur le sable&lt;/h3&gt;
+            &lt;span class="vignette-action"&gt;Découvrir &amp;rarr;&lt;/span&gt;
+        &lt;/div&gt;
+    &lt;/a&gt;
+&lt;/div&gt;
 
-    <div class="book-vignette fade-in-scroll" data-cat="series">
-        <a href="romans/sur-le-sable.html" class="vignette-link">
-            <img src="images/couvertures/sur-le-sable.jpg" alt="Sur le sable" class="vignette-cover">
-            <div class="vignette-overlay">
-                <span class="vignette-genre">Romance d'été</span>
-                <h3 class="vignette-title anchored">Sur le sable</h3>
-                <span class="vignette-action">Découvrir →</span>
-            </div>
-        </a>
-    </div>
+&lt;div class="book-vignette fade-in-scroll" data-cat="series"&gt;
+    &lt;a href="romans/dans-les-fleurs.html" class="vignette-link"&gt;
+        &lt;img src="images/couvertures/fleurs.jpg" alt="Dans les fleurs" class="vignette-cover"&gt;
+        &lt;div class="vignette-overlay"&gt;
+            &lt;span class="vignette-genre"&gt;Romance de printemps&lt;/span&gt;
+            &lt;h3 class="vignette-title"&gt;Dans les fleurs&lt;/h3&gt;
+            &lt;span class="vignette-action"&gt;Découvrir &amp;rarr;&lt;/span&gt;
+        &lt;/div&gt;
+    &lt;/a&gt;
+&lt;/div&gt;
 
-    <div class="book-vignette fade-in-scroll" data-cat="series">
-        <a href="romans/dans-les-fleurs.html" class="vignette-link">
-            <img src="images/couvertures/fleurs.jpg" alt="Dans les fleurs" class="vignette-cover">
-            <div class="vignette-overlay">
-                <span class="vignette-genre">Romance de printemps</span>
-                <h3 class="vignette-title anchored">Dans les fleurs</h3>
-                <span class="vignette-action">Découvrir →</span>
-            </div>
-        </a>
-    </div>
+&lt;div class="book-vignette fade-in-scroll" data-cat="series"&gt;
+    &lt;a href="romans/en-pleine-nature.html" class="vignette-link"&gt;
+        &lt;img src="images/couvertures/en-pleine-nature.jpg" alt="En pleine nature" class="vignette-cover"&gt;
+        &lt;div class="vignette-overlay"&gt;
+            &lt;span class="vignette-genre"&gt;Romance d'automne&lt;/span&gt;
+            &lt;h3 class="vignette-title"&gt;En pleine nature&lt;/h3&gt;
+            &lt;span class="vignette-action"&gt;Découvrir &amp;rarr;&lt;/span&gt;
+        &lt;/div&gt;
+    &lt;/a&gt;
+&lt;/div&gt;
 
-    <div class="book-vignette fade-in-scroll" data-cat="series">
-        <a href="romans/en-pleine-nature.html" class="vignette-link">
-            <img src="images/couvertures/en-pleine-nature.jpg" alt="En pleine nature" class="vignette-cover">
-            <div class="vignette-overlay">
-                <span class="vignette-genre">Romance d'automne</span>
-                <h3 class="vignette-title anchored">En pleine nature</h3>
-                <span class="vignette-action">Découvrir →</span>
-            </div>
-        </a>
-    </div>
+&lt;!-- FÊTES --&gt;
+&lt;div class="book-vignette fade-in-scroll" data-cat="fetes"&gt;
+    &lt;a href="dernier_roman/prends_buche.html" class="vignette-link"&gt;
+        &lt;img src="images/dernier-livre.jpg" alt="Prends de la bûche" class="vignette-cover"&gt;
+        &lt;div class="vignette-overlay"&gt;
+            &lt;span class="vignette-genre"&gt;Romance de Noël • Enemies to Lovers&lt;/span&gt;
+            &lt;h3 class="vignette-title"&gt;Prends de la bûche&lt;/h3&gt;
+            &lt;span class="vignette-action"&gt;Découvrir &amp;rarr;&lt;/span&gt;
+        &lt;/div&gt;
+    &lt;/a&gt;
+&lt;/div&gt;
 
-    <!-- FÊTES -->
-    <div class="book-vignette fade-in-scroll" data-cat="fetes">
-        <a href="dernier_roman/prends_buche.html" class="vignette-link">
-            <img src="images/dernier-livre.jpg" alt="Prends de la bûche" class="vignette-cover">
-            <div class="vignette-overlay">
-                <span class="vignette-genre">Romance de Noël • Enemies to Lovers</span>
-                <h3 class="vignette-title anchored">Prends de la bûche</h3>
-                <span class="vignette-action">Découvrir →</span>
-            </div>
-        </a>
-    </div>
+&lt;div class="book-vignette fade-in-scroll" data-cat="fetes"&gt;
+    &lt;a href="romans/believe-in-santa-klaus.html" class="vignette-link"&gt;
+        &lt;img src="images/couvertures/believe-in-santa-klaus.jpg" alt="Believe in Santa Klaus" class="vignette-cover"&gt;
+        &lt;div class="vignette-overlay"&gt;
+            &lt;span class="vignette-genre"&gt;Comédie de Noël&lt;/span&gt;
+            &lt;h3 class="vignette-title"&gt;Believe in (Santa) Klaus&lt;/h3&gt;
+            &lt;span class="vignette-action"&gt;Découvrir &amp;rarr;&lt;/span&gt;
+        &lt;/div&gt;
+    &lt;/a&gt;
+&lt;/div&gt;
 
-    <div class="book-vignette fade-in-scroll" data-cat="fetes">
-        <a href="romans/believe-in-santa-klaus.html" class="vignette-link">
-            <img src="images/couvertures/believe-in-santa-klaus.jpg" alt="Believe in Santa Klaus" class="vignette-cover">
-            <div class="vignette-overlay">
-                <span class="vignette-genre">Comédie de Noël</span>
-                <h3 class="vignette-title anchored">Believe in (Santa) Klaus</h3>
-                <span class="vignette-action">Découvrir →</span>
-            </div>
-        </a>
-    </div>
+&lt;div class="book-vignette fade-in-scroll" data-cat="fetes"&gt;
+    &lt;a href="romans/be-mine-valentine.html" class="vignette-link"&gt;
+        &lt;img src="images/couvertures/be-mine-valentine.jpg" alt="Be Mine Valentine" class="vignette-cover"&gt;
+        &lt;div class="vignette-overlay"&gt;
+            &lt;span class="vignette-genre"&gt;Romance Saint-Valentin&lt;/span&gt;
+            &lt;h3 class="vignette-title"&gt;Be Mine For Valentine&lt;/h3&gt;
+            &lt;span class="vignette-action"&gt;Découvrir &amp;rarr;&lt;/span&gt;
+        &lt;/div&gt;
+    &lt;/a&gt;
+&lt;/div&gt;
 
-    <div class="book-vignette fade-in-scroll" data-cat="fetes">
-        <a href="romans/be-mine-valentine.html" class="vignette-link">
-            <img src="images/couvertures/be-mine-valentine.jpg" alt="Be Mine Valentine" class="vignette-cover">
-            <div class="vignette-overlay">
-                <span class="vignette-genre">Romance Saint-Valentin</span>
-                <h3 class="vignette-title anchored">Be Mine For Valentine</h3>
-                <span class="vignette-action">Découvrir →</span>
-            </div>
-        </a>
-    </div>
+&lt;div class="book-vignette fade-in-scroll" data-cat="fetes"&gt;
+    &lt;a href="romans/poupee-bimbo.html" class="vignette-link"&gt;
+        &lt;img src="images/couvertures/poupee-bimbo.jpg" alt="Poupée Bimbo" class="vignette-cover"&gt;
+        &lt;div class="vignette-overlay"&gt;
+            &lt;span class="vignette-genre"&gt;Comédie Romantique&lt;/span&gt;
+            &lt;h3 class="vignette-title"&gt;Homme sérieux recherche poupée Bimbo&lt;/h3&gt;
+            &lt;span class="vignette-action"&gt;Découvrir &amp;rarr;&lt;/span&gt;
+        &lt;/div&gt;
+    &lt;/a&gt;
+&lt;/div&gt;
 
-    <div class="book-vignette fade-in-scroll" data-cat="fetes">
-        <a href="romans/poupee-bimbo.html" class="vignette-link">
-            <img src="images/couvertures/poupee-bimbo.jpg" alt="Poupée Bimbo" class="vignette-cover">
-            <div class="vignette-overlay">
-                <span class="vignette-genre">Comédie Romantique</span>
-                <h3 class="vignette-title anchored">Homme sérieux recherche poupée Bimbo</h3>
-                <span class="vignette-action">Découvrir →</span>
-            </div>
-        </a>
-    </div>
+&lt;div class="book-vignette fade-in-scroll" data-cat="fetes"&gt;
+    &lt;a href="romans/noel-princesse-licorne.html" class="vignette-link"&gt;
+        &lt;img src="images/couvertures/princesse-licorne.jpg" alt="Princesse Licorne" class="vignette-cover"&gt;
+        &lt;div class="vignette-overlay"&gt;
+            &lt;span class="vignette-genre"&gt;Comédie Déjantée&lt;/span&gt;
+            &lt;h3 class="vignette-title"&gt;À Noël, je serai une princesse licorne !&lt;/h3&gt;
+            &lt;span class="vignette-action"&gt;Découvrir &amp;rarr;&lt;/span&gt;
+        &lt;/div&gt;
+    &lt;/a&gt;
+&lt;/div&gt;
 
-    <div class="book-vignette fade-in-scroll" data-cat="fetes">
-        <a href="romans/noel-princesse-licorne.html" class="vignette-link">
-            <img src="images/couvertures/princesse-licorne.jpg" alt="Princesse Licorne" class="vignette-cover">
-            <div class="vignette-overlay">
-                <span class="vignette-genre">Comédie Déjantée</span>
-                <h3 class="vignette-title anchored">À Noël, je serai une princesse licorne !</h3>
-                <span class="vignette-action">Découvrir →</span>
-            </div>
-        </a>
-    </div>
+&lt;div class="book-vignette fade-in-scroll" data-cat="fetes"&gt;
+    &lt;a href="romans/noel-coups-bas.html" class="vignette-link"&gt;
+        &lt;img src="images/couvertures/noel-coups-bas.jpg" alt="Noël Coups Bas" class="vignette-cover"&gt;
+        &lt;div class="vignette-overlay"&gt;
+            &lt;span class="vignette-genre"&gt;Enemis-to-Lovers&lt;/span&gt;
+            &lt;h3 class="vignette-title"&gt;Noël, coups bas et Secret Santa&lt;/h3&gt;
+            &lt;span class="vignette-action"&gt;Découvrir &amp;rarr;&lt;/span&gt;
+        &lt;/div&gt;
+    &lt;/a&gt;
+&lt;/div&gt;
 
-    <div class="book-vignette fade-in-scroll" data-cat="fetes">
-        <a href="romans/noel-coups-bas.html" class="vignette-link">
-            <img src="images/couvertures/noel-coups-bas.jpg" alt="Noël Coups Bas" class="vignette-cover">
-            <div class="vignette-overlay">
-                <span class="vignette-genre">Enemis-to-Lovers</span>
-                <h3 class="vignette-title anchored">Noël, coups bas et Secret Santa</h3>
-                <span class="vignette-action">Découvrir →</span>
-            </div>
-        </a>
-    </div>
+&lt;!-- ONE-SHOTS --&gt;
+&lt;div class="book-vignette fade-in-scroll" data-cat="oneshots"&gt;
+    &lt;a href="romans/my-sweet-babysitter.html" class="vignette-link"&gt;
+        &lt;img src="images/couvertures/my-sweet-babysitter.jpg" alt="My Sweet Babysitter" class="vignette-cover"&gt;
+        &lt;div class="vignette-overlay"&gt;
+            &lt;span class="vignette-genre"&gt;Romance Maman Solo&lt;/span&gt;
+            &lt;h3 class="vignette-title"&gt;My Sweet Babysitter&lt;/h3&gt;
+            &lt;span class="vignette-action"&gt;Découvrir &amp;rarr;&lt;/span&gt;
+        &lt;/div&gt;
+    &lt;/a&gt;
+&lt;/div&gt;
 
-    <!-- ONE-SHOTS -->
-    <div class="book-vignette fade-in-scroll" data-cat="oneshots">
-        <a href="romans/my-sweet-babysitter.html" class="vignette-link">
-            <img src="images/couvertures/my-sweet-babysitter.jpg" alt="My Sweet Babysitter" class="vignette-cover">
-            <div class="vignette-overlay">
-                <span class="vignette-genre">Romance Maman Solo</span>
-                <h3 class="vignette-title anchored">My Sweet Babysitter</h3>
-                <span class="vignette-action">Découvrir →</span>
-            </div>
-        </a>
-    </div>
+&lt;div class="book-vignette fade-in-scroll" data-cat="oneshots"&gt;
+    &lt;a href="romans/jai-juste-clique.html" class="vignette-link"&gt;
+        &lt;img src="images/couvertures/j-ai-juste-clique.jpg" alt="J'ai juste cliqué" class="vignette-cover"&gt;
+        &lt;div class="vignette-overlay"&gt;
+            &lt;span class="vignette-genre"&gt;Romance 2.0&lt;/span&gt;
+            &lt;h3 class="vignette-title"&gt;J'ai juste cliqué !&lt;/h3&gt;
+            &lt;span class="vignette-action"&gt;Découvrir &amp;rarr;&lt;/span&gt;
+        &lt;/div&gt;
+    &lt;/a&gt;
+&lt;/div&gt;
 
-    <div class="book-vignette fade-in-scroll" data-cat="oneshots">
-        <a href="romans/jai-juste-clique.html" class="vignette-link">
-            <img src="images/couvertures/j-ai-juste-clique.jpg" alt="J'ai juste cliqué" class="vignette-cover">
-            <div class="vignette-overlay">
-                <span class="vignette-genre">Romance 2.0</span>
-                <h3 class="vignette-title anchored">J’ai juste cliqué !</h3>
-                <span class="vignette-action">Découvrir →</span>
-            </div>
-        </a>
-    </div>
+&lt;div class="book-vignette fade-in-scroll" data-cat="oneshots"&gt;
+    &lt;a href="romans/et-zut.html" class="vignette-link"&gt;
+        &lt;img src="images/couvertures/et-zut.jpg" alt="Et Zut !" class="vignette-cover"&gt;
+        &lt;div class="vignette-overlay"&gt;
+            &lt;span class="vignette-genre"&gt;Romance Gourmande&lt;/span&gt;
+            &lt;h3 class="vignette-title"&gt;Et zut !&lt;/h3&gt;
+            &lt;span class="vignette-action"&gt;Découvrir &amp;rarr;&lt;/span&gt;
+        &lt;/div&gt;
+    &lt;/a&gt;
+&lt;/div&gt;
 
-    <div class="book-vignette fade-in-scroll" data-cat="oneshots">
-        <a href="romans/et-zut.html" class="vignette-link">
-            <img src="images/couvertures/et-zut.jpg" alt="Et Zut !" class="vignette-cover">
-            <div class="vignette-overlay">
-                <span class="vignette-genre">Romance Gourmande</span>
-                <h3 class="vignette-title anchored">Et zut !</h3>
-                <span class="vignette-action">Découvrir →</span>
-            </div>
-        </a>
-    </div>
-
-    <div class="book-vignette fade-in-scroll" data-cat="oneshots">
-        <a href="romans/undress-me.html" class="vignette-link">
-            <img src="images/couvertures/undress-me.jpg" alt="Undress Me" class="vignette-cover">
-            <div class="vignette-overlay">
-                <span class="vignette-genre">Romance Sexy</span>
-                <h3 class="vignette-title anchored">Undress Me</h3>
-                <span class="vignette-action">Découvrir →</span>
-            </div>
-        </a>
-    </div>
-
-
+&lt;div class="book-vignette fade-in-scroll" data-cat="oneshots"&gt;
+    &lt;a href="romans/undress-me.html" class="vignette-link"&gt;
+        &lt;img src="images/couvertures/undress-me.jpg" alt="Undress Me" class="vignette-cover"&gt;
+        &lt;div class="vignette-overlay"&gt;
+            &lt;span class="vignette-genre"&gt;Romance Sexy&lt;/span&gt;
+            &lt;h3 class="vignette-title"&gt;Undress Me&lt;/h3&gt;
+            &lt;span class="vignette-action"&gt;Découvrir &amp;rarr;&lt;/span&gt;
+        &lt;/div&gt;
+    &lt;/a&gt;
+&lt;/div&gt;</code></pre>
 </div>
-
 <div class="back-home">
-  <a href="index.html" class="btn-back" role="button" aria-label="Retour à l’accueil">
-    <span class="arrow">←</span> Retour à l’accueil
-  </a>
+<p><a href="index.html" class="btn-back" role="button" aria-label="Retour à l'accueil"> <span class="arrow">←</span> Retour à l’accueil </a></p>
 </div>
-
-<!-- ===== JS: FILTRAGE GRID ===== -->
+<!-- ===== JS: FILTRAGE GRID + INDICATOR ===== -->
 <script>
 document.addEventListener('DOMContentLoaded', () => {
     const KEY = "mogadarr.romanFilter";
-    const buttons = document.querySelectorAll(".chip");
+    const tabs = document.querySelectorAll(".rf-tab");
     const vignettes = document.querySelectorAll(".book-vignette");
+    const indicator = document.getElementById("rfIndicator");
+    const track = document.querySelector(".rf-track");
+
+    function moveIndicator(tab) {
+        const trackRect = track.getBoundingClientRect();
+        const tabRect = tab.getBoundingClientRect();
+        indicator.style.width = tabRect.width + 'px';
+        indicator.style.transform = 'translateX(' + (tabRect.left - trackRect.left) + 'px)';
+    }
 
     function applyFilter(category) {
         vignettes.forEach(v => {
             if (category === "all" || v.dataset.cat === category) {
                 v.style.display = "block";
-                setTimeout(() => v.style.opacity = "1", 50); // Fade in
+                setTimeout(() => v.style.opacity = "1", 50);
             } else {
-                v.style.display = "none";
                 v.style.opacity = "0";
+                setTimeout(() => { v.style.display = "none"; }, 300);
             }
         });
     }
 
     // Restore last selection
     const saved = localStorage.getItem(KEY) || "all";
+    tabs.forEach(t => {
+        if (t.dataset.filter === saved) {
+            t.classList.add("active");
+            t.setAttribute("aria-pressed", "true");
+        } else {
+            t.classList.remove("active");
+            t.setAttribute("aria-pressed", "false");
+        }
+    });
     applyFilter(saved);
-    buttons.forEach(b => {
-        if(b.dataset.filter === saved) b.classList.add("active");
+
+    // Position indicator after layout
+    requestAnimationFrame(() => {
+        const activeTab = document.querySelector('.rf-tab.active');
+        if (activeTab) moveIndicator(activeTab);
     });
 
-    buttons.forEach(btn => {
-        btn.addEventListener("click", () => {
-            // Remove active class from all
-            buttons.forEach(b => b.classList.remove("active"));
-            // Add to clicked
-            btn.classList.add("active");
-
-            const cat = btn.dataset.filter;
+    tabs.forEach(tab => {
+        tab.addEventListener("click", () => {
+            tabs.forEach(t => { t.classList.remove("active"); t.setAttribute("aria-pressed", "false"); });
+            tab.classList.add("active");
+            tab.setAttribute("aria-pressed", "true");
+            moveIndicator(tab);
+            const cat = tab.dataset.filter;
             applyFilter(cat);
             localStorage.setItem(KEY, cat);
         });
     });
+
+    // Reposition on resize
+    window.addEventListener('resize', () => {
+        const activeTab = document.querySelector('.rf-tab.active');
+        if (activeTab) moveIndicator(activeTab);
+    });
 });
 </script>
-<!-- Floating Mobile Navigation -->
-<div class="mobile-nav-actions" id="mobileNav">
-  <a href="index.html" class="nav-btn-floating btn-nav-home" aria-label="Retour à l'accueil">
-    <i class="bi bi-house-heart-fill"></i>
-  </a>
-  <button id="backToTopBtn" class="nav-btn-floating" aria-label="Retour en haut">
-    <i class="bi bi-arrow-up-short"></i>
-  </button>
-</div>
+<pre><code>
+```{=html}
+&lt;!-- Floating Mobile Navigation --&gt;
+&lt;div class="mobile-nav-actions" id="mobileNav"&gt;
+  &lt;a href="index.html" class="nav-btn-floating btn-nav-home" aria-label="Retour à l'accueil"&gt;
+    &lt;i class="bi bi-house-heart-fill"&gt;&lt;/i&gt;
+  &lt;/a&gt;
+  &lt;button id="backToTopBtn" class="nav-btn-floating" aria-label="Retour en haut"&gt;
+    &lt;i class="bi bi-arrow-up-short"&gt;&lt;/i&gt;
+  &lt;/button&gt;
+&lt;/div&gt;
 
-<script>
-document.addEventListener('DOMContentLoaded', () => {
+&lt;script&gt;
+document.addEventListener('DOMContentLoaded', () =&gt; {
     const mobileNav = document.getElementById('mobileNav');
     const backToTopBtn = document.getElementById('backToTopBtn');
 
     // Show/Hide on scroll
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 500) {
+    window.addEventListener('scroll', () =&gt; {
+        if (window.scrollY &gt; 500) {
             mobileNav.classList.add('visible');
         } else {
             mobileNav.classList.remove('visible');
@@ -760,14 +795,14 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Smooth scroll to top
-    backToTopBtn.addEventListener('click', () => {
+    backToTopBtn.addEventListener('click', () =&gt; {
         window.scrollTo({
             top: 0,
             behavior: 'smooth'
         });
     });
 });
-</script>
+&lt;/script&gt;</code></pre>
 
 
 </section>
