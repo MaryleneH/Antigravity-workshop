@@ -1457,14 +1457,14 @@ body.quarto-dark .book-hero-card {
     position: relative;
     display: flex;
     align-items: center;
-    gap: 0.3rem;
-    padding: 0.45rem;
+    gap: 0.35rem;
+    padding: 0.5rem;
     border-radius: 60px;
-    background: rgba(15, 10, 25, 0.88);
+    background: rgba(15, 10, 25, 0.92);
     backdrop-filter: blur(18px);
     -webkit-backdrop-filter: blur(18px);
-    border: 1px solid rgba(201,168,124,0.12);
-    box-shadow: 0 14px 40px rgba(0,0,0,0.35), 0 0 0 1px rgba(255,255,255,0.04);
+    border: 1px solid rgba(201,168,124,0.18);
+    box-shadow: 0 14px 40px rgba(0,0,0,0.35), 0 0 0 1px rgba(255,255,255,0.06);
     overflow-x: auto;
     scrollbar-width: none;
     -ms-overflow-style: none;
@@ -1473,31 +1473,37 @@ body.quarto-dark .book-hero-card {
 
 .rf-tab {
     position: relative; z-index: 2;
-    display: inline-flex; align-items: center; gap: 0.45rem;
-    padding: 0.7rem 1.4rem;
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
     border-radius: 50px;
     border: none;
     background: transparent;
-    color: rgba(245,230,224,0.5);
+    color: rgba(245,230,224,0.75);
     font-family: 'Lato', sans-serif;
-    font-weight: 600;
-    font-size: 0.82rem;
+    font-weight: 700;
+    font-size: 0.88rem;
     letter-spacing: 0.5px;
     cursor: pointer;
-    transition: color 0.35s ease;
+    transition: color 0.35s ease, background 0.35s ease;
     white-space: nowrap;
     touch-action: manipulation;
 }
-.rf-icon { font-size: 1rem; line-height: 1; }
+.rf-icon { font-size: 1.15rem; line-height: 1; }
 .rf-label { transition: color 0.35s ease; }
 
-.rf-tab:hover { color: rgba(245,230,224,0.85); }
-.rf-tab.active { color: #fff; }
+.rf-tab:hover {
+    color: rgba(245,230,224,0.95);
+    background: rgba(255,255,255,0.06);
+}
+.rf-tab.active {
+    color: #fff;
+    font-weight: 800;
+}
 
 /* Sliding indicator */
 .rf-indicator {
     position: absolute;
-    top: 0.45rem; bottom: 0.45rem; left: 0;
+    top: 0.5rem; bottom: 0.5rem; left: 0;
     border-radius: 50px;
     background: linear-gradient(135deg, #7A1B3D, #9B2B55);
     box-shadow: 0 4px 18px rgba(122,27,61,0.45), inset 0 1px 0 rgba(255,255,255,0.1);
@@ -1508,12 +1514,12 @@ body.quarto-dark .book-hero-card {
 
 /* Light mode */
 body.quarto-light .rf-track {
-    background: rgba(255,255,255,0.92);
-    border-color: rgba(45,27,78,0.1);
-    box-shadow: 0 8px 30px rgba(0,0,0,0.08), 0 0 0 1px rgba(0,0,0,0.04);
+    background: rgba(255,255,255,0.95);
+    border-color: rgba(45,27,78,0.12);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.1), 0 0 0 1px rgba(0,0,0,0.05);
 }
-body.quarto-light .rf-tab { color: rgba(45,27,78,0.45); }
-body.quarto-light .rf-tab:hover { color: rgba(45,27,78,0.75); }
+body.quarto-light .rf-tab { color: rgba(45,27,78,0.6); }
+body.quarto-light .rf-tab:hover { color: rgba(45,27,78,0.85); background: rgba(45,27,78,0.05); }
 body.quarto-light .rf-tab.active { color: #fff; }
 body.quarto-light .rf-indicator {
     background: linear-gradient(135deg, #9B2B55, #C94070);
@@ -1523,9 +1529,10 @@ body.quarto-light .rf-indicator {
 /* Mobile */
 @media (max-width: 640px) {
     .roman-filter { width: 100%; max-width: none; padding: 0 0.5rem; }
-    .rf-track { border-radius: 20px; gap: 0.15rem; padding: 0.35rem; }
-    .rf-tab { padding: 0.6rem 1rem; font-size: 0.75rem; }
-    .rf-indicator { top: 0.35rem; bottom: 0.35rem; border-radius: 16px; }
+    .rf-track { border-radius: 20px; gap: 0.2rem; padding: 0.4rem; }
+    .rf-tab { padding: 0.65rem 1rem; font-size: 0.78rem; gap: 0.35rem; }
+    .rf-icon { font-size: 1.05rem; }
+    .rf-indicator { top: 0.4rem; bottom: 0.4rem; border-radius: 16px; }
 }
 
 /* Group Slabs */
