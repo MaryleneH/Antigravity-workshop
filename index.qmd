@@ -179,7 +179,7 @@ format:
             <p>Professeur de français et auteure hybride, Mo Gadarr mêle romance et sujets de société pour créer une "Romance engagée". D'abord découverte sur Fyctia avec <em>Black Feelings</em>, elle captive désormais ses lecteurs chez Black Ink et en auto-édition.</p>
             <ul class="hp-facts">
                 <li><i class="bi bi-trophy-fill" aria-hidden="true"></i><span><strong>Lauréate du concours Fyctia</strong> avec <em>Black Feelings</em></span></li>
-                <li><i class="bi bi-book-half" aria-hidden="true"></i><span><strong><span id="hpBookCount">23</span> romans</strong> à découvrir</span></li>
+                <li><i class="bi bi-book-half" aria-hidden="true"></i><span><strong><span id="hpBookCount">24</span> romans</strong> à découvrir</span></li>
                 <li><i class="bi bi-feather" aria-hidden="true"></i><span><strong>Auteure hybride</strong> · Black Ink &amp; auto-édition</span></li>
             </ul>
             <a href="about.html" class="hp-btn hp-btn-ghost">Découvrir son parcours <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
