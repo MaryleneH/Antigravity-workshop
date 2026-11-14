@@ -2,7 +2,7 @@
 title: "Arte et moi : une apparition (presque) involontaire"
 date: "2026-03-25"
 description: "Le jour où ma sœur et moi avons failli devenir des icônes télévisuelles sur Arte."
-image: "images/blog/032526/mo_devant_tv.png"
+image: "images/blog/032526/mo_devant_tv.jpg"
 categories: [vie d'auteure, humour, coulisses]
 author: "Mo Gadarr"
 ---
@@ -273,7 +273,7 @@ body:not(.quarto-light) .arte-closing { background: rgba(45,27,78,0.2); border-c
 
   <!-- Hero illustration -->
   <div class="arte-hero arte-reveal">
-    <img src="images/blog/032526/mo_devant_tv.png" alt="Mo Gadarr devant la télévision" />
+    <img src="images/blog/032526/mo_devant_tv.jpg" alt="Mo Gadarr devant la télévision" />
     <div class="arte-hero-caption">📺 La scène du crime — reconstitution artistique</div>
   </div>
 
@@ -303,7 +303,7 @@ body:not(.quarto-light) .arte-closing { background: rgba(45,27,78,0.2); border-c
       controls
       playsinline
       preload="metadata"
-      poster="images/blog/032526/mo_devant_tv.png"
+      poster="images/blog/032526/mo_devant_tv.jpg"
       style="width:100%; max-height:500px; background:#0a0a0f;">
       <source src="images/blog/032526/video_arte.MOV" type="video/mp4">
       Votre navigateur ne supporte pas la lecture vidéo.
