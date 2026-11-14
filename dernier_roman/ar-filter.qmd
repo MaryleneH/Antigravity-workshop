@@ -1,6 +1,7 @@
 ---
 title: "Posez avec AT The Beginning"
 description: "Photographiez-vous avec AT The Beginning !"
+image: ../images/couvertures/AT_couverture.PNG
 page-layout: full
 toc: false
 title-block-banner: false

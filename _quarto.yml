@@ -3,9 +3,19 @@ project:
   output-dir: docs
   resources:
     - "images/prends-buche-art.png"
+    - "images/partage/*"
+    - "images/filtre-noel/*"
 
 website:
   title: "Mo Gadarr"
+  description: "Site officiel de Mo Gadarr, auteure de romance engagée — romans, nouveautés, événements."
+  site-url: https://mogadarr.fr
+  # Aperçus lors des partages (Facebook, WhatsApp, X…) : image par défaut,
+  # remplacée sur chaque page par son propre champ `image:`.
+  image: images/partage/fille-pere-noel-og.jpg
+  open-graph: true
+  twitter-card:
+    card-style: summary_large_image
   favicon: assets/favicon.png
   navbar:
     title: false
@@ -15,7 +25,7 @@ website:
       - text: "Accueil"
         href: index.qmd
       - text: "Dernier roman"
-        href: dernier_roman/at_the_beginning.qmd
+        href: dernier_roman/fille_pere_noel.qmd
       - text: "Romans"
         href: romans.qmd
       - text: "L'Auteure"

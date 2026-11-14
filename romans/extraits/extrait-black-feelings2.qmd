@@ -2,6 +2,7 @@
 title: "Black Feelings — Saison 2 · Extrait"
 subtitle: "Un extrait pour succomber"
 description: "Retrouvez un extrait du roman Black Feelings Saison 2 de Mo Gadarr."
+image: ../../images/couvertures/black-feelings-tome-2.jpg
 page-layout: full
 toc: false
 body-classes: excerpt-page

@@ -2,6 +2,7 @@
 title: "Sur le sable — Extraits"
 subtitle: "Deux moments pour plonger dans l'été"
 description: "Découvrez deux extraits lumineux du roman Sur le sable de Mo Gadarr."
+image: ../../images/couvertures/sur-le-sable.jpg
 page-layout: full
 toc: false
 body-classes: excerpt-page

@@ -1,0 +1,734 @@
+---
+title: "Elle est la fille du Père Noël & je suis le fils du Père Fouettard"
+subtitle: "Dernier roman"
+description: "Le nouveau roman de Noël de Mo Gadarr : Wendy, la fille du Père Noël, et Dante, le fils du Père Fouettard. Deux héritages. Zéro point commun."
+image: ../images/partage/fille-pere-noel-og.jpg
+title-block-banner: false
+page-layout: full
+toc: false
+# at-page-body : réutilise la mise en page « bord à bord » sur mobile de la page AT (voir styles.css)
+body-classes: romans at-page-body fpn-page-body
+format:
+  html:
+    link-external-newwindow: true
+---
+
+```{=html}
+<!-- ===== HERO — DEUX MONDES ===== -->
+<section class="fpn-hero" aria-label="Présentation du roman">
+    <div class="fpn-hero-sky" aria-hidden="true">
+        <span class="fpn-glow fpn-glow-noel"></span>
+        <span class="fpn-glow fpn-glow-fouettard"></span>
+    </div>
+    <canvas class="fpn-snow" id="fpnSnow" aria-hidden="true"></canvas>
+
+    <div class="fpn-hero-inner">
+        <div class="fpn-hero-text">
+            <span class="fpn-badge">✦ Nouveau roman de Noël — Disponible</span>
+            <h1 class="fpn-title">
+                <span class="fpn-t-line fpn-t-elle">Elle est la fille du <em>Père&nbsp;Noël</em></span>
+                <span class="fpn-t-amp">&amp;</span>
+                <span class="fpn-t-line fpn-t-lui">je suis le fils du <em>Père&nbsp;Fouettard</em></span>
+            </h1>
+            <p class="fpn-tagline">Deux héritages. Zéro point commun.</p>
+            <div class="fpn-hero-cta">
+                <a href="https://amzn.eu/d/0dbVGnRO" class="fpn-btn fpn-btn-buy" target="_blank" rel="noopener noreferrer">
+                    <i class="bi bi-bag-heart-fill" aria-hidden="true"></i> Acheter sur Amazon
+                </a>
+                <a href="./filtre-noel.html" class="fpn-btn fpn-btn-filter">✨ Posez avec Wendy &amp; Dante</a>
+            </div>
+            <p class="fpn-formats-line">Ebook · Broché · Relié collector</p>
+        </div>
+
+        <div class="fpn-hero-visual">
+            <div class="fpn-cover-frame">
+                <img src="../images/couvertures/fille-pere-noel.jpg" width="720" height="1080" class="fpn-hero-cover"
+                     alt="Couverture du roman de Mo Gadarr : Wendy en manteau rouge et Dante en cuir noir, dos à dos, entre un village de Noël et un château gothique">
+            </div>
+        </div>
+    </div>
+
+    <a href="#fpn-monde" class="fpn-scroll-hint" aria-label="Découvrir l'univers du roman"><span></span></a>
+</section>
+
+<!-- ===== L'UNIVERS ===== -->
+<section class="fpn-world" id="fpn-monde" aria-labelledby="fpn-world-title">
+    <div class="fpn-wrap">
+        <span class="fpn-kicker">L'univers</span>
+        <h2 id="fpn-world-title" class="fpn-h2">Un monde divisé</h2>
+        <p class="fpn-lead">Imaginez un monde où le Père Noël et le Père Fouettard règnent chacun sur leur territoire.</p>
+        <div class="fpn-world-grid">
+            <article class="fpn-place fpn-place-noel">
+                <i class="bi bi-stars" aria-hidden="true"></i>
+                <h3>Noëlie</h3>
+                <p>Le château s'illumine à l'approche des fêtes.</p>
+            </article>
+            <article class="fpn-place fpn-place-passe">
+                <i class="bi bi-train-front" aria-hidden="true"></i>
+                <h3>Le Passe-Monde</h3>
+                <p>Un train souterrain relie des peuples qui ont appris à se méfier l'un de l'autre.</p>
+            </article>
+            <article class="fpn-place fpn-place-krampen">
+                <i class="bi bi-moon-stars-fill" aria-hidden="true"></i>
+                <h3>Krampen</h3>
+                <p>L'hiver est rude et les habitants ont faim.</p>
+            </article>
+        </div>
+    </div>
+</section>
+
+<!-- ===== LES HÉRITIERS ===== -->
+<section class="fpn-heirs" aria-labelledby="fpn-heirs-title">
+    <div class="fpn-wrap">
+        <span class="fpn-kicker">Wendy &amp; Dante</span>
+        <h2 id="fpn-heirs-title" class="fpn-h2">Deux héritiers qui auraient dû rester chacun de leur côté</h2>
+        <div class="fpn-heirs-grid">
+            <article class="fpn-heir fpn-heir-wendy">
+                <span class="fpn-heir-role">La fille du Père Noël</span>
+                <h3>Wendy Stanford</h3>
+                <p>Elle étudie la façon de faire pousser des plantes en plein hiver.</p>
+            </article>
+            <figure class="fpn-heirs-art">
+                <img src="../images/filtre-noel/wendy-dante.webp" width="900" height="910" loading="lazy"
+                     alt="Wendy, en manteau rouge, et Dante, en cuir noir, dos à dos">
+            </figure>
+            <article class="fpn-heir fpn-heir-dante">
+                <span class="fpn-heir-role">Le fils du Père Fouettard</span>
+                <h3>Dante Dodds</h3>
+                <p>Il porte un nom qui suffit à éveiller la méfiance en Noëlie.</p>
+            </article>
+        </div>
+        <p class="fpn-heirs-note">Pourtant, dès leur première rencontre, ils ont du mal à détourner le regard.</p>
+    </div>
+</section>
+
+<!-- ===== L'HISTOIRE ===== -->
+<section class="fpn-story" aria-labelledby="fpn-story-title">
+    <div class="fpn-wrap fpn-story-grid">
+        <div class="fpn-story-text">
+            <span class="fpn-kicker">L'histoire</span>
+            <h2 id="fpn-story-title" class="fpn-h2">Une romance de Noël entre deux mondes</h2>
+            <p>C'est dans ce monde divisé que <strong>Wendy Stanford</strong>, la fille du Père Noël, rencontre <strong>Dante Dodds</strong>, le fils du Père Fouettard.</p>
+            <p>Au fil d'une sortie sur la glace, d'un instant volé dans une serre et d'une valse au bal de Noël, ils se découvrent loin des certitudes de leurs familles. Mais Dante garde un secret. Et plus il s'attache à Wendy, plus il lui devient difficile de lui dire la vérité.</p>
+            <p>Pendant ce temps, la magie de Noël s'affaiblit. Une clé pourrait lui rendre sa force, <em>à condition que les deux camps acceptent enfin de s'unir.</em></p>
+        </div>
+        <figure class="fpn-quote">
+            <span class="fpn-quote-mark" aria-hidden="true">❝</span>
+            <blockquote>
+                <p>J'avais envie d'écrire une romance où un premier baiser peut être aussi simple qu'un moment partagé autour d'un bol de pop-corn, même quand les deux personnes qui s'embrassent portent les noms les plus célèbres de Noël.</p>
+            </blockquote>
+            <figcaption class="fpn-quote-sign">Mo</figcaption>
+            <a href="../posts/2026-11-14-fille-pere-noel-fils-pere-fouettard.html" class="fpn-link">Lire l'article de Mo <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+        </figure>
+    </div>
+</section>
+
+<!-- ===== LE LIVRE ===== -->
+<section class="fpn-book" aria-labelledby="fpn-book-title">
+    <div class="fpn-wrap fpn-book-grid">
+        <div class="fpn-book-cover">
+            <img src="../images/couvertures/fille-pere-noel.jpg" width="720" height="1080" loading="lazy"
+                 alt="Couverture : Elle est la fille du Père Noël & je suis le fils du Père Fouettard">
+        </div>
+        <div class="fpn-book-info">
+            <span class="fpn-genre-pill">Romance de Noël • Deux mondes</span>
+            <h2 id="fpn-book-title" class="fpn-h2">Le livre</h2>
+            <div class="fpn-details">
+                <div class="fpn-detail">
+                    <span class="fpn-detail-label">Formats</span>
+                    <span class="fpn-detail-value">Ebook &amp; Broché</span>
+                </div>
+                <div class="fpn-detail">
+                    <span class="fpn-detail-label">Édition collector</span>
+                    <span class="fpn-detail-value">Reliée</span>
+                </div>
+                <div class="fpn-detail">
+                    <span class="fpn-detail-label">Genre</span>
+                    <span class="fpn-detail-value">Romance de Noël</span>
+                </div>
+                <div class="fpn-detail">
+                    <span class="fpn-detail-label">Statut</span>
+                    <span class="fpn-detail-value fpn-status">Disponible !</span>
+                </div>
+            </div>
+            <div class="fpn-book-actions">
+                <a href="https://amzn.eu/d/0dbVGnRO" class="fpn-btn fpn-btn-buy" target="_blank" rel="noopener noreferrer">
+                    <i class="bi bi-bag-heart-fill" aria-hidden="true"></i> Acheter sur Amazon
+                </a>
+                <a href="./filtre-noel.html" class="fpn-btn fpn-btn-filter">✨ Essayer le filtre photo</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== ÉDITION COLLECTOR ===== -->
+<section class="fpn-collector" aria-labelledby="fpn-collector-title">
+    <div class="fpn-wrap fpn-collector-grid">
+        <div class="fpn-collector-text">
+            <span class="fpn-kicker">Édition collector</span>
+            <h2 id="fpn-collector-title" class="fpn-h2">L'édition reliée</h2>
+            <p>Un contenu exclusif et soigné.<br>Une couverture vernie.</p>
+            <a href="https://amzn.eu/d/0dbVGnRO" class="fpn-btn fpn-btn-gold" target="_blank" rel="noopener noreferrer">Voir sur Amazon</a>
+        </div>
+        <div class="fpn-collector-visual">
+            <img src="../images/couvertures/fille-pere-noel-collector.jpg" width="800" height="1000" loading="lazy"
+                 alt="Édition reliée collector : couverture bleu nuit ornée d'or, devant un château enneigé">
+        </div>
+    </div>
+</section>
+
+<!-- ===== THÈMES ===== -->
+<section class="fpn-tropes" aria-label="Thèmes du roman">
+    <div class="fpn-tropes-inner">
+        <span class="fpn-trope"><i class="bi bi-heartbreak-fill" aria-hidden="true"></i>Amours contrariées</span>
+        <span class="fpn-trope"><i class="bi bi-signpost-split-fill" aria-hidden="true"></i>Deux mondes</span>
+        <span class="fpn-trope"><i class="bi bi-lock-fill" aria-hidden="true"></i>Secrets de famille</span>
+        <span class="fpn-trope"><i class="bi bi-stars" aria-hidden="true"></i>Magie de Noël</span>
+        <span class="fpn-trope"><i class="bi bi-music-note-beamed" aria-hidden="true"></i>Bal de Noël</span>
+        <span class="fpn-trope"><i class="bi bi-snow2" aria-hidden="true"></i>Univers enneigé</span>
+    </div>
+</section>
+
+<!-- ===== QUEL CAMP ? — LES DEUX FAMILLES ===== -->
+<section class="fpn-camp" aria-labelledby="fpn-camp-title">
+    <canvas class="fpn-snow" id="fpnSnowCamp" aria-hidden="true"></canvas>
+    <div class="fpn-wrap fpn-camp-head">
+        <span class="fpn-kicker">Noëlie ou Krampen</span>
+        <h2 id="fpn-camp-title" class="fpn-camp-title">Et vous, à Noël, quel camp <span class="fpn-nowrap">choisirez-vous&nbsp;?</span></h2>
+    </div>
+    <figure class="fpn-gather">
+        <div class="fpn-gather-frame">
+            <div class="fpn-gather-media">
+                <img src="../images/visuels/fille-pere-noel-familles.webp" width="1536" height="1024" loading="lazy"
+                     alt="Dans un salon de Noël, une femme souriante présente le roman, entourée de Wendy et du Père Noël à gauche, du Père Fouettard et de Dante à droite">
+            </div>
+            <span class="fpn-gather-tag fpn-gather-tag--noel" aria-hidden="true">🎄 Team Noëlie</span>
+            <span class="fpn-gather-tag fpn-gather-tag--krampen" aria-hidden="true">🦇 Team Krampen</span>
+        </div>
+    </figure>
+    <div class="fpn-wrap">
+        <div class="fpn-camp-panel">
+            <p class="fpn-camp-sub">Choisissez votre camp et posez avec Wendy &amp; Dante dans notre filtre photo de Noël.</p>
+            <div class="fpn-camp-choices">
+                <a href="./filtre-noel.html?camp=noelie" class="fpn-camp-btn fpn-camp-noelie">
+                    <span class="fpn-camp-icon" aria-hidden="true">🎄</span>
+                    <span><strong>Team Noëlie</strong><small>Le camp de Wendy</small></span>
+                </a>
+                <a href="./filtre-noel.html?camp=krampen" class="fpn-camp-btn fpn-camp-krampen">
+                    <span class="fpn-camp-icon" aria-hidden="true">🦇</span>
+                    <span><strong>Team Krampen</strong><small>Le camp de Dante</small></span>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== NAV FOOTER ===== -->
+<div class="fpn-nav">
+    <a href="../romans.html" class="btn-text"><i class="bi bi-arrow-left" aria-hidden="true"></i> Tous les romans</a>
+    <a href="../index.html" class="btn-text"><i class="bi bi-house" aria-hidden="true"></i> Accueil</a>
+</div>
+```
+
+```{=html}
+<style>
+/* ============================================================
+   ELLE EST LA FILLE DU PÈRE NOËL & JE SUIS LE FILS DU PÈRE FOUETTARD
+   Deux mondes : Noëlie (rouge & or) · Krampen (nuit & givre)
+   ============================================================ */
+body.fpn-page-body {
+    --fpn-bg: #0A0F24;
+    --fpn-bg-2: #0B1229;
+    --fpn-bg-3: #0D1430;
+    --fpn-heading: #FBF1E4;
+    --fpn-text: rgba(245, 238, 230, 0.84);
+    --fpn-muted: rgba(245, 238, 230, 0.55);
+    --fpn-card: rgba(255, 255, 255, 0.03);
+    --fpn-card-border: rgba(255, 255, 255, 0.08);
+    --fpn-gold: #E8C170;
+    --fpn-red: #D42A35;
+    --fpn-ice: #A9C8FF;
+    --fpn-lui: #D9E2F2;
+    --fpn-wendy: #F08A8F;
+}
+body.quarto-light.fpn-page-body {
+    --fpn-bg: #FBF6F0;
+    --fpn-bg-2: #F6EFE7;
+    --fpn-bg-3: #F1E8DE;
+    --fpn-heading: #2A1E24;
+    --fpn-text: #4A3A40;
+    --fpn-muted: #7A6A70;
+    --fpn-card: rgba(255, 255, 255, 0.7);
+    --fpn-card-border: rgba(42, 30, 36, 0.1);
+    --fpn-gold: #9C7016;
+    --fpn-red: #B81D2B;
+    --fpn-ice: #2E5AAC;
+    --fpn-lui: #1E2A44;
+    --fpn-wendy: #B81D2B;
+}
+
+/* Pleine largeur sur ordinateur : chaque section sort de la colonne centrale de Quarto
+   (body a déjà overflow-x: hidden dans styles.css, donc pas de défilement horizontal). */
+.fpn-hero, .fpn-world, .fpn-heirs, .fpn-story, .fpn-book, .fpn-collector, .fpn-tropes, .fpn-camp, .fpn-nav {
+    width: 100vw; margin-left: calc(50% - 50vw); margin-right: calc(50% - 50vw);
+}
+.fpn-wrap { max-width: 1100px; margin: 0 auto; }
+.fpn-nowrap { white-space: nowrap; }
+/* Neutralise le soulignement des h2 du thème et les icônes d'ancre ajoutées par Quarto */
+.fpn-h2, .fpn-camp-title { border-bottom: 0 !important; padding-bottom: 0 !important; }
+body.fpn-page-body .anchorjs-link { display: none !important; }
+.fpn-kicker {
+    display: block; font-size: 0.7rem; letter-spacing: 4px; text-transform: uppercase;
+    font-weight: 700; color: var(--fpn-gold); margin-bottom: 0.8rem;
+}
+.fpn-h2 {
+    font-family: 'Playfair Display', serif; font-size: clamp(1.8rem, 3.6vw, 2.8rem);
+    line-height: 1.15; color: var(--fpn-heading); margin: 0 0 1.2rem;
+}
+.fpn-lead { font-size: 1.15rem; line-height: 1.8; color: var(--fpn-text); max-width: 680px; }
+
+/* --- Buttons --- */
+.fpn-btn {
+    display: inline-flex; align-items: center; gap: 0.55rem;
+    padding: 0.95rem 2rem; border-radius: 50px; font-weight: 800; font-size: 0.95rem;
+    text-decoration: none; transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+}
+.fpn-btn-buy {
+    background: linear-gradient(135deg, #B81D2B, #E1444C); color: #fff !important;
+    box-shadow: 0 10px 30px rgba(212, 42, 53, 0.35);
+}
+.fpn-btn-buy:hover { transform: translateY(-3px); box-shadow: 0 16px 40px rgba(212, 42, 53, 0.5); color: #fff !important; }
+.fpn-btn-filter {
+    color: var(--fpn-gold) !important; border: 1px solid rgba(232, 193, 112, 0.45);
+    background: rgba(232, 193, 112, 0.06);
+}
+.fpn-btn-filter:hover { background: rgba(232, 193, 112, 0.14); transform: translateY(-3px); color: var(--fpn-gold) !important; }
+.fpn-btn-gold {
+    background: linear-gradient(135deg, #C99A3E, #E8C170); color: #1A1206 !important;
+    box-shadow: 0 10px 30px rgba(232, 193, 112, 0.25);
+}
+.fpn-btn-gold:hover { transform: translateY(-3px); box-shadow: 0 16px 40px rgba(232, 193, 112, 0.4); color: #1A1206 !important; }
+
+/* --- Hero --- */
+.fpn-hero {
+    position: relative; min-height: 92vh; display: flex; align-items: center; justify-content: center;
+    padding: 6rem 2rem 5rem; overflow: hidden; isolation: isolate;
+    background: linear-gradient(180deg, var(--fpn-bg) 0%, var(--fpn-bg-3) 55%, var(--fpn-bg) 100%);
+}
+.fpn-hero-sky { position: absolute; inset: 0; z-index: 0; pointer-events: none; }
+.fpn-glow {
+    position: absolute; width: 60vw; height: 60vw; max-width: 760px; max-height: 760px;
+    border-radius: 50%; filter: blur(70px); opacity: 0.55;
+}
+.fpn-glow-noel {
+    left: -12%; top: 4%;
+    background: radial-gradient(circle, rgba(212, 42, 53, 0.55), rgba(232, 193, 112, 0.18) 45%, transparent 70%);
+}
+.fpn-glow-fouettard {
+    right: -12%; bottom: -6%;
+    background: radial-gradient(circle, rgba(111, 147, 214, 0.45), rgba(20, 30, 70, 0.3) 45%, transparent 70%);
+}
+.fpn-snow { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 1; pointer-events: none; }
+
+.fpn-hero-inner {
+    position: relative; z-index: 2; max-width: 1200px; width: 100%;
+    display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 4rem; align-items: center;
+}
+.fpn-badge {
+    display: inline-block; font-size: 0.68rem; letter-spacing: 3px; text-transform: uppercase;
+    color: var(--fpn-gold); border: 1px solid rgba(232, 193, 112, 0.35);
+    padding: 0.42rem 1.1rem; border-radius: 50px; font-weight: 700; margin-bottom: 1.6rem;
+}
+.fpn-title { font-family: 'Playfair Display', serif; margin: 0 0 1.4rem; line-height: 1.08; font-weight: 700; letter-spacing: -0.5px; }
+.fpn-t-line { display: block; font-size: clamp(2rem, 4.2vw, 3.5rem); }
+.fpn-t-elle { color: var(--fpn-heading); }
+.fpn-t-lui { color: var(--fpn-lui); }
+.fpn-t-elle em, .fpn-t-lui em {
+    font-style: italic; -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
+}
+.fpn-t-elle em { background-image: linear-gradient(135deg, #F4D58D, #E8C170 40%, #E1444C); }
+.fpn-t-lui em { background-image: linear-gradient(135deg, #DCE8FF, #A9C8FF 45%, #6F93D6); }
+.fpn-t-amp {
+    display: block; font-family: 'Playfair Display', serif; font-style: italic; font-weight: 400;
+    font-size: clamp(2.4rem, 5vw, 4.2rem); line-height: 1; color: var(--fpn-red);
+    margin: 0.35rem 0 0.25rem; text-shadow: 0 0 30px rgba(212, 42, 53, 0.45);
+}
+.fpn-tagline {
+    font-family: 'Playfair Display', serif; font-style: italic;
+    font-size: clamp(1.1rem, 1.8vw, 1.35rem); color: var(--fpn-text); margin: 0 0 2.2rem;
+}
+.fpn-hero-cta { display: flex; flex-wrap: wrap; gap: 1rem; margin-bottom: 1.4rem; }
+.fpn-formats-line { font-size: 0.78rem; letter-spacing: 2px; text-transform: uppercase; color: var(--fpn-muted); margin: 0; }
+
+.fpn-hero-visual { display: flex; justify-content: center; }
+.fpn-cover-frame { position: relative; z-index: 0; width: min(100%, 360px); }
+.fpn-cover-frame::before {
+    content: ''; position: absolute; inset: -14px; border-radius: 18px; z-index: -1; opacity: 0.8;
+    background: linear-gradient(135deg, rgba(212, 42, 53, 0.5), rgba(232, 193, 112, 0.35) 45%, rgba(111, 147, 214, 0.5));
+    filter: blur(22px);
+}
+.fpn-hero-cover {
+    display: block; width: 100%; height: auto; border-radius: 10px;
+    box-shadow: 0 30px 70px rgba(0, 0, 0, 0.55);
+    transform: perspective(900px) rotateY(-8deg) rotateX(2deg);
+    transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.fpn-cover-frame:hover .fpn-hero-cover { transform: perspective(900px) rotateY(-2deg) translateY(-6px); }
+
+.fpn-scroll-hint {
+    position: absolute; bottom: 1.6rem; left: 50%; transform: translateX(-50%); z-index: 3;
+    width: 26px; height: 42px; border: 2px solid rgba(232, 193, 112, 0.45); border-radius: 14px;
+}
+.fpn-scroll-hint span {
+    position: absolute; top: 7px; left: 50%; width: 4px; height: 8px; margin-left: -2px;
+    background: var(--fpn-gold); border-radius: 2px; animation: fpn-wheel 1.8s ease-in-out infinite;
+}
+@keyframes fpn-wheel {
+    0% { opacity: 0; transform: translateY(0); }
+    30% { opacity: 1; }
+    100% { opacity: 0; transform: translateY(14px); }
+}
+
+/* --- Univers --- */
+.fpn-world { padding: 6rem 2rem; background: linear-gradient(180deg, var(--fpn-bg), var(--fpn-bg-2)); text-align: center; }
+.fpn-world .fpn-lead { margin: 0 auto 3rem; }
+.fpn-world-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+.fpn-place {
+    padding: 2.2rem 1.8rem; border-radius: 22px; text-align: left;
+    border: 1px solid var(--fpn-card-border); background: var(--fpn-card);
+    transition: transform 0.4s;
+}
+.fpn-place:hover { transform: translateY(-6px); }
+.fpn-place i { font-size: 1.8rem; display: inline-block; margin-bottom: 1rem; }
+.fpn-place h3 { font-family: 'Playfair Display', serif; font-size: 1.5rem; margin: 0 0 0.6rem; color: var(--fpn-heading); }
+.fpn-place p { margin: 0; line-height: 1.7; color: var(--fpn-text); }
+.fpn-place-noel { background: linear-gradient(160deg, rgba(212, 42, 53, 0.16), rgba(232, 193, 112, 0.05)); border-color: rgba(212, 42, 53, 0.28); }
+.fpn-place-noel i { color: var(--fpn-gold); }
+.fpn-place-passe { background: linear-gradient(160deg, rgba(232, 193, 112, 0.1), rgba(255, 255, 255, 0.02)); border-color: rgba(232, 193, 112, 0.25); }
+.fpn-place-passe i { color: var(--fpn-gold); }
+.fpn-place-krampen { background: linear-gradient(160deg, rgba(111, 147, 214, 0.18), rgba(10, 15, 36, 0.12)); border-color: rgba(111, 147, 214, 0.3); }
+.fpn-place-krampen i { color: var(--fpn-ice); }
+
+/* --- Héritiers --- */
+.fpn-heirs {
+    padding: 6rem 2rem 5rem; text-align: center;
+    background:
+        radial-gradient(ellipse at 18% 45%, rgba(212, 42, 53, 0.13), transparent 55%),
+        radial-gradient(ellipse at 82% 55%, rgba(111, 147, 214, 0.15), transparent 55%),
+        var(--fpn-bg-2);
+}
+.fpn-heirs .fpn-h2 { max-width: 760px; margin-left: auto; margin-right: auto; }
+.fpn-heirs-grid { display: grid; grid-template-columns: 1fr minmax(260px, 420px) 1fr; gap: 2rem; align-items: center; margin-top: 2.5rem; }
+.fpn-heir { padding: 1.8rem; border-radius: 20px; text-align: left; }
+.fpn-heir-wendy { border: 1px solid rgba(212, 42, 53, 0.3); background: rgba(212, 42, 53, 0.08); }
+.fpn-heir-dante { border: 1px solid rgba(111, 147, 214, 0.32); background: rgba(111, 147, 214, 0.08); text-align: right; }
+.fpn-heir-role { display: block; font-size: 0.68rem; letter-spacing: 2px; line-height: 1.6; text-transform: uppercase; font-weight: 700; }
+.fpn-heir-wendy .fpn-heir-role { color: var(--fpn-wendy); }
+.fpn-heir-dante .fpn-heir-role { color: var(--fpn-ice); }
+.fpn-heir h3 { font-family: 'Playfair Display', serif; font-size: 1.7rem; color: var(--fpn-heading); margin: 0.4rem 0 0.6rem; }
+.fpn-heir p { margin: 0; color: var(--fpn-text); line-height: 1.7; }
+.fpn-heirs-art { margin: 0; }
+.fpn-heirs-art img {
+    width: 100%; height: auto; display: block;
+    filter: drop-shadow(0 25px 40px rgba(0, 0, 0, 0.45)); /* le bas de l'image est déjà en fondu */
+}
+.fpn-heirs-note {
+    font-family: 'Playfair Display', serif; font-style: italic; font-size: 1.25rem;
+    color: var(--fpn-gold); margin: 2.5rem auto 0; max-width: 640px;
+}
+
+/* --- Histoire --- */
+.fpn-story { padding: 6rem 2rem; background: linear-gradient(180deg, var(--fpn-bg-2), var(--fpn-bg)); }
+.fpn-story-grid { display: grid; grid-template-columns: 1.3fr 1fr; gap: 4rem; align-items: center; }
+.fpn-story-text p { font-size: 1.08rem; line-height: 1.85; color: var(--fpn-text); margin-bottom: 1.2rem; }
+.fpn-story-text strong { color: var(--fpn-gold); }
+.fpn-story-text em { color: var(--fpn-ice); }
+.fpn-quote {
+    position: relative; margin: 0; padding: 2.6rem 2.2rem 2.2rem; border-radius: 24px;
+    background: var(--fpn-card); border: 1px solid rgba(232, 193, 112, 0.2);
+}
+.fpn-quote-mark {
+    position: absolute; top: -1.4rem; left: 1.6rem; font-size: 3.4rem; line-height: 1;
+    color: var(--fpn-red); font-family: 'Playfair Display', serif;
+}
+/* Neutralise le style global des citations (styles*.css, en !important) :
+   sélecteur plus spécifique que « body.quarto-dark blockquote » */
+body.fpn-page-body .fpn-quote blockquote {
+    margin: 0 !important; padding: 0 !important; border: 0 !important; border-radius: 0 !important;
+    background: none !important; color: inherit !important; font-size: inherit !important;
+}
+body.fpn-page-body .fpn-quote blockquote::before { content: none !important; }
+.fpn-quote blockquote p {
+    font-family: 'Playfair Display', serif; font-style: italic; font-size: 1.2rem;
+    line-height: 1.7; color: var(--fpn-heading); margin: 0;
+}
+.fpn-quote-sign { margin: 1.2rem 0 1.4rem; font-weight: 700; color: var(--fpn-gold); letter-spacing: 1px; }
+.fpn-quote-sign::before { content: '— '; }
+.fpn-link { color: var(--fpn-ice) !important; font-weight: 700; text-decoration: none; }
+.fpn-link:hover { text-decoration: underline; }
+
+/* --- Livre --- */
+.fpn-book { padding: 6rem 2rem; background: var(--fpn-bg); position: relative; }
+.fpn-book::before {
+    content: ''; position: absolute; top: 0; left: 10%; right: 10%; height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(232, 193, 112, 0.3), transparent);
+}
+.fpn-book-grid { display: grid; grid-template-columns: auto 1fr; gap: 4rem; align-items: center; }
+.fpn-book-cover img {
+    display: block; width: 280px; height: auto; border-radius: 8px;
+    box-shadow: -20px 20px 60px rgba(0, 0, 0, 0.5), 0 0 40px rgba(212, 42, 53, 0.12);
+    transform: perspective(800px) rotateY(-10deg);
+    transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.fpn-book-cover img:hover { transform: perspective(800px) rotateY(-3deg) translateY(-6px); }
+.fpn-genre-pill {
+    display: inline-block; font-size: 0.72rem; letter-spacing: 2px; text-transform: uppercase; font-weight: 700;
+    color: var(--fpn-gold); border: 1px solid rgba(232, 193, 112, 0.3); padding: 0.4rem 1rem;
+    border-radius: 50px; margin-bottom: 1rem;
+}
+.fpn-details { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1rem; margin: 1.5rem 0 2.2rem; }
+.fpn-detail {
+    padding: 1rem 1.2rem; border-radius: 16px; background: var(--fpn-card);
+    border: 1px solid var(--fpn-card-border); display: flex; flex-direction: column; gap: 0.3rem;
+}
+.fpn-detail-label { font-size: 0.65rem; letter-spacing: 1.5px; text-transform: uppercase; font-weight: 700; color: var(--fpn-ice); }
+.fpn-detail-value { font-family: 'Playfair Display', serif; font-size: 1.15rem; font-weight: 700; color: var(--fpn-heading); }
+.fpn-status { color: #6CCB8C; }
+.fpn-book-actions { display: flex; flex-wrap: wrap; gap: 1rem; }
+
+/* --- Collector --- */
+.fpn-collector {
+    padding: 6rem 2rem;
+    background: radial-gradient(ellipse at 72% 50%, rgba(232, 193, 112, 0.12), transparent 60%),
+                linear-gradient(180deg, var(--fpn-bg), var(--fpn-bg-3));
+}
+.fpn-collector-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+.fpn-collector-text p { font-size: 1.2rem; line-height: 1.8; color: var(--fpn-text); margin-bottom: 2rem; }
+.fpn-collector-visual img {
+    display: block; width: 100%; max-width: 460px; height: auto; margin: 0 auto; border-radius: 22px;
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.45), 0 0 0 1px rgba(232, 193, 112, 0.22);
+}
+
+/* --- Thèmes --- */
+.fpn-tropes { padding: 3.5rem 2rem; background: var(--fpn-bg-3); }
+.fpn-tropes-inner { max-width: 900px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: center; gap: 0.9rem; }
+.fpn-trope {
+    display: inline-flex; align-items: center; gap: 0.6rem; padding: 0.7rem 1.4rem; border-radius: 50px;
+    font-size: 0.88rem; font-weight: 600; color: var(--fpn-text);
+    border: 1px solid var(--fpn-card-border); background: var(--fpn-card); transition: transform 0.3s, border-color 0.3s;
+}
+.fpn-trope:hover { transform: translateY(-3px); border-color: rgba(232, 193, 112, 0.4); }
+.fpn-trope i { color: var(--fpn-gold); }
+.fpn-trope:nth-child(even) i { color: var(--fpn-ice); }
+
+/* --- Quel camp ? Les deux familles réunies --- */
+.fpn-camp {
+    position: relative; overflow: hidden; isolation: isolate;
+    padding: 6rem 2rem 5.5rem; text-align: center;
+    background:
+        radial-gradient(ellipse at 0% 55%, rgba(158, 22, 36, 0.38), transparent 55%),
+        radial-gradient(ellipse at 100% 55%, rgba(46, 72, 140, 0.4), transparent 55%),
+        var(--fpn-bg);
+}
+.fpn-camp .fpn-snow { z-index: 1; }
+.fpn-camp .fpn-wrap, .fpn-gather { position: relative; z-index: 2; }
+.fpn-camp-title { font-family: 'Playfair Display', serif; font-size: clamp(1.8rem, 4vw, 3rem); color: var(--fpn-heading); margin: 0; }
+.fpn-camp-sub { color: var(--fpn-text); font-size: 1.05rem; margin: 0 auto 1.4rem; max-width: 560px; }
+
+.fpn-gather { max-width: 1180px; margin: 2.8rem auto 0; padding: 0; }
+.fpn-gather-frame {
+    position: relative; padding: 2px; border-radius: 30px;
+    background: linear-gradient(115deg, #D42A35, #E8C170 50%, #6F93D6);
+    box-shadow: -40px 30px 90px rgba(212, 42, 53, 0.22), 40px 30px 90px rgba(111, 147, 214, 0.24), 0 30px 80px rgba(0, 0, 0, 0.45);
+}
+.fpn-gather-media { position: relative; overflow: hidden; border-radius: 28px; }
+.fpn-gather-media::after {
+    content: ''; position: absolute; inset: 0; pointer-events: none;
+    background: linear-gradient(180deg, rgba(10, 15, 36, 0.35), transparent 22%, transparent 72%, rgba(10, 15, 36, 0.6));
+}
+.fpn-gather-media img {
+    display: block; width: 100%; height: auto; aspect-ratio: 16 / 9;
+    object-fit: cover; object-position: 50% 0%;
+    transform-origin: 50% 40%; animation: fpn-kenburns 24s ease-in-out infinite alternate;
+}
+@keyframes fpn-kenburns { from { transform: scale(1); } to { transform: scale(1.06); } }
+.fpn-gather-tag {
+    position: absolute; top: 1.3rem; z-index: 2;
+    display: inline-flex; align-items: center; gap: 0.45rem;
+    padding: 0.55rem 1.15rem; border-radius: 50px;
+    font-size: 0.78rem; font-weight: 800; letter-spacing: 1px; color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+.fpn-gather-tag--noel { left: 1.4rem; background: rgba(184, 29, 43, 0.55); }
+.fpn-gather-tag--krampen { right: 1.4rem; background: rgba(17, 24, 51, 0.6); border-color: rgba(169, 200, 255, 0.4); }
+.fpn-camp-panel {
+    position: relative; z-index: 3; max-width: 760px; margin: -3.4rem auto 0;
+    padding: 1.8rem 2rem 2rem; border-radius: 26px;
+    background: rgba(10, 15, 36, 0.66);
+    -webkit-backdrop-filter: blur(16px) saturate(1.2); backdrop-filter: blur(16px) saturate(1.2);
+    border: 1px solid rgba(232, 193, 112, 0.25); box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
+}
+.fpn-camp-choices { display: flex; justify-content: center; gap: 1.2rem; flex-wrap: wrap; }
+.fpn-camp-btn {
+    display: inline-flex; align-items: center; gap: 1rem; padding: 1.1rem 1.8rem; border-radius: 20px;
+    min-width: 250px; text-decoration: none; text-align: left; transition: transform 0.3s, box-shadow 0.3s;
+}
+.fpn-camp-btn strong { display: block; font-family: 'Playfair Display', serif; font-size: 1.25rem; }
+.fpn-camp-btn small { display: block; font-size: 0.78rem; letter-spacing: 1px; opacity: 0.85; }
+.fpn-camp-icon { font-size: 1.8rem; }
+.fpn-camp-noelie { background: linear-gradient(135deg, #B81D2B, #E1444C); color: #fff !important; box-shadow: 0 12px 35px rgba(212, 42, 53, 0.35); }
+.fpn-camp-krampen {
+    background: linear-gradient(135deg, #111833, #2E488C); color: #E6EEFF !important;
+    border: 1px solid rgba(169, 200, 255, 0.3); box-shadow: 0 12px 35px rgba(46, 72, 140, 0.35);
+}
+.fpn-camp-btn:hover { transform: translateY(-4px) scale(1.02); }
+
+/* --- Navigation --- */
+.fpn-nav { display: flex; justify-content: center; gap: 2rem; padding: 3rem 2rem; background: var(--fpn-bg); border-top: 1px solid var(--fpn-card-border); }
+
+/* --- Mode clair : ajustements --- */
+body.quarto-light .fpn-glow { opacity: 0.35; }
+body.quarto-light .fpn-t-elle em { background-image: linear-gradient(135deg, #C99A3E, #B81D2B 70%); }
+body.quarto-light .fpn-t-lui em { background-image: linear-gradient(135deg, #2E488C, #5B7FC7); }
+body.quarto-light .fpn-t-amp { text-shadow: none; }
+body.quarto-light .fpn-badge,
+body.quarto-light .fpn-genre-pill { border-color: rgba(156, 112, 22, 0.35); }
+body.quarto-light .fpn-btn-filter { border-color: rgba(156, 112, 22, 0.45); background: rgba(156, 112, 22, 0.06); }
+body.quarto-light .fpn-hero-cover,
+body.quarto-light .fpn-book-cover img { box-shadow: 0 25px 60px rgba(42, 30, 36, 0.25); }
+body.quarto-light .fpn-heirs-art img { filter: drop-shadow(0 20px 30px rgba(42, 30, 36, 0.2)); }
+body.quarto-light .fpn-place-krampen { background: linear-gradient(160deg, rgba(111, 147, 214, 0.16), rgba(255, 255, 255, 0.5)); }
+body.quarto-light .fpn-camp {
+    background:
+        radial-gradient(ellipse at 0% 55%, rgba(212, 42, 53, 0.14), transparent 55%),
+        radial-gradient(ellipse at 100% 55%, rgba(46, 72, 140, 0.16), transparent 55%),
+        var(--fpn-bg);
+}
+body.quarto-light .fpn-gather-frame {
+    box-shadow: -30px 25px 70px rgba(212, 42, 53, 0.14), 30px 25px 70px rgba(46, 72, 140, 0.16), 0 25px 60px rgba(42, 30, 36, 0.18);
+}
+body.quarto-light .fpn-camp-panel {
+    background: rgba(255, 255, 255, 0.8); border-color: rgba(156, 112, 22, 0.25);
+    box-shadow: 0 20px 50px rgba(42, 30, 36, 0.15);
+}
+body.quarto-light .fpn-status { color: #2E8B57; }
+
+/* --- Mobile --- */
+@media (max-width: 992px) {
+    .fpn-hero { min-height: auto; padding: 5rem 1.25rem 4.5rem; }
+    .fpn-hero-inner { grid-template-columns: 1fr; gap: 2.8rem; text-align: center; }
+    .fpn-hero-cta { justify-content: center; }
+    .fpn-cover-frame { width: min(70%, 280px); margin: 0 auto; }
+    .fpn-hero-cover { transform: none; }
+    .fpn-scroll-hint { display: none; }
+    .fpn-world, .fpn-heirs, .fpn-story, .fpn-book, .fpn-collector, .fpn-camp { padding: 4.5rem 1.25rem; }
+    .fpn-world-grid { grid-template-columns: 1fr; }
+    .fpn-heirs-grid { grid-template-columns: 1fr; gap: 1.2rem; }
+    .fpn-heirs-art { order: -1; max-width: 360px; width: 100%; margin: 0 auto; }
+    .fpn-heir, .fpn-heir-dante { text-align: center; }
+    .fpn-story-grid, .fpn-collector-grid, .fpn-book-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+    .fpn-book-grid { text-align: center; }
+    .fpn-book-cover { display: flex; justify-content: center; }
+    .fpn-book-cover img { width: 220px; transform: none; }
+    .fpn-book-actions { justify-content: center; }
+    .fpn-collector-text { text-align: center; }
+    .fpn-gather-media img { aspect-ratio: 3 / 2; }
+    .fpn-camp-panel { margin-top: -1.6rem; padding: 1.5rem 1.2rem 1.6rem; }
+}
+@media (max-width: 576px) {
+    .fpn-t-line { font-size: clamp(1.7rem, 8vw, 2.2rem); }
+    .fpn-btn { width: 100%; justify-content: center; }
+    .fpn-camp-btn { width: 100%; min-width: 0; }
+    .fpn-tropes { padding: 2.5rem 1rem; }
+    .fpn-gather-frame { border-radius: 20px; }
+    .fpn-gather-media { border-radius: 18px; }
+    .fpn-gather-tag { top: 0.7rem; padding: 0.35rem 0.75rem; font-size: 0.62rem; letter-spacing: 0.5px; }
+    .fpn-gather-tag--noel { left: 0.7rem; }
+    .fpn-gather-tag--krampen { right: 0.7rem; }
+    .fpn-camp-panel { margin-top: 1rem; }
+    .fpn-nav { flex-direction: column; align-items: stretch; gap: 0.9rem; padding: 2.5rem 1.25rem; }
+    .fpn-nav .btn-text { width: 100% !important; justify-content: center; text-align: center; }
+}
+@media (prefers-reduced-motion: reduce) {
+    .fpn-scroll-hint span, .fpn-gather-media img { animation: none; }
+    .fpn-hero-cover, .fpn-book-cover img, .fpn-place, .fpn-btn, .fpn-camp-btn, .fpn-trope { transition: none; }
+}
+</style>
+
+<script>
+/* Neige (hero + section des deux familles) : particules légères, en pause hors écran,
+   immobile si l'utilisateur préfère réduire les animations. */
+(function () {
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function initSnow(canvas, maxFlakes) {
+    if (!canvas) return;
+    var ctx = canvas.getContext('2d');
+    var W = 0, H = 0, flakes = [], rafId = null, visible = true;
+
+    function resize() {
+        var r = canvas.parentElement.getBoundingClientRect();
+        var dpr = Math.min(window.devicePixelRatio || 1, 2);
+        W = r.width; H = r.height;
+        canvas.width = Math.round(W * dpr); canvas.height = Math.round(H * dpr);
+        ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    }
+    function flake(y) {
+        return {
+            x: Math.random() * W, y: (y === undefined) ? Math.random() * H : y,
+            r: Math.random() * 2.2 + 0.6, vy: Math.random() * 0.6 + 0.35,
+            vx: Math.random() * 0.4 - 0.2, ph: Math.random() * Math.PI * 2, o: Math.random() * 0.5 + 0.35
+        };
+    }
+    function populate() {
+        var n = Math.round(Math.min(maxFlakes, (W * H) / 11000));
+        flakes = [];
+        for (var i = 0; i < n; i++) flakes.push(flake());
+    }
+    function paint() {
+        ctx.clearRect(0, 0, W, H);
+        var light = document.body.classList.contains('quarto-light');
+        for (var i = 0; i < flakes.length; i++) {
+            var f = flakes[i];
+            ctx.beginPath();
+            ctx.arc(f.x, f.y, f.r, 0, Math.PI * 2);
+            ctx.fillStyle = light ? 'rgba(120,150,205,' + (f.o * 0.8) + ')' : 'rgba(255,255,255,' + f.o + ')';
+            ctx.fill();
+        }
+    }
+    function step() {
+        for (var i = 0; i < flakes.length; i++) {
+            var f = flakes[i];
+            f.ph += 0.01;
+            f.x += f.vx + Math.sin(f.ph) * 0.3;
+            f.y += f.vy;
+            if (f.y > H + 5) { flakes[i] = flake(-5); }
+            if (f.x < -5) f.x = W + 5;
+            if (f.x > W + 5) f.x = -5;
+        }
+        paint();
+        rafId = requestAnimationFrame(step);
+    }
+    function start() { if (!reduce && visible && rafId === null) rafId = requestAnimationFrame(step); }
+    function stop() { if (rafId !== null) { cancelAnimationFrame(rafId); rafId = null; } }
+
+    resize(); populate(); paint(); start();
+
+    if ('IntersectionObserver' in window) {
+        new IntersectionObserver(function (entries) {
+            visible = entries[0].isIntersecting;
+            if (visible) start(); else stop();
+        }).observe(canvas);
+    }
+    var t;
+    window.addEventListener('resize', function () {
+        clearTimeout(t);
+        t = setTimeout(function () { resize(); populate(); paint(); }, 150);
+    });
+  }
+  initSnow(document.getElementById('fpnSnow'), 120);
+  initSnow(document.getElementById('fpnSnowCamp'), 70);
+})();
+</script>
+```

@@ -2,6 +2,7 @@
 title: "À Noël, je serai une princesse licorne ! — Extraits"
 subtitle: "Deux moments pour découvrir la princesse la moins classique"
 description: "Deux extraits déjantés du roman de Mo Gadarr."
+image: ../../images/couvertures/princesse-licorne.jpg
 page-layout: full
 toc: false
 body-classes: excerpt-page

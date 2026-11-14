@@ -2,6 +2,7 @@
 title: "Noël, coups bas et Secret Santa — Extraits"
 subtitle: "Trois moments pour craquer"
 description: "Découvrez trois extraits de Noël, coups bas et Secret Santa de Mo Gadarr."
+image: ../../images/couvertures/noel-coups-bas.jpg
 page-layout: full
 toc: false
 body-classes: excerpt-page

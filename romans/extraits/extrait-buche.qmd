@@ -2,6 +2,7 @@
 title: "Prends de la bûche — Extraits"
 subtitle: "Trois moments pour succomber"
 description: "Découvrez trois extraits du roman Prends de la bûche de Mo Gadarr."
+image: ../../images/dernier-livre.jpg
 page-layout: full
 toc: false
 body-classes: excerpt-page
