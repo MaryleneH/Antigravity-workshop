@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Mo Gadarr</title>
+<title>Auteure de New Romance engagée – Mo Gadarr</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -37,6 +37,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
 <link href="./assets/favicon.png" rel="icon" type="image/png">
+<script src="site_libs/quarto-listing/list.min.js"></script>
+<script src="site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/scrollable-regions/scrollable-regions.js" type="module"></script>
@@ -79,6 +81,51 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Recherche"
   }
 }</script>
+<script>
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-hp-collection .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-project','listing-website','listing-lang','listing-format','listing-engines','listing-language','listing-title','listing-subtitle','listing-description','listing-image','listing-open-graph','listing-twitter-card','listing-title-block-banner','listing-page-layout','listing-toc','listing-body-classes','listing-path','listing-outputHref','listing-author','listing-filename','listing-file-modified','listing-reading-time','listing-word-count','listing-date','listing-categories','listing-date-modified',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-file-modified-sort'] },{ data: ['listing-reading-time-sort'] },{ data: ['listing-word-count-sort'] },{ data: ['listing-date-sort'] },{ data: ['listing-date-modified-sort'] }],
+      
+      searchColumns: ["listing-project","listing-website","listing-lang","listing-format","listing-engines","listing-language","listing-title","listing-subtitle","listing-description","listing-image","listing-open-graph","listing-twitter-card","listing-title-block-banner","listing-page-layout","listing-toc","listing-body-classes","listing-path","listing-outputHref","listing-author","listing-filename","listing-file-modified","listing-reading-time","listing-word-count","listing-date","listing-categories","listing-date-modified"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-hp-collection'] = new List('listing-hp-collection', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+  
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-hp-news .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-image','listing-date','listing-title','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      
+      searchColumns: ["listing-title","listing-author","listing-date","listing-image","listing-description"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-hp-news'] = new List('listing-hp-news', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+  </script>
 <!-- Icônes Bootstrap (pour .bi) -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
 
@@ -172,6 +219,35 @@ ul.task-list li input[type="checkbox"] {
 <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&amp;family=Playfair+Display:ital,wght@0,400;0,700;1,400&amp;display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <meta property="og:title" content="Mo Gadarr — Une New Romance engagée qui bouscule les cœurs">
 <meta property="og:description" content="Site officiel de Mo Gadarr, auteure de romance engagée — romans, nouveautés, événements.">
@@ -185,7 +261,7 @@ ul.task-list li input[type="checkbox"] {
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
-<body class="nav-fixed fullcontent quarto-light"><a id="quarto-skip-link" class="visually-hidden-focusable" href="#quarto-document-content">Aller au contenu principal</a><script id="quarto-html-before-body" type="application/javascript">
+<body class="nav-fixed hp-home quarto-light"><a id="quarto-skip-link" class="visually-hidden-focusable" href="#quarto-document-content">Aller au contenu principal</a><script id="quarto-html-before-body" type="application/javascript">
     const toggleBodyColorMode = (bsSheetEl) => {
       const mode = bsSheetEl.getAttribute("data-mode");
       const bodyEl = window.document.querySelector("body");
@@ -404,48 +480,67 @@ ul.task-list li input[type="checkbox"] {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     
 <!-- main -->
-<main class="content" id="quarto-document-content" tabindex="-1"><header id="title-block-header" class="quarto-title-block"><h1 class="title display-7">Mo Gadarr</h1></header>
+<main class="content column-page" id="quarto-document-content" tabindex="-1">
+
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Mo Gadarr</h1>
+</div>
 
 
 
+<div class="quarto-title-meta column-page">
+
+    
+  
+    
+  </div>
+  
 
 
-<header class="hero">
-    <div class="hero-split">
-        <div class="hero-photo">
-            <div class="author-photo-frame">
-                <img src="images/author-portrait.png" alt="Mo Gadarr" class="author-photo">
-                <div class="photo-accent-ring"></div>
-                <div class="photo-accent-dot"></div>
-            </div>
-            <div class="typing-container">
-                <span id="typing-text" class="typing-text"></span>
-            </div>
+</header>
+
+
+<!-- ===== HERO — MO ET SES PERSONNAGES (édition Noël) =====
+     Pour repasser en version intemporelle après les fêtes : remplacer la photo,
+     le texte alternatif, la légende et la ligne « Nouveau roman de Noël ». -->
+<header class="hp-hero hp-bleed" aria-labelledby="hp-hero-title">
+    <figure class="hp-hero-media figure">
+        <img src="images/visuels/fille-pere-noel-familles.webp" width="1536" height="1024" fetchpriority="high" decoding="async" alt="Mo Gadarr présente son roman Elle est la fille du Père Noël &amp; je suis le fils du Père Fouettard, entourée de Wendy et du Père Noël à gauche, du Père Fouettard et de Dante à droite" class="figure-img">
+        <figcaption class="hp-hero-caption"><i class="bi bi-camera" aria-hidden="true"></i> Mo Gadarr entourée de ses personnages</figcaption>
+    </figure>
+    <canvas class="hp-snow" id="hpHeroSnow" aria-hidden="true"></canvas>
+    <div class="hp-hero-panel">
+        <span class="hp-hero-kicker">✦ Nouveau roman de Noël</span>
+        <h1 id="hp-hero-title" class="hp-hero-title">Mo Gadarr</h1>
+        <p class="hp-hero-tagline">Une New Romance engagée qui bouscule les cœurs.</p>
+        <p class="hp-hero-book">Nouveau : <em>Elle est la fille du Père&nbsp;Noël &amp; je suis le fils du Père&nbsp;Fouettard</em></p>
+        <div class="hp-hero-cta">
+            <a href="dernier_roman/fille_pere_noel.html" class="hp-btn hp-btn-red">Découvrir le roman <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+            <a href="romans.html" class="hp-btn hp-btn-ghost">Explorer la collection</a>
         </div>
-        <div class="hero-content fade-in">
-            
-            <p class="subtitle">Une New Romance engagée qui bouscule les cœurs.</p>
-            <a href="romans.html" class="btn-primary">Explorer la Collection</a>
-        </div>
-    </div>
-    <div class="scroll-indicator">
-        <span></span>
     </div>
 </header>
 
-<section id="featured" class="collection">
-    <h2 class="section-title fade-in-scroll anchored">À la Une</h2>
+<!-- ===== À LA UNE ===== -->
+<section id="featured" class="collection hp-featured hp-bleed" aria-labelledby="hp-featured-title">
+  <div class="hp-wrap">
+    <div class="hp-section-head fade-in-scroll">
+        <span class="hp-kicker">Nouveautés</span>
+        <h2 id="hp-featured-title" class="hp-h2 anchored">À la Une</h2>
+    </div>
 
     <!-- NOUVEAU ROMAN -->
     <div class="featured-wrapper featured-wrapper--noel">
         <div class="book-card featured-card featured-card--noel fade-in-scroll">
             <div class="book-cover">
-                <img src="images/couvertures/fille-pere-noel.jpg" alt="Couverture : Elle est la fille du Père Noël &amp; je suis le fils du Père Fouettard" class="featured-book-img featured-book-img--cover">
+                <img src="images/couvertures/fille-pere-noel.jpg" alt="Couverture : Elle est la fille du Père Noël &amp; je suis le fils du Père Fouettard" class="featured-book-img featured-book-img--cover" loading="lazy">
             </div>
             <div class="book-info">
                 <h3 class="featured-title-long anchored">Elle est la fille du Père&nbsp;Noël <span>&amp; je suis le fils du Père&nbsp;Fouettard</span></h3>
@@ -453,7 +548,7 @@ ul.task-list li input[type="checkbox"] {
                 <p>Deux héritages. Zéro point commun. Wendy, la fille du Père Noël, rencontre Dante, le fils du Père Fouettard. Et vous, à Noël, quel camp <span class="nowrap">choisirez-vous&nbsp;?</span></p>
                 <div class="featured-buttons">
                     <a href="dernier_roman/fille_pere_noel.html" class="btn-primary">Découvrir le roman</a>
-                    <a href="romans.html" class="btn-text">Toute la collection →</a>
+                    <a href="https://amzn.eu/d/0dbVGnRO" class="btn-text" target="_blank" rel="noopener noreferrer">Acheter sur Amazon</a>
                 </div>
             </div>
         </div>
@@ -483,7 +578,7 @@ ul.task-list li input[type="checkbox"] {
               <div class="hp-ar-cam">
                 <div class="hp-ar-garland"><span></span><span></span><span></span><span></span><span></span></div>
                 <div class="hp-ar-face"></div>
-                <img src="images/filtre-noel/wendy-dante.webp" class="hp-ar-chars" alt="Wendy et Dante">
+                <img src="images/filtre-noel/wendy-dante.webp" class="hp-ar-chars" alt="Wendy et Dante" loading="lazy">
                 <div class="hp-ar-tag">#TeamNoëlie</div>
               </div>
             </div>
@@ -493,10 +588,474 @@ ul.task-list li input[type="checkbox"] {
       </div>
       <canvas id="hpArCanvas" class="hp-ar-canvas"></canvas>
     </div>
+  </div>
+</section>
+
+<!-- ===== LA COLLECTION (carrousel automatique) ===== -->
+<section class="hp-collection hp-bleed" aria-labelledby="hp-collection-title">
+    <div class="hp-wrap hp-section-head fade-in-scroll">
+        <span class="hp-kicker">La collection</span>
+        <h2 id="hp-collection-title" class="hp-h2 anchored">Tous les romans de Mo</h2>
+    </div>
+    <div class="hp-carousel-shell">
+        <button type="button" class="hp-car-btn hp-car-prev" aria-label="Romans précédents"><i class="bi bi-chevron-left" aria-hidden="true"></i></button>
+<div id="listing-hp-collection" class="quarto-listing quarto-listing-container-custom">
+<!-- Carrousel généré automatiquement par Quarto à partir des pages de romans
+     (titre + image de chaque page). Voir le listing « hp-collection » dans index.qmd. -->
+<div class="hp-carousel list" tabindex="0" aria-label="Carrousel des romans de Mo Gadarr">
+
+  <a class="hp-book" href="./dernier_roman/fille_pere_noel.html" data-index="0" data-listing-file-modified-sort="1794690945968" data-listing-reading-time-sort="34" data-listing-word-count-sort="6655">
+    <span class="hp-book-cover">
+
+      <img src="./images/couvertures/fille-pere-noel.jpg" alt="Elle est la fille du Père Noël &amp; je suis le fils du Père Fouettard" loading="lazy" decoding="async">
+
+    </span>
+    <span class="hp-book-title">Elle est la fille du Père Noël &amp; je suis le fils du Père Fouettard</span>
+  </a>
+
+  <a class="hp-book" href="./dernier_roman/at_the_beginning.html" data-index="1" data-listing-file-modified-sort="1794690945968" data-listing-reading-time-sort="39" data-listing-word-count-sort="7673">
+    <span class="hp-book-cover">
+
+      <img src="./images/couvertures/AT_couverture.PNG" alt="AT The Beginning" loading="lazy" decoding="async">
+
+    </span>
+    <span class="hp-book-title">AT The Beginning</span>
+  </a>
+
+  <a class="hp-book" href="./dernier_roman/prends_buche.html" data-index="2" data-listing-file-modified-sort="1794690945968" data-listing-reading-time-sort="20" data-listing-word-count-sort="3948">
+    <span class="hp-book-cover">
+
+      <img src="./images/dernier-livre.jpg" alt="Prends de la bûche" loading="lazy" decoding="async">
+
+    </span>
+    <span class="hp-book-title">Prends de la bûche</span>
+  </a>
+
+  <a class="hp-book" href="./romans/be-mine-valentine.html" data-index="3" data-categories="Um9tYW5jZSUyQ1NhaW50LVZhbGVudGluJTJDTm91dmVsbGU=" data-listing-date-sort="1704153600000" data-listing-file-modified-sort="1794690946230" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="753">
+    <span class="hp-book-cover">
+
+      <img src="./images/couvertures/be-mine-valentine.jpg" alt="Be mine for Valentine's !" loading="lazy" decoding="async">
+
+    </span>
+    <span class="hp-book-title">Be mine for Valentine's !</span>
+  </a>
+
+  <a class="hp-book" href="./romans/be-stronger.html" data-index="4" data-categories="Um9tYW5jZSUyMGNvbnRlbXBvcmFpbmUlMkNCb2R5JTIwcG9zaXRpdmUlMkNTZWNvbmRlJTIwY2hhbmNl" data-listing-date-sort="1718409600000" data-listing-file-modified-sort="1794690946231" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="914">
+    <span class="hp-book-cover">
+
+      <img src="./images/couvertures/be-stronger.jpg" alt="Be Stronger" loading="lazy" decoding="async">
+
+    </span>
+    <span class="hp-book-title">Be Stronger</span>
+  </a>
+
+  <a class="hp-book" href="./romans/be-sweeter.html" data-index="5" data-categories="Um9tYW5jZSUyMGNvbnRlbXBvcmFpbmUlMkNCb2R5JTIwcG9zaXRpdmUlMkNEJUMzJUE5cGFzc2VtZW50JTIwZGUlMjBzb2k=" data-listing-date-sort="1717200000000" data-listing-file-modified-sort="1794690946231" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="951">
+    <span class="hp-book-cover">
+
+      <img src="./images/couvertures/be-sweeter.jpg" alt="Be Sweeter" loading="lazy" decoding="async">
+
+    </span>
+    <span class="hp-book-title">Be Sweeter</span>
+  </a>
+
+  <a class="hp-book" href="./romans/be-yourself.html" data-index="6" data-categories="Um9tYW5jZSUyMGNvbnRlbXBvcmFpbmUlMkNCb2R5JTIwcG9zaXRpdmUlMkNSZWNvbnN0cnVjdGlvbg==" data-listing-date-sort="1719705600000" data-listing-file-modified-sort="1794690946231" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="914">
+    <span class="hp-book-cover">
+
+      <img src="./images/couvertures/be-yourself.jpg" alt="Be Yourself" loading="lazy" decoding="async">
+
+    </span>
+    <span class="hp-book-title">Be Yourself</span>
+  </a>
+
+  <a class="hp-book" href="./romans/believe-in-santa-klaus.html" data-index="7" data-categories="Um9tYW5jZSUyMGRlJTIwTm8lQzMlQUJsJTJDRmVlbC1nb29k" data-listing-date-sort="1733011200000" data-listing-file-modified-sort="1794690946231" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="961">
+    <span class="hp-book-cover">
+
+      <img src="./images/couvertures/believe-in-santa-klaus.jpg" alt="Believe In (Santa) Klaus" loading="lazy" decoding="async">
+
+    </span>
+    <span class="hp-book-title">Believe In (Santa) Klaus</span>
+  </a>
+
+  <a class="hp-book" href="./romans/black-feelings-1.html" data-index="8" data-categories="Um9tYW5jZSUyMGNvbnRlbXBvcmFpbmUlMkNIYXJjJUMzJUE4bGVtZW50JTJDRHJhbWU=" data-listing-date-sort="1725148800000" data-listing-file-modified-sort="1794690946231" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="921">
+    <span class="hp-book-cover">
+
+      <img src="./images/couvertures/black-feelings-1.jpg" alt="Black Feelings — Tome 1" loading="lazy" decoding="async">
+
+    </span>
+    <span class="hp-book-title">Black Feelings — Tome 1</span>
+  </a>
+
+  <a class="hp-book" href="./romans/black-feelings-2.html" data-index="9" data-categories="Um9tYW5jZSUyMGNvbnRlbXBvcmFpbmUlMkNIYXJjJUMzJUE4bGVtZW50JTJDU2Vjb25kZSUyMGNoYW5jZQ==" data-listing-date-sort="1725926400000" data-listing-file-modified-sort="1794690946231" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="952">
+    <span class="hp-book-cover">
+
+      <img src="./images/couvertures/black-feelings-2.jpg" alt="Black Feelings — Tome 2" loading="lazy" decoding="async">
+
+    </span>
+    <span class="hp-book-title">Black Feelings — Tome 2</span>
+  </a>
+
+  <a class="hp-book" href="./romans/cops-and-love-will-hunter.html" data-index="10" data-categories="Um9tYW50aWMlMjBTdXNwZW5zZSUyQ0ZyYXRyaWUlMkNOaWdodGxpZmU=" data-listing-date-sort="1759276800000" data-listing-file-modified-sort="1794690946231" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1031">
+    <span class="hp-book-cover">
+
+      <img src="./images/couvertures/cops-and-love-will-hunter.jpg" alt="COPS and love — Will Hunter, le bad boy" loading="lazy" decoding="async">
+
+    </span>
+    <span class="hp-book-title">COPS and love — Will Hunter, le bad boy</span>
+  </a>
+
+  <a class="hp-book" href="./romans/cops-love-lewis.html" data-index="11" data-categories="Um9tYW50aWMlMjBTdXNwZW5zZSUyQ0ZyYXRyaWUlMkNBZGRpY3Rpb25zJTJDSW50ZXJkaXQ=" data-listing-date-sort="1742428800000" data-listing-file-modified-sort="1794690946231" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="939">
+    <span class="hp-book-cover">
+
+      <img src="./images/couvertures/cops-lewis.jpg" alt="COPS and Love — Lewis Hunter, l’ange déchu" loading="lazy" decoding="async">
+
+    </span>
+    <span class="hp-book-title">COPS and Love — Lewis Hunter, l’ange déchu</span>
+  </a>
+
+  <a class="hp-book" href="./romans/cops-love-noah.html" data-index="12" data-categories="Um9tYW50aWMlMjBTdXNwZW5zZSUyQ0ZyYXRyaWUlMkNOb3V2ZWxsZSUyMHZpZQ==" data-listing-date-sort="1741996800000" data-listing-file-modified-sort="1794690946231" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1009">
+    <span class="hp-book-cover">
+
+      <img src="./images/couvertures/cops-noah.jpg" alt="COPS and Love — Noah Hunter, le bon flic" loading="lazy" decoding="async">
+
+    </span>
+    <span class="hp-book-title">COPS and Love — Noah Hunter, le bon flic</span>
+  </a>
+
+  <a class="hp-book" href="./romans/dans-les-fleurs.html" data-index="13" data-categories="Um9tYW5jZSUyMGNvbnRlbXBvcmFpbmUlMkNQcmludGVtcHMlMkMlQzMlODltb3Rpb25z" data-listing-date-sort="1713139200000" data-listing-file-modified-sort="1794690946231" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="938">
+    <span class="hp-book-cover">
+
+      <img src="./images/couvertures/fleurs.jpg" alt="Dans les fleurs" loading="lazy" decoding="async">
+
+    </span>
+    <span class="hp-book-title">Dans les fleurs</span>
+  </a>
+
+  <a class="hp-book" href="./romans/en-pleine-nature.html" data-index="14" data-categories="Um9tYW5jZSUyMGNvbnRlbXBvcmFpbmUlMkNFbm5lbWllcyUyMHRvJTIwTG92ZXJzJTJDTmF0dXJlJTJDVm95YWdl" data-listing-date-sort="1747008000000" data-listing-file-modified-sort="1794690946231" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="977">
+    <span class="hp-book-cover">
+
+      <img src="./images/couvertures/nature.jpg" alt="En pleine nature" loading="lazy" decoding="async">
+
+    </span>
+    <span class="hp-book-title">En pleine nature</span>
+  </a>
+
+  <a class="hp-book" href="./romans/et-zut.html" data-index="15" data-categories="Q29tJUMzJUE5ZGllJTIwcm9tYW50aXF1ZSUyQ0VuZW1pZXMlMjB0byUyMExvdmVycyUyQ0ZlZWwtZ29vZA==" data-listing-date-sort="1744416000000" data-listing-file-modified-sort="1794690946231" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="932">
+    <span class="hp-book-cover">
+
+      <img src="./images/couvertures/et-zut.jpg" alt="Et Zut !" loading="lazy" decoding="async">
+
+    </span>
+    <span class="hp-book-title">Et Zut !</span>
+  </a>
+
+  <a class="hp-book" href="./romans/jai-juste-clique.html" data-index="16" data-categories="Um9tYW5jZSUyMGNvbnRlbXBvcmFpbmUlMkNJbnRlcm5ldCUyQ0ZhdXglMjBzZW1ibGFudHM=" data-listing-date-sort="1716595200000" data-listing-file-modified-sort="1794690946231" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="917">
+    <span class="hp-book-cover">
+
+      <img src="./images/couvertures/jai-juste-clique.jpg" alt="J’ai juste cliqué !" loading="lazy" decoding="async">
+
+    </span>
+    <span class="hp-book-title">J’ai juste cliqué !</span>
+  </a>
+
+  <a class="hp-book" href="./romans/my-sweet-babysitter.html" data-index="17" data-categories="Um9tYW5jZSUyMGNvbnRlbXBvcmFpbmUlMkNNYW1hbiUyMHNvbG8lMkNCYWJ5LXNpdHRlcg==" data-listing-date-sort="1715731200000" data-listing-file-modified-sort="1794690946231" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="876">
+    <span class="hp-book-cover">
+
+      <img src="./images/couvertures/my-sweet-babysitter.jpg" alt="My Sweet Babysitter" loading="lazy" decoding="async">
+
+    </span>
+    <span class="hp-book-title">My Sweet Babysitter</span>
+  </a>
+
+  <a class="hp-book" href="./romans/noel-coups-bas.html" data-index="18" data-categories="Um9tYW5jZSUyMGRlJTIwTm8lQzMlQUJsJTJDRW5lbWllcyUyMHRvJTIwTG92ZXJzJTJDQnVyZWF1JTJDRmVlbC1nb29k" data-listing-date-sort="1733788800000" data-listing-file-modified-sort="1794690946231" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="925">
+    <span class="hp-book-cover">
+
+      <img src="./images/couvertures/noel-coups-bas.jpg" alt="Noël, coups bas et Secret Santa" loading="lazy" decoding="async">
+
+    </span>
+    <span class="hp-book-title">Noël, coups bas et Secret Santa</span>
+  </a>
+
+  <a class="hp-book" href="./romans/noel-princesse-licorne.html" data-index="19" data-categories="Um9tYW5jZSUyMGRlJTIwTm8lQzMlQUJsJTJDQ29tJUMzJUE5ZGllJTIwcm9tYW50aXF1ZSUyQ0ZlZWwtZ29vZA==" data-listing-date-sort="1734652800000" data-listing-file-modified-sort="1794690946231" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="971">
+    <span class="hp-book-cover">
+
+      <img src="./images/couvertures/princesse-licorne.jpg" alt="À Noël, je serai une princesse licorne !" loading="lazy" decoding="async">
+
+    </span>
+    <span class="hp-book-title">À Noël, je serai une princesse licorne !</span>
+  </a>
+
+  <a class="hp-book" href="./romans/poupee-bimbo.html" data-index="20" data-categories="Um9tYW5jZSUyMGRlJTIwTm8lQzMlQUJsJTJDQ29tJUMzJUE5ZGllJTIwcm9tYW50aXF1ZSUyQ0ZhbWlsbGUlMkNGZWVsLWdvb2Q=" data-listing-date-sort="1733356800000" data-listing-file-modified-sort="1794690946231" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="920">
+    <span class="hp-book-cover">
+
+      <img src="./images/couvertures/poupee-bimbo.jpg" alt="Homme sérieux recherche poupée Bimbo pour Noël" loading="lazy" decoding="async">
+
+    </span>
+    <span class="hp-book-title">Homme sérieux recherche poupée Bimbo pour Noël</span>
+  </a>
+
+  <a class="hp-book" href="./romans/sur-le-sable.html" data-index="21" data-categories="Um9tYW5jZSUyMGNvbnRlbXBvcmFpbmUlMkMlQzMlODl0JUMzJUE5JTJDU2Vjb25kZSUyMGNoYW5jZQ==" data-listing-date-sort="1720569600000" data-listing-file-modified-sort="1794690946231" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="943">
+    <span class="hp-book-cover">
+
+      <img src="./images/couvertures/sur-le-sable.jpg" alt="Sur le sable" loading="lazy" decoding="async">
+
+    </span>
+    <span class="hp-book-title">Sur le sable</span>
+  </a>
+
+  <a class="hp-book" href="./romans/undress-me.html" data-index="22" data-categories="Um9tYW5jZSUyMGNvbnRlbXBvcmFpbmUlMkNTZXh5JTJDJUMzJTg5bW90aW9ucyUyMGZvcnRlcw==" data-listing-date-sort="1717977600000" data-listing-file-modified-sort="1794690946231" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="918">
+    <span class="hp-book-cover">
+
+      <img src="./images/couvertures/undress-me.jpg" alt="Undress Me" loading="lazy" decoding="async">
+
+    </span>
+    <span class="hp-book-title">Undress Me</span>
+  </a>
+
+</div>
+<div class="listing-no-matching d-none">Aucun article correspondant</div>
+</div>
+        <button type="button" class="hp-car-btn hp-car-next" aria-label="Romans suivants"><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
+    </div>
+    <div class="hp-section-foot">
+        <a href="romans.html" class="hp-link">Voir les romans par catégorie <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+    </div>
+</section>
+
+<!-- ===== DERNIÈRES ACTUALITÉS (3 derniers articles, automatique) ===== -->
+<section class="hp-news hp-bleed" aria-labelledby="hp-news-title">
+    <div class="hp-wrap">
+        <div class="hp-section-head fade-in-scroll">
+            <span class="hp-kicker">Le journal de Mo</span>
+            <h2 id="hp-news-title" class="hp-h2 anchored">Dernières actualités</h2>
+        </div>
+<div id="listing-hp-news" class="quarto-listing quarto-listing-container-grid">
+<div class="list grid quarto-listing-cols-3">
+<div class="g-col-1" data-index="0" data-categories="QWN0dWFsaXQlQzMlQTlzJTJDTm91dmVhdXQlQzMlQTk=" data-listing-date-sort="1794614400000" data-listing-file-modified-sort="1794690946207" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="383">
+<a href="./posts/2026-11-14-fille-pere-noel-fils-pere-fouettard.html" class="quarto-grid-link no-external-icon">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="./images/visuels/fille-pere-noel-familles.webp" class="thumbnail-image card-img" style="height: 210px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Elle est la fille du Père&nbsp;Noël &amp; je suis le fils du Père&nbsp;Fouettard
+</h5>
+<div class="card-text listing-description">
+<p>À Noël, quel camp choisirez-vous&nbsp;?</p>
+</div>
+<div class="card-attribution card-text-small end">
+<div class="listing-date">
+14 nov. 2026
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="1" data-categories="dmllJTIwZCdhdXRldXJlJTJDaHVtb3VyJTJDY291bGlzc2Vz" data-listing-date-sort="1774396800000" data-listing-file-modified-sort="1794690946207" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="9" data-listing-word-count-sort="1611">
+<a href="./posts/2026-03-25-arte-tv.html" class="quarto-grid-link no-external-icon">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="./posts/images/blog/032526/mo_devant_tv.png" class="thumbnail-image card-img" style="height: 210px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Arte et moi : une apparition (presque) involontaire
+</h5>
+<div class="card-text listing-description">
+<p>Le jour où ma sœur et moi avons failli devenir des icônes télévisuelles sur Arte.</p>
+</div>
+<div class="card-attribution card-text-small end">
+<div class="listing-date">
+25 mars 2026
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="2" data-categories="QWN0dWFsaXQlQzMlQTlzJTJDU2Fsb24lMkNCZWxnaXVt" data-listing-date-sort="1773964800000" data-listing-file-modified-sort="1794690946207" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="677">
+<a href="./posts/2026-03-20-dedicace-etranger.html" class="quarto-grid-link no-external-icon">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="./posts/images/blog/im2_converted.webp" class="thumbnail-image card-img" style="height: 210px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Je dédicace à l’étranger !
+</h5>
+<div class="card-text listing-description">
+<p>L’un de mes vieux rêves vient de se réaliser : rencontrer mes lecteurs belges au Salon Love Story à Mons.</p>
+</div>
+<div class="card-attribution card-text-small end">
+<div class="listing-date">
+20 mars 2026
+</div>
+</div>
+</div>
+</div></a>
+</div>
+</div>
+<div class="listing-no-matching d-none">Aucun article correspondant</div>
+</div>
+        <div class="hp-section-foot">
+            <a href="blog.html" class="hp-link">Toutes les actualités <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+        </div>
+    </div>
+</section>
+
+<!-- ===== À PROPOS ===== -->
+<section id="about" class="hp-about hp-bleed" aria-labelledby="hp-about-title">
+    <div class="hp-wrap hp-about-grid">
+        <figure class="hp-about-portrait fade-in-scroll figure">
+            <img src="images/author-portrait.webp" width="713" height="719" loading="lazy" alt="Portrait de Mo Gadarr" class="figure-img">
+        </figure>
+        <div class="hp-about-text fade-in-scroll">
+            <span class="hp-kicker">L'auteure</span>
+            <h2 id="hp-about-title" class="hp-h2 anchored">À propos de Mo Gadarr</h2>
+            <p>Professeur de français et auteure hybride, Mo Gadarr mêle romance et sujets de société pour créer une "Romance engagée". D'abord découverte sur Fyctia avec <em>Black Feelings</em>, elle captive désormais ses lecteurs chez Black Ink et en auto-édition.</p>
+            <ul class="hp-facts">
+                <li><i class="bi bi-trophy-fill" aria-hidden="true"></i><span><strong>Lauréate du concours Fyctia</strong> avec <em>Black Feelings</em></span></li>
+                <li><i class="bi bi-book-half" aria-hidden="true"></i><span><strong><span id="hpBookCount">23</span> romans</strong> à découvrir</span></li>
+                <li><i class="bi bi-feather" aria-hidden="true"></i><span><strong>Auteure hybride</strong> · Black Ink &amp; auto-édition</span></li>
+            </ul>
+            <a href="about.html" class="hp-btn hp-btn-ghost">Découvrir son parcours <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+        </div>
+    </div>
+</section>
+
+<!-- ===== NEWSLETTER ===== -->
+<section id="newsletter" class="newsletter hp-newsletter fade-in-scroll">
+    <h2 class="anchored">Rejoignez le Cercle des Intimes</h2>
+    <p>Soyez les premiers informés des nouvelles sorties et du contenu exclusif.</p>
+    <form class="newsletter-form" id="newsletterForm">
+        <input type="email" id="newsletterEmail" placeholder="Votre adresse email" required="">
+        <button type="submit" class="btn-primary">S'abonner</button>
+    </form>
 </section>
 
 <style>
-/* ===== HOMEPAGE : CARTE FILTRE PHOTO DE NOËL ===== */
+/* ============================================================
+   ACCUEIL — ÉDITION NOËL
+   Nuit #0A0F24 · Rouge #D42A35 · Or #E8C170 · Givre #A9C8FF
+   ============================================================ */
+/* Sections pleine largeur (body a déjà overflow-x: hidden dans styles.css) */
+.hp-bleed { width: 100vw; margin-left: calc(50% - 50vw) !important; margin-right: calc(50% - 50vw) !important; }
+.hp-wrap { max-width: 1100px; margin: 0 auto; padding: 0 1.5rem; }
+.hp-kicker {
+    display: block; font-size: 0.7rem; letter-spacing: 4px; text-transform: uppercase;
+    font-weight: 700; color: #E8C170; margin-bottom: 0.7rem;
+}
+.hp-h2 {
+    font-family: 'Playfair Display', serif; font-size: clamp(1.9rem, 3.4vw, 2.7rem);
+    line-height: 1.15; margin: 0; color: #FBF1E4;
+    border-bottom: 0 !important; padding-bottom: 0 !important;
+}
+.hp-section-head { text-align: center; margin: 0 auto 2.4rem; }
+.hp-section-foot { text-align: center; margin-top: 1.8rem; }
+.hp-link { color: #E8C170 !important; font-weight: 700; text-decoration: none; letter-spacing: 0.3px; }
+.hp-link:hover { text-decoration: underline; }
+body .anchorjs-link { display: none !important; } /* pas d'icônes d'ancre sur l'accueil */
+body.hp-home #title-block-header { display: none !important; } /* le titre visible est le <h1> du hero */
+.nowrap { white-space: nowrap; }
+
+.hp-btn {
+    display: inline-flex; align-items: center; gap: 0.55rem; padding: 0.95rem 2rem; border-radius: 50px;
+    font-weight: 800; font-size: 0.95rem; text-decoration: none; white-space: nowrap;
+    transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+}
+.hp-btn-red { background: linear-gradient(135deg, #B81D2B, #E1444C); color: #fff !important; box-shadow: 0 10px 30px rgba(212, 42, 53, 0.35); }
+.hp-btn-red:hover { transform: translateY(-3px); box-shadow: 0 16px 40px rgba(212, 42, 53, 0.5); color: #fff !important; }
+.hp-btn-ghost { color: #E8C170 !important; border: 1px solid rgba(232, 193, 112, 0.45); background: rgba(232, 193, 112, 0.06); }
+.hp-btn-ghost:hover { background: rgba(232, 193, 112, 0.14); transform: translateY(-3px); color: #E8C170 !important; }
+
+/* --- Hero --- */
+.hp-hero {
+    /* remonte la photo jusque sous la barre de navigation (écart mesuré : 14 px) */
+    position: relative; isolation: isolate; margin-top: -36px !important; padding-bottom: 4.5rem;
+    background: linear-gradient(180deg, #0A0F24 0%, #0A0F24 72%, rgba(10, 15, 36, 0) 100%);
+}
+.hp-hero-media { position: relative; margin: 0; height: min(76vh, 780px); min-height: 460px; overflow: hidden; }
+.hp-hero-media img {
+    display: block; width: 100%; height: 100%; object-fit: cover; object-position: 50% 18%;
+    transform-origin: 50% 35%; animation: hp-kenburns 26s ease-in-out infinite alternate;
+}
+@keyframes hp-kenburns { from { transform: scale(1); } to { transform: scale(1.05); } }
+.hp-hero-media::after {
+    content: ''; position: absolute; inset: 0; pointer-events: none;
+    background:
+        linear-gradient(90deg, rgba(158, 22, 36, 0.28), transparent 28%, transparent 72%, rgba(46, 72, 140, 0.3)),
+        linear-gradient(180deg, rgba(10, 15, 36, 0.35) 0%, transparent 16%, transparent 60%, #0A0F24 100%);
+}
+.hp-hero-caption {
+    position: absolute; right: 1.4rem; top: 1.3rem; z-index: 3;
+    display: inline-flex; align-items: center; gap: 0.45rem; padding: 0.45rem 0.95rem; border-radius: 50px;
+    font-size: 0.72rem; font-weight: 700; letter-spacing: 0.5px; color: #fff;
+    background: rgba(10, 15, 36, 0.45); border: 1px solid rgba(255, 255, 255, 0.2);
+    -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px);
+}
+.hp-snow { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 2; pointer-events: none; }
+.hp-hero-panel {
+    position: relative; z-index: 4; max-width: 760px; margin: -4.5rem auto 0; text-align: center;
+    padding: 2.2rem 2.4rem 2.4rem; border-radius: 28px;
+    background: rgba(10, 15, 36, 0.66);
+    -webkit-backdrop-filter: blur(16px) saturate(1.2); backdrop-filter: blur(16px) saturate(1.2);
+    border: 1px solid rgba(232, 193, 112, 0.25); box-shadow: 0 30px 70px rgba(0, 0, 0, 0.45);
+}
+.hp-hero-kicker { display: block; font-size: 0.72rem; letter-spacing: 4px; text-transform: uppercase; font-weight: 700; color: #E8C170; }
+.hp-hero-title {
+    font-family: 'Playfair Display', serif; font-size: clamp(2.6rem, 6vw, 4.4rem); line-height: 1.05;
+    margin: 0.5rem 0 0.6rem; letter-spacing: -1px; border-bottom: 0 !important; padding-bottom: 0 !important;
+    background: linear-gradient(135deg, #FBF1E4 20%, #E8C170 70%, #F4D58D);
+    -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
+}
+.hp-hero-tagline { font-family: 'Playfair Display', serif; font-style: italic; font-size: clamp(1.05rem, 1.8vw, 1.3rem); color: rgba(245, 238, 230, 0.85); margin: 0 0 0.9rem; }
+.hp-hero-book { font-size: 0.95rem; color: rgba(245, 238, 230, 0.72); margin: 0 0 1.6rem; }
+.hp-hero-book em { font-style: normal; font-weight: 700; color: #F4D58D; }
+.hp-hero-cta { display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; }
+
+/* --- À la Une : cartes aux couleurs de Noël, même largeur que le reste --- */
+.hp-featured { padding: 1rem 0 2rem; }
+#featured .featured-wrapper.featured-wrapper--noel { max-width: none; padding: 0; }
+#featured .featured-card.featured-card--noel {
+    max-width: none !important; margin: 0 auto 2.5rem !important; padding: 2.6rem 3rem !important; gap: 3rem;
+    background:
+        radial-gradient(ellipse at 12% 20%, rgba(212, 42, 53, 0.22), transparent 55%),
+        radial-gradient(ellipse at 92% 92%, rgba(46, 72, 140, 0.3), transparent 55%),
+        linear-gradient(135deg, #0A0F24, #141C40) !important;
+    border: 1px solid rgba(232, 193, 112, 0.22) !important;
+}
+#featured .featured-card--noel::before { display: none; }
+#featured .featured-card--noel .book-cover {
+    flex: 0 0 240px; max-width: 240px; height: auto !important; padding: 0 !important;
+    background: transparent !important; border: 0 !important; box-shadow: none !important;
+}
+#featured .featured-card--noel .featured-book-img {
+    aspect-ratio: 2 / 3; border-radius: 8px !important;
+    box-shadow: -18px 22px 50px rgba(0, 0, 0, 0.55), 0 0 40px rgba(212, 42, 53, 0.15);
+}
+#featured .featured-card--noel h3.featured-title-long {
+    font-size: clamp(1.6rem, 2.6vw, 2.3rem) !important; letter-spacing: -0.3px !important; line-height: 1.15 !important;
+    background: linear-gradient(135deg, #FBF1E4, #F4D58D 60%, #E1444C) !important;
+    -webkit-background-clip: text !important; background-clip: text !important; -webkit-text-fill-color: transparent !important;
+}
+#featured .featured-card--noel h3.featured-title-long span {
+    display: block; margin-top: 0.25rem;
+    background: linear-gradient(135deg, #DCE8FF, #A9C8FF 55%, #6F93D6);
+    -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
+}
+#featured .featured-card--noel .genre {
+    color: #E8C170 !important; border-color: rgba(232, 193, 112, 0.35) !important;
+    background: rgba(232, 193, 112, 0.06) !important; letter-spacing: 2px !important;
+}
+#featured .featured-card--noel p { color: rgba(245, 238, 230, 0.82) !important; }
+#featured .featured-card--noel .btn-primary {
+    background: linear-gradient(135deg, #B81D2B, #E1444C) !important; color: #fff !important;
+    border: 0 !important; box-shadow: 0 10px 30px rgba(212, 42, 53, 0.35) !important;
+}
+#featured .featured-card--noel .btn-text { color: #E8C170 !important; border-color: rgba(232, 193, 112, 0.45) !important; }
+#featured .featured-card--noel .btn-text:hover { background: rgba(232, 193, 112, 0.14) !important; color: #E8C170 !important; }
+#featured .hp-ar-wrap { max-width: none; margin: 0 auto 1rem; }
+
+/* --- Carte du filtre photo (inchangée) --- */
 .hp-ar-wrap {
     position: relative; overflow: hidden;
     max-width: 1100px; margin: 0 auto 3rem;
@@ -506,33 +1065,17 @@ ul.task-list li input[type="checkbox"] {
     box-shadow: 0 30px 80px rgba(0,0,0,0.4), 0 0 0 1px rgba(232,193,112,0.08);
     padding: 3.5rem 3rem;
 }
-.hp-ar-canvas {
-    position: absolute; inset: 0; pointer-events: none; z-index: 0; border-radius: 28px;
-}
-.hp-ar-inner {
-    position: relative; z-index: 2;
-    display: grid; grid-template-columns: 1fr auto;
-    gap: 4rem; align-items: center;
-}
+.hp-ar-canvas { position: absolute; inset: 0; pointer-events: none; z-index: 0; border-radius: 28px; width: 100%; height: 100%; }
+.hp-ar-inner { position: relative; z-index: 2; display: grid; grid-template-columns: 1fr auto; gap: 4rem; align-items: center; }
 .hp-ar-badge {
     display: inline-flex; align-items: center; gap: 0.5rem;
     font-size: 0.62rem; letter-spacing: 3px; text-transform: uppercase;
     color: #E8C170; border: 1px solid rgba(232,193,112,0.3);
     padding: 0.4rem 1rem; border-radius: 50px; margin-bottom: 1.2rem; font-weight: 700;
 }
-.hp-ar-dot {
-    width: 6px; height: 6px; border-radius: 50%; background: #E1444C;
-    animation: hp-dot-pulse 1.5s ease-in-out infinite;
-}
-@keyframes hp-dot-pulse {
-    0%,100%{box-shadow:0 0 0 0 rgba(225,68,76,0.6);}
-    50%{box-shadow:0 0 0 5px rgba(225,68,76,0);}
-}
-.hp-ar-heading {
-    font-family: 'Playfair Display', serif;
-    font-size: clamp(1.6rem, 3.5vw, 2.8rem);
-    font-weight: 700; line-height: 1.2; color: #FBF1E4; margin: 0 0 1rem;
-}
+.hp-ar-dot { width: 6px; height: 6px; border-radius: 50%; background: #E1444C; animation: hp-dot-pulse 1.5s ease-in-out infinite; }
+@keyframes hp-dot-pulse { 0%,100%{box-shadow:0 0 0 0 rgba(225,68,76,0.6);} 50%{box-shadow:0 0 0 5px rgba(225,68,76,0);} }
+.hp-ar-heading { font-family: 'Playfair Display', serif; font-size: clamp(1.6rem, 3.5vw, 2.8rem); font-weight: 700; line-height: 1.2; color: #FBF1E4; margin: 0 0 1rem; }
 .hp-ar-heading em {
     font-style: italic;
     background: linear-gradient(135deg, #E8C170, #FBF1E4, #A9C8FF, #E8C170);
@@ -541,181 +1084,274 @@ ul.task-list li input[type="checkbox"] {
     animation: hp-shimmer 5s ease-in-out infinite;
 }
 @keyframes hp-shimmer { 0%{background-position:0% center;} 100%{background-position:200% center;} }
-.hp-ar-sub {
-    font-size: 0.98rem; line-height: 1.8;
-    color: rgba(245,238,230,0.6); margin-bottom: 1.5rem; max-width: 440px;
-}
+.hp-ar-sub { font-size: 0.98rem; line-height: 1.8; color: rgba(245,238,230,0.6); margin-bottom: 1.5rem; max-width: 440px; }
 .hp-ar-pills { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-bottom: 2rem; }
-.hp-ar-pill {
-    font-size: 0.78rem; font-weight: 600;
-    padding: 0.4rem 1rem; border-radius: 50px;
-    background: rgba(232,193,112,0.07); border: 1px solid rgba(232,193,112,0.16);
-    color: rgba(245,238,230,0.72);
-}
+.hp-ar-pill { font-size: 0.78rem; font-weight: 600; padding: 0.4rem 1rem; border-radius: 50px; background: rgba(232,193,112,0.07); border: 1px solid rgba(232,193,112,0.16); color: rgba(245,238,230,0.72); }
 .hp-ar-cta {
-    display: inline-flex; align-items: center; gap: 0.7rem;
-    padding: 1rem 2.2rem; border-radius: 50px;
-    font-weight: 800; font-size: 0.95rem; text-decoration: none;
-    color: #fff !important;
-    background: linear-gradient(135deg, #B81D2B, #E1444C, #B81D2B);
-    background-size: 200% auto;
-    box-shadow: 0 8px 35px rgba(212,42,53,0.35);
-    transition: all 0.4s; animation: hp-shimmer 4s linear infinite;
+    display: inline-flex; align-items: center; gap: 0.7rem; padding: 1rem 2.2rem; border-radius: 50px;
+    font-weight: 800; font-size: 0.95rem; text-decoration: none; color: #fff !important;
+    background: linear-gradient(135deg, #B81D2B, #E1444C, #B81D2B); background-size: 200% auto;
+    box-shadow: 0 8px 35px rgba(212,42,53,0.35); transition: all 0.4s; animation: hp-shimmer 4s linear infinite;
 }
 .hp-ar-cta:hover { transform: translateY(-3px) scale(1.02); box-shadow: 0 14px 45px rgba(212,42,53,0.5); color: #fff !important; }
-/* Téléphone */
 .hp-ar-visual { position: relative; display: flex; align-items: center; justify-content: center; }
 .hp-ar-phone {
-    width: 190px; height: 370px; border-radius: 32px;
-    background: linear-gradient(160deg, #141C40, #0A0F24);
-    border: 2px solid rgba(232,193,112,0.25);
-    box-shadow: 0 25px 70px rgba(0,0,0,0.6), inset 0 0 25px rgba(46,72,140,0.25);
-    position: relative; overflow: hidden;
-    animation: hp-phone-float 6s ease-in-out infinite;
+    width: 190px; height: 370px; border-radius: 32px; background: linear-gradient(160deg, #141C40, #0A0F24);
+    border: 2px solid rgba(232,193,112,0.25); box-shadow: 0 25px 70px rgba(0,0,0,0.6), inset 0 0 25px rgba(46,72,140,0.25);
+    position: relative; overflow: hidden; animation: hp-phone-float 6s ease-in-out infinite;
 }
 @keyframes hp-phone-float { 0%,100%{transform:translateY(0) rotate(-2deg);} 50%{transform:translateY(-10px) rotate(-1deg);} }
-.hp-ar-notch {
-    position: absolute; top: 12px; left: 50%; transform: translateX(-50%);
-    width: 54px; height: 7px; border-radius: 4px; background: rgba(232,193,112,0.14); z-index: 5;
-}
-.hp-ar-screen {
-    position: absolute; inset: 5px; border-radius: 27px;
-    background: linear-gradient(160deg, #0A0F24, #121B3D); overflow: hidden;
-}
-.hp-ar-cam {
-    width: 100%; height: 100%; position: relative;
-    background: radial-gradient(ellipse at 30% 20%, rgba(212,42,53,0.25), transparent 60%), linear-gradient(160deg, #0E1638, #1A2550);
-}
+.hp-ar-notch { position: absolute; top: 12px; left: 50%; transform: translateX(-50%); width: 54px; height: 7px; border-radius: 4px; background: rgba(232,193,112,0.14); z-index: 5; }
+.hp-ar-screen { position: absolute; inset: 5px; border-radius: 27px; background: linear-gradient(160deg, #0A0F24, #121B3D); overflow: hidden; }
+.hp-ar-cam { width: 100%; height: 100%; position: relative; background: radial-gradient(ellipse at 30% 20%, rgba(212,42,53,0.25), transparent 60%), linear-gradient(160deg, #0E1638, #1A2550); }
 .hp-ar-garland { position: absolute; top: 24px; left: 12px; right: 12px; display: flex; justify-content: space-between; z-index: 3; }
-.hp-ar-garland span {
-    width: 8px; height: 11px; border-radius: 50%;
-    background: #E1444C; box-shadow: 0 0 10px #E1444C;
-    animation: hp-twinkle 1.8s ease-in-out infinite;
-}
+.hp-ar-garland span { width: 8px; height: 11px; border-radius: 50%; background: #E1444C; box-shadow: 0 0 10px #E1444C; animation: hp-twinkle 1.8s ease-in-out infinite; }
 .hp-ar-garland span:nth-child(2) { background: #F4D58D; box-shadow: 0 0 10px #F4D58D; animation-delay: .3s; margin-top: 6px; }
 .hp-ar-garland span:nth-child(3) { background: #3FAE6B; box-shadow: 0 0 10px #3FAE6B; animation-delay: .6s; margin-top: 9px; }
 .hp-ar-garland span:nth-child(4) { background: #A9C8FF; box-shadow: 0 0 10px #A9C8FF; animation-delay: .9s; margin-top: 6px; }
 .hp-ar-garland span:nth-child(5) { background: #F4D58D; box-shadow: 0 0 10px #F4D58D; animation-delay: 1.2s; }
 @keyframes hp-twinkle { 0%,100%{opacity:1;} 50%{opacity:0.35;} }
-.hp-ar-face {
-    position: absolute; left: 20px; top: 66px;
-    width: 80px; height: 106px; border-radius: 50px;
-    border: 1.5px dashed rgba(232,193,112,0.4);
-    animation: hp-face-pulse 3s ease-in-out infinite;
-}
+.hp-ar-face { position: absolute; left: 20px; top: 66px; width: 80px; height: 106px; border-radius: 50px; border: 1.5px dashed rgba(232,193,112,0.4); animation: hp-face-pulse 3s ease-in-out infinite; }
 @keyframes hp-face-pulse { 0%,100%{border-color:rgba(232,193,112,0.25);} 50%{border-color:rgba(232,193,112,0.6);box-shadow:0 0 12px rgba(232,193,112,0.12);} }
-.hp-ar-chars {
-    position: absolute; right: -14px; bottom: 30px; width: 130px; height: auto;
-    filter: drop-shadow(-3px 6px 10px rgba(0,0,0,0.5));
-    animation: hp-chars-float 4s ease-in-out infinite;
-}
+.hp-ar-chars { position: absolute; right: -14px; bottom: 30px; width: 130px; height: auto; filter: drop-shadow(-3px 6px 10px rgba(0,0,0,0.5)); animation: hp-chars-float 4s ease-in-out infinite; }
 @keyframes hp-chars-float { 0%,100%{transform:translateY(0);} 50%{transform:translateY(-5px);} }
-.hp-ar-tag {
-    position: absolute; left: 0; right: 0; bottom: 0; padding: 18px 0 10px; text-align: center; z-index: 3;
-    font-family: 'Playfair Display', serif; font-style: italic; font-size: 0.95rem; color: #F4D58D;
-    background: linear-gradient(180deg, transparent, rgba(60,6,16,0.88));
-}
-.hp-ar-glow {
-    position: absolute; width: 280px; height: 280px; border-radius: 50%; z-index: -1;
-    background: radial-gradient(circle, rgba(212,42,53,0.18), rgba(46,72,140,0.12) 45%, transparent 70%);
-    filter: blur(28px); animation: hp-glow 5s ease-in-out infinite;
-}
+.hp-ar-tag { position: absolute; left: 0; right: 0; bottom: 0; padding: 18px 0 10px; text-align: center; z-index: 3; font-family: 'Playfair Display', serif; font-style: italic; font-size: 0.95rem; color: #F4D58D; background: linear-gradient(180deg, transparent, rgba(60,6,16,0.88)); }
+.hp-ar-glow { position: absolute; width: 280px; height: 280px; border-radius: 50%; z-index: -1; background: radial-gradient(circle, rgba(212,42,53,0.18), rgba(46,72,140,0.12) 45%, transparent 70%); filter: blur(28px); animation: hp-glow 5s ease-in-out infinite; }
 @keyframes hp-glow { 0%,100%{transform:scale(1);opacity:0.6;} 50%{transform:scale(1.15);opacity:1;} }
 
-/* Nouveau roman : couverture au format livre (2:3) et titre long.
-   Sélecteurs renforcés pour surcharger les règles en !important de styles.css. */
-.featured-card.featured-card--noel .book-cover { height: auto !important; }
-.featured-book-img.featured-book-img--cover { aspect-ratio: 2 / 3; }
-.featured-card h3.featured-title-long {
-    font-size: clamp(1.6rem, 2.6vw, 2.2rem) !important;
-    letter-spacing: -0.3px !important; line-height: 1.15 !important;
+/* --- La collection : carrousel --- */
+.hp-collection { padding: 3.5rem 0 3rem; }
+.hp-carousel-shell { position: relative; max-width: 1400px; margin: 0 auto; }
+.hp-carousel {
+    display: flex; gap: 1.3rem; overflow-x: auto; scroll-snap-type: x mandatory; scroll-padding: 0 4vw;
+    padding: 0.8rem 4vw 1.6rem; margin: 0; list-style: none; outline: none;
+    scrollbar-width: none; -ms-overflow-style: none;
+    -webkit-mask-image: linear-gradient(90deg, transparent, #000 3.5%, #000 96.5%, transparent);
+    mask-image: linear-gradient(90deg, transparent, #000 3.5%, #000 96.5%, transparent);
 }
-.featured-card h3.featured-title-long span { display: block; margin-top: 0.25rem; }
-.featured-card.featured-card--noel .genre { letter-spacing: 2px !important; }
-.featured-card--noel .anchorjs-link, .hp-ar-wrap .anchorjs-link { display: none !important; }
-.nowrap { white-space: nowrap; }
-@media (min-width: 992px) {
-    /* Même largeur que la carte du filtre juste en dessous */
-    .featured-wrapper.featured-wrapper--noel { max-width: 1100px; padding: 0; }
-    .featured-card.featured-card--noel { margin: 1rem auto 3rem !important; padding: 2.4rem 2.8rem !important; gap: 2.8rem; }
-    .featured-card.featured-card--noel .book-cover { flex: 0 0 240px; max-width: 240px; padding: 10px; }
+.hp-carousel::-webkit-scrollbar { display: none; }
+.hp-carousel:focus-visible { box-shadow: inset 0 0 0 2px rgba(232, 193, 112, 0.6); border-radius: 12px; }
+.hp-book { flex: 0 0 clamp(150px, 15vw, 200px); scroll-snap-align: start; text-decoration: none !important; color: inherit; }
+.hp-book-cover {
+    display: block; aspect-ratio: 2 / 3; border-radius: 10px; overflow: hidden; background: #141C40;
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.45); transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.4s;
+}
+.hp-book-cover img { display: block; width: 100%; height: 100%; object-fit: cover; margin: 0 !important; border-radius: 0 !important; box-shadow: none !important; }
+.hp-book:hover .hp-book-cover, .hp-book:focus-visible .hp-book-cover { transform: translateY(-8px) rotate(-1deg); box-shadow: 0 22px 40px rgba(0, 0, 0, 0.55), 0 0 0 1px rgba(232, 193, 112, 0.4); }
+.hp-book-title {
+    display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
+    margin-top: 0.7rem; font-family: 'Playfair Display', serif; font-size: 0.95rem; line-height: 1.3; color: #FBF1E4;
+}
+.hp-car-btn {
+    position: absolute; top: calc(50% - 2.4rem); z-index: 3; transform: translateY(-50%);
+    width: 46px; height: 46px; border-radius: 50%; cursor: pointer; display: grid; place-items: center;
+    color: #FBF1E4; font-size: 1.1rem; background: rgba(10, 15, 36, 0.75); border: 1px solid rgba(232, 193, 112, 0.4);
+    -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); transition: opacity 0.3s, background 0.3s;
+}
+.hp-car-btn:hover { background: rgba(212, 42, 53, 0.85); }
+.hp-car-btn:disabled { opacity: 0; pointer-events: none; }
+.hp-car-prev { left: 1rem; }
+.hp-car-next { right: 1rem; }
+
+/* --- Dernières actualités (listing Quarto) --- */
+.hp-news { padding: 3rem 0 2rem; }
+.hp-news .quarto-listing { margin: 0 !important; }
+
+/* --- À propos --- */
+.hp-about { padding: 4.5rem 0 3rem; }
+.hp-about-grid { display: grid; grid-template-columns: 340px 1fr; gap: 4rem; align-items: center; }
+.hp-about-portrait { margin: 0; position: relative; }
+.hp-about-portrait::before {
+    content: ''; position: absolute; inset: -14px; border-radius: 200px 200px 28px 28px; z-index: 0;
+    background: linear-gradient(160deg, rgba(212, 42, 53, 0.45), rgba(232, 193, 112, 0.35) 50%, rgba(111, 147, 214, 0.45));
+    filter: blur(18px); opacity: 0.7;
+}
+.hp-about-portrait img {
+    position: relative; z-index: 1; display: block; width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover;
+    border-radius: 200px 200px 24px 24px; border: 1px solid rgba(232, 193, 112, 0.35);
+}
+.hp-about-text p { font-size: 1.08rem; line-height: 1.85; color: rgba(245, 238, 230, 0.82); margin: 1.2rem 0 1.4rem; }
+.hp-about-text .hp-h2 { text-align: left; }
+.hp-facts { list-style: none; padding: 0; margin: 0 0 2rem; display: grid; gap: 0.7rem; }
+.hp-facts li {
+    display: flex; align-items: center; gap: 0.9rem; padding: 0.8rem 1.1rem; border-radius: 16px;
+    background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(232, 193, 112, 0.16); color: rgba(245, 238, 230, 0.85);
+}
+.hp-facts i { font-size: 1.2rem; color: #E8C170; }
+.hp-facts li:nth-child(2) i { color: #E1444C; }
+.hp-facts li:nth-child(3) i { color: #A9C8FF; }
+.hp-facts strong { color: #FBF1E4; }
+
+/* --- Newsletter (l'id l'emporte sur « body.quarto-dark .newsletter » en !important) --- */
+#newsletter.hp-newsletter {
+    max-width: 1100px; margin: 3rem auto 4rem;
+    background: radial-gradient(ellipse at 10% 0%, rgba(212, 42, 53, 0.18), transparent 50%),
+                radial-gradient(ellipse at 90% 100%, rgba(46, 72, 140, 0.22), transparent 55%),
+                linear-gradient(135deg, #0A0F24, #141C40) !important;
+    border: 1px solid rgba(232, 193, 112, 0.2);
+}
+#newsletter.hp-newsletter h2 { border-bottom: 0 !important; padding-bottom: 0 !important; color: #FBF1E4 !important; }
+#newsletter.hp-newsletter p { color: rgba(245, 238, 230, 0.75) !important; }
+#newsletter.hp-newsletter .btn-primary {
+    background: linear-gradient(135deg, #B81D2B, #E1444C) !important; color: #fff !important;
+    box-shadow: 0 10px 30px rgba(212, 42, 53, 0.35) !important; border: 0 !important;
 }
 
-/* Light mode */
-body.quarto-light .hp-ar-wrap {
-    background: linear-gradient(135deg, #FBF6F0, #EEF1FA, #FBF6F0);
-    border-color: rgba(30,42,68,0.14);
+/* --- Mode clair --- */
+body.quarto-light .hp-h2, body.quarto-light .hp-book-title { color: #2A1E24; }
+body.quarto-light .hp-kicker, body.quarto-light .hp-hero-kicker { color: #9C7016; }
+body.quarto-light .hp-link, body.quarto-light .hp-btn-ghost { color: #9C7016 !important; }
+body.quarto-light .hp-btn-ghost { border-color: rgba(156, 112, 22, 0.45); background: rgba(156, 112, 22, 0.06); }
+body.quarto-light .hp-hero { background: linear-gradient(180deg, #FBF6F0 0%, #FBF6F0 72%, rgba(251, 246, 240, 0) 100%); }
+body.quarto-light .hp-hero-media::after {
+    background:
+        linear-gradient(90deg, rgba(212, 42, 53, 0.16), transparent 28%, transparent 72%, rgba(46, 72, 140, 0.16)),
+        linear-gradient(180deg, rgba(251, 246, 240, 0.2) 0%, transparent 16%, transparent 60%, #FBF6F0 100%);
 }
+body.quarto-light .hp-hero-panel { background: rgba(255, 255, 255, 0.82); border-color: rgba(156, 112, 22, 0.25); box-shadow: 0 25px 60px rgba(42, 30, 36, 0.18); }
+body.quarto-light .hp-hero-title { background: linear-gradient(135deg, #7A1B3D 10%, #B81D2B 50%, #2E488C); -webkit-background-clip: text; background-clip: text; }
+body.quarto-light .hp-hero-tagline { color: #4A3A40; }
+body.quarto-light .hp-hero-book { color: #6A5A60; }
+body.quarto-light .hp-hero-book em { color: #B81D2B; }
+body.quarto-light #featured .featured-card.featured-card--noel {
+    background: radial-gradient(ellipse at 12% 20%, rgba(212, 42, 53, 0.1), transparent 55%),
+                radial-gradient(ellipse at 92% 92%, rgba(46, 72, 140, 0.12), transparent 55%),
+                linear-gradient(135deg, #FFFBF6, #F3EEF7) !important;
+    border-color: rgba(156, 112, 22, 0.2) !important;
+}
+body.quarto-light #featured .featured-card--noel h3.featured-title-long { background: linear-gradient(135deg, #7A1B3D, #B81D2B 60%, #C99A3E) !important; -webkit-background-clip: text !important; background-clip: text !important; }
+body.quarto-light #featured .featured-card--noel h3.featured-title-long span { background: linear-gradient(135deg, #1E2A44, #2E488C 55%, #5B7FC7); -webkit-background-clip: text; background-clip: text; }
+body.quarto-light #featured .featured-card--noel p { color: #4A3A40 !important; }
+body.quarto-light #featured .featured-card--noel .genre { color: #9C7016 !important; border-color: rgba(156, 112, 22, 0.35) !important; }
+body.quarto-light #featured .featured-card--noel .btn-text { color: #9C7016 !important; border-color: rgba(156, 112, 22, 0.45) !important; }
+body.quarto-light .hp-ar-wrap { background: linear-gradient(135deg, #FBF6F0, #EEF1FA, #FBF6F0); border-color: rgba(30,42,68,0.14); }
 body.quarto-light .hp-ar-heading { color: #2A1E24; }
 body.quarto-light .hp-ar-heading em { background: linear-gradient(135deg, #B81D2B, #9C7016, #2E488C, #B81D2B); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; background-size: 200% auto; }
 body.quarto-light .hp-ar-badge { color: #9C7016; border-color: rgba(156,112,22,0.3); }
 body.quarto-light .hp-ar-sub { color: rgba(42,30,36,0.7); }
 body.quarto-light .hp-ar-pill { color: #4A3A40; background: rgba(30,42,68,0.05); border-color: rgba(30,42,68,0.12); }
+body.quarto-light .hp-car-btn { color: #2A1E24; background: rgba(255, 255, 255, 0.85); border-color: rgba(156, 112, 22, 0.35); }
+body.quarto-light .hp-car-btn:hover { color: #fff; background: rgba(184, 29, 43, 0.9); }
+body.quarto-light .hp-book-cover { box-shadow: 0 12px 26px rgba(42, 30, 36, 0.2); }
+body.quarto-light .hp-about-text p, body.quarto-light .hp-facts li { color: #4A3A40; }
+body.quarto-light .hp-facts li { background: rgba(255, 255, 255, 0.7); border-color: rgba(156, 112, 22, 0.18); }
+body.quarto-light .hp-facts strong { color: #2A1E24; }
+body.quarto-light #newsletter.hp-newsletter {
+    background: radial-gradient(ellipse at 10% 0%, rgba(212, 42, 53, 0.08), transparent 50%),
+                radial-gradient(ellipse at 90% 100%, rgba(46, 72, 140, 0.1), transparent 55%),
+                linear-gradient(135deg, #FFFBF6, #F3EEF7) !important;
+    border-color: rgba(156, 112, 22, 0.2);
+}
+body.quarto-light #newsletter.hp-newsletter h2 { color: #2A1E24 !important; }
+body.quarto-light #newsletter.hp-newsletter p { color: #5A4A50 !important; }
 
+/* --- Tablette & mobile --- */
+@media (max-width: 991px) {
+    #featured .featured-card.featured-card--noel { padding: 3rem 1.6rem !important; }
+    #featured .featured-card--noel .book-cover { flex: 0 0 auto; width: min(62%, 240px) !important; max-width: 240px; margin: 0 auto; }
+    .hp-about-grid { grid-template-columns: 1fr; gap: 2.5rem; text-align: center; }
+    .hp-about-portrait { max-width: 280px; margin: 0 auto; }
+    .hp-about-text .hp-h2 { text-align: center; }
+    .hp-facts li { text-align: left; }
+}
 @media (max-width: 860px) {
     .hp-ar-inner { grid-template-columns: 1fr; gap: 2.5rem; text-align: center; }
     .hp-ar-pills { justify-content: center; }
     .hp-ar-sub { max-width: none; }
-    .hp-ar-wrap { padding: 2.5rem 1.5rem; margin-left: 0.75rem; margin-right: 0.75rem; }
+    .hp-ar-wrap { padding: 2.5rem 1.5rem; }
     .hp-ar-phone { width: 160px; height: 310px; }
     .hp-ar-chars { width: 110px; }
     .hp-ar-face { width: 66px; height: 88px; left: 16px; top: 60px; }
 }
+@media (max-width: 768px) {
+    .hp-hero { margin-top: -24px !important; padding-bottom: 3rem; } /* écart mesuré sur mobile : 18 px */
+    .hp-hero-media { height: auto; min-height: 0; aspect-ratio: 4 / 3.3; }
+    .hp-hero-media img { object-position: 50% 25%; }
+    .hp-hero-caption { top: auto; bottom: 2.9rem; right: 0.7rem; font-size: 0.62rem; padding: 0.35rem 0.7rem; }
+    .hp-hero-panel { margin: -2.2rem 0.9rem 0; padding: 1.8rem 1.2rem 2rem; }
+    .hp-hero-cta .hp-btn { width: 100%; justify-content: center; }
+    .hp-wrap { padding: 0 0.9rem; }
+    .hp-car-btn { display: none; }
+    .hp-book { flex-basis: 40vw; }
+    .hp-carousel { padding: 0.6rem 5vw 1.4rem; scroll-padding: 0 5vw; }
+    #newsletter.hp-newsletter { margin: 2rem 0.9rem 3rem; }
+}
 @media (prefers-reduced-motion: reduce) {
-    .hp-ar-phone, .hp-ar-chars, .hp-ar-garland span, .hp-ar-heading em, .hp-ar-cta, .hp-ar-dot, .hp-ar-face, .hp-ar-glow { animation: none; }
+    .hp-hero-media img, .hp-ar-phone, .hp-ar-chars, .hp-ar-garland span, .hp-ar-heading em, .hp-ar-cta, .hp-ar-dot, .hp-ar-face, .hp-ar-glow { animation: none; }
+    .hp-btn, .hp-book-cover { transition: none; }
 }
 </style>
 
 <script>
-/* Neige dans la carte du filtre (immobile si l'utilisateur préfère moins d'animations) */
-(function(){
-  var c = document.getElementById('hpArCanvas');
-  if (!c) return;
-  var ctx = c.getContext('2d'), ps = [];
+/* Neige (hero + carte du filtre) : en pause hors écran, immobile si « moins d'animations ». */
+(function () {
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  function resize() { var p = c.parentElement; c.width = p.offsetWidth; c.height = p.offsetHeight; }
-  function mkP(fromTop) { return {x:Math.random()*c.width, y: fromTop ? -4 : Math.random()*c.height, s:Math.random()*1.8+0.6, dx:(Math.random()-.5)*.3, dy:Math.random()*.45+.25, o:Math.random()*.45+.25}; }
-  function draw() {
-    ctx.clearRect(0,0,c.width,c.height);
-    var light = document.body.classList.contains('quarto-light');
-    ps.forEach(function(p, i){
-      ctx.beginPath(); ctx.arc(p.x,p.y,p.s,0,Math.PI*2);
-      ctx.fillStyle = light ? 'rgba(110,140,200,'+p.o+')' : 'rgba(255,255,255,'+p.o+')';
-      ctx.fill();
-      if (!reduce) {
-        p.x+=p.dx; p.y+=p.dy;
-        if (p.y>c.height+4) ps[i]=mkP(true);
-        if (p.x<-4) p.x=c.width+4; else if (p.x>c.width+4) p.x=-4;
+  function initSnow(canvas, maxFlakes) {
+    if (!canvas) return;
+    var ctx = canvas.getContext('2d'), W = 0, H = 0, flakes = [], rafId = null, visible = true;
+    function resize() {
+      var r = canvas.parentElement.getBoundingClientRect(), dpr = Math.min(window.devicePixelRatio || 1, 2);
+      W = r.width; H = r.height;
+      canvas.width = Math.round(W * dpr); canvas.height = Math.round(H * dpr);
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    }
+    function flake(y) {
+      return { x: Math.random() * W, y: (y === undefined) ? Math.random() * H : y, r: Math.random() * 2 + 0.6,
+               vy: Math.random() * 0.55 + 0.3, vx: Math.random() * 0.4 - 0.2, ph: Math.random() * 6.28, o: Math.random() * 0.5 + 0.3 };
+    }
+    function populate() { flakes = []; var n = Math.round(Math.min(maxFlakes, (W * H) / 12000)); for (var i = 0; i < n; i++) flakes.push(flake()); }
+    function paint() {
+      ctx.clearRect(0, 0, W, H);
+      var light = document.body.classList.contains('quarto-light');
+      for (var i = 0; i < flakes.length; i++) {
+        var f = flakes[i];
+        ctx.beginPath(); ctx.arc(f.x, f.y, f.r, 0, Math.PI * 2);
+        ctx.fillStyle = light ? 'rgba(120,150,205,' + (f.o * 0.8) + ')' : 'rgba(255,255,255,' + f.o + ')';
+        ctx.fill();
       }
-    });
-    if (!reduce) requestAnimationFrame(draw);
+    }
+    function step() {
+      for (var i = 0; i < flakes.length; i++) {
+        var f = flakes[i];
+        f.ph += 0.01; f.x += f.vx + Math.sin(f.ph) * 0.3; f.y += f.vy;
+        if (f.y > H + 5) flakes[i] = flake(-5);
+        if (f.x < -5) f.x = W + 5; else if (f.x > W + 5) f.x = -5;
+      }
+      paint(); rafId = requestAnimationFrame(step);
+    }
+    function start() { if (!reduce && visible && rafId === null) rafId = requestAnimationFrame(step); }
+    function stop() { if (rafId !== null) { cancelAnimationFrame(rafId); rafId = null; } }
+    resize(); populate(); paint(); start();
+    if ('IntersectionObserver' in window) {
+      new IntersectionObserver(function (e) { visible = e[0].isIntersecting; if (visible) start(); else stop(); }).observe(canvas);
+    }
+    var t; window.addEventListener('resize', function () { clearTimeout(t); t = setTimeout(function () { resize(); populate(); paint(); }, 150); });
   }
-  resize(); for(var i=0;i<60;i++)ps.push(mkP(false)); draw();
-  window.addEventListener('resize', resize);
+  initSnow(document.getElementById('hpHeroSnow'), 110);
+  initSnow(document.getElementById('hpArCanvas'), 60);
+})();
+
+/* Carrousel : boutons précédent / suivant + compteur de romans pour « À propos ». */
+(function () {
+  var shell = document.querySelector('.hp-carousel-shell');
+  var track = shell && shell.querySelector('.hp-carousel');
+  if (!track) return;
+  var prev = shell.querySelector('.hp-car-prev'), next = shell.querySelector('.hp-car-next');
+  var smooth = window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth';
+  function step() { return Math.max(track.clientWidth * 0.8, 200); }
+  function update() {
+    prev.disabled = track.scrollLeft <= 4;
+    next.disabled = track.scrollLeft + track.clientWidth >= track.scrollWidth - 4;
+  }
+  prev.addEventListener('click', function () { track.scrollBy({ left: -step(), behavior: smooth }); });
+  next.addEventListener('click', function () { track.scrollBy({ left: step(), behavior: smooth }); });
+  track.addEventListener('scroll', update, { passive: true });
+  window.addEventListener('resize', update);
+  update();
+  var count = track.querySelectorAll('.hp-book').length, out = document.getElementById('hpBookCount');
+  if (count && out) out.textContent = count;
 })();
 </script>
-
-
-<section id="about" class="about">
-    <div class="about-container">
-        <div class="about-text fade-in-scroll">
-            <h2 class="section-title anchored">À propos de l'auteure</h2>
-            <p>Professeur de français et auteure hybride, Mo Gadarr mêle romance et sujets de société pour créer une "Romance engagée". D'abord découverte sur Fyctia avec <em>Black Feelings</em>, elle captive désormais ses lecteurs chez Black Ink et en auto-édition.</p>
-            <div style="margin-top: 1.5rem;">
-                <a href="./about.html" class="btn-text">Découvrir son parcours <i class="bi bi-arrow-right"></i></a>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section id="newsletter" class="newsletter fade-in-scroll">
-    <h2 class="anchored">Rejoignez le Cercle des Intimes</h2>
-    <p>Soyez les premiers informés des nouvelles sorties et du contenu exclusif.</p>
-    <form class="newsletter-form" id="newsletterForm">
-        <input type="email" id="newsletterEmail" placeholder="Votre adresse email" required="">
-        <button type="submit" class="btn-primary">S'abonner</button>
-    </form>
-</section>
 
 <script>
 document.addEventListener('DOMContentLoaded', () => {
@@ -742,65 +1378,20 @@ document.addEventListener('DOMContentLoaded', () => {
 </script>
 
 <script>
+/* Apparition en fondu des éléments .fade-in-scroll */
 document.addEventListener('DOMContentLoaded', () => {
-    const observerOptions = {
-        root: null,
-        rootMargin: '0px',
-        threshold: 0.1
-    };
-
-    const observer = new IntersectionObserver((entries, observer) => {
+    const observer = new IntersectionObserver((entries, obs) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('visible');
-                observer.unobserve(entry.target);
+                obs.unobserve(entry.target);
             }
         });
-    }, observerOptions);
-
-    const fadeElements = document.querySelectorAll('.fade-in-scroll');
-    fadeElements.forEach(el => observer.observe(el));
-
-    // Looping Typing Effect Logic
-    const text = "Mo Gadarr";
-    const typingElement = document.getElementById('typing-text');
-    let index = 0;
-    let isDeleting = false;
-
-    function type() {
-        const speed = isDeleting ? 75 : 150 + Math.random() * 100;
-
-        if (!isDeleting && index < text.length) {
-            // Typing
-            typingElement.textContent += text.charAt(index);
-            index++;
-            setTimeout(type, speed);
-        } else if (isDeleting && index > 0) {
-            // Deleting
-            typingElement.textContent = text.substring(0, index - 1);
-            index--;
-            setTimeout(type, speed);
-        } else {
-            // Switch mode
-            isDeleting = !isDeleting;
-            // Pause before starting next phase
-            setTimeout(type, isDeleting ? 2000 : 1000);
-        }
-    }
-
-    // Delay typing slightly to wait for hero reveal
-    setTimeout(type, 1500);
-
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            document.querySelector(this.getAttribute('href')).scrollIntoView({
-                behavior: 'smooth'
-            });
-        });
-    });
+    }, { root: null, rootMargin: '0px', threshold: 0.1 });
+    document.querySelectorAll('.fade-in-scroll').forEach(el => observer.observe(el));
 });
 </script>
+
 
 
 
