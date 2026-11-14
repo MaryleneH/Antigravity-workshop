@@ -1,7 +1,8 @@
 ---
 title: "Prends de la bûche"
 subtitle: "Romance de Noël"
-description: "La nouveauté de Mo Gadarr — Enemies to lovers dans un hiver canadien"
+description: "La romance de Noël de Mo Gadarr — Enemies to lovers dans un hiver canadien"
+image: ../images/dernier-livre.jpg
 title-block-banner: true
 page-layout: full
 toc: false

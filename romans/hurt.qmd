@@ -2,6 +2,7 @@
 title: "Hurt (coécrit)"
 subtitle: "Une histoire d’émotions, coécrite par Mo Gadarr"
 description: "Un roman marquant, écrit à quatre mains, plébiscité par ses lectrices et lecteurs."
+image: ../images/couvertures/hurt.jpg
 title-block-banner: images/hero-romans.svg
 page-layout: full
 toc: false

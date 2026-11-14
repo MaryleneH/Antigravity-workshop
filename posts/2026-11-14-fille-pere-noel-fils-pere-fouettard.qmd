@@ -1,0 +1,55 @@
+---
+title: "Elle est la fille du Père Noël & je suis le fils du Père Fouettard"
+date: 2026-11-14
+categories: [Actualités, Nouveauté]
+description: "À Noël, quel camp choisirez-vous ?"
+# Vignette du blog : le visuel des deux familles ; aperçus réseaux : image de partage dédiée
+image: ../images/visuels/fille-pere-noel-familles.webp
+open-graph:
+  image: ../images/partage/fille-pere-noel-og.jpg
+twitter-card:
+  image: ../images/partage/fille-pere-noel-og.jpg
+---
+
+::: {.editorial-figure}
+::: {.editorial-img-wrapper}
+![](../images/couvertures/fille-pere-noel.jpg){fig-alt="Couverture du roman Elle est la fille du Père Noël & je suis le fils du Père Fouettard : Wendy en manteau rouge et Dante en cuir noir, dos à dos"}
+:::
+:::
+
+Imaginez un monde où le Père Noël et le Père Fouettard règnent chacun sur leur territoire. En Noëlie, le château s’illumine à l’approche des fêtes. À Krampen, l’hiver est rude et les habitants ont faim. Entre les deux, un train souterrain, le Passe-Monde, relie des peuples qui ont appris à se méfier l’un de l’autre.
+
+C’est dans ce monde divisé que Wendy Stanford, la fille du Père Noël, rencontre Dante Dodds, le fils du Père Fouettard.
+
+## Wendy et Dante, deux héritiers qui auraient dû rester chacun de leur côté
+
+Wendy étudie la façon de faire pousser des plantes en plein hiver. Dante, lui, porte un nom qui suffit à éveiller la méfiance en Noëlie. Pourtant, dès leur première rencontre, ils ont du mal à détourner le regard.
+
+Au fil d’une sortie sur la glace, d’un instant volé dans une serre et d’une valse au bal de Noël, ils se découvrent loin des certitudes de leurs familles. Mais Dante garde un secret. Et plus il s’attache à Wendy, plus il lui devient difficile de lui dire la vérité.
+
+Pendant ce temps, la magie de Noël s’affaiblit. Une clé pourrait lui rendre sa force, à condition que les deux camps acceptent enfin de s’unir.
+
+## Une romance de Noël entre deux mondes
+
+J’ai imaginé cette histoire pour vous emmener du froid des quais du Passe-Monde à la chaleur d’un feu de cheminée, en passant par une galerie des glaces en plein bal. J’avais envie d’écrire une romance où un premier baiser peut être aussi simple qu’un moment partagé autour d’un bol de pop-corn, même quand les deux personnes qui s’embrassent portent les noms les plus célèbres de Noël.
+
+Si vous aimez les amours contrariées, les secrets de famille et les univers enneigés où la magie a ses propres règles, je vous invite à rencontrer Wendy et Dante.
+
+Et vous, à Noël, quel camp choisirez-vous ?
+
+Retrouvez le roman en ebook et en broché [sur Amazon](https://amzn.eu/d/0dbVGnRO){target="_blank" rel="noopener"}.
+
+Mo Gadarr
+
+```{=html}
+<div class="post-cta" style="display:flex; gap:1rem; flex-wrap:wrap; justify-content:center; align-items:center; margin:2.5rem 0 1rem;">
+  <a href="../dernier_roman/fille_pere_noel.html" class="btn-primary">Découvrir le roman</a>
+  <a href="../dernier_roman/filtre-noel.html" class="btn-text">✨ Posez avec Wendy &amp; Dante</a>
+</div>
+
+<div class="back-home" style="margin-top:2rem;">
+  <a href="../blog.html" class="btn-back" role="button" aria-label="Retour aux articles de blog">
+    <span class="arrow">←</span> Retour aux articles de blog
+  </a>
+</div>
+```

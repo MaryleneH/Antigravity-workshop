@@ -38,13 +38,14 @@ body-classes: romans
 
 <div class="library-grid">
 
-    <!-- DERNIER ROMAN -->
-    <div class="book-vignette fade-in-scroll" data-cat="dernier">
-        <a href="dernier_roman/at_the_beginning.html" class="vignette-link">
-            <img src="images/couvertures/AT_couverture.PNG" alt="AT The Beginning" class="vignette-cover">
-            <div class="vignette-overlay">
-                <span class="vignette-genre">Romance Sombre • Drame</span>
-                <h3 class="vignette-title">AT — The Beginning</h3>
+    <!-- DERNIER ROMAN (aussi visible dans « Fêtes » : data-cat accepte plusieurs catégories) -->
+    <div class="book-vignette fade-in-scroll" data-cat="dernier fetes">
+        <a href="dernier_roman/fille_pere_noel.html" class="vignette-link">
+            <img src="images/couvertures/fille-pere-noel.jpg" alt="Elle est la fille du Père Noël &amp; je suis le fils du Père Fouettard" class="vignette-cover">
+            <!-- padding-top plus grand : le dégradé sombre remonte au-dessus du titre long -->
+            <div class="vignette-overlay" style="padding-top: 5rem;">
+                <span class="vignette-genre">Romance de Noël</span>
+                <h3 class="vignette-title">Elle est la fille du Père&nbsp;Noël &amp; je suis le fils du Père&nbsp;Fouettard</h3>
                 <span class="vignette-action">Découvrir &rarr;</span>
             </div>
         </a>
@@ -107,6 +108,17 @@ body-classes: romans
     </div>
 
     <!-- SÉRIES -->
+    <div class="book-vignette fade-in-scroll" data-cat="series">
+        <a href="dernier_roman/at_the_beginning.html" class="vignette-link">
+            <img src="images/couvertures/AT_couverture.PNG" alt="AT The Beginning" class="vignette-cover">
+            <div class="vignette-overlay">
+                <span class="vignette-genre">Duologie • Romance sombre</span>
+                <h3 class="vignette-title">AT — The Beginning</h3>
+                <span class="vignette-action">Découvrir &rarr;</span>
+            </div>
+        </a>
+    </div>
+
     <div class="book-vignette fade-in-scroll" data-cat="series">
         <a href="romans/cops-and-love-will-hunter.html" class="vignette-link">
             <img src="images/couvertures/cops-and-love-will-hunter.jpg" alt="Cops and Love - Will" class="vignette-cover">
@@ -323,7 +335,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function applyFilter(category) {
         vignettes.forEach(v => {
-            if (category === "all" || v.dataset.cat === category) {
+            // data-cat peut contenir plusieurs catégories séparées par des espaces
+            const cats = (v.dataset.cat || "").split(/\s+/);
+            if (category === "all" || cats.includes(category)) {
                 v.style.display = "block";
                 setTimeout(() => v.style.opacity = "1", 50);
             } else {

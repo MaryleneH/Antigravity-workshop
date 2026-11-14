@@ -2,6 +2,7 @@
 title: ""
 subtitle: "Auteure de New Romance"
 description: "Site officiel — romans, nouveautés, événements."
+image: images/author-portrait.png
 title-block-banner: false
 page-layout: custom
 toc: false

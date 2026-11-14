@@ -2,6 +2,7 @@
 title: "Undress Me — Extraits"
 subtitle: "Deux moments pour succomber"
 description: "Découvrez deux extraits d'Undress Me de Mo Gadarr."
+image: ../../images/couvertures/undress-me.jpg
 page-layout: full
 toc: false
 body-classes: excerpt-page

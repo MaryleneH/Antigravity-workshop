@@ -2,6 +2,7 @@
 title: "En pleine nature — Extraits"
 subtitle: "Trois moments pour succomber"
 description: "Découvrez trois extraits du roman En pleine nature de Mo Gadarr."
+image: ../../images/couvertures/en-pleine-nature.jpg
 page-layout: full
 toc: false
 body-classes: excerpt-page

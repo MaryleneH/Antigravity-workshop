@@ -2,6 +2,7 @@
 title: "Dans les fleurs — Extraits"
 subtitle: "Trois moments pour succomber"
 description: "Découvrez trois extraits du roman Dans les fleurs de Mo Gadarr."
+image: ../../images/couvertures/fleurs.jpg
 page-layout: full
 toc: false
 body-classes: excerpt-page

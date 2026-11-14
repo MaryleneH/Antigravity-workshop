@@ -1,7 +1,8 @@
 ---
 title: "AT The Beginning"
-subtitle: "Dernier roman"
-description: "La nouveauté de Mo Gadarr — Un plaidoyer pour les femmes, une histoire d'amour inoubliable"
+subtitle: "Duologie AT — Tome 1"
+description: "Le premier tome de la duologie AT de Mo Gadarr — Un plaidoyer pour les femmes, une histoire d'amour inoubliable"
+image: ../images/couvertures/AT_couverture.PNG
 title-block-banner: true
 page-layout: full
 toc: false
@@ -26,7 +27,7 @@ format:
     <div class="at-hero-inner">
         <!-- Left: Title lockup -->
         <div class="at-hero-text">
-            <span class="at-badge">✦ Nouveau roman — Disponible maintenant</span>
+            <span class="at-badge">✦ Duologie AT — Tome 1 · Disponible</span>
             <h1 class="at-main-title">
                 <span class="at-title-line at-title-line-1">AT</span>
                 <span class="at-title-line at-title-line-2">The Beginning</span>

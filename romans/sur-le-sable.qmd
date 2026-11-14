@@ -45,7 +45,7 @@ toc: false
 </div>
 
 <div class="book-actions">
-                    <a href="https://amzn.eu/d/5A8Z67O" class="btn-primary" target="_blank">Acheter sur Amazon</a>
+                    <a href="https://www.amazon.fr/s?k=Mo+Gadarr+Sur+le+sable" class="btn-primary" target="_blank">Acheter sur Amazon</a>
                     <a href="extraits/extrait-sable.html" class="btn-text">Lire un extrait</a>
                 
     <a href="../romans.html" class="btn-text"><i class="bi bi-arrow-left"></i> Retour</a>

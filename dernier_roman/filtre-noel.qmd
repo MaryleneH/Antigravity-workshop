@@ -1,0 +1,561 @@
+---
+title: "Posez avec Wendy & Dante"
+description: "Le filtre photo de Noël de Mo Gadarr : choisissez votre camp, Team Noëlie ou Team Krampen, et posez avec Wendy et Dante."
+image: ../images/partage/fille-pere-noel-og.jpg
+page-layout: full
+toc: false
+title-block-banner: false
+body-classes: romans xf-page-body
+---
+
+```{=html}
+<div class="xf-page" id="xf-page" data-camp="noelie">
+  <div class="xf-header">
+    <span class="xf-badge">✦ Expérience de Noël</span>
+    <h1>Posez avec Wendy &amp; Dante.</h1>
+    <p>Choisissez votre camp, activez votre caméra et glissez les héros de <em>Elle est la fille du Père Noël &amp; je suis le fils du Père Fouettard</em> à côté de vous.</p>
+  </div>
+
+  <div class="xf-camps" role="group" aria-label="Choisissez votre camp">
+    <button type="button" class="xf-camp xf-camp-noelie" data-camp="noelie" aria-pressed="true">🎄 Team Noëlie</button>
+    <button type="button" class="xf-camp xf-camp-krampen" data-camp="krampen" aria-pressed="false">🦇 Team Krampen</button>
+  </div>
+
+  <div class="xf-stage" id="xf-stage">
+    <div class="xf-start" id="xf-start">
+      <img src="../images/filtre-noel/wendy-dante.webp" alt="" class="xf-start-art" width="900" height="910">
+      <h2>Votre photo de Noël vous attend</h2>
+      <p>Activez la caméra, placez Wendy &amp; Dante où vous voulez et capturez un souvenir enneigé.</p>
+    </div>
+    <video id="xf-video" autoplay playsinline muted></video>
+    <img id="xf-sticker" src="../images/filtre-noel/wendy-dante.webp" alt="Wendy et Dante" draggable="false" width="900" height="910">
+    <canvas id="xf-fx" aria-hidden="true"></canvas>
+    <div class="xf-handle" id="xf-handle" aria-hidden="true"></div>
+    <div class="xf-captured" id="xf-captured">
+      <img id="xf-captured-img" src="" alt="Votre photo de Noël avec Wendy et Dante">
+    </div>
+  </div>
+
+  <div class="xf-controls" id="xf-cam-controls">
+    <button type="button" class="xf-btn xf-btn-primary" id="xf-start-btn">✨ Activer la caméra</button>
+    <button type="button" class="xf-btn xf-btn-primary" id="xf-capture-btn" hidden>📸 Capturer</button>
+    <button type="button" class="xf-btn xf-btn-ghost" id="xf-stop-btn" hidden>✕ Arrêter</button>
+  </div>
+
+  <div class="xf-controls" id="xf-dl-controls" hidden>
+    <a id="xf-download" class="xf-btn xf-btn-gold" href="#" download="Mo-Gadarr-Noel.jpg">⬇ Enregistrer la photo</a>
+    <button type="button" class="xf-btn xf-btn-share" id="xf-share-btn" hidden>📤 Partager</button>
+    <button type="button" class="xf-btn xf-btn-ghost" id="xf-resume-btn">↩ Reprendre</button>
+  </div>
+
+  <div class="xf-status" id="xf-status" role="status" aria-live="polite"></div>
+
+  <div class="xf-tips">
+    <div class="xf-tip"><strong>🎄 Choisissez</strong>Team Noëlie ou Team Krampen : le cadre change de couleurs.</div>
+    <div class="xf-tip"><strong>👆 Placez</strong>Glissez Wendy &amp; Dante où vous voulez, à côté de vous.</div>
+    <div class="xf-tip"><strong>↘ Ajustez</strong>Tirez le coin ↘ pour changer leur taille.</div>
+    <div class="xf-tip"><strong>📸 Capturez</strong>Puis enregistrez ou partagez votre photo.</div>
+  </div>
+
+  <div class="xf-back"><a href="./fille_pere_noel.html">← Retour au roman</a></div>
+</div>
+
+<canvas id="xf-snap" hidden></canvas>
+
+<style>
+/* ===== FILTRE PHOTO DE NOËL — Wendy & Dante ===== */
+.xf-page {
+    --xf-accent: #F4D58D;
+    --xf-accent-rgb: 244, 213, 141;
+    min-height: 100vh; display: flex; flex-direction: column; align-items: center;
+    padding: 2rem 1rem 3rem; font-family: 'Lato', sans-serif; color: #F5EEE6;
+    background:
+        radial-gradient(ellipse at 15% 20%, rgba(212, 42, 53, 0.22), transparent 55%),
+        radial-gradient(ellipse at 85% 80%, rgba(111, 147, 214, 0.22), transparent 55%),
+        linear-gradient(160deg, #0A0F24 0%, #0D1430 50%, #0A0F24 100%);
+}
+.xf-page[data-camp="krampen"] { --xf-accent: #A9C8FF; --xf-accent-rgb: 169, 200, 255; }
+
+.xf-header { text-align: center; max-width: 580px; margin-bottom: 1.2rem; }
+.xf-page .anchorjs-link { display: none !important; }
+.xf-header h1, .xf-start h2 { border-bottom: 0 !important; padding-bottom: 0 !important; }
+.xf-badge {
+    display: inline-block; font-size: 0.65rem; letter-spacing: 3px; text-transform: uppercase;
+    color: var(--xf-accent); border: 1px solid rgba(var(--xf-accent-rgb), 0.35);
+    padding: 0.35rem 1rem; border-radius: 50px; margin-bottom: 0.8rem; font-weight: 700;
+}
+.xf-header h1 {
+    font-family: 'Playfair Display', serif; font-size: clamp(1.7rem, 5vw, 2.8rem); margin: 0 0 0.5rem;
+    background: linear-gradient(135deg, #F4D58D, #FBF1E4 45%, #A9C8FF);
+    -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
+}
+.xf-header p { color: rgba(245, 238, 230, 0.65); font-size: 0.95rem; line-height: 1.7; margin: 0; }
+.xf-header em { color: rgba(245, 238, 230, 0.85); }
+
+/* Choix du camp */
+.xf-camps { display: flex; gap: 0.7rem; justify-content: center; flex-wrap: wrap; margin-bottom: 1.2rem; }
+.xf-camp {
+    font-family: 'Lato', sans-serif; font-weight: 800; font-size: 0.9rem; cursor: pointer;
+    padding: 0.7rem 1.4rem; border-radius: 50px; border: 1px solid rgba(255, 255, 255, 0.14);
+    background: rgba(255, 255, 255, 0.04); color: rgba(245, 238, 230, 0.75);
+    transition: transform 0.25s, background 0.25s, box-shadow 0.25s, color 0.25s; touch-action: manipulation;
+}
+.xf-camp:hover { transform: translateY(-2px); }
+.xf-camp-noelie[aria-pressed="true"] {
+    background: linear-gradient(135deg, #B81D2B, #E1444C); color: #fff; border-color: transparent;
+    box-shadow: 0 8px 25px rgba(212, 42, 53, 0.4);
+}
+.xf-camp-krampen[aria-pressed="true"] {
+    background: linear-gradient(135deg, #111833, #2E488C); color: #E6EEFF; border-color: rgba(169, 200, 255, 0.4);
+    box-shadow: 0 8px 25px rgba(46, 72, 140, 0.45);
+}
+
+/* Scène */
+.xf-stage {
+    position: relative; width: 100%; max-width: 560px; aspect-ratio: 3 / 4;
+    border-radius: 20px; overflow: hidden; background: #070A18;
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(var(--xf-accent-rgb), 0.3), 0 0 50px rgba(var(--xf-accent-rgb), 0.12);
+    transition: box-shadow 0.4s;
+}
+#xf-video {
+    position: absolute; inset: 0; width: 100%; height: 100%;
+    object-fit: cover; transform: scaleX(-1); display: none; z-index: 1;
+}
+#xf-sticker {
+    position: absolute; left: 44%; top: 57%; width: 56%; height: auto; z-index: 10;
+    display: none; cursor: grab; user-select: none; -webkit-user-select: none; touch-action: none;
+    filter: drop-shadow(0 10px 18px rgba(0, 0, 0, 0.45));
+}
+#xf-sticker:active { cursor: grabbing; }
+#xf-fx { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 12; pointer-events: none; display: none; }
+.xf-handle {
+    position: absolute; width: 26px; height: 26px; z-index: 13; display: none; cursor: nwse-resize; touch-action: none;
+    border-right: 3px solid var(--xf-accent); border-bottom: 3px solid var(--xf-accent); border-radius: 0 0 6px 0;
+    filter: drop-shadow(0 0 4px rgba(0, 0, 0, 0.6));
+}
+.xf-start {
+    position: absolute; inset: 0; z-index: 20; display: flex; flex-direction: column;
+    align-items: center; justify-content: center; gap: 0.8rem; text-align: center; padding: 2rem;
+    background: radial-gradient(ellipse at 50% 30%, rgba(var(--xf-accent-rgb), 0.12), transparent 60%),
+                linear-gradient(160deg, rgba(10, 15, 36, 0.98), rgba(22, 30, 64, 0.98));
+}
+.xf-start-art { width: 62%; max-width: 280px; height: auto; filter: drop-shadow(0 12px 24px rgba(0, 0, 0, 0.5)); }
+.xf-start h2 { font-family: 'Playfair Display', serif; font-size: 1.35rem; color: #FBF1E4; margin: 0.4rem 0 0; }
+.xf-start p { font-size: 0.86rem; color: rgba(245, 238, 230, 0.6); max-width: 290px; line-height: 1.6; margin: 0; }
+.xf-captured {
+    position: absolute; inset: 0; z-index: 20; display: none;
+    align-items: center; justify-content: center; background: #070A18;
+}
+.xf-captured img { width: 100%; height: 100%; object-fit: contain; }
+
+@keyframes xf-flash { 0% { opacity: 0; } 20% { opacity: 0.85; } 100% { opacity: 0; } }
+.xf-flash { position: absolute; inset: 0; background: #fff; pointer-events: none; z-index: 30; animation: xf-flash 0.4s ease-out forwards; }
+
+/* Boutons */
+.xf-controls { display: flex; gap: 0.8rem; justify-content: center; flex-wrap: wrap; margin-top: 1rem; width: 100%; max-width: 560px; }
+.xf-controls[hidden], .xf-btn[hidden] { display: none !important; }
+.xf-btn {
+    display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.85rem 1.8rem; border-radius: 50px;
+    font-size: 0.9rem; font-weight: 800; cursor: pointer; border: none; font-family: 'Lato', sans-serif;
+    text-decoration: none; transition: transform 0.25s, box-shadow 0.25s; touch-action: manipulation;
+}
+.xf-btn:disabled { opacity: 0.5; cursor: not-allowed; }
+.xf-btn-primary { background: linear-gradient(135deg, #B81D2B, #E1444C); color: #fff; box-shadow: 0 6px 25px rgba(212, 42, 53, 0.4); }
+.xf-page[data-camp="krampen"] .xf-btn-primary { background: linear-gradient(135deg, #1B2550, #3A5BAE); box-shadow: 0 6px 25px rgba(46, 72, 140, 0.45); }
+.xf-btn-primary:hover:not(:disabled) { transform: translateY(-2px); color: #fff; }
+.xf-btn-gold { background: linear-gradient(135deg, #C99A3E, #E8C170); color: #1A1206 !important; box-shadow: 0 6px 25px rgba(232, 193, 112, 0.35); }
+.xf-btn-gold:hover { transform: translateY(-2px); color: #1A1206 !important; }
+.xf-btn-share { background: rgba(255, 255, 255, 0.08); color: #F5EEE6; border: 1px solid rgba(255, 255, 255, 0.18); }
+.xf-btn-share:hover { transform: translateY(-2px); }
+.xf-btn-ghost { background: transparent; color: rgba(245, 238, 230, 0.5); border: 1px solid rgba(255, 255, 255, 0.12); font-size: 0.82rem; }
+.xf-btn-ghost:hover { color: #F5EEE6; }
+
+.xf-status { text-align: center; font-size: 0.8rem; color: rgba(var(--xf-accent-rgb), 0.8); margin-top: 0.7rem; min-height: 1.4em; line-height: 1.5; max-width: 560px; }
+.xf-tips { max-width: 560px; width: 100%; margin-top: 1.4rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(125px, 1fr)); gap: 0.7rem; }
+.xf-tip {
+    background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(var(--xf-accent-rgb), 0.12);
+    border-radius: 12px; padding: 0.8rem 0.9rem; font-size: 0.76rem; color: rgba(245, 238, 230, 0.55); line-height: 1.5;
+}
+.xf-tip strong { display: block; color: var(--xf-accent); font-size: 0.68rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0.25rem; }
+.xf-back { text-align: center; margin-top: 1.5rem; }
+.xf-back a { color: rgba(var(--xf-accent-rgb), 0.6); font-size: 0.85rem; text-decoration: none; }
+.xf-back a:hover { color: var(--xf-accent); }
+
+/* Mode clair : la scène reste nocturne, l'enveloppe devient enneigée */
+body.quarto-light .xf-page {
+    color: #2A1E24;
+    background:
+        radial-gradient(ellipse at 15% 20%, rgba(212, 42, 53, 0.1), transparent 55%),
+        radial-gradient(ellipse at 85% 80%, rgba(111, 147, 214, 0.14), transparent 55%),
+        linear-gradient(160deg, #FBF6F0, #F1EBE4);
+}
+body.quarto-light .xf-page { --xf-accent: #9C7016; --xf-accent-rgb: 156, 112, 22; }
+body.quarto-light .xf-page[data-camp="krampen"] { --xf-accent: #2E5AAC; --xf-accent-rgb: 46, 90, 172; }
+body.quarto-light .xf-header h1 { background: linear-gradient(135deg, #B81D2B, #2A1E24 50%, #2E488C); -webkit-background-clip: text; background-clip: text; }
+body.quarto-light .xf-header p { color: #5A4A50; }
+body.quarto-light .xf-header em { color: #2A1E24; }
+body.quarto-light .xf-camp { color: #4A3A40; border-color: rgba(42, 30, 36, 0.15); background: rgba(255, 255, 255, 0.6); }
+body.quarto-light .xf-stage { box-shadow: 0 25px 60px rgba(42, 30, 36, 0.2), 0 0 0 1px rgba(var(--xf-accent-rgb), 0.3); }
+body.quarto-light .xf-tip { background: rgba(255, 255, 255, 0.65); color: #5A4A50; }
+body.quarto-light .xf-btn-share { color: #2A1E24; background: rgba(255, 255, 255, 0.7); border-color: rgba(42, 30, 36, 0.15); }
+body.quarto-light .xf-btn-ghost { color: #6A5A60; border-color: rgba(42, 30, 36, 0.15); }
+body.quarto-light .xf-btn-ghost:hover { color: #2A1E24; }
+
+@media (prefers-reduced-motion: reduce) {
+    .xf-camp, .xf-btn, .xf-stage { transition: none; }
+}
+</style>
+
+<script>
+(function () {
+  'use strict';
+
+  // ---------- Thèmes des deux camps ----------
+  var THEMES = {
+    noelie: {
+      tag: '#TeamNoëlie', file: 'TeamNoelie', accent: '#F4D58D', soft: 'rgba(244,213,141,0.9)',
+      border: 'rgba(244,213,141,0.55)', wire: '#1F3B2B',
+      bulbs: ['#E1444C', '#F4D58D', '#3FAE6B', '#FFF4E0'],
+      snow: '255,255,255', sparkle: '244,213,141', grade: 'rgba(255,165,90,0.20)',
+      vignette: 'rgba(45,6,14,0.45)', bannerMid: 'rgba(95,12,24,0.55)', bannerEnd: 'rgba(60,6,16,0.9)'
+    },
+    krampen: {
+      tag: '#TeamKrampen', file: 'TeamKrampen', accent: '#A9C8FF', soft: 'rgba(169,200,255,0.9)',
+      border: 'rgba(169,200,255,0.5)', wire: '#0B0F1F',
+      bulbs: ['#A9C8FF', '#E6EEFF', '#9B7BEA', '#6F93D6'],
+      snow: '222,234,255', sparkle: '169,200,255', grade: 'rgba(30,55,130,0.20)',
+      vignette: 'rgba(3,6,22,0.62)', bannerMid: 'rgba(10,16,42,0.6)', bannerEnd: 'rgba(5,8,22,0.92)'
+    }
+  };
+  var TITLE = 'Elle est la fille du Père Noël & je suis le fils du Père Fouettard';
+
+  // ---------- Éléments ----------
+  var $ = function (id) { return document.getElementById(id); };
+  var page = $('xf-page'), stage = $('xf-stage'), video = $('xf-video'), sticker = $('xf-sticker');
+  var fx = $('xf-fx'), fxCtx = fx.getContext('2d'), handle = $('xf-handle'), startOv = $('xf-start');
+  var startBtn = $('xf-start-btn'), captureBtn = $('xf-capture-btn'), stopBtn = $('xf-stop-btn');
+  var camCtrls = $('xf-cam-controls'), dlCtrls = $('xf-dl-controls'), dlLink = $('xf-download');
+  var shareBtn = $('xf-share-btn'), resumeBtn = $('xf-resume-btn'), statusEl = $('xf-status');
+  var captured = $('xf-captured'), capturedImg = $('xf-captured-img');
+  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  var stream = null, running = false, lastT = 0, lastDataUrl = null;
+  var camp = 'noelie';
+  // Position de l'autocollant en fractions de la scène (robuste aux redimensionnements)
+  var pos = { x: 0.44, y: 0.57, w: 0.56 };
+
+  function setStatus(t) { statusEl.textContent = t; }
+  function theme() { return THEMES[camp]; }
+  function stickerRatio() { return (sticker.naturalHeight || 910) / (sticker.naturalWidth || 900); }
+
+  // ---------- Choix du camp ----------
+  var campBtns = document.querySelectorAll('.xf-camp');
+  function setCamp(c) {
+    camp = THEMES[c] ? c : 'noelie';
+    page.setAttribute('data-camp', camp);
+    campBtns.forEach(function (b) { b.setAttribute('aria-pressed', String(b.getAttribute('data-camp') === camp)); });
+    if (stream && !running) drawLive(performance.now()); // aperçu statique (mouvement réduit)
+  }
+  campBtns.forEach(function (b) { b.addEventListener('click', function () { setCamp(b.getAttribute('data-camp')); }); });
+  try { setCamp(new URLSearchParams(window.location.search).get('camp') || 'noelie'); } catch (e) { setCamp('noelie'); }
+
+  // ---------- Neige (coordonnées normalisées 0..1) ----------
+  var flakes = [];
+  for (var i = 0; i < 90; i++) {
+    flakes.push({
+      x: Math.random(), y: Math.random(), r: 0.0035 + Math.random() * 0.0065,
+      vy: 0.0006 + Math.random() * 0.0012, vx: (Math.random() - 0.5) * 0.0006,
+      ph: Math.random() * 6.283, o: 0.45 + Math.random() * 0.5, sparkle: Math.random() < 0.18
+    });
+  }
+  function updateFlakes(dt) {
+    var k = dt / 16.7;
+    for (var i = 0; i < flakes.length; i++) {
+      var f = flakes[i];
+      f.ph += 0.02 * k;
+      f.y += f.vy * k;
+      f.x += (f.vx + Math.sin(f.ph) * 0.0004) * k;
+      if (f.y > 1.03) { f.y = -0.03; f.x = Math.random(); }
+      if (f.x < -0.03) f.x = 1.03; else if (f.x > 1.03) f.x = -0.03;
+    }
+  }
+
+  // ---------- Dessin des effets : UNE fonction pour l'aperçu ET la photo ----------
+  function rgba(hex, a) {
+    var n = parseInt(hex.slice(1), 16);
+    return 'rgba(' + (n >> 16 & 255) + ',' + (n >> 8 & 255) + ',' + (n & 255) + ',' + a + ')';
+  }
+  function roundRectPath(ctx, x, y, w, h, r) {
+    ctx.beginPath();
+    ctx.moveTo(x + r, y);
+    ctx.arcTo(x + w, y, x + w, y + h, r); ctx.arcTo(x + w, y + h, x, y + h, r);
+    ctx.arcTo(x, y + h, x, y, r); ctx.arcTo(x, y, x + w, y, r);
+    ctx.closePath();
+  }
+  function drawGarland(ctx, w, h, t, th) {
+    var top = -w * 0.012, sag = h * 0.075, r = w * 0.012, k = 0;
+    ctx.lineWidth = Math.max(1.5, w * 0.0045);
+    [[0, w * 0.5], [w * 0.5, w]].forEach(function (s) {
+      var x0 = s[0], x1 = s[1], cx = (x0 + x1) / 2, cy = top + 2 * sag;
+      ctx.strokeStyle = th.wire;
+      ctx.beginPath(); ctx.moveTo(x0, top); ctx.quadraticCurveTo(cx, cy, x1, top); ctx.stroke();
+      for (var i = 1; i < 6; i++) {
+        var u = i / 6;
+        var bx = (1 - u) * (1 - u) * x0 + 2 * (1 - u) * u * cx + u * u * x1;
+        var by = (1 - u) * (1 - u) * top + 2 * (1 - u) * u * cy + u * u * top;
+        var col = th.bulbs[k % th.bulbs.length];
+        var tw = reduceMotion ? 0.85 : 0.55 + 0.45 * Math.sin(t * 0.003 + k * 1.7);
+        var g = ctx.createRadialGradient(bx, by + r, 0, bx, by + r, r * 4.5);
+        g.addColorStop(0, rgba(col, 0.55 * tw)); g.addColorStop(1, rgba(col, 0));
+        ctx.fillStyle = g; ctx.beginPath(); ctx.arc(bx, by + r, r * 4.5, 0, Math.PI * 2); ctx.fill();
+        ctx.fillStyle = th.wire; ctx.fillRect(bx - r * 0.45, by - r * 0.2, r * 0.9, r * 0.7);
+        ctx.fillStyle = rgba(col, 0.75 + 0.25 * tw);
+        ctx.beginPath(); ctx.ellipse(bx, by + r * 1.15, r * 0.7, r, 0, 0, Math.PI * 2); ctx.fill();
+        ctx.fillStyle = 'rgba(255,255,255,' + (0.5 * tw) + ')';
+        ctx.beginPath(); ctx.ellipse(bx - r * 0.22, by + r * 0.85, r * 0.18, r * 0.3, 0, 0, Math.PI * 2); ctx.fill();
+        k++;
+      }
+    });
+  }
+  function drawFx(ctx, w, h, t, th) {
+    ctx.save();
+    // Étalonnage chaud (Noëlie) ou froid (Krampen) + vignette
+    var g = ctx.createRadialGradient(w * 0.15, h * 0.05, 0, w * 0.15, h * 0.05, w * 1.1);
+    g.addColorStop(0, th.grade); g.addColorStop(1, 'rgba(0,0,0,0)');
+    ctx.fillStyle = g; ctx.fillRect(0, 0, w, h);
+    var v = ctx.createRadialGradient(w / 2, h * 0.45, Math.min(w, h) * 0.35, w / 2, h * 0.45, Math.max(w, h) * 0.78);
+    v.addColorStop(0, 'rgba(0,0,0,0)'); v.addColorStop(1, th.vignette);
+    ctx.fillStyle = v; ctx.fillRect(0, 0, w, h);
+    // Neige
+    for (var i = 0; i < flakes.length; i++) {
+      var f = flakes[i];
+      ctx.fillStyle = 'rgba(' + (f.sparkle ? th.sparkle : th.snow) + ',' + f.o + ')';
+      ctx.beginPath(); ctx.arc(f.x * w, f.y * h, Math.max(0.8, f.r * w), 0, Math.PI * 2); ctx.fill();
+    }
+    // Guirlande lumineuse
+    drawGarland(ctx, w, h, t, th);
+    // Liseré intérieur
+    ctx.strokeStyle = th.border; ctx.lineWidth = Math.max(1.2, w * 0.0035);
+    roundRectPath(ctx, w * 0.025, w * 0.025, w - w * 0.05, h - w * 0.05, w * 0.03); ctx.stroke();
+    // Bandeau bas : camp + titre + signature
+    var bh = h * 0.21;
+    var bg = ctx.createLinearGradient(0, h - bh, 0, h);
+    bg.addColorStop(0, 'rgba(0,0,0,0)'); bg.addColorStop(0.5, th.bannerMid); bg.addColorStop(1, th.bannerEnd);
+    ctx.fillStyle = bg; ctx.fillRect(0, h - bh, w, bh);
+    ctx.textAlign = 'center'; ctx.textBaseline = 'alphabetic';
+    ctx.shadowColor = 'rgba(0,0,0,0.55)'; ctx.shadowBlur = w * 0.02;
+    ctx.font = 'italic 400 ' + Math.round(w * 0.075) + 'px "Playfair Display", Georgia, serif';
+    ctx.fillStyle = th.accent; ctx.fillText(th.tag, w / 2, h - h * 0.085);
+    var size = w * 0.03;
+    ctx.font = '700 ' + size + 'px Lato, "Helvetica Neue", Arial, sans-serif';
+    var tw = ctx.measureText(TITLE).width;
+    if (tw > w * 0.88) { size *= (w * 0.88) / tw; ctx.font = '700 ' + size + 'px Lato, "Helvetica Neue", Arial, sans-serif'; }
+    ctx.fillStyle = 'rgba(255,255,255,0.93)'; ctx.fillText(TITLE, w / 2, h - h * 0.047);
+    ctx.font = '700 ' + Math.round(w * 0.021) + 'px Lato, "Helvetica Neue", Arial, sans-serif';
+    ctx.fillStyle = th.soft; ctx.fillText('MO GADARR  ·  MOGADARR.FR', w / 2, h - h * 0.018);
+    ctx.restore();
+  }
+
+  // ---------- Aperçu en direct ----------
+  var sw = 0, sh = 0;
+  function sizeFx() {
+    var dpr = Math.min(window.devicePixelRatio || 1, 2);
+    sw = stage.clientWidth; sh = stage.clientHeight;
+    fx.width = Math.round(sw * dpr); fx.height = Math.round(sh * dpr);
+    fxCtx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  }
+  function drawLive(now) {
+    fxCtx.clearRect(0, 0, sw, sh);
+    drawFx(fxCtx, sw, sh, now, theme());
+  }
+  function loop(now) {
+    if (!running) return;
+    var dt = lastT ? Math.min(now - lastT, 50) : 16.7;
+    lastT = now;
+    updateFlakes(dt);
+    drawLive(now);
+    requestAnimationFrame(loop);
+  }
+  function startLoop() {
+    if (reduceMotion) { drawLive(performance.now()); return; }
+    if (!running) { running = true; lastT = 0; requestAnimationFrame(loop); }
+  }
+  function stopLoop() { running = false; }
+
+  // ---------- Placement de l'autocollant ----------
+  function applyPos() {
+    var w = stage.clientWidth, h = stage.clientHeight;
+    if (!w || !h) return;
+    var wpx = pos.w * w, hpx = wpx * stickerRatio();
+    pos.x = Math.min(Math.max(pos.x, 0), 1 - pos.w);
+    pos.y = Math.min(Math.max(pos.y, 0), Math.max((h - hpx) / h, 0));
+    sticker.style.left = (pos.x * 100) + '%';
+    sticker.style.top = (pos.y * 100) + '%';
+    sticker.style.width = (pos.w * 100) + '%';
+    handle.style.left = (pos.x * w + wpx - 26) + 'px';
+    handle.style.top = (pos.y * h + hpx - 26) + 'px';
+  }
+  function resetPos() {
+    var w = stage.clientWidth || 3, h = stage.clientHeight || 4;
+    pos.w = 0.56; pos.x = 1 - pos.w;
+    pos.y = 1 - (pos.w * w * stickerRatio()) / h; // posés en bas à droite
+    applyPos();
+  }
+
+  var drag = null, resize = null;
+  sticker.addEventListener('pointerdown', function (e) {
+    e.preventDefault();
+    sticker.setPointerCapture(e.pointerId);
+    var r = sticker.getBoundingClientRect();
+    drag = { dx: e.clientX - r.left, dy: e.clientY - r.top };
+  });
+  sticker.addEventListener('pointermove', function (e) {
+    if (!drag) return;
+    var r = stage.getBoundingClientRect();
+    pos.x = (e.clientX - r.left - drag.dx) / r.width;
+    pos.y = (e.clientY - r.top - drag.dy) / r.height;
+    applyPos();
+  });
+  ['pointerup', 'pointercancel'].forEach(function (ev) { sticker.addEventListener(ev, function () { drag = null; }); });
+
+  handle.addEventListener('pointerdown', function (e) {
+    e.preventDefault(); e.stopPropagation();
+    handle.setPointerCapture(e.pointerId);
+    resize = { x: e.clientX, w: pos.w };
+  });
+  handle.addEventListener('pointermove', function (e) {
+    if (!resize) return;
+    var r = stage.getBoundingClientRect();
+    pos.w = Math.min(0.95, Math.max(0.2, resize.w + (e.clientX - resize.x) / r.width));
+    applyPos();
+  });
+  ['pointerup', 'pointercancel'].forEach(function (ev) { handle.addEventListener(ev, function () { resize = null; }); });
+
+  // ---------- Caméra ----------
+  function showLive(on) {
+    var d = on ? 'block' : 'none';
+    video.style.display = sticker.style.display = fx.style.display = handle.style.display = d;
+  }
+  function fontsReady() {
+    if (!document.fonts || !document.fonts.load) return Promise.resolve();
+    return Promise.all([
+      document.fonts.load('italic 400 40px "Playfair Display"'),
+      document.fonts.load('700 20px Lato')
+    ]).catch(function () {});
+  }
+
+  startBtn.addEventListener('click', function () {
+    if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) {
+      setStatus('⚠ Votre navigateur ne permet pas l\'accès à la caméra (une connexion sécurisée est nécessaire).');
+      return;
+    }
+    startBtn.disabled = true; startBtn.textContent = '…Chargement';
+    setStatus('Connexion à la caméra…');
+    navigator.mediaDevices.getUserMedia({
+      video: { facingMode: 'user', width: { ideal: 1280 }, height: { ideal: 1920 } }, audio: false
+    }).then(function (s) {
+      stream = s;
+      video.srcObject = s;
+      var p = video.play(); if (p && p.catch) p.catch(function () {});
+      startOv.style.display = 'none';
+      showLive(true);
+      sizeFx(); resetPos();
+      captureBtn.hidden = false; stopBtn.hidden = false; startBtn.hidden = true;
+      fontsReady().then(startLoop);
+      setStatus('✦ Glissez Wendy & Dante à côté de vous, puis capturez !');
+    }).catch(function (err) {
+      startBtn.disabled = false; startBtn.textContent = '✨ Activer la caméra';
+      var msg = err && err.name === 'NotAllowedError' ? 'Autorisation refusée : vérifiez les permissions de la caméra.'
+              : err && err.name === 'NotFoundError' ? 'Aucune caméra détectée sur cet appareil.'
+              : 'Impossible d\'accéder à la caméra' + (err && err.message ? ' : ' + err.message : '.');
+      setStatus('⚠ ' + msg);
+    });
+  });
+
+  function stopCamera() {
+    if (stream) { stream.getTracks().forEach(function (t) { t.stop(); }); stream = null; }
+    stopLoop(); showLive(false);
+    captureBtn.hidden = stopBtn.hidden = true; startBtn.hidden = false;
+    startBtn.disabled = false; startBtn.textContent = '✨ Activer la caméra';
+    startOv.style.display = 'flex'; setStatus('');
+  }
+  stopBtn.addEventListener('click', stopCamera);
+  window.addEventListener('pagehide', function () { if (stream) stopCamera(); });
+
+  // ---------- Capture ----------
+  captureBtn.addEventListener('click', function () {
+    var flash = document.createElement('div');
+    flash.className = 'xf-flash'; stage.appendChild(flash);
+    setTimeout(function () { if (flash.parentNode) flash.parentNode.removeChild(flash); }, 500);
+
+    var canvas = $('xf-snap');
+    var dpr = Math.min(window.devicePixelRatio || 1, 3);
+    var w = stage.clientWidth, h = stage.clientHeight;
+    var nw = video.videoWidth || w, nh = video.videoHeight || h;
+    canvas.width = Math.round(w * dpr); canvas.height = Math.round(h * dpr);
+    var ctx = canvas.getContext('2d');
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+
+    // Vidéo : reproduit object-fit: cover + miroir
+    var s = Math.max(w / nw, h / nh), dw = nw * s, dh = nh * s;
+    ctx.save(); ctx.translate(w, 0); ctx.scale(-1, 1);
+    ctx.drawImage(video, (w - dw) / 2, (h - dh) / 2, dw, dh);
+    ctx.restore();
+
+    // Autocollant à sa position exacte, puis les effets (même code que l'aperçu)
+    var br = sticker.getBoundingClientRect(), sr = stage.getBoundingClientRect();
+    try { ctx.drawImage(sticker, br.left - sr.left, br.top - sr.top, br.width, br.height); } catch (e) { console.warn(e); }
+    drawFx(ctx, w, h, performance.now(), theme());
+
+    try { lastDataUrl = canvas.toDataURL('image/jpeg', 0.92); }
+    catch (e) { setStatus('⚠ Erreur lors de la capture : ' + e.message); return; }
+
+    var fname = 'Mo-Gadarr-Noel-' + theme().file + '.jpg';
+    capturedImg.src = lastDataUrl;
+    dlLink.href = lastDataUrl; dlLink.setAttribute('download', fname);
+    captured.style.display = 'flex';
+    stopLoop(); showLive(false);
+    camCtrls.hidden = true; dlCtrls.hidden = false;
+    shareBtn.hidden = !canShareFile(fname);
+    setStatus('✦ Votre photo est prête ! Sur mobile, un appui long sur l\'image permet aussi de l\'enregistrer.');
+  });
+
+  resumeBtn.addEventListener('click', function () {
+    captured.style.display = 'none';
+    dlCtrls.hidden = true; camCtrls.hidden = false;
+    if (stream) { showLive(true); sizeFx(); applyPos(); startLoop(); setStatus('✦ Glissez Wendy & Dante à côté de vous, puis capturez !'); }
+    else stopCamera();
+  });
+
+  // ---------- Partage natif (mobile) ----------
+  function dataUrlToFile(dataUrl, name) {
+    var bin = atob(dataUrl.split(',')[1]), arr = new Uint8Array(bin.length);
+    for (var i = 0; i < bin.length; i++) arr[i] = bin.charCodeAt(i);
+    return new File([arr], name, { type: 'image/jpeg' });
+  }
+  function canShareFile(name) {
+    try {
+      return !!(navigator.canShare && lastDataUrl && navigator.canShare({ files: [dataUrlToFile(lastDataUrl, name)] }));
+    } catch (e) { return false; }
+  }
+  shareBtn.addEventListener('click', function () {
+    if (!lastDataUrl) return;
+    var file = dataUrlToFile(lastDataUrl, dlLink.getAttribute('download'));
+    navigator.share({
+      files: [file],
+      title: 'Ma photo de Noël avec Wendy & Dante',
+      text: theme().tag + ' — ' + TITLE + ', le roman de Noël de Mo Gadarr. mogadarr.fr'
+    }).catch(function () {});
+  });
+
+  // ---------- Redimensionnement / rotation ----------
+  var rt;
+  window.addEventListener('resize', function () {
+    clearTimeout(rt);
+    rt = setTimeout(function () {
+      if (stream) { sizeFx(); applyPos(); if (!running) drawLive(performance.now()); }
+    }, 120);
+  });
+})();
+</script>
+```
