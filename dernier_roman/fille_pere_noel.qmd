@@ -2,7 +2,12 @@
 title: "Elle est la fille du Père Noël & je suis le fils du Père Fouettard"
 subtitle: "Dernier roman"
 description: "Le nouveau roman de Noël de Mo Gadarr : Wendy, la fille du Père Noël, et Dante, le fils du Père Fouettard. Deux héritages. Zéro point commun."
-image: ../images/partage/fille-pere-noel-og.jpg
+# Vignette des listes (carrousel de l'accueil) : la couverture ; aperçus réseaux : image de partage dédiée
+image: ../images/couvertures/fille-pere-noel.jpg
+open-graph:
+  image: ../images/partage/fille-pere-noel-og.jpg
+twitter-card:
+  image: ../images/partage/fille-pere-noel-og.jpg
 title-block-banner: false
 page-layout: full
 toc: false
@@ -200,7 +205,7 @@ format:
         <div class="fpn-gather-frame">
             <div class="fpn-gather-media">
                 <img src="../images/visuels/fille-pere-noel-familles.webp" width="1536" height="1024" loading="lazy"
-                     alt="Dans un salon de Noël, une femme souriante présente le roman, entourée de Wendy et du Père Noël à gauche, du Père Fouettard et de Dante à droite">
+                     alt="Dans un salon de Noël, Mo Gadarr présente son roman, entourée de Wendy et du Père Noël à gauche, du Père Fouettard et de Dante à droite">
             </div>
             <span class="fpn-gather-tag fpn-gather-tag--noel" aria-hidden="true">🎄 Team Noëlie</span>
             <span class="fpn-gather-tag fpn-gather-tag--krampen" aria-hidden="true">🦇 Team Krampen</span>

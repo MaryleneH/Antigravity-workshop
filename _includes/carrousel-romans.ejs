@@ -1,0 +1,16 @@
+```{=html}
+<!-- Carrousel généré automatiquement par Quarto à partir des pages de romans
+     (titre + image de chaque page). Voir le listing « hp-collection » dans index.qmd. -->
+<div class="hp-carousel list" tabindex="0" aria-label="Carrousel des romans de Mo Gadarr">
+<% for (const item of items) { %>
+  <a class="hp-book" href="<%- item.path %>" <%= metadataAttrs(item) %>>
+    <span class="hp-book-cover">
+<% if (item.image) { %>
+      <img src="<%- item.image %>" alt="<%= item.title %>" loading="lazy" decoding="async">
+<% } %>
+    </span>
+    <span class="hp-book-title"><%= item.title %></span>
+  </a>
+<% } %>
+</div>
+```
