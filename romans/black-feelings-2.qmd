@@ -1,7 +1,7 @@
 ---
 title: "Black Feelings — Tome 2"
 description: "Nathan parviendra-t-il à remonter la pente en revenant sur les terres de son enfance ?"
-image: ../images/couvertures/black-feelings-2.jpg
+image: ../images/couvertures/black-feelings-tome-2.jpg
 date: 2024-09-10
 categories: [Romance contemporaine, Harcèlement, Seconde chance]
 title-block-banner: true

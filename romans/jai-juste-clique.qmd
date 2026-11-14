@@ -1,7 +1,7 @@
 ---
 title: "J’ai juste cliqué !"
 description: "Une histoire d’amour née sur la toile… avec tout ce que cela implique."
-image: ../images/couvertures/jai-juste-clique.jpg
+image: ../images/couvertures/j-ai-juste-clique.jpg
 date: 2024-05-25
 categories: [Romance contemporaine, Internet, Faux semblants]
 title-block-banner: true

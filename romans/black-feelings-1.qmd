@@ -1,7 +1,7 @@
 ---
 title: "Black Feelings — Tome 1"
 description: "Victime de harcèlement scolaire au lycée, Amandine ne sera plus jamais la même."
-image: ../images/couvertures/black-feelings-1.jpg
+image: ../images/couvertures/black-feelings-tome-1.jpg
 date: 2024-09-01
 categories: [Romance contemporaine, Harcèlement, Drame]
 title-block-banner: true

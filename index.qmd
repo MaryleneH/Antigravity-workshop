@@ -179,7 +179,7 @@ format:
             <p>Professeur de français et auteure hybride, Mo Gadarr mêle romance et sujets de société pour créer une "Romance engagée". D'abord découverte sur Fyctia avec <em>Black Feelings</em>, elle captive désormais ses lecteurs chez Black Ink et en auto-édition.</p>
             <ul class="hp-facts">
                 <li><i class="bi bi-trophy-fill" aria-hidden="true"></i><span><strong>Lauréate du concours Fyctia</strong> avec <em>Black Feelings</em></span></li>
-                <li><i class="bi bi-book-half" aria-hidden="true"></i><span><strong><span id="hpBookCount">23</span> romans</strong> à découvrir</span></li>
+                <li><i class="bi bi-book-half" aria-hidden="true"></i><span><strong><span id="hpBookCount">24</span> romans</strong> à découvrir</span></li>
                 <li><i class="bi bi-feather" aria-hidden="true"></i><span><strong>Auteure hybride</strong> · Black Ink &amp; auto-édition</span></li>
             </ul>
             <a href="about.html" class="hp-btn hp-btn-ghost">Découvrir son parcours <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
@@ -391,8 +391,7 @@ body.hp-home #title-block-header { display: none !important; } /* le titre visib
     display: flex; gap: 1.3rem; overflow-x: auto; scroll-snap-type: x mandatory; scroll-padding: 0 4vw;
     padding: 0.8rem 4vw 1.6rem; margin: 0; list-style: none; outline: none;
     scrollbar-width: none; -ms-overflow-style: none;
-    -webkit-mask-image: linear-gradient(90deg, transparent, #000 3.5%, #000 96.5%, transparent);
-    mask-image: linear-gradient(90deg, transparent, #000 3.5%, #000 96.5%, transparent);
+    /* pas de mask-image ici : sur Safari iOS, un masque sur une zone qui défile peut empêcher l'affichage des images */
 }
 .hp-carousel::-webkit-scrollbar { display: none; }
 .hp-carousel:focus-visible { box-shadow: inset 0 0 0 2px rgba(232, 193, 112, 0.6); border-radius: 12px; }
@@ -615,6 +614,22 @@ body.quarto-light #newsletter.hp-newsletter p { color: #5A4A50 !important; }
   update();
   var count = track.querySelectorAll('.hp-book').length, out = document.getElementById('hpBookCount');
   if (count && out) out.textContent = count;
+
+  /* Chargement fiable sur mobile : dès que le carrousel approche de l'écran, toutes ses couvertures
+     passent en chargement immédiat (le chargement différé natif est capricieux dans un défilement
+     horizontal, notamment sur Safari iOS : certaines images ne se chargeaient pas). */
+  var imgs = track.querySelectorAll('img');
+  function loadAll() { for (var i = 0; i < imgs.length; i++) imgs[i].loading = 'eager'; }
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries) {
+      for (var i = 0; i < entries.length; i++) {
+        if (entries[i].isIntersecting) { loadAll(); io.disconnect(); return; }
+      }
+    }, { rootMargin: '800px 0px' });
+    io.observe(track);
+  } else {
+    loadAll();
+  }
 })();
 </script>
 
