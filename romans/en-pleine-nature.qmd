@@ -4,7 +4,7 @@ description: "Une romance tropicale haute en couleurs — quand la nature révè
 image: ../images/couvertures/nature.jpg
 date: 2025-05-12
 categories: [Romance contemporaine, Ennemies to Lovers, Nature, Voyage]
-title-block-banner: images/hero-saison-nature.svg
+title-block-banner: true
 body-classes: en-pleine-nature
 page-layout: full
 toc: false

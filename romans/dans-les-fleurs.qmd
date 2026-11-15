@@ -4,7 +4,7 @@ description: "Romance contemporaine — douceur, renouveau et émotions à fleur
 image: ../images/couvertures/fleurs.jpg
 date: 2024-04-15
 categories: [Romance contemporaine, Printemps, Émotions]
-title-block-banner: images/hero-saison-fleurs.svg
+title-block-banner: true
 body-classes: dans-les-fleurs
 page-layout: full
 toc: false
