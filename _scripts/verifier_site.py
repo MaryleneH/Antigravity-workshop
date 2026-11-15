@@ -7,10 +7,16 @@ BLOQUE la publication (code de sortie 1) si :
   - une image, une vidéo, une feuille de style… utilisée dans une page
     (src=, poster=, url(...), ![](...)) n'existe pas ;
   - un lien interne vers une page du site (….html ou ….qmd) ne mène nulle part ;
+  - une source d'image est vide (src="", srcset="", poster="", ou ![…]() en Markdown) :
+    c'est presque toujours un chemin oublié, et c'est du HTML non conforme ;
   - une référence de _quarto.yml (menu, image par défaut, favicon, fichiers inclus,
     ressources) n'existe pas.
 
 SIGNALE (sans bloquer) les images utilisées de plus de 1 Mo, lentes à charger sur téléphone.
+
+Image remplie plus tard par JavaScript (photo prise avec un filtre, visionneuse…) : mettre
+dans src cette image transparente de 1 pixel, plutôt qu'une source vide :
+  data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7
 
 Usage, depuis la racine du dépôt :  python3 _scripts/verifier_site.py
 Aucune dépendance : uniquement la bibliothèque standard de Python.
@@ -119,6 +125,31 @@ RE_ATTR = re.compile(r"""\b(src|poster|href|data-src)\s*=\s*(["'])([^"'<>]*)\2""
 RE_URL_CSS = re.compile(r"""url\(\s*(["']?)([^"')]+)\1\s*\)""", re.I)
 RE_IMG_MD = re.compile(r"!\[[^\]]*\]\(\s*<?([^)\s>]+)>?(?:\s+\"[^\"]*\")?\s*\)")
 RE_LIEN_MD = re.compile(r"(?<!!)\[[^\]]*\]\(\s*<?([^)\s>]+)>?(?:\s+\"[^\"]*\")?\s*\)")
+# Sources vides : on ne regarde que l'intérieur des balises HTML, et pas le contenu des blocs
+# <script> / <style> (img.src = "" y est du JavaScript, pas du HTML).
+# (?<![\w.:-]) écarte data-src="", img.src="" (dans un onclick)…
+RE_SCRIPT_STYLE = re.compile(r"(<(script|style)\b[^>]*>)(.*?)(</\2\s*>)", re.I | re.S)
+RE_BALISE = re.compile(r"<[A-Za-z][\w:-]*(?:\s[^<>]*)?>")
+RE_ATTR_VIDE = re.compile(r"""(?<![\w.:-])(src|srcset|poster)\s*=\s*(["'])\s*\2""", re.I)
+RE_IMG_MD_VIDE = re.compile(r"!\[[^\]]*\]\(\s*\)")
+
+
+def sources_vides(texte):
+    """[(numéro de ligne, message)] des sources d'image vides du texte."""
+    # Contenu des blocs <script>/<style> remplacé par des espaces ; les retours à la ligne
+    # sont gardés pour que les numéros de ligne restent justes.
+    masque = RE_SCRIPT_STYLE.sub(
+        lambda m: m.group(1) + re.sub(r"[^\n]", " ", m.group(3)) + m.group(4), texte)
+    trouvees = []
+    for balise in RE_BALISE.finditer(masque):
+        for attr in RE_ATTR_VIDE.finditer(balise.group(0)):
+            ligne = masque.count("\n", 0, balise.start() + attr.start()) + 1
+            trouvees.append((ligne, f'{attr.group(1).lower()}="" vide : chemin d\'image oublié ? '
+                                    "(image remplie par JavaScript : utiliser l'image transparente "
+                                    "indiquée en tête de _scripts/verifier_site.py)"))
+    for m in RE_IMG_MD_VIDE.finditer(masque):
+        trouvees.append((masque.count("\n", 0, m.start()) + 1, "image Markdown sans fichier : ![…]()"))
+    return sorted(trouvees)
 
 
 def verifier_page(fichier):
@@ -154,6 +185,9 @@ def verifier_page(fichier):
             verifier_reference(fichier, n + 1, m.group(1), "image")
         for m in RE_LIEN_MD.finditer(ligne):
             verifier_reference(fichier, n + 1, m.group(1), "lien")
+    for ligne, message in sources_vides(texte):
+        if ligne > corps_debut:  # hors de l'en-tête YAML
+            erreur(fichier, ligne, message)
 
 
 def verifier_config():

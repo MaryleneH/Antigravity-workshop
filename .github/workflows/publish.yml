@@ -17,7 +17,10 @@ jobs:
       contents: read
     steps:
       - name: Check out repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7 # v7 : fonctionne sous Node 24 (Node 20 n'est plus pris en charge)
+        with:
+          # Ce contrôle ne fait que lire les fichiers : inutile de laisser le jeton d'accès sur le disque.
+          persist-credentials: false
 
       - name: Vérifier les images et les liens internes
         run: python3 _scripts/verifier_site.py
@@ -31,7 +34,12 @@ jobs:
       contents: write
     steps:
       - name: Check out repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
+        with:
+          # La publication pousse le site sur la branche gh-pages depuis un « worktree » git :
+          # elle a besoin des identifiants conservés par checkout. Écrit explicitement pour ne pas
+          # dépendre d'un éventuel changement de valeur par défaut dans une future version.
+          persist-credentials: true
 
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
