@@ -59,7 +59,8 @@ image: ./images/blog/im2_converted.webp
   <!-- Lightbox -->
   <div class="album-lightbox" id="belgiumLightbox" onclick="closeLightbox()">
     <span class="lightbox-close" onclick="closeLightbox()">✕</span>
-    <img src="" alt="" id="lightboxImg" class="lightbox-img">
+    <!-- Image transparente, remplacée par la photo cliquée -->
+    <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="" id="lightboxImg" class="lightbox-img">
   </div>
 
   <div class="futurist-video-container">
