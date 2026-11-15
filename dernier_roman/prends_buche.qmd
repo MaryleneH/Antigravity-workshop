@@ -29,7 +29,7 @@ format:
         <div class="pdb-video-stage">
             <div class="pdb-video-glow"></div>
             <div class="pdb-video-wrap" id="pdbVideoWrap">
-                <video id="pdbTrailer" class="pdb-video" playsinline preload="metadata" poster="../images/prends-buche-art.png">
+                <video id="pdbTrailer" class="pdb-video" playsinline preload="metadata" poster="../images/prends-buche-art.webp">
                     <source src="../assets/Trailer.mp4" type="video/mp4">
                 </video>
                 <!-- Custom play button -->

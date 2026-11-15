@@ -4,7 +4,7 @@ description: "Une romance estivale au goût de sel, de liberté et de secondes c
 image: ../images/couvertures/sur-le-sable.jpg
 date: 2024-07-10
 categories: [Romance contemporaine, Été, Seconde chance]
-title-block-banner: images/hero-saisons-sable.svg
+title-block-banner: true
 body-classes: sur-le-sable
 page-layout: full
 toc: false

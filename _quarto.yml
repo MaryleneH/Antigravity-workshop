@@ -5,7 +5,7 @@ project:
     # Domaine personnalisé : sans ce fichier dans le rendu, chaque publication
     # sur gh-pages supprimait CNAME et mogadarr.fr cessait de pointer vers le site.
     - "CNAME"
-    - "images/prends-buche-art.png"
+    - "images/prends-buche-art.webp"
     - "images/partage/*"
     - "images/filtre-noel/*"
 

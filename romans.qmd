@@ -2,7 +2,7 @@
 title: "Romans de Mo Gadarr"
 subtitle: "Entre Romance contemporaine et émotions fortes"
 description: "Découvrez l’ensemble des romans de Mo Gadarr — éditions et autoédition."
-title-block-banner: images/hero-romans.svg
+title-block-banner: true
 page-layout: full
 toc: false
 body-classes: romans
