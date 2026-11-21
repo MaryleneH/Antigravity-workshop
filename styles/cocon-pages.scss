@@ -65,6 +65,9 @@ body:has(.book-hero) main.content > p{margin:10px 0 0;text-align:center;letter-s
   .book-hero{--col:min(270px,70vw);--marge:22px;margin-top:10px;padding-bottom:30px;border-radius:32px;}
   .book-hero-bg{left:50%;translate:-50% 0;}
   .book-hero-card{grid-template-columns:minmax(0,1fr);gap:26px;}
+  /* Sur une colonne, la couverture se règle sur l'arche (--col) et non sur la largeur de la carte :
+     sinon, entre 480 et 760 px, elle déborde de l'arche et recouvre le titre et les prix. */
+  .book-hero-cover{width:min(60%,calc(var(--col)*.68));}
   .book-hero-info{gap:16px;padding:0 6px;}
   .book-actions{flex-direction:column;align-items:stretch;width:100%;}
   .book-actions a.btn-primary{width:100%;}
@@ -120,14 +123,18 @@ body.excerpt-page #quarto-content{padding-bottom:90px;}
    ===================================================================================== */
 body.page-article #quarto-content{padding-bottom:96px;}
 body.page-article .quarto-title-banner{margin-bottom:0;padding:26px 0 6px;background:transparent;color:var(--cacao);}
-body.page-article .quarto-title-banner .quarto-title .title,body.page-article #title-block-header .title{margin:0 0 .35em;font-size:clamp(2.2rem,4.6vw,3.5rem);line-height:1.08;color:var(--cacao);opacity:1;}
+/* font-weight:400 : la police des titres (Gloock) n'existe qu'en un seul poids ; sans cela, Quarto demande un demi-gras
+   que le navigateur fabrique en épaississant les lettres. */
+body.page-article .quarto-title-banner .quarto-title .title,body.page-article #title-block-header .title{margin:0 0 .35em;font-size:clamp(2.2rem,4.6vw,3.5rem);font-weight:400;line-height:1.08;color:var(--cacao);opacity:1;}
 body.page-article #title-block-header .description{font-size:clamp(1.12rem,1.7vw,1.3rem);line-height:1.5;color:var(--cacao-doux);}
 body.page-article #title-block-header .description p{margin:0;}
 body.page-article .quarto-categories{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 0;padding:0;}
-body.page-article .quarto-category{padding:6px 14px;border:0;border-radius:999px;background:var(--beurre);color:var(--cacao);font-size:.74rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;opacity:1;}
-body.page-article .quarto-category a{color:inherit;text-decoration:none;}
+/* Sélecteurs volontairement longs : ils doivent l'emporter sur ceux de Quarto (.quarto-title .quarto-categories
+   .quarto-category, opacité .6 ; #title-block-header… .quarto-title-meta-heading, opacité .8), sinon ces libellés restent pâles. */
+body.page-article .quarto-title .quarto-categories .quarto-category{padding:6px 14px;border:0;border-radius:999px;background:var(--beurre);color:var(--cacao);font-size:.74rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;opacity:1;}
+body.page-article .quarto-title .quarto-categories .quarto-category a{color:inherit;text-decoration:none;}
 body.page-article .quarto-title-meta{margin:18px 0 8px;padding-bottom:22px;border-bottom:1px dashed rgba(201,99,79,.45);}
-body.page-article .quarto-title-meta-heading{margin:0 0 2px;font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--brique);}
+body.page-article #title-block-header.quarto-title-block.default .quarto-title-meta-heading{margin:0 0 2px;font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--brique);opacity:1;}
 body.page-article .quarto-title-meta-contents{font-size:.98rem;color:var(--cacao);}
 body.page-article .quarto-title-meta-contents p{margin:0;}
 body.page-article main.content{font-size:1.08rem;line-height:1.78;color:var(--cacao);}

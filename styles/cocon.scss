@@ -107,6 +107,28 @@ svg.ico,.ico{width:1.15em;height:1.15em;flex:none;}
   #quarto-header .navbar-brand img,#quarto-header .navbar-logo{width:42px;height:42px;}
   #quarto-header .navbar-title{font-size:1.9rem;}
 }
+/* Entre 992 et 1080 px (tablette couchée), le menu complet tient tout juste : on le resserre un peu,
+   sinon le nom « Mo Gadarr » est tronqué. Idem sur les très petits téléphones. */
+@media (min-width:992px) and (max-width:1079.98px){
+  #quarto-header .navbar-container{gap:4px;}
+  #quarto-header .navbar-title{font-size:1.8rem;}
+  #quarto-header .navbar-nav{gap:0;}
+  #quarto-header .navbar-nav .nav-link{padding:0 8px !important;font-size:.9rem;}
+  #quarto-header .navbar-nav.ms-auto .nav-link{padding:0 13px !important;font-size:.9rem;margin-left:2px;}
+}
+@media (max-width:380px){
+  #quarto-header .navbar-title{font-size:1.72rem;}
+}
+@media (max-width:340px){
+  #quarto-header .navbar-brand-container{gap:7px;}
+  #quarto-header .navbar-title{font-size:1.5rem;}
+}
+@media (max-width:330px){
+  #quarto-header .navbar-brand img,#quarto-header .navbar-logo{width:40px;height:40px;}
+  #quarto-header .navbar-brand-container{gap:6px;}
+  #quarto-header .navbar-title{font-size:1.4rem;}
+  #quarto-header .navbar-toggler{width:44px;height:44px;}
+}
 
 /* =====================================================================================
    Composants « Cocon » — repris de la maquette choisie par l'auteure (_maquettes/5-cocon.html).
@@ -344,7 +366,7 @@ svg.ico,.ico{width:1.15em;height:1.15em;flex:none;}
   .filtre i{display:grid;place-items:center;min-width:30px;height:30px;padding:0 6px;border-radius:999px;background:var(--peche-clair);font-style:normal;font-size:.8rem;font-weight:700;color:var(--cacao);}
   .filtre:hover{border-color:var(--cacao);}
   .filtre[aria-pressed="true"]{background:var(--cacao);border-color:var(--cacao);color:var(--creme);}
-  .filtre[aria-pressed="true"] i{background:var(--terracotta);color:#fff;}
+  .filtre[aria-pressed="true"] i{background:var(--brique);color:#fff;}   /* brique plutôt que terracotta : chiffre blanc lisible (5,8:1) */
   .livres{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:18px;}
   .livre{position:relative;display:flex;flex-direction:column;padding:12px 12px 16px;border-radius:var(--r-m);background:var(--peche-clair);background:color-mix(in srgb,var(--t) 15%,var(--papier));text-decoration:none;transition:translate .3s,box-shadow .3s;}
   .livre:hover{translate:0 -5px;box-shadow:var(--ombre);}
@@ -533,7 +555,7 @@ svg.ico,.ico{width:1.15em;height:1.15em;flex:none;}
     .glisser .ico{color:var(--brique);}
 
     /* L'auteure */
-    .auteure-visuel{width:268px;}
+    .auteure-visuel{width:min(268px,calc(100% - 48px));}   /* 24 px de chaque côté pour la pastille et l'étiquette */
     .auteure-visuel .pastille-logo{left:-30px;bottom:40px;width:78px;height:78px;}
     .auteure-visuel .legende{right:-22px;}
     .auteure .chapo{font-size:1.06rem;}
@@ -674,7 +696,8 @@ body.accueil .co .pied{margin-top:-56px;}
     .apropos{padding:10px 0 50px;}
     .apropos-role .script{font-size:2.1rem;}
     .apropos .actions .bouton,.suite-auteure .actions .bouton{width:100%;}
-    .pastille-mots{right:-4%;width:92px;height:92px;}
+    .pastille-mots{right:-3%;width:92px;height:92px;}
+    .apropos .legende{right:-3%;}   /* l'arche occupe ici toute la largeur : l'étiquette reste dans l'écran */
     .contact{padding:16px 0 70px;}
     .contact-grille{grid-template-columns:minmax(0,1fr);}
     .contact-grille .tuile .bouton{width:100%;}
@@ -705,6 +728,62 @@ body.accueil .co .pied{margin-top:-56px;}
     .journal-page .actus-grille{grid-template-columns:minmax(0,1fr);}
     .apropos-role .script{font-size:1.6rem;}
     .apropos .pastille-logo{left:-3%;top:4%;width:84px;height:84px;}
+  }
+}
+
+/* =====================================================================================
+   Largeurs intermédiaires — tablettes, petits ordinateurs, très petits téléphones
+   La page ne défile jamais de côté (overflow-x:clip sur body) : un élément trop large ne crée pas de barre
+   de défilement, il est rogné en silence. Ces règles gardent chaque élément entier et lisible de 320 à
+   1600 px de large. À vérifier après toute retouche de mise en page : _scripts/verifier_affichage.js
+   ===================================================================================== */
+.co{
+  /* Éléments de décor : ils ne doivent pas intercepter les clics destinés au lien voisin. */
+  .t-vingt .eventail,.t-filt-halo{pointer-events:none;}
+  /* Les tuiles rognent leur décor (éventail, halo…). « clip » plutôt que « hidden » : le navigateur ne peut
+     alors plus faire défiler l'intérieur d'une tuile quand on atteint son bouton au clavier.
+     (Un navigateur ancien qui ne connaît pas « clip » garde le « hidden » déclaré plus haut.) */
+  .tuile{overflow:clip;}
+
+  /* Illustrations en arche : la pastille, la carte et l'étiquette dépassent de l'arche (en % de sa largeur).
+     On réduit donc l'arche là où la colonne est étroite, pour que ses « satellites » restent dans l'écran. */
+  @media (min-width:1021px) and (max-width:1279.98px){
+    .ouverture-visuel .arche{width:min(440px,78%);}
+    .apropos .arche{width:min(420px,80%);}
+    /* … et les satellites de l'accueil suivent l'échelle, pour ne pas se chevaucher sur une arche plus petite. */
+    .ouverture-visuel .pastille-logo{top:6%;width:88px;height:88px;}
+    .ouverture-visuel .pastille-24{width:104px;height:104px;}
+    .ouverture-visuel .pastille-24 strong{font-size:2.6rem;}
+    .ouverture-visuel .pastille-24 span{font-size:.68rem;}
+    .ouverture-visuel .carte-nouveau{width:130px;}
+  }
+  @media (min-width:1021px) and (max-width:1139.98px){
+    .apropos-role .script{font-size:2.15rem;}   /* « Auteure de New Romance engagée » tient sur une ligne */
+  }
+  @media (min-width:641px) and (max-width:1020px){
+    .ouverture-visuel .arche{width:min(440px,66%);}
+  }
+  @media (max-width:359.98px){
+    .ouverture-visuel .arche{width:216px;}
+    .ouverture-visuel .pastille-logo{display:none;}   /* sur une arche aussi petite, la carte le masquerait ; le logo est déjà dans le menu */
+  }
+
+  /* Tuile du nouveau roman : le bouton et le lien passent sur deux lignes quand la place manque. */
+  @media (max-width:800px){
+    .t-nouv .actions{flex-wrap:wrap;}
+  }
+  /* Cartes « envies » sur trois colonnes étroites : l'icône passe au-dessus du nom, qui n'est plus rogné. */
+  @media (min-width:641px) and (max-width:780px){
+    .envie-bas{flex-direction:column;align-items:flex-start;gap:10px;}
+  }
+  /* Petits téléphones : le grand titre de l'accueil suit la largeur de l'écran et garde ainsi les mêmes
+     retours à la ligne qu'à 390 px (sinon, à 360 px, le point final passait seul à la ligne) ; les autres
+     titres peuvent passer à la ligne, l'annonce se resserre. */
+  @media (max-width:380px){
+    #titre-ouverture{font-size:min(2.7rem,12.2vw);}
+    .insecable{white-space:normal;}
+    .annonce{gap:8px;font-size:.8rem;}
+    .annonce-etiquette{padding:7px 10px;letter-spacing:.06em;}
   }
 }
 

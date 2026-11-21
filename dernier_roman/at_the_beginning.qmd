@@ -519,6 +519,7 @@ genre: "Duologie • Romance sombre"
     align-items: center;
     gap: 0.8rem;
     z-index: 5;
+    pointer-events: none; /* simple décor : ne doit pas intercepter les clics des boutons voisins */
 }
 .at-scroll-line {
     width: 1px;
@@ -971,7 +972,7 @@ body.quarto-light .at-ar-heading em {
     -webkit-background-clip: text; background-clip: text;
     -webkit-text-fill-color: transparent;
 }
-body.quarto-light .at-ar-sub { color: rgba(45,27,78,0.6); }
+body.quarto-light .at-ar-sub { color: rgba(45,27,78,0.72); }
 body.quarto-light .at-ar-badge { color: #7A1B3D; border-color: rgba(122,27,61,0.25); }
 body.quarto-light .at-ar-badge-dot { background: #7A1B3D; }
 body.quarto-light .at-ar-feature { color: #5a3030; background: rgba(45,27,78,0.05); border-color: rgba(45,27,78,0.12); }
@@ -1058,6 +1059,10 @@ body.quarto-light .at-ar-phone { border-color: rgba(45,27,78,0.2); }
         padding: 5rem 1.5rem 3rem;
         min-height: auto;
     }
+    /* Ici le bloc est plus haut que l'écran : l'invitation « Découvrir » tomberait sur les boutons. */
+    .at-scroll-hint {
+        display: none;
+    }
     .at-hero-inner {
         grid-template-columns: 1fr;
         gap: 3rem;
@@ -1136,11 +1141,12 @@ body.quarto-light .at-title-line-1 {
     -webkit-text-fill-color: transparent;
     background-size: 200% auto;
 }
+/* Teintes renforcées : le thème clair est désormais le seul, ces textes doivent rester lisibles. */
 body.quarto-light .at-title-line-2 {
-    color: rgba(45,27,78,0.5);
+    color: rgba(45,27,78,0.62);
 }
 body.quarto-light .at-hero-tagline {
-    color: rgba(45,27,78,0.5);
+    color: rgba(45,27,78,0.72);
 }
 body.quarto-light .at-badge {
     color: #7A1B3D;
@@ -1149,11 +1155,24 @@ body.quarto-light .at-badge {
 body.quarto-light .at-hero-img {
     border-color: rgba(45,27,78,0.1);
 }
+/* Bouton « Essayez le filtre AT » : le doré d'origine est illisible sur fond clair. */
+body.quarto-light .at-btn-ar {
+    color: #7A1B3D !important;
+    background: rgba(122,27,61,0.06);
+    border-color: rgba(122,27,61,0.4);
+    -webkit-tap-highlight-color: rgba(122,27,61,0.15);
+}
+body.quarto-light .at-btn-ar:hover {
+    color: #fff !important;
+    background: #7A1B3D;
+    border-color: #7A1B3D;
+    box-shadow: 0 8px 30px rgba(122,27,61,0.25);
+}
 body.quarto-light .at-scroll-line {
     background: linear-gradient(to bottom, transparent, rgba(122,27,61,0.3));
 }
 body.quarto-light .at-scroll-text {
-    color: rgba(122,27,61,0.4);
+    color: rgba(122,27,61,0.62);
 }
 
 body.quarto-light .at-editorial {
@@ -1209,14 +1228,17 @@ body.quarto-light .at-detail-value {
     color: #2D1B4E;
 }
 body.quarto-light .at-detail-label {
-    color: rgba(122,27,61,0.6);
+    color: rgba(122,27,61,0.82);
+}
+body.quarto-light .at-status-out {
+    color: #7A1B3D !important;   /* le doré d'origine est illisible sur fond clair */
 }
 
 body.quarto-light .at-tropes {
     background: #FDF6F0;
 }
 body.quarto-light .at-tropes-title {
-    color: rgba(45,27,78,0.35);
+    color: rgba(45,27,78,0.72);
 }
 body.quarto-light .at-trope-card {
     color: #5a4040;

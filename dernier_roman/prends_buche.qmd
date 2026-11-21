@@ -634,15 +634,29 @@ body.quarto-light .pdb-title {
     background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+/* Teintes renforcées : le thème clair est désormais le seul, ces textes doivent rester lisibles. */
 body.quarto-light .pdb-tagline {
-    color: rgba(58,46,46,0.6);
+    color: rgba(58,46,46,0.8);
 }
 body.quarto-light .pdb-pill {
     color: #7A1B3D;
     border-color: rgba(122,27,61,0.2);
 }
 body.quarto-light .pdb-video-label {
-    color: rgba(122,27,61,0.5);
+    color: #5A1230;
+}
+/* Le doré et le rose d'origine sont illisibles sur fond clair. */
+body.quarto-light .pdb-btn-excerpt {
+    color: #7A1B3D !important;
+    border-color: rgba(122,27,61,0.4);
+}
+body.quarto-light .pdb-btn-excerpt:hover {
+    background: rgba(122,27,61,0.08);
+    border-color: #7A1B3D;
+    color: #7A1B3D !important;
+}
+body.quarto-light .pdb-synopsis em {
+    color: #C2185B;
 }
 body.quarto-light .pdb-book {
     background: linear-gradient(180deg, #EFF2EC, #FDF6F0);
