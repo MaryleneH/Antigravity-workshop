@@ -51,7 +51,7 @@ const surFond = (hex) => (clair(hex) ? '#1A1A1A' : '#FFFFFF');
 const maj = (s) => s.charAt(0).toUpperCase() + s.slice(1);
 // Typographie française : espaces insécables avant : ; ! ? et à l'intérieur des guillemets (pas de signe seul en début de ligne).
 const typo = (s) => String(s).replace(/ ([:;!?»])/g, '\u00a0$1').replace(/« /g, '«\u00a0');
-const AJUSTER = `<script>document.fonts.ready.then(function(){document.querySelectorAll('[data-max]').forEach(function(e){var max=+e.dataset.max,s=parseFloat(getComputedStyle(e).fontSize);e.style.display='inline-block';e.style.whiteSpace='nowrap';while(e.getBoundingClientRect().width>max&&s>28){s-=2;e.style.fontSize=s+'px';}});});</script>`;
+const AJUSTER = `<script>document.fonts.ready.then(function(){document.querySelectorAll('[data-max]').forEach(function(e){var max=+e.dataset.max,s=parseFloat(getComputedStyle(e).fontSize);e.style.display='inline-block';e.style.whiteSpace='nowrap';while(e.offsetWidth>max&&s>28){s-=2;e.style.fontSize=s+'px';}});});</script>`;
 
 function lireMetas(html) {
   const m = {};
