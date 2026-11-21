@@ -7,6 +7,14 @@ categories: [Romance contemporaine, Sexy, Émotions fortes]
 title-block-banner: true
 page-layout: full
 toc: false
+# --- Fiche du roman : sert aux listes automatiques (accueil, page Romans) ---
+ordre: 24
+rubrique: oneshots
+humeurs: [frissons, emotion]
+teinte: "#ff4fa3"
+titre-court: "Undress Me"
+genre: "Romance sexy"
+sujet: "Traumatismes de l'enfance"
 ---
 
 ```{=html}

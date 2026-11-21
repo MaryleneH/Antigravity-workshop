@@ -8,6 +8,7 @@ project:
     - "images/prends-buche-art.webp"
     - "images/partage/*"
     - "images/filtre-noel/*"
+    - "images/cocon/*"
 
 website:
   title: "Mo Gadarr"
@@ -21,10 +22,11 @@ website:
     card-style: summary_large_image
   favicon: assets/favicon.png
   navbar:
-    title: false
+    title: "Mo Gadarr"
+    logo: images/cocon/logo-mo-192.webp
+    logo-alt: ""
+    pinned: true
     left:
-      - text: "MG" # Monogram Logo
-        href: index.qmd
       - text: "Accueil"
         href: index.qmd
       - text: "Dernier roman"
@@ -37,43 +39,25 @@ website:
         href: blog.qmd
       - text: "Contact"
         href: contactons.qmd
-  page-footer:
-    center: "© 2026 Mo Gadarr. Tous droits réservés."
+    right:
+      - icon: heart-fill
+        text: "Le Cercle des Intimes"
+        href: index.qmd#lettre
 
 lang: fr
 
 format:
   html:
+    # Thème « Cocon » (clair) : couleurs, polices, menu et composants dans styles/cocon.scss ;
+    # pages de livres, extraits, blog et articles dans styles/cocon-pages.scss.
     theme:
-      light: 
-        - cosmo
-        - styles.css
-        - styles-light.css
-      dark: 
-        - darkly
-        - styles.css
-        - styles-dark.css
-    mainfont: 'Lato'
-    fontsize: 1.1em
+      - cosmo
+      - styles/cocon.scss
+      - styles/cocon-pages.scss
+    mainfont: "Figtree"
     include-in-header:
       - file: _includes/head-icons.html
-      - text: |
-          <script>
-          /* Force default to dark mode - Migration V2 */
-          (function() {
-              const storageKey = 'quarto-color-scheme';
-              const migrationKey = 'quarto-dark-mode-v2';
-              
-              // Re-run migration for V2 to sync toggle button
-              if (!window.localStorage.getItem(migrationKey)) {
-                  // Force Alternate (Dark)
-                  window.localStorage.setItem(storageKey, 'alternate');
-                  // Mark as migrated
-                  window.localStorage.setItem(migrationKey, 'true');
-              }
-          })();
-          </script>
-          <link rel="preconnect" href="https://fonts.googleapis.com">
-          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-          <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-          <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    include-before-body:
+      - file: _includes/icones.html
+    include-after-body:
+      - file: _includes/pied-de-page.html

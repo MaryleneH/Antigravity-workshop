@@ -8,6 +8,13 @@ title-block-banner: true
 body-classes: dans-les-fleurs
 page-layout: full
 toc: false
+# --- Fiche du roman : sert aux listes automatiques (accueil, page Romans) ---
+ordre: 12
+rubrique: series
+humeurs: [evasion]
+teinte: "#e58fa6"
+titre-court: "Dans les fleurs"
+genre: "Romance de printemps"
 ---
 
 ```{=html}

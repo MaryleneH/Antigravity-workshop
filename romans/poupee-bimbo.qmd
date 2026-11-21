@@ -7,6 +7,14 @@ categories: [Romance de Noël, Comédie romantique, Famille, Feel-good]
 title-block-banner: true
 page-layout: full
 toc: false
+# --- Fiche du roman : sert aux listes automatiques (accueil, page Romans) ---
+ordre: 18
+rubrique: fetes
+humeurs: [noel, rire]
+teinte: "#e83e8c"
+titre-court: "Poupée Bimbo"
+genre: "Comédie romantique"
+sujet: "Préjugés"
 ---
 
 ```{=html}

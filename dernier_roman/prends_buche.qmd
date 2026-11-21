@@ -10,6 +10,13 @@ body-classes: romans
 format:
   html:
     link-external-newwindow: true
+# --- Fiche du roman : sert aux listes automatiques (accueil, page Romans) ---
+ordre: 15
+rubrique: fetes
+humeurs: [noel, rire]
+teinte: "#b3262b"
+titre-court: "Prends de la bûche"
+genre: "Romance de Noël • Enemies to Lovers"
 ---
 
 ```{=html}

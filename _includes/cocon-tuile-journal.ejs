@@ -1,0 +1,16 @@
+```{=html}
+<%
+/* Tuile « Dans le journal de Mo » de l'accueil : l'article le plus récent qui n'annonce pas une nouveauté
+   (la nouveauté a déjà sa propre tuile, juste à côté). */
+const estNouveaute = (a) => (a.categories || []).some((c) => String(c).toLowerCase() === "nouveauté");
+const a = items.find((x) => !estNouveaute(x)) || items[0];
+%>
+<% if (a) { %>
+<a class="tuile t-blog" href="<%- a.path %>">
+  <div class="t-blog-img"><% if (a.image) { %><img src="<%- a.image %>" alt="" loading="lazy" decoding="async"><% } %></div>
+  <div class="t-blog-texte"><p class="surtitre">Dans le journal de Mo · <%= a.date %></p>
+    <h3><%= a.title %></h3><% if (a.description) { %><p class="resume"><%= a.description %></p><% } %>
+    <span class="lien-fleche">Lire l’article <span class="rond"><svg class="ico" aria-hidden="true"><use href="#i-fleche"/></svg></span></span></div>
+</a>
+<% } %>
+```

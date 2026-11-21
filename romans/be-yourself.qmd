@@ -7,6 +7,14 @@ categories: [Romance contemporaine, Body positive, Reconstruction]
 title-block-banner: true
 page-layout: full
 toc: false
+# --- Fiche du roman : sert aux listes automatiques (accueil, page Romans) ---
+ordre: 6
+rubrique: edition
+humeurs: [emotion]
+teinte: "#c9a45c"
+titre-court: "Be Yourself"
+genre: "New Adult • Identité"
+sujet: "Body positive"
 ---
 
 ```{=html}

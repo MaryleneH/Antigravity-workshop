@@ -8,6 +8,13 @@ title-block-banner: true
 body-classes: sur-le-sable
 page-layout: full
 toc: false
+# --- Fiche du roman : sert aux listes automatiques (accueil, page Romans) ---
+ordre: 11
+rubrique: series
+humeurs: [evasion]
+teinte: "#d3ac8d"
+titre-court: "Sur le sable"
+genre: "Romance d'été"
 ---
 
 ```{=html}

@@ -16,6 +16,13 @@ body-classes: romans at-page-body fpn-page-body
 format:
   html:
     link-external-newwindow: true
+# --- Fiche du roman : sert aux listes automatiques (accueil, page Romans) ---
+ordre: 1
+rubrique: nouveaute
+humeurs: [noel, rire]
+teinte: "#c5190f"
+titre-court: "La fille du Père Noël"
+genre: "Romance de Noël"
 ---
 
 ```{=html}

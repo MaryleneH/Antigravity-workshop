@@ -7,6 +7,14 @@ categories: [Romance contemporaine, Harcèlement, Drame]
 title-block-banner: true
 page-layout: full
 toc: false
+# --- Fiche du roman : sert aux listes automatiques (accueil, page Romans) ---
+ordre: 2
+rubrique: edition
+humeurs: [frissons, emotion]
+teinte: "#e0186f"
+titre-court: "Black Feelings 1"
+genre: "Romance • Suspense"
+sujet: "Harcèlement"
 ---
 
 

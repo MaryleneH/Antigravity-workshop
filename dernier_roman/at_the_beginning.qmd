@@ -10,6 +10,13 @@ body-classes: romans at-page-body
 format:
   html:
     link-external-newwindow: true
+# --- Fiche du roman : sert aux listes automatiques (accueil, page Romans) ---
+ordre: 7
+rubrique: series
+humeurs: [frissons]
+teinte: "#8b5ff1"
+titre-court: "AT — The Beginning"
+genre: "Duologie • Romance sombre"
 ---
 
 ```{=html}

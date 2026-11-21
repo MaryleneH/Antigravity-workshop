@@ -1,0 +1,30 @@
+```{=html}
+<%
+/* La collection de l'accueil : filtres par rubrique et cartes teintées.
+   Tout vient de l'en-tête des pages de romans (ordre, rubrique, humeurs, teinte, titre-court, genre) :
+   un nouveau roman dans romans/ apparaît ici tout seul, avec les compteurs à jour. */
+const rubriques = [["nouveaute", "Nouveauté"], ["edition", "En maison d’édition"], ["series", "Séries"], ["fetes", "Fêtes"], ["oneshots", "One-shots"]];
+const livres = items.filter((i) => i.rubrique).sort((a, b) => (a.ordre || 999) - (b.ordre || 999));
+const nb = (r) => livres.filter((l) => l.rubrique === r).length;
+%>
+<div class="entete-ligne">
+  <header class="entete">
+    <p class="surtitre">La collection</p>
+    <h2 id="titre-romans">Les <span data-nb-romans><%= livres.length %></span>&nbsp;romans de Mo</h2>
+  </header>
+  <div class="filtres" id="filtres" role="group" aria-label="Filtrer les romans par rubrique">
+    <button class="filtre" type="button" data-rubrique="tous" aria-pressed="true">Tous<i><%= livres.length %></i></button>
+<% for (const [id, nom] of rubriques) { if (nb(id)) { %>
+    <button class="filtre" type="button" data-rubrique="<%= id %>" aria-pressed="false"><%= nom %><i><%= nb(id) %></i></button>
+<% } } %>
+  </div>
+</div>
+<div class="livres list" id="livres">
+<% for (const l of livres) { %>
+  <a class="livre" href="<%- l.path %>" data-rubrique="<%= l.rubrique %>" style="--t:<%= l.teinte || '#C9634F' %>" aria-label="<%= l.title %> — <%= l.genre || '' %>" <%= metadataAttrs(l) %>>
+    <span class="livre-couv"><img src="<%- l.image %>" alt="" loading="lazy" decoding="async"><% if (l.rubrique === 'nouveaute') { %><span class="livre-nouveau">Nouveau</span><% } %></span>
+    <span class="livre-titre"><%= l['titre-court'] || l.title %></span><span class="livre-genre"><%= l.genre || '' %></span>
+  </a>
+<% } %>
+</div>
+```

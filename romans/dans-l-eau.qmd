@@ -6,6 +6,13 @@ categories: [Romance contemporaine, Été, Île Maurice]
 title-block-banner: true
 page-layout: full
 toc: false
+# --- Fiche du roman : sert aux listes automatiques (accueil, page Romans) ---
+ordre: 14
+rubrique: series
+humeurs: [evasion]
+teinte: "#0a82bd"
+titre-court: "Dans l'eau"
+genre: "Romance d'été"
 ---
 
 ```{=html}

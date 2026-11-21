@@ -7,6 +7,13 @@ categories: [Comédie romantique, Enemies to Lovers, Feel-good]
 title-block-banner: true
 page-layout: full
 toc: false
+# --- Fiche du roman : sert aux listes automatiques (accueil, page Romans) ---
+ordre: 23
+rubrique: oneshots
+humeurs: [rire]
+teinte: "#d6336c"
+titre-court: "Et zut !"
+genre: "Romance gourmande"
 ---
 
 ```{=html}

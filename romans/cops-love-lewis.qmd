@@ -7,6 +7,14 @@ categories: [Romantic Suspense, Fratrie, Addictions, Interdit]
 title-block-banner: true
 page-layout: full
 toc: false
+# --- Fiche du roman : sert aux listes automatiques (accueil, page Romans) ---
+ordre: 10
+rubrique: series
+humeurs: [frissons]
+teinte: "#7fb6d6"
+titre-court: "COPS · Lewis Hunter"
+genre: "Romantic Suspense"
+sujet: "Addictions"
 ---
 
 ```{=html}

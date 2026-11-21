@@ -8,6 +8,13 @@ title-block-banner: true
 body-classes: en-pleine-nature
 page-layout: full
 toc: false
+# --- Fiche du roman : sert aux listes automatiques (accueil, page Romans) ---
+ordre: 13
+rubrique: series
+humeurs: [evasion]
+teinte: "#2f6b3a"
+titre-court: "En pleine nature"
+genre: "Romance d'automne"
 ---
 
 ```{=html}

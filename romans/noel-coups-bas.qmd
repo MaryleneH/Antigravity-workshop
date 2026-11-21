@@ -7,6 +7,13 @@ categories: [Romance de Noël, Enemies to Lovers, Bureau, Feel-good]
 title-block-banner: true
 page-layout: full
 toc: false
+# --- Fiche du roman : sert aux listes automatiques (accueil, page Romans) ---
+ordre: 20
+rubrique: fetes
+humeurs: [noel, rire]
+teinte: "#c9a36b"
+titre-court: "Noël, coups bas et Secret Santa"
+genre: "Enemies to Lovers"
 ---
 
 ```{=html}

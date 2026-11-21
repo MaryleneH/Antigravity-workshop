@@ -1,6 +1,6 @@
 // Capture une maquette sur ordinateur (1440 px) et sur téléphone (390 px), et signale les défauts.
 //
-// Usage : node _maquettes/outils/capture.js <maquette.html> <dossier_de_sortie>
+// Usage : node _maquettes/outils/capture.js <maquette.html ou adresse http://…> <dossier_de_sortie>
 //
 // Fichiers produits :
 //   ordi-pleine.png     page entière, 1440 px de large
@@ -15,7 +15,7 @@ const { pathToFileURL } = require('url');
 
 const [fichier, sortie] = process.argv.slice(2);
 if (!fichier || !sortie) { console.error('Usage : node capture.js <maquette.html> <dossier_de_sortie>'); process.exit(2); }
-const url = pathToFileURL(path.resolve(fichier)).href;
+const url = /^https?:\/\//.test(fichier) ? fichier : pathToFileURL(path.resolve(fichier)).href;   // une adresse web convient aussi
 fs.mkdirSync(sortie, { recursive: true });
 
 // Animations figées dans leur état final : des captures stables et comparables.
