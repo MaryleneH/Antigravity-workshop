@@ -64,6 +64,3 @@ genre: "Romance Saint-Valentin"
 </header>
 
 ```
-
-
-```

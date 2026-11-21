@@ -10,6 +10,8 @@ format:
     toc: false
     anchor-sections: true
     smooth-scroll: true
+# Vignette de l'article dans le blog et sur l'accueil
+image: ../images/blog/photo_article1.PNG
 ---
 
 ```{=html}

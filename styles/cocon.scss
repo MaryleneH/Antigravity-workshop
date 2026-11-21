@@ -31,10 +31,16 @@ $navbar-hl: #A9472F;
   --ombre:0 26px 50px -30px rgba(58,38,34,.45);
   --ombre-douce:0 16px 34px -24px rgba(58,38,34,.35);
   --r-xl:40px; --r-l:30px; --r-m:22px; --r-s:14px;
+  /* Anciens noms de variables, encore utilisés par les pages qui portent leur propre style
+     (pages spéciales, quelques articles) : ils pointent désormais vers les couleurs Cocon. */
+  --color-pink:#A9472F; --color-pink-hover:#3A2622; --color-pink-glow:rgba(201,99,79,.3); --color-pink-soft:rgba(201,99,79,.12);
+  --color-green:#A8B79B; --color-white:#fff; --text-muted:#5F4842; --text-body:#3A2622;
+  --font-heading:"Gloock","Young Serif",Georgia,serif; --font-body:"Figtree",system-ui,-apple-system,"Segoe UI",sans-serif; --font-primary:"Figtree",system-ui,sans-serif;
+  --radius-card:22px; --radius-btn:999px; --shadow-deep:0 26px 50px -30px rgba(58,38,34,.45); --ease-elegant:cubic-bezier(.2,.8,.2,1);
 }
 
 /* ---------- Base ---------- */
-html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;}
+html{scroll-behavior:smooth;scroll-padding-top:104px;-webkit-text-size-adjust:100%;}
 body{font-family:var(--texte);font-size:1.0625rem;line-height:1.6;color:var(--cacao);background:var(--creme);-webkit-font-smoothing:antialiased;overflow-x:clip;}
 h1,h2,h3,h4,h5,.h1,.h2,.h3,.h4,.h5{font-family:var(--titre);font-weight:400;letter-spacing:-.01em;color:var(--cacao);text-wrap:balance;}
 h2,.h2{border-bottom:0;padding-bottom:0;}
@@ -586,6 +592,121 @@ svg.ico,.ico{width:1.15em;height:1.15em;flex:none;}
   .pied{margin-top:0;}
 }
 body.accueil .co .pied{margin-top:-56px;}
+
+/* ---------- Page Romans : la bibliothèque ---------- */
+.co{
+  .biblio{position:relative;padding-top:40px;overflow:clip;}
+  .biblio .formes .f1{width:520px;height:480px;right:-170px;top:-120px;}
+  .biblio .formes .f3{left:auto;right:30%;top:20px;width:96px;height:96px;}
+  .biblio .cadre{position:relative;}
+  .biblio h1{font-size:clamp(2.4rem,4.6vw,3.9rem);}
+  .biblio-filtres{display:flex;flex-direction:column;gap:14px;margin-bottom:26px;}
+  .filtres-groupe{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;}
+  .filtres-titre{flex:none;min-width:118px;font-size:.78rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--cacao-doux);}
+  .filtre-envie{padding-left:14px;}
+  .filtre-envie .ico{color:var(--brique);}
+  .filtre-envie[aria-pressed="true"] .ico{color:var(--peche-vif);}
+  .biblio-compte{margin-bottom:18px;font-size:.95rem;color:var(--cacao-doux);}
+  .biblio-compte strong{font-family:var(--titre);font-weight:400;font-size:1.5rem;color:var(--cacao);margin-right:4px;}
+  .biblio-vide{padding:40px 0;text-align:center;color:var(--cacao-doux);}
+  .livre-sujet{align-self:flex-start;margin-top:9px;padding:4px 10px;border-radius:999px;background:var(--papier);border:1px solid rgba(58,38,34,.1);font-size:.72rem;font-weight:700;letter-spacing:.04em;color:var(--brique);}
+  @media (max-width:640px){
+    .biblio{padding-top:16px;}
+    .filtres-groupe{flex-direction:column;align-items:stretch;gap:8px;}
+    /* Ici, pas de rail : tous les romans se voient, sur deux colonnes. */
+    .livres.livres-grille{grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:none;grid-auto-flow:row;grid-auto-columns:auto;gap:12px;overflow:visible;margin-inline:0;padding:0;}
+  }
+}
+
+
+/* ---------- Pages L'Auteure et Contact ---------- */
+.co{
+  .biblio .intro{margin-top:12px;}
+  .actions.centre{justify-content:center;}
+  .apropos{position:relative;padding:44px 0 70px;overflow:clip;}
+  .apropos-grille{position:relative;display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:64px;align-items:center;}
+  .apropos-visuel{position:relative;display:grid;place-items:center;padding:26px 0 30px;}
+  .apropos .arche{width:min(420px,100%);aspect-ratio:420/540;}
+  .arche-scene{position:absolute;inset:0;border-radius:999px 999px 44px 44px;overflow:hidden;background:var(--peche);box-shadow:var(--ombre);}
+  .arche-scene img{width:100%;height:100%;object-fit:cover;object-position:50% 18%;}
+  .pastille-mots{left:auto;right:-13%;top:14%;width:112px;height:112px;padding:5px;border-radius:50%;background:#fff;animation-delay:-2.5s;}
+  .pastille-mots img{width:100%;height:100%;object-fit:cover;border-radius:50%;}
+  .apropos h1{font-size:clamp(3rem,6vw,5rem);}
+  .apropos-role{margin-top:6px;}
+  .apropos-role .script{font-size:2.5rem;line-height:1;}
+  .apropos .chapo{margin-top:22px;max-width:36ch;}
+  .apropos .faits{margin-top:28px;}
+  .apropos .actions{margin-top:30px;}
+  .parcours-grille{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,.75fr);gap:60px;align-items:start;}
+  .prose{max-width:62ch;font-size:1.08rem;line-height:1.75;color:var(--cacao-doux);}
+  .prose p + p{margin-top:1.05em;}
+  .prose strong{color:var(--cacao);font-weight:700;}
+  .prose em{color:var(--cacao);}
+  .parcours-cote{display:flex;flex-direction:column;gap:22px;}
+  .parcours-cote .tuile{min-height:0;}
+  .photo-salon{position:relative;margin:0;border-radius:var(--r-l);overflow:hidden;box-shadow:var(--ombre-douce);rotate:1.5deg;}
+  .photo-salon img{width:100%;aspect-ratio:4/3;object-fit:cover;object-position:50% 30%;}
+  .photo-salon figcaption{position:absolute;left:14px;bottom:14px;display:inline-flex;align-items:center;gap:8px;padding:8px 14px;border-radius:999px;background:var(--papier);font-size:.82rem;font-weight:600;color:var(--cacao-doux);}
+  .photo-salon figcaption .ico{color:var(--terracotta);}
+  .suite-auteure{padding-top:74px;}
+  .suite-auteure .entete{margin-bottom:28px;}
+
+  .contact{position:relative;padding:44px 0 96px;overflow:clip;}
+  .contact .cadre{position:relative;}
+  .contact h1{font-size:clamp(2.6rem,5vw,4.2rem);}
+  .contact .intro{max-width:62ch;}
+  .contact-grille{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr) minmax(0,.72fr);gap:20px;align-items:stretch;}
+  .contact-grille .tuile{gap:14px;align-items:flex-start;}
+  .contact-grille .tuile h2{font-size:1.85rem;}
+  .contact-grille .tuile p{font-size:1.02rem;line-height:1.55;text-wrap:pretty;}
+  .contact-grille .tuile .bouton,.contact-grille .tuile .actions{margin-top:auto;}
+  .contact-grille .t-savoir-icone{font-size:1.5rem;}
+  .t-contact{background:linear-gradient(165deg,var(--beurre-clair) 0%,var(--beurre) 100%);}
+  .t-reseaux{background:linear-gradient(160deg,#C1CDB5 0%,var(--sauge) 100%);}
+  .contact-grille .photo-salon{rotate:2deg;align-self:center;}
+  .contact-grille .photo-salon img{aspect-ratio:3/4;}
+  @media (max-width:1020px){
+    .apropos-grille,.parcours-grille{grid-template-columns:minmax(0,1fr);gap:44px;}
+    .contact-grille{grid-template-columns:minmax(0,1fr) minmax(0,1fr);}
+    .contact-grille .photo-salon{grid-column:1 / -1;justify-self:center;width:min(360px,100%);}
+  }
+  @media (max-width:640px){
+    .apropos{padding:10px 0 50px;}
+    .apropos-role .script{font-size:2.1rem;}
+    .apropos .actions .bouton,.suite-auteure .actions .bouton{width:100%;}
+    .pastille-mots{right:-4%;width:92px;height:92px;}
+    .contact{padding:16px 0 70px;}
+    .contact-grille{grid-template-columns:minmax(0,1fr);}
+    .contact-grille .tuile .bouton{width:100%;}
+    .contact-grille .tuile .actions{width:100%;flex-direction:column;align-items:stretch;}
+  }
+}
+
+/* ---------- Page Blog + retouches L'Auteure ---------- */
+.co{
+  .parcours{background:var(--papier);}
+  .journal-page{position:relative;padding:44px 0 96px;overflow:clip;}
+  .journal-page .cadre{position:relative;}
+  .journal-page .formes .f1{width:520px;height:480px;right:-190px;top:-140px;}
+  .journal-page .formes .f3{left:6%;top:auto;bottom:38%;width:90px;height:90px;}
+  .journal-tete{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:56px;align-items:center;margin-bottom:54px;}
+  .journal-tete .entete{margin-bottom:0;}
+  .journal-page h1{font-size:clamp(2.5rem,4.8vw,4rem);}
+  .journal-page .intro{margin-top:12px;}
+  .journal-banniere{margin:0;border-radius:var(--r-l);overflow:hidden;box-shadow:var(--ombre);rotate:1.5deg;}
+  .journal-banniere img{width:100%;}
+  .journal-page .actus-grille{grid-template-columns:repeat(3,minmax(0,1fr));row-gap:26px;}
+  @media (max-width:1020px){
+    .journal-tete{grid-template-columns:minmax(0,1fr);gap:30px;margin-bottom:40px;}
+    .journal-page .actus-grille{grid-template-columns:repeat(2,minmax(0,1fr));}
+  }
+  @media (max-width:640px){
+    .journal-page{padding:16px 0 70px;}
+    .journal-page .actus-grille{grid-template-columns:minmax(0,1fr);}
+    .apropos-role .script{font-size:1.6rem;}
+    .apropos .pastille-logo{left:-3%;top:4%;width:84px;height:84px;}
+  }
+}
 
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto;}

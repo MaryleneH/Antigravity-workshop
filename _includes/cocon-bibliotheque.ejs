@@ -1,0 +1,41 @@
+```{=html}
+<%
+/* La bibliothèque (page Romans) : tous les romans, filtrables par rubrique ou par envie de lecture.
+   Tout vient de l'en-tête des pages de romans (ordre, rubrique, humeurs, teinte, titre-court, genre). */
+const rubriques = [["nouveaute", "Nouveauté"], ["edition", "En maison d’édition"], ["series", "Séries"], ["fetes", "Fêtes"], ["oneshots", "One-shots"]];
+const envies = [["rire", "Envie de rire"], ["frissons", "Envie de frissons"], ["noel", "Envie de Noël"], ["evasion", "Envie d’évasion"], ["emotion", "Envie d’émotions"]];
+const livres = items.filter((i) => i.rubrique).sort((a, b) => (a.ordre || 999) - (b.ordre || 999));
+const nbRubrique = (r) => livres.filter((l) => l.rubrique === r).length;
+const nbEnvie = (e) => livres.filter((l) => (l.humeurs || []).includes(e)).length;
+%>
+<div class="biblio-filtres">
+  <div class="filtres-groupe">
+    <span class="filtres-titre" id="lib-rubriques">Par rubrique</span>
+    <div class="filtres" id="filtres" role="group" aria-labelledby="lib-rubriques">
+      <button class="filtre" type="button" data-rubrique="tous" aria-pressed="true">Tous<i><%= livres.length %></i></button>
+<% for (const [id, nom] of rubriques) { if (nbRubrique(id)) { %>
+      <button class="filtre" type="button" data-rubrique="<%= id %>" aria-pressed="false"><%= nom %><i><%= nbRubrique(id) %></i></button>
+<% } } %>
+    </div>
+  </div>
+  <div class="filtres-groupe">
+    <span class="filtres-titre" id="lib-envies">Selon l’envie</span>
+    <div class="filtres" id="filtresEnvies" role="group" aria-labelledby="lib-envies">
+<% for (const [id, nom] of envies) { if (nbEnvie(id)) { %>
+      <button class="filtre filtre-envie" type="button" data-envie="<%= id %>" aria-pressed="false"><svg class="ico" aria-hidden="true"><use href="#i-<%= id %>"/></svg><%= nom %><i><%= nbEnvie(id) %></i></button>
+<% } } %>
+    </div>
+  </div>
+</div>
+<p class="biblio-compte" id="biblioCompte" aria-live="polite"><strong><%= livres.length %></strong> romans</p>
+<div class="livres livres-grille list" id="livres">
+<% for (const l of livres) { %>
+  <a class="livre" href="<%- l.path %>" data-rubrique="<%= l.rubrique %>" data-humeurs="<%= (l.humeurs || []).join(' ') %>" style="--t:<%= l.teinte || '#C9634F' %>" aria-label="<%= l.title %> — <%= l.genre || '' %>" <%= metadataAttrs(l) %>>
+    <span class="livre-couv"><img src="<%- l.image %>" alt="" loading="lazy" decoding="async"><% if (l.rubrique === 'nouveaute') { %><span class="livre-nouveau">Nouveau</span><% } %></span>
+    <span class="livre-titre"><%= l['titre-court'] || l.title %></span><span class="livre-genre"><%= l.genre || '' %></span>
+<% if (l.sujet) { %>    <span class="livre-sujet"><%= l.sujet %></span>
+<% } %>
+  </a>
+<% } %>
+</div>
+```

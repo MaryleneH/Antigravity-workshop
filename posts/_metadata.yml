@@ -2,6 +2,7 @@
 title-block-banner: true     # chaque post peut avoir son bandeau (image:)
 page-layout: article         # ou "full" si vous préférez
 toc: false
+body-classes: page-article   # mise en page des articles (thème Cocon : styles/cocon-pages.scss)
 comments: false              # activer si vous avez un système de commentaires
 format:
   html:

@@ -9,8 +9,9 @@ BLOQUE la publication (code de sortie 1) si :
   - un lien interne vers une page du site (….html ou ….qmd) ne mène nulle part ;
   - une source d'image est vide (src="", srcset="", poster="", ou ![…]() en Markdown) :
     c'est presque toujours un chemin oublié, et c'est du HTML non conforme ;
-  - une référence de _quarto.yml (menu, image par défaut, favicon, fichiers inclus,
-    ressources) n'existe pas.
+  - une référence de _quarto.yml (menu, image par défaut, favicon, logo, fichiers inclus,
+    ressources) n'existe pas ;
+  - un lien du pied de page ou d'un gabarit de liste (_includes/) ne mène nulle part.
 
 SIGNALE (sans bloquer) les images utilisées de plus de 1 Mo, lentes à charger sur téléphone.
 
@@ -210,7 +211,7 @@ def verifier_config():
         cle, valeur = m.group(2), valeur_yaml(m.group(3))
         if cle == "resources" and not valeur:
             dans_ressources, indent_ressources = True, len(m.group(1))
-        elif cle in ("href", "favicon", "image", "file") and valeur:
+        elif cle in ("href", "favicon", "image", "file", "logo") and valeur:
             verifier_reference(config, n, valeur, "fichier de la configuration")
 
 
@@ -219,6 +220,11 @@ def main():
                    if not (set(p.relative_to(ROOT).parts[:-1]) & DOSSIERS_IGNORES))
     for page in pages:
         verifier_page(page)
+    # Morceaux communs à toutes les pages (pied de page, gabarits des listes) : un lien cassé ici
+    # serait cassé partout. Les liens y partent de la racine du site (/romans.html).
+    communs = sorted(list((ROOT / "_includes").glob("*.html")) + list((ROOT / "_includes").glob("*.ejs")))
+    for fichier in communs:
+        verifier_page(fichier)
     verifier_config()
 
     for chemin, (taille, depuis, ligne) in sorted(images_lourdes.items()):
@@ -234,7 +240,7 @@ def main():
         print(f"  ⚠ {f} — {msg}")
         if SUR_GITHUB:
             print(f"::warning file={f}::{msg}")
-    print(f"Résultat : {len(pages)} pages et {references_verifiees} références vérifiées — "
+    print(f"Résultat : {len(pages)} pages, {len(communs)} morceaux communs et {references_verifiees} références vérifiées — "
           f"{len(erreurs)} erreur(s), {len(avertissements)} avertissement(s).")
     if erreurs:
         print("Publication bloquée : corrigez les erreurs ci-dessus (nom ou chemin de fichier).")

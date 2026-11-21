@@ -12,6 +12,12 @@ seul le style change.
 | 4 | Grand écran | l'univers en séries | `4-grand-ecran.html` |
 | 5 | Cocon | la romance qui fait du bien | `5-cocon.html` |
 
+## Piste retenue
+
+L'auteure a choisi la piste **5 « Cocon »** (novembre 2026). Elle est désormais le thème du site :
+`styles/cocon.scss`, `styles/cocon-pages.scss`, `index.qmd` et les gabarits `_includes/cocon-*.ejs`.
+Les quatre autres maquettes restent ici pour mémoire.
+
 ## Ce dossier n'est pas publié
 
 Quarto ignore les dossiers dont le nom commence par `_` : rien de ce dossier ne part sur mogadarr.fr.
