@@ -49,6 +49,8 @@ const clair = (hex) => { const h = hex.replace('#', ''); const n = parseInt(h.le
   return (0.299 * (n >> 16 & 255) + 0.587 * (n >> 8 & 255) + 0.114 * (n & 255)) > 150; };
 const surFond = (hex) => (clair(hex) ? '#1A1A1A' : '#FFFFFF');
 const maj = (s) => s.charAt(0).toUpperCase() + s.slice(1);
+// Typographie française : espaces insécables avant : ; ! ? et à l'intérieur des guillemets (pas de signe seul en début de ligne).
+const typo = (s) => String(s).replace(/ ([:;!?»])/g, '\u00a0$1').replace(/« /g, '«\u00a0');
 const AJUSTER = `<script>document.fonts.ready.then(function(){document.querySelectorAll('[data-max]').forEach(function(e){var max=+e.dataset.max,s=parseFloat(getComputedStyle(e).fontSize);e.style.display='inline-block';e.style.whiteSpace='nowrap';while(e.getBoundingClientRect().width>max&&s>28){s-=2;e.style.fontSize=s+'px';}});});</script>`;
 
 function lireMetas(html) {
@@ -56,10 +58,13 @@ function lireMetas(html) {
   for (const x of html.matchAll(/<meta\s+name="mg:([a-z]+)"\s+content="([^"]*)"/g)) m[x[1]] = x[2].replace(/&amp;/g, '&').replace(/&#39;|&apos;/g, '’').replace(/&nbsp;/g, ' ');
   const liens = [...html.matchAll(/<link[^>]+href="(https:\/\/fonts\.googleapis\.com\/css2[^"]+)"[^>]*>/g)].map((x) => x[1].replace(/&amp;/g, '&'));
   const numero = Number(m.numero); const p = PISTES[numero] || {};
-  const palette = (m.palette || '').split(/\s*;\s*/).filter(Boolean).map((c) => { const [hex, ...n] = c.trim().split(/\s+/); return { hex, nom: n.join(' ') }; });
-  const polices = (m.polices || '').split(/\s*;\s*/).filter(Boolean).map((f) => { const [police, role] = f.split(/\s+[—–-]\s+/); return { police: police.trim(), role: (role || '').trim() }; });
+  // Palette et polices : celles de la maquette, sauf si les réglages en donnent une version à libellés courts.
+  const palette = p.palette ? p.palette.map(([hex, nom]) => ({ hex, nom }))
+    : (m.palette || '').split(/\s*;\s*/).filter(Boolean).map((c) => { const [hex, ...n] = c.trim().split(/\s+/); return { hex, nom: n.join(' ') }; });
+  const polices = p.polices ? p.polices.map(([police, role]) => ({ police, role }))
+    : (m.polices || '').split(/\s*;\s*/).filter(Boolean).map((f) => { const [police, role] = f.split(/\s+[—–-]\s+/); return { police: police.trim(), role: (role || '').trim() }; });
   const accent = p.accent || (palette[2] || palette[1] || { hex: '#C0392B' }).hex;
-  return { numero, nom: m.nom || '?', idee: p.idee || m.idee || '', ideeLongue: m.idee || '', mots: (m.mots || '').split(/\s*[,;]\s*/).filter(Boolean),
+  return { numero, nom: m.nom || '?', idee: typo(p.idee || m.idee || ''), ideeLongue: typo(m.idee || ''), mots: (m.mots || '').split(/\s*[,;]\s*/).filter(Boolean).map((x) => x.toLowerCase()),
     palette, polices, liensPolices: liens, accent, facette: p.facette || '', titrePolice: polices[0] ? `'${polices[0].police}'` : 'Inter' };
 }
 
@@ -131,7 +136,7 @@ async function capturer(browser, url, dossier, { plan = true } = {}) {
 
 // Bande verticale reconstituée à partir des tranches, affichée à la largeur voulue, décalée de `haut` px (à l'échelle).
 const bande = (cap, t, largeur, haut) => `<div style="position:absolute;left:0;top:-${Math.round(haut)}px;width:${largeur}px">${
-  t.tranches.map((x) => `<img src="${fichierURL(path.join(cap, x.fichier))}" style="display:block;width:${largeur}px">`).join('')}</div>`;
+  t.tranches.map((x, i) => `<img src="${fichierURL(path.join(cap, x.fichier))}" style="display:block;width:${largeur}px;position:relative${i ? ';margin-top:-1px' : ''}">`).join('')}</div>`;
 
 // ====================== FORMAT TÉLÉPHONE : cartes 1080 × 1920 ======================
 const CARTE_CSS = `

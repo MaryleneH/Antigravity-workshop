@@ -40,26 +40,25 @@ async function ouvrir(browser, options) {
   });
   await page.waitForLoadState('networkidle', { timeout: 20000 }).catch(() => {});
   await page.waitForTimeout(500);
-  const etat = await page.evaluate(() => {
-    const largeur = window.innerWidth;
+  // Largeur de référence : celle de l'écran demandé. (Sur téléphone, window.innerWidth ne convient pas :
+  // quand un élément dépasse, le navigateur « dézoome » et innerWidth grandit avec la page.)
+  const etat = await page.evaluate((largeur) => {
     const cassees = [...document.images].filter((i) => i.complete && i.naturalWidth === 0).map((i) => i.getAttribute('src'));
-    // Éléments qui dépassent à droite de l'écran (cause habituelle d'un défilement horizontal)
+    // Éléments visibles qui dépassent de l'écran sans être rognés par un parent.
     const debordants = [];
-    if (document.documentElement.scrollWidth > largeur + 1) {
-      for (const el of document.querySelectorAll('body *')) {
-        const r = el.getBoundingClientRect();
-        if (r.width > 0 && r.right > largeur + 1 && getComputedStyle(el).position !== 'fixed') {
-          let cache = false;
-          for (let p = el.parentElement; p && p !== document.body; p = p.parentElement) {
-            const o = getComputedStyle(p).overflowX; if (o === 'hidden' || o === 'auto' || o === 'scroll' || o === 'clip') { cache = true; break; }
-          }
-          if (!cache) debordants.push(`${el.tagName.toLowerCase()}${el.id ? '#' + el.id : ''}${el.className && typeof el.className === 'string' ? '.' + el.className.trim().split(/\s+/).join('.') : ''} (droite : ${Math.round(r.right)} px)`);
-        }
+    for (const el of document.querySelectorAll('body *')) {
+      const r = el.getBoundingClientRect();
+      if (!(r.width > 0 && r.height > 0) || (r.right <= largeur + 1 && r.left >= -1)) continue;
+      let ignore = getComputedStyle(el).visibility === 'hidden';
+      for (let p = el; p && p !== document.documentElement && !ignore; p = p.parentElement) {
+        const s = getComputedStyle(p);
+        if (s.position === 'fixed' || (p !== el && s.overflowX !== 'visible')) ignore = true;
       }
+      if (!ignore) debordants.push(`${el.tagName.toLowerCase()}${el.id ? '#' + el.id : ''}${el.className && typeof el.className === 'string' ? '.' + el.className.trim().split(/\s+/).join('.') : ''} (de ${Math.round(r.left)} à ${Math.round(r.right)} px)`);
     }
     const polices = [...new Set([...document.fonts].filter((f) => f.status === 'loaded').map((f) => f.family.replace(/["']/g, '')))];
-    return { hauteur: document.documentElement.scrollHeight, largeurPage: document.documentElement.scrollWidth, largeur, cassees, debordants: debordants.slice(0, 8), polices };
-  });
+    return { hauteur: document.documentElement.scrollHeight, largeurPage: Math.max(document.documentElement.scrollWidth, window.innerWidth), largeur, cassees, debordants: [...new Set(debordants)].slice(0, 8), polices };
+  }, options.viewport.width);
   return { ctx, page, defauts, etat };
 }
 
@@ -69,7 +68,7 @@ async function ouvrir(browser, options) {
   const bilan = (nom, defauts, etat) => {
     const liste = [...new Set(defauts)];
     etat.cassees.forEach((s) => liste.push('Image cassée : ' + s));
-    if (etat.largeurPage > etat.largeur + 1) liste.push(`Débordement horizontal : la page fait ${etat.largeurPage} px pour un écran de ${etat.largeur} px → ${etat.debordants.join(' ; ') || 'élément non identifié'}`);
+    if (etat.largeurPage > etat.largeur + 1 || etat.debordants.length) liste.push(`Débordement horizontal : la page fait ${etat.largeurPage} px pour un écran de ${etat.largeur} px → ${etat.debordants.join(' ; ') || 'élément non identifié'}`);
     console.log(`\n${nom} — hauteur ${etat.hauteur} px — polices chargées : ${etat.polices.join(', ') || 'aucune'}`);
     console.log(liste.length ? liste.map((l) => '  ✗ ' + l).join('\n') : '  ✓ aucun défaut détecté');
     problemes += liste.length;
