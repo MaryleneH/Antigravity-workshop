@@ -1,89 +1,99 @@
 ---
-title: ""
+title: "L’Auteure"
 subtitle: "Auteure de New Romance"
-description: "Site officiel — romans, nouveautés, événements."
+description: "Mo Gadarr, professeur de français et auteure de New Romance engagée : son parcours, ses romans, ses engagements."
 image: images/author-portrait.png
-title-block-banner: false
+# Page « L'Auteure » du thème Cocon (style : styles/cocon.scss, bloc .co).
 page-layout: custom
 toc: false
-body-classes: about-page-body
+body-classes: page-auteure
 format:
   html:
     link-external-newwindow: true
+    anchor-sections: false
 ---
 
 ```{=html}
-<div class="about-futuristic-wrapper">
-    
-    <!-- Animated Orbs -->
-    <div class="about-background">
-        <div class="about-orb orb-1"></div>
-        <div class="about-orb orb-2"></div>
-        <div class="about-orb orb-3"></div>
+<div class="co">
+
+<!-- ===== Portrait ===== -->
+<section class="section apropos" aria-labelledby="titre-apropos">
+  <div class="formes" aria-hidden="true"><span class="forme f1"></span><span class="forme f2"></span><span class="forme f3"></span></div>
+  <div class="cadre apropos-grille">
+    <div class="apropos-visuel">
+      <div class="arche">
+        <span class="arche-filet" aria-hidden="true"></span>
+        <div class="arche-scene"><img src="images/cocon/mo-illustree.webp" width="1100" height="1366" alt="Illustration : Mo Gadarr écrit à sa table, une tasse de thé et une bougie à portée de main" fetchpriority="high"></div>
+        <svg class="deco deco-coeur-1" aria-hidden="true"><use href="#i-coeur"/></svg>
+        <svg class="deco deco-etoile" aria-hidden="true"><use href="#i-etoile"/></svg>
+        <span class="pastille pastille-logo"><img src="images/cocon/logo-mo-192.webp" alt="Logo de Mo Gadarr" width="92" height="92"></span>
+        <span class="pastille pastille-mots"><img src="images/author-portrait.webp" alt="Portrait de Mo Gadarr composé de mots" width="120" height="120" loading="lazy"></span>
+        <span class="legende"><svg class="ico" aria-hidden="true"><use href="#i-plume"/></svg>Mo, à sa table d’écriture</span>
+      </div>
     </div>
-
-    <!-- Main Content Grid -->
-    <div class="about-grid-content">
-        
-        <!-- Portrait Column (Left) -->
-        <!-- Portrait Column (Left) -->
-        <div class="about-portrait-section">
-            <div class="portrait-heart-container">
-                <!-- SVG Wrapper containing both Image and Strokes -->
-                <svg class="heart-sketch-svg" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                    <defs>
-                        <clipPath id="heartClip">
-                             <path d="M100,35 C70,-10 0,20 10,80 C20,140 100,190 100,190 C100,190 180,140 190,80 C200,20 130,-10 100,35 Z" />
-                        </clipPath>
-                    </defs>
-                    
-                    <!-- The Photo (Clipped) -->
-                    <image href="images/author-portrait.png" width="200" height="200" preserveAspectRatio="xMidYMid slice" clip-path="url(#heartClip)" />
-                    
-                    <!-- Stroke 1: Main Outline -->
-                    <path d="M100,35 C70,-10 0,20 10,80 C20,140 100,190 100,190 C100,190 180,140 190,80 C200,20 130,-10 100,35 Z" 
-                          fill="none" stroke="var(--color-pink)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"
-                          class="heart-stroke-1"/>
-                    
-                    <!-- Stroke 2: Scribble/Offset -->
-                    <path d="M100,40 C75,0 5,25 15,85 C25,145 100,185 100,185 C100,185 175,145 185,85 C195,25 125,0 100,40" 
-                          fill="none" stroke="rgba(251, 111, 146, 0.5)" stroke-width="1.5" stroke-dasharray="6,4"
-                          class="heart-stroke-2"/>
-                </svg>
-                
-                <!-- Floating Animated Hearts -->
-                <div class="floating-mini-heart h1">❤</div>
-                <div class="floating-mini-heart h2">❤</div>
-                <div class="floating-mini-heart h3">❤</div>
-            </div>
-        </div>
-
-        <!-- Bio Column (Right) - Glass Panel -->
-        <div class="about-text-glass">
-            <h1 class="about-title-large">Mo Gadarr</h1>
-            <span class="about-subtitle">Auteure de New Romance</span>
-
-            <div class="about-bio-body">
-                <p>Professeur de français, Mo Gadarr s'inspire de son quotidien et de l'actualité pour écrire ses romances. Tout commence sur la plateforme Fyctia avec son premier roman, <strong>Black Feelings</strong>, qui suscite immédiatement de vives réactions et remporte le concours en octobre grâce à sa plume authentique.</p>
-
-                <p>Désormais éditée chez deux maisons prestigieuses dont <em>Black Ink</em>, tout en publiant certaines œuvres en auto-édition, elle incarne la figure de l'auteure hybride moderne. Connectée et engagée, Mo Gadarr souhaite créer un nouveau genre : la <strong>"Romance engagée"</strong>.</p>
-
-                <p>Elle mêle habilement les codes de la New Romance à des sujets de société poignants : les préjugés et le mensonge dans <em>Homme sérieux recherche poupée Bimbo</em>, la pression des traditions dans <em>À Noël, je serai une princesse licorne</em>, ou encore les dangers des rencontres virtuelles dans <em>J'ai juste cliqué !</em>.</p>
-                
-                <p>Avec la série <strong>COPS</strong>, elle dénonce les ravages des addictions, tandis que <em>Undress Me</em> explore des thématiques plus sombres comme les traumatismes de l'enfance et le fanatisme religieux.</p>
-            </div>
-
-            <!-- Integrated Fun Fact -->
-            <div class="fun-fact-box">
-                <div class="fun-fact-title">Le saviez-vous ?</div>
-                <p class="fun-fact-text">Elle écrit également ses propres pièces de théâtre qui enchantent petits et grands. Responsable du club théâtre de son établissement depuis plus de dix ans, ses spectacles loufoques et modernes sont très attendus !</p>
-            </div>
-            
-            <div style="margin-top: 2.5rem; display: flex; gap: 1.5rem; flex-wrap: wrap;">
-                <a href="romans.html" class="btn btn-primary">Voir les romans</a>
-                <a href="blog.qmd" class="btn btn-text">Lire le blog <i class="bi bi-arrow-right"></i></a>
-            </div>
-        </div>
+    <div class="apropos-texte">
+      <p class="surtitre">L’auteure</p>
+      <h1 id="titre-apropos">Mo Gadarr</h1>
+      <p class="apropos-role"><span class="script">Auteure de New Romance engagée</span></p>
+      <p class="chapo">Professeur de français, Mo Gadarr s’inspire de son quotidien et de l’actualité pour écrire ses romances.</p>
+      <ul class="faits">
+        <li><strong style="--fond:var(--beurre-clair)">24</strong><span>romans à découvrir</span></li>
+        <li><strong style="--fond:var(--rose-clair)">1er</strong><span>prix du concours Fyctia avec <em>Black Feelings</em></span></li>
+        <li><strong style="--fond:var(--sauge-clair)">10+</strong><span>ans à la tête du club théâtre de son établissement</span></li>
+        <li><strong style="--fond:var(--peche)">2</strong><span>maisons d’édition, et l’auto-édition</span></li>
+      </ul>
+      <div class="actions">
+        <a class="bouton bouton-cacao" href="romans.html">Voir les romans <span class="rond"><svg class="ico" aria-hidden="true"><use href="#i-fleche"/></svg></span></a>
+        <a class="bouton bouton-contour" href="blog.html">Lire le blog</a>
+      </div>
     </div>
+  </div>
+</section>
+
+<!-- ===== Son parcours ===== -->
+<section class="section bande parcours" aria-labelledby="titre-parcours">
+  <div class="cadre parcours-grille">
+    <div class="parcours-texte">
+      <header class="entete">
+        <p class="surtitre">Son parcours</p>
+        <h2 id="titre-parcours">De Fyctia à la <span class="script">Romance engagée</span></h2>
+      </header>
+      <div class="prose">
+        <p>Tout commence sur la plateforme Fyctia avec son premier roman, <strong>Black Feelings</strong>, qui suscite immédiatement de vives réactions et remporte le concours en octobre grâce à sa plume authentique.</p>
+        <p>Désormais éditée chez deux maisons prestigieuses dont <em>Black Ink</em>, tout en publiant certaines œuvres en auto-édition, elle incarne la figure de l’auteure hybride moderne. Connectée et engagée, Mo Gadarr souhaite créer un nouveau genre&nbsp;: la <strong>«&nbsp;Romance engagée&nbsp;»</strong>.</p>
+        <p>Elle mêle habilement les codes de la New Romance à des sujets de société poignants&nbsp;: les préjugés et le mensonge dans <em>Homme sérieux recherche poupée Bimbo</em>, la pression des traditions dans <em>À Noël, je serai une princesse licorne</em>, ou encore les dangers des rencontres virtuelles dans <em>J’ai juste cliqué&nbsp;!</em>.</p>
+        <p>Avec la série <strong>COPS</strong>, elle dénonce les ravages des addictions, tandis que <em>Undress Me</em> explore des thématiques plus sombres comme les traumatismes de l’enfance et le fanatisme religieux.</p>
+      </div>
+    </div>
+    <div class="parcours-cote">
+      <article class="tuile t-savoir" aria-labelledby="titre-savoir">
+        <span class="t-savoir-icone" aria-hidden="true"><svg class="ico"><use href="#i-theatre"/></svg></span>
+        <h3 id="titre-savoir">Le saviez-vous&nbsp;?</h3>
+        <p>Elle écrit également ses propres pièces de théâtre qui enchantent petits et grands. Responsable du club théâtre de son établissement depuis plus de dix ans, ses spectacles loufoques et modernes sont très attendus&nbsp;!</p>
+        <div class="scene" aria-hidden="true"><span class="scene-frise"></span><span class="scene-sol"></span><span class="scene-etoiles"><svg class="ico"><use href="#i-etoile"/></svg><svg class="ico"><use href="#i-etoile"/></svg><svg class="ico"><use href="#i-etoile"/></svg></span></div>
+      </article>
+      <figure class="photo-salon">
+        <img src="images/cocon/mo-en-salon.webp" width="480" height="640" loading="lazy" alt="Mo Gadarr, souriante, derrière son stand de dédicaces">
+        <figcaption><svg class="ico" aria-hidden="true"><use href="#i-coeur"/></svg>En salon, à la rencontre de ses lecteurs</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Et maintenant ? ===== -->
+<section class="section suite-auteure" aria-labelledby="titre-suite">
+  <div class="cadre">
+    <header class="entete centre">
+      <p class="surtitre">Et maintenant</p>
+      <h2 id="titre-suite">Envie de la <span class="script">lire</span>&nbsp;?</h2>
+      <p class="intro">Séries, comédies de Noël, romances de saison et one-shots&nbsp;: il y a une histoire pour chaque humeur.</p>
+    </header>
+    <div class="actions centre">
+      <a class="bouton bouton-cacao" href="romans.html">Explorer les romans <span class="rond"><svg class="ico" aria-hidden="true"><use href="#i-fleche"/></svg></span></a>
+      <a class="bouton bouton-contour" href="contactons.html">Contacter Mo</a>
+    </div>
+  </div>
+</section>
+
 </div>
 ```

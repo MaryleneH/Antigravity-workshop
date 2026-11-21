@@ -7,6 +7,14 @@ categories: [Romance de Noël, Comédie romantique, Feel-good]
 title-block-banner: true
 page-layout: full
 toc: false
+# --- Fiche du roman : sert aux listes automatiques (accueil, page Romans) ---
+ordre: 19
+rubrique: fetes
+humeurs: [noel, rire]
+teinte: "#d6453d"
+titre-court: "Princesse licorne"
+genre: "Comédie déjantée"
+sujet: "Poids des traditions"
 ---
 
 ```{=html}

@@ -7,6 +7,14 @@ categories: [Romance contemporaine, Body positive, Seconde chance]
 title-block-banner: true
 page-layout: full
 toc: false
+# --- Fiche du roman : sert aux listes automatiques (accueil, page Romans) ---
+ordre: 5
+rubrique: edition
+humeurs: [emotion]
+teinte: "#4f86c6"
+titre-court: "Be Stronger"
+genre: "New Adult • Résilience"
+sujet: "Body positive"
 ---
 
 ```{=html}

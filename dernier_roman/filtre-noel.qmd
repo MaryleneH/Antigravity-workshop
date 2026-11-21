@@ -69,7 +69,7 @@ body-classes: romans xf-page-body
     --xf-accent: #F4D58D;
     --xf-accent-rgb: 244, 213, 141;
     min-height: 100vh; display: flex; flex-direction: column; align-items: center;
-    padding: 2rem 1rem 3rem; font-family: 'Lato', sans-serif; color: #F5EEE6;
+    padding: 2rem 1rem 3rem; font-family: 'Figtree', sans-serif; color: #F5EEE6;
     background:
         radial-gradient(ellipse at 15% 20%, rgba(212, 42, 53, 0.22), transparent 55%),
         radial-gradient(ellipse at 85% 80%, rgba(111, 147, 214, 0.22), transparent 55%),
@@ -96,7 +96,7 @@ body-classes: romans xf-page-body
 /* Choix du camp */
 .xf-camps { display: flex; gap: 0.7rem; justify-content: center; flex-wrap: wrap; margin-bottom: 1.2rem; }
 .xf-camp {
-    font-family: 'Lato', sans-serif; font-weight: 800; font-size: 0.9rem; cursor: pointer;
+    font-family: 'Figtree', sans-serif; font-weight: 800; font-size: 0.9rem; cursor: pointer;
     padding: 0.7rem 1.4rem; border-radius: 50px; border: 1px solid rgba(255, 255, 255, 0.14);
     background: rgba(255, 255, 255, 0.04); color: rgba(245, 238, 230, 0.75);
     transition: transform 0.25s, background 0.25s, box-shadow 0.25s, color 0.25s; touch-action: manipulation;
@@ -157,7 +157,7 @@ body-classes: romans xf-page-body
 .xf-controls[hidden], .xf-btn[hidden] { display: none !important; }
 .xf-btn {
     display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.85rem 1.8rem; border-radius: 50px;
-    font-size: 0.9rem; font-weight: 800; cursor: pointer; border: none; font-family: 'Lato', sans-serif;
+    font-size: 0.9rem; font-weight: 800; cursor: pointer; border: none; font-family: 'Figtree', sans-serif;
     text-decoration: none; transition: transform 0.25s, box-shadow 0.25s; touch-action: manipulation;
 }
 .xf-btn:disabled { opacity: 0.5; cursor: not-allowed; }

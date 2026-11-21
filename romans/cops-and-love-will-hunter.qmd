@@ -7,6 +7,14 @@ categories: [Romantic Suspense, Fratrie, Nightlife]
 title-block-banner: true
 page-layout: full
 toc: false
+# --- Fiche du roman : sert aux listes automatiques (accueil, page Romans) ---
+ordre: 8
+rubrique: series
+humeurs: [frissons]
+teinte: "#7a6a5f"
+titre-court: "COPS · Will Hunter"
+genre: "Romantic Suspense"
+sujet: "Addictions"
 ---
 
 ```{=html}

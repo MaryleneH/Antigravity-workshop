@@ -1,0 +1,242 @@
+{
+  "1": {
+    "accent": "#E0362C",
+    "idee": "Vous êtes prof de français : votre site devient une belle page de littérature, annotée au stylo rouge.",
+    "palette": [
+      [
+        "#FBF7EF",
+        "Papier"
+      ],
+      [
+        "#1C1A17",
+        "Encre"
+      ],
+      [
+        "#E0362C",
+        "Stylo rouge"
+      ],
+      [
+        "#2B4BCE",
+        "Encre bleue"
+      ],
+      [
+        "#FFE873",
+        "Surligneur"
+      ],
+      [
+        "#CFDCF2",
+        "Bleu cahier"
+      ]
+    ],
+    "polices": [
+      [
+        "Fraunces",
+        "titres"
+      ],
+      [
+        "Newsreader",
+        "texte"
+      ],
+      [
+        "Caveat",
+        "annotations"
+      ],
+      [
+        "DM Mono",
+        "étiquettes"
+      ]
+    ],
+    "extraits": [
+      {
+        "titre": "Le nouveau roman, en fiche de lecture",
+        "y": 1280
+      },
+      {
+        "titre": "La bibliothèque",
+        "y": 2900
+      }
+    ]
+  },
+  "2": {
+    "accent": "#7A1022",
+    "idee": "Vous écrivez des pièces et animez un club théâtre : ici, chaque roman monte sur scène, sous les projecteurs.",
+    "palette": [
+      [
+        "#7A1022",
+        "Rouge velours"
+      ],
+      [
+        "#3D0812",
+        "Rouge profond"
+      ],
+      [
+        "#F6EAD7",
+        "Crème"
+      ],
+      [
+        "#F2C14E",
+        "Or ampoule"
+      ],
+      [
+        "#170A0D",
+        "Encre"
+      ],
+      [
+        "#E9B9B0",
+        "Rose poudré"
+      ]
+    ],
+    "polices": [
+      [
+        "Bodoni Moda",
+        "titres"
+      ],
+      [
+        "Oswald",
+        "mentions"
+      ],
+      [
+        "DM Sans",
+        "texte"
+      ]
+    ],
+    "extraits": [
+      {
+        "titre": "Le programme de salle",
+        "y": 900
+      },
+      {
+        "titre": "Le répertoire, en quatre actes",
+        "y": 2410
+      }
+    ]
+  },
+  "3": {
+    "accent": "#E5177B",
+    "idee": "Votre « Romance engagée » s’affiche en grand, et l’on entre dans vos romans par le sujet qu’ils abordent.",
+    "palette": [
+      [
+        "#E5177B",
+        "Magenta"
+      ],
+      [
+        "#0D0D0D",
+        "Noir"
+      ],
+      [
+        "#FFFBF2",
+        "Blanc cassé"
+      ],
+      [
+        "#22B8A7",
+        "Turquoise"
+      ],
+      [
+        "#FFD93B",
+        "Jaune vif"
+      ]
+    ],
+    "polices": [
+      [
+        "Anton",
+        "titres"
+      ],
+      [
+        "Space Grotesk",
+        "texte"
+      ],
+      [
+        "Caveat Brush",
+        "mots au feutre"
+      ]
+    ],
+    "extraits": [
+      {
+        "titre": "Un sujet derrière chaque romance",
+        "y": 1020
+      },
+      {
+        "titre": "Les 24 romans",
+        "y": 3040
+      }
+    ]
+  },
+  "4": {
+    "accent": "#8B5CF6",
+    "idee": "Séries, saisons, bandes-annonces : votre univers se parcourt comme une plateforme de streaming.",
+    "palette": [
+      [
+        "#0B0B10",
+        "Noir bleuté"
+      ],
+      [
+        "#16161F",
+        "Surface"
+      ],
+      [
+        "#F4F3F8",
+        "Blanc lunaire"
+      ],
+      [
+        "#8B5CF6",
+        "Violet"
+      ],
+      [
+        "#F43F7A",
+        "Rose néon"
+      ],
+      [
+        "#9A9AAE",
+        "Gris brume"
+      ]
+    ],
+    "polices": [
+      [
+        "Outfit",
+        "titres"
+      ],
+      [
+        "Inter",
+        "texte"
+      ]
+    ],
+    "extraits": [
+      {
+        "titre": "Les séries et le roman à l’affiche",
+        "y": 860
+      },
+      {
+        "titre": "Bandes-annonces et Noëls de Mo",
+        "y": 2440
+      }
+    ]
+  },
+  "5": {
+    "accent": "#C9634F",
+    "idee": "Vos romances font du bien : votre site devient un cocon chaleureux, avec vous à votre table d’écriture.",
+    "polices": [
+      [
+        "Gloock",
+        "titres"
+      ],
+      [
+        "Figtree",
+        "texte"
+      ],
+      [
+        "Sacramento",
+        "signature"
+      ]
+    ],
+    "extraits": [
+      {
+        "titre": "Tout l’univers d’un coup d’œil",
+        "y": 890
+      },
+      {
+        "titre": "Par envie, puis les 24 romans",
+        "y": 2250
+      }
+    ]
+  }
+}

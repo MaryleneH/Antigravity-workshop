@@ -1,36 +1,44 @@
 ---
 title: "Le Journal de Mo Gadarr"
 subtitle: "Espace d'écriture, coulisses et actualités"
+description: "Le journal de Mo Gadarr : sorties, salons, dédicaces et coulisses d'écriture."
+# Page « Blog » du thème Cocon : la liste des articles est générée automatiquement (dossier posts/).
 listing:
-  id: listing-blog
+  id: liste-blog
   contents: posts
   sort: "date desc"
-  type: grid
-  categories: true
-  sort-ui: true
-  filter-ui: true
-  fields: [image, date, title, subtitle, description, categories, reading-time]
-  image-height: 220px
-  grid-columns: 3
-  image-lazy-loading: true
-page-layout: full
-title-block-banner: false
+  date-format: "D MMMM YYYY"
+  page-size: 60
+  template: _includes/cocon-actus.ejs
+page-layout: custom
+body-classes: page-blog
 image: images/blog-banner.jpg
+format:
+  html:
+    toc: false
+    anchor-sections: false
 ---
 
 ```{=html}
-<div class="blog-banner">
-    <img src="images/blog-banner.jpg" alt="Explorer l'univers de Mo Gadarr" class="blog-banner-img">
-</div>
+<div class="co">
+<section class="section journal-page" aria-labelledby="titre-journal-page">
+  <div class="formes" aria-hidden="true"><span class="forme f1"></span><span class="forme f3"></span></div>
+  <div class="cadre">
+    <div class="journal-tete">
+      <header class="entete">
+        <p class="surtitre">Le journal de Mo</p>
+        <h1 id="titre-journal-page">Le Journal de <span class="script">Mo Gadarr</span></h1>
+        <p class="intro">Espace d’écriture, coulisses et actualités&nbsp;: sorties, salons, dédicaces et petites histoires d’auteure.</p>
+      </header>
+      <figure class="journal-banniere"><img src="images/blog-banner.jpg" width="1024" height="682" alt="Illustration : portrait de Mo Gadarr et les mots « Explorer l’univers de Mo Gadarr »"></figure>
+    </div>
 ```
 
-::: {#listing-blog}
+::: {#liste-blog}
 :::
 
 ```{=html}
-<div class="back-home-container" style="text-align: center; margin: 4rem 0;">
-    <a href="index.html" class="btn-excerpt-back">
-        <i class="bi bi-arrow-left"></i> Retour à l'accueil
-    </a>
+  </div>
+</section>
 </div>
 ```

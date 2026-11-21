@@ -1,0 +1,16 @@
+```{=html}
+<%
+/* Les dernières actualités (cartes). La rubrique affichée est la première catégorie de l'article
+   autre que « Actualités ». */
+const rubrique = (a) => (a.categories || []).find((c) => String(c).toLowerCase() !== "actualités") || "Actualités";
+%>
+<div class="actus-grille list">
+<% for (const a of items) { %>
+  <a class="actu" href="<%- a.path %>" <%= metadataAttrs(a) %>>
+    <div class="actu-img"><% if (a.image) { %><img src="<%- a.image %>" alt="" loading="lazy" decoding="async"><% } %><span class="actu-date"><%= a.date %></span></div>
+    <div class="actu-corps"><p class="actu-rubrique"><%= rubrique(a) %></p><h3><%= a.title %></h3><% if (a.description) { %><p class="actu-resume"><%= a.description %></p><% } %>
+      <span class="lien-fleche">Lire l’article <span class="rond"><svg class="ico" aria-hidden="true"><use href="#i-fleche"/></svg></span></span></div>
+  </a>
+<% } %>
+</div>
+```

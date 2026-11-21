@@ -18,7 +18,7 @@ format:
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Figtree', sans-serif;
     color: #F5E6E0;
     padding: 2rem 1rem 3rem;
 }
@@ -99,7 +99,7 @@ format:
     display: inline-flex; align-items: center; gap: 0.5rem;
     padding: 0.85rem 1.8rem; border-radius: 50px; font-size: 0.9rem;
     font-weight: 700; cursor: pointer; border: none;
-    font-family: 'Lato', sans-serif; transition: all 0.3s;
+    font-family: 'Figtree', sans-serif; transition: all 0.3s;
     text-decoration: none;
 }
 .ar-btn:disabled { opacity: 0.5; cursor: not-allowed; }

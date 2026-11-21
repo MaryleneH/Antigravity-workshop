@@ -7,6 +7,14 @@ categories: [Romantic Suspense, Fratrie, Nouvelle vie]
 title-block-banner: true
 page-layout: full
 toc: false
+# --- Fiche du roman : sert aux listes automatiques (accueil, page Romans) ---
+ordre: 9
+rubrique: series
+humeurs: [frissons]
+teinte: "#4a6572"
+titre-court: "COPS · Noah Hunter"
+genre: "Romantic Suspense"
+sujet: "Addictions"
 ---
 
 ```{=html}

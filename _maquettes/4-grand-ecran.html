@@ -1,0 +1,777 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Maquette 4 — Grand écran</title>
+
+<!-- Fiche d'identité de la piste (lue par la planche de présentation) -->
+<meta name="mg:numero" content="4">
+<meta name="mg:nom" content="Grand écran">
+<meta name="mg:idee" content="Vos 24 romans, vos séries et vos bandes-annonces se parcourent comme une plateforme de streaming : vos lectrices choisissent leur prochaine histoire comme on choisit sa série du soir.">
+<meta name="mg:mots" content="cinématographique, immersif, structuré">
+<meta name="mg:palette" content="#0B0B10 Noir bleuté; #16161F Surface; #F4F3F8 Blanc lunaire; #8B5CF6 Violet « AT »; #F43F7A Rose néon; #9A9AAE Gris brume">
+<meta name="mg:polices" content="Outfit — titres; Inter — interface et texte">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+/* =====================================================================
+   PISTE 4 — « GRAND ÉCRAN »
+   Sombre, net, cinématographique : aplats francs, grandes images,
+   un seul accent (dégradé violet → rose). Ni or, ni verre dépoli.
+   ===================================================================== */
+:root{
+  --bg:#0B0B10; --surface:#16161F; --surface-2:#20202C; --trait:rgba(244,243,248,.11);
+  --texte:#F4F3F8; --gris:#9A9AAE; --violet:#8B5CF6; --rose:#F43F7A;
+  --degrade:linear-gradient(90deg,#8B5CF6,#F43F7A);          /* décor */
+  --degrade-bouton:linear-gradient(90deg,#7C3AED,#E11D62);   /* sous du texte blanc (contraste AA) */
+  --degrade-texte:linear-gradient(90deg,#B9A2FF,#FF86AB);    /* texte en dégradé sur fond sombre */
+  --marge:60px; --titres:"Outfit",system-ui,sans-serif; --corps:"Inter",system-ui,sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--texte);font-family:var(--corps);font-size:16px;line-height:1.55;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:pointer}
+h1,h2,h3,p{margin:0}
+:focus-visible{outline:2px solid #B9A2FF;outline-offset:3px;border-radius:6px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* ---------- Boutons ---------- */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 24px;border-radius:13px;
+  font-weight:600;font-size:16px;letter-spacing:-.005em;white-space:nowrap;transition:transform .18s,background .18s}
+.btn svg{flex:none}
+.btn-clair{background:var(--texte);color:var(--bg)}
+.btn-clair:hover{transform:translateY(-2px);background:#fff}
+.btn-sombre{background:#262633;color:var(--texte);box-shadow:inset 0 0 0 1px rgba(244,243,248,.2)}
+.btn-sombre:hover{transform:translateY(-2px);background:#30303f}
+.btn-accent{background:var(--degrade-bouton);color:#fff}
+.btn-accent:hover{transform:translateY(-2px)}
+
+/* ---------- Petites étiquettes ---------- */
+.etiquette{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--gris)}
+.etiquette::before{content:"";width:22px;height:3px;border-radius:2px;background:var(--degrade)}
+.pastille{display:inline-flex;align-items:center;height:26px;padding:0 10px;border-radius:7px;background:var(--degrade-bouton);color:#fff;
+  font-size:11.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
+
+/* =====================================================================
+   NAVIGATION
+   ===================================================================== */
+.nav{position:absolute;inset:0 0 auto 0;z-index:30;height:76px;display:flex;align-items:center;gap:36px;padding:0 var(--marge);
+  background:linear-gradient(180deg,rgba(11,11,16,.88) 0,rgba(11,11,16,.5) 60%,rgba(11,11,16,0) 100%)}
+.logo{display:flex;align-items:center;gap:12px;font-family:var(--titres);font-weight:700;font-size:22px;letter-spacing:-.015em;min-height:44px}
+.logo-signe{width:38px;height:38px;border-radius:11px;background:var(--degrade-bouton);display:grid;place-items:center;
+  font-size:14.5px;font-weight:800;letter-spacing:.02em;color:#fff}
+.nav-liens{display:flex;gap:4px;margin-right:auto}
+.nav-liens a{display:flex;align-items:center;min-height:44px;padding:0 14px;border-radius:10px;font-size:15px;font-weight:500;color:rgba(244,243,248,.8);transition:background .15s,color .15s}
+.nav-liens a:hover{background:rgba(244,243,248,.1);color:#fff}
+.nav-liens a[aria-current="page"]{color:#fff;font-weight:600;position:relative}
+.nav-liens a[aria-current="page"]::after{content:"";position:absolute;left:14px;right:14px;bottom:5px;height:3px;border-radius:2px;background:var(--degrade)}
+.nav-actions{display:flex;align-items:center;gap:8px}
+.btn-abo{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 18px;border-radius:12px;background:var(--degrade-bouton);color:#fff;font-weight:600;font-size:15px}
+.burger{display:none;width:44px;height:44px;border-radius:12px;flex-direction:column;align-items:center;justify-content:center;gap:5px}
+.burger span{width:22px;height:2px;border-radius:2px;background:var(--texte)}
+
+/* =====================================================================
+   OUVERTURE — « À L'AFFICHE »
+   L'image occupe 80 % de la largeur, entière (les cinq visages restent visibles) ;
+   le texte vit dans l'angle bas-gauche, sur un fondu sombre, sous les visages.
+   ===================================================================== */
+.affiche{position:relative;isolation:isolate;overflow:hidden;height:calc(53.34vw + 88px);min-height:700px;max-height:1000px}
+.affiche-image{position:absolute;z-index:-2;top:0;right:0;width:80%;aspect-ratio:3/2}
+.affiche-image img{width:100%;height:100%;object-fit:cover}
+.affiche::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:
+  linear-gradient(90deg,var(--bg) 20%,rgba(11,11,16,0) 33%),
+  radial-gradient(ellipse 66% 70% at 0% 100%,rgba(11,11,16,.97) 0%,rgba(11,11,16,.94) 60%,rgba(11,11,16,.58) 79%,rgba(11,11,16,0) 100%),
+  linear-gradient(0deg,var(--bg) 10%,rgba(11,11,16,.7) 23%,rgba(11,11,16,0) 46%)}
+.affiche-texte{position:absolute;left:var(--marge);bottom:40px;width:min(540px,44vw)}
+.affiche-sur{display:flex;align-items:center;gap:10px;font-size:14.5px;color:rgba(244,243,248,.86)}
+.affiche-sur strong{color:#fff;font-weight:600}
+.affiche-avatar{width:28px;height:28px;border-radius:50%;object-fit:cover;box-shadow:0 0 0 2px rgba(244,243,248,.25);margin-left:4px}
+.affiche h1{margin-top:12px;font-family:var(--titres);text-shadow:0 2px 22px rgba(11,11,16,.65)}
+.affiche .t-a{display:block;font-size:46px;line-height:1.045;font-weight:800;letter-spacing:-.024em}
+.affiche .t-b{display:block;margin-top:8px;font-size:26px;line-height:1.2;font-weight:600;letter-spacing:-.012em;text-shadow:none;
+  background:var(--degrade-texte);-webkit-background-clip:text;background-clip:text;color:transparent}
+.affiche-meta{display:flex;flex-wrap:wrap;align-items:center;gap:6px 10px;margin-top:13px;font-size:14.5px;font-weight:500;color:rgba(244,243,248,.88)}
+.affiche-meta .dispo{display:inline-flex;align-items:center;gap:6px;height:24px;padding:0 9px;border-radius:6px;box-shadow:inset 0 0 0 1px rgba(244,243,248,.4);font-size:12px;font-weight:600;letter-spacing:.05em;text-transform:uppercase}
+.affiche-meta .dispo::before{content:"";width:6px;height:6px;border-radius:50%;background:#4ADE80}
+.affiche-meta i{font-style:normal;color:var(--gris)}
+.affiche-pitch{margin-top:10px;font-size:16.5px;line-height:1.5;color:rgba(244,243,248,.92);max-width:520px}
+.affiche-boutons{display:flex;flex-wrap:wrap;gap:12px;margin-top:20px}
+
+.une{position:absolute;right:var(--marge);bottom:40px}
+.une-titre{font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:rgba(244,243,248,.8);margin-bottom:10px}
+.une-liste{display:flex;align-items:flex-end;gap:10px}
+.une-liste a{position:relative;display:block;width:56px;aspect-ratio:2/3;border-radius:8px;overflow:hidden;opacity:.72;box-shadow:0 0 0 1px rgba(244,243,248,.16);transition:opacity .15s,transform .15s}
+.une-liste a:hover{opacity:1;transform:translateY(-3px)}
+.une-liste a.actif{width:70px;opacity:1;box-shadow:0 0 0 2px var(--bg),0 0 0 4px #B9A2FF}
+.une-liste img{width:100%;height:100%;object-fit:cover}
+.une-liste a.actif::after{content:"";position:absolute;left:0;bottom:0;height:4px;width:45%;background:var(--degrade)}
+
+/* =====================================================================
+   BLOCS ET RAILS
+   ===================================================================== */
+.bloc{padding:46px 0 10px}
+.bloc-tete{display:flex;align-items:flex-end;justify-content:space-between;gap:18px;padding:0 var(--marge);margin-bottom:12px}
+.bloc-titre{font-family:var(--titres);font-weight:700;font-size:27px;line-height:1.15;letter-spacing:-.015em}
+.bloc-titre small{font:500 15px/1 var(--corps);letter-spacing:0;color:var(--gris);margin-left:10px}
+.bloc-chapeau{margin-top:5px;font-size:15px;color:var(--gris)}
+.bloc-outils{display:flex;align-items:center;gap:8px;flex:none}
+.voir{display:inline-flex;align-items:center;gap:6px;min-height:44px;padding:0 6px;font-size:15px;font-weight:600;color:var(--gris);white-space:nowrap}
+.voir:hover{color:var(--texte)}
+.fleche{width:44px;height:44px;border-radius:50%;background:var(--surface);box-shadow:inset 0 0 0 1px var(--trait);display:grid;place-items:center;transition:background .15s}
+.fleche:hover{background:var(--surface-2)}
+
+.rail{display:flex;gap:18px;overflow-x:auto;padding:12px var(--marge) 30px;scroll-padding-left:var(--marge);scroll-snap-type:x proximity;scrollbar-width:none}
+.rail::-webkit-scrollbar{display:none}
+.rail > *{flex:none;scroll-snap-align:start}
+
+/* ---------- Affiche de roman : le même cadre pour toutes les couvertures ---------- */
+.roman{display:block;width:188px}
+.roman-image{position:relative;display:block;aspect-ratio:2/3;border-radius:12px;overflow:hidden;background:var(--surface);
+  box-shadow:0 26px 36px -26px var(--teinte,#000);transition:transform .2s}
+.roman-image img{width:100%;height:100%;object-fit:cover}
+.roman-image::before{content:"";position:absolute;z-index:2;left:0;right:0;bottom:0;height:4px;background:var(--teinte,var(--violet))}
+.roman-image::after{content:"";position:absolute;z-index:1;inset:0;border-radius:inherit;box-shadow:inset 0 0 0 1px rgba(244,243,248,.13);
+  background:linear-gradient(180deg,rgba(11,11,16,0) 60%,rgba(11,11,16,.4) 100%)}
+.roman:hover .roman-image{transform:translateY(-6px)}
+.roman-titre{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden;margin-top:13px;font-size:14.5px;font-weight:600;line-height:1.3}
+.roman-genre{display:block;margin-top:3px;font-size:13px;color:var(--gris);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.badge{position:absolute;z-index:3;top:9px;left:9px;display:inline-flex;align-items:center;height:22px;padding:0 8px;border-radius:6px;
+  font-size:10.5px;font-weight:700;letter-spacing:.09em;text-transform:uppercase}
+.badge-nouveau{background:var(--degrade-bouton);color:#fff}
+.badge-serie{background:rgba(11,11,16,.86);color:var(--texte);box-shadow:inset 0 0 0 1px rgba(244,243,248,.28)}
+.rail-grand .roman{width:216px}
+
+/* ---------- Cartes de série ---------- */
+.serie{position:relative;display:block;width:440px;height:252px;border-radius:18px;overflow:hidden;
+  background:linear-gradient(118deg,color-mix(in srgb,var(--teinte) 46%,#16161F) 0%,color-mix(in srgb,var(--teinte) 14%,#16161F) 48%,#16161F 100%);
+  box-shadow:inset 0 0 0 1px var(--trait);transition:transform .2s}
+.serie:hover{transform:translateY(-5px)}
+.serie-texte{position:absolute;z-index:2;left:26px;top:24px;bottom:24px;width:46%;display:flex;flex-direction:column}
+.serie-texte .etiquette{color:rgba(244,243,248,.82)}
+.serie-texte .etiquette::before{background:rgba(244,243,248,.82)}
+.serie-nom{margin-top:12px;font-family:var(--titres);font-size:29px;font-weight:700;line-height:1.08;letter-spacing:-.02em}
+.serie-detail{margin-top:8px;font-size:14.5px;line-height:1.4;color:rgba(244,243,248,.82)}
+.serie-lien{margin-top:auto;display:inline-flex;align-items:center;gap:8px;font-size:14.5px;font-weight:600}
+.serie-couvs{position:absolute;right:-6px;bottom:-34px;width:250px;height:230px}
+.serie-couvs img{position:absolute;bottom:0;width:118px;aspect-ratio:2/3;object-fit:cover;border-radius:9px;box-shadow:0 14px 30px rgba(0,0,0,.55),0 0 0 1px rgba(244,243,248,.14)}
+.serie-couvs img:nth-child(1){left:0;transform:rotate(-9deg) translateY(16px)}
+.serie-couvs img:nth-child(2){left:66px;transform:translateY(-12px);z-index:2}
+.serie-couvs img:nth-child(3){left:132px;transform:rotate(9deg) translateY(16px)}
+.serie-couvs.deux img:nth-child(1){left:26px;transform:rotate(-7deg) translateY(4px)}
+.serie-couvs.deux img:nth-child(2){left:112px;transform:rotate(7deg) translateY(4px)}
+.serie-plus{position:absolute;z-index:3;right:16px;top:16px;height:26px;padding:0 10px;border-radius:13px;background:rgba(11,11,16,.8);box-shadow:inset 0 0 0 1px rgba(244,243,248,.25);
+  font-size:12px;font-weight:600;display:inline-flex;align-items:center}
+
+/* ---------- Puces (envies, rubriques) ---------- */
+.puces{display:flex;gap:10px;overflow-x:auto;padding:4px var(--marge) 6px;scrollbar-width:none}
+.puces::-webkit-scrollbar{display:none}
+.puce{flex:none;display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 18px;border-radius:22px;background:var(--surface);
+  box-shadow:inset 0 0 0 1px var(--trait);font-size:15px;font-weight:500;white-space:nowrap;transition:background .15s}
+.puce:hover{background:var(--surface-2)}
+.puce[aria-pressed="true"]{background:var(--texte);color:var(--bg);font-weight:600;box-shadow:none}
+.puce b{font-weight:500;color:var(--gris)}
+.puce[aria-pressed="true"] b{color:#4b4b5c}
+
+/* =====================================================================
+   À L'AFFICHE : LE ROMAN + LE BONUS (FILTRE PHOTO)
+   ===================================================================== */
+.duo{display:grid;grid-template-columns:1.38fr 1fr;gap:22px;padding:8px var(--marge) 0}
+.fiche{display:grid;grid-template-columns:214px 1fr;gap:30px;align-items:center;padding:30px;border-radius:22px;background:var(--surface);box-shadow:inset 0 0 0 1px var(--trait)}
+.fiche-couv{position:relative;border-radius:12px;overflow:hidden;aspect-ratio:2/3;box-shadow:0 34px 50px -30px #c5190f,0 0 0 1px rgba(244,243,248,.14)}
+.fiche-couv img{width:100%;height:100%;object-fit:cover}
+.fiche-ligne{display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px;font-size:14px;color:var(--gris);font-weight:500}
+.fiche h3{margin-top:14px;font-family:var(--titres);font-size:29px;line-height:1.1;font-weight:700;letter-spacing:-.02em}
+.fiche h3 span{display:block;margin-top:5px;font-size:20px;font-weight:600;letter-spacing:-.01em;
+  background:var(--degrade-texte);-webkit-background-clip:text;background-clip:text;color:transparent}
+.fiche-accroche{margin-top:14px;font-family:var(--titres);font-size:19px;font-weight:500;color:var(--texte)}
+.fiche-pitch{margin-top:6px;color:rgba(244,243,248,.8)}
+.themes{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px;padding:0;list-style:none}
+.themes li{height:30px;padding:0 12px;border-radius:15px;box-shadow:inset 0 0 0 1px rgba(244,243,248,.2);font-size:13px;font-weight:500;display:inline-flex;align-items:center;color:rgba(244,243,248,.9)}
+.fiche-boutons{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px}
+
+.bonus{position:relative;overflow:hidden;border-radius:22px;padding:30px;min-height:400px;
+  background:radial-gradient(120% 90% at 100% 100%,#5b1d4f 0%,#35205f 42%,#1b1830 78%,#16161F 100%);box-shadow:inset 0 0 0 1px var(--trait)}
+.bonus::before{content:"";position:absolute;right:-70px;bottom:-90px;width:380px;height:380px;border-radius:50%;
+  background:radial-gradient(closest-side,rgba(244,63,122,.5),rgba(139,92,246,.22) 60%,rgba(139,92,246,0))}
+.bonus-texte{position:relative;z-index:2;max-width:57%}
+.bonus .etiquette{color:rgba(244,243,248,.85)}
+.bonus h3{margin-top:14px;font-family:var(--titres);font-size:29px;line-height:1.1;font-weight:700;letter-spacing:-.02em}
+.bonus p{margin-top:12px;font-size:15.5px;color:rgba(244,243,248,.86)}
+.camps{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.camps span{height:32px;padding:0 12px;border-radius:16px;background:rgba(11,11,16,.5);box-shadow:inset 0 0 0 1px rgba(244,243,248,.22);font-size:13.5px;font-weight:600;display:inline-flex;align-items:center;gap:6px}
+.bonus .btn{margin-top:22px}
+.bonus-heros{position:absolute;z-index:1;right:-18px;bottom:0;width:54%;max-width:300px}
+
+/* =====================================================================
+   BANDES-ANNONCES (section signature)
+   ===================================================================== */
+.bandes{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;padding:10px var(--marge) 0}
+.ba{display:block}
+.ba-ecran{position:relative;display:block;aspect-ratio:16/9;border-radius:16px;overflow:hidden;background:var(--surface);box-shadow:inset 0 0 0 1px var(--trait)}
+.ba-fond{position:absolute;inset:-12%;width:124%;height:124%;max-width:none;object-fit:cover;filter:blur(26px) brightness(.5) saturate(1.25)}
+.ba-affiche{position:absolute;inset:0;margin:auto;height:100%;width:auto;max-width:none;box-shadow:0 0 50px rgba(0,0,0,.6)}
+.ba-ecran::after{content:"";position:absolute;inset:0;border-radius:inherit;box-shadow:inset 0 0 0 1px rgba(244,243,248,.13);background:linear-gradient(180deg,rgba(11,11,16,0) 45%,rgba(11,11,16,.62) 100%)}
+.ba-lecture{position:absolute;z-index:2;inset:0;margin:auto;width:68px;height:68px;border-radius:50%;background:rgba(11,11,16,.74);box-shadow:inset 0 0 0 2px #fff;display:grid;place-items:center;transition:transform .18s,background .18s}
+.ba:hover .ba-lecture{transform:scale(1.08);background:var(--degrade-bouton)}
+.ba-duree{position:absolute;z-index:2;right:12px;bottom:12px;height:26px;padding:0 9px;border-radius:7px;background:rgba(11,11,16,.86);font-size:12.5px;font-weight:600;display:inline-flex;align-items:center;gap:6px;font-variant-numeric:tabular-nums}
+.ba-numero{position:absolute;z-index:2;left:12px;bottom:12px;font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:rgba(244,243,248,.9)}
+.ba-titre{display:block;margin-top:14px;font-family:var(--titres);font-size:19px;font-weight:600;letter-spacing:-.01em}
+.ba-sous{display:block;margin-top:2px;font-size:14px;color:var(--gris)}
+
+/* =====================================================================
+   TOUS LES ROMANS
+   ===================================================================== */
+.catalogue{display:grid;grid-template-columns:repeat(8,minmax(0,1fr));gap:26px 16px;padding:14px var(--marge) 0}
+.catalogue .roman{width:auto;min-width:0}
+.catalogue .roman[hidden]{display:none}
+.catalogue .roman-titre{font-size:13.5px;margin-top:11px}
+.catalogue .roman-genre{font-size:12.5px}
+
+/* =====================================================================
+   LA CRÉATRICE
+   ===================================================================== */
+.creatrice{display:grid;grid-template-columns:440px 1fr;gap:64px;align-items:center;padding:8px var(--marge) 0}
+.portrait{position:relative;height:480px;border-radius:26px;overflow:hidden;background:
+  radial-gradient(85% 70% at 50% 108%,#F43F7A 0%,#8B5CF6 46%,#3b2a7a 74%,#1c1933 100%)}
+.portrait::before{content:"";position:absolute;inset:0;background:
+  radial-gradient(circle at 50% 62%,rgba(11,11,16,0) 0 148px,rgba(244,243,248,.16) 149px 150px,rgba(11,11,16,0) 151px 208px,rgba(244,243,248,.11) 209px 210px,rgba(11,11,16,0) 211px 268px,rgba(244,243,248,.07) 269px 270px,rgba(11,11,16,0) 271px)}
+.portrait img.mo{position:absolute;left:50%;bottom:-6px;height:90%;width:auto;max-width:none;transform:translateX(-50%);filter:drop-shadow(0 18px 30px rgba(11,11,16,.45))}
+.portrait-carte{position:absolute;z-index:2;left:16px;top:16px;display:flex;align-items:center;gap:10px;height:48px;padding:0 16px 0 6px;border-radius:24px;background:rgba(11,11,16,.84);font-size:14px;font-weight:600}
+.portrait-carte img{width:36px;height:36px;border-radius:50%;object-fit:cover}
+.creatrice h2{margin-top:14px;font-family:var(--titres);font-size:60px;line-height:1;font-weight:800;letter-spacing:-.03em}
+.creatrice-signature{margin-top:10px;font-family:var(--titres);font-size:22px;font-weight:600;letter-spacing:-.01em;
+  background:var(--degrade-texte);-webkit-background-clip:text;background-clip:text;color:transparent;display:inline-block}
+.creatrice-bio{margin-top:18px;font-size:17.5px;line-height:1.6;color:rgba(244,243,248,.92);max-width:640px}
+.creatrice-theatre{margin-top:12px;font-size:15.5px;line-height:1.6;color:var(--gris);max-width:640px}
+.chiffres{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:26px 0 0;padding:0;list-style:none;max-width:720px}
+.chiffres li{padding:16px 16px 18px;border-radius:16px;background:var(--surface);box-shadow:inset 0 0 0 1px var(--trait)}
+.chiffres strong{display:block;font-family:var(--titres);font-size:36px;line-height:1;font-weight:800;letter-spacing:-.02em;
+  background:var(--degrade-texte);-webkit-background-clip:text;background-clip:text;color:transparent}
+.chiffres span{display:block;margin-top:9px;font-size:13.5px;line-height:1.35;color:rgba(244,243,248,.82)}
+.creatrice .btn{margin-top:26px}
+
+/* =====================================================================
+   LE JOURNAL (actualités)
+   ===================================================================== */
+.journal{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;padding:10px var(--marge) 0}
+.article{display:flex;flex-direction:column;border-radius:18px;overflow:hidden;background:var(--surface);box-shadow:inset 0 0 0 1px var(--trait);transition:transform .2s}
+.article:hover{transform:translateY(-5px)}
+.article-image{position:relative;aspect-ratio:16/10;overflow:hidden}
+.article-image img{width:100%;height:100%;object-fit:cover;object-position:50% 24%}
+.article-image .badge{top:12px;left:12px}
+.article-corps{display:flex;flex-direction:column;flex:1;padding:18px 20px 20px}
+.article-date{font-size:13px;font-weight:500;color:var(--gris)}
+.article h3{margin-top:7px;font-family:var(--titres);font-size:20px;line-height:1.22;font-weight:600;letter-spacing:-.012em}
+.article p{margin-top:8px;font-size:15px;color:rgba(244,243,248,.78)}
+.article-lien{margin-top:auto;padding-top:16px;font-size:14.5px;font-weight:600;display:inline-flex;align-items:center;gap:8px;color:#B9A2FF}
+
+/* =====================================================================
+   LETTRE D'INFORMATION
+   ===================================================================== */
+.lettre{position:relative;overflow:hidden;margin:56px var(--marge) 0;padding:48px 52px;border-radius:26px;display:grid;grid-template-columns:1fr 480px;gap:48px;align-items:center;
+  background:radial-gradient(70% 140% at 0% 0%,rgba(139,92,246,.42) 0%,rgba(139,92,246,0) 60%),radial-gradient(60% 150% at 100% 100%,rgba(244,63,122,.36) 0%,rgba(244,63,122,0) 62%),var(--surface);
+  box-shadow:inset 0 0 0 1px rgba(244,243,248,.14)}
+.lettre h2{margin-top:14px;font-family:var(--titres);font-size:42px;line-height:1.05;font-weight:800;letter-spacing:-.025em}
+.lettre-texte{margin-top:12px;font-size:17px;color:rgba(244,243,248,.88);max-width:520px}
+.lettre-texte strong{color:#fff;font-weight:600}
+.lettre form{display:flex;gap:10px}
+.lettre input{flex:1;min-width:0;height:56px;padding:0 18px;border-radius:14px;border:0;background:var(--bg);box-shadow:inset 0 0 0 1px rgba(244,243,248,.24);color:var(--texte);font:inherit;font-size:16px}
+.lettre input::placeholder{color:#8a8a9e}
+.lettre .btn{min-height:56px;border-radius:14px}
+
+/* =====================================================================
+   PIED DE PAGE
+   ===================================================================== */
+.pied{margin-top:64px;padding:38px var(--marge) 34px;border-top:1px solid var(--trait);display:grid;grid-template-columns:1.2fr 1fr auto;gap:40px;align-items:start}
+.pied-accroche{margin-top:12px;font-size:15px;color:var(--gris);max-width:340px}
+.pied-liens{display:flex;flex-wrap:wrap;gap:2px 6px}
+.pied-liens a{display:inline-flex;align-items:center;min-height:44px;padding:0 10px;font-size:15px;color:rgba(244,243,248,.84);border-radius:8px}
+.pied-liens a:hover{background:rgba(244,243,248,.08)}
+.pied-reseau{display:inline-flex;align-items:center;gap:10px;min-height:44px;padding:0 16px;border-radius:12px;background:var(--surface);box-shadow:inset 0 0 0 1px var(--trait);font-size:15px;font-weight:600}
+.pied-bas{grid-column:1/-1;display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px;padding-top:22px;border-top:1px solid var(--trait);font-size:13.5px;color:var(--gris)}
+
+/* =====================================================================
+   TABLETTE ET TÉLÉPHONE
+   ===================================================================== */
+@media (max-width:1099px){
+  :root{--marge:32px}
+  .nav{position:absolute;height:64px;background:var(--bg);gap:12px}
+  .nav-liens{display:none;position:absolute;top:64px;left:0;right:0;flex-direction:column;gap:0;padding:8px 20px 16px;background:var(--surface);border-bottom:1px solid var(--trait);box-shadow:0 24px 40px rgba(0,0,0,.5)}
+  .nav.ouvert .nav-liens{display:flex}
+  .nav-liens a{min-height:50px;font-size:17px;padding:0 12px}
+  .nav-liens a[aria-current="page"]::after{left:12px;right:auto;width:34px;bottom:6px}
+  .nav-actions{margin-left:auto}
+  .burger{display:flex}
+
+  /* Ouverture : l'image d'abord (aucun texte sur les visages), le texte dessous */
+  .affiche{height:auto;min-height:0;max-height:none;padding:64px 0 6px;overflow:visible}
+  .affiche::before{display:none}
+  .affiche-image{position:relative;width:100%;aspect-ratio:auto;height:clamp(300px,84vw,640px)}
+  .affiche-image img{object-position:50% 10%}
+  .affiche-image::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,var(--bg) 0,rgba(11,11,16,.66) 15%,rgba(11,11,16,0) 40%)}
+  .affiche-texte{position:relative;left:auto;bottom:auto;width:auto;max-width:640px;margin-top:-38px;padding:0 var(--marge)}
+  .une{position:relative;right:auto;bottom:auto;padding:26px var(--marge) 0}
+  .une-liste a{width:60px}
+  .une-liste a.actif{width:74px}
+
+  .duo{grid-template-columns:1fr}
+  .bandes{display:flex;overflow-x:auto;padding:10px var(--marge) 20px;scroll-padding-left:var(--marge);scroll-snap-type:x proximity;scrollbar-width:none;gap:16px}
+  .bandes::-webkit-scrollbar{display:none}
+  .ba{flex:none;width:min(430px,78vw);scroll-snap-align:start}
+  .catalogue{grid-template-columns:repeat(5,minmax(0,1fr))}
+  .creatrice{grid-template-columns:1fr;gap:28px}
+  .portrait{height:420px;max-width:520px}
+  .journal{display:flex;overflow-x:auto;padding:10px var(--marge) 20px;scroll-padding-left:var(--marge);scroll-snap-type:x proximity;scrollbar-width:none;gap:16px}
+  .journal::-webkit-scrollbar{display:none}
+  .article{flex:none;width:min(360px,78vw);scroll-snap-align:start}
+  .lettre{grid-template-columns:1fr;gap:26px;padding:40px}
+  .pied{grid-template-columns:1fr}
+}
+
+@media (max-width:719px){
+  :root{--marge:20px}
+  body{font-size:16px}
+  .logo{font-size:20px;gap:10px}
+  .logo-signe{width:34px;height:34px;border-radius:10px;font-size:13px}
+  .btn-abo{padding:0 14px;font-size:14.5px}
+  .nav{padding:0 12px 0 20px}
+
+  .affiche .t-a{font-size:30px;letter-spacing:-.02em}
+  .affiche .t-b{font-size:19px;margin-top:6px}
+  .affiche-meta{font-size:14px;margin-top:12px}
+  .affiche-pitch{font-size:16px}
+  .affiche-boutons{flex-direction:column;gap:10px;margin-top:18px}
+  .affiche-boutons .btn{width:100%}
+
+  .bloc{padding:36px 0 4px}
+  .bloc-titre{font-size:22px}
+  .bloc-titre small{display:block;margin:6px 0 0;font-size:14px}
+  .bloc-chapeau{font-size:14.5px}
+  .bloc-tete{flex-direction:column;align-items:flex-start;gap:2px}
+  .bloc-tete .voir{padding-left:0}
+  .fleche{display:none}
+  .rail{gap:14px;padding-bottom:22px}
+  .roman{width:132px}
+  .rail-grand .roman{width:150px}
+  .roman-titre{font-size:14px;margin-top:11px}
+
+  .serie{width:306px;height:204px;border-radius:16px}
+  .serie-texte{left:18px;top:18px;bottom:18px;width:50%}
+  .serie-nom{font-size:23px}
+  .serie-detail{font-size:13.5px}
+  .serie-couvs{right:-22px;bottom:-30px;width:190px;height:170px}
+  .serie-couvs img{width:88px}
+  .serie-couvs img:nth-child(2){left:50px}
+  .serie-couvs img:nth-child(3){left:100px}
+  .serie-couvs.deux img:nth-child(1){left:22px}
+  .serie-couvs.deux img:nth-child(2){left:88px}
+
+  .fiche{grid-template-columns:1fr;gap:20px;padding:22px 20px 24px;border-radius:20px}
+  .fiche-couv{width:176px;margin:0 auto}
+  .fiche h3{font-size:24px}
+  .fiche h3 span{font-size:18px}
+  .fiche-boutons{flex-direction:column;gap:10px}
+  .fiche-boutons .btn{width:100%}
+  .bonus{padding:24px 20px 0;min-height:0;border-radius:20px}
+  .bonus-texte{max-width:none}
+  .bonus h3{font-size:24px}
+  .bonus .btn{width:100%}
+  .bonus-heros{position:relative;right:auto;width:74%;max-width:280px;margin:14px auto 0}
+  .bonus::before{right:50%;transform:translateX(50%);bottom:-140px}
+
+  .ba{width:292px}
+  .ba-titre{font-size:17.5px}
+
+  /* Tous les romans : deux rangées qui défilent */
+  .catalogue{display:grid;grid-template-columns:none;grid-template-rows:repeat(2,auto);grid-auto-flow:column;grid-auto-columns:118px;gap:20px 14px;overflow-x:auto;padding:12px var(--marge) 22px;scrollbar-width:none}
+  .catalogue::-webkit-scrollbar{display:none}
+
+  .portrait{height:360px;border-radius:22px}
+  .creatrice h2{font-size:44px}
+  .creatrice-signature{font-size:19px}
+  .creatrice-bio{font-size:16.5px}
+  .chiffres{grid-template-columns:repeat(2,1fr);gap:12px}
+  .chiffres strong{font-size:32px}
+  .creatrice .btn{width:100%}
+
+  .article{width:286px}
+  .lettre{margin-top:40px;padding:30px 22px 26px;border-radius:22px}
+  .lettre h2{font-size:31px}
+  .lettre-texte{font-size:16px}
+  .lettre form{flex-direction:column}
+  .lettre input,.lettre .btn{height:54px;min-height:54px;width:100%}
+  .pied{margin-top:44px;gap:22px;padding-bottom:28px}
+}
+
+@media (prefers-reduced-motion:reduce){*{transition:none !important}}
+</style>
+</head>
+
+<body>
+
+<!-- ========================= NAVIGATION ========================= -->
+<header class="nav" id="nav">
+  <a class="logo" href="#" aria-label="Mo Gadarr — accueil"><span class="logo-signe" aria-hidden="true">MG</span><span>Mo Gadarr</span></a>
+  <nav class="nav-liens" id="menu" aria-label="Navigation principale"></nav>
+  <div class="nav-actions">
+    <a class="btn-abo" href="#lettre">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/></svg>
+      S’abonner
+    </a>
+    <button class="burger" id="burger" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main>
+
+<!-- ========================= OUVERTURE « À L'AFFICHE » ========================= -->
+<section class="affiche" aria-labelledby="affiche-titre">
+  <div class="affiche-image"><img id="affiche-img" alt="Mo Gadarr présente son roman, entourée de ses personnages : Wendy et le Père Noël à gauche, le Père Fouettard et Dante à droite"></div>
+
+  <div class="affiche-texte">
+    <p class="affiche-sur"><span class="pastille">Nouveau</span><img class="affiche-avatar" id="affiche-avatar" alt="" width="28" height="28"><span>Un roman de <strong>Mo&nbsp;Gadarr</strong></span></p>
+    <h1 id="affiche-titre"><span class="t-a">Elle est la fille<br>du Père&nbsp;Noël</span> <span class="t-b">&amp; je suis le fils du Père&nbsp;Fouettard</span></h1>
+    <p class="affiche-meta" id="affiche-meta"></p>
+    <p class="affiche-pitch" id="affiche-pitch"></p>
+    <div class="affiche-boutons">
+      <a class="btn btn-clair" href="#le-roman">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 4.5v15a1 1 0 0 0 1.52.85l12-7.5a1 1 0 0 0 0-1.7l-12-7.5A1 1 0 0 0 7 4.5z"/></svg>
+        Découvrir le roman
+      </a>
+      <a class="btn btn-sombre" href="#le-roman">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h3l2-3h6l2 3h3a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1z"/><circle cx="12" cy="13" r="3.5"/></svg>
+        Essayer le filtre photo
+      </a>
+    </div>
+  </div>
+
+  <div class="une" aria-label="À la une">
+    <p class="une-titre">À la une</p>
+    <div class="une-liste" id="une"></div>
+  </div>
+</section>
+
+<!-- ========================= LES SÉRIES ========================= -->
+<section class="bloc" aria-labelledby="t-series">
+  <div class="bloc-tete">
+    <div>
+      <h2 class="bloc-titre" id="t-series">Les séries à dévorer</h2>
+      <p class="bloc-chapeau">Des personnages que l’on retrouve, tome après tome.</p>
+    </div>
+    <div class="bloc-outils">
+      <button class="fleche" type="button" data-rail="rail-series" data-sens="-1" aria-label="Séries précédentes"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m15 5-7 7 7 7"/></svg></button>
+      <button class="fleche" type="button" data-rail="rail-series" data-sens="1" aria-label="Séries suivantes"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m9 5 7 7-7 7"/></svg></button>
+    </div>
+  </div>
+  <div class="rail" id="rail-series"></div>
+</section>
+
+<!-- ========================= LE ROMAN + LE BONUS ========================= -->
+<section class="bloc" id="le-roman" aria-labelledby="t-roman">
+  <div class="bloc-tete">
+    <div>
+      <h2 class="bloc-titre" id="t-roman">À l’affiche&nbsp;: le roman de Noël</h2>
+      <p class="bloc-chapeau">Le nouveau roman, et son bonus à partager.</p>
+    </div>
+  </div>
+  <div class="duo">
+    <article class="fiche">
+      <div class="fiche-couv"><img id="fiche-couv" alt="Couverture du roman Elle est la fille du Père Noël &amp; je suis le fils du Père Fouettard"></div>
+      <div>
+        <p class="fiche-ligne"><span class="pastille">Nouveau</span><span id="fiche-genre"></span></p>
+        <h3>Elle est la fille du Père&nbsp;Noël <span>&amp; je suis le fils du Père&nbsp;Fouettard</span></h3>
+        <p class="fiche-accroche" id="fiche-accroche"></p>
+        <p class="fiche-pitch" id="fiche-pitch"></p>
+        <ul class="themes" id="fiche-themes" aria-label="Thèmes du roman"></ul>
+        <div class="fiche-boutons">
+          <a class="btn btn-clair" href="#">Découvrir le roman</a>
+          <a class="btn btn-sombre" href="#">Acheter sur Amazon</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="bonus">
+      <div class="bonus-texte">
+        <span class="etiquette">Bonus · Filtre photo</span>
+        <h3 id="bonus-titre"></h3>
+        <p id="bonus-texte"></p>
+        <div class="camps" id="bonus-camps"></div>
+        <a class="btn btn-clair" href="#">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h3l2-3h6l2 3h3a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1z"/><circle cx="12" cy="13" r="3.5"/></svg>
+          Essayer le filtre photo
+        </a>
+      </div>
+      <img class="bonus-heros" id="bonus-heros" alt="Wendy et Dante, les héros du roman">
+    </article>
+  </div>
+</section>
+
+<!-- ========================= SELON VOTRE ENVIE ========================= -->
+<section class="bloc" aria-labelledby="t-envie">
+  <div class="bloc-tete">
+    <div>
+      <h2 class="bloc-titre" id="t-envie">Selon votre envie</h2>
+      <p class="bloc-chapeau">Dites-nous votre humeur, on vous trouve l’histoire.</p>
+    </div>
+    <div class="bloc-outils">
+      <button class="fleche" type="button" data-rail="rail-envie" data-sens="-1" aria-label="Romans précédents"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m15 5-7 7 7 7"/></svg></button>
+      <button class="fleche" type="button" data-rail="rail-envie" data-sens="1" aria-label="Romans suivants"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m9 5 7 7-7 7"/></svg></button>
+    </div>
+  </div>
+  <div class="puces" id="puces-envie" role="group" aria-label="Choisir une envie de lecture"></div>
+  <div class="rail" id="rail-envie" aria-live="polite"></div>
+</section>
+
+<!-- ========================= BANDES-ANNONCES ========================= -->
+<section class="bloc" aria-labelledby="t-ba">
+  <div class="bloc-tete">
+    <div>
+      <h2 class="bloc-titre" id="t-ba">Bandes-annonces</h2>
+      <p class="bloc-chapeau">Quelques secondes pour entrer dans l’histoire.</p>
+    </div>
+  </div>
+  <div class="bandes" id="bandes"></div>
+</section>
+
+<!-- ========================= LES NOËLS DE MO ========================= -->
+<section class="bloc" aria-labelledby="t-noels">
+  <div class="bloc-tete">
+    <div>
+      <h2 class="bloc-titre" id="t-noels">Les Noëls de Mo</h2>
+      <p class="bloc-chapeau" id="noels-detail"></p>
+    </div>
+    <div class="bloc-outils">
+      <button class="fleche" type="button" data-rail="rail-noels" data-sens="-1" aria-label="Romans précédents"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m15 5-7 7 7 7"/></svg></button>
+      <button class="fleche" type="button" data-rail="rail-noels" data-sens="1" aria-label="Romans suivants"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m9 5 7 7-7 7"/></svg></button>
+    </div>
+  </div>
+  <div class="rail rail-grand" id="rail-noels"></div>
+</section>
+
+<!-- ========================= TOUS LES ROMANS ========================= -->
+<section class="bloc" id="romans" aria-labelledby="t-tous">
+  <div class="bloc-tete">
+    <div>
+      <h2 class="bloc-titre" id="t-tous">Tous les romans <small id="compte-romans"></small></h2>
+    </div>
+    <div class="bloc-outils"><a class="voir" href="#">Ouvrir la page Romans <span aria-hidden="true">→</span></a></div>
+  </div>
+  <div class="puces" id="puces-rubriques" role="group" aria-label="Filtrer par rubrique"></div>
+  <div class="catalogue" id="catalogue"></div>
+</section>
+
+<!-- ========================= LA CRÉATRICE ========================= -->
+<section class="bloc" id="auteure" aria-labelledby="t-auteure">
+  <div class="creatrice">
+    <div class="portrait">
+      <div class="portrait-carte"><img id="portrait-logo" alt=""><span>Mo Gadarr</span></div>
+      <img class="mo" id="portrait-mo" alt="Mo Gadarr en train d’écrire, illustration">
+    </div>
+    <div>
+      <span class="etiquette">La créatrice</span>
+      <h2 id="t-auteure">Mo Gadarr</h2>
+      <p class="creatrice-signature" id="auteure-signature"></p>
+      <p class="creatrice-bio" id="auteure-bio"></p>
+      <p class="creatrice-theatre" id="auteure-theatre"></p>
+      <ul class="chiffres" id="auteure-chiffres"></ul>
+      <a class="btn btn-sombre" href="#">Découvrir son parcours <span aria-hidden="true">→</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ========================= LE JOURNAL ========================= -->
+<section class="bloc" id="journal" aria-labelledby="t-journal">
+  <div class="bloc-tete">
+    <div>
+      <h2 class="bloc-titre" id="t-journal">Le journal de Mo</h2>
+      <p class="bloc-chapeau">Sorties, salons et coulisses.</p>
+    </div>
+    <div class="bloc-outils"><a class="voir" href="#">Toutes les actualités <span aria-hidden="true">→</span></a></div>
+  </div>
+  <div class="journal" id="actus"></div>
+</section>
+
+<!-- ========================= LETTRE D'INFORMATION ========================= -->
+<section class="lettre" id="lettre" aria-labelledby="t-lettre">
+  <div>
+    <span class="etiquette">La lettre d’information</span>
+    <h2 id="t-lettre">Ne ratez aucune sortie</h2>
+    <p class="lettre-texte" id="lettre-texte"></p>
+  </div>
+  <form onsubmit="return false">
+    <label class="sr" for="courriel">Votre adresse e-mail</label>
+    <input id="courriel" type="email" placeholder="Votre adresse e-mail" autocomplete="email">
+    <button class="btn btn-accent" type="submit" id="lettre-bouton"></button>
+  </form>
+</section>
+
+</main>
+
+<!-- ========================= PIED DE PAGE ========================= -->
+<footer class="pied">
+  <div>
+    <a class="logo" href="#"><span class="logo-signe" aria-hidden="true">MG</span><span>Mo Gadarr</span></a>
+    <p class="pied-accroche" id="pied-accroche"></p>
+  </div>
+  <nav class="pied-liens" id="pied-liens" aria-label="Liens du pied de page"></nav>
+  <a class="pied-reseau" href="https://www.instagram.com/mogadarrauteur/">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="1" fill="currentColor" stroke="none"/></svg>
+    @mogadarrauteur
+  </a>
+  <div class="pied-bas"><span>© 2026 Mo Gadarr. Tous droits réservés.</span><span>Maquette n°&nbsp;4 — «&nbsp;Grand écran&nbsp;»</span></div>
+</footer>
+
+<script src="commun/contenu.js"></script>
+<script>
+(function () {
+  var MG = window.MG;
+  var $ = function (id) { return document.getElementById(id); };
+
+  /* Échappement HTML + typographie française (apostrophes courbes, espaces insécables) */
+  function esc(s) { return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;'); }
+  function typo(s) {
+    return esc(s).replace(/'/g, '’').replace(/ ([?!:;»])/g, ' $1').replace(/« /g, '« ')
+                 .replace(/Père Noël/g, 'Père Noël').replace(/Père Fouettard/g, 'Père Fouettard');
+  }
+  var FLECHE = '<span aria-hidden="true">→</span>';
+
+  /* ---------- Une affiche de roman (même cadre pour toutes les couvertures) ---------- */
+  function badge(l) {
+    if (l.nouveau) return '<span class="badge badge-nouveau">Nouveau</span>';
+    var saison = /Saison (\d)/.exec(l.titre);
+    if (saison) return '<span class="badge badge-serie">Saison ' + saison[1] + '</span>';
+    if (l.id === 'at') return '<span class="badge badge-serie">Duologie</span>';
+    if (l.serie) return '<span class="badge badge-serie">Série</span>';
+    return '';
+  }
+  function roman(l) {
+    return '<a class="roman" href="#" data-rubrique="' + l.rubrique + '" style="--teinte:' + l.teinte + '" title="' + typo(l.titre) + '">' +
+      '<span class="roman-image"><img src="' + l.couv + '" alt="Couverture : ' + typo(l.titre) + '">' + badge(l) + '</span>' +
+      '<span class="roman-titre">' + typo(l.court) + '</span><span class="roman-genre">' + typo(l.genre) + '</span></a>';
+  }
+
+  /* ---------- Navigation ---------- */
+  $('menu').innerHTML = MG.menu.map(function (m, i) {
+    return '<a href="#"' + (i === 0 ? ' aria-current="page"' : '') + '>' + typo(m) + '</a>';
+  }).join('');
+  $('pied-liens').innerHTML = MG.menu.map(function (m) { return '<a href="#">' + typo(m) + '</a>'; }).join('');
+  $('burger').addEventListener('click', function () {
+    var ouvert = $('nav').classList.toggle('ouvert');
+    this.setAttribute('aria-expanded', ouvert);
+    this.setAttribute('aria-label', ouvert ? 'Fermer le menu' : 'Ouvrir le menu');
+  });
+
+  /* ---------- Ouverture ---------- */
+  var N = MG.nouveau;
+  $('affiche-img').src = MG.auteure.images.famille;
+  $('affiche-avatar').src = MG.auteure.images.logo;
+  $('affiche-meta').innerHTML = '<span class="dispo">' + typo(N.statut) + '</span><span>2026</span><i>·</i><span>' + typo(N.genre) + '</span>' +
+    N.themes.slice(0, 2).map(function (t) { return '<i>·</i><span>' + typo(t) + '</span>'; }).join('');
+  $('affiche-pitch').innerHTML = typo(N.pitch);
+  $('une').innerHTML = ['fille-pere-noel', 'at', 'prends-buche', 'black-feelings-1'].map(function (id, i) {
+    var l = MG.livre(id);
+    return '<a href="#"' + (i === 0 ? ' class="actif" aria-current="true"' : '') + ' title="' + typo(l.titre) + '"><img src="' + l.couv + '" alt="' + typo(l.titre) + '"></a>';
+  }).join('');
+
+  /* ---------- Séries ---------- */
+  var TEINTES_SERIES = { 'COPS and Love': '#4f7896', 'Be…': '#3d7be0', 'Black Feelings': '#e0186f', 'Les saisons': '#2f9a62', 'Les Noëls de Mo': '#c5190f' };
+  $('rail-series').innerHTML = MG.series.map(function (s) {
+    var livres = s.ids.map(function (id) { return MG.livre(id); });
+    var montres = livres.slice(0, 3);
+    var reste = livres.length - montres.length;
+    return '<a class="serie" href="#" style="--teinte:' + (TEINTES_SERIES[s.nom] || livres[0].teinte) + '">' +
+      '<span class="serie-texte"><span class="etiquette">Série</span><span class="serie-nom">' + typo(s.nom) + '</span>' +
+      '<span class="serie-detail">' + typo(s.detail) + '</span><span class="serie-lien">Découvrir ' + FLECHE + '</span></span>' +
+      (reste > 0 ? '<span class="serie-plus">+ ' + reste + ' romans</span>' : '') +
+      '<span class="serie-couvs' + (montres.length === 2 ? ' deux' : '') + '">' + montres.map(function (l) { return '<img src="' + l.couv + '" alt="' + typo(l.titre) + '">'; }).join('') + '</span></a>';
+  }).join('');
+
+  /* ---------- Le roman + le bonus ---------- */
+  $('fiche-couv').src = N.couverture;
+  $('fiche-genre').innerHTML = typo(N.genre) + ' · ' + typo(N.statut);
+  $('fiche-accroche').innerHTML = typo(N.accroche);
+  $('fiche-pitch').innerHTML = typo(N.pitch);
+  $('fiche-themes').innerHTML = N.themes.map(function (t) { return '<li>' + typo(t) + '</li>'; }).join('');
+  $('bonus-titre').innerHTML = typo(N.filtre.titre);
+  $('bonus-texte').innerHTML = typo(N.filtre.texte);
+  $('bonus-camps').innerHTML = N.personnages.map(function (p, i) { return '<span>' + (i === 0 ? '🎄' : '🦇') + ' ' + typo(p.camp) + '</span>'; }).join('');
+  $('bonus-heros').src = N.heros;
+
+  /* ---------- Selon votre envie ---------- */
+  function afficherEnvie(id) {
+    $('rail-envie').innerHTML = MG.parHumeur(id).map(roman).join('');
+    $('rail-envie').scrollLeft = 0;
+    Array.prototype.forEach.call($('puces-envie').children, function (b) { b.setAttribute('aria-pressed', b.dataset.id === id); });
+  }
+  $('puces-envie').innerHTML = MG.humeurs.map(function (h) {
+    return '<button class="puce" type="button" data-id="' + h.id + '" aria-pressed="false"><span aria-hidden="true">' + h.emoji + '</span>' + typo(h.nom) + '</button>';
+  }).join('');
+  $('puces-envie').addEventListener('click', function (e) { var b = e.target.closest('.puce'); if (b) afficherEnvie(b.dataset.id); });
+  afficherEnvie('rire');
+
+  /* ---------- Bandes-annonces ---------- */
+  $('bandes').innerHTML = MG.bandesAnnonces.map(function (b) {
+    return '<a class="ba" href="' + b.video + '" title="Voir la bande-annonce : ' + typo(b.titre) + '">' +
+      '<span class="ba-ecran"><img class="ba-fond" src="' + b.affiche + '" alt="" aria-hidden="true"><img class="ba-affiche" src="' + b.affiche + '" alt="Affiche : ' + typo(b.titre) + '">' +
+      '<span class="ba-lecture" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="#fff"><path d="M8 5v14a1 1 0 0 0 1.5.86l11-7a1 1 0 0 0 0-1.72l-11-7A1 1 0 0 0 8 5z"/></svg></span>' +
+      '<span class="ba-numero">Bande-annonce</span><span class="ba-duree">' + esc(b.duree) + '</span></span>' +
+      '<span class="ba-titre">' + typo(b.titre) + '</span><span class="ba-sous">Durée : ' + esc(b.duree).replace(':', ' min ') + ' s</span></a>';
+  }).join('');
+
+  /* ---------- Les Noëls de Mo ---------- */
+  var noels = MG.series.filter(function (s) { return s.nom === 'Les Noëls de Mo'; })[0];
+  $('noels-detail').innerHTML = typo(noels.detail) + ', à lire au coin du feu.';
+  $('rail-noels').innerHTML = noels.ids.map(function (id) { return roman(MG.livre(id)); }).join('');
+
+  /* ---------- Tous les romans ---------- */
+  $('compte-romans').textContent = MG.livres.length + ' titres';
+  $('catalogue').innerHTML = MG.livres.map(roman).join('');
+  $('puces-rubriques').innerHTML = '<button class="puce" type="button" data-id="tout" aria-pressed="true">Tout <b>' + MG.livres.length + '</b></button>' +
+    MG.rubriques.map(function (r) {
+      return '<button class="puce" type="button" data-id="' + r.id + '" aria-pressed="false">' + typo(r.nom) + ' <b>' + MG.parRubrique(r.id).length + '</b></button>';
+    }).join('');
+  $('puces-rubriques').addEventListener('click', function (e) {
+    var b = e.target.closest('.puce'); if (!b) return;
+    Array.prototype.forEach.call(this.children, function (x) { x.setAttribute('aria-pressed', x === b); });
+    Array.prototype.forEach.call($('catalogue').children, function (c) { c.hidden = b.dataset.id !== 'tout' && c.dataset.rubrique !== b.dataset.id; });
+  });
+
+  /* ---------- La créatrice ---------- */
+  var A = MG.auteure;
+  $('portrait-logo').src = A.images.logo;
+  $('portrait-mo').src = A.images.illustrationDetouree;
+  $('auteure-signature').innerHTML = typo(A.signature);
+  $('auteure-bio').innerHTML = typo(A.bio).replace('Black Feelings', '<em>Black Feelings</em>');
+  $('auteure-theatre').innerHTML = typo(A.theatre);
+  $('auteure-chiffres').innerHTML = A.faits.map(function (f) { return '<li><strong>' + typo(f.chiffre) + '</strong><span>' + typo(f.libelle) + '</span></li>'; }).join('');
+
+  /* ---------- Le journal ---------- */
+  $('actus').innerHTML = MG.actus.map(function (a) {
+    return '<a class="article" href="#"><span class="article-image"><img src="' + a.image + '" alt=""><span class="badge badge-serie">' + typo(a.rubrique) + '</span></span>' +
+      '<span class="article-corps"><span class="article-date">' + typo(a.date) + '</span><h3>' + typo(a.titre) + '</h3><p>' + typo(a.resume) + '</p>' +
+      '<span class="article-lien">Lire l’article ' + FLECHE + '</span></span></a>';
+  }).join('');
+
+  /* ---------- Lettre d'information et pied de page ---------- */
+  $('lettre-texte').innerHTML = '<strong>' + typo(MG.lettre.titre) + '.</strong> ' + typo(MG.lettre.texte);
+  $('lettre-bouton').textContent = MG.lettre.bouton.replace(/'/g, '’');
+  $('pied-accroche').innerHTML = typo(A.accroche);
+
+  /* ---------- Flèches des rails ---------- */
+  Array.prototype.forEach.call(document.querySelectorAll('.fleche'), function (f) {
+    f.addEventListener('click', function () {
+      var rail = $(f.dataset.rail);
+      rail.scrollBy({ left: Number(f.dataset.sens) * rail.clientWidth * 0.8, behavior: 'smooth' });
+    });
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+```{=html}
+<%
+/* « Trouver son prochain coup de cœur » : une carte par envie de lecture.
+   Le nombre de romans est compté dans les pages (champ humeurs) ; les trois couvertures montrées
+   sont choisies ci-dessous (à défaut : les trois premiers romans de l'envie). */
+const envies = [
+  { id: "rire", nom: "Envie de rire", fond: "#FBEBC0", vitrine: ["et-zut", "poupee-bimbo", "be-mine-valentine"] },
+  { id: "frissons", nom: "Envie de frissons", fond: "#F0C6B6", vitrine: ["cops-and-love-will-hunter", "black-feelings-1", "at_the_beginning"] },
+  { id: "noel", nom: "Envie de Noël", fond: "#D3DDC8", vitrine: ["fille_pere_noel", "prends_buche", "noel-coups-bas"] },
+  { id: "evasion", nom: "Envie d’évasion", fond: "#FBD9C5", vitrine: ["dans-l-eau", "sur-le-sable", "en-pleine-nature"] },
+  { id: "emotion", nom: "Envie d’émotions", fond: "#F3C6C6", vitrine: ["be-sweeter", "my-sweet-babysitter", "jai-juste-clique"] },
+];
+const livres = items.filter((i) => i.rubrique).sort((a, b) => (a.ordre || 999) - (b.ordre || 999));
+const nomFichier = (l) => String(l.path).split("/").pop().replace(/\.(qmd|html)$/, "");
+%>
+<div class="envies-grille list">
+<% for (const e of envies) {
+     const romans = livres.filter((l) => (l.humeurs || []).includes(e.id));
+     if (!romans.length) continue;
+     let vitrine = e.vitrine.map((n) => romans.find((l) => nomFichier(l) === n)).filter(Boolean);
+     if (vitrine.length < 3) vitrine = romans.slice(0, 3); %>
+  <a class="envie" href="romans.html?envie=<%= e.id %>" style="--fond:<%= e.fond %>">
+    <span class="eventail" aria-hidden="true"><% vitrine.forEach((l, i) => { %><img src="<%- l.image %>" alt="" loading="lazy" decoding="async" style="--i:<%= i %>;--n:<%= vitrine.length %>"><% }) %></span>
+    <span class="envie-bas"><span class="envie-icone"><svg class="ico" aria-hidden="true"><use href="#i-<%= e.id %>"/></svg></span>
+      <span><span class="envie-nom"><%= e.nom %></span><span class="envie-nb"><%= romans.length %> roman<%= romans.length > 1 ? "s" : "" %></span></span></span>
+  </a>
+<% } %>
+</div>
+```

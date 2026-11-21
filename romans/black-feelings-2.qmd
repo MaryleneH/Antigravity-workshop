@@ -7,6 +7,14 @@ categories: [Romance contemporaine, Harcèlement, Seconde chance]
 title-block-banner: true
 page-layout: full
 toc: false
+# --- Fiche du roman : sert aux listes automatiques (accueil, page Romans) ---
+ordre: 3
+rubrique: edition
+humeurs: [frissons, emotion]
+teinte: "#2bb5a8"
+titre-court: "Black Feelings 2"
+genre: "Romance • Suspense"
+sujet: "Harcèlement"
 ---
 
 ```{=html}

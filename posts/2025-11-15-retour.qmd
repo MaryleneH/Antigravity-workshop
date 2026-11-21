@@ -81,7 +81,7 @@ Et me voilà de retour dans mon blog ! Je viens d’enchaîner la rentrée et su
   position: relative;
   max-width: 450px;
   margin: 2rem auto;
-  background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+  background: linear-gradient(135deg, #3A2622 0%, #4D342E 100%);
   border-radius: 16px;
   padding: 1.5rem;
   box-shadow: 0 12px 40px rgba(0,0,0,0.4);
@@ -103,7 +103,7 @@ Et me voilà de retour dans mon blog ! Je viens d’enchaîner la rentrée et su
   position: relative;
   overflow: hidden;
   border-radius: 10px;
-  background: #111;
+  background: #2B1B18;
 }
 
 .album-track {
@@ -125,7 +125,7 @@ Et me voilà de retour dans mon blog ! Je viens d’enchaîner la rentrée et su
   position: relative;
   overflow: hidden;
   border-radius: 8px;
-  background: #0a0a0a;
+  background: #241714;
   display: flex;
   align-items: center;
   justify-content: center;

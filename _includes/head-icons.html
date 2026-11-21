@@ -1,73 +1,8 @@
-<!-- Icônes Bootstrap (pour .bi) -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
-
-<!-- Google Material Icons (pour <span class="material-icons">auto_awesome</span>) -->
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
-
-<!-- Custom Moon Icon for Dark Mode Toggle -->
-<style>
-    /*
-     * Quarto renders the toggle as:
-     *   <div class="quarto-color-scheme-toggle">
-     *     <a href="..."><i class="bi bi-toggle-off"></i></a>
-     *   </div>
-     *
-     * Strategy: Hide the default icon entirely and inject a moon-stars
-     * icon using ::after on the <a> link element inside the toggle.
-     * This works regardless of which bi-* class Quarto uses internally.
-     */
-
-    /* Hide the original Bootstrap icon glyph completely */
-    .quarto-color-scheme-toggle .bi::before {
-        visibility: hidden !important;
-        width: 0 !important;
-        display: none !important;
-    }
-
-    /* Make the <i> itself a host for our custom icon */
-    .quarto-color-scheme-toggle .bi {
-        font-size: 0 !important;      /* collapse the original text */
-        position: relative;
-        display: inline-block;
-        width: 1.4rem;
-        height: 1.4rem;
-        vertical-align: middle;
-    }
-
-    /* Inject the moon-stars-fill icon */
-    .quarto-color-scheme-toggle .bi::after {
-        font-family: "bootstrap-icons" !important;
-        content: "\f496";                 /* bi-moon-stars-fill */
-        font-size: 1.3rem;
-        font-style: normal;
-        font-weight: normal;
-        visibility: visible !important;
-        display: inline-block !important;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        color: inherit;
-        transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1),
-                    color 0.3s ease,
-                    filter 0.3s ease;
-    }
-
-    /* Hover effect: gentle rotation + scale */
-    .quarto-color-scheme-toggle:hover .bi::after {
-        transform: translate(-50%, -50%) rotate(15deg) scale(1.15);
-    }
-
-    /* Dark mode: pink glow */
-    body.quarto-dark .quarto-color-scheme-toggle .bi::after {
-        color: #fb6f92;
-        filter: drop-shadow(0 0 6px rgba(251, 111, 146, 0.5));
-    }
-
-    /* Light mode: subtle warm color */
-    body.quarto-light .quarto-color-scheme-toggle .bi::after {
-        color: #7A1B3D;
-        filter: drop-shadow(0 0 4px rgba(122, 27, 61, 0.2));
-    }
-</style>
+<!-- Polices du thème Cocon : Gloock (titres), Figtree (texte), Sacramento (signature).
+     Playfair Display reste chargée pour les pages spéciales (roman de Noël, AT, Bûche, filtres), qui gardent leur univers. -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&family=Gloock&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Sacramento&display=swap" rel="stylesheet">
+<!-- Icônes Bootstrap (pour les balises <i class="bi …">) -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<meta name="theme-color" content="#FFF4EA">

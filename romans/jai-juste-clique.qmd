@@ -7,6 +7,14 @@ categories: [Romance contemporaine, Internet, Faux semblants]
 title-block-banner: true
 page-layout: full
 toc: false
+# --- Fiche du roman : sert aux listes automatiques (accueil, page Romans) ---
+ordre: 22
+rubrique: oneshots
+humeurs: [emotion]
+teinte: "#b5764a"
+titre-court: "J'ai juste cliqué !"
+genre: "Romance 2.0"
+sujet: "Rencontres virtuelles"
 ---
 
 ```{=html}

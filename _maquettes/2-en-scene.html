@@ -1,0 +1,858 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Maquette 2 — En scène</title>
+
+<!-- Fiche de la piste (lue par la planche de présentation) -->
+<meta name="mg:numero" content="2">
+<meta name="mg:nom" content="En scène">
+<meta name="mg:idee" content="Vous écrivez vos pièces et animez le club théâtre depuis plus de dix ans : ici, chaque roman monte sur scène, sous les projecteurs.">
+<meta name="mg:mots" content="théâtral, chaleureux, spectaculaire">
+<meta name="mg:palette" content="#7A1022 Rouge velours; #3D0812 Rouge profond; #F6EAD7 Crème programme; #F2C14E Or ampoule; #170A0D Encre; #E9B9B0 Rose poudré">
+<meta name="mg:polices" content="Bodoni Moda — titres et italiques d’affiche; Oswald — mentions en capitales étroites; DM Sans — texte courant">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=DM+Sans:ital,opsz,wght@0,9..40,300..700;1,9..40,300..700&family=Oswald:wght@300..700&display=swap" rel="stylesheet">
+
+<style>
+/* ==========================================================================
+   Maquette 2 — « En scène »
+   Une soirée au théâtre : affiche, projecteur, programme de salle.
+   ========================================================================== */
+:root{
+  --marge:32px;
+  --velours:#7A1022; --profond:#3D0812; --creme:#F6EAD7; --or:#F2C14E; --encre:#170A0D; --rose:#E9B9B0;
+  --creme-ombre:#EDDCC1;
+  --f-titre:"Bodoni Moda","Bodoni MT",Didot,serif;
+  --f-mention:"Oswald","Arial Narrow",sans-serif;
+  --f-texte:"DM Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  /* plis du velours */
+  --plis:repeating-linear-gradient(90deg,#4a0a17 0,#8c1629 16px,#a51d36 26px,#7A1022 38px,#4a0a17 54px);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;font-family:var(--f-texte);font-size:17px;line-height:1.65;color:var(--encre);background:var(--creme);
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;overflow-x:hidden}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+p{margin:0 0 1em}
+h1,h2,h3{font-family:var(--f-titre);font-weight:500;font-optical-sizing:auto;margin:0;line-height:1.03;text-wrap:balance}
+h2{font-size:clamp(40px,5.1vw,72px);font-style:italic;letter-spacing:-.012em}
+:focus-visible{outline:2px solid var(--or);outline-offset:3px}
+.wrap{width:min(1200px,100% - 2 * var(--marge));margin-inline:auto}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.nb{white-space:nowrap}
+
+/* Mentions en capitales étroites */
+.mention{font-family:var(--f-mention);font-weight:500;font-size:14px;line-height:1.3;letter-spacing:.32em;text-transform:uppercase;margin:0}
+.claire .mention{color:var(--velours)}
+.sombre .mention{color:var(--or)}
+
+/* Sections */
+.section{padding:clamp(62px,6vw,86px) 0}
+.sombre{color:var(--creme)}
+.tete{text-align:center;margin:0 auto clamp(34px,3.4vw,46px)}
+.tete .mention{margin-bottom:16px}
+.tete-sous{margin:16px 0 0;font-size:19px}
+.sombre .tete-sous{color:var(--rose)}
+.filet{display:flex;align-items:center;justify-content:center;gap:14px;margin:22px 0 0;font-size:11px;line-height:1}
+.filet span{width:76px;height:1px;background:currentColor;opacity:.55}
+.claire .filet{color:var(--velours)} .sombre .filet{color:var(--or)}
+
+/* ----- Billets (boutons) ----- */
+.billet{--enc:9px;display:inline-flex;align-items:center;min-height:54px;padding:0 32px 0 0;border:0;cursor:pointer;
+  font-family:var(--f-mention);font-weight:500;font-size:15px;line-height:1.2;letter-spacing:.2em;text-transform:uppercase;text-decoration:none;
+  background:var(--or);color:var(--encre);white-space:nowrap;
+  -webkit-mask:radial-gradient(circle var(--enc) at 0 50%,transparent 97%,#000) left/51% 100% no-repeat,
+               radial-gradient(circle var(--enc) at 100% 50%,transparent 97%,#000) right/51% 100% no-repeat;
+          mask:radial-gradient(circle var(--enc) at 0 50%,transparent 97%,#000) left/51% 100% no-repeat,
+               radial-gradient(circle var(--enc) at 100% 50%,transparent 97%,#000) right/51% 100% no-repeat;
+  transition:transform .2s ease,filter .2s ease}
+.billet::before{content:"★";display:grid;place-items:center;align-self:stretch;flex:none;width:54px;margin-right:20px;padding-left:8px;
+  border-right:1.5px dashed currentColor;font-size:13px;letter-spacing:0;opacity:.85}
+.billet::after{content:"→";margin-left:12px;letter-spacing:0;font-family:var(--f-texte);font-size:17px;transition:transform .2s ease}
+.billet:hover{transform:translateY(-2px);filter:brightness(1.07)}
+.billet:hover::after{transform:translateX(4px)}
+.billet:focus-visible{outline:0;box-shadow:inset 0 0 0 3px var(--encre)}
+.billet--creme{background:var(--creme)}
+.billet--velours{background:var(--velours);color:var(--creme)}
+.billet--velours:focus-visible{box-shadow:inset 0 0 0 3px var(--or)}
+.lien{display:inline-flex;align-items:center;gap:8px;min-height:44px;font-family:var(--f-mention);font-size:14px;letter-spacing:.2em;text-transform:uppercase;
+  text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:6px}
+
+/* ----- Ampoules ----- */
+.ampoules{display:flex;justify-content:space-between;align-items:center;pointer-events:none}
+.ampoules i{flex:none;width:7px;height:7px;border-radius:50%;background:#ffe9ad;
+  box-shadow:0 0 5px 1px rgba(242,193,78,.95),0 0 14px 3px rgba(242,193,78,.4);animation:scintille 2.6s ease-in-out infinite alternate}
+.ampoules i:nth-child(even){animation-name:scintille-b}
+@keyframes scintille{from{opacity:.5}to{opacity:1}}
+@keyframes scintille-b{from{opacity:1}to{opacity:.58}}
+
+/* Cadre crème : toutes les couvertures passent sous le même passe-partout */
+.cadre{position:relative;display:block;padding:5px;background:var(--creme);
+  box-shadow:0 0 0 1px rgba(242,193,78,.6),0 24px 34px -14px rgba(0,0,0,.7)}
+.cadre img{width:100%;aspect-ratio:2/3;object-fit:cover}
+.cadre::after{content:"";position:absolute;inset:5px;background:linear-gradient(180deg,rgba(255,244,214,.26),rgba(255,244,214,0) 40%);pointer-events:none}
+
+/* ==========================================================================
+   Navigation — le haut du cadre de scène
+   ========================================================================== */
+.nav{position:sticky;top:0;z-index:50;background:var(--encre);color:var(--creme);border-bottom:1px solid rgba(242,193,78,.42)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;height:72px}
+.marque{display:flex;align-items:center;gap:13px;min-height:44px;text-decoration:none;font-family:var(--f-titre);font-style:italic;font-weight:600;font-size:28px;line-height:1}
+.marque img{width:42px;height:42px;border-radius:50%;box-shadow:0 0 0 1.5px rgba(242,193,78,.75)}
+#menu ul{display:flex;align-items:center;gap:4px;list-style:none;margin:0;padding:0}
+#menu a{display:flex;align-items:center;min-height:44px;padding:0 14px;font-family:var(--f-mention);font-size:14px;letter-spacing:.18em;text-transform:uppercase;
+  text-decoration:none;color:rgba(246,234,215,.88);transition:color .2s}
+#menu a:hover{color:var(--or)}
+#menu a[aria-current]{color:var(--or);box-shadow:inset 0 -2px 0 var(--or)}
+#menu a.nav-billet{--enc:6px;margin-left:10px;padding:0 22px;min-height:44px;background:var(--or);color:var(--encre);font-weight:500;
+  -webkit-mask:radial-gradient(circle var(--enc) at 0 50%,transparent 97%,#000) left/51% 100% no-repeat,radial-gradient(circle var(--enc) at 100% 50%,transparent 97%,#000) right/51% 100% no-repeat;
+          mask:radial-gradient(circle var(--enc) at 0 50%,transparent 97%,#000) left/51% 100% no-repeat,radial-gradient(circle var(--enc) at 100% 50%,transparent 97%,#000) right/51% 100% no-repeat}
+.nav-btn{display:none}
+
+/* ==========================================================================
+   Ouverture — la scène
+   ========================================================================== */
+.scene{position:relative;overflow:hidden;color:var(--creme);text-align:center;
+  background:radial-gradient(ellipse 58% 66% at 50% 52%,#93172b 0%,var(--velours) 30%,var(--profond) 70%,#26060c 100%)}
+.scene::after{content:"";position:absolute;left:0;right:0;bottom:0;height:210px;background:linear-gradient(180deg,rgba(23,10,13,0),rgba(23,10,13,.72));pointer-events:none}
+/* Rideaux : deux quarts d'ellipse en velours, liserés d'or */
+.rideau{position:absolute;top:0;z-index:1;width:clamp(56px,calc(22vw - 108px),210px);height:590px;
+  background:linear-gradient(180deg,rgba(23,10,13,0) 25%,rgba(23,10,13,.5) 100%),var(--plis);
+  filter:drop-shadow(0 16px 26px rgba(0,0,0,.5))}
+.rideau--g{left:0;border-bottom-right-radius:100% 100%;box-shadow:inset -3px -3px 0 rgba(242,193,78,.6)}
+.rideau--d{right:0;border-bottom-left-radius:100% 100%;box-shadow:inset 3px -3px 0 rgba(242,193,78,.6)}
+/* Pont lumière et projecteurs */
+.pont{position:absolute;top:0;left:0;right:0;height:9px;z-index:2;background:var(--encre);border-bottom:1px solid rgba(242,193,78,.35)}
+.pont i{position:absolute;top:5px;width:30px;height:34px;background:var(--encre);clip-path:polygon(24% 0,76% 0,100% 100%,0 100%);transform-origin:50% 0}
+.pont i::after{content:"";position:absolute;left:5px;right:5px;bottom:0;height:5px;background:#ffe9ad}
+.pont i:nth-child(1){left:calc(30% - 15px);transform:rotate(-30deg)}
+.pont i:nth-child(2){right:calc(30% - 15px);transform:rotate(30deg)}
+.faisceau{position:absolute;top:14px;z-index:0;width:560px;height:800px;pointer-events:none;filter:blur(9px);transform-origin:50% 0;animation:respire 5s ease-in-out infinite alternate}
+.faisceau i{position:absolute;inset:0;background:linear-gradient(180deg,rgba(255,240,205,.34),rgba(255,240,205,.07) 68%,rgba(255,240,205,0));clip-path:polygon(47% 0,53% 0,100% 100%,0 100%)}
+.faisceau--g{left:calc(30% - 280px);transform:rotate(-30deg)}
+.faisceau--d{right:calc(30% - 280px);transform:rotate(30deg)}
+@keyframes respire{from{opacity:.72}to{opacity:1}}
+
+.scene-contenu{position:relative;z-index:3;padding:36px 0 36px}
+/* L'enseigne « À l'affiche » */
+.enseigne{display:inline-flex;flex-direction:column;gap:9px;min-width:310px;margin:0;padding:9px 13px;
+  border:1.5px solid rgba(242,193,78,.6);background:rgba(23,10,13,.78)}
+.enseigne-txt{font-family:var(--f-mention);font-weight:600;font-size:19px;line-height:1;letter-spacing:.46em;text-indent:.46em;text-transform:uppercase;color:var(--or)}
+.presente{margin:17px 0 6px;font-family:var(--f-mention);font-size:15px;letter-spacing:.36em;text-indent:.36em;text-transform:uppercase;color:var(--or)}
+.presente b{font-weight:600;color:var(--creme)}
+/* Le titre : deux héritages face à face */
+.titre{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;column-gap:20px;
+  font-style:italic;font-weight:500;font-size:clamp(34px,3.75vw,54px);line-height:1.07;letter-spacing:-.008em}
+.t-elle{text-align:right}
+.t-lui{text-align:left;color:var(--rose)}
+.t-et{font-size:2.55em;font-weight:400;line-height:.72;color:var(--or);padding:0 .02em .08em}
+/* Le plateau */
+.plateau{display:grid;grid-template-columns:1fr minmax(0,412px) 1fr;grid-template-areas:"elle heros lui" "replique heros carton";column-gap:44px;align-items:start;margin-top:2px}
+.heros{grid-area:heros;position:relative;margin:0}
+.heros img{position:relative;width:100%;height:auto;filter:drop-shadow(0 20px 22px rgba(23,10,13,.5));
+  -webkit-mask-image:linear-gradient(90deg,#000 0,#000 90%,transparent 99.5%);mask-image:linear-gradient(90deg,#000 0,#000 90%,transparent 99.5%)}
+.disque{position:absolute;left:50%;top:-1%;width:76%;aspect-ratio:1;transform:translateX(-50%);border-radius:50%;
+  background:radial-gradient(circle at 50% 34%,#fff8e8 0%,var(--creme) 46%,#efd6a6 100%);
+  box-shadow:0 0 0 12px rgba(246,234,215,.09),0 0 0 26px rgba(246,234,215,.05),0 0 110px 24px rgba(242,193,78,.34)}
+.role{display:flex;flex-direction:column;gap:7px;padding-top:58px}
+.role--elle{grid-area:elle;align-items:flex-end;text-align:right}
+.role--lui{grid-area:lui;align-items:flex-start;text-align:left}
+.role .mention{font-size:11.5px;letter-spacing:.3em;color:var(--or)}
+.role-nom{font-family:var(--f-titre);font-style:italic;font-weight:600;font-size:50px;line-height:1}
+.role-desc{font-family:var(--f-mention);font-size:15px;letter-spacing:.2em;text-transform:uppercase}
+.role-camp{position:relative;font-size:15px;color:var(--rose);padding-top:11px}
+.role-camp::before{content:"";position:absolute;top:0;width:54px;height:1px;background:var(--or)}
+.role--elle .role-camp::before{right:0} .role--lui .role-camp::before{left:0}
+.replique{grid-area:replique;align-self:end;justify-self:end;margin:0 0 34px;text-align:right;font-family:var(--f-titre);font-style:italic;font-size:27px;line-height:1.22;color:var(--creme)}
+.carton{grid-area:carton;align-self:end;justify-self:start;display:flex;align-items:flex-end;gap:16px;margin:0 0 22px;text-decoration:none;text-align:left}
+.carton .cadre{width:112px;flex:none;transform:rotate(-4deg);transition:transform .25s}
+.carton:hover .cadre{transform:rotate(-1deg) translateY(-4px)}
+.carton-txt{display:flex;flex-direction:column;gap:3px;padding-bottom:6px;font-size:14.5px;line-height:1.35;color:var(--rose)}
+.carton-txt b{font-family:var(--f-mention);font-weight:500;font-size:13px;letter-spacing:.26em;text-transform:uppercase;color:var(--or)}
+.scene-actions{position:relative;display:flex;flex-wrap:wrap;justify-content:center;gap:16px;margin-top:-22px}
+/* Le bandeau de l'auteure, au bord de la scène */
+.bandeau{position:relative;z-index:3;display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:6px 22px;margin:0;padding:14px 20px;
+  background:var(--encre);border-top:1px solid rgba(242,193,78,.42);font-family:var(--f-mention);font-size:13.5px;line-height:1.5;letter-spacing:.3em;text-transform:uppercase;color:rgba(246,234,215,.92)}
+.bandeau i{font-style:normal;font-size:9px;color:var(--or)}
+.bandeau b{font-weight:600;color:var(--or)}
+
+/* ==========================================================================
+   Programme de salle — le nouveau roman
+   ========================================================================== */
+.programme{background:
+  radial-gradient(ellipse 60% 40% at 50% 0,rgba(255,250,238,.9),rgba(255,250,238,0) 70%),var(--creme)}
+.prog-grille{display:grid;grid-template-columns:minmax(0,372px) minmax(0,1fr);gap:clamp(40px,6vw,92px);align-items:center}
+.prog-affiche{position:relative;margin:0;padding:13px;background:#fffaf0;transform:rotate(-1.6deg);
+  box-shadow:0 0 0 1px rgba(23,10,13,.16),0 34px 60px -22px rgba(61,8,18,.5)}
+.prog-affiche img{width:100%;aspect-ratio:2/3;object-fit:cover}
+.sceau{position:absolute;top:-30px;right:-30px;width:108px;height:108px;border-radius:50%;display:grid;place-items:center;transform:rotate(13deg);
+  background:var(--velours);color:var(--creme);font-family:var(--f-mention);font-size:14px;letter-spacing:.2em;text-indent:.2em;text-transform:uppercase;
+  box-shadow:inset 0 0 0 5px var(--velours),inset 0 0 0 6.5px rgba(246,234,215,.75),0 10px 20px -8px rgba(61,8,18,.6)}
+.prog-titre{margin-top:16px;font-style:italic;font-size:clamp(31px,3.5vw,50px);line-height:1.07}
+.prog-titre em{display:block;color:var(--velours)}
+.prog-accroche{text-wrap:balance;margin:20px 0 12px;font-family:var(--f-titre);font-style:italic;font-size:clamp(22px,2vw,28px);line-height:1.25}
+.prog-argument{max-width:58ch;font-size:18px;color:rgba(23,10,13,.86)}
+.prog-argument b{font-family:var(--f-mention);font-weight:500;font-size:13px;letter-spacing:.26em;text-transform:uppercase;color:var(--velours);margin-right:10px}
+.distrib{margin:24px 0 22px;padding:20px 0 12px;border-block:1px solid rgba(23,10,13,.28)}
+.distrib .mention{margin-bottom:12px}
+.role-ligne{display:flex;align-items:baseline;flex-wrap:wrap;gap:4px 12px;margin:0 0 8px;font-size:17px}
+.role-ligne b{font-family:var(--f-titre);font-style:italic;font-weight:600;font-size:25px;line-height:1.2}
+.role-ligne i{flex:1 1 30px;min-width:30px;border-bottom:2px dotted rgba(23,10,13,.4);transform:translateY(-5px)}
+.role-ligne small{font-family:var(--f-mention);font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--creme);background:var(--velours);padding:4px 10px 3px}
+.themes{display:flex;flex-wrap:wrap;gap:8px;max-width:560px;list-style:none;margin:12px 0 0;padding:0}
+.themes li{padding:6px 13px 5px;border:1px solid rgba(23,10,13,.34);font-family:var(--f-mention);font-size:13px;line-height:1.3;letter-spacing:.15em;text-transform:uppercase}
+.prog-actions{display:flex;flex-wrap:wrap;align-items:center;gap:14px 30px;margin-top:30px}
+
+/* Le filtre photo */
+.filtre{position:relative;overflow:hidden;display:grid;grid-template-columns:minmax(0,1fr) 330px;gap:40px;align-items:end;margin-top:clamp(50px,5vw,68px);
+  padding:0 clamp(24px,5.4vw,76px);color:var(--creme);
+  background:radial-gradient(ellipse 46% 88% at 80% 62%,#9b1b32,var(--velours) 42%,var(--profond) 100%)}
+.filtre::before{content:"";position:absolute;inset:12px;border:1px solid rgba(242,193,78,.4);pointer-events:none}
+.filtre-texte{padding:clamp(42px,4.2vw,56px) 0}
+.filtre .mention{color:var(--or)}
+.filtre h3{margin:14px 0 16px;font-style:italic;font-size:clamp(34px,3.9vw,56px);line-height:1.04}
+.filtre h3 em{display:block;color:var(--rose)}
+.filtre-texte>p{max-width:50ch;font-size:18px;color:rgba(246,234,215,.9)}
+.camps{display:flex;flex-wrap:wrap;gap:10px;list-style:none;margin:20px 0 26px;padding:0}
+.camps li{padding:8px 16px 7px;border:1px solid rgba(246,234,215,.6);font-family:var(--f-mention);font-size:13px;letter-spacing:.2em;text-transform:uppercase}
+.filtre-visuel{position:relative;align-self:end}
+.tel{position:relative;width:262px;height:352px;margin:36px auto 0;border:9px solid var(--encre);border-bottom:0;border-radius:38px 38px 0 0;overflow:hidden;
+  background:radial-gradient(circle at 50% 36%,#b2233c,var(--velours) 48%,#2c070e 100%);box-shadow:0 0 0 1.5px rgba(242,193,78,.5),0 30px 50px -10px rgba(0,0,0,.6)}
+.tel-encoche{position:absolute;left:50%;top:9px;width:74px;height:20px;border-radius:12px;background:var(--encre);transform:translateX(-50%);z-index:3}
+.tel-disque{position:absolute;left:76px;top:64px;width:172px;height:172px;border-radius:50%;background:radial-gradient(circle at 50% 36%,#fff8e8,var(--creme) 50%,#efd6a6);box-shadow:0 0 50px 10px rgba(242,193,78,.4)}
+.tel-heros{position:absolute;right:-58px;bottom:-6px;width:206px;max-width:none}
+.tel-vous{position:absolute;left:12px;bottom:0;width:84px;height:126px;border:2px dashed rgba(246,234,215,.85);border-bottom:0;border-radius:42px 42px 0 0}
+.tel-vous::before{content:"";position:absolute;left:50%;top:-70px;width:60px;height:60px;margin-left:-30px;border:2px dashed rgba(246,234,215,.85);border-radius:50%}
+.tel-vous b{position:absolute;left:0;right:0;top:-50px;font-family:var(--f-mention);font-weight:500;font-size:12px;letter-spacing:.2em;text-indent:.2em;text-transform:uppercase;text-align:center}
+.tel-tag{position:absolute;left:50%;top:38px;transform:translateX(-50%);z-index:3;white-space:nowrap;padding:5px 12px 4px;background:var(--or);color:var(--encre);
+  font-family:var(--f-mention);font-weight:500;font-size:11.5px;letter-spacing:.14em}
+
+/* ==========================================================================
+   Le répertoire — 24 romans en quatre actes
+   ========================================================================== */
+.repertoire{position:relative;overflow:hidden;background:
+  radial-gradient(ellipse 70% 520px at 50% 0,rgba(140,22,41,.75),rgba(140,22,41,0) 72%),var(--profond)}
+.acte{--w:124px;--g:20px;position:relative;text-align:center}
+#actes>.acte+.acte,#actes>.acte+.actes-duo{margin-top:clamp(38px,3.3vw,44px);padding-top:clamp(38px,3.3vw,44px);border-top:1px solid rgba(242,193,78,.2)}
+.actes-duo{display:grid;grid-template-columns:5fr 4fr;gap:56px}
+.actes-duo .acte{--g:16px;--w:calc((min(1200px,100vw - 2 * var(--marge)) - 56px) / 9 - .8 * var(--g))}
+.acte-tete{position:relative;padding-top:44px}
+.acte-num{position:absolute;left:50%;top:-16px;transform:translateX(-50%);font-family:var(--f-titre);font-weight:700;font-size:196px;line-height:.8;
+  color:rgba(246,234,215,.075);pointer-events:none;user-select:none;white-space:nowrap}
+.acte .mention,.acte h3,.acte-note{position:relative}
+.acte h3{margin-top:10px;font-style:italic;font-size:clamp(32px,3.5vw,50px)}
+.acte-note{margin:10px 0 0;font-size:16px;color:var(--rose)}
+.rampe{position:relative;display:flex;justify-content:center;gap:var(--g);list-style:none;margin:30px 0 0;padding:0}
+.rampe::before{content:"";position:absolute;left:4%;right:4%;top:-120px;height:330px;background:radial-gradient(ellipse 50% 50% at 50% 50%,rgba(242,193,78,.15),rgba(242,193,78,0) 100%);pointer-events:none}
+.affiche{position:relative;flex:none;width:var(--w)}
+.affiche a{display:block;text-decoration:none}
+.affiche .cadre{transition:transform .25s ease}
+.affiche a:hover .cadre{transform:translateY(-7px)}
+/* la rampe : un filet d'or sous les affiches */
+.affiche::after{content:"";position:absolute;left:calc(var(--g) / -2);right:calc(var(--g) / -2);top:calc((var(--w) - 10px) * 1.5 + 10px + 11px);height:1px;background:rgba(242,193,78,.6)}
+.affiche:first-child::after{left:-28px;background:linear-gradient(90deg,rgba(242,193,78,0),rgba(242,193,78,.6) 28px)}
+.affiche:last-child::after{right:-28px;background:linear-gradient(270deg,rgba(242,193,78,0),rgba(242,193,78,.6) 28px)}
+.affiche:first-child:last-child::after{background:rgba(242,193,78,.6)}
+.aff-titre{display:block;margin-top:27px;font-family:var(--f-mention);font-size:13.5px;line-height:1.3;letter-spacing:.07em;text-transform:uppercase;color:var(--creme)}
+.aff-genre{display:block;margin-top:5px;font-size:13px;line-height:1.35;color:var(--rose)}
+.aff-sujet{display:inline-block;margin-top:7px;font-family:var(--f-mention);font-size:11px;line-height:1.3;letter-spacing:.14em;text-transform:uppercase;color:var(--or)}
+.est-nouveau .cadre::before{content:"Nouveau";position:absolute;z-index:2;top:12px;left:-7px;padding:4px 9px 3px;background:var(--or);color:var(--encre);
+  font-family:var(--f-mention);font-weight:500;font-size:11px;letter-spacing:.16em;text-transform:uppercase;box-shadow:0 4px 8px rgba(0,0,0,.35)}
+.rep-pied{margin:clamp(40px,4vw,52px) 0 0;text-align:center}
+
+/* ==========================================================================
+   L'auteure — texte et mise en scène
+   ========================================================================== */
+.auteure{position:relative;overflow:hidden;background:var(--creme)}
+.auteure-grille{display:grid;grid-template-columns:minmax(0,430px) minmax(0,1fr);gap:clamp(48px,7vw,104px);align-items:center}
+.projo{position:relative;margin:0;width:100%;max-width:420px}
+.projo::before{content:"";position:absolute;left:0;top:0;width:100%;aspect-ratio:1;border-radius:50%;background:var(--velours);transform:translate(20px,22px)}
+.projo img{position:relative;width:100%;aspect-ratio:1;object-fit:cover;object-position:50% 14%;border-radius:50%;box-shadow:0 0 0 7px var(--creme),0 0 0 8.5px rgba(122,16,34,.65)}
+.rayon{position:absolute;left:50%;bottom:calc(100% - 210px - 22px);width:100%;height:760px;transform-origin:50% 100%;transform:translateX(-50%) rotate(-33deg);
+  background:linear-gradient(0deg,rgba(242,193,78,.5),rgba(242,193,78,.1));clip-path:polygon(45.500% 0,54.500% 0,100% 100%,0 100%);pointer-events:none}
+.projo figcaption{position:relative;margin-top:46px;text-align:center;font-family:var(--f-mention);font-size:12.5px;letter-spacing:.26em;text-transform:uppercase;color:var(--velours)}
+.auteure-texte h2{margin:12px 0 22px;font-style:normal;font-weight:700;font-size:clamp(54px,6.8vw,98px);line-height:.95;letter-spacing:-.02em}
+.chapo{max-width:60ch;font-size:19.5px;line-height:1.62}
+.cote-scene{position:relative;margin:26px 0 30px;padding:24px 32px 26px 34px;background:var(--creme-ombre);border-left:4px solid var(--velours)}
+.cote-scene .mention{display:flex;align-items:center;gap:11px}
+.cote-scene p:last-child{margin:12px 0 0;font-family:var(--f-titre);font-style:italic;font-size:21.5px;line-height:1.46}
+.generique-titre{display:flex;align-items:center;gap:22px;margin:clamp(44px,5vw,64px) 0 0;color:var(--velours)}
+.generique-titre::before,.generique-titre::after{content:"";flex:1;height:1px;background:rgba(23,10,13,.3)}
+.generique{display:grid;grid-template-columns:repeat(4,1fr);margin-top:6px;border-bottom:1px solid rgba(23,10,13,.3)}
+.generique>div{padding:30px 26px 34px;text-align:center}
+.generique>div+div{border-left:1px solid rgba(23,10,13,.18)}
+.generique b{display:block;font-family:var(--f-mention);font-weight:500;font-size:clamp(52px,5.2vw,76px);line-height:1;letter-spacing:.01em;color:var(--velours)}
+.generique>div>span{display:block;max-width:23ch;margin:14px auto 0;font-size:16px;line-height:1.45}
+
+/* ==========================================================================
+   En coulisses — les actualités
+   ========================================================================== */
+.coulisses{background:radial-gradient(ellipse 60% 420px at 50% 0,rgba(122,16,34,.4),rgba(122,16,34,0) 70%),var(--encre)}
+.coul-grille{display:grid;grid-template-columns:minmax(0,1.22fr) minmax(0,1fr);gap:clamp(36px,5vw,72px);align-items:start}
+.une a,.breve a{color:inherit;text-decoration:none}
+/* le miroir de loge */
+.loge{position:relative;padding:18px;border:1.5px solid rgba(242,193,78,.5);background:rgba(246,234,215,.04)}
+.loge img{width:100%;aspect-ratio:16/9;object-fit:cover;object-position:50% 30%}
+.loge .ampoules{position:absolute}
+.amp-haut{left:22px;right:22px;top:-4.500px}
+.amp-g,.amp-d{flex-direction:column;top:26px;bottom:26px}
+.amp-g{left:-4.500px} .amp-d{right:-4.500px}
+.loge .actu-date{position:absolute;left:34px;bottom:-27px;display:flex;align-items:center;gap:12px;margin:0;padding:9px 18px 8px 15px;
+  background:var(--or);color:var(--encre);font-family:var(--f-mention);font-size:12.5px;line-height:1.4;letter-spacing:.22em;text-transform:uppercase;box-shadow:0 12px 20px -8px rgba(0,0,0,.65)}
+.loge .actu-date b{font-weight:600;font-size:42px;line-height:1;letter-spacing:.01em}
+.une-texte{margin-top:50px}
+.actu-rub{margin:0;font-family:var(--f-mention);font-size:12.5px;letter-spacing:.28em;text-transform:uppercase;color:var(--or)}
+.une h3{margin-top:10px;font-size:clamp(26px,2.4vw,33px);line-height:1.15}
+.une-texte p.resume{margin:10px 0 0;font-size:18px;color:rgba(246,234,215,.85)}
+.breve{display:grid;grid-template-columns:150px minmax(0,1fr);gap:24px;align-items:center;padding:26px 0;border-top:1px solid rgba(246,234,215,.2)}
+.breve:first-child{padding-top:0;border-top:0}
+.breve img{width:100%;aspect-ratio:1;object-fit:cover;box-shadow:0 0 0 1px rgba(242,193,78,.5)}
+.breve h3{margin:8px 0 8px;font-size:25px;line-height:1.15}
+.breve p.resume{margin:0;font-size:16px;line-height:1.55;color:rgba(246,234,215,.82)}
+.suite{display:inline-flex;align-items:center;gap:8px;min-height:44px;margin-top:6px;font-family:var(--f-mention);font-size:13px;letter-spacing:.22em;text-transform:uppercase;color:var(--or)}
+.coul-notes{margin-top:8px;padding:26px 28px 28px;border:1px dashed rgba(242,193,78,.5)}
+.coul-notes p{text-wrap:balance;margin:0 0 18px;font-family:var(--f-titre);font-style:italic;font-size:22px;line-height:1.36;color:var(--rose)}
+
+/* ==========================================================================
+   Entracte — la lettre d'information
+   ========================================================================== */
+.entracte{padding:clamp(62px,6vw,84px) 0;background:var(--creme)}
+.invitation-ombre{max-width:1000px;margin-inline:auto;filter:drop-shadow(0 32px 38px rgba(61,8,18,.34))}
+.invitation{--talon:236px;position:relative;display:grid;grid-template-columns:minmax(0,1fr) var(--talon);color:var(--creme);
+  background:linear-gradient(135deg,#97192e,var(--velours) 46%,#5a0b19);
+  -webkit-mask:radial-gradient(circle 17px at calc(100% - var(--talon)) 0,transparent 97%,#000) top/100% 51% no-repeat,
+               radial-gradient(circle 17px at calc(100% - var(--talon)) 100%,transparent 97%,#000) bottom/100% 51% no-repeat;
+          mask:radial-gradient(circle 17px at calc(100% - var(--talon)) 0,transparent 97%,#000) top/100% 51% no-repeat,
+               radial-gradient(circle 17px at calc(100% - var(--talon)) 100%,transparent 97%,#000) bottom/100% 51% no-repeat}
+.invitation::before{content:"";position:absolute;inset:13px;border:1px solid rgba(242,193,78,.5);pointer-events:none}
+.invitation-corps{padding:clamp(40px,5vw,64px) clamp(28px,5vw,64px) clamp(40px,5vw,64px) clamp(30px,5.4vw,70px)}
+.invitation .mention{color:var(--or)}
+.invitation h2{margin:16px 0 16px;font-size:clamp(34px,3.9vw,54px);line-height:1.06}
+.invitation-corps>p{max-width:46ch;font-size:18px;color:rgba(246,234,215,.9)}
+.inv-form{display:flex;gap:12px;margin-top:28px}
+.inv-form input{flex:1 1 auto;min-width:0;height:54px;padding:0 18px;font:inherit;font-size:16px;color:var(--creme);background:rgba(23,10,13,.34);border:1px solid rgba(246,234,215,.55);border-radius:0}
+.inv-form input::placeholder{color:rgba(246,234,215,.72)}
+.invitation-talon{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;padding:34px 22px;text-align:center;border-left:2px dashed rgba(246,234,215,.5)}
+.invitation-talon img{width:88px;height:88px;border-radius:50%;box-shadow:0 0 0 2px rgba(242,193,78,.75)}
+.talon-nom{font-family:var(--f-titre);font-style:italic;font-size:22px;line-height:1.15}
+.talon-num{font-family:var(--f-mention);font-size:13px;letter-spacing:.3em;color:var(--rose)}
+
+/* ==========================================================================
+   Pied de page — le rideau tombe
+   ========================================================================== */
+.rideau-final{position:relative;overflow:hidden;padding:clamp(60px,5.8vw,80px) 0 36px;text-align:center;color:var(--creme);border-top:3px solid var(--or);
+  background:linear-gradient(180deg,rgba(23,10,13,.3),rgba(23,10,13,.8)),
+    repeating-linear-gradient(90deg,#4a0a17 0,#8c1629 24px,#a51d36 38px,#7A1022 56px,#4a0a17 80px)}
+.rideau-final .mention{color:var(--or)}
+.rideau-final h2{margin-top:12px;font-size:clamp(84px,12.6vw,178px);line-height:.9;text-shadow:0 8px 30px rgba(23,10,13,.5)}
+.pied-menu{display:flex;flex-wrap:wrap;justify-content:center;gap:4px 30px;list-style:none;margin:34px 0 18px;padding:0;font-family:var(--f-mention);font-size:14px;letter-spacing:.22em;text-transform:uppercase}
+.pied-menu a{display:inline-flex;align-items:center;min-height:44px;padding:0 4px;text-decoration:none}
+.pied-menu a:hover{color:var(--or)}
+.pied-note{margin:0;font-size:14.5px;color:rgba(246,234,215,.8)}
+
+/* ==========================================================================
+   Adaptation — tablette
+   ========================================================================== */
+@media (max-width:1240px){
+  .acte{--w:min(124px,calc((100vw - 2 * var(--marge) - 7 * var(--g)) / 8))}
+}
+@media (max-width:1180px){
+  .titre{grid-template-columns:1fr;row-gap:0}
+  .t-elle,.t-lui{text-align:center}
+  .t-et{font-size:1.9em;line-height:.86;padding:0}
+  .plateau{grid-template-columns:1fr 1fr;grid-template-areas:"heros heros" "elle lui" "replique replique";column-gap:18px;margin-top:10px}
+  .heros{width:min(400px,86%);margin-inline:auto}
+  .role{padding-top:0;align-items:center !important;text-align:center !important}
+  .role-camp::before{left:50% !important;right:auto !important;margin-left:-27px}
+  .replique{justify-self:center;text-align:center;margin:26px 0 0}
+  .carton{display:none}
+  .scene-actions{margin-top:28px}
+}
+@media (max-width:1000px){
+  .nav-btn{display:grid;place-content:center;gap:6px;width:48px;height:48px;padding:0;background:none;border:1px solid rgba(242,193,78,.55);color:var(--creme);cursor:pointer}
+  .nav-btn span{display:block;width:22px;height:2px;background:currentColor}
+  #menu{display:none;position:absolute;left:0;right:0;top:100%;padding:6px 20px 22px;background:var(--encre);border-bottom:1px solid rgba(242,193,78,.42)}
+  .nav.ouvert #menu{display:block}
+  #menu ul{flex-direction:column;align-items:stretch;gap:0}
+  #menu a{min-height:54px;padding:0 4px;font-size:16px;border-bottom:1px solid rgba(246,234,215,.14)}
+  #menu a[aria-current]{box-shadow:none}
+  #menu a.nav-billet{margin:16px 0 0;justify-content:center;min-height:52px;border:0}
+
+  .prog-grille{grid-template-columns:1fr}
+  .prog-affiche{width:min(340px,82%);margin-inline:auto}
+  .filtre{grid-template-columns:1fr}
+  .filtre-texte{padding-bottom:0}
+  .tel{margin-top:36px}
+  .auteure-grille{grid-template-columns:1fr}
+  .projo{margin-inline:auto}
+  .coul-grille{grid-template-columns:1fr}
+
+  /* répertoire : chaque acte devient une rangée à faire glisser */
+  .actes-duo{display:block}
+  .actes-duo .acte+.acte{margin-top:clamp(38px,3.3vw,44px);padding-top:clamp(38px,3.3vw,44px);border-top:1px solid rgba(242,193,78,.2)}
+  .acte,.actes-duo .acte{--w:128px;--g:14px}
+  .rampe{justify-content:flex-start;overflow-x:auto;-webkit-overflow-scrolling:touch;scroll-snap-type:x proximity;scrollbar-width:none;
+    margin:30px calc(-1 * var(--marge)) 0;padding:10px var(--marge) 6px}
+  .rampe::-webkit-scrollbar{display:none}
+  .rampe::before{display:none}
+  .affiche{scroll-snap-align:start;scroll-margin-left:var(--marge)}
+  .affiche:first-child::after{left:0;background:rgba(242,193,78,.6)}
+  .affiche:last-child::after{right:0;background:rgba(242,193,78,.6)}
+  .glisser{display:block !important}
+}
+
+/* ==========================================================================
+   Adaptation — téléphone
+   ========================================================================== */
+@media (max-width:700px){
+  :root{--marge:20px}
+  body{font-size:16px}
+  .billet{font-size:14px;letter-spacing:.14em;padding-right:22px}
+  .billet::before{width:46px;margin-right:14px}
+  .mention{font-size:12.5px;letter-spacing:.28em}
+  .nav-in{height:64px}
+  .marque{font-size:24px}
+  .marque img{width:38px;height:38px}
+
+  .rideau{width:56px;height:230px}
+  .pont i{width:22px;height:26px}
+  .pont i:nth-child(1){left:calc(18% - 11px);transform:rotate(-15deg)}
+  .pont i:nth-child(2){right:calc(18% - 11px);transform:rotate(15deg)}
+  .faisceau{width:320px;height:560px}
+  .faisceau--g{left:calc(18% - 160px);transform:rotate(-15deg)}
+  .faisceau--d{right:calc(18% - 160px);transform:rotate(15deg)}
+  .scene-contenu{padding:30px 0 34px}
+  .enseigne{min-width:268px}
+  .enseigne-txt{font-size:17px}
+  .presente{font-size:13.5px;letter-spacing:.3em;text-indent:.3em;margin-top:16px}
+  .titre{font-size:35px;line-height:1.08}
+  .heros{width:min(310px,88%)}
+  .role{gap:5px}
+  .role .mention{font-size:10px;letter-spacing:.2em}
+  .role-nom{font-size:38px}
+  .role-desc{font-size:13px;letter-spacing:.14em;line-height:1.4}
+  .role-camp{font-size:14.5px}
+  .replique{font-size:23px}
+  .scene-actions{flex-direction:column;align-items:center;gap:12px}
+  .scene-actions .billet{width:min(100%,340px)}
+  .bandeau{font-size:13px;letter-spacing:.18em;gap:4px 14px;padding:14px 18px}
+  .bandeau .bandeau-plus{display:none}
+
+  .tete-sous{font-size:17px}
+  .sceau{top:-24px;right:-22px;width:88px;height:88px;font-size:12px}
+  .prog-argument{font-size:17px}
+  .role-ligne{font-size:16px}
+  .role-ligne small{flex-basis:100%;width:max-content;max-width:100%;background:none;color:var(--velours);padding:0}
+  .themes{font-size:13px}
+  .prog-actions .billet{width:min(100%,340px)}
+  .filtre{padding:0 24px}
+  .filtre-texte{padding-top:46px}
+  .filtre-texte>p{font-size:17px}
+  .filtre .billet{width:min(100%,340px)}
+
+  .acte-num{font-size:170px;top:-12px}
+  .acte-tete{padding-top:46px}
+
+  .projo{max-width:270px}
+  .projo::before{transform:translate(13px,15px)}
+  .rayon{height:520px;bottom:calc(100% - 135px - 15px)}
+  .projo figcaption{margin-top:36px;font-size:11.5px;letter-spacing:.2em}
+  .auteure-texte{text-align:left}
+  .auteure-texte h2{margin-bottom:20px}
+  .chapo{font-size:17.5px}
+  .cote-scene{padding:22px 22px 24px 22px}
+  .cote-scene p:last-child{font-size:19.5px}
+  .auteure .billet{width:min(100%,340px)}
+  .generique{grid-template-columns:1fr 1fr}
+  .generique>div{padding:26px 12px 28px}
+  .generique>div+div{border-left:0}
+  .generique>div:nth-child(even){border-left:1px solid rgba(23,10,13,.18)}
+  .generique>div:nth-child(n+3){border-top:1px solid rgba(23,10,13,.18)}
+  .generique>div>span{font-size:16px}
+
+  .loge{padding:12px}
+  .amp-haut{left:16px;right:16px}
+  .amp-g,.amp-d{top:20px;bottom:20px}
+  .loge .actu-date{left:22px;bottom:-25px}
+  .loge .actu-date b{font-size:38px}
+  .une-texte{margin-top:46px}
+  .une-texte p.resume{font-size:17px}
+  .breve{grid-template-columns:104px minmax(0,1fr);gap:18px;padding:22px 0}
+  .breve:first-child{padding-top:22px;border-top:1px solid rgba(246,234,215,.2)}
+  .breve h3{font-size:22px}
+  .coul-notes{padding:22px 20px 24px}
+  .coul-notes p{font-size:20px}
+  .coulisses .billet{width:100%}
+
+  .invitation{--talon:0px;grid-template-columns:1fr;
+    -webkit-mask:radial-gradient(circle 15px at 0 calc(100% - 178px),transparent 97%,#000) left/51% 100% no-repeat,
+                 radial-gradient(circle 15px at 100% calc(100% - 178px),transparent 97%,#000) right/51% 100% no-repeat;
+            mask:radial-gradient(circle 15px at 0 calc(100% - 178px),transparent 97%,#000) left/51% 100% no-repeat,
+                 radial-gradient(circle 15px at 100% calc(100% - 178px),transparent 97%,#000) right/51% 100% no-repeat}
+  .invitation-corps{padding:44px 30px 36px}
+  .invitation-corps>p{font-size:17px}
+  .inv-form{flex-direction:column}
+  .inv-form input{flex:none;width:100%}
+  .inv-form .billet{width:100%}
+  .invitation-talon{flex-direction:row;justify-content:flex-start;gap:16px;height:178px;padding:22px 30px 30px;text-align:left;border-left:0;border-top:2px dashed rgba(246,234,215,.5)}
+  .invitation-talon img{width:72px;height:72px}
+  .talon-txt{display:flex;flex-direction:column;gap:6px}
+
+  .pied-menu{gap:0 22px;margin:38px 0 22px;font-size:13.5px}
+}
+.glisser{display:none;margin:14px 0 0;font-family:var(--f-mention);font-size:11.5px;letter-spacing:.24em;text-transform:uppercase;color:rgba(233,185,176,.85)}
+.talon-txt{display:flex;flex-direction:column;align-items:inherit;gap:10px}
+
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none !important;transition:none !important}
+  html{scroll-behavior:auto}
+}
+</style>
+</head>
+
+<body>
+
+<!-- ===================== NAVIGATION ===================== -->
+<header class="nav" id="haut">
+  <div class="wrap nav-in">
+    <a class="marque" href="#haut" aria-label="Mo Gadarr — accueil">
+      <img src="commun/img/logo-mo.webp" alt="" width="42" height="42">
+      <span>Mo Gadarr</span>
+    </a>
+    <button class="nav-btn" type="button" aria-expanded="false" aria-controls="menu" aria-label="Ouvrir le menu">
+      <span></span><span></span><span></span>
+    </button>
+    <nav id="menu" aria-label="Navigation principale"><ul></ul></nav>
+  </div>
+</header>
+
+<main>
+
+<!-- ===================== OUVERTURE : LA SCÈNE ===================== -->
+<section class="scene sombre" aria-labelledby="titre-affiche">
+  <span class="rideau rideau--g" aria-hidden="true"></span>
+  <span class="rideau rideau--d" aria-hidden="true"></span>
+  <div class="pont" aria-hidden="true"><i></i><i></i></div>
+  <span class="faisceau faisceau--g" aria-hidden="true"><i></i></span>
+  <span class="faisceau faisceau--d" aria-hidden="true"><i></i></span>
+
+  <div class="wrap scene-contenu">
+    <p class="enseigne">
+      <span class="ampoules" data-n="13" aria-hidden="true"></span>
+      <span class="enseigne-txt">À l’affiche</span>
+      <span class="ampoules" data-n="13" aria-hidden="true"></span>
+    </p>
+    <p class="presente"><b>Mo Gadarr</b> présente</p>
+
+    <h1 class="titre" id="titre-affiche">
+      <span class="t-elle">Elle est la fille<br> du Père&nbsp;Noël</span>
+      <span class="t-et">&amp;</span>
+      <span class="t-lui">je suis le fils<br> du Père&nbsp;Fouettard</span>
+    </h1>
+
+    <div class="plateau">
+      <div class="role role--elle" data-role="0"></div>
+      <figure class="heros">
+        <span class="disque" aria-hidden="true"></span>
+        <img id="heros-img" alt="Wendy et Dante, les héros du roman, dans la lumière du projecteur" width="900" height="910">
+      </figure>
+      <div class="role role--lui" data-role="1"></div>
+      <p class="replique" id="replique"></p>
+      <a class="carton" href="#programme">
+        <span class="cadre"><img id="carton-img" alt="Couverture du roman" width="720" height="1080"></span>
+        <span class="carton-txt"><b>Le roman</b><span id="carton-genre"></span><span id="carton-statut"></span></span>
+      </a>
+    </div>
+
+    <div class="scene-actions">
+      <a class="billet" href="#programme">Découvrir le roman</a>
+      <a class="billet billet--creme" href="#repertoire">Voir le répertoire</a>
+    </div>
+  </div>
+
+  <p class="bandeau">
+    <b>Mo Gadarr</b><i aria-hidden="true">✦</i>
+    <span data-mg="auteure.accroche"></span>
+    <i class="bandeau-plus" aria-hidden="true">✦</i><span class="bandeau-plus" id="bandeau-nb"></span>
+  </p>
+</section>
+
+<!-- ===================== PROGRAMME DE SALLE : LE NOUVEAU ROMAN ===================== -->
+<section class="section programme claire" id="programme" aria-labelledby="t-programme">
+  <div class="wrap">
+    <header class="tete">
+      <p class="mention">Programme de salle</p>
+      <h2 id="t-programme">La pièce du moment</h2>
+    </header>
+
+    <div class="prog-grille">
+      <figure class="prog-affiche">
+        <img id="prog-couv" alt="Couverture : Elle est la fille du Père Noël &amp; je suis le fils du Père Fouettard" width="720" height="1080">
+        <span class="sceau" aria-hidden="true">Nouveau</span>
+      </figure>
+
+      <div class="prog-texte">
+        <p class="mention" id="prog-genre"></p>
+        <h3 class="prog-titre"><span data-mg="nouveau.ligne1"></span> <em data-mg="nouveau.ligne2"></em></h3>
+        <p class="prog-accroche">«&nbsp;<span data-mg="nouveau.accroche"></span>&nbsp;»</p>
+        <p class="prog-argument"><b>L’argument</b><span data-mg="nouveau.pitch"></span></p>
+
+        <div class="distrib">
+          <p class="mention">Distribution</p>
+          <div id="distrib-lignes"></div>
+        </div>
+
+        <p class="mention">Au programme</p>
+        <ul class="themes" id="themes"></ul>
+
+        <div class="prog-actions">
+          <a class="billet billet--velours" href="#">Découvrir le roman</a>
+          <a class="lien" href="#">Acheter sur Amazon <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Le filtre photo -->
+    <aside class="filtre" aria-labelledby="t-filtre">
+      <div class="filtre-texte">
+        <p class="mention">Le filtre photo de Noël</p>
+        <h3 id="t-filtre">Montez sur scène <em>avec Wendy &amp;&nbsp;Dante</em></h3>
+        <p data-mg="nouveau.filtre.texte"></p>
+        <ul class="camps" id="camps" aria-label="Deux camps"></ul>
+        <a class="billet" href="#">Essayer le filtre</a>
+      </div>
+      <div class="filtre-visuel" aria-hidden="true">
+        <div class="tel">
+          <span class="tel-encoche"></span>
+          <span class="tel-tag" id="tel-tag"></span>
+          <span class="tel-disque"></span>
+          <span class="tel-vous"><b>Vous</b></span>
+          <img class="tel-heros" id="tel-heros" alt="">
+        </div>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<!-- ===================== LE RÉPERTOIRE : 24 ROMANS EN QUATRE ACTES ===================== -->
+<section class="section repertoire sombre" id="repertoire" aria-labelledby="t-repertoire">
+  <div class="wrap">
+    <header class="tete">
+      <p class="mention">Tous les romans</p>
+      <h2 id="t-repertoire">Le répertoire</h2>
+      <p class="tete-sous"><span id="nb-rep">24</span> romans, en quatre actes.</p>
+    </header>
+    <div id="actes"></div>
+    <p class="rep-pied"><a class="billet billet--creme" href="#">Voir tous les romans</a></p>
+  </div>
+</section>
+
+<!-- ===================== L'AUTEURE ===================== -->
+<section class="section auteure claire" id="auteure" aria-labelledby="t-auteure">
+  <div class="wrap auteure-grille">
+    <figure class="projo">
+      <span class="rayon" aria-hidden="true"></span>
+      <img id="portrait" alt="Mo Gadarr, souriante, présente son nouveau roman" width="660" height="825">
+      <figcaption>Mo Gadarr et son nouveau roman</figcaption>
+    </figure>
+    <div class="auteure-texte">
+      <p class="mention">Texte et mise en scène</p>
+      <h2 id="t-auteure">Mo Gadarr</h2>
+      <p class="chapo" id="bio"></p>
+      <aside class="cote-scene" aria-label="Côté scène">
+        <p class="mention">
+          <svg viewBox="0 0 32 32" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6c6.5 2.200 13.5 2.200 20 0v9c0 6.500-4.500 11-10 11S6 21.500 6 15z"/><path d="M10.500 13c1.200-1.200 2.800-1.200 4 0M17.500 13c1.200-1.200 2.800-1.200 4 0M11 18.500c2.800 3 7.200 3 10 0"/></svg>
+          Côté scène
+        </p>
+        <p data-mg="auteure.theatre"></p>
+      </aside>
+      <a class="billet billet--velours" href="#">Découvrir son parcours</a>
+    </div>
+  </div>
+  <div class="wrap">
+    <p class="mention generique-titre">Générique</p>
+    <div class="generique" id="generique"></div>
+  </div>
+</section>
+
+<!-- ===================== EN COULISSES : LES ACTUALITÉS ===================== -->
+<section class="section coulisses sombre" id="coulisses" aria-labelledby="t-coulisses">
+  <div class="wrap">
+    <header class="tete">
+      <p class="mention">Les actualités</p>
+      <h2 id="t-coulisses">En coulisses</h2>
+    </header>
+    <div class="coul-grille" id="actus"></div>
+  </div>
+</section>
+
+<!-- ===================== ENTRACTE : LA LETTRE D'INFORMATION ===================== -->
+<section class="entracte claire" id="entracte" aria-labelledby="t-entracte">
+  <div class="wrap">
+    <div class="invitation-ombre">
+      <div class="invitation">
+        <div class="invitation-corps">
+          <p class="mention">Entracte</p>
+          <h2 id="t-entracte" data-mg="lettre.titre"></h2>
+          <p data-mg="lettre.texte"></p>
+          <form class="inv-form" action="#" onsubmit="return false">
+            <label class="sr" for="mel">Votre adresse e-mail</label>
+            <input id="mel" type="email" placeholder="Votre adresse e-mail" autocomplete="email">
+            <button class="billet" type="submit" data-mg="lettre.bouton"></button>
+          </form>
+        </div>
+        <div class="invitation-talon">
+          <img src="commun/img/logo-mo.webp" alt="" width="88" height="88">
+          <div class="talon-txt">
+            <span class="mention">Invitation</span>
+            <span class="talon-nom">Le Cercle<br>des Intimes</span>
+            <span class="talon-num">Place réservée</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ===================== PIED DE PAGE : RIDEAU ===================== -->
+<footer class="rideau-final">
+  <div class="wrap">
+    <p class="mention">Fin de la représentation</p>
+    <h2>Rideau.</h2>
+    <ul class="pied-menu" id="pied-menu"></ul>
+    <p class="pied-note">© 2026 Mo Gadarr. Tous droits réservés.</p>
+  </div>
+</footer>
+
+<script src="commun/contenu.js"></script>
+<script>
+(function () {
+  var MG = window.MG;
+  if (!MG) { document.body.insertAdjacentHTML('afterbegin', '<p style="padding:20px">Contenu introuvable : commun/contenu.js</p>'); return; }
+
+  var $ = function (s, r) { return (r || document).querySelector(s); };
+  var $$ = function (s, r) { return Array.prototype.slice.call((r || document).querySelectorAll(s)); };
+
+  /* Texte sûr + typographie française (apostrophes, espaces insécables) */
+  function typo(s) {
+    return String(s)
+      .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;')
+      .replace(/'/g, '’')
+      .replace(/ ([?!;])/g, ' $1').replace(/ :/g, ' :')
+      .replace(/« /g, '« ').replace(/ »/g, ' »')
+      .replace(/Père (Noël|Fouettard)/g, 'Père $1')
+      .replace(/auto-édition/g, '<span class="nb">auto-édition</span>');
+  }
+  function lire(chemin) { return chemin.split('.').reduce(function (o, k) { return o == null ? o : o[k]; }, MG); }
+  function ampoules(n) { return new Array(n + 1).join('<i></i>'); }
+  function pluriel(n, mot) { return n + ' ' + mot + (n > 1 ? 's' : ''); }
+
+  /* Textes simples : <… data-mg="chemin.dans.MG"> */
+  $$('[data-mg]').forEach(function (el) { var v = lire(el.getAttribute('data-mg')); if (v != null) el.innerHTML = typo(v); });
+  $$('.ampoules[data-n]').forEach(function (el) { el.innerHTML = ampoules(+el.getAttribute('data-n')); });
+
+  /* Menus */
+  var liens = MG.menu.map(function (m, i) {
+    return '<li><a href="#"' + (m === 'Dernier roman' ? ' class="nav-billet"' : '') + (i === 0 ? ' aria-current="page"' : '') + '>' + typo(m) + '</a></li>';
+  }).join('');
+  $('#menu ul').innerHTML = liens;
+  $('#pied-menu').innerHTML = MG.menu.map(function (m) { return '<li><a href="#">' + typo(m) + '</a></li>'; }).join('');
+  var nav = $('.nav'), btn = $('.nav-btn');
+  btn.addEventListener('click', function () {
+    var ouvert = nav.classList.toggle('ouvert');
+    btn.setAttribute('aria-expanded', ouvert);
+    btn.setAttribute('aria-label', ouvert ? 'Fermer le menu' : 'Ouvrir le menu');
+  });
+
+  /* Ouverture */
+  var N = MG.nouveau;
+  $('#heros-img').src = N.heros;
+  $('#carton-img').src = N.couverture;
+  $('#carton-genre').innerHTML = typo(N.genre);
+  $('#carton-statut').innerHTML = typo(N.statut);
+  $('#replique').innerHTML = '« ' + typo(N.accroche).replace('. ', '.<br>') + ' »';
+  var cotes = ['côté jardin', 'côté cour'];
+  N.personnages.forEach(function (p, i) {
+    var el = $('[data-role="' + i + '"]'); if (!el) return;
+    el.innerHTML = '<span class="mention">Distribution · ' + cotes[i] + '</span>' +
+      '<b class="role-nom">' + typo(p.nom) + '</b>' +
+      '<span class="role-desc">' + typo(p.role) + '</span>' +
+      '<span class="role-camp">' + typo(p.camp) + '</span>';
+  });
+  $('#bandeau-nb').innerHTML = pluriel(MG.livres.length, 'roman') + ' au répertoire';
+
+  /* Programme de salle */
+  $('#prog-couv').src = N.couverture;
+  $('#prog-genre').innerHTML = typo(N.genre) + ' · ' + typo(N.statut);
+  $('#distrib-lignes').innerHTML = N.personnages.map(function (p) {
+    return '<p class="role-ligne"><b>' + typo(p.nom) + '</b><i aria-hidden="true"></i><span>' + typo(p.role) + '</span><small>' + typo(p.camp) + '</small></p>';
+  }).join('');
+  $('#themes').innerHTML = N.themes.map(function (t) { return '<li>' + typo(t) + '</li>'; }).join('');
+  $('#camps').innerHTML = N.personnages.map(function (p) { return '<li>' + typo(p.camp) + '</li>'; }).join('');
+  $('#tel-heros').src = N.heros;
+  $('#tel-tag').textContent = '#' + N.personnages[0].camp.replace(/\s+/g, '');
+
+  /* Le répertoire : quatre actes, vingt-quatre affiches */
+  var ACTES = [
+    { num: 'I',   titre: 'Les fêtes',            rub: ['nouveaute', 'fetes'], note: 'dont la nouveauté de Noël' },
+    { num: 'II',  titre: 'Les séries',           rub: ['series'],             note: 'AT, COPS and Love, les saisons' },
+    { num: 'III', titre: 'En maison d\'édition', rub: ['edition'],            note: 'Black Feelings, Be…' },
+    { num: 'IV',  titre: 'Les one-shots',        rub: ['oneshots'],           note: 'une histoire, un tome' }
+  ];
+  $('#nb-rep').textContent = MG.livres.length;
+  var actes = ACTES.map(function (a) {
+    var livres = MG.livres.filter(function (l) { return a.rub.indexOf(l.rubrique) >= 0; });
+    return '<article class="acte" aria-label="Acte ' + a.num + ' — ' + typo(a.titre) + '">' +
+      '<div class="acte-tete"><span class="acte-num" aria-hidden="true">' + a.num + '</span>' +
+      '<p class="mention">Acte ' + a.num + '</p><h3>' + typo(a.titre) + '</h3>' +
+      '<p class="acte-note">' + pluriel(livres.length, 'roman') + ' · ' + typo(a.note) + '</p>' +
+      '<p class="glisser" aria-hidden="true">Faites glisser →</p></div>' +
+      '<ul class="rampe">' + livres.map(function (l) {
+        return '<li class="affiche' + (l.nouveau ? ' est-nouveau' : '') + '"><a href="#" title="' + typo(l.titre) + '">' +
+          '<span class="cadre"><img src="' + l.couv + '" alt="Couverture : ' + typo(l.titre) + '" width="244" height="366"></span>' +
+          '<span class="aff-titre">' + typo(l.court) + '</span>' +
+          '<span class="aff-genre">' + typo(l.genre) + '</span>' +
+          (l.sujet ? '<span class="aff-sujet">✦ ' + typo(l.sujet) + '</span>' : '') +
+          '</a></li>';
+      }).join('') + '</ul></article>';
+  });
+  /* Actes I et II sur toute la largeur ; actes III et IV côte à côte */
+  $('#actes').innerHTML = actes[0] + actes[1] + '<div class="actes-duo">' + actes[2] + actes[3] + '</div>';
+
+  /* L'auteure */
+  $('#portrait').src = MG.auteure.images.avecSonRoman;
+  $('#bio').innerHTML = typo(MG.auteure.bio).replace('Black Feelings', '<em>Black Feelings</em>');
+  $('#generique').innerHTML = MG.auteure.faits.map(function (f) {
+    return '<div><b>' + typo(f.chiffre) + '</b><span>' + typo(f.libelle).replace('Black Feelings', '<em>Black Feelings</em>') + '</span></div>';
+  }).join('');
+
+  /* En coulisses */
+  function annee(a) { return a.date.split(' ').pop(); }
+  var une = MG.actus[0], autres = MG.actus.slice(1);
+  $('#actus').innerHTML =
+    '<article class="une"><a href="#">' +
+      '<div class="loge"><span class="ampoules amp-haut" aria-hidden="true">' + ampoules(15) + '</span>' +
+      '<span class="ampoules amp-g" aria-hidden="true">' + ampoules(8) + '</span><span class="ampoules amp-d" aria-hidden="true">' + ampoules(8) + '</span>' +
+      '<img src="' + une.image + '" alt="" width="1536" height="1024">' +
+      '<p class="actu-date"><b>' + une.jour + '</b><span>' + typo(une.mois) + '<br>' + annee(une) + '</span></p></div>' +
+      '<div class="une-texte"><p class="actu-rub">' + typo(une.rubrique) + '</p><h3>' + typo(une.titre).replace(' &amp; ', '<br>&amp;\u00A0') + '</h3>' +
+      '<p class="resume">' + typo(une.resume) + '</p></div>' +
+    '</a></article>' +
+    '<div class="breves">' + autres.map(function (a) {
+      return '<article class="breve"><a href="#" tabindex="-1" aria-hidden="true"><img src="' + a.image + '" alt="" width="300" height="300"></a>' +
+        '<div><p class="actu-rub">' + typo(a.date) + ' · ' + typo(a.rubrique) + '</p>' +
+        '<h3><a href="#">' + typo(a.titre) + '</a></h3><p class="resume">' + typo(a.resume) + '</p></div></article>';
+    }).join('') +
+    '<div class="coul-notes"><p>Le journal de Mo\u00A0: salons, dédicaces et coulisses d\u2019écriture.</p>' +
+    '<a class="billet billet--creme" href="#">Toutes les actualités</a></div></div>';
+})();
+</script>
+</body>
+</html>

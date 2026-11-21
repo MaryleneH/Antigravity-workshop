@@ -2,11 +2,18 @@
 title: "Be mine for Valentine's !"
 description: "Une romance sur l'amour, les fleurs et les bijoux"
 image: ../images/couvertures/be-mine-valentine.jpg
-date: 2023-13-02
+date: 2023-02-13
 categories: [Romance, Saint-Valentin, Nouvelle]
 title-block-banner: true
 page-layout: full
 toc: false
+# --- Fiche du roman : sert aux listes automatiques (accueil, page Romans) ---
+ordre: 17
+rubrique: fetes
+humeurs: [rire]
+teinte: "#ff8fd4"
+titre-court: "Be Mine For Valentine's"
+genre: "Romance Saint-Valentin"
 ---
 ```{=html}
 <header class="book-hero">
@@ -55,8 +62,5 @@ toc: false
         </div>
     </div>
 </header>
-
-```
-
 
 ```
