@@ -204,7 +204,7 @@ Et me voilà de retour dans mon blog ! Je viens d’enchaîner la rentrée et su
 
 .album-counter {
   text-align: center;
-  color: rgba(255,255,255,0.4);
+  color: rgba(255,255,255,0.72);
   font-size: 0.75rem;
   margin-top: 0.5rem;
   letter-spacing: 1px;

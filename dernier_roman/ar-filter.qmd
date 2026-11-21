@@ -153,8 +153,9 @@ body.quarto-light .ar-header h1 {
     -webkit-background-clip: text; background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+/* Teintes renforcées : le thème clair est désormais le seul, ces textes doivent rester lisibles. */
 body.quarto-light .ar-header p {
-    color: rgba(45,27,78,0.6);
+    color: rgba(45,27,78,0.72);
 }
 body.quarto-light .ar-stage {
     background: #f0e8e5;
@@ -167,7 +168,7 @@ body.quarto-light #start-overlay h2 {
     color: #2D1B4E;
 }
 body.quarto-light #start-overlay p {
-    color: rgba(45,27,78,0.55);
+    color: rgba(45,27,78,0.72);
 }
 body.quarto-light #captured-view {
     background: #f0e8e5;
@@ -189,25 +190,25 @@ body.quarto-light .ar-btn-gold:hover {
     color: #fff;
 }
 body.quarto-light .ar-btn-ghost {
-    color: rgba(45,27,78,0.45);
-    border-color: rgba(45,27,78,0.12);
+    color: rgba(45,27,78,0.72);
+    border-color: rgba(45,27,78,0.25);
 }
 body.quarto-light .ar-btn-ghost:hover {
     color: #2D1B4E;
 }
 body.quarto-light .ar-status {
-    color: rgba(122,27,61,0.6);
+    color: rgba(122,27,61,0.82);
 }
 body.quarto-light .ar-tip {
     background: rgba(45,27,78,0.04);
     border-color: rgba(45,27,78,0.08);
-    color: rgba(45,27,78,0.55);
+    color: rgba(45,27,78,0.72);
 }
 body.quarto-light .ar-tip strong {
     color: #7A1B3D;
 }
 body.quarto-light .ar-back a {
-    color: rgba(122,27,61,0.4);
+    color: rgba(122,27,61,0.82);
 }
 body.quarto-light .ar-back a:hover {
     color: #7A1B3D;

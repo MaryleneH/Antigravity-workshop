@@ -18,6 +18,9 @@ L'auteure a choisi la piste **5 « Cocon »** (novembre 2026). Elle est désorma
 `styles/cocon.scss`, `styles/cocon-pages.scss`, `index.qmd` et les gabarits `_includes/cocon-*.ejs`.
 Les quatre autres maquettes restent ici pour mémoire.
 
+Après la mise en ligne, la palette du site a été **ravivée** (mêmes teintes, couleurs plus intenses) : la maquette
+`5-cocon.html` garde les valeurs d'origine, le site utilise celles de `styles/cocon.scss`.
+
 ## Ce dossier n'est pas publié
 
 Quarto ignore les dossiers dont le nom commence par `_` : rien de ce dossier ne part sur mogadarr.fr.

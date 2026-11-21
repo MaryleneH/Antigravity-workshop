@@ -21,7 +21,7 @@ const nb = (r) => livres.filter((l) => l.rubrique === r).length;
 </div>
 <div class="livres list" id="livres">
 <% for (const l of livres) { %>
-  <a class="livre" href="<%- l.path %>" data-rubrique="<%= l.rubrique %>" style="--t:<%= l.teinte || '#C9634F' %>" aria-label="<%= l.title %> — <%= l.genre || '' %>" <%= metadataAttrs(l) %>>
+  <a class="livre" href="<%- l.path %>" data-rubrique="<%= l.rubrique %>" style="--t:<%= l.teinte || '#DB5B46' %>" aria-label="<%= l.title %> — <%= l.genre || '' %>" <%= metadataAttrs(l) %>>
     <span class="livre-couv"><img src="<%- l.image %>" alt="" loading="lazy" decoding="async"><% if (l.rubrique === 'nouveaute') { %><span class="livre-nouveau">Nouveau</span><% } %></span>
     <span class="livre-titre"><%= l['titre-court'] || l.title %></span><span class="livre-genre"><%= l.genre || '' %></span>
   </a>

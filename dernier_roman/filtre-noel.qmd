@@ -190,7 +190,8 @@ body.quarto-light .xf-page {
         radial-gradient(ellipse at 85% 80%, rgba(111, 147, 214, 0.14), transparent 55%),
         linear-gradient(160deg, #FBF6F0, #F1EBE4);
 }
-body.quarto-light .xf-page { --xf-accent: #9C7016; --xf-accent-rgb: 156, 112, 22; }
+body.quarto-light .xf-page { --xf-accent: #86600F; --xf-accent-rgb: 134, 96, 15; }   /* or assez soutenu pour rester lisible en petit */
+body.quarto-light .xf-back a, body.quarto-light .xf-status { color: var(--xf-accent); }
 body.quarto-light .xf-page[data-camp="krampen"] { --xf-accent: #2E5AAC; --xf-accent-rgb: 46, 90, 172; }
 body.quarto-light .xf-header h1 { background: linear-gradient(135deg, #B81D2B, #2A1E24 50%, #2E488C); -webkit-background-clip: text; background-clip: text; }
 body.quarto-light .xf-header p { color: #5A4A50; }

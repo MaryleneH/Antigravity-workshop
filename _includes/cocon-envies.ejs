@@ -4,11 +4,11 @@
    Le nombre de romans est compté dans les pages (champ humeurs) ; les trois couvertures montrées
    sont choisies ci-dessous (à défaut : les trois premiers romans de l'envie). */
 const envies = [
-  { id: "rire", nom: "Envie de rire", fond: "#FBEBC0", vitrine: ["et-zut", "poupee-bimbo", "be-mine-valentine"] },
-  { id: "frissons", nom: "Envie de frissons", fond: "#F0C6B6", vitrine: ["cops-and-love-will-hunter", "black-feelings-1", "at_the_beginning"] },
-  { id: "noel", nom: "Envie de Noël", fond: "#D3DDC8", vitrine: ["fille_pere_noel", "prends_buche", "noel-coups-bas"] },
-  { id: "evasion", nom: "Envie d’évasion", fond: "#FBD9C5", vitrine: ["dans-l-eau", "sur-le-sable", "en-pleine-nature"] },
-  { id: "emotion", nom: "Envie d’émotions", fond: "#F3C6C6", vitrine: ["be-sweeter", "my-sweet-babysitter", "jai-juste-clique"] },
+  { id: "rire", nom: "Envie de rire", fond: "#FFE7AF", vitrine: ["et-zut", "poupee-bimbo", "be-mine-valentine"] },
+  { id: "frissons", nom: "Envie de frissons", fond: "#F9BCA7", vitrine: ["cops-and-love-will-hunter", "black-feelings-1", "at_the_beginning"] },
+  { id: "noel", nom: "Envie de Noël", fond: "#C8DDB8", vitrine: ["fille_pere_noel", "prends_buche", "noel-coups-bas"] },
+  { id: "evasion", nom: "Envie d’évasion", fond: "#FFD1B8", vitrine: ["dans-l-eau", "sur-le-sable", "en-pleine-nature"] },
+  { id: "emotion", nom: "Envie d’émotions", fond: "#FFB9BD", vitrine: ["be-sweeter", "my-sweet-babysitter", "jai-juste-clique"] },
 ];
 const livres = items.filter((i) => i.rubrique).sort((a, b) => (a.ordre || 999) - (b.ordre || 999));
 const nomFichier = (l) => String(l.path).split("/").pop().replace(/\.(qmd|html)$/, "");

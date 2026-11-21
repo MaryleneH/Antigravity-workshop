@@ -30,7 +30,7 @@ const nbEnvie = (e) => livres.filter((l) => (l.humeurs || []).includes(e)).lengt
 <p class="biblio-compte" id="biblioCompte" aria-live="polite"><strong><%= livres.length %></strong> romans</p>
 <div class="livres livres-grille list" id="livres">
 <% for (const l of livres) { %>
-  <a class="livre" href="<%- l.path %>" data-rubrique="<%= l.rubrique %>" data-humeurs="<%= (l.humeurs || []).join(' ') %>" style="--t:<%= l.teinte || '#C9634F' %>" aria-label="<%= l.title %> — <%= l.genre || '' %>" <%= metadataAttrs(l) %>>
+  <a class="livre" href="<%- l.path %>" data-rubrique="<%= l.rubrique %>" data-humeurs="<%= (l.humeurs || []).join(' ') %>" style="--t:<%= l.teinte || '#DB5B46' %>" aria-label="<%= l.title %> — <%= l.genre || '' %>" <%= metadataAttrs(l) %>>
     <span class="livre-couv"><img src="<%- l.image %>" alt="" loading="lazy" decoding="async"><% if (l.rubrique === 'nouveaute') { %><span class="livre-nouveau">Nouveau</span><% } %></span>
     <span class="livre-titre"><%= l['titre-court'] || l.title %></span><span class="livre-genre"><%= l.genre || '' %></span>
 <% if (l.sujet) { %>    <span class="livre-sujet"><%= l.sujet %></span>
