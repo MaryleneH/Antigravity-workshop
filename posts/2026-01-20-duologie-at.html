@@ -31,7 +31,6 @@ ul.task-list li input[type="checkbox"] {
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../site_libs/quarto-nav/headroom.min.js"></script>
 <script src="../site_libs/clipboard/clipboard.min.js"></script>
 <script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
@@ -45,14 +44,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-63b5708e65d6cd79cd7618c58d0c21e7.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-447e42e69aaa9833c0ba1b986f430b20.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-63b5708e65d6cd79cd7618c58d0c21e7.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-63b5708e65d6cd79cd7618c58d0c21e7.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-959eebc249688035417f2d14dd03a469.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-4eb60bfeb6b22fc4395aa4c801f52a2d.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../site_libs/bootstrap/bootstrap-959eebc249688035417f2d14dd03a469.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-5ce1383ac66090e567723b8180137a93.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -81,98 +76,14 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
-<!-- Icônes Bootstrap (pour .bi) -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
-
-<!-- Google Material Icons (pour <span class="material-icons">auto_awesome</span>) -->
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
-
-<!-- Custom Moon Icon for Dark Mode Toggle -->
-<style>
-    /*
-     * Quarto renders the toggle as:
-     *   <div class="quarto-color-scheme-toggle">
-     *     <a href="..."><i class="bi bi-toggle-off"></i></a>
-     *   </div>
-     *
-     * Strategy: Hide the default icon entirely and inject a moon-stars
-     * icon using ::after on the <a> link element inside the toggle.
-     * This works regardless of which bi-* class Quarto uses internally.
-     */
-
-    /* Hide the original Bootstrap icon glyph completely */
-    .quarto-color-scheme-toggle .bi::before {
-        visibility: hidden !important;
-        width: 0 !important;
-        display: none !important;
-    }
-
-    /* Make the <i> itself a host for our custom icon */
-    .quarto-color-scheme-toggle .bi {
-        font-size: 0 !important;      /* collapse the original text */
-        position: relative;
-        display: inline-block;
-        width: 1.4rem;
-        height: 1.4rem;
-        vertical-align: middle;
-    }
-
-    /* Inject the moon-stars-fill icon */
-    .quarto-color-scheme-toggle .bi::after {
-        font-family: "bootstrap-icons" !important;
-        content: "\f496";                 /* bi-moon-stars-fill */
-        font-size: 1.3rem;
-        font-style: normal;
-        font-weight: normal;
-        visibility: visible !important;
-        display: inline-block !important;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        color: inherit;
-        transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1),
-                    color 0.3s ease,
-                    filter 0.3s ease;
-    }
-
-    /* Hover effect: gentle rotation + scale */
-    .quarto-color-scheme-toggle:hover .bi::after {
-        transform: translate(-50%, -50%) rotate(15deg) scale(1.15);
-    }
-
-    /* Dark mode: pink glow */
-    body.quarto-dark .quarto-color-scheme-toggle .bi::after {
-        color: #fb6f92;
-        filter: drop-shadow(0 0 6px rgba(251, 111, 146, 0.5));
-    }
-
-    /* Light mode: subtle warm color */
-    body.quarto-light .quarto-color-scheme-toggle .bi::after {
-        color: #7A1B3D;
-        filter: drop-shadow(0 0 4px rgba(122, 27, 61, 0.2));
-    }
-</style>
-<script>
-/* Force default to dark mode - Migration V2 */
-(function() {
-    const storageKey = 'quarto-color-scheme';
-    const migrationKey = 'quarto-dark-mode-v2';
-    
-    // Re-run migration for V2 to sync toggle button
-    if (!window.localStorage.getItem(migrationKey)) {
-        // Force Alternate (Dark)
-        window.localStorage.setItem(storageKey, 'alternate');
-        // Mark as migrated
-        window.localStorage.setItem(migrationKey, 'true');
-    }
-})();
-</script>
+<!-- Polices du thème Cocon : Gloock (titres), Figtree (texte), Sacramento (signature).
+     Playfair Display reste chargée pour les pages spéciales (roman de Noël, AT, Bûche, filtres), qui gardent leur univers. -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&amp;family=Playfair+Display:ital,wght@0,400;0,700;1,400&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&amp;family=Gloock&amp;family=Playfair+Display:ital,wght@0,400;0,700;1,400&amp;family=Sacramento&amp;display=swap" rel="stylesheet">
+<!-- Icônes Bootstrap (pour les balises <i class="bi …">) -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<meta name="theme-color" content="#FFF4EA">
 
 
 <meta property="og:title" content="Une duologie à paraitre : “AT” – Mo Gadarr">
@@ -187,191 +98,26 @@ ul.task-list li input[type="checkbox"] {
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
-<body class="nav-fixed fullcontent quarto-light"><a id="quarto-skip-link" class="visually-hidden-focusable" href="#quarto-document-content">Aller au contenu principal</a><script id="quarto-html-before-body" type="application/javascript">
-    const toggleBodyColorMode = (bsSheetEl) => {
-      const mode = bsSheetEl.getAttribute("data-mode");
-      const bodyEl = window.document.querySelector("body");
-      if (mode === "dark") {
-        bodyEl.classList.add("quarto-dark");
-        bodyEl.classList.remove("quarto-light");
-      } else {
-        bodyEl.classList.add("quarto-light");
-        bodyEl.classList.remove("quarto-dark");
-      }
-    }
-    const toggleBodyColorPrimary = () => {
-      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
-      if (bsSheetEl) {
-        toggleBodyColorMode(bsSheetEl);
-      }
-    }
-    const setColorSchemeToggle = (alternate) => {
-      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
-      for (let i=0; i < toggles.length; i++) {
-        const toggle = toggles[i];
-        if (toggle) {
-          toggle.setAttribute("aria-checked", alternate ? "true" : "false");
-          if (alternate) {
-            toggle.classList.add("alternate");
-          } else {
-            toggle.classList.remove("alternate");
-          }
-        }
-      }
-    };
-    const toggleColorMode = (alternate) => {
-      // Switch the stylesheets
-      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
-      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
-      manageTransitions('#quarto-margin-sidebar .nav-link', false);
-      if (alternate) {
-        // note: dark is layered on light, we don't disable primary!
-        enableStylesheet(alternateStylesheets);
-        for (const sheetNode of alternateStylesheets) {
-          if (sheetNode.id === "quarto-bootstrap") {
-            toggleBodyColorMode(sheetNode);
-          }
-        }
-      } else {
-        disableStylesheet(alternateStylesheets);
-        enableStylesheet(primaryStylesheets)
-        toggleBodyColorPrimary();
-      }
-      manageTransitions('#quarto-margin-sidebar .nav-link', true);
-      // Switch the toggles
-      setColorSchemeToggle(alternate)
-    }
-    // Hack to workaround the fact that safari doesn't
-    // properly recolor the scrollbar when toggling (#1455).
-    // Not run on load: stylesheets are set before first paint there, and
-    // scrolling would undo the scroll to a URL fragment (#14973).
-    // The one pixel nudge keeps the reader where they were.
-    const refreshSafariScrollbar = () => {
-      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
-        manageTransitions("body", false);
-        const scrollY = window.scrollY;
-        window.scrollTo(0, scrollY > 0 ? scrollY - 1 : 1);
-        setTimeout(() => {
-          window.scrollTo(0, scrollY);
-          manageTransitions("body", true);
-        }, 40);
-      }
-    }
-    const disableStylesheet = (stylesheets) => {
-      for (let i=0; i < stylesheets.length; i++) {
-        const stylesheet = stylesheets[i];
-        stylesheet.rel = 'disabled-stylesheet';
-      }
-    }
-    const enableStylesheet = (stylesheets) => {
-      for (let i=0; i < stylesheets.length; i++) {
-        const stylesheet = stylesheets[i];
-        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
-          stylesheet.rel = 'stylesheet';
-        }
-      }
-    }
-    const manageTransitions = (selector, allowTransitions) => {
-      const els = window.document.querySelectorAll(selector);
-      for (let i=0; i < els.length; i++) {
-        const el = els[i];
-        if (allowTransitions) {
-          el.classList.remove('notransition');
-        } else {
-          el.classList.add('notransition');
-        }
-      }
-    }
-    const isFileUrl = () => {
-      return window.location.protocol === 'file:';
-    }
-    const hasAlternateSentinel = () => {
-      let styleSentinel = getColorSchemeSentinel();
-      if (styleSentinel !== null) {
-        return styleSentinel === "alternate";
-      } else {
-        return false;
-      }
-    }
-    const setStyleSentinel = (alternate) => {
-      const value = alternate ? "alternate" : "default";
-      if (!isFileUrl()) {
-        window.localStorage.setItem("quarto-color-scheme", value);
-      } else {
-        localAlternateSentinel = value;
-      }
-    }
-    const getColorSchemeSentinel = () => {
-      if (!isFileUrl()) {
-        const storageValue = window.localStorage.getItem("quarto-color-scheme");
-        return storageValue != null ? storageValue : localAlternateSentinel;
-      } else {
-        return localAlternateSentinel;
-      }
-    }
-    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
-      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
-      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
-      let newTheme = '';
-      if(authorPrefersDark) {
-        newTheme = isAlternate ? baseTheme : alternateTheme;
-      } else {
-        newTheme = isAlternate ? alternateTheme : baseTheme;
-      }
-      const changeGiscusTheme = () => {
-        // From: https://github.com/giscus/giscus/issues/336
-        const sendMessage = (message) => {
-          const iframe = document.querySelector('iframe.giscus-frame');
-          if (!iframe) return;
-          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
-        }
-        sendMessage({
-          setConfig: {
-            theme: newTheme
-          }
-        });
-      }
-      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
-      if (isGiscussLoaded) {
-        changeGiscusTheme();
-      }
-    };
-    const authorPrefersDark = false;
-    const darkModeDefault = authorPrefersDark;
-      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
-      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
-    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
-    // Dark / light mode switch
-    window.quartoToggleColorScheme = () => {
-      // Read the current dark / light value
-      let toAlternate = !hasAlternateSentinel();
-      toggleColorMode(toAlternate);
-      refreshSafariScrollbar();
-      setStyleSentinel(toAlternate);
-      toggleGiscusIfUsed(toAlternate, darkModeDefault);
-      window.dispatchEvent(new Event('resize'));
-    };
-    // Switch to dark mode if need be
-    if (hasAlternateSentinel()) {
-      toggleColorMode(true);
-    } else {
-      toggleColorMode(false);
-    }
-  </script>
+<body class="nav-fixed page-article fullcontent quarto-light"><a id="quarto-skip-link" class="visually-hidden-focusable" href="#quarto-document-content">Aller au contenu principal</a>
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top quarto-banner">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark" aria-label="Site web">
       <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../images/cocon/logo-mo-192.webp" alt="" class="navbar-logo light-content">
+    <img src="../images/cocon/logo-mo-192.webp" alt="" class="navbar-logo dark-content">
+    </a>
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Mo Gadarr</span>
+    </a>
+  </div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Basculer la navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
-  <li class="nav-item">
-    <a class="nav-link" href="../index.html"> 
-<span class="menu-text">MG</span></a>
-  </li>  
   <li class="nav-item">
     <a class="nav-link" href="../index.html"> 
 <span class="menu-text">Accueil</span></a>
@@ -397,9 +143,15 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Contact</span></a>
   </li>  
 </ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html#lettre"> <i class="bi bi-heart-fill" role="img">
+</i> 
+<span class="menu-text">Le Cercle des Intimes</span></a>
+  </li>  
+</ul>
           </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
-  <button type="button" role="switch" aria-checked="false" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Basculer le mode sombre" aria-label="Basculer le mode sombre"><i class="bi"></i></button>
 </div>
             <div id="quarto-search" class="" title="Recherche"></div>
       </div> <!-- /container-fluid -->
@@ -443,7 +195,29 @@ ul.task-list li input[type="checkbox"] {
     
 <!-- main -->
 <main class="content quarto-banner-title-block" id="quarto-document-content" tabindex="-1">
-
+<!-- Icônes du site (thème Cocon), dessinées en SVG. Usage : <svg class="ico" aria-hidden="true"><use href="#i-fleche"/></svg> -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="i-fleche" viewbox="0 0 24 24"><path d="M5 12h13M12.5 6.5 18 12l-5.5 5.5" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"></path></symbol>
+    <symbol id="i-haut" viewbox="0 0 24 24"><path d="M12 19V6M6.5 11.5 12 6l5.5 5.5" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"></path></symbol>
+    <symbol id="i-sortie" viewbox="0 0 24 24"><path d="M8 16 16.5 7.5M9.5 7.5h7v7" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path></symbol>
+    <symbol id="i-coeur" viewbox="0 0 24 24"><path d="M12 21s-8-5.2-8-11.2A4.8 4.8 0 0 1 12 6.9a4.8 4.8 0 0 1 8 2.9C20 15.8 12 21 12 21Z" fill="currentColor"></path></symbol>
+    <symbol id="i-etoile" viewbox="0 0 24 24"><path d="M12 2c.6 5.2 2.8 7.4 8 8-5.2.6-7.4 2.8-8 8-.6-5.2-2.8-7.4-8-8 5.2-.6 7.4-2.8 8-8Z" fill="currentColor"></path></symbol>
+    <symbol id="i-feuille" viewbox="0 0 60 80"><path d="M30 78V8" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"></path><path d="M30 62c-13-2-19-10-19-19 11 0 19 7 19 19ZM30 44c-11-2-16-9-16-17 10 0 16 6 16 17ZM30 54c13-2 19-10 19-19-11 0-19 7-19 19ZM30 35c11-2 16-9 16-17-10 0-16 6-16 17ZM30 22c-6-6-6-12 0-18 6 6 6 12 0 18Z" fill="currentColor"></path></symbol>
+    <symbol id="i-menu" viewbox="0 0 24 24"><path d="M4 7.5h16M4 12h16M4 16.5h10" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"></path></symbol>
+    <symbol id="i-croix" viewbox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"></path></symbol>
+    <symbol id="i-photo" viewbox="0 0 24 24"><path d="M4 8.5A1.5 1.5 0 0 1 5.5 7h2.2l1.2-2h6.2l1.2 2h2.2A1.5 1.5 0 0 1 20 8.5v9A1.5 1.5 0 0 1 18.5 19h-13A1.5 1.5 0 0 1 4 17.5Z" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"></path><circle cx="12" cy="13" r="3.4" fill="none" stroke="currentColor" stroke-width="1.9"></circle></symbol>
+    <symbol id="i-plume" viewbox="0 0 24 24"><path d="M5 19c1-7 5-12.500 14-14-1 9-6 13-12 13.200M5 19l6.500-6.500" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"></path></symbol>
+    <symbol id="i-insta" viewbox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="4.6" fill="none" stroke="currentColor" stroke-width="1.9"></rect><circle cx="12" cy="12" r="3.6" fill="none" stroke="currentColor" stroke-width="1.9"></circle><circle cx="16.600" cy="7.400" r="1.100" fill="currentColor"></circle></symbol>
+    <symbol id="i-theatre" viewbox="0 0 24 24"><path d="M5 4.500h14v6.500a7 7 0 0 1-14 0Z" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"></path><path d="M8.300 9.200h2.300M13.400 9.200h2.300M9 12.800c.8 1.300 1.800 1.900 3 1.900s2.200-.6 3-1.900" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"></path></symbol>
+    <!-- Les cinq envies de lecture -->
+    <symbol id="i-rire" viewbox="0 0 24 24"><circle cx="12" cy="12" r="8.600" fill="none" stroke="currentColor" stroke-width="1.9"></circle><path d="M8.300 10.300c.6-.9 1.600-.9 2.200 0M13.500 10.300c.6-.9 1.600-.9 2.200 0" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"></path><path d="M8 13.400h8c-.6 2.300-2.100 3.600-4 3.600s-3.400-1.300-4-3.600Z" fill="currentColor"></path></symbol>
+    <symbol id="i-frissons" viewbox="0 0 24 24"><path d="M12.300 2.800c.9 3.700 5 5.400 5 10.400a5.300 5.300 0 0 1-10.600 0c0-2 .9-3.500 2-4.600.2 1.500.8 2.500 1.700 3-.5-3.100.3-6.300 1.900-8.800Z" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"></path></symbol>
+    <symbol id="i-noel" viewbox="0 0 24 24"><path d="M12 3.200 15.800 8h-2l3.500 4.400h-2.200L18.800 17H5.200l3.700-4.600H6.700L10.200 8h-2ZM12 17v3.800" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"></path></symbol>
+    <symbol id="i-evasion" viewbox="0 0 24 24"><circle cx="12" cy="9" r="3.400" fill="none" stroke="currentColor" stroke-width="1.9"></circle><path d="M12 2.600v1.300M5.600 9H4.300M19.700 9h-1.300M7.500 4.500l.9.900M16.500 4.500l-.9.900M3.500 16.200c1.400-1.300 2.900-1.300 4.300 0s2.800 1.300 4.200 0 2.900-1.300 4.300 0 2.800 1.300 4.200 0M5.500 20c1.100-1 2.200-1 3.300 0s2.200 1 3.200 0 2.200-1 3.300 0 2.200 1 3.200 0" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"></path></symbol>
+    <symbol id="i-emotion" viewbox="0 0 24 24"><path d="M12 20.200s-7.500-4.900-7.500-10.500A4.500 4.500 0 0 1 12 7.200a4.500 4.500 0 0 1 7.500 2.500c0 5.600-7.500 10.500-7.500 10.500Z" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"></path></symbol>
+  </defs>
+</svg>
 
 
 
@@ -494,54 +268,6 @@ On le sait tous : les plus belles histoires méritent toujours quelques feuilles
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
-    // Ensure there is a toggle, if there isn't float one in the top right
-    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
-      const toggle = window.document.createElement('button');
-      toggle.type = "button";
-      toggle.setAttribute("role", "switch");
-      toggle.setAttribute("aria-checked", "false");
-      toggle.classList.add('top-right');
-      toggle.classList.add('quarto-color-scheme-toggle');
-      toggle.setAttribute("aria-label", "Basculer le mode sombre");
-      toggle.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
-      const i = window.document.createElement("i");
-      i.classList.add('bi');
-      toggle.appendChild(i);
-      // Put the toggle in a landmark of its own, so that landmark navigation
-      // can reach it.
-      //
-      // The container is always a fresh direct child of body, and the toggle is
-      // never moved into page furniture that the theme or the author controls.
-      // The toggle is positioned against the page, so any ancestor that
-      // establishes a containing block captures it: a positioned element or a
-      // grid for position: absolute, and transform, filter, will-change or
-      // contain for position: fixed. A direct child of body has none of these
-      // to inherit, and the shift when one appears is silent and visual.
-      //
-      // ARIA says a document should have at most one banner, and axe reports a
-      // duplicate whether or not the banners carry distinct labels. So use a
-      // header when the page has no banner yet, and a named region otherwise.
-      //
-      // A header is a banner wherever it sits, unless it is inside sectioning
-      // content, so this cannot just look at the children of body: a custom
-      // page layout wraps the title block header in a plain div. An explicit
-      // role="banner" always counts.
-      const sectioning = 'article, aside, main, nav, section, [role="article"], [role="complementary"], [role="main"], [role="navigation"], [role="region"]';
-      const hasBanner = Array.from(
-        window.document.querySelectorAll('header:not([role]), [role="banner"]')
-      ).some(function(el) {
-        return el.hasAttribute("role") || el.closest(sectioning) === null;
-      });
-      const container = window.document.createElement(hasBanner ? "div" : "header");
-      if (hasBanner) {
-        container.setAttribute("role", "region");
-        container.setAttribute("aria-label", "Basculer le mode sombre");
-      }
-      container.classList.add('quarto-color-scheme-toggle-container');
-      container.appendChild(toggle);
-      window.document.body.appendChild(container);
-    }
-    setColorSchemeToggle(hasAlternateSentinel())
     const icon = "";
     const anchorJS = new window.AnchorJS();
     anchorJS.options = {
@@ -1017,19 +743,38 @@ On le sait tous : les plus belles histoires méritent toujours quelques feuilles
   window.quartoScrollableRegionsLabels = {"code":"Code défilable","output":"Sortie défilable"};
   </script>
 </div> <!-- /content -->
-<footer class="footer">
-  <div class="nav-footer">
-    <div class="nav-footer-left">
-      &nbsp;
-    </div>   
-    <div class="nav-footer-center">
-<p>© 2026 Mo Gadarr. Tous droits réservés.</p>
-</div>
-    <div class="nav-footer-right">
-      &nbsp;
+<!-- Pied de page du site (thème Cocon), commun à toutes les pages.
+     Les liens partent de la racine du site (/romans.html) : ils sont donc valables quelle que soit la page. -->
+<div class="co">
+<footer class="pied" id="pied">
+  <div class="cadre pied-grille">
+    <div class="pied-marque">
+      <span class="pied-nom">Mo Gadarr</span>
+      <p>Une New Romance engagée qui bouscule les cœurs.</p>
+    </div>
+    <nav aria-label="Pied de page">
+      <p class="pied-titre">Le site</p>
+      <ul class="pied-menu">
+        <li><a href="../index.html">Accueil</a></li>
+        <li><a href="../dernier_roman/fille_pere_noel.html">Dernier roman</a></li>
+        <li><a href="../romans.html">Romans</a></li>
+        <li><a href="../about.html">L’Auteure</a></li>
+        <li><a href="../blog.html">Blog</a></li>
+        <li><a href="../contactons.html">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="pied-contact">
+      <p class="pied-titre">Rester en contact</p>
+      <a class="bouton bouton-peche" href="../index.html#lettre"><svg class="ico" aria-hidden="true"><use href="#i-coeur"></use></svg>Le Cercle des Intimes</a>
+      <a class="pied-insta" href="https://www.instagram.com/mogadarrauteur/" target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#i-insta"></use></svg>@mogadarrauteur</a>
     </div>
   </div>
+  <div class="cadre pied-bas">
+    <p>© 2026 Mo Gadarr. Tous droits réservés.</p>
+    <a href="#">Haut de page <svg class="ico" aria-hidden="true"><use href="#i-haut"></use></svg></a>
+  </div>
 </footer>
+</div>
 
 
 
