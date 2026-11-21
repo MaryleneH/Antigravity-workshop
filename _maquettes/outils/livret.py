@@ -1,11 +1,12 @@
 #!/usr/bin/env python3
-"""Assemble les planches en un seul PDF à feuilleter (une planche par page).
+"""Assemble les planches détaillées en un seul PDF à feuilleter (une planche par page).
 
 Usage, depuis la racine du dépôt :
-    python3 _maquettes/outils/livret.py <fichier.pdf>
+    python3 _maquettes/outils/livret.py <dossier_des_planches> <fichier.pdf>
 
 Ordre des pages : la vue d'ensemble, puis pour chaque piste sa planche,
-la page entière sur ordinateur et la page entière sur téléphone.
+la page entière sur ordinateur et la page entière sur téléphone
+(les fichiers du sous-dossier detail/ produits par planches.js).
 Dépendance : Pillow.
 """
 import sys
@@ -13,20 +14,16 @@ from pathlib import Path
 
 from PIL import Image
 
-PLANCHES = Path(__file__).resolve().parent.parent / "planches"
-
 
 def main():
-    if len(sys.argv) != 2:
+    if len(sys.argv) != 3:
         sys.exit(__doc__)
-    sortie = Path(sys.argv[1])
-    pages = [PLANCHES / "0-vue-d-ensemble.jpg"]
-    for planche in sorted(p for p in PLANCHES.glob("[1-9]-*.jpg")):
-        pages.append(planche)
-        for suffixe in ("-page-entiere", "-telephone"):
-            detail = PLANCHES / "detail" / f"{planche.stem}{suffixe}.jpg"
-            if detail.exists():
-                pages.append(detail)
+    detail = Path(sys.argv[1]) / "detail"
+    sortie = Path(sys.argv[2])
+    pages = [detail / "0-vue-d-ensemble.jpg"]
+    for planche in sorted(detail.glob("[1-9]-*-planche.jpg")):
+        base = planche.name[: -len("-planche.jpg")]
+        pages += [planche, detail / f"{base}-page-entiere.jpg", detail / f"{base}-telephone.jpg"]
     pages = [p for p in pages if p.exists()]
     if not pages:
         sys.exit("Aucune planche trouvée : lancer d'abord planches.js")

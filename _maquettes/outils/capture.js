@@ -5,8 +5,8 @@
 // Fichiers produits :
 //   ordi-pleine.png     page entière, 1440 px de large
 //   ordi-1.png, -2…     la même, découpée en tranches de 1440 × 1400 (pour relire de près)
-//   tel-pleine.png      page entière sur téléphone (390 px, netteté ×2)
-//   tel-planche.png     la page téléphone découpée en écrans, posés côte à côte
+//   tel-1.png, -2…      la page sur téléphone (390 px, netteté ×2), écran par écran
+//   tel-planche.png     ces écrans posés côte à côte (tel-planche-1.png, -2… si la page est longue)
 // Défauts signalés : erreurs JavaScript, fichiers introuvables, images cassées, débordement horizontal.
 const { chromium } = require('playwright');
 const path = require('path');
@@ -94,22 +94,31 @@ async function ouvrir(browser, options) {
     const { ctx, page, defauts, etat } = await ouvrir(browser, {
       viewport: { width: 390, height: 844 }, deviceScaleFactor: 2, isMobile: true, hasTouch: true,
       userAgent: 'Mozilla/5.0 (iPhone; CPU iPhone OS 17_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.0 Mobile/15E148 Safari/604.1' });
-    await page.screenshot({ path: path.join(sortie, 'tel-pleine.png'), fullPage: true });
     bilan('TÉLÉPHONE (390 px)', defauts, etat);
-    // Planche : la page découpée en écrans de 390 × 1688 (deux hauteurs d'écran), côte à côte.
+    // La page est capturée écran par écran (390 × 1688, soit deux hauteurs de téléphone) : une capture
+    // unique d'une page très haute dépasserait la taille maximale d'image du navigateur (16 384 px).
     const H = 1688; const n = Math.ceil(etat.hauteur / H);
+    for (let i = 0; i < n; i++) {
+      await page.screenshot({ path: path.join(sortie, `tel-${i + 1}.png`), fullPage: true,
+        clip: { x: 0, y: i * H, width: 390, height: Math.min(H, etat.hauteur - i * H) } });
+    }
+    // Planches : les écrans posés côte à côte, 5 par image pour rester lisibles.
+    const PAR_PLANCHE = 5; const nbPlanches = Math.ceil(n / PAR_PLANCHE);
     const planche = await ctx.newPage();
-    const cols = Array.from({ length: n }, (_, i) =>
-      `<div style="width:390px;height:${H}px;overflow:hidden;background:#fff;outline:1px solid #999;flex:none">
-         <img src="tel-pleine.png" style="width:390px;display:block;margin-top:-${i * H}px"></div>`).join('');
-    // Page temporaire écrite à côté de l'image (une page « vide » n'a pas le droit de lire un fichier local).
-    const tmp = path.resolve(sortie, '_planche.html');
-    fs.writeFileSync(tmp, `<body style="margin:0;background:#444"><div style="display:flex;gap:14px;padding:14px">${cols}</div></body>`);
-    await planche.setViewportSize({ width: n * 390 + (n + 1) * 14, height: H + 28 });
-    await planche.goto(pathToFileURL(tmp).href, { waitUntil: 'load' });
-    await planche.screenshot({ path: path.join(sortie, 'tel-planche.png'), scale: 'css' });
-    fs.unlinkSync(tmp);
-    console.log(`  planche de ${n} écran(s) : tel-planche.png`);
+    for (let k = 0; k < nbPlanches; k++) {
+      const ecrans = Array.from({ length: Math.min(PAR_PLANCHE, n - k * PAR_PLANCHE) }, (_, j) => k * PAR_PLANCHE + j + 1);
+      const cols = ecrans.map((i) => `<div style="width:390px;height:${H}px;overflow:hidden;background:#fff;outline:1px solid #999;flex:none">
+         <img src="tel-${i}.png" style="width:390px;display:block"></div>`).join('');
+      // Page temporaire écrite à côté des images (une page « vide » n'a pas le droit de lire un fichier local).
+      const tmp = path.resolve(sortie, '_planche.html');
+      fs.writeFileSync(tmp, `<body style="margin:0;background:#444"><div style="display:flex;gap:14px;padding:14px">${cols}</div></body>`);
+      await planche.setViewportSize({ width: ecrans.length * 390 + (ecrans.length + 1) * 14, height: H + 28 });
+      await planche.goto(pathToFileURL(tmp).href, { waitUntil: 'load' });
+      await planche.screenshot({ path: path.join(sortie, nbPlanches === 1 ? 'tel-planche.png' : `tel-planche-${k + 1}.png`), scale: 'css' });
+      fs.unlinkSync(tmp);
+    }
+    console.log(nbPlanches === 1 ? `  planche de ${n} écran(s) : tel-planche.png`
+      : `  ${n} écrans sur ${nbPlanches} planches : ${Array.from({ length: nbPlanches }, (_, k) => `tel-planche-${k + 1}.png`).join(', ')}`);
     await ctx.close();
   }
 

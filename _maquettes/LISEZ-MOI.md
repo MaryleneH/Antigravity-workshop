@@ -23,28 +23,36 @@ Ce sont des maquettes de travail, pas des pages du site.
 - `commun/contenu.js` — les contenus partagés par les cinq maquettes (24 romans, séries, sujets de société,
   actualités, textes), tirés du site actuel.
 - `commun/img/` — quelques images préparées pour les maquettes (logo, illustration de Mo, photos).
-- `planches/` — **les images à montrer** : `0-vue-d-ensemble.jpg` puis une planche par piste ;
-  `planches/detail/` contient la page entière de chaque piste, sur ordinateur et sur téléphone.
+- `planches/` — **les images à montrer**, au format téléphone (1080 × 1920, lisibles en plein écran) :
+  `0-les-5-pistes.jpg` puis une image par piste.
 - `outils/` — les scripts qui fabriquent les captures et les planches.
 
 ## Refaire les images après une retouche
 
-Depuis la racine du dépôt (il faut Node.js et Playwright) :
+Depuis la racine du dépôt (il faut Node.js, Playwright et ffmpeg). Le premier dossier sert aux captures
+intermédiaires ; `MG_SORTIE` indique où écrire le résultat (par défaut : `_maquettes/planches`).
 
 ```bash
-node _maquettes/outils/planches.js /tmp/maquettes-travail
+MG_SORTIE=/tmp/maquettes-sortie node _maquettes/outils/planches.js /tmp/maquettes-travail
 ```
 
-Pour ne refaire qu'une piste (ici la 3) :
+Le résultat contient :
+
+- les images au format téléphone (`0-les-5-pistes.jpg`, `1-stylo-rouge.jpg`…) ;
+- `video/` : une courte vidéo par piste, la page d'accueil qui défile sur téléphone ;
+- `detail/` : les planches détaillées pour grand écran (vue d'ensemble, planche, page entière sur ordinateur
+  et sur téléphone).
+
+Pour ne refaire qu'une piste (ici la 3), ou sans les vidéos :
 
 ```bash
-node _maquettes/outils/planches.js /tmp/maquettes-travail 3
+MG_SORTIE=/tmp/maquettes-sortie node _maquettes/outils/planches.js /tmp/maquettes-travail 3 --sans-video
 ```
 
-Pour assembler toutes les planches en un PDF à feuilleter :
+Pour assembler les planches détaillées en un PDF à feuilleter :
 
 ```bash
-python3 _maquettes/outils/livret.py /tmp/mogadarr-5-pistes.pdf
+python3 _maquettes/outils/livret.py /tmp/maquettes-sortie /tmp/mogadarr-5-pistes.pdf
 ```
 
 Pour vérifier une maquette (captures ordinateur et téléphone, défauts signalés) :
