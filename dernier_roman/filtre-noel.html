@@ -47,7 +47,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-63b5708e65d6cd79cd7618c58d0c21e7.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-5ce1383ac66090e567723b8180137a93.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-2d0c4e0cc9b86829ad248d0bf13c44c7.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -82,7 +82,9 @@ ul.task-list li input[type="checkbox"] {
 <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&amp;family=Gloock&amp;family=Playfair+Display:ital,wght@0,400;0,700;1,400&amp;family=Sacramento&amp;display=swap" rel="stylesheet">
 <!-- Icônes Bootstrap (pour les balises <i class="bi …">) -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-<meta name="theme-color" content="#FFF4EA">
+<meta name="theme-color" content="#FFF0E5">
+<!-- Un seul thème, clair : les navigateurs ne doivent pas l'assombrir d'office (les couleurs en sortent ternies). -->
+<meta name="color-scheme" content="only light">
 
 
 <meta property="og:title" content="Posez avec Wendy &amp; Dante – Mo Gadarr">
@@ -392,7 +394,8 @@ body.quarto-light .xf-page {
         radial-gradient(ellipse at 85% 80%, rgba(111, 147, 214, 0.14), transparent 55%),
         linear-gradient(160deg, #FBF6F0, #F1EBE4);
 }
-body.quarto-light .xf-page { --xf-accent: #9C7016; --xf-accent-rgb: 156, 112, 22; }
+body.quarto-light .xf-page { --xf-accent: #86600F; --xf-accent-rgb: 134, 96, 15; }   /* or assez soutenu pour rester lisible en petit */
+body.quarto-light .xf-back a, body.quarto-light .xf-status { color: var(--xf-accent); }
 body.quarto-light .xf-page[data-camp="krampen"] { --xf-accent: #2E5AAC; --xf-accent-rgb: 46, 90, 172; }
 body.quarto-light .xf-header h1 { background: linear-gradient(135deg, #B81D2B, #2A1E24 50%, #2E488C); -webkit-background-clip: text; background-clip: text; }
 body.quarto-light .xf-header p { color: #5A4A50; }
