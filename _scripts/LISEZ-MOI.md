@@ -1,7 +1,7 @@
 # Contrôles du site
 
-Deux contrôles complémentaires. Le premier est automatique ; le second est à lancer à la main
-après une retouche de mise en page.
+Trois contrôles complémentaires. Le premier est automatique ; les deux autres se lancent à la main :
+l'un après une retouche de mise en page, l'autre de temps en temps, pour les liens d'achat.
 
 ## 1. `verifier_site.py` — avant chaque publication (automatique)
 
@@ -41,3 +41,25 @@ La page ne défile jamais de côté : un élément trop large n'ajoute pas de ba
 est simplement rogné. Vérifier « sur téléphone et sur ordinateur » (390 et 1440 px) laisse passer
 les défauts qui n'apparaissent qu'entre les deux : tablettes (641 à 1280 px) et petits téléphones
 (320 à 375 px). C'est exactement ce qui s'est produit à la mise en ligne du thème « Cocon ».
+
+## 3. `verifier_liens_achat.js` — de temps en temps (à la main)
+
+Essaie tous les boutons « Acheter » qui mènent à Amazon. Les fiches Amazon disparaissent sans prévenir
+(nouvelle édition, fin d'un contrat d'édition, lien court périmé) : le bouton mène alors à une page
+« introuvable », alors que rien n'a changé dans le dépôt. Seul un essai du lien le révèle.
+
+```bash
+quarto render
+```
+
+```bash
+node _scripts/verifier_liens_achat.js _site
+```
+
+Le script ouvre chaque lien dans un vrai navigateur (Amazon refuse les requêtes automatiques simples) et
+avance doucement : comptez 3 à 4 minutes. Il classe chaque lien : valide, cassé, ou « non vérifié » quand
+Amazon a refusé la requête — dans ce cas, relancer plus tard.
+
+Quand un roman n'est plus en vente : remplacer son bouton « Acheter sur Amazon » par le bloc utilisé dans
+`romans/be-sweeter.qmd` (une note `book-note` et un bouton « Écrire à Mo Gadarr »), plutôt que de laisser
+un lien mort.

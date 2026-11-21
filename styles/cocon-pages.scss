@@ -57,6 +57,9 @@ body:has(.book-hero) main.content > p{margin:10px 0 0;text-align:center;letter-s
 .book-synopsis p:last-child{margin-bottom:0;}
 .book-synopsis strong{color:var(--cacao);font-weight:700;}
 .book-actions{display:flex;flex-wrap:wrap;align-items:center;gap:10px 22px;margin-top:8px;}
+/* Note placée au-dessus des boutons quand un roman n'est pas en vente pour le moment. */
+.book-note{display:flex;align-items:baseline;gap:8px;max-width:64ch;margin:10px 0 0;padding:12px 16px;border-radius:var(--r-s);background:var(--beurre-clair);color:var(--cacao);font-size:.98rem;line-height:1.45;}
+.book-note .bi{flex:none;color:var(--brique);}
 @media (max-width:1020px){
   .book-hero{--col:300px;--marge:32px;}
   .book-hero-card{gap:40px;}
