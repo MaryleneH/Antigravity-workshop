@@ -55,8 +55,14 @@ sujet: "Body positive"
 <p>Eh oui, malgré la flagrante grossophobie de son coach, Slim est incapable de résister à son regard lagon, à ses traits d’humour et encore moins à son aura décuplé par le mystère qui l’entoure.</p>
 </div>
 
+<p class="book-note"><i class="bi bi-info-circle" aria-hidden="true"></i> Ce roman n’est pas disponible sur Amazon en ce moment. Pour savoir où le trouver, écrivez à l’auteure.</p>
+
 <div class="book-actions">
-                    <a href="https://amzn.eu/d/74G0HIp" class="btn-primary" target="_blank">Acheter sur Amazon</a>
+                    <!-- La fiche Amazon de ce roman n'existe plus (vérifié le 21 novembre 2026 : « page introuvable », et aucune
+                         recherche ne le retrouve). Plutôt qu'un lien vers une page d'erreur, le bouton écrit à l'auteure.
+                         Quand le roman est de nouveau en vente : remettre ici un lien « Acheter sur… » et retirer la
+                         ligne « book-note » juste au-dessus. -->
+                    <a href="mailto:mogadarr@gmail.com?subject=O%C3%B9%20trouver%20%C2%AB%20Be%20Sweeter%20%C2%BB%20%3F&body=Bonjour%20Mo%2C%0D%0A%0D%0AJe%20voudrais%20lire%20%C2%AB%20Be%20Sweeter%20%C2%BB.%20O%C3%B9%20puis-je%20le%20trouver%20%3F%0D%0A%0D%0AMerci%20et%20belle%20journ%C3%A9e." class="btn-primary">Écrire à Mo Gadarr</a>
                 
     <a href="../romans.html" class="btn-text"><i class="bi bi-arrow-left"></i> Retour</a>
 </div>
