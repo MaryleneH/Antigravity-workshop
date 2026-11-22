@@ -73,7 +73,7 @@ format:
         <div class="scene" aria-hidden="true"><span class="scene-frise"></span><span class="scene-sol"></span><span class="scene-etoiles"><svg class="ico"><use href="#i-etoile"/></svg><svg class="ico"><use href="#i-etoile"/></svg><svg class="ico"><use href="#i-etoile"/></svg></span></div>
       </article>
       <figure class="photo-salon">
-        <img src="images/cocon/mo-en-salon.webp" width="480" height="640" loading="lazy" alt="Mo Gadarr, souriante, derrière son stand de dédicaces">
+        <img src="images/cocon/mo-au-salon-pyrelivres.webp" width="1440" height="1920" loading="lazy" alt="Mo Gadarr, tout sourire, devant le décor du salon Pyrélivres">
         <figcaption><svg class="ico" aria-hidden="true"><use href="#i-coeur"/></svg>En salon, à la rencontre de ses lecteurs</figcaption>
       </figure>
     </div>
