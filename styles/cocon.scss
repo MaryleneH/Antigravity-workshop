@@ -673,7 +673,8 @@ body.accueil .co .pied{margin-top:-56px;}
   .parcours-cote{display:flex;flex-direction:column;gap:22px;}
   .parcours-cote .tuile{min-height:0;}
   .photo-salon{position:relative;margin:0;border-radius:var(--r-l);overflow:hidden;box-shadow:var(--ombre-douce);rotate:1.5deg;}
-  .photo-salon img{width:100%;aspect-ratio:4/3;object-fit:cover;object-position:50% 30%;}
+  /* La photo est en hauteur (3:4). Page L'Auteure : on en montre une fenêtre 4:3, calée pour garder le visage et le buste. */
+  .photo-salon img{width:100%;aspect-ratio:4/3;object-fit:cover;object-position:50% 5%;}
   .photo-salon figcaption{position:absolute;left:14px;bottom:14px;display:inline-flex;align-items:center;gap:8px;padding:8px 14px;border-radius:999px;background:var(--papier);font-size:.82rem;font-weight:600;color:var(--cacao-doux);}
   .photo-salon figcaption .ico{color:var(--terracotta);}
   .suite-auteure{padding-top:74px;}
